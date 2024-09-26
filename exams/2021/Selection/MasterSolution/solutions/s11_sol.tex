@@ -1,0 +1,101 @@
+\en{Find all even functions $g\colon\R \to \R$ for which there exists a function $f\colon\R \to \R$ such that for every $x,y \in \R$
+\[
+g(f(x)+y)=g(x)+g(y)+yf(x+f(x)).
+\]
+
+\bigskip
+
+\textbf{Answer:} The functions $g(x)=0$ and $g(x)=x^2$ are the only solutions.
+
+\bigskip
+
+\textbf{Solution (Arnaud):}
+
+First observe that $g(x)=0$ and $g(x)=x^2$ are solutions. Indeed, both are even functions. For $g(x)=0$, one can take $f(x)=0$ (or any function $f$ such that $f(x+f(x))=0$). For $g(x)=x^2$, on can take $f(x)=x$, because $(x+y)^2=x^2+y^2+2xy$.
+
+We now prove that these are the only solutions. Let $g$ be a solution of the problem and $f$ be an associated function. We start with a bunch of substitutions. Let $y=0$ which gives
+\begin{equation}\label{eq-01}
+    g(f(x))=g(x)+g(0).
+\end{equation}
+Let further $y=-f(x)$ in the original equation and use the parity of $g$ to get $g(0)=g(x)+g(f(x))-f(x)f(x+f(x))$. If we plug \eqref{eq-01} in, we get
+\begin{equation}\label{eq-02}
+    2g(x)=f(x)f(x+f(x)).
+\end{equation}
+We replace $y$ by $f(y)$ in the original equation and use \eqref{eq-01} to obtain $g(f(x)+f(y))=g(x)+g(y)+g(0)+f(y)f(x+f(x))$. The symmetry between $x$ and $y$ implies
+\begin{equation}\label{eq-03}
+    f(y)f(x+f(x))=f(x)f(y+f(y)).
+\end{equation}
+
+If $f\equiv 0$, then $g\equiv 0$. So, if we assume that $g$ is not the constant 0 function (which we know is a solution), then there exists $a$ such that $f(a)\neq 0$. Let $c=f(a+f(a))/f(a)$. We have, with $y=a$ in \eqref{eq-03}, $f(x+f(x))=cf(x)$ and using \eqref{eq-02} we obtain
+\begin{equation}\label{eq-04}
+    2g(x)=cf(x)^2.
+\end{equation}
+Since we assumed $g$ is not identically $0$, it holds $c\neq 0$. We plug \eqref{eq-04} in the original equation and use $f(x+f(x))=cf(x)$ to obtain, after simplifying by $c$,
+\begin{equation}\label{eq-05}
+    f(f(x)+y)^2=f(x)^2+f(y)^2+2yf(x).
+\end{equation}
+If one lets $x=y$ in \eqref{eq-05}, then one obtains
+\begin{equation}\label{eq-06}
+    f(x)(f(x)(c^2-2)-2x)=0.
+\end{equation}
+If $c^2=2$, then $f(x)=0$ for all $x\neq 0$. In particular, one must have $a=0$ and $f(0)=f(a)\neq 0$. But then $c=f(f(0))/f(0)=0$ since $f(0)\neq 0$. Contradiction. Hence $c^2\neq 2$, and for every $x$,
+\[
+f(x)=0\quad \text{ or }\quad f(x)=2x/(c^2-2).
+\]
+In particular, $f(0)=0$. Let $b:=2/(c^2-2)\neq 0$ such that $f(x)=bx$ if $f(x)\neq 0$. Since $f(a)\neq 0$, we have $f(a)=ab$ and $a\neq 0$.   Assume there is $t\neq 0$ such that $f(t)=0$, then, with $x=a$ and $y=t$ in \eqref{eq-05}, we get
+\[
+f(ab+t)^2=a^2b^2+2tab.
+\]
+Because $t\neq 0$, we must have $f(ab+t)=0$ and thus $ab+2t=0$. So there is at most one $t\neq 0$, such that $f(t)=0$, namely $t=-ab/2$. But if such a $t$ exists, then $f(ab+t)=0$ and $ab+t\neq t$ and $ab+t\neq 0$, contradiction. So, $f(x)=bx$ for all $x$ and $g(x)=cb^2/2\cdot x^2$ for all $x$ by \eqref{eq-04}. We plug this in the original equation and deduce that $b=1$ and $c=2$ (using that $c\neq 0$). Therefore, we proved that if $g$ is not identically $0$, then $g(x)=x^2$ for every $x$.
+
+
+%In particular, $f(0)=0$ and thus $g(0)=0$ by \eqref{eq-04}. If we combine $\eqref{eq-01}$ and $\eqref{eq-04}$ (or if we let $y=0$ in \eqref{eq-05}), then we obtain
+%\[
+%f(f(x))^2=f(x)^2.
+%\]
+%Since $f(a)\neq 0$, we have $f(a)=2a/(c^2-2)$. Let $b:=2/(c^2-2)\neq 0$ such that $f(a)=ab$. So,
+%\[
+%(ab)^2=f(a)^2=f(f(a))^2=f(ab)^2=(ab^2)^2,
+%\]
+%because $f(ab)\neq 0$. Thus $b^2=1$ because $a\neq 0$. Since $c\neq 0$, we have $b\neq -1$ and therefore $b=1$. We conclude that, for every $x$,
+%\[
+%f(x)=0\quad \text{ or }\quad f(x)=x.
+%\]
+%In particular, $f(a)=a$ and $c=f(a+f(a))/f(a)=f(2a)/a$. Because $c\neq 0$, it holds $f(2a)\neq 0$ and thus $f(2a)=2a$ which means $c=2$. Equation \eqref{eq-04} becomes $g(x)=f(x)^2$, and so, for every $x$,
+%\[
+%g(x)=0\quad \text{ or }\quad g(x)=x^2.
+%\]
+%Assume there is $t\neq 0$ such that $g(t)=0$. Since $g$ is not identically $0$, there is $s\neq 0$ such that $g(s)=s^2$. Note that $f(t)=0$ and $f(s)=s$. With $x=s$ and $y=t$ in \eqref{eq-05}, we obtain
+%\[
+%f(s+t)^2=s^2+2st.
+%\]
+%Since $t\neq 0$, then $f(s+t)\neq s+t$, and hence $f(s+t)=0$. Thus $s=-2t$ because $s\neq 0$. We proved that for every $t\neq 0$ such that $f(t)=0$, there exists a unique $s\neq 0$ such that $f(s)=s$ given by $s=-2t$. Because $\R\setminus \{0\}$ is infinite, we obtain a contradiction. Therefore, we proved that if $g$ is not identically $0$, then $g(x)=x^2$ for every $x$.
+
+\textbf{Marking scheme:}
+
+There are two main milestones in the solution which are graded as follows:
+
+\begin{enumerate}
+    \item 3P: Get to relation \eqref{eq-04}
+    \item 5P: Prove that (if $g\nequiv 0$), for every $x$, $f(x)=0$ or $f(x)=bx$ for some $b\neq 0$.
+\end{enumerate}
+
+The following deduction applies to a full solution:
+
+\begin{enumerate}
+\item[(c)] -1P: Not checking explicitly the solutions (and giving for both solutions $g$ an example of an associated function $f$)
+\end{enumerate}
+
+The following partial points towards (a) can be obtained:
+
+\begin{enumerate}[label=(a.\arabic*)]
+    \item 1P: Relation \eqref{eq-02}
+    \item 1P: Relation \eqref{eq-03}
+\end{enumerate}
+
+The following partial points towards (b) can be obtained (not additive with any points awarded for (a)):
+
+\begin{enumerate}[label=(b.\arabic*)]
+    \item 4P: Relation \eqref{eq-06}
+\end{enumerate}
+}

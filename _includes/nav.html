@@ -1,0 +1,7 @@
+
+<nav>
+  {% assign sorted = site.pages | where_exp: "item", "item.nav >= 1" | sort: 'nav' %}
+  {% for nav in sorted %}
+    <a href = "{{ nav.url }}" {% if page.url == nav.url %} class = "current" {% endif %}>{{ nav.title }}</a>
+  {% endfor %}
+</nav>

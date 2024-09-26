@@ -1,0 +1,81 @@
+\en{For each prime $p$, somewhere in the multiverse there exists a kingdom consisting of $p$ islands numbered from $1$ to $p$ with a bridge between any pair of them. When Jana visits a kingdom, coronavirus restrictions mean she must obey the following rule: Directly after visiting island $m$, she can only cross over to island $n$ if 
+\[
+p \div (m^2-n+1)(n^2-m+1).
+\]
+Show that there are infinitely many kingdoms such that Jana cannot travel to every island in this manner.
+
+\bigskip
+
+\textbf{Solution (David):} Note that the divisibility condition is symmetrical in $m$ and $n$. In other words: If Jana can cross over from island $m$ to island $n$, she can also go the other way. Let us define a graph $G$ as follows: Each of the islands $1,2, \dots, p$ represents a vertex and we draw an edge between two vertices $m$ and $n$ if and only if
+\[
+p \div (m^2-n+1)(n^2-m+1).
+\]
+The edges of our graph now exactly represent between which pairs of islands Jana can travel, so it's easy to see that Jana can travel to every island if and only if $G$ is connected.
+
+This insight motivates us to count the number of edges in $G$, because if we can show that there are less than $p-1$ edges, $G$ has to be disconnected! By the formula 
+\[
+\vert E \vert = \frac{1}{2} \sum_{v \in V} deg(v)
+\]
+it is enough to know the number of vertices of a every possible degree. The degree of a fixed vertex $m$ is the number of distinct $n \in \{1, 2, \dots, p\}$ such that 
+\[
+(m^2-n+1)(n^2-m+1) \equiv 0 \; (\text{mod } p)
+\]
+Obviously, there is exactly one choice for $n$ such that $m^2-n+1 \equiv 0 \; (\text{mod } p)$, namely $n \equiv m^2+1$. But what about $n^2-m+1 \equiv 0 \; (\text{mod } p)$?
+
+\textbf{Lemma:}
+Let $p$ be an odd prime and $a$ some residue modulo $p$. Then, $x^2 - a \equiv 0 \; (\text{mod } p)$ has
+\begin{itemize}
+    \item no solutions in $x$ for exactly $\frac{p-1}{2}$ different values of $a$.
+    \item exactly one solution in $x$ if and only if $a=0$.
+    \item exactly two solutions in $x$ for $\frac{p-1}{2}$ different values of $a$.
+\end{itemize}
+
+\textbf{Proof of the Lemma:}
+Note that $x^2 \equiv y^2$ is equivalent to $(x-y)(x+y) \equiv 0$ or in other words $y \equiv \pm x \; (\text{mod } p)$.
+
+Hence, the squares of $1, \dots, \frac{p-1}{2}$ are all distinct modulo $p$ and they are equal to the squares of $p-1, \dots, \frac{p+1}{2}$, respectively. This gives us $\frac{p-1}{2}$ values of $a$ such that there are two solutions \mbox{in $x$}.
+The only residue left is $0$, which gives us a unique choice of $a$ with exactly one solution in $x$. The remaining $\frac{p-1}{2}$ values of $a$ therefore admit no solutions at all.
+
+By letting $a = m-1$, the Lemma tells us that there are $\frac{p-1}{2}$ different $m$ with two solutions in $n$. If we assume that the conditions $n^2-m+1 \equiv 0 \; (\text{mod } p)$ and $m^2-n+1 \equiv 0 \; (\text{mod } p)$ are never satisfied at the same time (or for $m=n$), we would get
+\[
+\vert E \vert = \frac{1}{2} \sum_{v \in V} deg(v) = \frac{1}{2} \cdot  \bigg(\frac{p-1}{2}\cdot 1 + 1 \cdot 2 + \frac{p-1}{2} \cdot 3 \bigg) = p.
+\]
+
+Sadly, this is not small enough! We need to reduce the number of edges a bit more. The easiest way of doing this is by assuming that there esists a residue $m$ such that $m^2-m+1 \equiv 0 \; (\text{mod } p)$. This corresponds to a \emph{loop} in $G$ (an edge going from $m$ to itself), which is irrelevant for the connectivity of $G$. A short calculation inspired by Vieta shows that $m^2-m+1 \equiv 0 \; (\text{mod } p)$ implies $(1-m)^2-(1-m)+1 \equiv 0 \; (\text{mod } p)$, so as long as $m \nequiv 1-m \; (\text{mod } p)$, we have two loops, from which we conclude that $G$ is disconnected.
+
+Let us now prove that there are infinitely many primes $p$ such that there exists a residue $m$ satisfying $m^2-m+1 \equiv 0 \; (\text{mod } p)$:
+Let $m$ be the product of the first $k$ primes and let $p$ be a prime factor of $m^2-m+1$. In particular, $p$ is not equal to the first $k$ primes and so there are infinitely many such $p$.
+If $m \equiv 1-m \; (\text{mod } p)$ then $m \equiv \frac{p+1}{2} (\text{mod } p)$. However, in this case we must have
+\[
+\left( \frac{p+1}{2} \right)^2 - \frac{p+1}{2} + 1 = \frac{p^2+3}{4} \equiv 0 \; (\text{mod } p),
+\]
+which is equivalent to $p=3$. This shows that for all such $p>3$ that we constructed, $G$ is indeed disconnected.
+
+\textbf{Marking Scheme (additive):}
+
+\begin{enumerate}
+\item 1P: Introducing $G$ and reformulating the problem into showing that $G$ is not connected
+\item 1P: Realizing that showing that $G$ has fewer than $p-1$ edges for infinitely many $p$ is enough.
+\item 1P: Showing that the degree of every vertex is at most $3$ (or any other idea allowing to bound the number of edges)
+\item 1P: Proving that $G$ contains at most $p$ edges
+\item 1P: Noting that if $m^2-m+1 \equiv 0 \; (\text{mod } p)$, the number of edges can be reduced by $1$
+\item 1P: Showing that the number of edges can even be reduced by $2$
+\item 1P: Proving that infinitely many primes allow an appropriate $m$
+\end{enumerate}
+
+ \bigskip
+ 
+\emph{Remark: It might look promising to try and reduce the number of edges by finding $m$ and $n$ such that $p$ divides both $(m^2-n+1)$ and $(n^2-m+1)$, or in other words, choosing $p$ such that $(m^2+1)^2 + 1 \equiv m \; (\emph{mod } p)$. However, in general this only reduces the number of edges by one and the case $p=11, m=4$ illustrates that this idea alone is not sufficient. }
+ }
+ \bigskip
+ 
+\textbf{Alternative arguments (inspired by Joel/Mathys):}
+Instead of introducing a simple undirected graph, we introduce a not necessarily simple directed graph where the edge points from $m$ to $n$ if $p \mid m^2 - n + 1$ and from $n$ to $m$ if $p \mid n^2 - m + 1$. The directions are actually completely irrelevant for Jana's travel plans but they allow us to count the edges more elegantly:
+
+For every $m$ there is \emph{exactly} one value of $n$ such that $m^2-n+1 \equiv 0 \; (\text{mod } p) $. This means that each of the $p$ vertices has one edge pointing away from it, and therefore we have $p$ edges in total.
+
+To show that the graph is not connected, we will explicitly find two vertices of $G$ which will have loops: Let $p \equiv 1 \; (\text{mod } 3)$, in particular, $p$ is odd and so $p-1$ is divisible by $6$. Take a primitive root $a$ modulo $p$. For $m = a^{\frac{p-1}{6}}$ we have 
+\[
+m^6-1 \equiv 0 \; (\text{mod } p) \; \Leftrightarrow \; (m^2-m+1)(m+1)(m^3-1)  \equiv 0 \; (\text{mod } p) \; \Rightarrow \; m^2-m+1 \equiv 0 \; (\text{mod } p)
+\]
+because, since $a$ is a primitive root, $m+1$ and $m^3-1$ cannot be divisible by $p$. But the same calculation can be done with $m = a^{\frac{5(p-1)}{6}}$, so we found two loops for infinitely many $p$ (Dirichlet) and we're done!

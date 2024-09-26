@@ -1,0 +1,343 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+
+
+
+
+
+% Schriftabkürzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\gaussk}[1]{\lfloor #1 \rfloor}
+\newcommand{\frack}[1]{\{ #1 \}}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+\newcommand{\dreieck}{\bigtriangleup}
+
+\parindent0mm
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge IMO Selektion 2009} \\
+\medskip erste Prüfung - 16. Mai 2009
+\end{center}
+\vspace{8mm}
+Zeit: 4.5 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{1.}] Sei $GERMANYISHOT$ ein reguläres Zwölfeck. Die Geraden $GN$ und $MI$ schneiden
+sich im Punkt $P$. Beweise, dass
+\begin{enumerate}
+\item[(a)] der Umkreis von Dreieck $GIP$ gleich gross ist wie der Umkreis von\\
+$GERMANYISHOT$.
+\item[(b)] die Strecke $PA$ gleich lang ist wie eine Seite von $GERMANYISHOT$.\\
+\end{enumerate}
+
+\bigskip
+\bigskip
+
+\item[\textbf{2.}] Finde alle Paare $(m,n)$ ungerader natürlicher Zahlen mit $m,n \leq 2009$ und 
+\[m \div n^2+8, \qquad n \div m^2+8.\]
+
+\bigskip
+\bigskip
+
+\item[\textbf{3.}] Sei $n$ eine natürliche Zahl. Bestimme die Anzahl Permutationen $(a_1,\ldots,a_n)$ der Menge $\{1,2,\ldots, n\}$ mit der folgenden Eigenschaft:
+\[2(a_1+\ldots +a_k) \quad \mbox{ist durch $k$ teilbar} \quad \forall k\in \{1,2,\ldots ,n\}.\]
+
+
+\end{enumerate}
+
+\pagebreak
+
+
+\begin{center}
+{\huge IMO Selektion 2009} \\
+\medskip zweite Prüfung - 17. Mai 2009
+\end{center}
+\vspace{8mm}
+Zeit: 4.5 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{4.}] Für welche natürlichen Zahlen $n$ existiert ein Polynom $P(x)$ mit ganzen Koeffizienten, sodass $P(d)=(n/d)^2$ gilt für alle positiven Teiler $d$ von $n$?\\
+
+\bigskip
+\bigskip
+
+\item[\textbf{5.}] Sei $ABCD$ ein konvexes Viereck und seien $P$ und $Q$ Punkte innerhalb des Vierecks $ABCD$, so dass $PQDA$ und $QPBC$ Sehnenvierecke sind. Nehme an, dass ein Punkt $E$ auf der Strecke $PQ$ existiert, so dass $\angle PAE=\angle QDE$ und $\angle PBE=\angle QCE$. Zeige, dass $ABCD$ ein Sehnenviereck ist.\\
+
+\bigskip
+\bigskip
+
+\item[\textbf{6.}] Sei $P$ die Menge der ersten 2009 Primzahlen und sei $X$ die Menge aller natürlichen Zahlen, welche nur Primfaktoren aus $P$ besitzen. Bestimme alle natürlichen Zahlen $k$, für die eine Funktion $f: X \rightarrow X$ existiert, welche für alle $m,n \in X$ die folgende Gleichung erfüllt:
+\[f(mf(n))=f(m)n^k.\]
+ 
+\end{enumerate}
+
+
+\pagebreak
+
+
+\begin{center}
+{\huge IMO Selektion 2009} \\
+\medskip dritte Prüfung - 23. Mai 2009
+\end{center}
+\vspace{8mm}
+Zeit: 4.5 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{7.}] Betrachte eine Menge $A$ von 2009 Punkte in der Ebene, von denen keine drei auf einer Geraden liegen. Ein Dreieck, dessen Eckpunkte alle in $A$ liegen, heisst \emph{internes Dreieck}. Beweise, dass jeder Punkt aus $A$ im Innern einer geraden Anzahl interner Dreiecke enthalten ist.\\
+
+\bigskip
+\bigskip
+
+\item[\textbf{8.}] Finde alle Funktionen $f:\BR \rightarrow \BR$, sodass für alle reellen $x,y$ die folgende Gleichung erfülllt ist:
+\[f(f(x)-f(y))=(x-y)^2f(x+y).\]
+
+\bigskip
+\bigskip
+
+\item[\textbf{9.}] In einem spitzwinkligen Dreieck $ABC$ seien $BE$ und $CF$ Höhen. Zwei Kreise durch $A$ und $F$ berühren die Gerade $BC$ bei $P$ und $Q$, so dass $B$ zwischen $C$ und $Q$ liegt. Beweise, dass sich die Geraden $PE$ und $QF$ auf dem Umkreis von $AEF$ schneiden.
+
+\end{enumerate}
+
+
+\pagebreak
+
+
+\begin{center}
+{\huge IMO Selektion 2009} \\
+\medskip vierte Prüfung - 24. Mai 2009
+\end{center}
+\vspace{8mm}
+Zeit: 4.5 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{10.}] Sei $n$ eine natürliche Zahl und seien $a,b$ zwei verschiedene ganze Zahlen mit folgender Eigenschaft: Für jede natürliche Zahl $m$ ist $a^m-b^m$ durch $n^m$ teilbar. Zeige, dass $a,b$ beide durch $n$ teilbar sind.\\
+
+\bigskip
+\bigskip
+
+
+\item[\textbf{11.}] Betrachte $n$ kollineare Punkte $P_1, \ldots, P_n$ und alle Kreise mit Durchmesser $P_iP_j$ für $1 \leq i < j \leq n$. Jeder dieser Kreise wird mit einer von $k$ Farben gefärbt. Eine solche Menge von gefärbten Kreisen heisst ein $(n,k)$-\emph{Gewusel}. Eine \emph{einfarbige Acht} sind zwei Kreise derselben Farbe, die sich äusserlich tangential berühren. Zeige, dass genau dann jedes $(n,k)$-Gewusel eine einfarbige Acht enthält, wenn $n>2^k$ gilt.\\
+
+\bigskip
+\bigskip
+
+\item[\textbf{12.}] Seien $x,y,z$ reelle Zahlen, welche die Gleichung $x+y+z=xy+yz+zx$ erfüllen. Beweise die Ungleichung
+\[\frac{x}{x^2+1}+\frac{y}{y^2+1}+\frac{z}{z^2+1} \geq -\frac{1}{2}.\]
+
+
+\end{enumerate}
+
+
+\end{document}

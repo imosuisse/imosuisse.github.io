@@ -1,0 +1,498 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{german}
+\usepackage[latin1]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{amsmath}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{floatflt}
+\usepackage{subfigure}
+
+\oddsidemargin=0cm \headheight=-2.1cm
+\textwidth=16.4cm \textheight=25.7cm
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+% Schriftabkürzungen
+
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{Satz}[thm]{Satz}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Korollar}
+\newtheorem{alg}[thm]{Algorithmus}
+\newtheorem{bsp}{Beispiel}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+\renewcommand{\phi}{\varphi}
+\newcommand{\eps}{\varepsilon}
+
+\newcommand{\pfeil}{\quad \Longrightarrow \quad}
+
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\Mod}[1]{(\mod\;#1)}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\newcommand{\sgn}{\mathop{\rm sign}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+             
+        
+\newcommand{\csum}{\sum_{cyc}}             
+             
+\parindent0mm
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\Large Lösungen zur SMO Finalrunde 2009}
+\end{center}
+
+\vspace{15mm}
+
+
+\begin{enumerate}
+
+\item[\textbf{1.}] Sei $P$ ein reguläres Sechseck. Für einen Punkt $A$ seien $d_1 \leq d_2 \leq \ldots \leq d_6$ die Abstände von $A$ zu den sechs Eckpunkten von $P$, der Grösse nach geordnet. Finde den geometrischen Ort aller Punkte $A$ im Innern oder auf dem Rand von $P$, sodass
+\begin{enumerate}
+\item[(a)] $d_3$ den kleinstmöglichen Wert annimmt.
+\item[(b)] $d_4$ den kleinstmöglichen Wert annimmt.\\
+\end{enumerate}
+
+\textbf{1. Lösung}
+
+Sei $M$ der Mittelpunkt von $P$. Betrachte alle Diagonalen von $P$, die $M$ enthalten, und alle Mittelsenkrechten durch die Seiten von $P$. Diese Geraden sind genau die Mittelsenkrechten auf den Verbindungsstrecken aller Paare von Eckpunkten von $P$. Aus Symmetriegründen können wir annehmen, dass $A$ im oder auf dem Rand des Dreiecks $UML$ liegt (vgl. Abbildung ...). Mit der Mittelsenkrechteneigenschaft der vorher konstruierten Geraden sieht man leicht, dass $U,V,Z,W,Y,X$ in dieser Reihenfolge aufsteigende Abstände von $A$ haben. Es gilt daher $d_3=AZ$ und $d_4=AW$. Der Mittelpunkt der Strecke $UM$  ist derjenige Punkt im Dreieck $UML$ mit kleinstmöglichem Abstand zu $Z$, denn er ist der Fusspunkt des Lotes von $Z$ auf die Gerade $UM$ und liegt auf der Strecke $UM$. Analog ist der Mittelpunkt $M$ derjenige Punkt im Dreieck $UML$ mit kleinstmöglichem Abstand zu $W$, denn er ist der Fusspunkt des Lotes von $W$ auf die Gerade $UM$. Der gesuchte geometrische Ort besteht also für
+\begin{enumerate}
+\item[(a)] aus den sechs Eckpunkte des regulären Sechsecks, das aus $P$ durch Streckung mit dem Faktor $\frac{1}{2}$ an $M$ entsteht,
+\item[(b)] aus dem Mittelpunkt $M$.\\
+\end{enumerate}
+
+\textbf{2. Lösung}
+
+Wir unterteilen das Sechseck in sechs gleichseitige Dreiecke. Sei $s$ die Seitenlänge eines solchen gleichseitigen Dreiecks und $h$ die Länge der Höhe.
+\begin{enumerate}
+\item[(a)] Wir zeigen, dass $d_3 \geq h$ ist. Wir nehmen also an, es gibt einen Punkt $A$ mit $d_3=r<h$. Es gibt also drei Ecken, so dass $A$ im Schnitt der drei Kreise mit Radius $r$ und Mittelpunkten in diesen Ecken liegt. Nun sind aber mindestens zwei dieser Ecken nicht benachbart, so dass sich die jeweiligen Kreise nicht schneiden. Gleichheit gilt genau dann, wenn $A$ der Mittelpunkte der Verbindungsstrecke von $M$ mit einer der Ecke ist. Dies sind also gerade die gesuchten Punkte.
+\item[(b)] Wir zeigen, dass $d_4 \geq s$ ist. Wir nehmen also an, es gibt einen Punkt $A$ mit $d_4=r<s$. Es gibt also vier Ecken, so dass $A$ im Schnitt der vier Kreise mit Radius $r$ und Mittelpunkten in diesen Ecken liegt. Nun liegen aber mindestens zwei dieser Ecken diagonal gegenüber, so dass sich die jeweiligen Kreise nicht schneiden. Gleichheit gilt genau dann, wenn $A$ der Mittelpunkt des Sechsecks ist. Dies ist also gerade der gesuchte Punkt.\\
+\end{enumerate}
+
+\bigskip
+
+\item[\textbf{2.}] Ein \emph{Palindrom} ist eine natürliche Zahl, die im Dezimalsystem vorwärts und rückwärts gelesen gleich gross ist (z.B. $1129211$ oder $7337$). Bestimme alle Paare $(m,n)$ natürlicher Zahlen, sodass
+\[(\underbrace{11\ldots 11}_{m})\cdot (\underbrace{11\ldots 11}_{n})\]
+ein Palindrom ist.\\
+
+\textbf{Lösung}
+
+Dies gilt genau dann, wenn $m\leq 9$ oder $n\leq 9$ gilt. Sei zuerst oBdA $n\geq m$ und $m\leq 9$. Mit Hilfe der schriftlichen Multiplikation aus der Grundschule erhält man dann
+\[\underbrace{11\ldots 11}_{m\leq 9}\cdot \underbrace{11\ldots 11}_{n} \ \ = 
+\ \ m\left\{ \parbox{4cm}{\begin{flushright}
+$111\ldots 11$\\ 
+$ +\phantom{11111}111\ldots 11\phantom{1}$\\
+$ +\phantom{1111}111\ldots 11\phantom{11}$\\
+$\cdots \phantom{mmm}$\\
+$ +\phantom{1}111\ldots 11\phantom{11111}$\\
+ \end{flushright}} \right. \ \
+ = \ \ 123\ldots \underbrace{mm\ldots mm}_{n-m+1} \ldots 321,\]
+also tatsächlich ein Palindrom. Wir nehmen nun $n,m \geq 10$ an und betrachten wieder die schriftliche Multiplikation wie oben. Das Produkt $P$ der beiden Zahlen endet dann mit der Ziffernfolge $987654321$. Wäre $P$ nun ein Palindrom, dann müsste es mit der Ziffernfolge $123456789$ beginnen. Aus der Abschätzung
+\[10^{m+n-2} < P < 2\cdot 10^{m-1} \cdot 2 \cdot 10^{n-1} < 10^{m+n-1}\]
+folgt, dass $P$ genau $m+n-1$ Stellen besitzt. Wegen $m\geq 10$ tritt in der schriftlichen Multiplikation oben sicher ein Übertrag auf an der zehntvordersten Stelle von $P$ auf, welcher sich auf weiter vorne liegende Stellen fortsetzen kann, aber nicht muss. Da $P$ aber genau $m+n-1$ Stellen besitzt, kann es spätestens an der vordersten Stelle keinen Übertrag mehr geben. Daraus folgt, dass sich die ersten zehn Stellen von $P$ sich von der Folge $123456789$ an mindestens einer Stelle unterscheiden, ein Widerspruch.\\
+
+\bigskip
+
+\item[\textbf{3.}]  Seien $a,b,c,d$ positive reelle Zahlen. Beweise die Ungleichung
+\[\frac{a-b}{b+c}+\frac{b-c}{c+d}+\frac{c-d}{d+a}+\frac{d-a}{a+b} \geq 0\]
+und bestimme alle Fälle, in denen das Gleichheitszeichen steht.\\
+
+\textbf{1. Lösung}
+
+Wegen 
+\[\frac{a-b}{b+c} = \frac{a+c}{b+c}-1\]
+ist die Ungleichung äquivalent zu
+\begin{equation} \label{Ungleichung}
+\frac{a+c}{b+c}+\frac{b+d}{c+d}+\frac{c+a}{d+a}+\frac{d+b}{a+b} \geq 4.
+\end{equation}
+Für die linke Seite erhält man mit AM-HM nun die Abschätzung
+\begin{eqnarray*}
+LS &=& (a+c)\Big(\frac{1}{b+c}+\frac{1}{d+a}\Big) + (b+d)\Big(\frac{1}{a+b}+\frac{1}{c+d}\Big) \\
+&\geq& \frac{4(a+c)}{a+b+c+d} + \frac{4(b+d)}{a+b+c+d} = 4,
+\end{eqnarray*}
+wie gewünscht. Gleichheit gilt genau dann, wenn $b+c=d+a$ und $a+b=c+d$ gilt. Dies ist genau dann der Fall, wenn $a=c$ und $b=d$.\\
+
+\textbf{2. Lösung}
+
+Die Ungleichung (\ref{Ungleichung}) lässt sich auch mit CS beweisen, es gilt nämlich
+\[LS \geq \frac{\big((a+c)+(b+d)+(c+a)+(d+b)\big)^2}{\csum (a+c)(b+c)} = 4.\]
+
+
+\bigskip
+
+
+\item[\textbf{4.}]  Sei $n$ eine natürliche Zahl. Jedes Feld eines $n\times n$-Quadrates enthält eines von $n$ verschiedenen Symbolen, sodass jedes der Symbole in genau $n$ Feldern steht. Zeige, dass eine Zeile oder eine Spalte existiert, die mindestens $\sqrt{n}$ verschiedene Symbole enthält.\\
+
+\textbf{1. Lösung}
+
+Wir nummerieren die Symbole von $1$ bis $n$. Sei $a_i$ bzw. $b_i$ die Anzahl verschiedener Symbole in der $i$-ten Zeile bzw. Spalte, und sei $u_k$ bzw. $v_k$ die Anzahl Zeilen bzw. Spalten, in denen das Symbol $k$ vorkommt. Es gelten dann die Gleichungen
+\[\sum_{i=1}^n a_i = \sum_{k=1}^n u_k \qquad \mbox{und} \qquad \sum_{i=1}^n b_i = \sum_{k=1}^n v_k.\]
+Die beiden Summen in der ersten Gleichung zählen nämlich beide die Anzahl Paare $(Z,k)$ aus einer Zeile $Z$ und einem Symbol $k$, sodass $k$ in $Z$ vorkommt, und analoges gilt für die zweite Gleichung. Ausserdem gilt die Abschätzung $u_k v_k\geq n$ für alle $k$, denn wenn in nur $u_k$ Zeilen und $v_k$ Spalten überhaupt ein Symbol $k$ vorkommt, dann können insgesamt höchstens $u_kv_k$ solche Symbole vorkommen. Mit CS erhält man einerseits
+\[\Big(\sum_{i=1}^n a_i \Big)\Big(\sum_{i=1}^n b_i \Big) = \Big(\sum_{k=1}^n u_k \Big)\Big(\sum_{k=1}^n v_k \Big) \geq \Big(\sum_{k=1}^n \sqrt{u_kv_k} \Big)^2 \geq \big(n\sqrt{n}\big)^2 = n^3,\]
+wäre aber $a_i, b_i< \sqrt{n}$ für alle $i$, dann wäre die linke Seite andererseits kleiner als $n^3$, ein Widerspruch.\\
+
+\textbf{2. Lösung}
+
+Sei $S$ die Anzahl Paare $(V,k)$, wobei $V$ eine Zeile oder Spalte ist und 
+$k$ ein Symbol, dass in $V$ vorkommt. Wie in der 1. Lösung sei $u_k$ bzw. 
+$v_k$ die Anzahl Zeilen bzw. Spalten, in denen das Symbol $k$ vorkommt. Wir 
+verwenden wieder die Ungleichung $u_k v_k\geq n$. Nach AM-GM gilt nun
+\[u_k+v_k \geq 2\sqrt{u_k v_k} \geq 2 \sqrt{n},\]
+jedes Symbol kommt also in mindestens $2 \sqrt{n}$ Zeilen oder Spalten vor. 
+Folglich ist $S\geq 2 n \sqrt{n}$. Wäre die Anzahl Symbole in jeder Zeile 
+und jeder Spalte kleiner als $\sqrt{n}$, so würde aber $S<2 n \sqrt{n}$ gelten, 
+ein Widerspruch.\\
+
+\bigskip
+
+\item[\textbf{5.}] Sei $ABC$ ein Dreieck mit $AB \neq AC$ und Inkreismittelpunkt $I$. 
+Der Inkreis berühre $BC$ bei $D$. Der Mittelpunkt von $BC$ sei $M$. Zeige, 
+dass die Gerade $IM$ die Strecke $AD$ halbiert.\\
+
+\textbf{1. Lösung}
+
+Seien $U$, $V$ und $W$ die Schnittpunkte von $MI$ mit $AD$, $AC$ bzw. $AB$. Menelaos am Dreieck $ABD$ liefert
+\[\frac{DU}{UA}\frac{AW}{WB}\frac{BM}{MD}=-1 \quad \Leftrightarrow \quad \frac{DU}{UA}= \frac{MD}{BM}\frac{BW}{AW}.\]
+Wir wenden nun Menelaos am Dreieck $ABC$ an und verwenden, dass $M$ der Mittelpunkt von $BC$ ist. Es gilt dann
+\[\frac{BM}{MC}\frac{CV}{VA}\frac{AW}{WB}=-1 \quad \Leftrightarrow \quad  \frac{BW}{AW}= \frac{CV}{VA}.\]
+Aus diesen beiden Gleichungen folgt:
+\[\frac{DU}{UA}=\frac{MD}{BM}\frac{CV}{VA}.\]
+Die Gerade $AI$ schneide $BC$ in $P$ und die Gerade $CI$ schneide $AM$ in $Q$. Wir wenden nun Ceva am Dreieck $AMC$ an und verwenden, dass $CI$ die Winkelhalbierende ist. Es gilt also
+\[\frac{MP}{PC}\frac{CV}{VA}\frac{AQ}{QM}=1 \quad \Leftrightarrow \quad  \frac{CV}{VA}=\frac{CM}{AC}\frac{PC}{MP}.\]
+Seien nun $a,b$ und $c$ die Längen des Dreiecks $ABC$. Es gilt dann
+\[\frac{DU}{UA}=\frac{MD}{BM}\frac{CM}{AC}\frac{PC}{MP}=\frac{\frac{c-b}{2}}{\frac{a}{2}}\frac{\frac{a}{2}}{b}\frac{\frac{ab}{b+c}}{\frac{a(c-b)}{2(b+c)}}=1.\]
+
+\textbf{2. Lösung}
+
+Wir führen ein Koordinatensystem ein mit Ursprung bei $D$ und $x$-Achse parallel zu $BC$. Sei $u=DC$, $v=BD$ und $r=DI$. Durch diese Grössen sind nun die Koordinaten der anderen Punkte festgelegt und können berechnet werden. Wir bestimmen nun die Koordinaten von Punkt $A$.
+
+Für die Berechnung verwenden wir zwei Hilfspunkte. Sie $P$ die Projektion von $D$ auf $CI$ und $Q$ die Projektion von $I$ auf $AC$. Der Punkt $P$ ist der Schnittpunkt der beiden Geraden mit den Geradengleichungen
+\begin{eqnarray*}
+y &=& r-\frac{r}{u}x, \\
+y &=& \frac{u}{r}x.
+\end{eqnarray*}
+Es gilt also 
+\[P=\Big(\frac{r^2u}{u^2-r^2},\frac{ru^2}{u^2-r^2}\Big).\]
+Aus Symmetriegründen ist $P$ der Mittelpunkt von $DQ$. Somit ist
+\[Q=\Big(\frac{2r^2u}{u^2-r^2},\frac{2ru^2}{u^2-r^2}\Big).\]
+Die Geradengleichung für $AC$ lautet
+\[y=(x-u)\frac{\frac{2ru^2}{u^2-r^2}}{\frac{2r^2u}{u^2-r^2}-u}=(x-u)\frac{2ur}{r^2-u^2}.\]
+Die Geradengleichung für $AB$ erhält man, indem man in der obigen Gleichung $u$ durch $-v$ ersetzt. Wir können nun die Koordinaten von $A$ berechnen: 
+\[(x-u)\frac{2ur}{r^2-u^2}=(x+v)\frac{-2vr}{r^2-v^2}\]
+\[\Rightarrow \quad x=\frac{(u-v)r^2}{r^2-uv} \quad \Rightarrow \quad y=\frac{2ur}{r^2-u^2}.\]
+Die Geradengleichung von $MI$ lautet
+\[y=r+\frac{2r}{v-u}x.\]
+Wir müssen nun zeigen, dass der Mittelpunkt von $AD$ auf $MI$ liegt, und tatsächlich gilt
+\[\frac{ur}{r^2-u^2}=r+\frac{2r}{v-u}\bigg(\frac{(u-v)r^2}{2(r^2-uv)}\bigg).\]
+
+
+\bigskip
+
+\item[\textbf{6.}]  Finde alle Funktionen $f: \BR_{>0}\rightarrow \BR_{>0}$, welche für alle $x>y>z>0$ die folgende Gleichung erfüllen:
+\[f(x-y+z)=f(x)+f(y)+f(z)-xy-yz+xz.\]
+
+\textbf{1. Lösung}
+
+Seien $x>z>0$ beliebig. Setze $y=\frac{x+z}{2}$, dann gilt $x>y>z$ und die Gleichung vereinfacht sich zu
+\begin{equation} \label{Funktional}
+f(x)+f(z) = \frac{x^2+z^2}{2},\qquad  \forall x>z>0.
+\end{equation}
+Setzt man hier einerseits $z=1$ und $x>1$ und andererseits $x=1$ und $0<z<1$, dann folgt insgesamt
+\[f(x) = \frac{x^2}{2} + \big(\tfrac{1}{2}-f(1)\big) \qquad \forall x>0, x\neq 1.\]
+Setzt man nun zum Beispiel $x=2$ und $y=3$ in (\ref{Funktional}) und verwendet das eben Bewiesene, dann folgt schliesslich $f(1)=\frac{1}{2}$ und somit ist $f(x)=\frac{x^2}{2}$ die einzige mögliche Lösungsfunktion. Diese erfüllt offensichtlich die Bedingung der Aufgabe sogar für alle $x,y,z>0$.\\
+
+\textbf{2. Lösung}
+
+Setzt man zuerst $x=2t, y=\frac{3}{2}t, z=t$, danach $x=3t, y=2t, z=t$, und zuletzt $x=3t, y=\frac{5}{2}t, z=2t$ für beliebiges $t>0$, dann erhält man die drei Gleichungen
+\begin{eqnarray*}
+f(2t)+f(t) &=& \tfrac{5}{2}t^2,\\
+f(3t)+f(t) &=& 5t^2,\\
+f(3t)+f(2t) &=& \tfrac{13}{2}t^2.
+\end{eqnarray*}
+Addiert man die ersten beiden und subtrahiert die dritte, dann folgt $2f(t)=t^2$ für alle $t>0$, die einzige Lösungsfunktion ist daher $f(t)=\frac{t^2}{2}$.\\
+
+\textbf{3. Lösung}
+
+Setze $x=3t,y=2t,z=t$ für $t>0$, dann folgt
+\[f(3t)+f(t)= 5t^2.\]
+Setze $x=9t,y=5t,z=t$ für $t>0$, dann erhält man analog
+\[f(9t)+f(t)=41t^2.\]
+Schliesslich setze man $x=9t, y=3t,z=t$ in die ursprüngliche Gleichung und multipliziere diese mit 2, dann folgt
+\begin{eqnarray*}
+2f(7t) &=& \big(f(9t)+f(3t)\big)+\big(f(9t)+f(t)\big)+\big(f(3t)+f(t)\big) -42t^2\\
+&=& 45t^2+41t^2+5t^2 -42t^2 = 49t^2.
+\end{eqnarray*}
+Ersetzt man hier noch $7t$ durch $t$, erhält man schliesslich die einzige mögliche Lösung $f(t)=\frac{t^2}{2}$ für $t>0$.\\ 
+
+\bigskip
+
+\item[\textbf{7.}]  Die Punkte $A$, $M_1$, $M_2$ und $C$ liegen in dieser Reihenfolge auf 
+einer Geraden. Sei $k_1$ der Kreis mit Mittelpunkt $M_1$ durch $A$ und $k_2$ 
+der Kreis mit Mittelpunkt $M_2$ durch $C$. Die beiden Kreise schneiden 
+sich in den Punkten $E$ und $F$. Eine gemeinsame Tangente an $k_1$ 
+und $k_2$ berühre $k_1$ in $B$ und $k_2$ in $D$. Zeige, dass sich die Geraden $AB$, $CD$ und 
+$EF$ in einem Punkt schneiden.\\
+
+\textbf{Lösung}
+
+Sei $S$ der Schnittpunkt von $AB$ und $CD$. Wir zeigen, dass $S$ auf der Potenzlinie $EF$ von $k_1$ und $k_2$ liegt. Wir müssen also zeigen, dass die Potenz zu beiden Kreisen gleich gross ist, d.h. $SB \cdot SA=SC \cdot SD$. Dies ist gleichbedeutend damit, dass $ABCD$ ein Sehnenviereck ist. Durch Winkeljagd kann man zeigen, dass die Summe von zwei gegenüberliegenden Winkel $180^\circ$ ergibt:
+\begin{eqnarray*}
+\angle BDC &=& 90^\circ+\angle M_2DC=90^\circ+\tfrac{1}{2}\angle AM_2D=90^\circ+\tfrac{1}{2}\angle AM_1B\\
+&=& 90^\circ+(90^\circ-\angle BAC)=180^\circ-\angle BAC.
+\end{eqnarray*}
+
+
+\bigskip
+
+\item[\textbf{8.}] Gegeben ist ein beliebiger Bodengrundriss, der aus $n$ Einheitsquadraten zusammengesetzt ist. Albert und Berta möchten diesen Boden mit Kacheln bedecken, wobei jede Kachel die Form eines $1\times 2$-Dominos oder eines T-Tetrominos hat. Albert hat nur Kacheln von einer Farbe zur Verfügung, Berta hingegen hat Dominos in zwei Farben und Tetrominos in vier Farben zur Verfügung. Albert kann diesen Bodengrundriss in $a$ Arten mit Kacheln bedecken, Berta auf $b$ Arten. Unter der Annahme, dass $a\neq 0$ gilt, bestimme das Verhältnis $b/a$.\\
+
+\textbf{1. Lösung}
+
+Wir nennen Alberts Überdeckungen \emph{farblos} und jene von Berta \emph{farbig}. Sei $A$ bzw. $B$ die Menge der farblosen bzw. farbigen Überdeckungen. Durch ''Vergessen der Farbe'' erhält man eine Abbildung $\phi: B \rightarrow A$ und wir behaupten, dass diese Abbildung $2^\frac{n}{2} : 1$ ist. Wir müssen also zeigen, dass jede farblose Überdeckung auf genau $2^\frac{n}{2}$ Arten gefärbt werden kann. Gewichte dazu jedes Einheitsquadrat des Grundrisses mit dem Wert $\sqrt{2}$. Jede farblose Kachel lässt sich nun in genau so vielen Arten färben, wie das Produkt der Gewichte angibt, welche die Kachel überdeckt (nämlich 2 resp. 4 je nach Kacheltyp). Nach der Produktregel ist die Anzahl Möglichkeiten, eine feste farblose Überdeckung zu färben, gleich dem Produkt der Anzahl Möglichkeiten, jede der Kacheln einzeln zu färben. Das ist aber einfach das Produkt der Gewichte in allen Einheitsquadraten des Grundrisses, also gleich $(\sqrt{2})^n = 2^\frac{n}{2}$.
+
+Wir haben somit gezeigt, dass stets $b_n=2^\frac{n}{2} a_n$ gilt unabhängig von der Form des Bodengrundrisses. Die Voraussetzung $a_n\neq 0$ wird hierfür nicht benötigt.\\
+
+\textbf{2. Lösung}
+
+Wir zeigen wieder, dass jede farblose Überdeckung auf $2^\frac{n}{2}$ Arten gefärbt werden kann. Nehme an, die farblose Überdeckung bestehe aus $k$ Dominos und $l$ Tetrominos. Dann gilt $2k+4l=n$, und die Anzahl Färbungen ist nach der Produktregel gleich
+\[2^k\cdot 4^l = 2^{k+2l} = \big(\sqrt{2}\big)^{n}.\] 
+
+\bigskip
+
+\item[\textbf{9.}] Finde alle injektiven Funktionen $f:\BN \rightarrow \BN$, sodass für alle natürlichen Zahlen $n$ gilt 
+\[f(f(n)) \leq \frac{f(n)+n}{2}.\]
+
+\textbf{1. Lösung}
+
+Wir zeigen, dass die Identität $f(n)=n$ die einzige solche Funktion ist. Nehme an, es gelte $f(n)<n$ für eine natürliche Zahl $n$. Dann folgt
+\[f(f(n))\leq \frac{f(n)+n}{2}<n,\]
+und eine einfache Induktion zeigt
+\begin{equation} \label{Abschaetzung}
+f^k(n)<n\qquad \forall n,k \in \BN,
+\end{equation}
+dabei bezeichet $f^k=f\circ \ldots \circ f$ die $k$-fache Anwendung von $f$. Für ein festes $n$ und variables $k$ kann $f^k(n)$ also nur endlich viele Werte annehmen. Insbesondere existieren natürliche Zahlen $r<s$ mit $f^r(n)=f^s(n)$, und wegen der Injektivität von $f$ folgt daraus $f^{s-r}(n)=n$, im Widerspruch zu (\ref{Abschaetzung}). Es gilt also $f(n)\geq n$ für alle $n$. Damit erhält man aber
+\[f(n) \leq f(f(n)) \leq \frac{f(n)+n}{2},\]
+und somit $f(n)\leq n$ für alle $n$. Dies ergibt die Behauptung.\\
+
+\textbf{2. Lösung}
+
+Nach Voraussetzung gilt insbesondere $f(f(n)) \leq \frac{1}{2}(f(n)+n) \leq \max\{f(n),n\}$ für alle natürlichen Zahlen $n$. Damit erhält man nun
+\[f(f(f(n))) \leq \max\{f(f(n)),f(n)\} \leq \max\{f(n),n\},\]
+und eine einfache Induktion zeigt
+\[f^k(n)\leq \max\{f(n),n\} \qquad \forall n,k \in \BN.\]
+Für ein festes $n$ und variables $k$ kann $f^k(n)$ also nur endlich viele Werte annehmen. Insbesondere existieren natürliche Zahlen $r<s$ mit $f^r(n)=f^s(n)$ und wegen der Injektivität von $f$ gilt somit $f^{s-r}(n)=n$. Dies zeigt, dass die Folge $n,f(n),f(f(n)),\ldots$ periodisch ist. Wir können daher ein $k\geq 2$ wählen, sodass $f^k(n)$ unter all diesen Zahlen grösstmöglich ist. Aus der Aufgabenstellung folgt nun
+\[f^k(n) \leq \frac{f^{k-1}(n)+f^{k-2}(n)}{2},\] 
+also gilt insbesondere $f^k(n)=f^{k-1}(n)$ wegen der Wahl von $k$. Verwendet man nun nochmals die Injektivität von $f$, dann ergibt sich schliesslich
+\[f^k(n)=f^{k-1}(n) \quad \Rightarrow \quad f^{k-1}(n)=f^{k-2}(n) \quad \Rightarrow \quad \ldots \quad \Rightarrow \quad f(n)=n.\]
+Die einzige solche Funktion ist also die Identität $f(n)=n$.\\
+
+
+\bigskip
+
+\item[\textbf{10.}] Sei $n>3$ eine natürliche Zahl. Beweise, dass $4^n+1$ einen Primteiler $>20$ besitzt.\\
+
+\textbf{1. Lösung}
+
+Wir verwenden folgendes Resultat:
+
+\begin{lem}
+Jeder Primteiler $p$ einer Zahl der Form $a^2+1$ erfüllt $p\equiv 1$ $(\mod 4)$. Jeder Primteiler $p$ einer Zahl der Form $a^4+1$ erfüllt $p\equiv 1$ $(\mod 8)$.
+\end{lem}
+
+\begin{proof}[Beweis]
+Es gilt $-1 \equiv a^2$ (mod $p$), und somit ist $d=4$ die kleinste natürliche Zahl mit der Eigenschaft $a^d \equiv 1$ (mod $p$). Diese Zahl teilt aber andererseits $\phi(p)=p-1$ nach dem kleinen Satz von Fermat. Dies ergibt die erste Behauptung. Die zweite folgt ähnlich, da dann $d=8$ die kleinste solche Zahl ist.\\
+\end{proof}
+
+Wegen $4^n+1=(2^n)^2+1$ und dem Lemma kommen als Primteiler nur die Primzahlen $p\equiv 1$ (mod 4) mit $p<20$ in Frage. Dies sind nur die Zahlen $p=5,13,17$. Ist zudem $n$ noch gerade, dann muss sogar $p\equiv 1$ (mod 8) sein, also bleibt nur noch $p=17$. Wir unterscheiden zwei Fälle:
+\begin{enumerate}
+\item[(i)] Sei $n$ gerade. Wie wir gesehen haben, ist dann $4^n+1=17^k$ für eine natürliche Zahl $k$. Es gilt nun
+\[4^n = 17^k-1=(17-1)(17^{k-1}+\ldots+17+1) \equiv 16k \quad (\mod 32),\]
+und für $n \geq 3$ muss daher $k=2l$ gerade sein. Damit erhält man nun
+\[1=17^{2l}-2^{2n}=(17^l+2^n)(17^l-2^n),\]
+und dies ist nie der Fall.
+
+\item[(ii)] Sei $n=2m+1$ ungerade. Dann gilt einerseits 
+\[4^n=4\cdot 16^m \equiv 4\cdot (-1)^m \not\equiv -1 \quad (\mod 17),\]
+also ist 17 kein Teiler von $4^n+1$. Andererseits ist
+\[4^n+1=(4+1)(4^{n-1}+\ldots+4+1) \equiv 5(1-1+-\ldots+1) = 5 \quad (\mod 25),\]
+und daher ist $4^n+1$ durch 5 aber nicht durch 25 teilbar. Somit gilt $4^n+1=5\cdot 13^k$ für ein $k\geq 0$. Mit der Identität von Sophie Germain erhält man nun
+\[4^n+1 = 4(2^m)^4+1 = (2^{2m+1}+2^{m+1}+1)(2^{2m+1}-2^{m+1}+1),\]
+und die beiden Faktoren rechts sind teilerfremd. Somit muss einer davon gleich 5 sein, und dies ist nur für $m=0,1$ der Fall, also nie für $n>3$. \\
+\end{enumerate}
+
+\textbf{2. Lösung}
+
+Wir müssen zeigen, dass die Zahl $4^n+1$ für $n>3$ nie nur die Primteiler $p=2,3,5,7,11,13,17,19$ besitzt. Dazu untersuchen wir zuerst, welche dieser Primzahlen überhaupt als Teiler einer Zahl der Form $4^n+1$ vorkommen können, und bestimmen gleichzeitig alle $n$, für die das der Fall ist. Wir führen das exemplarisch an den Beispielen $p=7,13$ durch. Es gilt $4^n \equiv 1,4,2$ (mod 7), folglich tritt $p=7$ nicht als Primteiler auf. Weiter gilt $4^n \equiv 1,4,3,12,9,10,1$ (mod 13) für $n=0,1,2,3,4,5,6$. Dieses Muster setzt sich nun periodisch fort, daher ist $p=13$ genau dann ein Teiler von $4^n+1$, wenn $n\equiv 3$ (mod 6) gilt. Insgesamt erhält man die Tabelle
+\begin{center}
+\begin{tabular}{c|c}
+$p$ & $n$\\ \hline
+5 &  $n\equiv 1$ (mod 2)\\
+13 & $n\equiv 3$ (mod 6)\\
+17 & $n \equiv 2$ (mod 4)\\
+\end{tabular}
+\end{center}
+wobei alle nicht aufgelisteten Primzahlen nicht als Faktoren vorkommen können. Der Tabelle entnimmt man unmittelbar, dass $n$ ungerade sein muss, wenn $4^n+1$ durch 5 oder 13 teilbar ist, jedoch gerade, wenn $n$ durch 17 teilbar ist. Folglich kann nicht beides gleichzeitig der Fall sein. Wir betrachten nun drei Fälle:\begin{enumerate}
+\item[(i)] Sei $4^n+1=17^m$. Dann gilt
+\[4^n = 17^m-1=(17-1)(17^{m-1}+\ldots+17+1) \equiv 16m \quad (\mod 32)\]
+Für $n \geq 3$ muss daher $m=2k$ gerade sein. Damit erhält man nun
+\[1=17^{2k}-2^{2n}=(17^k+2^n)(17^k-2^n),\]
+und dies ist nie der Fall.
+\item[(ii)] Sei $4^n+1=5^m$. Da $n$ ungerade ist, können wir $n=2k+1$ setzen und erhalten mit der Identität von Sophie Germain
+\[4^n+1 = 4(2^k)^4+1 = (2^{2k+1}+2^{k+1}+1)(2^{2k+1}-2^{k+1}+1).\]
+Hier sind die beiden Faktoren rechts teilerfremd und ausserdem beides Fünferpotenzen. Dies kann nur dann der Fall sein, wenn die zweite Klammer gleich 1 ist, und das gilt nur für $k=0$, also für $n=1$.
+\item[(iii)] Sei $4^n+1$ durch 13 teilbar. Dann ist $n$ durch 3 teilbar und wir können $n=3k$ setzen. Es gilt nun
+\[4^n+1=(4^k)^3+1=(4^k+1)(4^{2k}-4^k+1),\]
+und die beiden Faktoren rechts sind teilerfremd. Somit ist der einer davon eine Potenz von 13, der andere eine Potenz von 5. Wäre nun der erste durch 13 teilbar, müsste $k$ wiederum durch 3 teilbar und man könnte diesen Faktor wie gerade gesehen weiter zerlegen. Danach hätte man aber \emph{drei} paarweise teilerfremde Faktoren, die alle grösser als 1 sind, ein Widerspruch. Folglich ist $4^k+1$ eine Fünferpotenz und nach Fall (ii) gilt $k=1$, also $n=3$.
+\end{enumerate}
+
+
+
+
+\end{enumerate}
+
+\end{document}

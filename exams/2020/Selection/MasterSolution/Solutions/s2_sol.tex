@@ -1,0 +1,41 @@
+Find all positive integers $n$ such that there exists an infinite set $A$ of positive integers with the following property: For all pairwise distinct numbers $a_1,a_2,\ldots,a_n\in A$, the numbers 
+\[
+a_1+a_2+\ldots+a_n\quad \text{and}\quad a_1\cdot a_2\cdot\ldots\cdot a_n
+\]
+are coprime.
+
+\textbf{Answer}: All integers $n>1$.
+
+\textbf{Solution 1}(Paul)
+
+Clearly there is no such set if $n=1$. For $n>1$ we will see that such a set exists, so fix $n>1$.
+
+Set $x_0=n$ and recursively define $x_k = (x_0 + \ldots + x_{k-1})! + 1$. Then we choose the set $A$ to be the set of all $x_i$ for $i\geq 1$, note that $x_0 \notin A$. Now suppose $a_1,\ldots ,a_n \in A$ are pairwise distinct and that $a_1\cdots a_n$ and $a_1+\ldots + a_n$ are not relatively prime. Let $p$ be a prime factor of their greatest common divisor, which must also be a prime factor of $a_1\cdots a_n$ and consequently a prime factor of some $a_{i_0}$. We may assume that the $a_i$ are ordered increasingly, then the definition of the sequence $\{x_k\}_{k\in\N}$ implies that $a_k \equiv 1 \pmod{p}$ for $i_0 < k \leq n$. Hence
+\[
+p \mid a_1 + \cdots + a_{i_0 - 1} + (n-i_0).
+\]
+This sum is smaller or equal to $x_0 + x_1 + \cdots + x_{k_0 - 1}$, where $k_0$ is the unique index such that $x_{k_0} = a_{i_0}$. Therefore $p \mid (x_0 + x_1 + \cdots + x_{k_0 - 1})! = x_{k_0} - 1 = a_{i_0} - 1$, which yields a contradiction.
+
+\textbf{Solution 2}
+
+One can define another possible set $A$ using Dirichlet's theorem on primes in arithmetic progressions, with an idea similar to Solution 1 in mind. Again suppose that $n>1$.
+
+Take a prime $p_1 > n$. Then we recursively choose primes $p_k$ such that each $p_k$ is congruent to $1$ modulo $p_1\cdots p_{k-1}$ and set $A = \{p_k \mid k\geq 1\}$. We make the additional requirement that $p_1^2 \leq p_2$, the inequalities $p_k \leq \tfrac{p_{k+1}}{p_1}$ for $k\geq 2$ are built into the definition of the sequence (this will only be important at the end of the solution). Now suppose $q_1, \ldots ,q_n \in A$ are distinct and ordered increasingly. Then $q_1, \ldots ,q_n$ and $q_1 + \ldots + q_n$ are not relatively prime if and only if some $q_{i_0}$ divides $q_1 + \ldots + q_n$. Since $q_i \equiv 1 \pmod{q_{i_0}}$ for $i_0 < i \leq n$, we get
+\[
+q_{i_0} \mid q_1 + \ldots + q_{i_0 - 1} + (n-i_0).
+\]
+For $1 \leq j < i_0$ we have $q_j \leq \tfrac{q_{i_0}}{p_1} < \tfrac{q_{i_0}}{n}$. Hence
+\[
+q_{i_0} \leq q_1 + \ldots + q_{i_0 - 1} + (n-i_0) < \frac{i_0 - 1}{n}q_{i_0} + n \leq q_{i_0},
+\]
+a contradiction.
+
+\textbf{Marking Scheme}
+For otherwise complete solutions, forgetting to state that $n=1$ does not work will result in the subtraction of one point.
+\begin{itemize}
+    \item 1P: (non-additive) Solving at least one case with $n\geq 3$.
+    \item 1P: (non-additive) attempting to recursively construct a sequence such that new elements have "small" congruence modulo old elements of the sequence.
+    \item +4P: Constructing a valid set $A$.
+    \item +2P: Deriving a divisibility condition as in the above two solutions.
+    \item +1P: Deriving a contradiction.
+\end{itemize}

@@ -1,0 +1,792 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+
+
+
+
+
+% Schriftabkürzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\gaussk}[1]{\lfloor #1 \rfloor}
+\newcommand{\frack}[1]{\{ #1 \}}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+\newcommand{\dreieck}{\bigtriangleup}
+
+
+\begin{document}
+
+\begin{center}
+{\huge IMO Selektion 2005 Lösungen} \\
+\end{center}
+
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{1.}] Die beiden Folgen $a_1 > a_2 >\ldots >a_n$ und $b_1 <b_2<\ldots <b_n$ enthalten zusammen jede
+der Zahlen $1,2,\ldots ,2n$ genau einmal. Bestimme den Wert der Summe
+\[|a_1-b_1|+|a_2-b_2|+\ldots+|a_n-b_n|.\]
+
+
+\textbf{1. Lösung}
+
+Es gilt stets $|x-y|=\max(x,y)-\min(x,y)$. Wir behaupten, dass für $1\leq k \leq n$ immer $\max(a_k,b_k)\geq
+n+1$ und $\min(a_k,b_k)\leq n$ ist. Nehme an, es gelte $a_k,b_k \leq n$. Dann sind die $n+1$ Folgeglieder
+$a_1,\ldots,a_k,b_k,\ldots,b_n$ alle positiv, verschieden und höchstens gleich $n$, ein Widerspruch. Analog
+führt man die Annahme $a_k,b_k \geq n+1$ zum Widerspruch. Folglich durchlaufen die Zahlen $\min(a_k,b_k)$ genau
+die Menge $\{1,2,\ldots,n\}$ und die Zahlen $\max(a_k,b_k)$ die Menge $\{n+1,n+2,\ldots,2n\}$. Es gilt daher
+\begin{eqnarray*}
+\sum_{k=1}^n |a_k-b_k| &=& \sum_{k=1}^n \max(a_k,b_k) - \sum_{k=1}^n \min(a_k,b_k)\\
+&=& \left((n+1)+(n+2)+\ldots+2n \right) - (1+2+\ldots+n) = n^2.
+\end{eqnarray*}
+
+\textbf{2. Lösung}
+
+Nehme an, es gibt Indizes $k$ und $l$ mit $b_l=a_k+1$. Ersetze die Folgen $(a_1,\ldots,a_n)$ und
+$(b_1,\ldots,b_n)$ durch die beiden neuen Folgen $(a_1,\ldots, a_{k-1},a_k+1,a_{k+1},\ldots,a_n)$ und
+$(b_1,\ldots,b_{l-1},b_l-1,b_{l+1},\ldots,b_n)$. Man überlegt sich leicht, dass die beiden neuen Folgen
+ebenfalls die Bedingungen der Aufgabe erfüllen. Wir behaupten nun, dass sich die zu berechnende Summe bei dieser
+Operation nicht ändert und unterscheiden dazu drei Fälle.
+\begin{enumerate}
+\item[(1)] $k<l$. In diesem Fall ändert sich die Summe bei der Operation um
+\[D=|a_k-b_k+1|+|a_l-b_l+1|-|a_k-b_k|-|a_l-b_l|.\]
+Es gilt nun $a_k =b_l-1>b_k-1$, also sind $a_k-b_k$ und $a_k-b_k+1$ beide nichtnegativ. Analog folgt
+$a_l<a_k=b_l-1$, also sind $a_l-b_l$ und $a_l-b_l-1$ beide negativ. Folglich gilt
+\[D=(a_k-b_k+1)-(a_l-b_l+1)-(a_k-b_k)+(a_l-b_l)=0,\]
+der Wert der Summe bleibt also unverändert.
+\item[(2)] $k>l$ Eine analoge Argumentation liefert auch in diesem Fall
+\[D=-(a_k-b_k+1)+(a_l-b_l+1)+(a_k-b_k)-(a_l-b_l)=0.\]
+\item[(3)] $k=l$. Die Summe ändert sich um
+\[D=|(a_k+1)-(b_k-1)|-|a_k-b_k|.\]
+Ausserdem ist $a_k=b_k-1$, also wieder $D=|1|-|-1|=0.$
+\end{enumerate}
+Nach endlich vielen solchen Operationen können wir annehmen, dass gilt $b_1<\ldots<b_n<a_n<\ldots<a_1$. dann ist
+aber $b_k=k$ und $a_k=2n+1-k$ für $k=1,\ldots,n$. In diesem Fall hat die Summe den Wert
+\[\sum_{k=1}^n |a_k-b_k| = \sum_{k=1}^n 2n+1-2k = n(2n+1)-2\sum_{k=1}^n k = n(2n+1)-n(n+1) = n^2.\]
+
+\bigskip
+
+\item[\textbf{2.}] Finde den grösstmöglichen Wert des Ausdrucks
+\[\frac{xyz}{(1+x)(x+y)(y+z)(z+16)},\]
+wobei $x,y,z$ positive reelle Zahlen sind.\\
+
+\textbf{1. Lösung}
+
+Sei $A$ der Nenner des Bruchs. Es gilt nach AM-GM
+\begin{eqnarray*}
+A &=& \left(1+\frac{x}{2}+\frac{x}{2}\right)\left(x+\frac{y}{2}+\frac{y}{2}\right)
+\left(y+\frac{z}{2}+\frac{z}{2}\right)\left(z+8+8\right)\\
+&\geq& 81 \sqrt[3]{x^2/4}\cdot\sqrt[3]{xy^2/4}\cdot\sqrt[3]{yz^2/4}\cdot\sqrt[3]{64z}\\
+&=& 81xyz.
+\end{eqnarray*}
+Der Ausdruck ist also höchstens gleich $1/81$, Gleichheit gilt nur für $(x,y,z)=(2,4,8)$.\\
+
+\textbf{2. Lösung}
+
+Die Ungleichung von Hölder ergibt
+\begin{eqnarray*}
+(1+x)(x+y)(y+z)(z+16) &\geq& (\sqrt[4]{1\cdot x\cdot y\cdot z}+\sqrt[4]{x\cdot y\cdot z\cdot 16})^4\\
+&=& (3\sqrt[4]{xyz})^4=81xyz.
+\end{eqnarray*}
+Der Ausdruck ist also höchstens gleich $1/81$, Gleichheit gilt für $(x,y,z)=(2,4,8)$.\\
+
+Alternativ kann man auch wiederholt CS verwenden:
+\begin{eqnarray*}
+(1+x)(y+z)(x+y)(z+16) &\geq& (\sqrt{1\cdot y}+\sqrt{x\cdot z})^2(\sqrt{x\cdot z}+\sqrt{y\cdot 16})^2\\
+&\geq& (\sqrt[4]{xyz}+2\sqrt[4]{xyz})^4=81xyz.
+\end{eqnarray*}
+
+\textbf{3. Lösung}
+
+Wir bezeichnen den gegebenen Ausdruck mit $f(x,y,z)$. Wir benützen nun wiederholt folgendes
+
+\begin{lem}
+Für $\alpha,\beta>0$ nimmt die Funktion
+\[h(t)=\frac{t}{(\alpha+t)(t+\beta)}\]
+ihr Maximum bei $t=\sqrt{\alpha\beta}$ an.
+\end{lem}
+
+\begin{proof}[Beweis]
+Nach AM-GM gilt
+\[\frac{1}{h(t)}=t+(\alpha+\beta)+\frac{\alpha\beta}{t} \geq 2\sqrt{t \cdot \frac{\alpha\beta}{t}}+(\alpha+\beta)
+=(\sqrt{\alpha}+\sqrt{\beta}),\] mit Gleichheit genau dann, wenn $t=\sqrt{\alpha\beta}$.
+\end{proof}
+
+Fixieren wir zuerst $y,z$, dann $x,y$, so folgt aus dem Lemma
+\[f(x,y,z) \leq f(\sqrt{y},y,z) \leq f(\sqrt{y},y,4\sqrt{y}),\]
+mit Gleichheit genau dann, wenn $x=\sqrt{y}$ und $z=4\sqrt{y}$. Eine weitere Anwendung des Lemmas ergibt
+\[f(\sqrt{y},y,4\sqrt{y})=\left(\frac{\sqrt{y}}{(1+\sqrt{y})(\sqrt{y}+4)}\right)^2 \leq
+\left(\frac{1}{9}\right)^2 = \frac{1}{81}.\] mit Gleichheit genau dann, wenn $\sqrt{y}=2$. Insgesamt ist der
+Ausdruck also höchstens gleich $1/81$ mit Gleichheit genau dann wenn $(x,y,z)=(2,4,8)$.\\
+
+
+\bigskip
+
+\item[\textbf{3.}] Sei $n \geq 1$ eine natürliche Zahl. Ein reguläres $4n$-Eck sei irgendwie in endlich viele
+Parallelogramme zerlegt.
+\begin{enumerate}
+\item[(a)] Beweise, dass mindestens eines der Parallelogramme in der Zerlegung ein Rechteck ist.
+\item[(b)] Bestimme die Summe der Flächen aller Rechtecke in der Zerlegung.\\
+\end{enumerate}
+
+\textbf{Lösung}
+
+Wir führen erst einige Bezeichnungen ein. Eine endliche Zerlegung des $4n$-Ecks in Parallelogramme nennen wir im
+Folgenden kurz \textit{Zerlegung}. Für eine Zerlegung nennen wir jeden Eckpunkt eines Parallelogramms einen
+\textit{Knoten}. Je nachdem, ob ein Knoten auf dem Rand oder im Innern des $4n$-Ecks liegt, heisst er
+\textit{Randknoten} oder \textit{innerer} Knoten. Jede Seite eines Parallelogramms nennen wir eine
+\textit{Kante}. Ein Knoten, der im Innern einer Kante liegt, heisst $T$-Knoten. Eine Zerlegung, in der es keine
+inneren $T$-Knoten gibt, heisst \textit{gut}.\\
+
+Wir beweisen zuerst, dass sich jede Zerlegung zu einer guten Zerlegung verfeinern lässt.
+
+Wir gehen aus von einer beliebigen Zerlegung, die nicht gut ist. Wähle einen beliebigen $T$-Knoten $A_0$. Dieser
+liegt im Innern einer eindeutig bestimmten Kante $k_0$, die zum Parallelogramm $P_0$ gehört. Die
+gegenüberliegende Kante $k_1$ von $P_0$ ist parallel zu $k_0$. Wähle den Punkt $A_1$ auf $k_1$, sodass $P_0$
+durch die Strecke $A_0 A_1$ in zwei kleinere Parallelogramme unterteilt wird, und betrachte diese feinere
+Zerlegung. Konstruiere analog Punkte $A_2,\ldots,A_m$, solange bis $A_m$ entweder ein Randknoten oder ein
+innerer Knoten der neuen Zerlegung ist, welcher kein $T$-Knoten ist. Dies ist nach endlich vielen Schritten
+immer der Fall, denn die Kanten $k_0,k_1,k_2,\ldots$ sind alle parallel und liegen auf verschiedenen Geraden.
+Würde dieses Verfahren nicht abbrechen, wäre die Zerlegung nicht endlich. Mit dieser Konstruktion erhalten wir
+also eine feinere Zerlegung mit mindestens einem $T$-Knoten weniger. Nach endlich vielen solchen Konstruktionen
+resultiert daher eine feinere gute Zerlegung.
+
+Diese Konstruktion der guten Zerlegung hat ausserdem die Eigenschaft, dass ein Rechteck in lauter Rechtecke
+zerlegt wird, und ein nicht-Rechteck in lauter nicht-Rechtecke. Die Verfeinerung ändert also weder etwas an der
+Existenz von Rechtecken, noch an der Summe der Flächen aller Rechtecke in der Zerlegung.\\
+
+Wir beweisen nun (a) und (b). Nach obigen Ausführungen können wir annehmen, dass die Zerlegung gut ist.
+Betrachte irgend eine Kante $k_1$, die auf dem Rand des $4n$-Ecks liegt. Diese ist Seite eines einzigen
+Parallelogramm $P_1$. Die gegenüberliegende Seite $k_2$ von $P_1$ ist parallel zu $k_1$ und gehört zu einem
+einzigen weiteren Parallelogramm $P_2$. So fortfahrend erhalten wir eine Folge $P_1,P_2,\ldots$ von
+Parallelogrammen, die nach endlich vielen Schritten die gegenüberligende Seite des $4n$-Ecks erreichen muss.
+Dies folgt aus der Parallelität der Kanten $k_1,k_2,\ldots$ und der Endlichkeit der Zerlegung. Die Menge der
+Parallelogramme in einer solchen Folge nennen wir eine \textit{Kette}. Eine Kette verbindet also stets
+gegenüberliegende Seiten des $4n$-Ecks und die oben konstruierten Kanten $k_1,k_2,\ldots$ sind alle parallel und
+gleich lang. Zwei Ketten, die zu verschiedenen Paaren gegenüberliegender Seiten gehören, schneiden sich in genau
+einem Parallelogramm der Zerlegung, und die Seiten dieses Parallelogramms sind parallel zu den entsprechenden
+Seitenpaaren. Umgekehrt ist jedes Parallelogramm der Zerlegung der Schnitt von zwei eindeutig bestimmten solchen
+Ketten.
+\begin{enumerate}
+\item[(a)] Da es sich um ein $4n$-Eck handelt, gibt es zwei Seitenpaare, die senkrecht aufeinander stehen. Je
+zwei Ketten zu diesen Seitenpaaren schneiden sich in einem Rechteck.
+\item[(b)] Umgekehrt ist jedes Rechteck Schnitt von zwei solchen Ketten. Fixiere zwei Seitenpaare wie in (a).
+Nehme an, die Ketten zum einen Seitenpaar haben die Breiten $a_1,\ldots,a_r$ und die Ketten zum anderen Paar die
+Breiten $b_1,\ldots,b_s$. Die Kette der Breite $a_i$ schneidet die Kette der Breite $b_j$ in einem Rechteck der
+Fläche $a_ib_j$. Die Summe der Flächen aller Rechtecke mit Seiten parallel zu diesen zwei Seitenpaaren ist
+folglich
+\[\sum_{i=1}^r \sum_{j=1}^s a_ib_j = (a_1+\ldots+a_r)(b_1+\ldots+b_s)=1\cdot 1=1,\]
+da die Seitenlänge des $4n$-Ecks gleich 1 ist. Es gibt nun genau $n$ Paare senkrechter Seitenpaare, die
+Gesamtfläche aller Rechtecke in der Zerlegung ist somit gleich $n$.
+\end{enumerate}
+
+
+\bigskip
+
+\item[\textbf{4.}] Seien $k_1$ und $k_2$ zwei Kreise, die sich im Punkt $P$ äusserlich berühren. Ein dritter Kreis $k$ berühre $k_1$ in $B$ und $k_2$ in $C$, so dass $k_1$ und $k_2$ im Innern von $k$ liegen. Sei $A$ einer der Schnittpunkte von $k$ mit der gemeinsamen Tangente von $k_1$ und $k_2$ durch $P$. Die Geraden $AB$ und $AC$ schneiden $k_1$ bzw. $k_2$ nochmals in $R$ bzw. $S$. Zeige, dass $RS$ eine gemeinsame Tangente von $k_1$ und $k_2$ ist.
+
+\textbf{1. Lösung}
+
+Wir untersuchen als erstes die Potenz von $A$ an den Kreisen $k_1$ und $k_2$. Es gilt
+$$ AB \cdot AR = AP^2 = AC \cdot AS. $$
+Daraus folgt, dass $\dreieck ABC$ und $\dreieck ASR$ ähnlich sind. \\
+Sei $T$ der Schnittpunkt der gemeinsamen Tangengente von $k$ und $k_1$ mit der gemeinsamen Tangente von $k$ und $k_2$. Weil die Potenz von $T$ zu allen drei Kreisen gleich gross ist, muss $T$ auch auf der Potenzlinie von $k_1$ und $k_2$, also $AP$ liegen. Wir bezeichnen $\alpha \doteq \wi ARS$. Es folgt nun
+\begin{itemize}
+\item $\wi ACB = \alpha$ ($\dreieck ABC \sim \dreieck ASR$)
+
+\item $\wi TBA = \alpha$, falls $T$ auf derselben Seite von $BC$ liegt wie $A$. \\
+$\wi TBA = 180^\circ - \alpha$, falls $A$ und $T$ auf verschiedenen Seiten von $BC$ liegen. \\
+(Tangentenwinkelsatz an $k$)
+
+\item $\wi RPB = \alpha$ (Tangentenwinkelsatz an $k_1$)
+\end{itemize}
+
+$\wi ARP$ ist ein Aussenwinkel von $\dreieck BPR$. Es gilt deshalb
+$$ \wi SRP = \wi ARP - \alpha = \wi RBP + \wi RPB - \alpha = \wi RBP + \alpha - \alpha = \wi RBP. $$
+Nach dem Tangentenwinkelsatz liegt $RS$ somit tangential an $k_1$. Analog zeigt man, dass $RS$ auch tangential an $k_2$ liegt. \\
+
+\textbf{2. Lösung}
+
+Anstelle des Tangentenschnittpunktes $T$ verläuft diese Lösung über die Kreisemittelpunkte $M_1,M_2$ bzw. $M$. Wir bezeichnen $\alpha \doteq \wi ARS$. Es folgt nun
+\begin{itemize}
+\item $\wi ACB = \alpha$ ($\dreieck ABC \sim \dreieck ASR$)
+
+\item $\wi AMB = 2 \alpha$ (Zentri-Peripherie-Winkelsatz)
+
+\item $\wi ABM = 90^\circ - \alpha$ (Winkelsumme im gleichschenkligen Dreieck $ABM$)
+
+\item $\wi RBM_1 = 90^\circ - \alpha$ ($B,M_1,M$ liegen auf einer Geraden, ebenso $B,R,A$)
+
+\item $\wi RM_1B = 2 \alpha$ (Winkelsumme im gleichschenkligen Dreieck $RBM_1$)
+
+\item $\wi RPB = \alpha$ (Zentri-Peripherie-Winkelsatz)
+\end{itemize}
+
+Man fährt nun fort wie bei der 1. Lösung.
+
+\bigskip
+
+\item[\textbf{5.}] Sei $p>3$ eine Primzahl. Zeige, dass $p^2$ ein Teiler ist von
+\[\sum_{k=1}^{p-1} k^{2p+1}.\]
+
+\textbf{Lösung}
+
+Sei $S$ die Summe in der Aufgabenstellung. Wegen $p\neq 2$ genügt es zu zeigen, dass $2S$ durch $p^2$ teilbar
+ist. Es gilt modulo $p^2$
+\begin{eqnarray*}
+2S &=& \sum_{k=1}^{p-1} (p-k)^{2p+1} + k^{2p+1}\\
+&=& \sum_{k=1}^{p-1} \left( p^{2p+1} -+ \ldots -\binom{2p+1}{2}p^2k^{2p-1}
++\binom{2p+1}{1}pk^{2p}-k^{2p+1}\right)+ k^{2p+1}\\
+&\equiv& \sum_{k=1}^{p-1} \binom{2p+1}{1}pk^{2p} \equiv \sum_{k=1}^{p-1} pk^{2p} = p \sum_{k=1}^{p-1} k^{2p}.
+\end{eqnarray*}
+Wir müssen noch zeigen, dass die letzte Summe durch $p$ teilbar ist. Nach dem kleinen Satz von Fermat gilt
+$k^{p-1} \equiv 1$ (mod $p$) für $1 \leq k \leq p-1$. Damit folgt modulo $p$
+\[\sum_{k=1}^{p-1} k^{2p} \equiv \sum_{k=1}^{p-1} k^2 = \frac{p(p-1)(2p-1)}{6}.\]
+Da der Zähler der rechten Seite durch $p$ teilbar ist, der Nenner wegen $p>3$ aber nicht, ist die gesamte rechte
+Seite durch $p$ teilbar. Dies ist war zu zeigen.\\
+
+\bigskip
+
+\item[\textbf{6.}] Sei $T$ die Menge aller Tripel $(p,q,r)$ von nichtnegativen ganzen Zahlen. Bestimme alle
+Funktionen $f:T \rightarrow \BR$ für die gilt
+\[f(p,q,r)= \left\{ \parbox{8.5cm}{$0$\\[3mm] $1+\frac{1}{6}\{f(p+1,q-1,r)+f(p-1,q+1,r)$\\
+$+f(p-1,q,r+1)+f(p+1,q,r-1)$\\ $+f(p,q+1,r-1)+f(p,q-1,r+1)\}$}\parbox{3cm}{für $pqr=0$,\\[3mm] $\mbox{}$\\ sonst.
+\\ $\mbox{}$} \right.\]
+
+\textbf{Lösung}
+
+Wir beweisen zuerst, dass höchstens eine solche Funktion existiert. Nehme an, $f$ und $g$ erfüllen die
+Bedingungen der Aufgabe. Für die Funktion $h=f-g$ gilt dann
+\[h(p,q,r)= \left\{ \parbox{8.5cm}{$0$\\[3mm] $\frac{1}{6}\{h(p+1,q-1,r)+h(p-1,q+1,r)$\\
+$+h(p-1,q,r+1)+h(p+1,q,r-1)$\\ $+h(p,q+1,r-1)+h(p,q-1,r+1)\}$}\parbox{3cm}{für $pqr=0$,\\[3mm] $\mbox{}$\\ sonst.
+\\ $\mbox{}$} \right.\]
+Die sieben Punkte, an welchen $h$ in der definierenden Gleichung ausgewertet wird, liegen alle auf einer Ebene
+der Form $p+q+r=n$. Auf dieser Ebene liegen nur \textit{endlich} viele Punkte aus $T$. Wir zeigen, dass $h$ auf
+jeder solchen Ebene identisch verschwindet. Fixiere $n \geq 0$ und nehme an, $M=h(p_0,q_0,r_0)$ sei das Maximum
+von $h$ auf der Ebene $p+q+r=n$. Wir können annehmen, dass $p_0 q_0 r_0 \neq 0$ gilt, ansonsten ist $M=0$. Aus
+der Funktionalgleichung und der Maximalität von $M$ folgt, dass $h$ auch an den 6 Punkten
+$(p_0+1,q_0-1,r_0),\ldots,(p_0,q_0-1,r_0+1)$ den Wert $M$ annimmt. Insbesondere ist $h(p_0-1,q_0+1,r_0)=M$.
+Durch Wiederholen dieses Arguments folgt $M=h(p_0,q_0,r_0)=h(p_0-1,q_0+1,r_0)=\ldots=h(0,q_0+p_0,r_0)=0$.
+
+Dieselbe Argumentation, angewendet auf $-h$, ergibt dass das Minimum von $h$ auf der Ebene $p+q+r=n$ ebenfalls
+gleich 0 ist, folglich verschwindet $h$ identisch.
+
+Schliesslich rechnet man leicht nach, dass die Funktion
+\[f(p,q,r)=\left\{ \parbox{3cm}{$\;0$\\[3mm] $\displaystyle \frac{3pqr}{p+q+r}$}\parbox{4cm}{für $p=q=r=0$,\\[3mm] sonst.
+\\ $\mbox{}$} \right.\]
+alle Bedingungen der Aufgabe erfüllt. Sie ist daher die einzige Lösung.\\
+
+\pagebreak
+
+
+\item[\textbf{7.}] Sei $n\geq 2$ eine natürliche Zahl. Zeige, dass sich das Polynom
+\[(x^2-1^2)(x^2-2^2)(x^2-3^2)\cdots (x^2-n^2)+1\]
+nicht als Produkt von zwei nichtkonstanten Polynomen mit ganzen Koeffizienten schreiben lässt.\\
+
+\textbf{Lösung}
+
+Sei $p$ das Polynom in der Aufgabe. Nehme an, es gelte $p(x)=r(x)s(x)$ für zwei nichtkonstante Polynome $r,s$
+mit ganzen Koeffizienten. Für $k=\pm 1, \pm 2,\ldots,\pm n$ ist dann
+\[1=p(k)=r(k)s(k).\]
+Da beide Faktoren rechts ganze Zahlen sind, gilt somit $r(k)=s(k)=\pm 1$. Das Polynom $r-s$ hat höchstens den
+Grad $2n-1$, besitzt aber die $2n$ Nullstellen $\pm 1,\ldots,\pm n$, somit verschwindet es identisch. Dann ist
+$p(x)=r(x)^2$ aber das Quadrat eines Polynoms und insbesondere ist $p(0)$ eine Quadratzahl. Nun gilt aber
+$p(0)=(-1)^n (n!)^2+1$. Ist $n\geq 3$ ungerade, dann ist $p(0)$ negativ, kann also keine Quadratzahl sein. Ist
+$n$ gerade, dann gilt
+\[(n!)^2 < p(0) < (n!+1)^2,\]
+Also ist $p(0)$ wieder keine Quadratzahl, Widerspruch.\\
+
+\bigskip
+
+\item[\textbf{8.}] Betrachte einen See mit zwei Inseln darin und sieben Städten am Ufer. Die Inseln und Städte
+nennen wir im Folgenden kurz \textit{Orte}. Zwischen genau den folgenden Paaren von Orten besteht eine
+Schiffsverbindung:
+\begin{enumerate}
+\item[(i)] zwischen den beiden Inseln,
+\item[(ii)] zwischen jeder Stadt und jeder Insel,
+\item[(iii)] zwischen zwei Städten genau dann, wenn sie nicht benachbart sind.
+\end{enumerate}
+Jede dieser Verbindungen wir von genau einem von zwei konkurrenzierenden Schiffsunternehmen angeboten. Beweise,
+dass es stets drei Orte gibt, sodass es zwischen je zwei dieser Orte Schiffsverbindungen desselben Unternehmens
+existieren.\\
+
+\textbf{Lösung}
+
+Wir formulieren die Aufgabe um in die Sprache der Graphentheorie. Die Inseln werden durch Punkte $A,B$
+repräsentiert, die sieben Städte durch Punkte $S_1,\ldots,S_7$. Zwei Städte sind benachbart, falls sie
+aufeinanderfolgende Indizes (mod 7) haben. Je zwei dieser Punkte sind mit einer Kante verbunden, ausser
+benachbarten Städten. Jede dieser 29 Kanten ist rot oder grün gefärbt (je nach Schiffsunternehmen), und wir
+müssen zeigen, dass es in diesem Graphen stets ein monochromatisches Dreieck gibt. Wir können annehmen, dass
+$AB$ rot ist.\\
+
+\textit{1. Lösung}
+
+Wir unterscheiden zwei Fälle.
+\begin{enumerate}
+\item[(1)] Nehme an, es gibt zwei rote Kanten von $A$ zu zwei nicht benachbarten Städten $S_i, S_j$. Ist eine
+der Kanten $BS_i, BS_j$ ebenfalls rot, dann ist $AS_iB$ oder $AS_jB$ ein rotes Dreieck. Nehme also an, diese
+beiden Kanten sind grün. Ist nun $S_i S_j$ rot, dann ist $AS_iS_j$ ein rotes Dreieck, ist $S_iS_j$ grün, dann
+ist $BS_iS_j$ ein grünes Dreieck.
+
+\item[(2)] Nehme an, es gibt keine zwei roten Kanten von $A$ zu zwei nicht benachbarten Städten. Dann gibt es
+entweder gar keine rote Kante von $A$ zu einer Stadt, oder es gibt genau eine, oder es gibt genau zwei zu
+benachbarten Städten. Nach Umnummerierung können wir also annehmen, dass $AS_1$, $AS_2$, $AS_3$, $AS_4$, $AS_5$
+alle grün sind. Beachte, dass die Städte $A_1,A_3,A_5$ paarweise nicht benachbart sind. Ist nun eine Kante des
+Dreiecks $A_1A_3A_5$ grün, dann bildet sie mit $A$ ein grünes Dreieck. Sonst sind alle rot und dann ist
+$A_1A_3A_5$ ein rotes Dreieck.
+\end{enumerate}
+
+\textit{2. Lösung}
+
+Nehme an, es gibt kein monochromatisches Dreieck. Betrachte die sieben Mengen
+\begin{eqnarray*}
+M_1 &=& \{S_1,S_3,S_5\}\\
+M_2 &=& \{S_2,S_4,S_6\}\\
+M_3 &=& \{S_3,S_5,S_7\}\\
+M_4 &=& \{S_4,S_6,S_1\}\\
+M_5 &=& \{S_5,S_7,S_2\}\\
+M_6 &=& \{S_6,S_1,S_3\}\\
+M_7 &=& \{S_7,S_2,S_4\}
+\end{eqnarray*}
+Die drei Städte in jeder dieser Mengen sind paarweise nicht benachbart. Betrachte $M_{\alpha}=\{S_i,S_j,S_k\}$
+und nehme an, die Kanten $AS_i$, $AS_j$, $AS_k$ seien alle grün. Ist dann eine der Kanten $S_iS_j$, $S_jS_k$,
+$S_kS_i$ ebenfalls grün, dann ergibt das mit $A$ ein grünes Dreieck. Sind diese Kanten alle rot, dann ist
+$S_iS_jS_k$ ein rotes Dreieck, Widerspruch. Folglich ist mindestens eine der Kanten $AS_i$, $AS_j$, $AS_k$ rot.
+Da jede Stadt in genau 3 der Mengen $M_{\alpha}$ auftaucht, folgt insgesamt dass mindestens drei Kanten $AS_a$,
+$AS_b$, $AS_c$ rot sind. Die Kanten $BS_a$, $BS_b$, $BS_c$ sind alle grün, sonst gibt es ein rotes Dreieck mit
+$AB$. Mindestens zwei der Städte $S_a,S_b,S_c$ sind nicht benachbart, oBdA sind das $S_a,S_b$. Unabhängig von
+der Farbe der Kante $S_aS_b$ haben wir nun aber ein monochromatisches Dreieck mit $A$ oder $B$, Widerspruch.\\
+
+\textit{3. Lösung}
+
+Nehme an, es gibt kein monochromatisches Dreieck. Wir benützen folgende zwei triviale Beobachtungen:
+\begin{enumerate}
+\item[(1)] Unter je drei Städten gibt es immer zwei nicht benachbarte.
+\item[(2)] Unter je fünf Städten gibt es immer drei, die paarweise nicht benachbart sind.
+\end{enumerate}
+Wir setzen
+\[M=\{k\;|\; AS_k \mbox{ ist grün}\},\qquad N=\{k\;|\; BS_k \mbox{ ist grün}\}.\]
+Folgendes gilt für diese Mengen:
+\begin{enumerate}
+\item[(i)] $M \cup N=\{1,\ldots,7\}$.\\
+In der Tat, wäre $k \not \in M \cup N$, dann sind $AS_k$ und $BS_k$ rot, also ist $AS_kB$ ein rotes Dreieck,
+Widerspruch.
+\item[(ii)] $|M \setminus N| \leq 2$,  $|N \setminus M| \leq 2$.\\
+Nehme an, $S_i,S_j,S_k \in M \setminus N$. Wegen (1) sind zwei dieser Städte nicht benachbart, zum Beispiel
+$S_i,S_j$. Nach Konstruktion sind $AS_i$ und $AS_j$ grün, aber $BS_i$ und $BS_j$ rot. Unabhängig von der Farbe
+von $S_iS_j$ ergibt das ein monochromatisches Dreieck, Widerspruch.
+\item[(iii)] $|M|,|N| \leq 4$.\\
+Nehme an, $|M|\geq 5$. Unter den fünf Städten, die mit einer grünen Kante mit $A$ verbunden sind, gibt es nach
+(2) drei paarweise nicht benachbarte $S_i,S_j,S_k$. Sind zwei dieser Städte mit einer grünen Kante verbunden,
+ergibt das ein grünes Dreieck mit $A$. Wenn keine grün ist, dann ist $S_iS_jS_k$ ein rotes Dreieck, Widerspruch.
+\end{enumerate}
+Daraus folgt nun aber
+\[7 \stackrel{(i)}{=}|M \cup N| = |M| + |N \setminus M| \stackrel{(ii),(iii)}{\leq} 4+2=6,\]
+ein Widerspruch.\\
+
+
+\bigskip
+
+\item[\textbf{9.}] Sei $A_1 A_2 \ldots A_n$ ein reguläres $n$-Eck. Die Punkte $B_1,\ldots,B_{n-1}$ sind wie
+folgt definiert:
+\begin{itemize}
+\item Für $i=1$ oder $i=n-1$ ist $B_i$ der Mittelpunkt der Seite $A_i A_{i+1}$;
+\item Für $i \neq 1, i \neq n-1$ sei $S$ der Schnittpunkt von $A_1 A_{i+1}$ und $A_n A_i$. Der Punkt $B_i$ ist
+dann der Schnittpunkt der Winkelhalbierenden von $\wi A_i S A_{i+1}$ mit $A_i A_{i+1}$.
+\end{itemize}
+Beweise, dass gilt
+\[\wi A_1 B_1 A_n + \wi A_1 B_2 A_n+ \ldots + \wi A_1 B_{n-1} A_n = 180^\circ.\]
+
+\textbf{Lösung}
+
+Wir beginnen mit folgendem
+\begin{lem}
+Sei $ABCD$ ein gleichschenkliges Trapez, wobei $AB \parallel CD$. Die Diagonalen $AC$ und $BD$ schneiden sich in
+$S$. Sei $M$ der Mittelpunkt von $BC$ und die Winkelhalbierende von $\wi CSB$ schneide $BC$ in $N$. Dann gilt
+$\wi AMD = \wi AND.$
+\end{lem}
+
+\begin{proof}[Beweis]
+Wir zeigen, dass $ADNM$ ein Sehnenviereck ist. Der Schnittpunkt von $AD$ und $BC$ sei $X$ und sei $XA = XB = a,
+XC = XD = b$. Aus der bekannten Eigenschaft für Winkelhalbierende und dem Strahlensatz folgt
+\[\frac{BN}{CN} = \frac{SB}{SC} = \frac{AB}{CD} = \frac{a}{b}.\]
+Wir berechnen nun
+\[ \frac{BC}{CN} = \frac{BN + CN}{CN} = \frac{a}{b} + 1 = \frac{a+b}{b}.\]
+Daraus erhalten wir
+\[CN = BC \cdot \frac{b}{a+b} = (a-b) \cdot \frac{b}{a+b}.\]
+Es gilt
+\[XN \cdot XM = \left( b + (a-b) \cdot \frac{b}{a+b} \right) \cdot \frac{a+b}{2} = a \cdot b = XD \cdot XA.\]
+Nach dem Potenzsatz ist $ADNM$ somit ein Sehnenviereck.\\
+\end{proof}
+
+Sei $C_i$ der Mittelpunkt der Seite $A_iA_{i+1}$ ($i \leq n-1$) und sei $\Sigma$ die linke Seite, der zu
+beweisenden Gleichung. Für $1<i<n-1$ ist das Viereck $A_1A_iA_{i+1}A_n$ entweder ein gleichschenkliges Trapez
+mit nichtparallelen Schenkeln $A_1A_n$ und $A_iA_{i+1}$ oder ein Rechteck. Im ersten Fall folgt aus dem Lemma
+$\wi A_1B_iA_n = \wi A_1C_iA_n$, im zweiten Fall gilt $B_i = C_i$ und die Winkel sind ebenfalls gleich. Somit
+haben wir
+\[\Sigma = \wi A_1 C_1 A_n + \wi A_1 C_2 A_n + \ldots + \wi A_1 C_{n-1} A_n.\]
+Weil $A_1 A_2 \ldots A_n$ ein reguläres $n$-Eck ist, sind für $i = 2, \ldots , n-1$ die Dreiecke $A_1C_iA_n$ und
+$A_{n+2-i}C_1A_{n+1-i}$ kongruent. Für diese $i$ gilt deshalb $\wi A_1C_iA_n = \wi A_{n+1-i}C_1A_{n+1-i}$ und
+somit
+\[\Sigma = A_1 C_1 A_n + \wi A_n C_1 A_{n-1} + \ldots + \wi A_3 C_1 A_2 = \wi A_1C_1A_2 = 180^\circ.\]
+
+\bigskip
+
+
+\item[\textbf{10.}] Sei $ABC$ ein spitzwinkliges Dreieck mit Höhenschnittpunkt $H$ und seien $M$ und $N$
+zwei Punkte auf $BC$, so dass $\overrightarrow{MN} = \overrightarrow{BC}$. Seien $P$ und $Q$ die Projektionen
+von $M$ bzw. $N$ auf $AC$ bzw. $AB$. Zeige, dass $APHQ$ ein Sehnenviereck ist.\\
+
+\textbf{1. Lösung}
+
+Die Translation um den Vektor $\overrightarrow{BM}$ bildet $B$ auf $M$ und $C$ auf $N$ ab. Sei $G$ das Bild von
+$H$ bei dieser Translation. Wir zeigen nun, dass $P,Q$ und $H$ auf dem Thaleskreis über der Strecke $AG$ liegen.
+
+Die Gerade $BH$ steht senkrecht auf $AC$, somit auch das Bild, die Gerade $MG$. Daraus folgt $\wi APG =
+90^\circ$ und $P$ liegt auf dem Thaleskreis über $AG$. Analog für $Q$.
+
+Die Gerade $HG$ ist parallel zum Vektor $\overrightarrow{BM}$ und somit parallel zur Geraden $BC$. Der Winkel
+$\wi AHG$ ist somit auch rechtwinklig.\\
+
+\textbf{2. Lösung}
+
+Wir nehmen oBdA an, dass $M$ auf der Halbgeraden $BC$ mit Ursprung $B$ liegt. Die Punkte $E$ und $F$ seien die
+Projektionen von $B$ bzw. $C$ auf $AC$ bzw. $AB$. Damit $APHQ$ ein Sehnenviereck ist, genügt es zu zeigen, dass
+$\wi HPE = \wi HQF$. Dies ist der Fall, wenn die beiden Dreiecke $HPE$ und $HQF$ ähnlich sind. Wir wollen dies
+zeigen. Nach Konstruktion gilt $\wi HEP = \wi HFQ = 90^\circ$. Es bleibt noch die folgende Gleichung zu
+beweisen.
+\[\frac{HE}{PE} = \frac{HF}{QF} \quad \Leftrightarrow \quad \frac{HE}{HF} = \frac{PE}{QF} \]
+Wir formen diese Gleichung nun um, bis es klar wird, dass sie stimmt. Die beiden Dreiecke $HEC$ und $HFB$ haben
+zwei gleiche Winkel und sind somit ähnlich. Es gilt also
+\[\frac{CE}{BF} = \frac{HE}{HF} = \frac{PE}{QF} \quad \Leftrightarrow \quad \frac{PE}{CE} = \frac{QF}{BF}.\]
+Die Geraden $BE$ und $MP$ stehen beide rechtwinklig auf $AC$ und sind somit parallel. Analog sind die Geraden
+$CF$ und $NQ$ parallel. Mit der Voraussetzung, dass $BM = CN$ gilt somit nach Strahlensatz
+\[\frac{PE}{CE} = \frac{BM}{BC} = \frac{CN}{BC} = \frac{QF}{BF}.\]
+Dies ist genau, was wir noch zu zeigen hatten.\\
+
+\textbf{3. Lösung}
+
+OBdA liegen die Punkte $M,B,N,C$ in dieser Reihenfolge auf $BC$. Sei $R$ der Schnittpunkt von $MP$ mit $NQ$.
+Wegen $|MB|=|NC|$ ist $RH$ parallel zu $BC$. Es gilt $\wi BAH=90^\circ-\beta$, $\wi BNQ=90^\circ-\beta$ und $\wi
+CMP=90^\circ-\gamma$. Wegen der Parallelität von $RH$ und $BC$ ist auch $\wi NRH=90^\circ-\beta$, also ist
+$AQRH$ ein Sehnenviereck. Es genügt nun zu zeigen, dass $\wi RQH = \wi RPH$ gilt.
+
+Seien $H_B$ und $H_C$ die Höhenfusspunkte auf $AC$ und $AB$. Es gilt $\wi RQH=\wi QHH_C$ und $\wi RPH=\wi
+PHH_B$. Es genügt daher zu zeigen, dass die Dreiecke $QHH_C$ und $PHH_B$ ähnlich sind. Einerseits gilt
+trivialerweise
+\[\frac{|HH_C|}{|HH_B|}=\frac{\cos \beta}{\cos \gamma}.\]
+Andererseits erhalten wir
+\[\frac{|H_CQ|}{|RH|}=\sin (90^\circ-\beta)=\cos \beta,\qquad \frac{|H_BP|}{|RH|}=\sin (90^\circ-\gamma)=\cos \gamma,\]
+Also sind die beiden Dreiecke ähnlich:
+\[\frac{|HH_C|}{|HH_B|}=\frac{\cos \beta}{\cos \gamma}=\frac{|H_CQ|}{|H_BP|}.\]
+
+\bigskip
+
+\item[\textbf{11.}] Finde alle Funktionen $f:\BN \rightarrow \BN$, sodass $f(m)^2+f(n)$ ein Teiler ist von $(m^2+n)^2$
+für alle $m,n \in \BN$.\\
+
+\textbf{1. Lösung}
+
+Mit $m=n=1$ folgt, dass $f(1)^2+f(1)$ ein Teiler von 4 ist, folglich ist $f(1)=1$. Für $m=1$ erhalten wir
+\begin{equation}
+f(n)+1 \div (n+1)^2.
+\end{equation}
+Für $n=1$ erhalten wir
+\begin{equation}
+f(m)^2+1 \div (m^2+1)^2.
+\end{equation}
+Sei $p$ eine Primzahl. Mit $n=p-1$ folgt aus (1), dass $f(p-1)+1$ ein Teiler von $p^2$ ist. Daher gilt
+$f(p-1)=p-1$ oder $f(p-1)=p^2-1$. Nehme an, letzteres sei der Fall. Aus (2) folgt dann $(p^2-1)^2-1 \leq
+((p-1)^2+1)^2$. Für $p>1$ gilt aber
+\[((p-1)^2+1)^2=(p^2-2p+2)^2 \leq (p^2-2)^2 < (p^2-1)^2-1,\]
+Widerspruch. Daher ist $f(p-1)=p-1$.\\
+
+Sei $k$ eine natürliche Zahl mit $f(k)=k$, dann folgt
+\[k^2+f(n)=f(k)^2+f(n) \div (k^2+n)^2.\]
+Ausserdem ist
+\[(k^2+n)^2= ((k^2+f(n))+(n-f(n))^2 = A \cdot (k^2+f(n))+(f(n)-n)^2\]
+für eine ganze Zahl $A$. Daher gilt auch
+\begin{equation}
+k^2+f(n) \div (f(n)-n)^2.
+\end{equation}
+Dies ist richtig für unendlich viele natürliche Zahlen $k$, nämlich zum Beispiel für $k=p-1$, wenn $p$ prim ist.
+Daraus folgt aber, dass die rechte Seite von (3) verschwinden muss. Also gilt $f(n)=n$ für alle $n \in \BN$.\\
+
+\textbf{2. Lösung}
+
+Wir berechnen die ersten paar Werte von $f$. Wie in der ersten Lösung findet man $f(1)=1$. Aus (2) erhalten wir
+$f(2)^2+1 \div 25^2$, also ist $f(2)=2$. Analog findet man $f(4)^2+1 \div 17^2$, also $f(4)=4$ und $f(6)^2+1
+\div 37^2$, also $f(6)=6$. Mit $m=2$ und $n=3$ erhalten wir $4+f(3) \div 49$, daher ist $f(3)=3$ oder $f(3)=45$.
+Andererseits gilt wegen (1) $f(3)+1 \div 16$, folglich ist $f(3)=3$. Schliesslich folgt mit $m=2$, $n=3$ dass
+$4+f(5) \div 81$, somit $f(5)=5$ oder $f(5)=23$ oder $f(5)=77$. Andererseits gilt nach (1) $f(5)+1 \div 36$, es
+bleibt nur die Möglichkeit $f(5)=5$.
+
+Wir beweisen nun induktiv, dass $f(n)=n$ gilt für alle natürlichen Zahlen $n$. Nach obigen Rechnungen ist dies
+richtig für $n \leq 6$. Sei nun $n\geq 7$. Nach Induktionsvoraussetzung gilt (3) für $k=1,2,\ldots,n-1$. Nehme
+nun an, dass $f(n) \neq n$. Für $k=n-1$ erhalten wir insbesondere $(n-1)^2+f(n) \leq (f(n)-n)^2$. Dies ist
+äquivalent zu $(f(n)-2n)(f(n)-1)\geq 1$, also ist $f(n)>2n>n$. Wir behaupten, dass es natürliche Zahlen $a,b
+\leq n-1$ gibt, sodass $f(n)+a^2$ und $f(n)+b^2$ teilerfremd sind. Ist $f(n)$ gerade, dann wähle $a=1$ und
+$b=3$, ist $f(n)$ ungerade, dann wähle $a=2$ und $b=6$. Dies ist möglich wegen $n \geq 7$. Mit der
+Teilerfremdheit und (3) folgt daraus
+\[(a^2+f(n))(b^2+f(n)) \div (f(n)-n)^2.\]
+Andererseits ist die linke Seite grösser als $f(n)^2$, die rechte aber kleiner als $f(n)^2$ wegen $f(n)>n$. Dies
+ist ein Widerspruch, folglich gilt $f(n)=n$.\\
+
+\bigskip
+
+\item[\textbf{12.}] Sei $A$ eine $m \times m$-Matrix. Sei $X_i$ die Menge der Einträge in der $i$-ten Zeile und
+$Y_j$ die Menge der Einträge in der $j$-ten Spalte, $1 \leq i,j \leq m$. $A$ heisst \textit{cool}, wenn die
+Mengen $X_1,\ldots,X_m,Y_1,\ldots,Y_m$ alle verschieden sind. Bestimme den kleinsten Wert für $n$, sodass eine
+coole $2005 \times 2005$-Matrix mit Einträgen aus der Menge $\{1,2,\ldots,n\}$ existiert.\\
+
+\textbf{Lösung}
+
+Sei $\CX$ die Menge der $X_i$ und $\CY$ die Menge der $Y_j$. Es muss gelten $2^n \geq |\CX \cup \CY| = 2\cdot
+2005$, also $n \geq 12$. Nehme an, $n=12$ wäre möglich. Genau $2^{12}-2\cdot 2005=86$ Teilmengen von
+$\{1,2,\ldots,12\}$ liegen nicht in $\CX \cup \CY$. Zentral ist die einfache Beobachtung, dass jede Zeile mit
+jeder Spalte ein gemeinsames Element besitzt:
+\begin{equation}
+X_i \cap Y_j \neq \emptyset,\qquad \mbox{für } 1 \leq i,j \leq 2005.
+\end{equation}
+Nehme an, es gibt $i,j$, sodass $|X_i \cup Y_j| \leq 5$ gilt. Da jede Spalte und jede Zeile ein gemeinsames
+Element mit dieser Menge hat, liegt keine Teilmenge des Komplements in $\CX \cup \CY$. Es sind aber mindestens
+$2^7>86$ Teilmengen, Widerspruch. Also gilt
+\[|X_i \cup Y_j| \geq 6,\qquad \mbox{für } 1 \leq i,j \leq 2005.\]
+Daraus folgt, dass alle Zeilen oder alle Spalten mindestens je vier verschiedene Einträge haben, oBdA seien dies
+die Zeilen. Setze $k=\min |X_i|\geq 4$ und wähle $\alpha$ mit $|X_{\alpha}|=k$. Wegen (4) liegt keine Teilmenge
+des Komplements von $X_{\alpha}$ in $\CY$. Nach Definition von $k$ liegt daher keine Teilmenge des Komplements
+von $X_{\alpha}$ mit weniger als $k$ Elementen in $\CX \cup \CY$. Für $k=4$ sind dies
+\[\binom{8}{0}+\binom{8}{1}+\binom{8}{2}+\binom{8}{3} = 93 > 86,\]
+Teilmengen, für $k=5$ sind es
+\[\binom{7}{0}+\binom{7}{1}+\binom{7}{2}+\binom{7}{3}+\binom{7}{4} = 99 > 86,\]
+Widerspruch. Folglich gilt $k\geq 6$. Die Anzahl höchstens 5-elementiger Teilmengen von $\{1,2,\ldots,12\}$
+beträgt
+\[\binom{12}{0}+\binom{12}{1}+\binom{12}{2}+\binom{12}{3}+\binom{12}{4}+\binom{12}{5} = 1586.\]
+Keine davon liegt in $\CX$, und mindestens $1586-86$ davon liegen in $\CY$. Die Komplemente dieser Mengen haben
+mindestens 7 Elemente und liegen ebenfalls nicht in $\CX$. Folglich kommen in $\CX$ mindestens
+\[1586+(1586-86)=3086 > 2^{12}-2005\]
+Mengen nicht vor, ein Widerspruch. Es gilt daher $n \geq 13$.\\
+
+Wir beweisen nun, dass für $n=13$ eine coole $2005 \times 2005$-Matrix existiert. Zuerst konstruieren wir
+induktiv eine coole $2^n \times 2^n$-Matrix $A_n$ mit Einträgen aus der Menge $\{1,2,\ldots,n+2\}$. Setze
+\[A_1=\begin{pmatrix}
+1 & 1\\ 2 & 3
+\end{pmatrix},\]
+und definiere dann rekursiv
+\[A_{n+1}=\begin{pmatrix}
+A_n & A_n \\ A_n & B_n
+\end{pmatrix},\]
+dabei ist $B_n$ die $2^n\times 2^n$-Matrix, deren Einträge alle gleich $n+2$ sind. Seien $X_1,\ldots,X_{2^n}$,
+$Y_1,\ldots,Y_{2^n}$ die Zeilen- bzw. Spaltenmengen von $A_n$. Dann sind die Zeilenmengen von $A_{n+1}$ gegeben
+durch $X_1,\ldots, X_{2^n}, X_{1}\cup\{n+2\},\ldots, X_{2^n}\cup\{n+2\}$, die Spaltenmengen durch $Y_1,\ldots,
+Y_{2^n},Y_{1}\cup\{n+2\},\ldots,Y_{2^n}\cup\{n+2\}$. Mit $A_n$ ist somit auch $A_{n+1}$ cool. Schliesslich
+überlegt man sich leicht, dass auf Grund der speziellen Form der so konstruierten Matrizen auch die obere linke
+$2005 \times 2005$-Teilmatrix von $A_{11}$ cool ist. Dies beendet den Beweis.
+
+
+
+
+
+
+
+
+
+
+\end{enumerate}
+
+\end{document}

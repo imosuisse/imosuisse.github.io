@@ -1,0 +1,22 @@
+
+\ProvidesPackage{problems}
+
+\usepackage{tasks}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\newcommand{\answer}[1]{\emph{Answer:} #1}
+
+\newtheoremstyle{problemStyle}
+{}          %space above
+{}          % space below
+{}          % name of font
+{}          % indent
+{\bfseries} % head font
+{.\vspace{1mm}}          % punctuation
+{\newline}         % space after head
+{}    % Manually specify head
+
+\theoremstyle{problemStyle}
+\newtheorem{problem}{Problem}

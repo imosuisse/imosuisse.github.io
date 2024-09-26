@@ -1,0 +1,361 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{enumerate}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+
+
+% Schriftabkürzungen
+
+\newcommand{\dreieck}{\bigtriangleup}
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\gaussk}[1]{\lfloor #1 \rfloor}
+\newcommand{\frack}[1]{\{ #1 \}}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge IMO s\'election 2004} \\
+\medskip Premier test - 15. mai 2004
+\end{center}
+\vspace{8mm}
+Temps: 4.5 heures\\
+Chaque probl\`eme vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{1.}] Consid\'erons l'ensemble $S$ de tout les $n$-tuples $(X_1,\ldots,X_n)$, consistant des
+sous-ensembles de $\{1,2,\ldots, 1000\}$. Pour chaque $a=(X_1,\ldots,X_n) \in S$ on d\'efinit
+\[E(a)= \mbox{nombre d'\'el\'ements  de } X_1 \cup \ldots \cup X_n.\]
+Calculer explicitement la somme suivante
+\[\sum_{a \in S} E(a).\]
+
+\bigskip
+\bigskip
+
+\item[\textbf{2.}] D\'eterminer le plus grand nombre naturel $n$ tel que
+\[4^{995}+4^{1500}+4^n\]
+est un carr\'e.
+
+\bigskip
+\bigskip
+
+\item[\textbf{3.}] Soit $ABC$ un triangle isoc\`ele avec $|AC|=|BC|$ et $I$ le centre du cercle inscrit. Soit $P$ un
+point sur le cercle circonscrit au triangle $AIB$, se trouvant \`a l'int\'erieur du triangle $ABC$. Les droites
+passant par $P$ et parall\`eles \`a $CA$ et \`a $CB$ coupent $AB$ en $D$ et en $E$. La droite passant par $P$ et
+parall\`ele \`a $AB$ coupe $CA$ en $F$ et $CB$ en $G$. Montrer que l'intersection des droites $DF$ et $EG$ se
+trouve sur le cercle circonscrit au triangle $ABC$.
+
+\end{enumerate}
+
+\pagebreak
+
+
+\begin{center}
+{\huge IMO s\'election 2004} \\
+\medskip Second test - 16. mai 2004
+\end{center}
+\vspace{8mm}
+Temps: 4.5 heures\\
+Chaque probl\`eme vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{4.}] Soit $a,b,c$ trois r\'eels positifs avec $abc=1$. Prouver l'in\'equation suivante:
+\[\frac{ab}{a^5+ab+b^5}+\frac{bc}{b^5+bc+c^5}+\frac{ca}{c^5+ca+a^5} \leq 1.\]
+
+
+\bigskip
+\bigskip
+
+\item[\textbf{5.}] Un \textit{bloc de construction}, constitu\'e de 7 cubes-unit\'e, a la forme d'une cube $2 \times 2 \times 2$ avec un des coins (une cube-unit\'e) manquant. Soit alors une cube de longueur de c\^ot\'e $2^n$, $n \geq 2$, dont on enl\`eve une cube-unit\'e arbitraire. Montrer que le corps restant peut \^etre reconstruit \`a partir de tels blocs de construction.
+
+\bigskip
+\bigskip
+
+\item[\textbf{6.}] Trouver toutes les suites  r\'eelles finies $(x_0,x_1,\ldots,x_n)$ telles que le nombre $k$
+appara\^it exactement $x_k$ fois dans la suite.
+\end{enumerate}
+
+\pagebreak
+
+
+\begin{center}
+{\huge IMO S\'{e}lection 2004} \\
+\medskip troisi\`{e}me examen - le 12 juin 2004
+\end{center}
+\vspace{8mm}
+Dur\'{e}e : 4.5 heures\\
+Chaque probl\`{e}me vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{7.}] Pour quatre nombres r\'{e}elles $a,b,c,d$, les \'{e}quations suivantes sont satisfaites
+\begin{eqnarray*}
+a=\sqrt{45-\sqrt{21-a}} &,& \qquad b=\sqrt{45+\sqrt{21-b}},\\
+c=\sqrt{45-\sqrt{21+c}} &,& \qquad d=\sqrt{45+\sqrt{21+d}}.
+\end{eqnarray*}
+Montrer que $abcd=2004$.
+
+\bigskip
+\bigskip
+
+\item[\textbf{8.}] Soit $m$ un nombre naturel plus grand que 1. La suite $x_0, x_1, x_2,\ldots$ est d\'{e}finie par
+\[x_i= \left\{
+\begin{tabular}{lll}
+$2^i$,& pour & $0 \leq i \leq m-1$;\\
+$\sum_{j=1}^{m}x_{i-j}$ & pour & $i \geq m$.
+\end{tabular}
+\right.\] Trouver le plus grand nombre $k$ tel qu\'{}il existe $k$ termes cons\'{e}cutifs de la suite tous divisibles par $m$.
+
+\bigskip
+\bigskip
+
+\item[\textbf{9.}] Soit $X$ un ensemble avec $n$ \'{e}l\'{e}ments et soient $A_1, A_2, \ldots A_n$ des sous-ensembles distincts de $X$. Montrer qu\'{}il existe un $x \in X$ tel que les ensembles
+\[A_1 \setminus \{x\}, A_2 \setminus \{x\}, \ldots , A_n \setminus \{x\}\]
+sont deux \`{a} deux distincts.
+
+\end{enumerate}
+
+
+\pagebreak
+
+
+\begin{center}
+{\huge IMO S\'{e}lection 2004} \\
+\medskip quatri\`{e}me examen - le 13 juin 2004
+\end{center}
+\vspace{8mm}
+Dur\'{e}e : 4.5 heures\\
+Chaque probl\`{e}me vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{10.}] Soit $\dreieck ABC$ un triangle aigu avec les hauteurs $\overline{AU}$, $\overline{BV}$, $\overline{CW}$ et l'orthocentre
+$H$. Soit $X$ un point sur $\overline{AU}$, $Y$ sur $\overline{BV}$, $Z$ sur $\overline{CW}$, avec $X, Y, Z$ tous
+distincts de $H$.
+\begin{enumerate}[a)]
+\item Si $X,Y,Z,H$ se trouvent sur le m\^{e}me cercle, alors
+$$ [ABC] = [ABZ] + [AYC] + [XBC]$$
+
+o\`{u} $[PQR]$ d\'{e}signe l'aire du $\dreieck PQR$.
+\bigskip
+\item Montrer que l'inverse de a) est \'{e}galement vrai.
+\end{enumerate}
+
+\bigskip
+\bigskip
+
+\item[\textbf{11.}] Trouver toutes les fonctions injectives $f: \BR \rightarrow \BR$ tels que pour tout couple de nombres r\'{e}els $x \neq y$ l\'{}\'{e}quation suivante est satisfaite
+\[f\left(\frac{x+y}{x-y}\right)=\frac{f(x)+f(y)}{f(x)-f(y)}.\]
+
+\bigskip
+\bigskip
+
+\item[\textbf{12.}] Trouver tous les nombres naturels pouvant \^{e}tre \'{e}crits sous la forme
+\[\frac{(a+b+c)^2}{abc}\]
+avec $a,b$ et $c$ trois nombres naturels.
+
+\end{enumerate}
+
+\end{document}

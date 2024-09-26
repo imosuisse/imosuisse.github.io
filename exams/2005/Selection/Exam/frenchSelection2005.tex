@@ -1,0 +1,383 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+
+
+
+
+
+% Schriftabkürzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\gaussk}[1]{\lfloor #1 \rfloor}
+\newcommand{\frack}[1]{\{ #1 \}}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+\newcommand{\dreieck}{\bigtriangleup}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge Sélection OIM 2005} \\
+\medskip Premier examen - 7 mai 2005
+\end{center}
+\vspace{8mm}
+Durée: 4.5 heures\\
+Chaque exercice vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{1.}] Les suites $a_1 > a_2 >\ldots >a_n$ et $b_1 <b_2<\ldots
+<b_n$ contiennent à elles deux chacun des nombres $1,2,\ldots ,2n$
+exactement une fois. Déterminer la valeur de la somme
+\[|a_1-b_1|+|a_2-b_2|+\ldots+|a_n-b_n|.\]
+
+\bigskip
+\bigskip
+
+\item[\textbf{2.}] Trouver la valeur maximale possible de
+l'expression
+\[\frac{xyz}{(1+x)(x+y)(y+z)(z+16)},\]
+où $x,y,z$ sont des nombres réels positifs.
+
+\bigskip
+\bigskip
+
+\item[\textbf{3.}] Soit $n \geq 1$ un nombre naturel. On découpe un
+$4n$-gone régulier de longueur de côté 1 de façon arbitraire en un nombre fini de
+parallélogrammes.
+\begin{enumerate}
+\item[(a)] Montrer qu'au moins un parallélogramme de la
+décomposition est un rectangle.
+\item[(b)] Déterminer la sommes des aires de tous les rectangles
+qu'on trouve dans la décomposition.
+\end{enumerate}
+\end{enumerate}
+
+\pagebreak
+
+
+\begin{center}
+{\huge Sélection OIM 2005} \\
+\medskip Deuxième examen - 8 mai 2005
+\end{center}
+\vspace{8mm}
+Durée: 4.5 heures\\
+Chaque exercice vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{4.}] Soient $k_1$ et $k_2$ deux cercles qui se touchent extérieurement en un point $P$. Un troisième cercle $k$ touche $k_1$ en $B$ et $k_2$ en $C$, tel que $k_1$ et $k_2$ se trouvent à l'intérieur de $k$. Soit $A$ une des intersections de $k$ avec la tangente commune de $k_1$ et de $k_2$ passant par $P$. Les droites $AB$ et $AC$ coupent $k_1$ resp. $k_2$ une deuxième fois en $R$ resp. $S$. Montrer que $RS$ est une tangente commune de $k_1$ et de $k_2$.
+
+\bigskip
+\bigskip
+
+\item[\textbf{5.}] Soit $p>3$ un nombre premier. Montrer que $p^2$
+divise
+\[\sum_{k=1}^{p-1} k^{2p+1}.\]
+
+\bigskip
+\bigskip
+
+\item[\textbf{6.}] Soit $T$ l'ensemble de tous les triples $(p,q,r)$
+d'entiers non-négatifs. Trouver toutes les fonctions $f:T
+\rightarrow \BR$ telles que
+\[f(p,q,r)= \left\{ \parbox{9.5cm}{$\;\;0$\\[3mm] 
+\begin{tabular}{r@{}l}
+$1+\frac{1}{6}\{$ & $\phantom{+}f(p+1,q-1,r)+f(p-1,q+1,r)$\\
+& $+f(p-1,q,r+1)+f(p+1,q,r-1)$\\
+& $+f(p,q+1,r-1)+f(p,q-1,r+1)\}$
+\end{tabular}
+}\parbox{3cm}{si $pqr=0$,\\[3mm] $\mbox{}$\\ sinon.\\ $\mbox{}$} \right.\]
+
+\end{enumerate}
+
+\pagebreak
+
+\begin{center}
+{\huge Sélection OIM 2005} \\
+\medskip Troisième examen - 14 mai 2005
+\end{center}
+\vspace{8mm}
+Durée: 4.5 heures\\
+Chaque exercice vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{7.}] Soit $n\geq 2$ un nombre naturel. Montrer que le
+polynôme
+\[(x^2-1^2)(x^2-2^2)(x^2-3^2)\cdots (x^2-n^2)+1\]
+ne peut pas s'écrire comme produit de deux polynômes non constants à
+coefficients entiers.
+
+\bigskip
+\bigskip
+
+\item[\textbf{8.}] Considérons un lac avec deux îles au milieu et sept villes
+sur le bord du lac. Dans ce qui suit, nous allons appeler les îles
+et les villes des \textit{endroits}. Entre deux endroits, il y a une
+correspondance par bateau exactement quand
+\begin{enumerate}
+\item[(i)] il s'agit des deux îles,
+\item[(ii)] il s'agit d'une ville et d'une île,
+\item[(iii)] il s'agit de deux villes non voisines.
+\end{enumerate}
+Chacune des correspondances est desservie par exactement une de deux
+compagnies de navigation concurrentes. Montrer qu'il existe toujours
+trois endroits tels que les correspondances qui les relient deux à
+deux sont assurées par la même compagnie.
+
+\bigskip
+\bigskip
+
+\item[\textbf{9.}] Soit $A_1 A_2 \ldots A_n$ un $n$-gone régulier. Les points $B_1,\ldots,B_{n-1}$ sont définis
+comme suit:
+\begin{itemize}
+\item Pour $i=1$ ou $i=n-1$, $B_i$ est le milieu du côté $A_i A_{i+1}$;
+\item Pour $i \neq 1, i \neq n-1$, soit $S$ l'intersection de $A_1 A_{i+1}$ et $A_n A_i$. Le point $B_i$
+est alors l'intersection de la bissectrice de $\wi A_i S A_{i+1}$
+avec $A_i A_{i+1}$. Montrer que
+\[\wi A_1 B_1 A_n + \wi A_1 B_2 A_n+ \ldots + \wi A_1 B_{n-1} A_n = 180^\circ.\]
+\end{itemize}
+\end{enumerate}
+
+
+\pagebreak
+
+
+\begin{center}
+{\huge Sélection OIM 2005} \\
+\medskip Quatrième examen - 15 mai 2005
+\end{center}
+\vspace{8mm}
+Durée: 4.5 heures\\
+Chaque exercice vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{10.}] Soit $ABC$ un triangle aigu avec l'orthocentre
+$H$ et soient $M$ et $N$ deux points sur la droite $BC$ tels que
+$\overrightarrow{MN} = \overrightarrow{BC}$. Soient $P$ et $Q$ les
+projections de $M$ resp. de $N$ sur $AC$ resp. $AB$. Montrer que
+$APHQ$ est un quadrilatère inscrit.
+
+\bigskip
+\bigskip
+
+\item[\textbf{11.}] Déterminer toutes les fonctions
+$f:\BN \rightarrow \BN$ telles que $f(m)^2+f(n)$ soit un diviseur de
+$(m^2+n)^2$ pour tout $m,n \in \BN$.
+
+\bigskip
+\bigskip
+
+\item[\textbf{12.}] Soit $A$ une matrice $m \times m$. Soit $X_i$ l'ensemble des coefficients de la
+$i^{\text{ième}}$ ligne et $Y_j$ l'ensemble des coefficients de la
+$j^{\text{ième}}$ colonne, $1 \leq i,j \leq m$. On dit que $A$ est
+\textit{cool} si les ensembles $X_1,\ldots,X_m,Y_1,\ldots,Y_m$ sont
+tous distincts. Trouver la plus petite valeur possible de $n$ telle
+qu'il existe une matrice $2005 \times 2005$ cool avec des
+coefficients dans l'ensemble $\{1,2,\ldots,n\}$.
+
+\end{enumerate}
+
+\end{document}

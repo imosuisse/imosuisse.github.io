@@ -1,0 +1,39 @@
+\de{Soit $\mathbb{P}$ l'ensemble de tous les nombres premiers et $M$ un sous-ensemble de $\mathbb{P}$ ayant au moins trois éléments. On suppose que pour tout entier $k\geq 1$ et pour tout sous-ensemble $A=\{p_1, p_2, \ldots, p_k\}$ de $M$ tel que $A\neq M$, tous les facteurs premiers du nombre $p_1\cdot p_2 \cdot \ldots \cdot p_k - 1$ se trouvent dans $M$. Montrer que $M = \mathbb{P}$.
+
+\textbf{Première solution:} (Arnaud) Que peut-on dire des (au moins) trois éléments de $M$ ? Au moins deux d'entre eux, disons $p_3,p_4\in M$, sont impairs. En appliquant la condition pour $A=\{p_3\}$, on obtient donc $2\in M$. A-t-on forcément $3\in M$ ? Supposons que $3\notin \{p_3,p_4\}$, alors on a soit $p_3\equiv 1\pmod 3$ ou $2p_3\equiv 1\pmod 3$. En appliquant la condition avec $A=\{p_3\}$ ou $A=\{2,p_3\}$ on conclut donc $3\in M$.
+
+Peut-on continuer ainsi ? En particulier, est-ce que $M$ pourrait avoir seulement un nombre fini d'éléments ? Supposons que $M$ soit fini et écrivons $M=\{2,3,p_3,\ldots,p_k\}$. On rappelle que $M$ contient au moins un autre élément que $2$ et $3$ (noter que sans cette condition, alors $M=\{2,3\}$ satisferait toutes les autres conditions du problème). Comme Euclide avant nous, considérons la condition appliquée pour $A=M\setminus \{2\}$. Il doit alors exister un entier $a\geq 2$ tel que
+\[
+3p_3\ldots p_k-1=2^a \Longleftrightarrow 3p_3\ldots p_k=2^a+1,
+\]
+car le nombre $3p_3\ldots p_k-1$ ne peut être divisible que par $2\in M$ et $3p_3\ldots p_k-1\geq 4$, car $p_3\geq 5$ (c'est ici que l'on utilise que $M$ contient au moins un troisième élément $p_3$). De même, avec $A=M\setminus \{3\}$, il existe un entier $b\geq 2$ tel que 
+\[
+2p_3\ldots p_k=3^b+1.
+\]
+On doit donc avoir $2^{a+1}+2=3^{b+1}+3$ et ainsi $2^{a+1}=3^{b+1}+1$. Comme $a+1\geq 3$, on doit avoir $8|3^{b+1}+1$. Or $3^n\equiv 1,3\pmod 8$. Contradiction. On obtient ainsi que $M$ est un ensemble infini de nombres premiers.
+
+Soit maintenant un nombre premier quelconque $q$. On veut montrer que $q\in M$. On doit donc trouver un certain nombre de nombres premiers $p_1,\ldots,p_k\in M$ tels que leur produit est congruent à 1 $\pmod q$. On est libre de choisir $k$ et les $p_i$ (sans restriction) comme on le souhaite. Une telle relation fait penser au Petit Théorème de Fermat. Si l'on pouvait trouver $q-1$ éléments $p_1,\ldots,p_{q-1}$ dans $M$, tous congruents, i.e. $p_i\equiv a\pmod q\, \forall i$, alors on aurait
+\[
+p_1\ldots p_{q-1}\equiv a^{q-1}\equiv 1\pmod q
+\]
+qui implique donc $q\in M$.
+
+Or, $M$ est un ensemble infini, ainsi pour au moins un élément $a\in \{1,\ldots,q-1\}$ (principe des tiroirs), il existe une infinité d'éléments $p_i\in M$ congruents à $a\pmod q$. En particulier, au moins $q-1$. On a ainsi terminé.
+
+\textbf{Marking scheme:}
+\begin{enumerate}
+    \item 4P: $M$ is infinite: At most 3 partial points:
+    \begin{enumerate}
+        \item 1P: Finding two explicit elements (for example $2,3\in M$) 
+        \item 1P: Prove a relation of the type $p_1\cdots p_{j-1}p_{j+1}\cdots p_n-1 = p_j^k$ (by considering $A=M\setminus \{p_j\}$)
+        \item 1P: Use two distinct sets $A=M\setminus \{p_i\}, M\setminus \{p_j\}$  \textbf{and} combine the two equations in order to get a contradiction.
+        
+    \end{enumerate}
+    Note: If no other point is awarded for this exercise, ii. without justification is worth one point.
+    \item 3P: Conclude $M=\mathbb P$. At most 1 partial point:
+    \begin{enumerate}
+        \item 1P: Take $q\in \mathbb{P}\setminus M$ and try to work modulo $q$.
+    \end{enumerate}
+\end{enumerate}
+
+}

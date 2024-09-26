@@ -1,0 +1,149 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+\renewcommand{\phi}{\varphi}
+\newcommand{\eps}{\varepsilon}
+
+\newcommand{\pfeil}{\quad \Longrightarrow \quad}
+
+\newcommand{\wi}{\mathop{\hspace{1pt}<\hspace{-6pt})\hspace{2pt}}\nolimits}
+
+
+\newcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\nequiv}{\not \equiv}
+\newcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\Mod}[1]{(\mod\;#1)}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\newcommand{\sgn}{\mathop{\rm sign}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+
+\begin{document}
+
+\begin{center}
+{\huge Schweizer IMO - Selektion} \\
+\medskip erste Prüfung - 10. Mai 2003
+\end{center}
+\vspace{8mm}
+Zeit: 4 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{1.}] Für die rellen Zahlen $x,y,a$ gelten die folgenden Gleichungen:
+\begin{eqnarray*}
+x+y &=& a\\
+x^3+y^3 &=& a\\
+x^5+y^5 &=& a.
+\end{eqnarray*}
+Bestimme alle möglichen Werte von $a$.
+
+\bigskip
+
+\item[\textbf{2.}] Sei $ABC$ ein beliebiges spitzwinkliges Dreieck. $E$ und $F$ seien
+die Fusspunkte der Höhen durch $B$ und $C$. $G$ ist die Projektion von $B$ auf die Gerade $EF$ und $H$ die
+Projektion von $C$ auf $EF$. Zeige, dass gilt
+\[|HE|=|FG|.\]
+
+\bigskip
+
+\item[\textbf{3.}] Finde die grösste reelle Zahl $C_{1}$ und die kleinste reelle Zahl $C_{2}$, sodass für alle positiven
+Zahlen $a,b,c,d,e$ gilt
+\[C_{1}<\frac{a}{a+b}+\frac{b}{b+c}+\frac{c}{c+d}+\frac{d}{d+e}+\frac{e}{e+a}<C_{2}.\]
+
+\bigskip
+
+\item[\textbf{4.}] Finde die grösste natürliche Zahl $n$, die
+für jede ganze Zahl $a$ ein Teiler ist von $a^{25}-a$.
+
+\bigskip
+
+\item[\textbf{5.}] Auf einem Spielbrett mit $5 \times 9$ Feldern liegen $n$ Steine, wobei zu jedem Zeitpunkt auf
+jedem Feld höchstens ein Stein liegen darf. Ein Spielzug besteht darin, jeden Stein in eines der angrenzenden
+Felder oben, unten, links oder rechts zu verschieben. Dies geschieht für alle Steine gleichzeitig. Wird dabei
+ein Stein in einem Zug horizontal bewegt, dann muss er im nächsten Zug vertikal bewegt werden und umgekehrt.
+Bestimme den grössten Wert für $n$, sodass es eine Anfangsposition der $n$ Steine und eine Folge von Spielzügen
+gibt, sodass dieses Spiel beliebig lange fortgesetzt werden kann.
+
+
+\end{enumerate}
+
+
+\pagebreak
+
+
+\begin{center}
+{\huge Schweizer IMO - Selektion} \\
+\medskip zweite Prüfung - 24. Mai 2003
+\end{center}
+\vspace{8mm}
+Zeit: 4 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{6.}] Für die positiven reellen Zahlen $a,b,c$ gelte $a+b+c=2$. Zeige, dass die folgende
+Ungleichung erfüllt ist und bestimme alle Fälle, in denen das Gleichheitszeichen steht:
+\[\frac{1}{1+ab}+\frac{1}{1+bc}+\frac{1}{1+ca}\geq \frac{27}{13}\]
+
+\bigskip
+
+\item[\textbf{7.}] Finde alle Polynome $Q(x)=ax^2+bx+c$ mit ganzzahligen Koeffizienten, sodass drei
+verschiedene Primzahlen $p_{1},p_{2},p_{3}$ existieren mit
+\[|Q(p_{1})|=|Q(p_{2})|=|Q(p_{3})|=11.\]
+
+\bigskip
+
+\item[\textbf{8.}] Sei $A_{1}A_{2}A_{3}$ ein Dreieck und $\omega_1$ ein Kreis, der durch $A_1$ und $A_2$ geht.
+Nehme an, es existieren Kreise $\omega_2, \ldots, \omega_7$ mit den folgenden Eigenschaften:
+\begin{enumerate}
+\item $\omega_k$ geht durch die Punkte $A_k$ und $A_{k+1}$ für $k=2,3, \ldots, 7$, \hspace{8mm}($A_i=A_{i+3}$)
+\item $\omega_k$ und $\omega_{k+1}$ berühren sich äusserlich für $k=1,2, \ldots, 6$.
+\end{enumerate}
+Zeige: $\omega_1=\omega_7$.
+
+\bigskip
+
+\item[\textbf{9.}] Gegeben sind ganze Zahlen $0<a_{1}<a_{2}< \ldots <a_{101}<5050$, zeige, dass man daraus immer vier
+verschiedene $a_{k},a_{l},a_{m},a_{n}$ auswählen kann mit
+\[5050 | (a_{k}+a_{l}-a_{m}-a_{n}).\]
+
+\bigskip
+
+\item[\textbf{10.}] Finde alle streng monotonen Funktionen $f: \mathbb{N}\rightarrow \mathbb{N}$, sodass für
+alle $n \in \mathbb{N}$ gilt
+\[f(f(n))=3n.\]
+
+\end{enumerate}
+\end{document}
+

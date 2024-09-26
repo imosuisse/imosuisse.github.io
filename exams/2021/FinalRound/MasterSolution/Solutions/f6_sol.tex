@@ -1,0 +1,31 @@
+\en{
+Let $\N$ be the set of positive integers. Let $f\colon \N\to \N$ be a function such that for every $n\in \N$
+$$f(n)-n < 2021 \quad \text {and} \quad \underbrace{f(f(\cdots f(f}_{f(n)}(n))\cdots)) = n.$$
+Prove that $f(n) = n$ for infinitely many $n\in \N$.
+
+\bigskip
+
+\textbf{Solution (Valentin):}
+
+We first prove that $f$ is surjective. This follows directly from the second condition since for all $a\in \N$ we have
+$$b = \underbrace{f(f(\cdots f(f}_{f(a)-1}(a))\cdots)) \implies f(b) = a.$$
+Now pick any prime $p > 2021$ and $n$ with $f(n) =p$. Now apply $f$ to the second condition to get
+$$p = f(n) = \underbrace{f(f(\cdots f(f}_{p+1}(n))\cdots)) = \underbrace{f(f(\cdots f(f}_{p}(p))\cdots)).$$
+Instead setting $n = p$ in the second condition we find that
+$$p = \underbrace{f(f(\cdots f(f}_{f(p)}(p))\cdots))$$
+as well. Now let $d_p$ be the smallest positive integer such that $p = \underbrace{f(f(\cdots f(f}_{d_p}(p))\cdots)).$
+
+It follows that $d_p\mid p, f(p)$ since otherwise we would obtain a smaller value of $d_p$ by repeatedly substituting this expression in the two equations above. Now if $d_p = 1$ we have $f(p) = p$ and if $d_p = p$ we have $f(p)-p < 2021 < p$ using the first condition and we find $f(p) = p$ as well. We conclude that every prime $p > 2021$ satisfies $f(p) = p$ and since there is an infinite number of such primes, this solves the problem.
+
+\bigskip
+
+\textbf{Marking Scheme}
+
+\begin{itemize}
+    \item 1P: Prove (claim) that $f$ is surjective.
+    \item 2P: Proving $n = \underbrace{f(f(\cdots f(f}_{n}(n))\cdots))$ for all $n\in\N$ (or any set containing $\infty$ primes).
+    \item 2P: Considering $d_n = \min \Big\{k \in\N \mid n = \underbrace{f(f(\cdots f(f}_{k}(n))\cdots))\Big\}$.
+    \item 2P: Finishing the proof.
+\end{itemize}
+
+}

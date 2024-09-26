@@ -1,0 +1,38 @@
+\en {The real numbers $a,b,c,d$ are positive and satisfy $(a+c)(b+d)=ac+bd$. Find the minimum of 
+$$\frac{a}{b}+\frac{b}{c}+\frac{c}{d}+\frac{d}{a}.$$
+\bigskip
+\textbf{Answer}: 8.
+
+\textbf{Solution}(Raphael):
+
+After trying out some things one might suspect that the minimum is reached when $a=c$ and $b=d$. So we'll try to use an inequality with equality case $a=c$ and $b=d$. Going for the easiest such inequality one comes across: 
+\[ac+bd = (a+c)(b+d) \ge 2\sqrt{ac}\cdot 2\sqrt{bd} \Leftrightarrow \sqrt{\frac{ac}{bd}} + \sqrt{\frac{bd}{ac}} \ge 4\]
+Where we just used AM-GM on the terms $(a+c)$ and $(b+d)$ and then divided everything by $\sqrt{abcd}$, to get the second inequality.
+
+Now if $a=c$ and $b=d$ then $\frac{a}{b} = \frac{c}{d}$ and $\frac{b}{c} = \frac{d}{a}$. So another inequality to try is:
+\[ \frac{a}{b} +\frac{c}{d} +\frac{b}{c}+\frac{d}{a} \ge  2\sqrt{\frac{ac}{bd}} + 2\sqrt{\frac{bd}{ac}}\]
+which is once again AM-GM.
+So combining these two inequalities one gets:
+\[\frac{a}{b}+\frac{b}{c}+\frac{c}{d}+\frac{d}{a} \ge 2\cdot\left(\sqrt{\frac{ac}{bd}} + \sqrt{\frac{bd}{ac}}\right) \ge 2\cdot 4 = 8\]
+with equality only when $\frac{a}{b} = \frac{c}{d}$ and $\frac{b}{c} = \frac{d}{a}$.
+
+Now we still have to show that numbers $a=c$, $b=d$ exist which fulfil the condition $ac+bd=(a+c)(b+d)$
+Plugging in $c=a$ and $d=b$ we get:
+\[ a^2+b^2 = 4ab \Leftrightarrow \left(\frac{a}{b}\right)^2 - 4\frac{a}{b} + 1 = 0\]
+which has the solutions $\frac{a}{b} = 2\pm \sqrt{3}$.
+so using $a=c=(2+\sqrt{3})\cdot b = (2+\sqrt{3})\cdot d$ fulfils the condition.
+
+%\newpage
+\textbf{Marking scheme}
+\begin{itemize}
+    \item 1P: Claiming $a=c\neq b=d$ is the equality case/reaches the minimum.
+    
+    \item 2P: Getting the first inequality (applying AM-GM on the condition).
+    
+    \item 2P: Getting the second inequality (applying AM-GM on the expression).
+    
+    \item 1P: Proving that the expression is indeed greater/equal to 8.
+    
+    \item 1P: Showing that the minimum is achieved.
+\end{itemize}
+}

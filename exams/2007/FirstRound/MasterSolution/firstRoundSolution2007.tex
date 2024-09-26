@@ -1,0 +1,173 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{german}
+\usepackage[latin1]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{enumerate}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{floatflt}
+\usepackage{subfigure}
+
+\oddsidemargin=0cm \headheight=-2.1cm
+\textwidth=16.4cm \textheight=25.7cm
+
+\newcommand{\wi}{\angle}
+\newcommand{\bogen}{\widehat}
+\newcommand{\grad}{^\circ}
+\newcommand{\de}{\triangle}
+\newcommand{\ab}{\hspace{5pt}}\parindent0pt
+
+\renewcommand{\figurename}{Abbildung}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{center}
+{\huge Lösungen zur Vorrundenprüfung 2007}
+\end{center}
+\vspace{15mm}
+
+Zuerst einige Bemerkungen zum Punkteschema. Eine vollständige und korrekte Lösung einer Aufgabe ist jeweils 7
+Punkte wert. Für komplette Lösungen mit kleineren Fehlern oder Ungenauigkeiten, die aber keinen wesentlichen
+Einfluss auf die Richtigkeit der dargestellten Lösung haben, geben wir 6 Punkte. Bei unvollständigen Lösungen
+wird der Fortschritt und der Erkenntnisgewinn bewertet (Teilpunkte). Oft gibt es mehrere Lösungen für ein
+Problem. Versucht jemand zum Beispiel eine Aufgabe auf zwei verschiedenen Wegen zu lösen, erreicht auf dem
+ersten Weg 3 Punkte, auf dem zweiten 2 Punkte, dann wird seine Punktzahl nicht 5, sondern 3 sein. Punkte, die
+auf verschiedenen Wegen erreicht werden, sind also \textit{nicht} kummulierbar. Die unten angegebenen
+Bewertungsschemen sind nur Orientierungshilfe. Gibt jemand eine alternative Lösung, dann werden wir versuchen,
+die Punktzahl entsprechend zu wählen, dass für gleiche Leistung gleich viele Punkte
+verteilt werden. Die Schemen sind stets wie folgt zu interpretieren:\\
+Kommt jemand in seiner Lösung bis und mit hierhin, dann gibt das soviele Punkte.\\
+Ausnahmen von dieser Regel sind jeweils ausdrücklich deklariert.\\
+
+\begin{enumerate}
+\item[\textbf{1.}] Betrachte einen Würfel mit Kantenlänge $2a$. In jedem Eckpunkt, jedem Kantenmittelpunkt und jedem Flächenmittelpunkt befindet sich eine Stadt. Zwei Städte sind durch eine Strasse miteinander verbunden, falls ihr Abstand $a$ beträgt. Gibt es eine Reiseroute, die durch jede Stadt genau einmal führt?\\
+
+\textbf{Lösung:}
+
+Färbe alle Städte in den Eck- und Flächenmittelpunkten rot und alle Städte in den Kantenmittelpunkten blau. Jede Strasse verbindet dann eine rote und eine blaue Stadt. Längs jeder Reiseroute alternieren daher die Farben der besuchten Städte. Daraus folgt, dass sich die Anzahl blauer und roter Städte längs einer solchen Route um höchstens $1$ unterscheiden. Nun gibt es aber $14$ rote und bloss $12$ blaue Städte, es ist daher unmöglich alle Städte in einer einzigen Reise genau einmal zu besuchen.\\
+
+\textit{Bemerkungen und Punkteschema:}\\
+Für die richtige Färbung und das Zählen der Städte gab es fünf Punkte. Wenn Eckpunkte, Kanten- und Seitenmittelpunkte mit drei unterschiedlichen Farben gefärbt waren, gab es nur Punkte, wenn man die Eckpunkte und Seitenmittelpunkte irgendwie sonst miteinander identifiziert hatte. Weitere zwei Punkte war das Argument wert, wieso es folglich keinen Weg geben kann. Mit ungenauen oder unvollständigen Begründungen konnte höchstens ein zusätzlicher Punkt erreicht werden. \\
+Für andere Lösungsansätze wurden keine Punkte vergeben, da diese in keinem Fall zu einer Vereinfachung des Problems führten. Insbesondere ist wegen der ungeheuren Anzahl an verschiedenen Routen das Durchprobieren aller Möglichkeiten ohne Computer nicht zu bewältigen.
+
+\newpage
+
+\item[\textbf{2.}] Wie viele siebenstellige Zahlen gibt es, für die das Produkt der Ziffern gleich $45^3$ ist?\\
+
+\textbf{Lösung:}
+
+Wir untersuchen zuerst, welche Ziffern wie oft vorkommen können. Die Primfaktorzerlegung von $45^{3}$ ist $3^{6} \cdot 5^{3}$. Aus dieser ist ersichtlich, dass $1,3,5$ und $9$ die einzigen natürlichen Zahlen sind, die kleiner als $10$ sind und $45^{3}$ teilen. Es können also nur diese vier Ziffern in der Zahl vorkommen. Da die $5$ die einzige solche Ziffer ist, die durch 5 teilbar ist, muss sie genau drei Mal in der siebenstelligen Zahl vorkommen. Das Produkt der anderen vier Ziffern muss $3^{6}$ ergeben. Wenn die Ziffer $1$ vorkommt, müssen die drei anderen Ziffern alles 9er sein, damit man auf $3^{6}$ kommt. Ist keine Ziffer $1$, so müssen zwei Ziffern $3$ und zwei Ziffern $9$ sein. Jede siebenstellige Zahl, welche die gegebene Bedingung erfüllt, besteht also entweder aus den Ziffern $1,5,5,5,9,9,9$ oder $3,3,5,5,5,9,9$.\\
+Wir berechnen nun wie viele verschiedene Zahlen sich aus diesen Ziffern bilden lassen. Im ersten Fall hat man ${7 \choose 3}$ Möglichkeiten, um die $5$er zu verteilen und noch 4 Möglichkeiten um die $1$ festzulegen. Die Anordnung der drei 9er ist damit auch festgelegt. Für den ersten Fall erhält man also
+$$ {7 \choose 3} \cdot 4 = 140$$
+Möglichkeiten. Beim zweiten Fall gibt es zuerst wieder ${7 \choose 3}$ Möglichkeiten für das Verteilen der 5er und dann noch ${4 \choose 2}$ Möglichkeiten für die 3er. Man erhält so
+$$ {7 \choose 3} \cdot {4 \choose 2} = 210$$
+Möglichkeiten. Insgesamt gibt es also $140+210=350$ solche Zahlen.\\
+
+\textit{Bemerkungen und Punkteschema:}\\
+Für das Reduzieren des Problems auf die beiden genannten Fälle gab es vier Punkte. Die restlichen drei Punkte wurden Für das richtige Zählen vergeben. Falls man die beiden Fälle hingeschrieben hat, aber nicht begründete, wieso es nur diese beiden Fälle gibt, wurde ein Punkte abgezogen. Wurde einer der beiden Fälle vergessen, gab es zwei Punkte Abzug.
+
+\bigskip
+
+\item[\textbf{3.}] Gegeben sei ein spitzwinkliges Dreieck $ABC$ und die Punkte $D,E$ und $F$ seien die Höhenfusspunkte der Höhen durch $A,B$ bzw. $C$. Sei $S$ der Schnittpunkt der Geraden $EF$ mit der Rechtwinkligen zu $AC$ durch $D$. Beweise, dass das Dreieck $DES$ gleichschenklig ist.\\
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=12cm]{vorrunde_aufgabe3}
+\caption{Konstruktion zur ersten Lösung von Aufgabe 3}
+\end{figure}
+
+\textbf{1. Lösung:}
+
+Sei $\beta = \angle ABC$. Wir zeigen, dass $\triangle DES$ gleischenklig ist, indem wir unabhängig voneinander (i) $\angle ESD = 90^\circ - \beta$ und (ii) $\angle EDS = 90^\circ - \beta$ beweisen (siehe Abbildung 1). Dazu benutzen wir die beiden Sehnenvierecke $BCEF$ (Thaleskreis über $BC$) und $ABDE$ (Thaleskreis über $AB$).
+
+\begin{enumerate}[(i)]
+\item $\angle EDS = 90^\circ - \beta$
+\begin{enumerate}[1.)]
+\item $\angle FCB = 90^\circ - \beta$ ($CF \bot AB$)
+\item $\angle FEB = 90^\circ - \beta$ ($BCEF$ Sehnenviereck)
+\item $\angle ESD = 90^\circ - \beta$ ($EB$ und $SD$ sind parallel)
+\end{enumerate}
+
+\item $\angle ESD = 90^\circ - \beta$
+\begin{enumerate}[1.)]
+\item $\angle BAD = 90^\circ - \beta$ ($AD \bot BC$)
+\item $\angle BED = 90^\circ - \beta$ ($ABDE$ Sehnenviereck)
+\item $\angle ESD = 90^\circ - \beta$ ($EB$ und $SD$ sind parallel)
+\end{enumerate}
+\end{enumerate}
+
+\textbf{2. Lösung:}\\
+Sei $\alpha = \angle CFS$. Es folgt der Reihe nach:
+\begin{enumerate}[1.)]
+\item $\angle CBE = \alpha$ ($BCEF$ ist ein Sehnenviereck, denn die Punkte liegen auf dem Thaleskreis über $BC$.)
+\item $\angle CDS = \alpha$ ($EB$ und $SD$ sind parallel, da beide Geraden rechtwinklig auf $AC$ stehen.)
+\end{enumerate}
+
+Insgesamt erhalten wir $\angle CFS = \angle CDS$ und somit ist gezeigt, dass $CDFS$ ein Sehnenviereck ist. $S$ liegt also auf dem Thaleskreis über $AC$ und es gilt $\angle ASC = \angle ADC = 90^\circ$. Weil zudem $SD$ rechtwinklig auf $AC$ steht, liegen die Punkte $S$ und $D$ symmetrisch bezüglich der Achse $AC$.\\
+
+\textit{Bemerkungen und Punkteschema:}\\
+Diese Aufgabe wurde auf sehr viele verschiedene Arten gelöst, die meisten Lösungen verliefen in etwas gleich wie die 1. Lösung. Eine sinnvolle Winkeljagd, bei der z.B. die Parallelität von $EB$ und $SD$ genutzt wurde, ergab einen Punkt. Fand jemand ein Sehnenviereck und bezog dieses in die Winkeljagd mit ein, wurden zwei Punkte vergeben. Drei Punkte konnten erreicht werden, wenn ein Zusammenhang zwischen einem Winkel von $\triangle DES$ und einem von $\triangle ABC$ hergeleitet wurde.
+
+\bigskip
+
+\item[\textbf{4.}] Bestimme alle Paare $(a,b)$ natürlicher Zahlen, sodass
+$$ a^2 + 3b \quad \mbox{und} \quad b^2 + 3a $$
+beides Quadratzahlen sind.\\
+
+\textbf{1. Lösung:}
+
+Wir setzen $A=a^2+3b$ und $B=b^2+3a$. Aus Symmetriegründen können wir $a \geq b$ annehmen. Damit folgt nun
+\[a^2<A\leq a^2+3a<a^2+4a+4=(a+2)^2,\]
+da $A$ selbst eine Quadratzahl ist, muss demnach $A=(a+1)^2$ sein. Daraus folgt $3b=2a+1$ und somit auch $B=b^2+\frac{9}{2}b-\frac{3}{2}$. Nun gilt
+\[b^2 < B < b^2+6b+9 =(b+3)^2,\]
+da $B$ selbst eine Quadratzahl ist, bleiben somit nur die beiden Möglichkeiten $B=(b+1)^2$ und $B=(b+2)^2$. Diese führen auf $b=1$ und $b=11$ und diese wiederum zu den Paaren $(a,b)=(1,1)$ und $(a,b)=(11,16)$. Diese Paare erfüllen tatsächlich alle Bedingungen, wie eine kurze Rechnung zeigt: Im ersten Fall ist $A=B=2^2$, im zweiten Fall ist $A=13^2$, $B=17^2$. Die gesuchten Lösungen sind somit die Paare
+\[(a,b) \quad = \quad (1,1), \; (11,16), \; (16,11).\]
+
+\textbf{2. Lösung:}
+
+Es gilt $a^2+3b>a^2$ und $b^2+3a>b^2$. Nach Voraussetzung existieren daher natürliche Zahlen $m,n$ mit 
+\begin{eqnarray*}
+a^2+3b = (a+m)^2 \quad &\Longleftrightarrow& \quad 3b=2am+m^2,\\
+b^2+3a = (b+n)^2 \quad &\Longleftrightarrow& \quad 3a=2bn+n^2.
+\end{eqnarray*}
+Multipliziert man die zweite Gleichung mit $3$ und ersetzt $3b$ mit Hilfe der ersten Gleichung, dann folgt
+\[9a=2(2am+m^2)n+3n^2 \quad \Longleftrightarrow \quad a(9-4mn)=2m^2n+3n^2.\]
+Die rechte Seite dieser Gleichung ist stets positiv, andererseits ist die linke Seite negativ, sobald $mn \geq 3$ ist, Widerspruch. Es muss also $mn \leq 2$ gelten, was nur in den Fällen $m=n=1$ sowie $m=1,n=2$ und $m=2,n=1$ der Fall ist. Diese liefern der Reihe nach $a=1$, $a=16$ und $a=11$ und damit dieselben Paare wie in der ersten Lösung.\\
+
+\textit{Bemerkungen und Punkteschema:}\\
+Fand jemand für die Ausdrücke $A$ oder $B$ sinnvolle Schranken (z.B. wie oben $a^2 < A < (a+2)^2$) gab es einen Punkt. Ein zusätzlicher Punkt konnte durch die Herleitung eines direkten Zusammenhangs zwischen $a$ und $b$ erzielt werden (z.B. wie in der ersten Lösung $3b = 2a + 1$). Die weitere Reduktion auf wenige einfach bearbeitbare Fälle gab fünf Punkte. \\
+Bei der zweiten Lösung gab es zwei Punkte für die Reduktion auf eine Gleichung, die direkt eine Abschätzung wie oben beschrieben erlaubt. Für den Ansatz alleine wurden keine Punkte gegeben.
+
+\bigskip
+
+\item[\textbf{5.}] Auf einem Kreis $k$ liegen fünf verschiedene Punkte $A,M,B,C$ und $D$ in dieser Reihenfolge und es gelte $MA = MB$. Die Geraden $AC$ und $MD$ schneiden sich in $P$, und die Geraden $BD$ und $MC$ schneiden sich in $Q$. Die Gerade $PQ$ schneide $k$ in $X$ und $Y$. Zeige $MX = MY$.\\
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=12cm]{vorrunde_aufgabe5}
+\caption{Skizze zur Lösung von Aufgabe 5}
+\end{figure}
+
+\textbf{Lösung:}
+Wegen $MA = MB$ genügt es zu zeigen, dass $XY$ parallel zu $AB$ ist (die Punkte $X$ und $Y$ sind dann wie $A$ und $B$ spiegelsymmetrisch bezüglich der Geraden durch $M$ und dem Mittelpunkt von $k$ angeordnet).\\
+Die Punkte $X$ und $Y$ seien so angeordnet wie in Abbildung 2 gezeigt und sei $\alpha = \angle MAB = \angle MBA$. Es folgt mit dem Peripheriewinkelsatz im Kreis $k$
+$$ \angle QDP = \angle BDM = \alpha = \angle MCA = \angle QCP. $$
+Damit ist gezeigt, dass $DCQP$ ein Sehnenviereck ist. Wir definieren $\angle CAB = \beta$ und es folgt der Reihe nach:
+
+\begin{enumerate}[1.)]
+\item $\angle CDB = \beta$ (Peripheriewinkelsatz über der Sehne $BC$ im Kreis $k$)
+\item $\angle CPQ = \beta$ (Peripheriewinkelsatz über der Sehne $QC$ im Sehnenviereck $DCQP$)
+\end{enumerate}
+
+Es gilt also $\angle CAB = \angle CPQ$ und die Geraden $AB$ und $XY$ sind somit parallel (Stufenwinkel).\\
+
+\textit{Bemerkungen und Punkteschema:}\\
+Die Herleitung von $\angle QDP = \angle QCP$ ergab einen Punkt. Folgerte jemand daraus oder aus anderen Überlegungen, dass $DCQP$ ein Sehnenviereck ist, wurden drei Punkte vergeben.
+\end{enumerate}
+\end{document}

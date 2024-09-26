@@ -1,0 +1,312 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+
+
+
+
+
+% Schriftabkürzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge SMO Finalrunde 2012} \\
+\medskip erste Prüfung - 9. März 2012
+\end{center}
+\vspace{8mm}
+Zeit: 4 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{1.}]
+Es sitzen $2012$ Chamäleons an einem runden Tisch. Am Anfang besitzt jedes die Farbe rot oder grün. Nach jeder vollen Minute wechselt jedes Chamäleon, welches zwei gleichfarbige Nachbarn hat, seine Farbe von rot zu grün respektive von grün zu rot. Alle anderen behalten ihre Farbe. Zeige, dass es nach $2012$ Minuten mindestens $2$ Chamäleons gibt, welche gleich oft die Farbe gewechselt haben.
+
+
+\bigskip
+
+\item[\textbf{2.}] 
+Bestimme alle Funktionen $f: \BR\rightarrow\BR$, sodass für alle $x,y\in\BR$ gilt
+\[
+  f\left( f(x) + 2f(y) \right) = f(2x) + 8y + 6.
+\]
+
+
+\bigskip
+
+\item[\textbf{3.}] 
+Die Kreise $k_1$ und $k_2$ schneiden sich in den Punkten $D$ und $P$. Die gemeinsame Tangente an die beiden Kreise auf der Seite von $D$ berührt $k_1$ in $A$ und $k_2$ in $B$. Die Gerade $AD$ schneidet $k_2$ ein zweites Mal in $C$. Sei $M$ der Mittelpunkt der Sehne $BC$. Zeige, dass $\angle DPM = \angle BDC$ gilt.
+
+
+\bigskip
+
+\item[\textbf{4.}]
+Zeige, dass es keine unendliche Folge von Primzahlen $p_1,p_2,p_3,\dots$ gibt, welche für jedes $k$ $p_{k+1}=2p_k-1$ oder $p_{k+1}=2p_k+1$ erfüllt. Beachte, dass nicht für jedes $k$ die gleiche Formel gelten muss.
+
+
+
+\bigskip
+
+\item[\textbf{5.}]
+Sei $n$ eine natürliche Zahl.
+Seien $A_1,A_2, \ldots, A_k$ verschiedene $3$-elementige Teilmengen von $\left\{1, 2, \ldots, n\right\}$, sodass $|A_i\cap A_j| \neq 1$ für alle $1\leq i,j\leq k$. Bestimme alle $n$, für die es $n$ solche Teilmengen gibt.
+
+\end{enumerate}
+\bigskip
+\begin{center}
+Viel Glück !
+\end{center}
+
+\newpage
+
+\begin{center}
+{\huge SMO Finalrunde 2012} \\
+\medskip zweite Prüfung - 10. März 2012
+\end{center}
+\vspace{8mm}
+Zeit: 4 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{6.}] 
+Sei $ABCD$ ein Parallelogramm mit mindestens einem Winkel ungleich $90^{\circ}$ und $k$ der Umkreis des Dreiecks $ABC$. Sei $E$ der auf $k$ diametral gegenüberliegende Punkt von $B$.
+Zeige, dass der Umkreis des Dreiecks $ADE$ und $k$ den gleichen Radius haben.
+
+\bigskip
+
+\item[\textbf{7.}] 
+Seien $n$ und $k$ natürliche Zahlen sodass $n=3k +2$. Zeige, dass die Summe aller Teiler von $n$ durch $3$ teilbar ist.
+
+
+\bigskip
+
+\item[\textbf{8.}] 
+Betrachte einen Würfel und zwei seiner Ecken $A$ und $B$, welche die Endpunkte einer Flächendiagonalen sind. Ein \emph{Weg} ist eine Folge von Würfelecken, wobei in jedem Schritt von einer Ecke längs eine Würfelkante zu einer der drei benachbarten Ecken gegangen wird. Sei $a$ die Anzahl Wege der Länge $2012$, die im Punkt $A$ beginnen und in $A$ enden und sei $b$ die Anzahl Wege der Länge $2012$, die in $A$ beginnen und in $B$ enden. Entscheide, welche der beiden Zahlen $a$ und $b$ die grössere ist. 
+
+
+\bigskip
+
+\item[\textbf{9.}]
+Seien $a,b,c>0$ reelle Zahlen mit $abc = 1$. Zeige
+\[
+  1 + ab + bc + ca \geq \min\left\{ \frac{(a+b)^2}{ab}, \frac{(b+c)^2}{bc}, \frac{(c+a)^2}{ca} \right\}.
+\]
+Wann gilt Gleichheit?
+
+\bigskip
+
+\item[\textbf{10.}] 
+Sei $O$ ein innerer Punkt eines spitzwinkligen Dreiecks $ABC$. Seien $A_1$, $B_1$ und $C_1$ die Projektionen von $O$ auf die Seiten $BC$, $AC$ und $AB$. Sei $P$ der Schnittpunkt der Senkrechten zu $B_1C_1$ respektive $A_1C_1$ durch die Punkte $A$ respektive $B$. Sei $H$ die Projektion von $P$ auf $AB$. Zeige, dass die Punkte $A_1,B_1, C_1$ und $H$ auf einem Kreis liegen.
+
+
+
+\bigskip
+
+\end{enumerate}
+\bigskip
+\begin{center}
+Viel Glück !
+\end{center}
+\end{document}

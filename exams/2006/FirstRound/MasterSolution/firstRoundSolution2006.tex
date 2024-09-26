@@ -1,0 +1,254 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{floatflt}
+\usepackage{subfigure}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\begin{document}
+
+\pagestyle{empty}
+\newcommand{\wi}{\angle}
+
+\begin{center}
+{\huge Lösungen zur Vorrundenprüfung 2006}
+\end{center}
+\vspace{15mm}
+
+Zuerst einige Bemerkungen zum Punkteschema. Eine vollständige und korrekte Lösung einer Aufgabe ist jeweils 7
+Punkte wert. Für komplette Lösungen mit kleineren Fehlern oder Ungenauigkeiten, die aber keinen wesentlichen
+Einfluss auf die Richtigkeit der dargestellten Lösung haben, geben wir 6 Punkte. Bei unvollständigen Lösungen
+wird der Fortschritt und der Erkenntnisgewinn bewertet (Teilpunkte). Oft gibt es mehrere Lösungen für ein
+Problem. Versucht jemand zum Beispiel eine Aufgabe auf zwei verschiedenen Wegen zu lösen, erreicht auf dem
+ersten Weg 3 Punkte, auf dem zweiten 2 Punkte, dann wird seine Punktzahl nicht 5, sondern 3 sein. Punkte, die
+auf verschiedenen Wegen erreicht werden, sind also \textit{nicht} kummulierbar. Die unten angegebenen
+Bewertungsschemen sind nur Orientierungshilfe. Gibt jemand eine alternative Lösung, dann werden wir versuchen,
+die Punktzahl entsprechend zu wählen, dass für gleiche Leistung gleich viele Punkte
+verteilt werden. Die Schemen sind stets wie folgt zu interpretieren:\\
+Kommt jemand in seiner Lösung bis und mit hierhin, dann gibt das soviele Punkte.\\
+Ausnahmen von dieser Regel sind jeweils ausdrücklich deklariert.\\
+
+\begin{enumerate}
+
+\item[\textbf{1.}] Finde alle Tripel $(p,q,r)$ von Primzahlen, sodass auch die drei Differenzen
+\[|p-q|,\quad |q-r|,\quad |r-p|\]
+alle Primzahlen sind.\\
+
+\textbf{Lösung:}
+
+Wegen der Symmetrie des Problems können wir $p<q<r$ annehmen. Ist $p>2$, dann ist $r-p$ grösser als 2 und gerade, also keine Primzahl, Widerspruch. Ist $r > q+2$, dann folgt mit demselben Argument, dass $r-q$ nicht prim sein kann. Es gilt also $p=2$ und $r=q+2$. Nach
+Voraussetzung ist auch $q-p=q-2$ prim. Unter den drei Zahlen $q-2,q,q+2$ ist nun genau eine durch 3 teilbar und ausserdem prim, also gilt $q-2=3$ und
+\[(p,q,r)=(2,5,7).\]
+
+\textit{Bemerkungen und Punkteschema:}
+
+Die Reduktion des Problems auf die Frage, wann $q-2,q,q+2$ alles Primzahlen sein können, war 3P wert. Teilpunkte gab es für die beiden wichtigen Beobachtungen $p=2$ und $r=q+2$. Wer eine der beiden beweisen konnte, erhielt 2P, für beide zusammen gab es 3P. Wer keine der beiden beweisen konnte, aber dafür gezeigt hat, dass genau eine der Differenzen $|p-q|, |q-r|, |r-p|$ gleich 2 ist, erhielt 1P.\\
+Wer zeigte, dass von drei Primzahlen der Form $q-2,q,q+2$ eine durch 3 teilbar sein muss, erhielt 5P, wer ausserdem bemerkte, dass diese somit gleich 3 sein muss, erhielt 6P.\\
+
+\bigskip
+
+
+\item[\textbf{2.}] Sei $n$ eine natürliche Zahl. Bestimme die Anzahl Teilmengen $A \subset \{1,2,\ldots,2n\}$,
+sodass für keine zwei Elemente $x,y \in A$ gilt $x+y = 2n+1$.\\
+
+\textbf{Lösung:}
+
+Die einzigen Lösungen der Gleichung $x+y=2n+1$ in $\{1,2,\ldots,2n\}$ sind die Paare $(x,y)=(k,2n+1-k)$, wobei
+$1 \leq k \leq 2n$. Betrachte nun die disjunkte Zerlegung
+\[\{1,2,\ldots,2n\} = \{1,2n\} \cup \{2,2n-1\} \cup \ldots \cup \{n-1,n+2\} \cup \{n,n+1\}.\]
+Die Menge $A$ erfüllt genau dann die Bedingungen, wenn sie aus jeder dieser $n$ zweielementigen Mengen höchstens
+ein Element enthält. Es gibt genau 3 Möglichkeiten, aus einer zweielementigen Menge höchstens ein Element
+auszuwählen, nach der Produktregel gibt es also $3^n$ solche Mengen $A$.\\
+
+\textit{Bemerkungen und Punkteschema:}
+
+Wer zeigte, dass die Gleichung $x+y=2n+1$ genau die Lösungen $(k, 2n+1-k)$ besitzt, erhielt 2P. Die Erkenntnis, dass diese Lösungspaare eine disjunkte Zerlegung der Menge $\{1,2,\ldots,2n\}$ bilden, war 4P wert. Für die vollständige Lösung waren zwei weitere Beobachtungen wichtig: 1. Die Produktregel ist anwendbar, 2. Aus jedem Paar kann man auf 3 Arten wählen. Wer das eine richtig bemerkt hatte, das andere aber nicht, erhielt einen zusätzlichen Punkt.\\
+Die leere Menge wurde von einigen Leuten aus verschiedenen Gründen nicht beachtet. Dafür wurden aber keine Punkte abgezogen.\\
+
+\bigskip
+
+
+\item[\textbf{3.}] Im Dreieck $ABC$ sei $D$ der Schnittpunkt von $BC$ mit der Winkelhalbierenden von $\wi BAC$.
+Der Umkreismittelpunkt von $\triangle ABC$ falle mit dem Inkreismittelpunkt von $\triangle ADC$ zusammen. Finde
+die Winkel von $\triangle ABC$.\\
+
+\textbf{Lösung:}
+
+Wie üblich seien $\alpha = \angle BAC$, $\beta = \angle CBA$ und $\gamma = \angle ACB$. Der gemeinsame Mittelpunkt der beiden erwähnten Kreise sei $O$. Als Hilfslinien werden die Strecken von $O$ zu $A$, $B$ und $C$ eingezeichnet. \\
+Es folgt nun der Reihe nach (Begründungen jeweils in Klammer):
+
+\begin{enumerate}[($1$)]
+\item $\angle ACO = \angle OCB = \frac{\gamma}{2}$ ($O$ ist Inkreismittelpunkt von $\triangle ADC$)
+
+\item $\angle OAC = \frac{\alpha}{4}$ (gleicher Grund, zudem ist $AD$ Winkelhalbierende von $\angle BAC$)
+
+\item Die Dreiecke $OAB$, $OBC$ und $OCA$ sind gleichschenklig. ($O$ ist Umkreismittelpunkt von $\triangle ABC$, somit gilt $OA = OB = OC$.)
+
+\item $\wi CBO = \frac{\gamma}{2}$ (da $\triangle OBC$ gleichschenklig ist.)
+
+\item $\wi OBA = \frac{3 \alpha}{4}$ (da $\triangle OAB$ gleichschenklig ist.)
+
+\item $\frac{\alpha}{4} = \frac{\gamma}{2}$ (da $\triangle OCA$ gleichschenklig ist.)
+\end{enumerate}
+
+Damit sind wir in der Lage neben $\gamma = \frac{\alpha}{2}$ auch $\beta$ durch $\alpha$ auszudrücken:
+
+$$ \beta = \wi CBO + \wi OBA = \frac{\gamma}{2} + \frac{3 \alpha}{4} = \alpha. $$
+
+Wegen der Winkelsumme in $\triangle ABC$ ist damit $\alpha$ eindeutig bestimmt:
+
+$$ 180^\circ = \alpha + \beta + \gamma = \alpha + \alpha + \frac{\alpha}{2} = \frac{5}{2} \alpha. $$
+
+Es muss also gelten $\alpha = \beta = 72^\circ$ und $\gamma = 36^\circ$. \\
+Das Dreieck ist in der Abbildung dargestellt.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8cm]{abb01}
+\end{figure}
+
+\textit{Bemerkungen und Punkteschema:}
+
+Für die Beobachtung, dass eines der Dreiecke $OAB$, $OBC$ oder $OCA$ gleichschenklig ist, gab es bereits einen Punkt. Fand man $\frac{\alpha}{4} = \frac{\gamma}{2}$, gab es zwei Punkte. Konnte man weiter zeigen, dass $\alpha = \beta$ ist, gab es fünf Punkte. \\
+Konnte jemand auf einem anderen Weg zeigen, dass das Dreieck $ABC$ gleichschenklig ist, bekam er drei Punkte. \\
+Beachte, dass wir für die blosse Angabe der richtigen Winkel keine Punkte verteilen konnten, wenn der Lösungsweg fehlte oder nicht korrekt war.\\
+
+\bigskip
+
+
+\item[\textbf{4.}] Bestimme alle positiven ganzzahligen Lösungen der Gleichung
+\[\kgV(a,b,c)=a+b+c.\]
+
+\textbf{1. Lösung:}
+
+Wir können $a \leq b \leq c$ annehmen. Dann ist $a<c$, denn sonst wären alle drei Zahlen gleich $a$ und die
+Gleichung lautete $a=3a$, ein Widerspruch. Nun gilt $c<a+b+c<3c$ und da die linke Seite der Gleichung ein
+ganzzahliges Vielfaches von $c$ sein muss, folgt daraus $\kgV(a,b,c)=2c$ und die Gleichung vereinfacht sich zu $c=a+b$. Ausserdem gibt es nach Definition des $\kgV$ ganze Zahlen $x,y$ mit $a=2c/x$ und $b=2c/y$. Einsetzen in obige Gleichung ergibt für $x$ und $y$ daher
+\[\frac{1}{x}+\frac{1}{y}=\frac{1}{2}.\]
+Wegen $a \leq b$ ist $x \geq y$. Einerseits ist nun $y>2$, denn sonst ist die linke Seite grösser als $1/2$,
+andererseits gilt $y \leq 4$, denn sonst ist die linke Seite höchstens $2/5$. Dies ergibt die Lösungen $x=6,
+y=3$ und $x=y=4$. Im ersten Fall gilt $(a,b,c)=(a,2a,3a)$, im zweiten Fall $(a,b,c)=(a,a,2a)$. Letzteres ist
+aber nicht möglich, denn dann wäre $\kgV(a,b,c)=c \neq 2c$. Andererseits rechnet man leicht nach, dass im ersten
+Fall in der Tat gilt $\kgV(a,b,c)=6a=a+b+c$. Die gesuchten Tripel sind also genau die Permutationen von
+\[(a,b,c)=(a,2a,3a),\qquad a \geq 1.\]
+
+\textbf{2. Lösung:}
+
+Wir benützen die folgenden Gleichungen:
+\[\ggT(ma,mb,mc)=m \cdot \ggT(a,b,c),\qquad \kgV(ma,mb,mc)=m \cdot \kgV(a,b,c).\]
+Sei $d = \ggT(a,b,c)$ und setze $a=xd$, $b=yd$ und $c=zd$. Dann sind $x,y,z$ teilerfremd und einsetzen in die
+Gleichung liefert mit obiger Formel
+\[\kgV(x,y,z)=x+y+z.\]
+Nun sind $x,y,z$ sogar \textit{paarweise} teilerfremd, denn jeder Teiler von zwei der Zahlen teilt auch die
+linke Seite dieser Gleichung und somit auch die dritte Zahl, ist also gleich 1. Daraus folgt $\kgV(x,y,z)=xyz$
+und wir müssen alle Lösungen der Gleichung $xyz=x+y+z$ finden. Dazu nehmen wir an, dass $x<y<z$ ist. Wäre $x\geq
+2$, dann wäre $xyz \geq 2 \cdot 2 \cdot z > 3z > x+y+z$, ein Widerspruch. Somit ist $x=1$ und die Gleichung
+vereinfacht sich zu
+\[yz=1+y+z \qquad \Longleftrightarrow \qquad (y-1)(z-1)=2.\]
+Die einzige Lösung lautet somit $y=2,z=3$ und die Tripel $(a,b,c)$ sind genau die Permutationen von $(d,2d,3d)$
+mit $d\geq 1$.\\
+
+\textbf{3. Lösung:}
+
+Wir führen zuerst einige Notationen ein. Setze $d=\ggT(a,b,c)$ und $x=\ggT(b/d,c/d)$, $y=\ggT(c/d,a/d)$,
+$z=\ggT(a/d,b/d)$. Dann sind $x,y$ und $z$ paarweise teilerfremd nach Definition von $d$. Ausserdem ist $a/d$
+durch $y$ und $z$ teilbar, also auch durch deren Produkt, folglich ist $A=a/(dxy)$ eine ganze Zahl. Definiere
+$B$ und $C$ analog, dann gilt $\ggT(x,A)=\ggT(y,B)=\ggT(z,C)=1$ und wir können schreiben $a=dyzA$, $b=dzxB$ und
+$c=dxyC$. Ausserdem gilt $\kgV(a,b,c)=dxyzABC$. Einsetzen in die Gleichung und Vereinfachen ergibt
+\[xyzABC=yzA+zxB+xyC.\]
+Nun teilt $x$ die linke Seite, also auch die rechte, also auch $yzA$. Da $x$ aber teilerfremd zu allen drei
+Faktoren ist, folgt $x=1$. Analog zeigt man $y=z=1$ und nach Division mit $ABC$ lautet die Gleichung nun
+\[\frac{1}{AB}+\frac{1}{BC}+\frac{1}{CA}=1.\]
+Wir können $A\leq B\leq C$ annehmen. Wäre $A>1$, dann ist die linke Seite höchstens gleich $3/4$, also gilt
+$A=1$. Ist $B=1$, dann ist die LS grösser als 1, Ist $B \geq 3$, dann ist die LS höchstens gleich
+$1/3+1/3+1/9<1$. Daher gilt $B=2$ und somit $C=3$. Die gesuchten Tripel sind bis auf eine Permutation also alle
+von der Form $(a,b,c)=(d,2d,3d)$, wie in der ersten Lösung.\\
+
+\textit{Bemerkungen und Punkteschema:}
+
+In allen drei Lösungen ist der wesentliche Zwischenschritt die Reduktion des ursprünglichen Problems auf eine einfache Gleichung in zwei oder drei Variablen, die mit Standardmethoden gelöst werden kann. Diese Reduktion war jeweils 4P wert. Teilpunkte wurden wie folgt verteilt: In der 1. Lösung war die Gleichung $\kgV(a,b,c)=2c$ 2P wert. In der 2. Lösung gab es 2P für die Reduktion auf den Fall, wo $x,y,z$ teilerfremd sind. Einen weiteren Punkt gab es für den Beweis, dass aus der Teilerfremdheit von $x,y,z$ die paarweise Teilerfremdheit folgt.\\
+Wer die erhaltene Gleichung korrekt löste, erhielt 6P. Nur wer testete, ob die erhaltenen Lösungstripel auch wirklich Lösungen der ursprünglichen Gleichung sind, erhielt die volle Punktzahl. Bei einigen Leuten war dies aus der Herleitung bereits ersichtlich, bei vielen aber nicht, was zu falschen Lösungstripeln und Punkteabzug führte. \\
+Viele haben bemerkt, dass für jede Lösung $(a,b,c)$ auch jedes Vielfache $(ma,mb,mc)$ eine Lösung ist. Wurden keine weiteren Fortschritte erzielt, war das 1P wert. Für eine an sich vollständige Lösung im Stil der obigen Lösung 2, OHNE jedoch zu bemerken, dass Teilerfremdheit sogar paarweise Teilerfremdheit impliziert (oder ohne zu bemerken, dass es da überhaupt einen Unterschied gibt..) wurden 2P abgezogen. \\
+Für die blosse Liste von Lösungen $(d,2d,3d)$ gab es keine Punkte.\\ 
+
+
+\bigskip
+
+\item[\textbf{5.}] Betrachte ein $m \times n$-Brett, das in Einheitsquadrate unterteilt ist. Ein L-Triomino besteht
+aus drei Einheitsquadraten, einem Zentrumsquadrat und zwei Schenkelquadraten. In der Ecke oben links liegt ein
+L-Triomino, sodass das Zentrumsquadrat auf dem Eckfeld liegt. In einem Zug kann das L-Triomino um den Mitelpunkt
+von einem der beiden Schenkelquadrate um Vielfache von $90^\circ$ gedreht werden. Für welche $m$ und $n$ ist es
+möglich, dass das L-Triomino nach endlich vielen solchen Zügen in der unteren rechten Ecke zu liegen kommt?\\
+
+\textbf{Lösung:}
+
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{5cm}
+\centering
+\includegraphics[width=5cm]{versch1}
+\caption{Schritt 1}
+\end{minipage}
+\quad
+\begin{minipage}[t]{5cm}
+\centering
+\includegraphics[width=5cm]{versch2}
+\caption{Schritt 2}
+\end{minipage}
+\quad
+\begin{minipage}[t]{5cm}
+\centering
+\includegraphics[width=5cm]{versch3}
+\caption{Schritt 3}
+\end{minipage}
+\end{figure}
+
+Wir nehmen zuerst an, dass $m$ und $n$ beide ungerade sind. Man überlegt sich leicht, dass eine solche Folge von Drehungen für $m=n=3$ existiert. Ausserdem zeigt obige Folge von Abbildungen, dass sich das L-Triomino mit Hilfe von zwei Drehungen um zwei Felder nach rechts verschieben lässt. Analog dazu kann man das Triomino auch zwei Felder nach unten verschieben. Verschiebe also das L-Triomino $(m-1)/2$ mal zwei Felder nach rechts und $(n-1)/2$ mal zwei Felder nach unten. Danach kann man die Drehungen für den Fall $m=n=3$ ausführen und das Triomino liegt wie gewünscht in der unteren rechten Ecke.\\
+
+Nehme nun umgekehrt an, dass eine solche Folge von Drehungen für ein $m \times n$-Brett existiert. Färbe die Felder des Brettes wie in der Abbildung gezeigt. Da die Schenkelquadrate am Anfang auf weissen Feldern liegen und sich dies bei einer Drehung nie ändert, liegt das Zentrumsquadrat immer auf einem schwarzen oder grauen Feld. Ausserdem ändert die Farbe des Zentrumsquadrates bei jeder $90^\circ$-Drehung. Am Schluss ist das L-Triomino gegenüber der Anfangsposition in der Ecke oben links um $180^\circ$ gedreht, also sind dazu eine gerade Anzahl $90^\circ$-Drehungen nötig. Das bedeutet aber, dass die Farbe des Zentrumquadrates eine gerade Anzahl von malen ändert, am Schluss also gleich ist wie am Anfang. Insbesondere muss das Eckfeld unten rechts schwarz sein, was nur dann der Fall ist, wenn $m$ und $n$ beide ungerade sind.\\
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=14cm]{gitter}
+\end{figure}
+
+\textit{Bemerkungen und Punkteschema:}
+
+Grundsätzlich gab es 2P, wenn man im Fall $m,n$ ungerade gezeigt hat, dass eine Folge von Zügen existiert. Der Beweis im Fall $m=n=3$ oder einem anderen kleinen Rechteck ist für sich genommen keine Punkte wert. Für die Beobachtung aber, dass das Triomino um zwei Felder nach rechts oder unten verschoben werden kann, vergaben wir 1P.\\
+Der Beweis, dass $m$ und $n$ ungerade sein müssen, war 5P wert. Teilpunkte gab es wie folgt: Wer eine Färbung gefunden hat, mit der man die Aufgabe hätte lösen können, erhielt 1P. Wer damit sogar sinnvoll gearbeitet hat, ohne jedoch den Beweis abzuschliessen, erhielt sogar 2P. Ausserdem gab es unabhängig davon 1P für alle, die mit Hilfe einer Färbung bewiesen haben, dass $m$ und $n$ entweder beide gerade oder beide ungerade sind.
+
+\end{enumerate}
+
+\end{document}

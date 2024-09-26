@@ -1,0 +1,292 @@
+\de{Sei $ABC$ ein Dreieck mit $AB>AC$. Die Winkelhalbierenden bei $B$ und $C$ treffen sich im Punkt $I$ innerhalb des Dreiecks $ABC$. Der Umkreis des Dreiecks $BIC$ schneidet $AB$ ein zweites Mal in $X$ und $AC$ ein zweites Mal in $Y$. Zeige, dass $CX$ parallel zur $BY$ ist.
+
+\textbf{Lösung 1 (Arnaud), Winkeljagd:}
+
+Wir zeigen, dass $\angle ACX=\angle AYB$. Dies ist ausreichen um zu zeigen, dass die Linien parallel sind. Wir nehmen für unseren Beweis an, dass $X$ zwischen $A$ und $B$, $Y$ nicht zwischen $A$ und $C$ liegt.
+
+Da $CI$ die Winkelhalbierende von $\angle ACB$ ist, haben wir $\angle ACI=\angle ICB$. Die Punkte $ICYB$ bilden ein Sehnenviereck und somit ist $\angle ICB=\angle IYB$. Wir wissen nun, dass
+\[
+\angle ACI=\angle IYB.
+\]
+
+Da $ICYB$ ein Sehnenviereck ist, haben wir ausserdem $\angle CYI=\angle CBI$. Die Linie $IB$ halbiert $\angle CAB$ und somit ist $\angle CBI=\angle IBA$. Der Punkt $X$ ist zwischen $A$ und $B$, also $\angle IBA=\angle IBX$. Weil nun die Punkte $XBCI$ auf einem Kreis liegen, haben wir $\angle IBX=\angle ICX$. Somit ist
+\[
+\angle CYI=\angle ICX.
+\]
+
+Wir schlussfolgern
+\[
+\angle ACX=\angle ACI+\angle ICX=\angle IYB+\angle CYI=\angle CYB=\angle AYB.
+\]
+
+Für die letzte Gleichung benutzen wir, dass $C$ zwischen $A$ und $Y$ liegt.
+
+\textbf{Lösung 2 (Arnaud), Strahlensatz:}
+
+In dieser Lösung zeigen wir, dass $AX/AB=AC/AY$. Der Strahlensatz besagt dann, dass $XC$ und $BY$ parallel sind.
+
+Da $XICB$ eine Sehnenviereck ist und $X$ zwischen $A$ und $B$ liegt, wissen wir, dass $\angle AXI=\angle BCI$. Weil die Linie $CI$ den Winkel bei $C$ halbiert, folgt $\angle BCI=\angle ICA$. Zusätzlich haben wir
+\[
+\angle AXI=\angle ACI.
+\]
+
+Analog benutzten wir, dass $XICB$ ein Sehenviereck ist und dass $IB$ den Winkel bei $B$ halbiert. Es folgt
+\[
+\angle ICX=\angle IBX=\angle IBC=\angle IXC.
+\]
+
+Kombinieren wir nun diese beiden Aussagen und die Tatsache, dass $X$ zwischen $A$ und $B$ liegt, erhalten wir:
+\[
+\angle AXC=\angle AXI+\angle IXC=\angle ACI+\angle ICX=\angle ACX,
+\]
+und somit ist das Dreieck $ACX$ gleichschenklig bei $A$, also $AX=AC$. Es gibt viele Wege von hier fertig zu machen. Zum Beispiel:
+
+\begin{enumerate}
+    \item Weil $XCYB$ ein Sehnenviereck ist, besagt die Potentz von $A$, dass $AX\cdot AB=AC\cdot AY$. Weil $AX=AC$, haben wir $AB=AY$. Also $AX/AB=AC/AY$.
+    \item Weil $XCYB$ ein Sehenviereck ist, folgt $\angle XBY=\angle ACX$ und $\angle AXC=\angle CYB$. Da das Dreieck $AXC$ gleichschneklig ist bei $A$, haben wir $\angle AXC=\angle ACX$ und somit $\angle XBY=\angle CYB$. Zusätzlich haben wir $\angle ABY=\angle AYB$. Also ist das Dreieck $ABY$ gleichschenklig bei $A$ und $AB=AY$.
+\end{enumerate}
+
+\textbf{Marking Scheme:}
+
+Unvollständige Lösungen werden wie folgt bewertet:
+Additive Punkte ($\leq$ 3P):
+\begin{enumerate}
+    \item Working Forward Punkte:
+
+\begin{itemize}
+    \item +1P: Finde eine Winkelbeziehung in einem Sehnenviereck unter den Punkten $\{X,I,C,Y,B\}$
+    \item +1P: Eine Winkelbeziehung in einem \textbf{anderen Sehnenviereck} unter den Punkten $\{X,I,C,Y,B\}$ finden
+    \item +1P: Finde eine Winkelbeziehung die sowohl ein Sehnenviereck unter $\{X,I,C,Y,B\}$, sowie eine Winkelhabierende $\{CI,BI\}$ benutzt.
+    \item +2P: Zeige, dass der Mittelpunkt des Kreises durch $B,X,I,C,Y$ der Schnittpunkt von $AI$ mit dem Umkreis von $ABC$ ist (Incenter-Excenter Lemma)
+\end{itemize}
+
+    \item Working Backward Punkte:
+\begin{itemize}
+    \item +0P: Die gewünschte Bedingung mit Winkeln (zB. $\angle ACX=\angle AYB$) oder Seitenverhältnisse ($AX/AB=AC/AY$) formulieren
+    \item +1P: Die gewünschte Bedingung mit \emph{aufgeteilten} Winkeln (zB. $\angle ACI=\angle IYB$ und $\angle ICX=\angle AYI$) oder einer Gleichung in Längen ($AX=AC$ und $AB=AY$) formulieren
+\end{itemize}
+
+\end{enumerate}
+
+Unvollständige Resultate (nicht additiv mit den bisherigen Punkten, $\geq$ 4P):
+\begin{enumerate}
+\item 4P:
+\begin{itemize}
+    \item Zeige, dass $ACX$ gleichschenklig ist und somit $AX=AC$, oder
+    \item Zeige, dass $ABY$ gleichschenklig ist und somit $AB=AY$
+    %\item Zeige, dass $I$ der Mittelpunkt des Inkreises von $AXWC$ ist
+\end{itemize}
+
+\item 5P:
+\begin{itemize}
+    \item Zeige, dass $AX=AC$ und $AB=AY$
+    \item Zeige, dass $\angle ACX=\angle AYB$ oder eine beliebige andere Winkelbeziehung aus der direkt folgt, dass die Linien Parallel sind.
+\end{itemize}
+\end{enumerate}
+
+\textbf{Bemerkung:}
+Es wird nicht erwartet, dass gezeigt wird, dass $X$ zwischen $A$ und $B$, oder $C$ zwischen $A$ und $Y$ liegt.
+
+}
+
+\fr{Soit $ABC$ un triangle avec $AB>AC$. Les bissectrices en $B$ et $C$ s'intersectent en un point $I$ à l'intérieur du triangle $ABC$. Le cercle circonscrit au triangle $BIC$ intersecte une deuxième fois $AB$ en $X$ et intersecte une deuxième fois $AC$ en $Y$. Montrer que $CX$ est parallèle à $BY$.
+
+\textbf{Solution 1 (Arnaud), Chasse aux angles :}
+
+On va montrer que $\angle ACX=\angle AYB$. Cette condition est suffisante pour conclure que les droites sont parallèles. On va supposer pour notre preuve que $X$ se trouve entre $A$ et $B$ et que $Y$ ne se trouve pas entre $A$ et $C$.
+
+Comme $CI$ est la bissectrice de $\angle ACB$, on a $\angle ACI=\angle ICB$. Les points $ICYB$ se trouvent sur un même cercle, donc $\angle ICB=\angle IYB$. On obtient ainsi
+\[
+\angle ACI=\angle IYB.
+\]
+
+Comme les points $ICYB$ sont sur un même cercle, on a aussi $\angle CYI=\angle CBI$. La droite $IB$ est la bisectrice de l'angle $\angle CAB$, donc $\angle CBI=\angle IBA$. Le point $X$ se trouve entre $A$ et $B$, donc $\angle IBA=\angle IBX$. Enfin, comme les points $XBCI$ se trouvent sur un même cercle, on a $\angle IBX=\angle ICX$. Donc
+\[
+\angle CYI=\angle ICX.
+\]
+
+En conclusion
+\[
+\angle ACX=\angle ACI+\angle ICX=\angle IYB+\angle CYI=\angle CYB=\angle AYB.
+\]
+
+Pour la dèrnière égalité, on a utilisé que $C$ se trouve entre $A$ et $Y$.
+
+\textbf{Solution 2 (Arnaud), Thalès :}
+
+Dans cette solution, on va montrer que $AX/AB=AC/AY$. Par le théorème de Thalès, on conclut que les droites $XC$ et $BY$ sont parallèles.
+
+Comme le quadrilatère $XICB$ est inscrit et $X$ se trouve entre $A$ et $B$, on a $\angle AXI=\angle BCI$. Puisque $CI$ est la bisectrice de l'angle en $C$, on a $\angle BCI=\angle ICA$. Finalement,
+\[
+\angle AXI=\angle ACI.
+\]
+
+A nouveau, en utilisant que le quadrilatère $XICB$ est inscrit et $IB$ est la bisectrice de l'angle en $B$, on obtient
+\[
+\angle ICX=\angle IBX=\angle IBC=\angle IXC.
+\]
+
+En combinant ces deux relations et en utilisant que $X$ se trouve entre $A$ et $B$, on obtient,
+\[
+\angle AXC=\angle AXI+\angle IXC=\angle ACI+\angle ICX=\angle ACX,
+\]
+et le donc le triangle $ACX$ est isocèle en $A$. C'est-à-dire, $AX=AC$. Il y a à présent de multiple façons de conclure. Par exemple:
+
+\begin{enumerate}
+    \item Comme $XCYB$ est inscrit, le théorème de la puissance donne $AX\cdot AB=AC\cdot AY$. Or $AX=AC$, donc $AB=AY$. Ainsi on a bien $AX/AB=AC/AY$.
+    \item Comme $XCYB$ est inscrit, on obtient $\angle XBY=\angle ACX$ et $\angle AXC=\angle CYB$. Comme le triangle $AXC$ est isocèle en $A$, $\angle AXC=\angle ACX$ et donc $\angle XBY=\angle CYB$. Ou encore, $\angle ABY=\angle AYB$. Donc le triangle $ABY$ est isocèle en $A$ et ainsi $AB=AY$. On conclut comme précédemment.
+\end{enumerate}
+
+\textbf{Marking Scheme:}
+
+Les solutions partielles sont jugées de la manière suivante:
+Points partiels additifs ($\leq$ 3P):
+\begin{enumerate}
+    \item Forward points:
+
+\begin{itemize}
+    \item +1P: établir une relation d'angles dans un quadrilatère inscrit avec quatre sommets parmi $\{X,I,C,Y,B\}$
+    \item +1P: établir une relation d'angles dans \textbf{un autre quadrilatère inscrit} avec quatre sommets parmi $\{X,I,C,Y,B\}$
+    \item +1P: une égalité d'angles qui emploie à la fois un quadrilatère inscrit avec quatre sommets parmi $\{X,I,C,Y,B\}$ et et une des bisectrices $\{CI,BI\}$
+    \item +2P: montrer que le centre du cercle passant par $B,X,I,C,Y$ correspond a l'intersection de $AI$ avec le cercle circonscrit de $ABC$
+\end{itemize}
+
+    \item Backward points:
+\begin{itemize}
+    \item +0P: reformuler la conclusion en termes d'angles (eg. $\angle ACX=\angle AYB$) ou en termes de longueurs ($AX/AB=AC/AY$)
+    \item +1P: reformuler la conclusion en termes d'angles \textit{avec décomposition} (eg. $\angle ACI=\angle IYB$ et $\angle ICX=\angle AYI$) ou en termes de longueurs ($AX=AC$ et $AB=AY$)
+\end{itemize}
+
+\end{enumerate}
+
+Résultats partiels (non-additifs avec les points précédents, $\geq$ 4P):
+\begin{enumerate}
+\item Résultats partiels valant 4P:
+\begin{itemize}
+    \item montrer que $ACX$ est isocèle et déduire que $AX=AC$, ou
+    \item montrer que $ABY$ est isocèle et déduire que $AB=AY$
+    %\item montrer que $I$ est le centre du cercle inscrit de $AXWC$
+\end{itemize}
+
+\item Résultats partiels valant 5P:
+\begin{itemize}
+    \item montrer que $AX=AC$ et $AB=AY$
+    \item montrer que $\angle ACX=\angle AYB$ ou tout autre relation d'angles qui permet de conclure directement que les droites sont parallèles
+\end{itemize}
+\end{enumerate}
+
+\textbf{Remarque:}
+On ne demande pas de démontrer que $X$ se trouve entre $A$ et $B$, et que $C$ se trouve entre $A$ et $Y$.
+}
+
+
+
+\ita{}
+
+\en{Let $ABC$ be a triangle with $AB>AC$. The angle bisectors at $B$ and $C$ meet at point $I$ inside the triangle $ABC$. The circumcircle of the triangle $BIC$ intersects $AB$ again in $X$ and $AC$ again in $Y$. Show that $CX$ is parallel to $BY$.
+
+\textbf{Solution 1 (Arnaud), Angle chasing :}
+
+We will show that $\angle ACX=\angle AYB$. This condition is sufficient to conclude that the lines are parallel. We will suppose for our proof that $X$ is between $A$ and $B$ and that $Y$ is not betweeen $A$ and $C$.
+
+As $CI$ is the bisector of $\angle ACB$, we have $\angle ACI=\angle ICB$. The points $ICYB$ are concyclic, so $\angle ICB=\angle IYB$. We now have that
+\[
+\angle ACI=\angle IYB.
+\]
+
+As $ICYB$ is a cyclic quadrilateral, we also have that $\angle CYI=\angle CBI$. The line $IB$ is the bisector of $\angle CAB$, so $\angle CBI=\angle IBA$. The point $X$ is between $A$ et $B$, so $\angle IBA=\angle IBX$. Finally, as the points $XBCI$ are all on a circle, we have $\angle IBX=\angle ICX$. So
+\[
+\angle CYI=\angle ICX.
+\]
+
+In conclusion
+\[
+\angle ACX=\angle ACI+\angle ICX=\angle IYB+\angle CYI=\angle CYB=\angle AYB.
+\]
+
+For the last equality, we used the fact that $C$ is between $A$ and $Y$.
+
+\textbf{Solution 2 (Arnaud), Thales' intercept theorem :}
+
+In this solution we will show that $AX/AB=AC/AY$, which, by Thales' intercept theorem implies that $XC$ and $BY$ are parallel.
+
+As $XICB$ is cyclic and $X$ is between $A$ and $B$, we have $\angle AXI=\angle BCI$. As $CI$ is the bisector of the angle in $C$, we have $\angle BCI=\angle ICA$. Additionally,
+\[
+\angle AXI=\angle ACI.
+\]
+
+Similarly, using that $XICB$ is cyclic and $IB$ is the bisector of the angle in $B$, we have
+\[
+\angle ICX=\angle IBX=\angle IBC=\angle IXC.
+\]
+
+Juxtaposing these two statements and using that $X$ is between $A$ and $B$, we obtain:
+\[
+\angle AXC=\angle AXI+\angle IXC=\angle ACI+\angle ICX=\angle ACX,
+\]
+and so the triangle $ACX$ is isoceles in $A$; in other words, $AX=AC$. There are multiple ways to conclude. For example:
+
+\begin{enumerate}
+    \item As $XCYB$ is cyclic, power of a point gives $AX\cdot AB=AC\cdot AY$. Since $AX=AC$, we have $AB=AY$. Thus we have $AX/AB=AC/AY$.
+    \item As $XCYB$ is cyclic, we have $\angle XBY=\angle ACX$ and $\angle AXC=\angle CYB$. As the triangle $AXC$ is isoceles in $A$, $\angle AXC=\angle ACX$ and so $\angle XBY=\angle CYB$. Furthermore, $\angle ABY=\angle AYB$. So the triangle $ABY$ is isoceles in $A$ and so $AB=AY$. We conclude as before.
+\end{enumerate}
+
+\textbf{Marking Scheme:}
+
+Partial solutions are marked as follows:
+Additive partial points ($\leq$ 3P):
+\begin{enumerate}
+    \item Forward points:
+
+\begin{itemize}
+    \item +1P: establish an angle relation in a cyclic quadrilateral with 4 points from $\{X,I,C,Y,B\}$
+    \item +1P: establish an angle relation in \textbf{another cyclic quadrilateral} with 4 points from $\{X,I,C,Y,B\}$
+    \item +1P: An angle equality which uses both a cyclic quadrilateral with 4 points from $\{X,I,C,Y,B\}$ and one of the bisectors $\{CI,BI\}$
+    \item +2P: Show that the center of the circle passing through $B,X,I,C,Y$ corresponds to the intersection of $AI$ with the circumcircle of $ABC$ (Incenter-Excenter lemma)
+\end{itemize}
+
+    \item Backward points:
+\begin{itemize}
+    \item +0P: Reformulate the conclusion in terms of angles (eg. $\angle ACX=\angle AYB$) or length-ratios ($AX/AB=AC/AY$)
+    \item +1P: Reformulate the conclusion in terms of angles \emph{with} decomposition (eg. $\angle ACI=\angle IYB$ and $\angle ICX=\angle AYI$) or an equality of lengths ($AX=AC$ and $AB=AY$)
+\end{itemize}
+
+\end{enumerate}
+
+Partial results (non-additive with the preceding points, $\geq$ 4P):
+\begin{enumerate}
+\item Partial results worth 4P:
+\begin{itemize}
+    \item Show that $ACX$ is isoceles and therefore $AX=AC$, or
+    \item show that $ABY$ is isoceles and therefore $AB=AY$
+    %\item show that $I$ is the center of the circle inscribed in $AXWC$
+\end{itemize}
+
+\item Partial results worth 5P:
+\begin{itemize}
+    \item Show that $AX=AC$ and $AB=AY$
+    \item Show that $\angle ACX=\angle AYB$ or any other angle relation that allows one to immediately conclude that the lines are parallel.
+\end{itemize}
+\end{enumerate}
+
+\textbf{Remark:}
+It is not necessary to prove $X$ is between $A$ and $B$, or that $C$ is between $A$ and $Y$.
+}
+\newpage
+\textbf{Alternative solutions}
+
+\textbf{Solution 3 (Tanish), Incenter-Excenter Lemma:} 
+
+The Incenter-Excenter Lemma tells us that if we prolong $AI$ until it intersects the circumcircle of $ABC$ at $I_A$, $I_A$ happens to be the circumcenter of $BIC$. There are multiple ways to conclude, one of which is to take the reflection across the line $AI_A$, which sends $A$ to $A$, $B$ to $Y$ and $C$ to $X$ (as the lines $AB$ and $AC$ are swapped and the circle $(BIC)$ is preserved) and it immediately follows that $BY \parallel CX$. 
+
+%\textbf{Fausse solution 4 (Arnaud), Brianchon:}
+
+%Par construction, $I$ est le centre du cercle inscrit du triangle $ABC$. En particulier, $I$ se trouve sur la bisectrice issue de $A$.
+
+%Comme le quadrilatère $IXCY$ est inscrit et $C$ se trouve entre $A$ et $Y$, on a $\angle IXY=\angle ICA$. Puisque $IC$ est la bisectrice de l'angle en $C$, $\angle ICA=\angle ICB$. De nouveau, $ICBX$ est incrit et $X$ se trouve entre $A$ et $B$, donc $\angle ICB=\angle IXA$. On obtient ainsi
+%\[
+%\angle IXY=\angle IXA.
+%\]
+%Autrement dit, $IX$ est la bisectrice de l'angle $\angle AXY$. Comme $I$ se trouve sur la bisectrice de l'angle en $A$, on conclut que $I$ est également le centre du cercle inscrit du triangle $AXY$.
+
+%Si on dénote par $W$, l'intersection de $XY$ et $BC$, alors le quadrilatère $AXWC$ admet un cercle un inscrit. De plus, l'hexagone dégénéré $AXYACB$ admet un cercle inscrit. Par Brianchon, comme $A$ ne se trouve ni la droite $XC$, ni sur la droite $BY$, les droites $XC$ et $BY$ doivent être parallèles.

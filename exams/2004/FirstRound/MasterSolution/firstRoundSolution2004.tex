@@ -1,0 +1,202 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+\begin{document}
+
+\pagestyle{empty}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+
+\begin{center}
+{\huge Lösungen zur Vorrundenprüfung 2004}
+\end{center}
+\vspace{15mm}
+
+Zuerst einige Bemerkungen zum Punkteschema. Eine vollständige und korrekte Lösung einer Aufgabe ist jeweils 7
+Punkte wert. Für komplette Lösungen mit kleineren Fehlern oder Ungenauigkeiten, die aber keinen wesentlichen
+Einfluss auf die Richtigkeit der dargestellten Lösung haben, geben wir 6 Punkte. Bei unvollständigen Lösungen
+wird der Fortschritt und der Erkenntnisgewinn bewertet (Teilpunkte). Oft gibt es mehrere Lösungen für ein
+Problem. Versucht jemand zum Beispiel eine Aufgabe auf zwei verschiedenen Wegen zu lösen, erreicht auf dem
+ersten Weg 3 Punkte, auf dem zweiten 2 Punkte, dann wird seine Punktzahl nicht 5, sondern 3 sein. Punkte, die
+auf verschiedenen Wegen erreicht werden, sind also \textit{nicht} kummulierbar. Die unten angegebenen
+Bewertungsschemen sind nur Orientierungshilfe. Gibt jemand eine alternative Lösung, dann werden wir versuchen,
+die Punktzahl entsprechend zu wählen, dass für gleiche Leistung gleich viele Punkte
+verteilt werden. Die Schemen sind stets wie folgt zu interpretieren:\\
+Kommt jemand in seiner Lösung bis und mit hierhin, dann gibt das soviele Punkte.\\
+Ausnahmen von dieser Regel sind jeweils ausdrücklich deklariert.\\
+
+\begin{enumerate}
+
+\item[\textbf{1.}] Finde alle natürlichen Zahlen $a$, $b$ und $n$, sodass die folgende Gleichung gilt:
+\[a!+b!=2^n\]
+
+\textbf{Lösung:}
+
+Die Gleichung ist symmetrisch in $a$ und $b$, daher können wir oBdA $a \leq b$ annehmen. Ist $a\geq 3$, dann
+ist die LS der Gleichung durch 3 teilbar, die RS aber nicht, Widerspruch.\\ Ist $a=1$, dann folgt $1+b!=2^n$.
+Für $b \geq 2$ ist die LS ungerade und grösser als 1, Widerspruch. Folglich gilt $b=1$ und damit $n=1$.\\ Ist
+$a=2$, dann folgt analog $2+b!=2^n$. Für $b \geq 4$ ist die LS nicht durch 4 teilbar und grösser als 4,
+Widerspruch. Folglich gilt $b=2$ und $n=2$ oder $b=3$ und $n=3$.\\ Die einzigen Lösungstripel $(a,b,n)$ sind
+also
+\[(1,1,1),(2,2,2),(2,3,3),(3,2,3).\]
+
+\textit{Bemerkungen und Punkteschema:}
+
+Es führt wohl kein Weg daran vorbei, mit Teilbarkeit zu argumentieren, dass $a,b \geq 3$ nicht möglich ist. Für
+einen Beweis dieser Tatsache gab es 3 Punkte. Für Faktorisierungen der Form $a!+b!=a!(1+b!/a!)$ gab es bis zu 2
+Punkten, je nachdem, wie die Lösung fortgesetzt wurde. Eine eigentlich vollständige Lösung ohne Betrachtung des
+Falls $a=b=1$ gab 6 Punkte.
+
+
+\bigskip
+
+
+\item[\textbf{2.}] Auf einem gewöhnlichen Schachbrett stehen 17 Türme. Zeige, dass man stets drei Türme
+auswählen kann, die sich gegenseitig nicht bedrohen. (Ein Turm kann in einem Zug beliebig viele Felder nach
+links, rechts, oben oder unten ziehen. Ein Turm bedroht einen anderen, falls er in einem Zug auf das Feld des
+anderen Turmes ziehen kann.)\\
+
+\textbf{1. Lösung:}
+
+Zwei Türme bedrohen sich genau dann, wenn sie in derselben Zeile oder Spalte stehen. Unterteile die 64 Felder
+wie folgt in 8 Schubfächer:
+\begin{center}
+\begin{tabular}{*{8}{c}}
+1 & 2 & 3 & 4 & 5 & 6 & 7 & 8\\
+2 & 3 & 4 & 5 & 6 & 7 & 8 & 1\\
+3 & 4 & 5 & 6 & 7 & 8 & 1 & 2\\
+4 & 5 & 6 & 7 & 8 & 1 & 2 & 3\\
+5 & 6 & 7 & 8 & 1 & 2 & 3 & 4\\
+6 & 7 & 8 & 1 & 2 & 3 & 4 & 5\\
+7 & 8 & 1 & 2 & 3 & 4 & 5 & 6\\
+8 & 1 & 2 & 3 & 4 & 5 & 6 & 7
+\end{tabular}
+\end{center}
+Wegen $17=2\cdot 8+1$ stehen nach dem Schubfachprinzip drei Türme auf Feldern mit derselben Nummer. Diese drei
+bedrohen sich gegenseitig nicht, da sie in verschiedenen Zeilen und Spalten stehen.\\
+
+\textbf{2. Lösung:}
+
+Wegen $17 = 2\cdot 8+1$ gibt es eine Zeile $A$, in der mindestens drei Türme stehen. Nun gibt es eine zweite
+Zeile $B$, in der mindestens zwei Türme stehen, denn sonst wären es höchstens $8+7\cdot 1=15$ Türme. Es muss
+ausserdem noch eine dritte Zeile $C$ mit einem Turm geben, wegen $17=2\cdot 8+1$. Wähle nun einen der Türme in
+$C$. In $B$ gibt es nun sicher einen Turm, der nicht in derselben Spalte liegt. In $A$ kann man nun ebenfalls
+immer einen der drei Türme wählen, der in einer anderen Spalte liegt als die zwei schon gewählten. Diese drei
+Türme bedrohen sich nicht.\\
+
+\textit{Bemerkungen und Punkteschema:}
+
+In dieser Aufgabe konnte man eigentlich nur 0 oder 7 Punkte machen. Ungenaue Argumentation oder nichtbeachtete
+Fälle gaben entsprechend Abzug.
+
+\bigskip
+
+
+\item[\textbf{3.}] Sei $ABCD$ ein Parallelogram. Die Punkte $P$ und $Q$ liegen im Innern von $ABCD$ auf der
+Diagonalen $AC$, dabei gilt $|AP|=|CQ|<{\textstyle \frac{1}{2}}|AC|$. Die Gerade $BP$ schneidet $AD$ im Punkt
+$E$, die Gerade $BQ$ schneidet $CD$ in $F$. Zeige, dass $EF$ parallel zur Diagonalen $AC$ ist.\\
+
+\textbf{Lösung:}
+
+Bei Punkt $P$ können wir den ersten Strahlensatz anwenden:
+$$\frac{|PE|}{|PB|} = \frac{|PA|}{|PC|}.$$
+Ebenso bei Punkt $Q$:
+$$\frac{|QF|}{|QB|} = \frac{|QC|}{|QA|}.$$
+Nach Voraussetzung ist $|QC| = |PA|$ und $|QA| = |PC|$. Daher gilt
+$$\frac{|PE|}{|PB|} = \frac{|QC|}{|QA|} = \frac{|QF|}{|QB|}.$$
+Nach der Umkehrung des ersten Strahlensatzes folgt daher die Behauptung.\\
+
+\textit{Bemerkungen und Punkteschema:}
+
+Für die Erkenntnis, dass man die Umkehrung des ersten Strahlensatzes braucht gab es zwei Punkte. Viele
+versuchten die Aufgabe mit Winkeljagd zu lösen. Leider lässt sich die Voraussetzung $|AP|=|CQ|$ nur sehr mühsam
+mit Winkeln ausdrücken. Man müsste Sinussatz und Additionstheoreme verwenden.
+
+\bigskip
+
+
+\item[\textbf{4.}] Bestimme alle natürlichen Zahlen $n$ mit genau 100 verschiedenen positiven Teilern, sodass
+mindestens 10 dieser Teiler aufeinanderfolgende Zahlen sind.\\
+
+\textbf{Lösung:}
+
+Von 10 aufeinanderfolgenden ganzen Zahlen ist sicher eine durch 9, eine durch 8, eine durch 7 und eine durch 5
+teilbar. Daher ist $n$ durch $2^3\cdot 3^2\cdot 5\cdot 7$ teilbar. Sei nun
+\[n=2^a\cdot 3^b\cdot 5^c\cdot 7^d \cdot p_1^{e_1}\cdots p_r^{e_r}\]
+die Primfaktorzerlegung von $n$, wobei $r \geq 0$, $e_k \geq 1$ und $a\geq 3$, $b\geq 2$, $c,d\geq 1$. Dann ist
+die Anzahl positiver Teiler von $n$ gleich
+\[(a+1)(b+1)(c+1)(d+1)(e_1+1)\cdots(e_r+1).\]
+Nach Voraussetzung ist dies gleich $100=5\cdot 5\cdot 2 \cdot 2$,
+ein Vergleich mit den Faktoren in obiger Formel zeigt, dass
+$a=b=4$ und $c=d=1$ sowie $r=0$ gelten muss. Die einzige mögliche
+Lösung ist daher $n=2^4\cdot 3^4\cdot 5\cdot 7=45360$. Diese Zahl
+besitzt nun tatsächlich genau 100 Teiler, unter denen die 10
+aufeinanderfolgenden $1,2,\ldots,10$ vorkommen.
+\\
+
+\textit{Bemerkungen und Punkteschema:}\\
+Die Formel für die Anzahl  Teiler einer natürlichen Zahl ist 1
+Punkt wert. Ein Vergleich der Faktoren mit $100=5\cdot 5\cdot 2
+\cdot 2$ und der daraus folgenden Erkenntnis, dass $n$ höchstens 4
+verschiedene Primteiler
+hat, gab 2 Punkte.\\
+\textit{Weitere} 1 bzw 2 Punkte gabs, wenn man bemerkt hat, dass $n$ durch $2,3,5,7$ bzw $4,9,5,7$ teilbar ist.
+
+\bigskip
+
+\item[\textbf{5.}] $m\times n$ Punkte sind in einem quadratischen Gitter zu einem Rechteck angeordnet. Wieviele
+Möglichkeiten gibt es, diese Punkte rot oder weiss zu färben, sodass unter je vier Punkten, die Ecken eines
+Einheitsquadrates bilden, genau zwei weisse und zwei rote vorkommen?\\
+
+\textbf{Lösung:}
+
+Wir betrachten das Gitter so, dass es $m$ Zeilen und $n$ Spalten hat. Wir färben die Punkte zeilenweise ein und
+beginnen mit der ersten Zeile. Nehme an, wir hätten die $k$-te Zeile schon eingefärbt.
+
+Wir nennen eine Färbung der $k+1$-ten Zeile zulässig, wenn die Bedingung der Aufgabe für die $k$-te und $k+1$-te
+Zeile erfüllt ist. Jede zulässige Färbung der $k+1$-ten Zeile ist offenbar durch die Farbe eines beliebigen
+Punktes bereits vollständig bestimmt. Denn jeder Punkt in der $k+1$-ten Zeile bestimmt die Farbe der unmittelbar
+daneben liegenden Punkte. Daher gibt es höchstens zwei zulässige Färbungen der $k+1$-ten Zeile. Eine gibt es
+immer: die Inverse Färbung, wo kein Punkt dieselbe Farbe wie jener direkt darüber hat. Haben nun zwei
+nebeneinander liegende Punkte der $k$-ten Zeile dieselbe Farbe, dann ist die Farbe der beiden darunterliegenden
+Punkte eindeutig bestimmt, es gibt also nur eine zulässige Färbung der $k+1$-ten Zeile, eben die inverse. Sind
+die Punkte in der $k$-ten Zeile aber abwechselnd rot und weiss gefärbt, dann lässt sich die $k+1$-te Zeile auf
+zwei Arten zulässig färben, nämlich gleich wie die $k$-te oder invers dazu.
+
+Es gibt genau 2 Möglichkeiten, die erste Zeile abwechselnd weiss und rot zu färben. Danach lässt sich jede
+weitere Zeile ebenfalls auf genau zwei Arten zulässig färben, wie wir oben erläutert haben. Insgesamt gibt es
+also $2^m$ solche Färbungen.
+
+Für die übrigen $2^n-2$ möglichen Färbungen der ersten Zeile gibt es stets zwei benachbarte Punkte mit derselben
+Farbe. Folglich lässt sich jede weitere Zeile auf genau eine Art zulässig färben. Es gibt als $2^n-2$ solche
+Färbungen.
+
+Insgesamt ergibt das die Lösung
+\[2^m+2^n-2.\]
+\\
+
+\textit{Bemerkungen und Punkteschema:}\\
+Eine erkennbare Strategie und Zielsetzung gab bereits 1 Punkt,
+unabhängig davon, ob sie zur Lösung führt oder nicht. Eine
+Beweisskizze ohne Erklärung der Details oder mit ungenügender
+Argumentation oder Klarheit gab bis zu 4 Punkte.
+
+\end{enumerate}
+
+\end{document}

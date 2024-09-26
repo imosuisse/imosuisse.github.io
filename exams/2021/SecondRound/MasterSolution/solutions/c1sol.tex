@@ -1,0 +1,129 @@
+\en{Anaëlle has $2n$ stones labelled $1,2,3,\ldots,2n$ as well as a red box and a blue box. She wants to put each of the $2n$ stones into one of the two boxes such that the stones $k$ and $2k$ are in different boxes for all $k=1,2,\dots,n$. How many possibilities does Anaëlle have to do so?
+
+\textbf{Answer:} Anaëlle has $2^n$ possibilities to do so.
+
+\textbf{Solution 1 (bijective):}
+For any odd integer $1\leq t < 2n$, call the set of stones whose label is of the form $t\cdot 2^k$ the chain starting at $t$. Note that if we place one stone from a chain in a box, the placement of all the other stones in that chain is uniquely determined due to the condition. Also note that since $t$ is odd, stones from different chains can be placed independently since the condition only effects pairs of stones that are in the same chain.
+
+Since every stone is in exactly one of the chains, it follows that every valid distribution of the stones corresponds to some arbitrary distribution of one representative from each chains (e.g. the stones with odd label). Since there are $n$ chains, the total number of possibilities is therefore $2^n$.
+
+\textbf{Solution 2 (inductive):}
+We will proceed by induction. Note that the statement is true for $n = 1$ since the two stones (labelled $1$ and $2$) have to be placed in different boxes. Now consider the case $n > 1$ and assume that the statement holds for every smaller value of $n$.
+
+It follows that Anaëlle has $2^{n-1}$ valid possibilities to distribute the stones labelled $1,2,\dots,2n-2$. The stone labelled $2n-1$ is not effected by any restrictions and can therefore be placed in either box. For the stone labelled $2n$ however Anaëlle has no choice since it cannot end up in the same box as the stone labelled $n$ which is already placed (since $n\leq 2n-2$). In total, Anaëlle therefore has $2\cdot 2^{n-1} = 2^n$ possibilities.
+
+\newpage
+\textbf{Marking Scheme}
+
+\textbf{Solution 1 (Additive)}
+\begin{itemize}
+\item 1P: Calculate the answer for at least one value of $n \geq 3$.
+\item 1P: Have the idea of considering these chains.
+\item 2P: Argue that the placement of one stone in each chain determines all others.
+\item 1P: Argue that different chains are independent.
+\item 1P: Argue that there are $n$ chains and that they partition the stones.
+\item 1P: Finish the proof.
+\end{itemize}
+
+\textbf{Solution 2 (Additive)}
+\begin{itemize}
+\item 1P: Calculate the answer for at least one value of $n \geq 3$.
+\item 1P: Have the idea of induction.
+\item 2P: Handle the odd case in the inductive step.
+\item 2P: Handle the even case in the inductive step.
+\item 1P: Finish the proof.
+\end{itemize}
+
+\textbf{Remarks (points only to be deducted from a full solution)}
+\begin{itemize}
+\item -1P: Missing a finite number of cases.
+\item -1P: Calculation mistakes for final answer.
+\item No point deduction for not mentioning that $n \leq 2n-2$.
+\end{itemize}
+}
+
+\de{Anaëlle hat $2n$ Steine, welche mit $1,2,3,\ldots,2n$ beschriftet sind, sowie eine rote und eine blaue Schachtel. Sie will nun alle $2n$ Steine in die beiden Schachteln verteilen, sodass die Steine $k$ und $2k$ für jedes $k=1,2,\dots,n$ in unterschiedlichen Schachteln landen. Wie viele Möglichkeiten hat Anaëlle, um dies zu tun?
+
+\textbf{Antwort:} Anaëlle hat $2^n$ Möglichkeiten.
+
+\textbf{Lösung 1 (bijektiv):}
+Für jede ungerade ganze Zahl $1\leq t < 2n$, nenne die Menge aller Steine, deren Beschriftung die Form $t\cdot 2^k$ hat, die Kette ab $t$. Sobald wir einen Stein aus einer Kette in eine Schachtel platzieren, dann ist wegen der Bedingung die Schachtel aller anderen Steine in dieser Kette eindeutig bestimmt. Da $t$ ungerade ist, haben wir ausserdem, dass Steine in verschiedenen Ketten unabhängig voneinander platziert werden können, da die Bedingung nur Paare von Steine betrifft, die in der selben Kette sind.
+
+Weil jeder Stein in zudem genau einer Kette ist, folgt nun, dass jede erlaubte Verteilung der Steine eine entsprechende beliebige Verteilung von jeweils einem Stellvertretenden pro Kette hat. (z.B. alle Steine mit ungerader Beschriftung). Weil wir $n$ Ketten haben, ist die gesamte Anzahl Möglichkeiten demnach $2^n$.
+
+\textbf{Lösung 2 (induktiv):}
+Wir geben einen Induktionsbeweis. Die Antwort ist korrekt für $n = 1$, da die beiden Steine (mit Beschriftung $1$ und $2$) in verschiedenen Schachteln platziert werden müssen. Betrachte nun den Fall mit $n > 1$ und nehme an die Antwort ist korrekt für alle kleineren Werte von $n$.
+
+Es folgt, dass Anaëlle $2^{n-1}$ Möglichkeiten hat, um die Steine mit Beschriftung $1,2,\dots,2n-2$ zu verteilen. Der Stein mit Beschriftung $2n-1$ ist von keiner Bedingung eingeschränkt und kann daher in einer beliebigen Schachtel platziert werden. Für den Stein mit Beschriftung $2n$ hat Anaëlle jedoch keine Wahl, da er nicht in der selben Schachtel wie der Stein mit Beschriftung $n$ platziert werden darf, welcher bereits platziert wurde (weil $n\leq 2n-2$). Insgesamt hat Anaëlle also $2\cdot 2^{n-1} = 2^n$ Möglichkeiten.
+
+\newpage
+\textbf{Marking Scheme}
+
+\textbf{Solution 1 (Additive)}
+\begin{itemize}
+\item 1P: Calculate the answer for at least one value of $n \geq 3$.
+\item 1P: Have the idea of considering these chains.
+\item 2P: Argue that the placement of one stone in each chain determines all others.
+\item 1P: Argue that different chains are independent.
+\item 1P: Argue that there are $n$ chains and that they partition the stones.
+\item 1P: Finish the proof.
+\end{itemize}
+
+\textbf{Solution 2 (Additive)}
+\begin{itemize}
+\item 1P: Calculate the answer for at least one value of $n \geq 3$.
+\item 1P: Have the idea of induction.
+\item 2P: Handle the odd case in the inductive step.
+\item 2P: Handle the even case in the inductive step.
+\item 1P: Finish the proof.
+\end{itemize}
+
+\textbf{Remarks (points only to be deducted from a full solution)}
+\begin{itemize}
+\item -1P: Missing a finite number of cases.
+\item -1P: Calculation mistakes for final answer.
+\item No point deduction for not mentioning that $n \leq 2n-2$.
+\end{itemize}
+}
+
+\fr{Anaëlle possède $2n$ pierres numérotées $1,2,3,\ldots,2n$ ainsi que deux boîtes, une bleue et une rouge. Elle veut ranger chacune des $2n$ pierres dans l'une des deux boîtes de sorte que les pierres $k$ et $2k$ soient dans des boîtes différentes pour tout $k=1,2,\dots,n$. Combien Anaëlle a-t-elle de manières de le faire?
+
+\textbf{Answer:} Anaëlle a $2^n$ manières de le faire.
+
+\textbf{Solution 1 (bijective):}
+Pour chaque entier impair $1\leq t < 2n$, on appelle l'ensemble de pierres avec un numéro de la forme $t\cdot 2^k$, la chaîne commençant en $t$. Notons que si l'on place une pierre de la chaîne dans une boîte, le placement de toutes les autres pierres de la chaîne est uniquement déterminé. Notons aussi que comme $t$ est impair, des pierres de différentes chaînes sont placées indépendamment comme la condition affecte seulement deux pierres qui sont dans la même chaîne. 
+
+Comme chaque pierre appartient à exactement une chaîne, il s'ensuit que chaque distribution de pierres correspond à une distribution d'un représentant de chaque chaîne (e.g. les pierres avec un numéro impair). Comme il y a $n$ chaînes, le nombre total de manières est $2^n$.
+
+\textbf{Solution 2 (inductive):}
+Nous procédons par induction. Notons que l'affirmation est vraie pour $n=1$ car les deux pierres (numérotées $1$ et $2$) doivent être placées dans des boîtes différentes. Nous considérons maintenant le cas $n>1$ et supposons que l'affirmation est vraie pour toutes les valeurs inférieures à $n$.
+
+Nous avons déjà qu'Anaëlle a $2^{n-1}$ manières de distribuer les pierres numérotées $1, 2, \dots, 2n-2$. La pierre numérotée $2n-1$ n'est pas affectée par aucune restriction et peut être placée dans n'importe quelle boîte. En revanche, pour la pierre numérotée $2n$, Anaëlle n'a pas le choix , puisqu'elle ne peut pas être dans la même boîte que la pierre numérotée $n$ qui est déjà placée (car $n\leq 2n-2$). Au total, Anaëlle a donc $2\cdot 2^{n-1}=2^n$ manières de distribuer les pierres.
+\newpage
+\textbf{Marking Scheme}
+
+\textbf{Solution 1 (Additive)}
+\begin{itemize}
+\item 1P: Calculer la réponse pour au moins une valeur de $n\geq 3$.
+\item 1P: Avoir l'idée de considérer ces chaînes.
+\item 2P: Argumenter que le placement d'une pierre dans chaque chaîne détermine le placement de toutes les autres.
+\item 1P: Argumenter que des chaînes différentes sont indépendantes.
+\item 1P: Argumenter qu'il y a $n$ chaînes et qu'elles partionnent les pierres.
+\item 1P: Terminer la preuve.
+\end{itemize}
+
+\textbf{Solution 2 (Additive)}
+\begin{itemize}
+\item 1P: Calculer la réponse pour au moins une valeur de $n\geq 3$.
+\item 1P: Avoir l'idée de l'induction.
+\item 2P: S'occuper du cas impair dans le pas d'induction.
+\item 2P: S'occuper du cas pair dans le pas d'induction.
+\item 1P: Terminer la preuve.
+\end{itemize}
+
+\textbf{Remarques (points déductibles seulement pour une solution complète)}
+\begin{itemize}
+\item -1P: Manquer un nombre fini de cas.
+\item -1P: Erreurs de calcul pour la réponse finale.
+\item Pas de déduction de points pour ne pas avoir mentionné que $n \leq 2n-2$.
+\end{itemize}}

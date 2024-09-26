@@ -1,0 +1,185 @@
+\en{Let $n\geq 4$ and $k,d\geq 2$ be integers such that $k \cdot d \leq n$. The $n$ contestants of the Mathematical Olympiad are sitting around a round table, waiting for Patrick to arrive. When Patrick arrives, he is unhappy about the situation because it violates the rules of social distancing. He therefore chooses $k$ of the $n$ contestants to stay and tells the others to leave the room such that between any two of the remaining $k$ contestants, there are at least $d-1$ empty chairs. How many possibilities does Patrick have to do so if every chair was occupied in the beginning?
+
+\textbf{Answer:} $\frac{n}{k}\binom{n-kd+k-1}{k-1}$ or any equivalent expression.
+
+\textbf{Solution 1: Surjective $k$-to-1 mapping.} Firstly, let us number the people around the table 1 to $n$, in a clockwise order starting from an arbitrary person designated as "1". Now, we begin by counting how many combinations there are where person 1 is chosen. Note that any such possibility just corresponds to choosing $k$ 'distances' between consecutive contestants. The constraint is simply the same as saying that each distance should be greater than $d$. So we essentially want all the ways to choose $k$ sets of gaps summing to $n$ that are all greater than $d$, which is can be computed in many ways:
+\begin{itemize}
+    \item For example, you can imagine you have a smaller table with $n-kd+k$ chairs around it, of which chair number 1 is occupied, and you choose $k-1$ more chairs to place people in. Then, you can insert $d-1$ chairs between every two consecutive people to give you a finished configuration, meaning you had $\binom{n-kd+k-1}{k-1}$ ways of doing so.
+    \item Alternatively, you can say this is just the same problem as distributing $n$ identical sweets amongst $k$ children such that each child gets at least $d$ sweets, which is in the script. Here, we can simply forget about $kd$ sweets in order to satisfy the constraint, meaning we have to distribute $n-kd$ sweets amongst $k$ children, and we have $\binom{n-kd+k-1}{k-1}$ ways of doing so.
+    \end{itemize}    
+    Now, it remains to see that by taking all the 'rotations' of these possibilities (by changing the fixed point from "1" to any of the other integers) would count every viable configuration exactly $k$ times (once for every person, who can be a fixed point.) So we obtain a final answer of $\frac{n}{k}\binom{n-kd+k-1}{k-1}$.\\
+\\
+\emph{If you are confused by this solution, think of it this way: Consider the original problem, but now you also want to designate one of the remaining contestants as being an imposter\footnote{Someone from Valais.}. Counting the ways of doing so can be done as above, by starting at the imposter and looking at the distances, giving you $\binom{n-kd+k-1}{k-1}$ configurations per any of $n$ possible imposters. However, you can also do so by taking every one of the possibilities from the original problem, and choosing an imposter, giving you $k$ new choices for every original possibility.}\\
+
+\textbf{Solution 2: Considering the smallest occupied chair.} As above, we can calculate the number of configurations where person 1 is selected as being $\binom{n-kd+k-1}{k-1}$.\\ Now, let us calculate the number of configurations where person 2 is selected and person 1 is \emph{not} selected. This is almost the same situation as before (choosing $k$ distances) except you now have the additional constraint that we know that chair number 1 is forcibly in the last gap. We want to therefore distribute $n$ chairs amongst $k$ gaps with the constraint that the first $k-1$ gaps should be at least $d$ and the last one at least $\max(2,d)$ (since we need chair 1 to be there in for sure). This is equal to $\binom{n-(k-1)d+k-1-\max(2,d)}{k-1}$. \\
+Proceeding with this train of thought, we see now that the number of possibilities where person 3 is selected and neither person 2 nor 1 are selected is $\binom{n-(k-1)d+k-1-\max(3,d)}{k-1}$. More generally, should we wish to count the number of possibilities where person $i$ is selected but $1, 2, \dots, i-1$ are not, we get\footnote{Here, it can be useful to think about the convention that $\binom{a}{b} = 0$ if $a < 0$ or $a > b$.} $\binom{n-(k-1)d+k-1-\max(i,d)}{k-1}$. However, we can also see that summing this for all $i$ gives every possibility, since at each stage we are counting the number of configurations where $i$ is the 'smallest' occupied chair, so there is a clear bijection. So we obtain 
+\begin{align*}
+    \sum_{i=1}^{n} \binom{n-(k-1)d+k-1-\max(i,d)}{k-1} 
+\end{align*}
+
+\newpage 
+
+ \textbf{Marking Scheme}\\
+ %\\
+  %\emph{Each of the following points can be obtained independently of all the others.}\\
+  %So for example, students who do not manage to find the right count (but attempt to) for when a given person is fixed but state that multiplying this by $\frac{n}{k}$ will give all possibilities (with some justification e.g. every possibility is counted once per person) should be awarded 4 points; similarly, if a student simply finds the right count for when a given person is fixed, they should be awarded 4 points. Any alternative complete solution should be awarded 7 points.}\\
+  \\
+ \textbf{Solutions 1 and 2 (Additive)} 
+ 
+ \begin{itemize}
+ \item 0P: Solving the case $n = kd$ and/or attempting to do an induction on $n$.
+ \item 0P: Stating we can group the possibilities based on the smallest occupied chair, after assigning numbers to all the people.
+     \item 1P: Any attempt to correctly calculate the number of possibilities when a given person is fixed.
+     \item 1P: Asserting that the aforementioned is equal to $\binom{n-kd+k-1}{k-1}$.  
+     \item 2P: Proving said equality (1 point may be awarded here if the proof is incomplete or the student did not find what the value should be but the student states that we have to assign $kd$ of the gaps by default and/or we have to distribute $n-kd$ gaps amongst all of the distances).
+\end{itemize}
+
+\textbf{Completing Solution 1 (Additive)}
+\begin{itemize}
+     \item 1P: Stating that we can rotate every possibility where a given person is fixed to obtain all possibilities.
+     \item 1P: Stating the previous idea will count every possibility exactly $k$ times. 
+     \item 1P: Finishing.
+ \end{itemize}
+ 
+ \emph{Remark: the finishing point is to be awarded if the contestant multiplies by $n$ and/or divides by $k$ to give a final expression. If the contestant for example oversees that they must divide by $k$, but still writes that the answer is $n\binom{n-kd+k-1}{k-1}$, they only lose 1 point.}
+ 
+ \textbf{Completing Solution 2 (Additive)}
+\begin{itemize}
+     \item 2P: Giving the correct expression $\binom{n-(k-1)d+k-1-\max(i,d)}{k-1}$ for when person $i$ is fixed and none of people $1, 2, \dots i-1$ are taken.
+     \item 1P: Stating that the total number of possibilities is the sum of the previous expression over all $1 \le i \le n$.
+ \end{itemize}
+ \emph{For solution 2, no points should be deducted for not simplifying the summation.}
+\bigskip 
+
+\textbf{Appendix: Why the two answers here are equal.}\\
+As you may recall, in solution 2, we obtained the following answer:
+\begin{align*}
+    \sum_{i=1}^{n} \binom{n-(k-1)d+k-1-\max(i,d)}{k-1} 
+\end{align*}
+Is this really equal to what we get in solution 1? Indeed, and we can prove it.\\ The important thing to note is that the binomial will stay the same until $i = d$, and from that point the upper term will descend by 1 each time until it is equal to $k-1$; any binomials after that point are just equal to 0 (they correspond to taking a smallest occupied chair that is too big whereupon you cannot squeeze everyone else in the remaining space). So, rewriting, we get:
+\begin{align*}
+    &d \cdot \binom{n-kd+k-1}{k-1} + \binom{n-kd+k-2}{k-1} + \binom{n-kd+k-3}{k-1} + \dots + \binom{k-1}{k-1}\\
+    &= (d-1) \cdot \binom{n-kd+k-1}{k-1} + \sum_{j = k-1}^{n-kd+k-1} \binom{j}{k-1}\\
+    &= (d-1) \cdot \binom{n-kd+k-1}{k-1} + \binom{n-kd+k}{k}\\
+    &= (d-1) \cdot \binom{n-kd+k-1}{k-1} + \frac{n-kd+k}{k}\binom{n-kd+k-1}{k-1}\\
+    &= \frac{n}{k} \binom{n-kd+k-1}{k-1}
+\end{align*}
+The second equality above (turning the sum into a single binomial) is known as the Hockey-Stick lemma and is a well-known property; if you wish to prove it for yourself, then try applying the property $\binom{a}{b} + \binom{a}{b+1} = \binom{a+1}{b+1}$ in a clever way. Taking a look at where the terms in our summation show up in Pascal's triangle may also give you a clue (and you will realise where the lemma gets its name from!). 
+}
+
+\de{
+Seien $n\geq 4$ und $k,d\geq 2$ natürliche Zahlen mit $k \cdot d \leq n$. Die $n$ Teilnehmenden der Mathematik-Olympiade sitzen um einen runden Tisch und warten auf Patrick. Als Patrick auftaucht, gefällt ihm die Situation gar nicht, da die Regeln des Social Distancing nicht eingehalten werden. Er wählt also $k$ von den $n$ Teilnehmenden aus, die bleiben dürfen, und schickt alle anderen aus dem Raum, sodass zwischen je zwei der verbleibenden $k$ Teilnehmenden mindestens $d-1$ freie Plätze sind. Wie viele Möglichkeiten hat Patrick dies zu tun, angenommen alle Plätze waren anfangs besetzt?
+
+\textbf{Antwort:} $\frac{n}{k}\binom{n-kd+k-1}{k-1}$ oder dazu äquivalente Ausdrücke.
+
+\textbf{Lösung 1 (Surjektive $k$-zu-$1$ Abbildung):} Zuerst lasst uns die Personen am Tisch im Uhrzeigersinn von $1$ bis $n$ nummerieren, wobei die $1$ Person beliebig ausgewählt wurde. Wir werden nun zählen wie viele Kombinationen es gibt, in der die Person $1$ ausgewählt wurde. Bemerke, dass jegliche solche Möglichkeit einfach dazu korrenspondiert $k$ 'Distanzen' zwischen den auserwählten Teilnehmer zu wählen. Die gegebene Bedingung ist lediglich, dass jede solche 'Distanz' grösser als $d$ sein soll. Wir wollen also die Möglichkeiten zählen eine Gruppe von $k$ Abständen zu wählen, sodass diese alle grösser als $d$ sind und sich zu $n$ aufsummieren. Dies kann auf mehrere Arten gezählt werden:
+\begin{itemize}
+    \item Zum Beispiel kann man sich einen kleineren Tisch der von $n-kd+k$ Stühlen umgeben ist vorstellen, wobei der Stuhl mit der Nummer $1$ besetzt ist und man noch $k-1$ Stühle auswählen soll, die auch noch besetzt werden müssen. Man kann darauf zwischen allen zwei aufeinanderfolgen Personen noch $d-1$ Stühlen einfügen, um eine finale konfigurration zu erhalten. Man hatte hier also $\binom{n-kd+k-1}{k-1}$ Möglichkeiten dies zu tun.
+    \item Anders, kann man auch sagen, dass das Problem hier da gleiche ist, wie wenn man $n$ gleiche Bonbons auf $k$ Kinder verteilen will, sodass jedes Kind mindestens $d$ Bonbons erhählt, was im Skript behandelt wurde. Hier können wir einfach die $kd$ Bonbons vergessen um die Bedingung zu erfüllen, was heisst, dass wir noch $n-kd$ Bonbons zu verteilen haben. Hier erhält man auch $\binom{n-kd+k-1}{k-1}$ Möglichkeiten dies zu tun.
+\end{itemize}
+Nun haben wir jedoch bis jetzt angenommen, dass Person $1$ immer auserwählt wird. Wir müssen jetzt also noch alle 'Rotationen' in Betracht ziehen(Indem wir eine andere Person als die beliebige $1$ Person betrachten). Würden wir die Möglichkeiten für alle Rotationen einfach aufaddieren, so hätten wir jede 'echte' Konfiguration $k$-Mal gezählt (1 Mal für jede der $k$ auserwählten Personen). Wir erhalten also die finale Antwort $\frac{n}{k}\binom{n-kd+k-1}{k-1}$.
+\emph{Falls diese Lösung zu verwirrend war kann man den letzten Schritt auch anders betrachten: Betrachte das ursprüngliche Problem, wobei einer der $k$ Personen ein Imposter ist. die Anzahl möglichkeiten kann wie oben beschrieben berechnet werden. Man startet mit dem Imposter und betrachtet die Distanzen zwischen den auserwählten Personen, was einem $\binom{n-kd+k-1}{k-1}$ Möglichkeiten für  jeden der $n$ möglichen Imposter gibt. Man kann diese Anzahl auch anders betrachten. Für jede Möglichkeit des ursprünglichen Problemes gibt es $k$ Möglichkeiten den Imposter zu wählen. Somit ist die Anzahl Kombination des ursprünglichen Problems gleich $n\binom{n-kd+k-1}{k-1} \cdot \frac{1}{k}$}\\
+
+\textbf{Lösung 2 (Man betrachet den kleinsten besetzten Stuhl):} Wie oben können wir die Anzahl Konfigurationen, in welche eine Person (oben die $1$ Person) vorgegeben ist, als $\frac{n}{k}\binom{n-kd+k-1}{k-1}$ berechnen.\\
+Nun lasst uns die Anzahl Konfigurationen betrachten in der die Person $2$ auserwählt wurde, die Person $1$ jedoch nicht. Dies ist nun fast das gleiche wie zuvor(k distanzen wählen), ausser dass hier nun noch die Einschränkung gilt, dass der Stuhl nummer $1$ zwangsmässig in der letzten Distanz enthalten ist.
+
+\newpage
+
+\textbf{Marking Scheme}\\
+ %\\
+  %\emph{Each of the following points can be obtained independently of all the others.}\\
+  %So for example, students who do not manage to find the right count (but attempt to) for when a given person is fixed but state that multiplying this by $\frac{n}{k}$ will give all possibilities (with some justification e.g. every possibility is counted once per person) should be awarded 4 points; similarly, if a student simply finds the right count for when a given person is fixed, they should be awarded 4 points. Any alternative complete solution should be awarded 7 points.}\\
+  \\
+ \textbf{Solutions 1 and 2 (Additive)} 
+ 
+ \begin{itemize}
+ \item 0P: Solving the case $n = kd$ and/or attempting to do an induction on $n$.
+ \item 0P: Stating we can group the possibilities based on the smallest occupied chair, after assigning numbers to all the people.
+     \item 1P: Any attempt to correctly calculate the number of possibilities when a given person is fixed.
+     \item 1P: Asserting that the aforementioned is equal to $\binom{n-kd+k-1}{k-1}$.  
+     \item 2P: Proving said equality (1 point may be awarded here if the proof is incomplete or the student did not find what the value should be but the student states that we have to assign $kd$ of the gaps by default and/or we have to distribute $n-kd$ gaps amongst all of the distances).
+\end{itemize}
+
+\textbf{Completing Solution 1 (Additive)}
+\begin{itemize}
+     \item 1P: Stating that we can rotate every possibility where a given person is fixed to obtain all possibilities.
+     \item 1P: Stating the previous idea will count every possibility exactly $k$ times. 
+     \item 1P: Finishing.
+ \end{itemize}
+ 
+
+ 
+ \textbf{Completing Solution 2 (Additive)}
+\begin{itemize}
+     \item 2P: Giving the correct expression $\binom{n-(k-1)d+k-1-\max(i,d)}{k-1}$ for when person $i$ is fixed and none of people $1, 2, \dots i-1$ are taken.
+     \item 1P: Stating that the total number of possibilities is the sum of the previous expression over all $1 \le i \le n$.
+ \end{itemize}
+ \emph{For solution 2, no points should be deducted for not simplifying the summation.}
+}
+
+\fr{Soient $n\geq 4$ et $k,d\geq 2$ des nombres entiers tel que $k \cdot d \leq n$. Les $n$ participants des Olympiades de Mathématiques sont assis autour d'une table ronde et attendent Patrick. Quand Patrick arrive, il n'est pas content de la situation, car elle ne respecte pas les règles de distance sociale. Il choisit alors $k$ parmi les $n$ participants qui peuvent rester et demande aux autres de partir, de sorte qu'entre deux des $k$ participants restants, il y ait toujours au moins $d-1$ chaises vides. Combien Patrick a-t-il de manières de le faire, si toutes les chaises étaient occupées au début?
+
+\textbf{Réponse:} $\frac{n}{k}\binom{n-kd+k-1}{k-1}$ ou toute expression équivalente.
+
+\textbf{Solution 1: Comptage surjectif.} Tout d'abord, numérotons les participants de $1$ à $n$, dans le sens horaire commençant par une personne désignée arbitrairement comme "1". Maintenant, nous commençons à compter le nombre de manières où la personne 1 est choisie. Notons que chacune de ses possibilités correspond au choix de $k$ 'distances' entre participants consécutifs. La contrainte devient alors celle qui force lesdites distances à être plus grandes ou égales à $d$. Essentiellement, nous voulons alors le nombre de façons de choisir (avec ordre) $k$ nombres plus grands ou égaux que $d$, qui sommés ensemble, donnent $n$. Cela peut être calculé de plusieurs manières:
+\begin{itemize}
+    \item Par exemple, nous pourrions nous imaginer qu'il y a une table plus petite avec $n-kd+k$ chaises autour, dont la chaise 1 est occupée, et qu'on choisisse $k-1$ chaises (en plus de la première) pour y placer des participants. Ensuite, on pourra rajouter $d-1$ chaises entre deux participants consécutifs, donnant alors la configuration finale, et montrant qu'il y avait $\binom{n-kd+k-1}{k-1}$ de le faire.
+    \item Alternativement, on peut considérer ce problème comme celui de distribuer $n$ bonbons identiques parmi $k$ enfants tel que chaque enfant reçoit au moins $d$ bonbons, problème qui est dans le script. Ici, on peut simplement oublier $kd$ bonbons pour satisfaire la contrainte, signifiant qu'on a besoin de distribuer $n-kd$ bonbons parmi $k$ enfants, une combinaison avec répétition, donnant alors  $\binom{n-kd+k-1}{k-1}$ manières de procéder.
+    \end{itemize}    
+    Maintenant, il reste à voir que considérer toutes les 'rotations' de ses possibilités (en changeant le point fixe de "1" à un autre entier) compte chaque configuration exactement $k$ fois (une fois par personne, qui peut être vue comme un point fixe). On obtient finalement $\frac{n}{k}\binom{n-kd+k-1}{k-1}$.\\
+\\
+\emph{Si vous ne comprenez pas parfaitement cette solution, pensez-y de cette manière: Considérez le problème originel, mais on choisissant un des participants qui restent comme étant un imposteur\footnote{Quelqu'un du Valais, par exemple.}. Comptant le nombre de façons de faire peut se faire comme au-dessus, donnant $\binom{n-kd+k-1}{k-1}$ configurations pour chaque choix parmi les $n$ imposteurs possibles. Cependant, cela peut aussi être fait en prenant chacune des possibilités du problème originel, en choisissant un imposteur, donnant $k$ choix pour chaque possiblité originelle.}\\
+
+\textbf{Solution 2: En considérant la plus petite chaise occupée.} Comme au-dessus, on peut calculer le nombre de configurations où la personne 1 est choisie comme étant $\binom{n-kd+k-1}{k-1}$.\\ Maintenant, on cherche à compter le nombre de configurations contenant la personne 2, alors que la personne 1 n'est \emph{pas} choisie. C'est presque la même situation qu'avant (choisir $k$ distances), sauf qu'on a une contrainte additionelle parce qu'on sait que la chaise 1 est dans le dernier espace entre deux chaises. On veut alors distribuer $n$ chaises parmi $k$ espaces avec la contrainte que les premiers $k-1$ distances doivent être au moins $d$ et que la dernière doit être d'au moins $\max(2,d)$ (comme on a besoin que la chaise 1 en fasse partie). On obtient alors $\binom{n-(k-1)d+k-1-\max(2,d)}{k-1}$.\\
+En continuant avec cette façon de penser, nous voyons maintenant que le nombre de possibilités où la personne $3$ est choisie, alors que ni la 1 ni la 2 le sont est de $\binom{n-(k-1)d+k-1-\max(3,d)}{k-1}$. Plus généralement, quand on compte le nombre de possibilités où la personne $i$ est choisie alors que ce n'est pas le cas pour $1, 2, \dots, i-1$, on obtient\footnote{Il peut ici être utile d'utiliser la convention que $\binom{a}{b} = 0$ si $a < 0$ ou $a > b$.} $\binom{n-(k-1)d+k-1-\max(i,d)}{k-1}$. On voit alors que sommer cette expression pour tout $i$ donne le nombre de possibilités, comme on compte à chaque fois le nombre de configurations où $i$ est la 'plus petite' chaise occupée, donnant une bijection claire. On obtient donc
+\begin{align*}
+    \sum_{i=1}^{n} \binom{n-(k-1)d+k-1-\max(i,d)}{k-1} 
+\end{align*}
+
+\bigskip 
+
+ \textbf{Marking Scheme}\\
+ %\\
+  %\emph{Each of the following points can be obtained independently of all the others.}\\
+  %So for example, students who do not manage to find the right count (but attempt to) for when a given person is fixed but state that multiplying this by $\frac{n}{k}$ will give all possibilities (with some justification e.g. every possibility is counted once per person) should be awarded 4 points; similarly, if a student simply finds the right count for when a given person is fixed, they should be awarded 4 points. Any alternative complete solution should be awarded 7 points.}\\
+  \\
+ \textbf{Solutions 1 et 2 (Additives)} 
+ 
+ \begin{itemize}
+ \item 0P: Résoudre le cas $n=kd$ et/ou tenter de faire une induction sur $n$. 
+ \item 0P: Affirmer qu'on peut grouper les possibilités en se basant sur la plus petite chaise occupée, après avoir assigné un nombre à chacun des participants.
+     \item 1P: Toute tentative de calculer correctement le nombre de possibilités quand une personne donnée est fixée.
+     \item 1P: Afirmer que cette valeur vaut $\binom{n-kd+k-1}{k-1}$.  
+     \item 2P: Prouver cette égalité (1 point peut être donné si la preuve est incomplète ou si le participant ne trouve pas la valeur mais affirme qu'il faut assigner $kd$ espaces par défaut et/ou distribuer $n-kd$ espaces entre toutes les distances).
+\end{itemize}
+
+\textbf{Compléter la Solution 1 (Additive)}
+\begin{itemize}
+     \item 1P: Affirmer qu'on peut faire tourner chaque possibilité où une personne est fixée pour obtenir toutes les possibilités.
+     \item 1P: Affirmer que l'idée précédente compte chaque configuration exactement $k$ fois.
+     \item 1P: Conclure.
+ \end{itemize}
+ 
+ \textbf{Compléter la Solution 2 (Additive)}
+\begin{itemize}
+     \item 2P: Donner l'expression correcte $\binom{n-(k-1)d+k-1-\max(i,d)}{k-1}$ pour quand la personne $i$ est fixée et aucun des participants $1, 2, \dots i-1$ n'est pris.
+     \item 1P: Affirmer que le nombre total de possibilités est la somme de l'expression précédente pour $i$ allant de $1$ à $n$.
+ \end{itemize}
+ \emph{Pour la solution 2, aucun point n'est déduit pour ne pas avoir simplifié la somme.}
+\bigskip 
+
+\textbf{Annexe: Pourquoi les deux réponses sont égales.}\\
+Dans la solution 2, on trouve la réponse suivante:
+\begin{align*}
+    \sum_{i=1}^{n} \binom{n-(k-1)d+k-1-\max(i,d)}{k-1} 
+\end{align*}
+Est-ce vraiment ce qu'on a dans la solution 1? C'est heureusement le cas et on peut le prouver.\\ La chose importante à remarquer est que le coefficient binomial restera le même jusqu'à $i=d$, et à partir de là, la somme du haut se décrémentera de $1$ à chaque fois, jusqu'à atteindre $k-1$; les coefficients binomiaux qui suivront seront tous égaux à $0$ après (ils correspondent au cas où la plus petite chaise est trop loin de 1, et les participants n'ont pas assez de place pour occuper l'espace restant). En récrivant, on trouve alors bien:
+\begin{align*}
+    &d \cdot \binom{n-kd+k-1}{k-1} + \binom{n-kd+k-2}{k-1} + \binom{n-kd+k-3}{k-1} + \dots + \binom{k-1}{k-1}\\
+    &= (d-1) \cdot \binom{n-kd+k-1}{k-1} + \sum_{j = k-1}^{n-kd+k-1} \binom{j}{k-1}\\
+    &= (d-1) \cdot \binom{n-kd+k-1}{k-1} + \binom{n-kd+k}{k}\\
+    &= (d-1) \cdot \binom{n-kd+k-1}{k-1} + \frac{n-kd+k}{k}\binom{n-kd+k-1}{k-1}\\
+    &= \frac{n}{k} \binom{n-kd+k-1}{k-1}
+\end{align*}
+La seconde égalité au-dessus (transformant la somme en un coefficient binomial) est connue sous le nom du "Hockey-Stick Lemma" et est une propriété connue; si vous voulez la prouver vous-même, vous devrez vous servir de la propriété $\binom{a}{b} + \binom{a}{b+1} = \binom{a+1}{b+1}$ de façon rusée. Regarder où les termes de la somme se trouvent sur le triangle de Pascal peut vous aider (et vous réaliserez au passage d'où le lemme tire son nom!).
+}

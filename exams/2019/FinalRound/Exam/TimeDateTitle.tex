@@ -1,0 +1,32 @@
+\examtime{%
+    \de{4 Stunden}%
+    \fr{4 heures}%
+    \ita{4 ore}%
+    \en{4 hours}%
+}
+\examdate{%
+    \IfStrEq*{\day}{1}{%
+        \de{1. März 2019}%
+        \fr{1 mars 2019}%
+        \ita{1 gennaio 2019}%
+        \en{1 March 2019}%
+    }{}%
+   \IfStrEq*{\day}{2}{%
+        \de{2. März 2019}%
+        \fr{2 mars 2019}%
+        \ita{2 gennaio 2019}%
+        \en{2 March 2019}%
+    }{}
+}
+\title{%
+    \de{Finalrunde 2019}%
+    \fr{Tour final 2019}%
+    \ita{Turno preliminare 2019}%
+    \en{Final round 2019}%
+}
+\examplace{%
+    \de{\day. Prüfung}%
+    \fr{\IfStrEq*{\day}{1}{Premier}{Second} examen}%
+    \ita{???}%
+    \en{\IfStrEq*{\day}{1}{First}{Second} exam}%
+}

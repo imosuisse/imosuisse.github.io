@@ -1,0 +1,420 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+% Schriftabkürzungen
+
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{Satz}[thm]{Satz}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Korollar}
+\newtheorem{alg}[thm]{Algorithmus}
+\newtheorem{bsp}{Beispiel}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+\renewcommand{\phi}{\varphi}
+\newcommand{\eps}{\varepsilon}
+
+\newcommand{\pfeil}{\quad \Longrightarrow \quad}
+
+\newcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\nequiv}{\not \equiv}
+\newcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\Mod}[1]{(\mod\;#1)}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\newcommand{\sgn}{\mathop{\rm sign}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+\newcommand{\gaussk}[1]{\lfloor #1 \rfloor}
+\newcommand{\frack}[1]{\{ #1 \}}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge IMO Selektion 2002 Lösungen} \\
+\end{center}
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{1.}] Gegeben sind 24 Punkte im Raum. Je drei dieser Punkte
+spannen eine Ebene auf, und es ist bekannt, dass die 24 Punkte auf diese Weise genau 2002 verschiedene Ebenen
+aufspannen. Beweise, dass eine dieser Ebenen mindestens 6 der Punkte enthält.\\
+
+\textbf{Lösung}
+
+Nehme an, keine der Ebenen enthalte 6 oder mehr Punkte. Sei $m$ die Anzahl Ebenen mit genau 4 Punkten und $n$
+die Anzahl Ebenen mit genau 5 Punkten. Wir zählen jetzt die Anzahl Ebenen auf zwei Arten:
+\begin{enumerate}
+\item Nach Vorraussetzung sind es genau 2002.
+\item Wir zählen die Ebenen via Punktetripel. Es gibt $\left( {24}\atop{3} \right)=2024$ Punktetripel. Jedes Tripel
+spannt eine Ebene auf. Jede der $m$ Ebenen mit genau 4 Punkten wird dabei von $\left( {4}\atop{3} \right)=4$
+Tripeln aufgespannt, also 3 mal zuviel gezählt, jede der $n$ Ebenen mit genau 5 Punkten wird von $\left(
+{5}\atop{3} \right)=10$ Tripeln aufgespannt, also 9 mal zuviel gezählt. Es sind daher insgesamt $2024-3m-9n$
+Ebenen.
+\end{enumerate}
+Durch Vergleich der Resultate erhalten wir die Gleichung $22=3m+9n$. Diese besitzt aber keine Lösung, da die
+rechte Seite durch 3 teilbar ist, nicht aber die linke, Widerspruch. Die Annahme war also falsch: Es gibt eine
+Ebene, die mindestens 6 Punkte enthält.\\
+
+\bigskip
+
+\item[\textbf{2.}] Gegeben sei ein Parallelogramm $ABCD$ und ein Punkt $O$ in dessen Innern, sodass
+$\wi AOB+\wi DOC = \pi$. Zeige dass gilt
+\[\wi CBO = \wi CDO\]
+
+\textbf{Lösung}
+
+Konstruiere den Punkt $Q$ auf der anderen Seite von $CD$ wie $O$, sodass $CQ \parallel BO$ und $DQ \parallel
+AO$. Nun gilt $\wi DQC = \wi AOB = \pi - \wi DOC$ und damit ist $CODQ$ ein Sehnenviereck. Da $BCQO$ ein
+Parallelogramm ist, gilt $\wi CBO = \wi CQO$. Da $CODQ$ ein Sehnenviereck ist, gilt nun $\wi CDO = \wi CQO = \wi
+CBO$.\\
+
+
+\bigskip
+
+\item[\textbf{3.}] $n$ sei eine positive ganze Zahl mit mindestens vier verschiedenen positiven Teilern. Die
+vier kleinsten unter diesen Teilern seien $d_{1}, d_{2}, d_{3}, d_{4}$. Finde alle solchen Zahlen $n$, für die
+gilt
+\[d_{1}^{2} + d_{2}^{2} + d_{3}^{2} + d_{4}^{2} = n.\]
+
+\textbf{Lösung}
+
+Es ist $d_{1}=1$. Nehme an, $n$ sei ungerade, dann wären auch $d_{1},d_{2},d_{3},d_{4}$ ungerade und daher
+$n=d_{1}^{2}+d_{2}^{2}+d_{3}^{2}+d_{4}^{2}$ gerade, Widerspruch. Also ist $n$ gerade und $d_{2}=2$. Nehme an,
+$n$ sei durch 4 teilbar, dann ist eine der Zahlen $d_{3},d_{4}$ gleich 4 und die andere gleich $a$, wobei $a$
+irgend eine natürliche Zahl ist. Nun sind 0 und 1 die einzigen quadratischen Reste mod 4, daher gilt modulo 4
+\[0 \equiv n = d_{1}^{2}+d_{2}^{2}+d_{3}^{2}+d_{4}^{2} = 1^2+2^2+4^2+a^2 \equiv 1 +a^2 \equiv 1, 2,\]
+Widerspruch. Daher ist $n$ nicht durch 4 teilbar und damit $d_{3}=p$ eine ungerade Primzahl. Für $d_{4}$ bleiben
+die Möglichkeiten $d_{4}=2p$ oder $d_{4}=q$ mit einer ungeraden Primzahl $q >p$. Nehme an, letzteres sei der
+Fall, dann gilt modulo 4
+\[2 \equiv n = d_{1}^{2}+d_{2}^{2}+d_{3}^{2}+d_{4}^{2} \equiv 1^2+2^2+p^2+q^2 \equiv 1+0+1+1 \equiv 3,\]
+Widerspruch. Daher ist $d_{4}=2p$ und $n=1^2+2^2+p^2+(2p)^2=5(1+p^2)$. Nun ist $p$ ein Teiler von $n$ und
+ausserdem teilerfremd zu $1+p^2$. Daher muss $p$ ein Teiler von 5, also gleich 5 sein. Die einzige Lösung ist
+somit $n=130$.\\
+
+
+\bigskip
+
+\item[\textbf{4.}] Betrachte ein $7 \times 7$ Feld, das in 49 Einheitsquadrate unterteilt ist. In dieses Feld
+wollen wir Kacheln der Form eines Schweizerkreuzes, bestehend aus 5 Einheitsquadraten, hineinlegen. Dabei sollen
+die Kanten der Kreuze auf den Linien des Feldes zu liegen kommen. Bestimme die kleinstmögliche Anzahl Quadrate,
+die auf dem Feld markiert werden müssen, damit jedes Kreuz, egal wo es auf das Feld gelegt wird, mindestens ein
+markiertes Quadrat bedeckt.\\
+
+\textbf{Lösung}
+
+Führe Koordinaten ein. Es ist leicht zu sehen, dass jedes Kreuz eines der 7 Quadrate
+\[(2,5), (3,2), (3,3), (4,6), (5,4), (6,2), (6,5)\]
+bedeckt. Dies zeigt, dass 7 Markierungen genügen. Wir zeigen nun, dass 7 Markierungen nötig sind. Nehme an,
+nicht. Die Kreuze mit Mittelpunkten
+\begin{equation}
+(2,2), (2,6), (3,4), (5,2), (5,6), (6,4)
+\end{equation}
+sind disjunkt, daher muss jedes dieser Kreuze ein markiertes Feld bedecken. Daher genügen fünf Markierungen
+nicht. Nehme an, genau 6 Quadrate sind markiert. Dann bedeckt jedes der 6 Kreuze in (1) \textit{genau} eine
+Markierung. Daher können die Quadrate $(1,1), (1,3), (1,4)$ und $(1,6)$ nicht markiert sein. Durch Drehen und
+Spiegeln der Kreuzanordnung (1) und analogen Argumenten folgt, dass kein Quadrat am Rand des Feldes markiert
+sein kann. Genauso folgt, dass die Quadrate $(3,4), (4,3), (4,5)$ und $(6,4)$ nicht markiert sein können.
+Folglich ist $(4,4)$ markiert. Die 5 Kreuze mit Mittelpunkten
+\begin{equation}
+(2,6), (3,3), (5,2), (5,6), (6,4)
+\end{equation}
+sind disjukt und keines enthält das zentrale Quadrat. Daher bedeckt jedes ein markiertes Quadrat und
+insbesondere können die Quadrate $(2,2), (2,4)$ und $(3,5)$ nicht markiert sein. Ersetzt man in (2) das Kreuz
+$(3,3)$ durch $(2,3)$, sieht man analog, dass die Quadrate $(3,2)$ und $(3,4)$ nicht markiert sein können. Aus
+Symmetriegründen folgt nun wie vorher, dass kein einziges Quadrat ausser $(4,4)$ markiert sein kann,
+Widerspruch.\\
+
+\bigskip
+
+\item[\textbf{5.}] Bestimme alle Funktionen $f:\BR \rightarrow \BR$, für die gilt:
+\begin{enumerate}
+\item $f(x-1-f(x))=f(x)-1-x$ für alle $x \in \mathbb{R}$,
+\item Die Menge $\{f(x)/x\; |\; x \in \BR,\; x\neq 0\}$ ist endlich.\\
+\end{enumerate}
+
+\textbf{Lösung}
+
+Wir zeigen, dass $f(x)=x$ die einzige Lösung ist. Setze $g(x)=f(x)-x$. Substituiert man $f(x)=g(x)+x$ in (a),
+folgt für $g$ die einfachere Gleichung
+\begin{equation}
+g(-1-g(x))=2g(x).
+\end{equation}
+Wegen $f(x)/x=(g(x)+x)/x=g(x)/x+1$ und (b) folgt, dass auch die Menge $\{g(x)/x\; |\; x \in \BR,\; x\neq 0\}$
+endlich ist. Setze $A=\{x \in \BR; |\; x \neq 0, \; g(x)\neq -1\}$. Für $x \in A$ können wir (3) durch $-1-g(x)$
+dividieren und erhalten
+\begin{equation}
+\frac{g(-1-g(x))}{-1-g(x)}= \frac{-2g(x)}{g(x)+1}=h(g(x)),
+\end{equation}
+wobei $h(x)=-2x/(x+1)$. Die linke Seite dieser Gleichung nimmt nur endlich viele Werte an, also auch die rechte.
+Nun ist die Funktion $h: \BR \setminus \{-1\}\rightarrow \BR \setminus \{-2\}$ bijektiv mit Umkehrfunktion
+$h^{-1}(x)=-x/(x+2)$. Daher nimmt auch $g(x)$ für $x \in A$ nur endlich viele Werte an. Nach Definition von $A$
+bedeutet das aber, dass $g(x)$ überhaupt nur endlich viele Werte annehmen kann. Daraus folgt jetzt unmittelbar
+$g(x)=0 \; \forall x \in \BR$ und wir sind fertig. Nehme an, dies sei nicht der Fall und sei $a=g(c)\neq 0$ der
+betragsmässig grösste Wert, den $g$ annimmt. Setze $x=c$ in (3), dann folgt $g(-1-a)=2a$, im Widerspruch zur
+Maximalität von $a$.\\
+
+\bigskip
+
+\item[\textbf{6.}]  Sei $x_1 , x_2 , x_3 , \ldots$ eine Folge ganzer Zahlen mit den Eigenschaften
+\begin{itemize}
+\item $1 = x_1 < x_2 < x_3 < \ldots,$
+\item $x_{n+1}\leq 2n \quad$ für $\quad n \geq 1.$
+\end{itemize}
+Zeige, dass es zu jeder positiven ganzen Zahl $k$ zwei Indizes $i$ und $j$ gibt mit $k = x_{i} - x_{j}$.\\
+
+\textbf{Lösung}
+
+Sei $k$ beliebig. Betrachte die $k$ Schubfächer
+\[\{1,k+1\},\;\{2,k+2\},\; \ldots, \; \{k,2k\}.\]
+Nach Voraussetzung liegen die $k+1$ Folgeglieder $x_1,x_2,\ldots,x_{k+1}$ alle in einem der Schubfächer und
+damit liegen zwei im gleichen. Diese beiden Folgeglieder können nicht gleich sein, also müssen sie Differenz
+$k$ haben.\\
+
+\bigskip
+
+\item[\textbf{7.}] Sei $ABC$ ein gleichseitiges Dreieck und $P$ ein Punkt in dessen Innern. $X, Y$ und $Z$
+seien die Fusspunkte der Lote von $P$ auf die Seiten $BC, CA$ und $AB$. Zeige dass die Summe der Flächen der
+Dreiecke $BXP$, $CYP$ und $AZP$ nicht von $P$ abhängt.\\
+
+\textbf{Lösung}
+
+Schraffiere die Dreiecke $BXP$, $CYP$ und $AZP$. Zeichne die drei gleichseitigen Dreiecke, die $P$ als Ecke
+haben und deren gegenüberliegende Seite auf einer der Seiten von $ABC$ liegt. Durch diese drei gleichseitigen
+Dreiecke wird $ABC$ in drei Dreiecke und drei Parallelogramme zerlegt, die offenbar alle zur Hälfte schraffiert
+sind. Damit ist die Summe der schraffierten Dreiecke genau die Hälfte der Fläche von $ABC$.\\
+
+\bigskip
+
+\item[\textbf{8.}] In einer Gruppe von $n$ Leuten veranstaltet jedes Wochenende jemand eine Party,
+an der er alle seine Bekannten einander gegenseitig vorstellt. Nachdem jeder der $n$ Leute einmal eine Party
+gemacht hat, gibt es immer noch zwei Personen unter ihnen, die sich nicht kennen. Zeige, dass diese zwei sich
+auch in Zukunft nie an einer dieser Partys kennen lernen werden. (Zwei Leute kennen sich immer gegenseitig oder
+gegenseitig nicht)\\
+
+\textbf{Lösung}
+
+Betrachte einen Graph, dessen Ecken die $n$ Leute sind, und verbinde zwei Leute mit einer Kante, wenn sie sich
+kennen. Immer wenn jemand eine Party macht, verändert sich dieser Graph. Nehme an $A$ macht eine Party, dann
+werden alle direkt mit $A$ verbundenen Ecken gegenseitig verbunden.\\
+Wir zeigen nun, dass alle Zusammenhangskomponenten (ZK) des Graphen vollständig sind, nachdem jeder einmal eine
+Party gemacht hat. Seien $B$ und $C$ zwei Punkte in derselben ZK, dann gibt es einen kürzesten Weg $B P_1 P_2
+\ldots P_k C$ von $B$ nach $C$. Jedesmal wenn eine der Personen $P_i$ eine Party macht, stellt er die beiden
+benachbarten Leute auf dem Weg einander vor, der kürzeste Weg verkürzt sich dabei um 1. Da jede Person auf dem
+Weg einmal eine Party macht, müssen $B$ und $C$ am Schluss mit einer Kante verbunden sein.\\
+Als nächstes Zeigen wir, dass zwei Punkte in verschiedenen ZK nie verbunden werden. Nehme an, $B$ und $C$ liegen
+anfangs in verschiedenen ZK und sind nach der $k$-ten Party das erste Mal in der gleichen. Wenn $P$ diese $k$-te
+Party veranstaltet, dann muss $P$ vorher mit $B$ und $C$ verbunden sein. Dann gibt es aber schon vor der $k$-ten
+Party einen Weg von $B$ nach $C$, diese Punkte liegen also bereits jetzt in derselben ZK, im Widerspruch zur
+minimalen Wahl von $k$.\\
+Wenn sich nun zwei Leute nicht kennen, nachdem jeder eine Party gemacht hat, dann befanden sie sich am Anfang in
+verschiedenen ZK, und dies bleibt auch immer so. Diese Leute werden sich also auch in Zukunft nie kennen
+lernen.\\
+
+\bigskip
+
+\item[\textbf{9.}] Beweise für jede positive reelle Zahl $a$ und jedes ganze $n\geq 1$ die Ungleichung
+\[a^{n} + \frac{1}{a^{n}} - 2 \geq n^{2}\left(a + \frac{1}{a} - 2\right),\]
+und bestimme alle Fälle, in denen das Gleichheitszeichen gilt.\\
+
+\textbf{Lösung}
+
+Multiplikation mit $a^n$ und Anwenden der Binomischen Formeln ergibt die äquivalente Ungleichung
+\[(a^n-1)^2 \geq n^2 a^{n-1}(a-1)^2. \]
+Nach AM-GM gilt nun aber
+\begin{eqnarray*}
+(a^n-1)^2 &=& (a-1)^2(1+a+a^2+\ldots+a^{n-1})^2\\
+&\geq& (a-1)^2\left(n\cdot \sqrt[n]{1\cdot a \cdot a^2 \cdots a^{n-1}}\right)^2\\
+&=& n^2(a-1)^2 \left(\sqrt[n]{a^{(n-1)n /2}}\right)^2\\
+&=& n^2(a-1)^2 a^{n-1}.
+\end{eqnarray*}
+Gleichheit gilt genau dann, wenn $n=1$ oder wenn $a=1$.\\
+
+\bigskip
+
+\item[\textbf{10.}] $m$ sei eine beliebige natürliche Zahl. Bestimme in Abhängigkeit von $m$ die
+kleinste natürliche Zahl $k$, für die gilt: Ist $\{m, m+1, ... , k\} = A \cup B$ eine beliebige Zerlegung in
+zwei Mengen $A$ und $B$, dann enth\"{a}lt $A$ oder $B$ drei Elemente $a, b, c$ (die nicht notwendigerweise
+verschieden sein müssen) mit $a^{b} = c$.\\
+
+\textbf{Lösung}
+
+Antwort: $k=m^{m^{m+2}}$\\
+Wir zeigen zuerst, dass man $\{m, m+1, ... , m^{m^{m+2}}-1\}$ in zwei Mengen zerlegen kann, sodass es keine drei
+Elemente $a,b,c$ gibt, wie in der Aufgabe gefordert. Setze
+\begin{eqnarray*}
+A &=& A_1 \cup A_2=\{m,\ldots,m^m-1\} \cup \{m^{m^{m+1}},\ldots,  m^{m^{m+2}}-1\},\\
+B &=& \{m^m, \ldots, m^{m^{m+1}}-1\}.
+\end{eqnarray*}
+Wir betrachten jetzt verschiedene Fälle:
+\begin{enumerate}
+\item[1.] $a,b\in A_1$. Dann ist $a^b \geq m^m$ und $a^b < \left(m^m\right)^{m^m}=m^{m^{m+1}}$, also liegt $a^b$ in
+$B$ und daher nicht in $A$.
+\item[2.] $a \in A_2$, $b \in A_1$. Es gilt $a^b \geq \left(m^{m^{m+1}}\right)^{m}=m^{m^{m+2}}$, und $a^b$ liegt
+nicht in $A$.
+\item[3.] $a\in A$, $b\in A_2$. In diesem Fall gilt $a^b \geq m^{(m^{m^{m+1}})} \geq  m^{m^{m+2}}$, also liegt
+$a^b$ nicht in $A$.
+\item[4.] $a,b\in B$. Dann gilt $a^b \geq \left(m^m\right)^{m^m}= m^{m^{m+1}}$ und daher liegt $a^b$ nicht in
+$B$.
+\end{enumerate}
+Nun zeigen wir, dass es für $k\geq m^{m^{m+2}}$ stets drei Elemente $a,b,c$ in $A$ oder $B$ gibt, sodass
+$a^b=c$. Nehme an, dies sei falsch und es existiert eine Zerlegung $\{m, m+1, ... , m^{m^{m+2}}\} = A \cup B$,
+sodass weder $A$ noch $B$ drei Elemente mit den geforderten Eigenschaften enthält. Wir können oBdA annehmen,
+dass $m \in A$. Dann muss $m^m$ in $B$ liegen und damit $\left(m^m\right)^{m^m}=m^{m^{m+1}}$ in $A$. Dann liegt
+$\left(m^{m^{m+1}}\right)^m=m^{m^{m+2}}$ aber wiederum in $B$.
+\begin{enumerate}
+\item[1.] Liegt $m^{m+1}$ in $A$, dann gilt $a^b=c$ mit $a=m$, $b=m^{m+1}$ und $c=m^{m^{m+1}}$, im Widerspruch
+zu unserer Annahme.
+\item[2.] Liegt $m^{m+1}$ in $B$, dann gilt $a^b=c$ mit $a=m^m$, $b=m^{m+1}$ und $c=m^{m^{m+2}}$, dies ist wieder
+ein Widerspruch zur Annahme.
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,53 @@
+Soit $ABC$ un triangle aigu. Soient $M_A$, $M_B$ et $M_C$ les milieux respectifs des côtés $BC$, $CA$ et $AB$. Soient $M_A',M_B'$ et $M_C'$ les milieux respectifs des arcs mineurs $BC$, $CA$ et $AB$ sur le cercle circonscrit au triangle $ABC$. Soit $P_A$ l'intersection de la droite $M_BM_C$ et de la perpendiculaire à $M_B'M_C'$ par $A$. Les points $P_B$ et $P_C$ sont définis de manière analogue. Montrer que les droites $M_AP_A$, $M_BP_B$ et $M_CP_C$ se coupent en un point.
+
+\textbf{Solution 1 :} (David)
+On montre d'abord que $AP_A$ est la bissectrice de l'angle $\angle BCA$. Pour cela, on peut d'abord remarquer que $M_B'M_B$ et $M_C'M_C$ sont les médiatrices de $AC$ et $AB$, respectivement, s'intersectant ainsi en $O$ le centre du cercle circonscrit. Mais $\triangle OM_B'M_C'$ étant isocèle, on a alors 
+\begin{equation}
+\angle M_CM_C'M_B'=\angle M_BM_B'M_C'
+\end{equation}
+Introduisons maintenant $X=AP_A\cap M_C' M_B'$. On remarque alors que $\angle M_C'M_CA=90^{\circ} =M_C'XA$, et donc $AXM_cM_C'$ est un quadrilatère inscrit, en particulier $\angle M_CAX=\angle M_CM_C'X$, et symétriquement $\angle M_BAX=\angle M_BM_B'X$. On a alors
+\begin{center}
+$\angle BAP_A=\angle M_CAX=\angle M_CM_C'M_B'\stackrel{(1)}{=}\angle M_BM_B'M_C'=\angle M_BAX=\angle CAP_A$
+\end{center}
+prouvant bien que $AP_A$ est la bissectrice de $\angle BAC$.
+ Par symétrie, on obtient que les points $P_A$, $P_B$ et $P_C$ se trouvent sur les bissectrices des angles $\angle BAC$, $\angle CBA$ et $\angle ACB$, respectivement. On veut maintenant conclure en utilisant Céva sur le triangle $\triangle M_AM_BM_C$. On peut alors invoquer un résultat sur la bissectrice, qu'on peut démontrer avec le lemme magique par exemple :
+\begin{center}
+$\dfrac{M_CP_A}{P_AM_B}=\dfrac{M_CA}{AM_B}$
+\end{center}
+et on conclut alors par Céva sur le triangle $\triangle M_AM_BM_C$, puisqu'on a symétriquement
+\begin{center}
+$\dfrac{M_CP_A}{P_AM_B}\cdot\dfrac{M_BP_C}{P_CM_A}\cdot\dfrac{M_AP_B}{P_BM_C}=\dfrac{M_CA}{AM_B}\cdot\dfrac{M_BC}{CM_A}\cdot\dfrac{M_AB}{BM_C}=1$
+\end{center}
+
+\textbf{Solution 2 :} (Marco):
+Voici une autre façon de démontrer que $AP_A$ est la bissectrice de $\angle BAC$. Pour cela, introduisons $I$ le centre du cercle inscrit, et il nous suffira de montrer que $M_B'M_C'$ est la médiatrice de $AI$. Mais c'est une conséquence directe du lemme important suivant :
+
+\textbf{Lemme 1}
+\emph{Soit $\triangle ABC$ un triangle quelconque et $I$ le centre de son cercle inscrit. Soit de plus $X$ le milieu de l'arc $BC$ ne contenant pas $A$, sur le cercle circonscrit à $\triangle ABC$. Alors,
+\begin{center}
+$XB=XI=XC$
+\end{center}
+}
+\begin{proof}
+Par WUM, $A$, $I$ et $X$ sont alignés. On a alors 
+\begin{equation*}
+\angle XBI=\angle XBC+\angle CBI=\angle XAC+\angle ABI=\angle IAB+\angle BAI=\angle XIB
+\end{equation*}
+Le triangle $\triangle XBI$ est alors isocèle en $X$, prouvant le lemme.
+\end{proof}
+On obtient alors $M_C'A=M_C'I$ et $M_B'A=M_B'I$, montrant que $AI\perp M_C'M_B'$ et ainsi que $AP_A$ est la bissectrice de $\angle BAC$. On conclut comme dans la solution 1.
+
+\newpage
+\textbf{Remarque} Cet exercice est un cas particulier du théorème du "Cevian Nest" cf. [Euclidean Geometry in Mathematical Olympiads, Evan Chen, p. 57]
+\newline
+\newline
+\textbf{Marking scheme}
+
+\begin{itemize}
+    \item 1P: Remarquer que $AP_A$ est la bissectrice de $\angle BAC$
+    \item 2P: Prouver que $AP_A$ est la bissectrice de $\angle BAC$
+    \item 2P: Prouver un rapport entre des longueurs des triangles $\triangle M_AM_BM_C$ et $\triangle ABC$ comme $\frac{M_CP_A}{P_AM_B}=\frac{M_CA}{AM_B}$ ou $\frac{M_CP_A}{P_AM_B}=\frac{BP_A'}{P_A'C}$ (avec $P_A'=AP_A\cap BC$)
+    \item 1P: Reformuler la conclusion avec le théorème de Céva
+    \item 1P: Conclure
+\end{itemize}
+

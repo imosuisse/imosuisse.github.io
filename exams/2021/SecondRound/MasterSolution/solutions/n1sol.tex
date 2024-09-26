@@ -1,0 +1,160 @@
+\fr{Montrer que, pour tout nombre entier $n\geq 3$, il existe des nombres entiers strictement positifs $a_1<a_2<\ldots<a_n$ tels que
+\[ a_k \div (a_1+a_2+\ldots+a_n) \]
+pout tout $k=1,2,\ldots,n$.
+
+\textbf{Solution 1:} La solution se fait par induction.
+\begin{enumerate}
+    \item Cas de base $n=3$: on observe que $1< 2< 3$ est une solution.
+    \item Pas d'induction: soit $n \geq 4$ et supposons que le résultat soit vrai pour tout $m \leq n-1$. Soit $a_1<a_2<\ldots<a_{n-1}$ tels que $a_i \div \sum_{j=1}^n a_j$ pour tout $1 \leq i \leq n-1$. Alors, 
+    \[
+    a_1<a_2<\ldots<a_{n-1}<a_n:=\sum_{j=1}^{n-1}a_j
+    \]
+    vérifie aussi cette propriété. En effet, on observe tout d'abord que, comme $a_i>0$ pour tout $1 \leq i \leq n-1$, alors $a_n>a_{n-1}$. En outre, 
+    \[
+    \sum_{k=1}^n a_k=a_n+\sum_{j=1}^{n-1}a_j=2 \sum_{j=1}^{n-1}a_j.
+    \]
+    Par hypothèse de récurrence, $a_i \div 2\sum_{j=1}^{n-1}a_j=\sum_{k=1}^{n}a_k$ pour tout $1 \leq i \leq n-1$. De plus, $a_n=\sum_{j=1}^{n-1}a_j \div 2\sum_{j=1}^{n-1}a_j=\sum_{k=1}^n a_k$.
+\end{enumerate}
+
+%\textbf{Solution 1:} We will proceed by induction.
+%\\Base case: $n=3$, 1, 2, 3 is a solution.
+%\\Induction: Let $n \geq 4$ et assume that the statement holds for every $m \leq n-1$. Let $a_1<a_2<\ldots<a_{n-1}$ be such that $a_i \div \sum_{j=1}^n a_j \forall 1 \leq i \leq n-1$. Then $a_1,a_2,\ldots,a_{n-1},\sum_{j=1}^{n-1}a_j$ satisfy this property as well. Indeed $\sum_{k=1}^n a_k=\sum_{j=1}^{n-1}a_j+\sum_{k=1}^{n-1}a_k=2 \sum_{j=1}^{n-1}a_j$. By induction hypothesis $a_i \div 2\sum_{j=1}^{n-1}a_j=\sum_{k=1}^{n}a_k \forall 1 \leq i \leq n-1$. And $a_n=\sum_{j=1}^{n-1}a_j \div 2\sum_{j=1}^{n-1}a_j=\sum_{k=1}^n a_k$. Moreover since $a_i>0 \forall 1 \leq i \leq n-1, a_n>a_{n-1}$
+
+\textbf{Solution 2:} On souhaite utiliser $\sum_{i=0}^n 2^i=2^{n+1}-1$. Observez que l'ensemble $1\leq 1< 2<\ldots<2^n$ vérifie la condition de divisibilité
+\[
+2^j \div (1+1+2+\ldots)=2^{n+1},\quad  \forall j=0,\ldots,n.
+\]
+Mais les nombres ne sont pas tous distincts. Pour construire une suite qui fonctionne, au lieu de considérer les puissances de 2, on considère les puissances de 2 multipliées par 3. La somme devient $\sum_{i=0}^n 3 \cdot 2^i=3 \sum_{i=0}^n 2^i=3 \cdot 2^{n+1}-3$. En ajoutant les nombres 1 et 2 aux puissances de 2 multipliées par 3, on trouve la solution: $1< 2< 3< 3 \cdot 2<\ldots< 3 \cdot 2^{n-3}$. En effet, la somme totale est $3\cdot 2^{n-2}$ et chaque nombre divise bien $3\cdot 2^{n-2}$.
+
+%\textbf{Solution 2:} Since $\sum_{i=0}^n 2^i=2^{n+1}$, the set $1, 1, 2,\ldots,2^n$ satisfy $2^j \div \sum_{i=1}^n 2^i \forall 0 \leq j \leq n$. But the integers are not distinct. Multiplying the powers of 2 by 3, $\sum_{i=0}^n 3 \cdots 2^i=3 \sum_{i=0}^n 2^i=3 \cdots 2^{n+1}-3$. Adding 1 and 2 to this set gives a solution: $1, 2, 3, 3 \cdots 2,\ldots, 3 \cdots 2^{n-3}$. Indeed, each of the $3\cdots2^i$ divides $1+2+3\sum_{j=0}^{n-3} 2^j=2^{n-2} \forall 1 \leq i\leq n$.
+
+\textbf{Solution 3: Reformulation.}\\ Supposons que nous avaons un ensemble $a_1, a_2 \dots a_n$ vérifiant la condition du problème, et soient $b_i = \frac{1}{a_i}(\sum_{k=1}^n a_k)$. Nous avons alors que $b_1, b_2 \dots b_n$ sont des entiers distincts satisfaisant
+\[
+\frac{1}{b_1}+\frac{1}{b_2}+\dots+\frac{1}{b_n} = 1
+\]
+et que construire un ensemble de $b_i$ avec cette propriété est équivalent au problème originel. Il y a plusieurs façons de le faire: une induction fonctionnerait par exemple en prenant $\{2, 3, 6\}$ comme ensemble de base et pour passer de $n$ à $n+1$, on remplace $b_n$ par $b_n+1$ et $b_n^2+b_n$ (en utilisant que $\frac{1}{x}-\frac{1}{x+1} = \frac{1}{x(x+1)}$). \\
+\emph{Cette induction donne en fait une construction complètement différente des deux premières; le cas de base est le même, mais à chaque fois qu'on augmente $n$ de $1$, on multiplie chaque élément de l'ensemble par $1 + \sum_{k=1}^n a_k$ et on remplace le plus petit élément, qui était $1$ et qui est devenu $1 + \sum_{k=1}^n a_k$, par $1$ et $\sum_{k=1}^n a_k$. Pour aller à $n=4$, par exemple, on multiplie l'ensemble originel $\{1, 2, 3\}$ par $7$ pour obtenir $\{7, 14, 21\}$, et on remplace finalement $7$ par $6$ et $1$.}
+
+\bigskip
+
+\textbf{Marking Scheme}
+
+\textbf{Solution 1}
+\begin{itemize}
+\item 1P: Avoir l'idée de l'induction.
+\item 1P: Calculer le cas de base.
+\item 2P: Avoir l'idée du pas d'induction (ajouter la somme des éléments à l'ensemble).
+\item 2P: Montrer que le nouvel ensemble satisfait la condition.
+\item 1P: Terminer la preuve.
+\end{itemize}
+\textbf{Solution 2}
+\begin{itemize}
+\item 4P: Trouver une construction.
+\item 2P: Prouver que la condition est alors satisfaite.
+\item 1P: Terminer la preuve.
+\end{itemize}
+}
+
+\en{
+\textbf{Solution 1: Induction} 
+\begin{enumerate}
+    \item Base case $n=3$: we observe that $1< 2< 3$ is a solution.
+    \item Inductive step: Let $n \geq 4$ and suppose that the hypothesis is true for $n-1$. Let $a_1<a_2<\ldots<a_{n-1}$ such that $a_i \div \sum_{j=1}^n a_j$ for all $1 \leq i \leq n-1$ be the construction for that case. Then, 
+    \[
+    a_1<a_2<\ldots<a_{n-1}<a_n:=\sum_{j=1}^{n-1}a_j
+    \]
+    also has the desired properties. Firstly, since $a_i>0$ for all $1 \leq i \leq n-1$, such that $a_n>a_{n-1}$. Furthermore, 
+    \[
+    \sum_{k=1}^n a_k=a_n+\sum_{j=1}^{n-1}a_j=2 \sum_{j=1}^{n-1}a_j.
+    \]
+    By our inductive hypothesis, $a_i \div 2\sum_{j=1}^{n-1}a_j=\sum_{k=1}^{n}a_k$ for all $1 \leq i \leq n-1$. Additionally, $a_n=\sum_{j=1}^{n-1}a_j \div 2\sum_{j=1}^{n-1}a_j=\sum_{k=1}^n a_k$.
+\end{enumerate}
+
+%\textbf{Solution 1:} We will proceed by induction.
+%\\Base case: $n=3$, 1, 2, 3 is a solution.
+%\\Induction: Let $n \geq 4$ et assume that the statement holds for every $m \leq n-1$. Let $a_1<a_2<\ldots<a_{n-1}$ be such that $a_i \div \sum_{j=1}^n a_j \forall 1 \leq i \leq n-1$. Then $a_1,a_2,\ldots,a_{n-1},\sum_{j=1}^{n-1}a_j$ satisfy this property as well. Indeed $\sum_{k=1}^n a_k=\sum_{j=1}^{n-1}a_j+\sum_{k=1}^{n-1}a_k=2 \sum_{j=1}^{n-1}a_j$. By induction hypothesis $a_i \div 2\sum_{j=1}^{n-1}a_j=\sum_{k=1}^{n}a_k \forall 1 \leq i \leq n-1$. And $a_n=\sum_{j=1}^{n-1}a_j \div 2\sum_{j=1}^{n-1}a_j=\sum_{k=1}^n a_k$. Moreover since $a_i>0 \forall 1 \leq i \leq n-1, a_n>a_{n-1}$
+
+\textbf{Solution 2: Constructive.}\\ We would like to use $\sum_{i=0}^n 2^i=2^{n+1}-1$. Observe that the set $1\leq 1< 2<\ldots<2^n$ verifies the divisibility condition
+\[
+2^j \div (1+1+2+\ldots)=2^{n+1},\quad  \forall j=0,\ldots,n.
+\]
+However, the numbers are not all distinct. To construct the set we desire, let us therefore consider what happens when we take the powers of 2 multiplied by 3 instead. The total sum is $\sum_{i=0}^n 3 \cdot 2^i=3 \sum_{i=0}^n 2^i=3 \cdot 2^{n+1}-3$. Now if we add on the numbers 1 and 2, we have the following set, which gives us everything we want: $1< 2< 3< 3 \cdot 2<\ldots< 3 \cdot 2^{n-3}$. The total sum is $3\cdot 2^{n-2}$ and every number divides $3\cdot 2^{n-2}$.
+
+\textbf{Solution 3: Reformulation.}\\ Suppose we have a set $a_1, a_2 \dots a_n$ verifying the condition, and let $b_i = \frac{1}{a_i}(\sum_{k=1}^n a_k)$. It follows that $b_1, b_2 \dots b_n$ are distinct integers satisfying 
+\[
+\frac{1}{b_1}+\frac{1}{b_2}+\dots+\frac{1}{b_n} = 1
+\]
+and that constructing a set of $b_i$ that do this is strictly equivalent to solving the original problem. There are many ways of constructing such a set: one method is induction; take as a base case $\{2, 3, 6\}$ and when passing from $n$ to $n+1$, replace $b_n$ with $b_n+1$ and $b_n^2+b_n$ (simply exploiting the fact that $\frac{1}{x}-\frac{1}{x+1} = \frac{1}{x(x+1)}$). \\
+\emph{This induction actually provides a completely different set of $a_i$ from the one in the first two solutions; the base case is the same but now every time you increase $n$ by $1$, you multiply every element of your previous set by $1 + \sum_{k=1}^n a_k$ and then replace the smallest element, which was previously $1$ and is now $1 + \sum_{k=1}^n a_k$, with 1 and $\sum_{k=1}^n a_k$. When going to $n = 4$, for example, you multiply the original set $\{1, 2, 3\}$ by $7$ to obtain $\{7, 14, 21\}$, and then replace the $7$ with a $6$ and a $1$.}
+
+\bigskip
+\textbf{Marking Scheme}
+
+\textbf{Solution 1}
+\begin{itemize}
+\item 1P: Have the idea of induction.
+\item 1P: Calculate the base case.
+\item 2P: Have the idea of the induction step (Add the sum to the previous set).
+\item 2P: Prove that the  new set satisfies the condition.
+\item 1P: Finish the proof.
+\end{itemize}
+\textbf{Solution 2}
+\begin{itemize}
+\item 4P: Find a construction.
+\item 2P: Prove that the condition is satisfied.
+\item 1P: Finish the proof.
+\end{itemize}
+}
+
+\de{Beweise, dass es für jede natürliche Zahl $n\geq 3$ natürliche Zahlen $a_1<a_2<\ldots<a_n$ gibt, sodass
+\[ a_k \div (a_1+a_2+\ldots+a_n) \]
+für jedes $k=1,2,\ldots,n$ gilt.
+
+\textbf{Lösung 1:} Es wird mit Induktion bewiesen.
+\begin{enumerate}
+    \item Induktionsanfang, $n=3$:\\
+    Man bemerke, dass $1< 2< 3$ die gegebene Bedingung erfüllt. Somit ist die Aussage wahr für $n=3$.
+    \item Induktionsschritt:\\
+    Nach der Induktionsannahme ist die Aussage wahr für alle $m \le n-1$. Seien also $a_1<a_2<\dots < a_{n-1}$ positiv, sodass $a_k \div \sum_{i=1}^{n} a_i$ für alle $1\le k\le n$ gilt.Wähle dazu $a_n = \sum_{j=1}^{n-1} a_j$.\\
+    Da $a_i$ für $1\le i < n-1$ strikt grösser als $0$ ist, gilt $a_n > a_{n-1}$ und somit ist
+    \[a_1 < a_2 < \dots < a_{n-1} < a_n = \sum_{j=1}^{n-1} a_j\]
+    Man bemerke weiter, dass 
+    \[\sum_{i=1}^{n} a_i = a_n + \sum_{i=1}^{n-1} a_i = 2\sum_{i=1}^{n-1} a_i\]
+    Nach der Induktionsannahme gilt nun $a_k \div 2\sum_{i=1}^{n} a_i = \sum_{i=1}^{n}$ für alle $1\le k \le n-1$. Zusätzlich gilt nun aber auch $a_n = \sum_{i=1}^{n-1} a_i\div 2\sum_{i=1}^{n-1} a_i = \sum_{i=1}^{n} a_i$.\\
+    Es erfüllen also die gewählten $a_1<\dots < a_n$ die Bedingung und der Induktionsschritt ist beendet.
+   
+\end{enumerate}
+
+
+\textbf{Lösung 2:} Da, $\sum_{i=0}^n 2^{i} = 2^{n+1}-1$ ist, würden $1\le 1<2\dots<2^n$ die Teilbarkeitsbedingung erfüllen.
+\[2^j \div (1+1+2+\dots + 2^n) = 2^{n+1}, \; \forall 0\le j\le n.\]
+Nun sind die Zahlen jedoch nicht paarweise verschieden. Wir wollen also eine ähnliche Menge mit paarweise verschiedenen Zahlen konstruieren. Man multipliziert dazu alle Zweierpotenzen mit $3$ und fügt zusätzlich noch $1$ und $2$ hinzu. Man findet also hierzu die Zahlen $a_1 = 1<2<3<2\cdot 3 < \cdots < 3\cdot2^{n-3} = a_n$. Und in der Tat erfüllen diese Zahlen auch die Bedingung, da $\sum_{i=0}^{n} a_i = 3\cdot 2^{n-2}$ durch alle $a_i$ Teilbar ist.
+
+\textbf{Lösung 3 (Reformulation):} Nehme wir an, dass die Menge $a_1, a_2, \dots, a_n$ die Bedingung erfüllt und seien $b_i = \frac{1}{a_i}\left(\sum_{k=1}^n\right)$. Es folgt, dass $b_i$ verschiedene positive ganze Zahlen sind, für welche gilt:
+\[
+\frac{1}{b_1}+\frac{1}{b_2}+\dots+\frac{1}{b_n} = 1
+\]
+Es genügt nun  eine Konstruktion für solche $b_i$ zu finden. Es gibt mehrere Möglichkeiten eine soche Menge  zu konstruieren: eine davon wäre mit Induktion.\\
+Wir nehmen als Induktionsanfang die Menge ${2,3,6}$ und wenn wir von $n$ nach $n+1$ gehen ersetzen wir einfach $b'_n$ mit $b_n+1$ und $b_n^2+b'_n$ (wobei wir einfach $\frac{1}{x}-\frac{1}{x+1} = \frac{1}{x(x+1)}$ benutzen). \\
+\emph{Diese Induktion führt tatsächlich zu einer komplett anderen Menge $a_i$  als in den obigen zwei Lösungen; die Anfangsmenge ist die Selbe, doch jedesmal wenn n um $1$ erhöht wird, multiplizieren wir alle vorherigen Elemente mit  $1+ \sum_{k=1}^{n} a_k$ und ersetzen das jetzt kleinste Element $1+ \sum_{k=1}^{n} a_k$ mit $1$ und  $\sum_{k=1}^n$. Zum Beispiel von n=3 nach n=4  multiplizieren wir die Ursprünglich Menge ${1,2,3}$ mit 7 um die neue Menge ${7,14,21}$ zu erhalten. Zusatsätzlich wird dann noch $7$ mit $1$ und $6$ ersetzt.}
+
+
+\textbf{Marking Scheme}
+
+\textbf{Lösung 1}
+\begin{itemize}
+\item 1P: Idee für Induktion zu benutzen.
+\item 1P: Induktionsanfang.
+\item 2P: Idee für den Induktionsschritt.
+\item 2P: Zeigen, dass die neu konstruierte Menge die Bedingung erfüllt.
+\item 1P: Den Beweis vollenden.
+\end{itemize}
+\textbf{Lösung 2}
+\begin{itemize}
+\item 4P: Konstruktion finden.
+\item 2P: Zeigen, dass die Bedinguneg für die konstruierte Menge erfüllt sind.
+\item 1P: Den Beweis vollenden.
+\end{itemize}
+}
+
+

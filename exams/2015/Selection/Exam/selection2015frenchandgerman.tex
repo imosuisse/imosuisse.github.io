@@ -1,0 +1,286 @@
+%& -job-name=imoselektion_2015_de-3
+% ^^^^^^^ change the last bit to e.g. de-2 for second day, german ^^^^^^^^ 
+
+\documentclass[language=german,style=exam]{smo} %language is irrelevant in this case
+\usepackage{xstring}
+\usepackage{tikz}
+
+\StrRight{\jobname}{4}[\mystring]
+\IfSubStr*{\mystring}{fr}{\germanfalse \frenchtrue \italianfalse}{}
+\IfSubStr*{\mystring}{de}{\germantrue \frenchfalse \italianfalse}{}
+\IfSubStr*{\mystring}{it}{\germanfalse \frenchfalse \italiantrue}{}
+
+\StrRight{\jobname}{1}[\day]
+
+\examtime{
+\ifgerman 4.5 Stunden \fi
+\iffrench 4.5 heures\fi
+\ifitalian ??? \fi
+}
+\place{
+Zürich
+}
+\examdate{
+\ifgerman
+\IfStrEq*{\day}{1}{2. Mai 2015}{}
+\IfStrEq*{\day}{2}{3. Mai 2015}{}
+\IfStrEq*{\day}{3}{16. Mai 2015}{}
+\IfStrEq*{\day}{4}{17. Mai 2015}{}
+\fi
+\iffrench 
+\IfStrEq*{\day}{1}{2 Mai 2015}{}
+\IfStrEq*{\day}{2}{3 Mai 2015}{}
+\IfStrEq*{\day}{3}{16 Mai 2015}{}
+\IfStrEq*{\day}{4}{17 Mai 2015}{}
+\fi
+\ifitalian ??? \fi
+}
+
+\title{
+\ifgerman IMO-Selektion - \day. Prüfung\fi
+\iffrench Sélection IMO - \day\IfStrEq*{\day}{1}{er}{ème} examen \fi 
+\ifitalian \fi
+}
+
+\begin{document}
+
+\begin{enumerate}
+
+\IfStrEq*{\day}{1}{ %%%%% Day 1 %%%%%
+
+\item[\textbf{1.}] %% Exercise 1 %%
+\ifgerman %german
+Sei $n$ eine natürliche Zahl. Was ist die maximale Anzahl $1\times 1$ Quadrate, die man in einem $n\times n$ Quadrat schwarz färben kann, sodass in jedem $2\times 2$ Quadrat höchstens 2 kleine Quadrate schwarz gefärbt sind?
+\fi
+\iffrench %french
+Quel est le nombre maximal de cases $1\times 1$ que l'on peut colorier en noir dans un échiquier $n\times n$ de telle sorte que tout carré $2\times 2$ contienne au maximum 2 cases noires?
+\fi
+\ifitalian %italian
+\fi
+
+\bigskip
+\bigskip
+
+\item[\textbf{2.}] %% Exercise 2 %%
+\ifgerman %german
+Seien $a,b,c \in \R$ mit $a,b,c\geq 1$. Zeige, dass gilt:
+\[
+\min \left(\frac{10a^2-5a+1}{b^2-5b+10},\, \frac{10b^2-5b+1}{c^2-5c+10},\, \frac{10c^2-5c+1}{a^2-5a+10}\right )\leq abc.
+\]
+\fi
+\iffrench %french
+Soient $a,b,c \in \R$ avec $a,b,c\geq 1$. Montrer que
+\[
+\min \left(\frac{10a^2-5a+1}{b^2-5b+10},\, \frac{10b^2-5b+1}{c^2-5c+10},\, \frac{10c^2-5c+1}{a^2-5a+10}\right )\leq abc.
+\]
+\fi
+\ifitalian %italian
+\fi
+
+\bigskip
+\bigskip
+
+\item[\textbf{3.}] %% Exercise 3 %%
+\ifgerman %german
+Sei $ABC$ ein Dreieck mit $AB > AC$ und sei $M$ der Mittelpunkt der Seite $AC$. Weiter sei $D$ ein Punkt auf der Seite $AB$, sodass $DB = DC$ gilt. Die Parallele zu $BC$ durch $D$ und die Gerade $BM$ schneiden sich im Punkt $K$. Zeige, dass $\angle KCD = \angle DAC$ gilt.
+\fi
+\iffrench %french
+Soit $ABC$ un triangle avec $AB > AC$. Soit $D$ un point sur $AB$ tel que $DB = DC$ et $M$ le milieu du côté $AC$. La parallèle à $BC$ passant par $D$ coupe la droite $BM$ en $K$. Montrer que $\angle KCD = \angle DAC$.
+\fi
+\ifgerman %italian
+\fi
+
+}
+
+\IfStrEq*{\day}{2}{ %%%%% Day 2 %%%%%
+
+\item[\textbf{4.}] %% Exercise 4 %%
+\ifgerman %german
+Finde alle Paare $(a,b)$ teilerfremder ganzer Zahlen, sodass gilt:
+\[
+a^2+a = b^3+b.
+\]
+\fi
+\iffrench %french
+Trouver tous les nombres entiers relatifs $a,b$ premiers entre eux tels que
+\[
+a^2+a = b^3+b.
+\]
+
+\fi
+\ifitalian %italian
+\fi
+
+\bigskip
+\bigskip
+
+\item[\textbf{5.}] %% Exercise 5 %%
+
+\ifgerman %german
+Sei $ABC$ ein Dreieck. Die Punkte $K, L$ und $M$ liegen auf den Seiten $BC, CA$ und $AB$, sodass sich die Geraden $AK, BL$ und $CM$ in einem Punkt schneiden. Zeige, dass man von den Dreiecken $AML, BKM$ und $CLK$ zwei wählen kann, sodass die Summe ihrer Inkreisradien mindestens so gross ist wie der Inkreisradius des Dreiecks $ABC$.  
+\fi
+\iffrench %french
+Soit $ABC$ un triangle. Les points $K$, $L$ et $M$ se trouvent sur les segments $BC$, $CA$ et $AB$ respectivement, de telle manière que les droites $AK$, $BL$ et $CM$ se coupent en un point. Prouver qu’il est possible de choisir deux triangles parmi les triangles $AML$, $BKM$ et $CLK$ dont la somme des rayons des cercles inscrits vaut au moins le rayon du cercle inscrit du triangle $ABC$.
+\fi
+\ifitalian %italian
+
+\fi
+
+\bigskip
+\bigskip
+
+\item[\textbf{6.}] %% Exercise 6 %%
+\ifgerman %german
+Finde alle Polynome $P$ mit reellen Koeffizienten, sodass folgende Gleichung für alle $x \in \R$ gilt:
+\[
+P(x)P(x+1) = P ( x^2 + 2).
+\]
+\fi
+\iffrench %french
+Trouver tous les polynômes $P$ à coefficients réels tels que pour tout $x \in \mathbb{R}$:
+\[
+P(x)P(x+1) = P ( x^2 + 2).
+\]
+\fi
+\ifitalian %italian
+\fi
+}
+
+\IfStrEq*{\day}{3}{ %%%%% Day 3 %%%%%
+
+\item[\textbf{7.}] %% Exercise 7 %%
+\ifgerman %german
+Finde alle nichtleeren endlichen Mengen $A$ von Funktionen $f: \R \to \R$, welche die folgende Eigenschaft erfüllen:
+
+Für alle $f_1, f_2 \in A$ existiert eine Funktion $g \in A$, sodass für alle $x,y \in \R$ gilt:
+\[
+f_1(f_2(y)-x) + 2x = g(x+y).
+\] 
+\fi
+\iffrench %french
+Trouver tous les ensembles finis et non-vides $A$ de fonctions $f : \R \rightarrow \R$ tels que :
+
+Pour tous $f_1,f_2 \in A$, il existe $g \in A$ telle que pour tout $x,y \in \R$
+\[
+f_1(f_2(y)-x)+2x=g(x+y).
+\]
+\fi
+\ifitalian %italian
+\fi
+
+\bigskip
+\bigskip
+
+\item[\textbf{8.}] %% Exercise 8 %%
+
+\ifgerman %german
+Finde alle Tripel $(a,b,c)$ natürlicher Zahlen, sodass für alle natürlichen Zahlen $n$, welche keine Primteiler kleiner als $2015$ besitzen, gilt:
+\[
+n+c \div a^n +b^n +n.
+\]
+
+%Trouver tous les triplets d'entiers naturels $(a,b,c)$ tels que pour tout entier $n$ qui n'a pas de diviseur premier plus petit que $2015$, $n+c \div a^n+b^n+n$.
+
+%Wir nennen eine natürliche Zahl $n \geq 2$ \emph{königlich}, wenn sie teilerfremd zur Summe ihrer Teiler ist. Was ist die maximale Anzahl aufeinanderfolgender \emph{königlicher} Zahlen?
+%\textit{Bemerkung: 1 und $n$ sind Teiler von $n$.}
+\fi
+\iffrench %french
+Trouver tous les triplets d'entiers naturels $(a,b,c)$ tels que pour tout entier naturel $n$ qui n'a pas de diviseur premier plus petit que $2015$
+\[
+n+c \div a^n+b^n+n.
+\]
+\fi
+\ifitalian %italian
+\fi
+
+\bigskip
+\bigskip
+
+\item[\textbf{9.}] %% Exercise 9 %%
+\ifgerman %german
+Sei $n \geq 2$ eine natürliche Zahl. In der Mitte eines kreisförmigen Gartens steht ein Wachturm. Am Rand des Gartens stehen $n$ gleichmässig verteilte Gartenzwerge. Auf dem Wachturm wohnen aufmerksame Wächter. Jeder Wächter überwacht einen Bereich des Gartens, der von zwei verschiedenen Gartenzwergen begrenzt wird.\\
+Wir sagen, dass Wächter $A$ den Wächter $B$ kontrolliert, falls das gesamte Gebiet von $B$ in dem von $A$ enthalten ist.\\
+Unter den Wächtern gibt es zwei Gruppen: Lehrlinge und Meister. Jeder Lehrling wird von genau einem Meister kontrolliert und kontrolliert selbst niemanden, während Meister von niemandem kontrolliert werden.\\
+Der ganze Garten hat Unterhaltskosten:
+\begin{itemize}
+\item Ein Lehrling kostet 1 Goldstück pro Jahr.
+\item Ein Meister kostet 2 Goldstücke pro Jahr.
+\item Ein Gartenzwerg kostet 2 Goldstücke pro Jahr.
+\end{itemize}
+Zeige, dass die Gartenzwerge mindestens so viel kosten wie die Wächter.
+\fi
+\iffrench %french
+Soit $n \geq 2$ un entier naturel. Au centre d'un jardin circulaire se trouve une tour de garde. A la périphérie du jardin se trouvent $n$ nains de jardin régulièrement espacés. Dans la tour se trouvent des surveillants attentifs. Chaque surveillant contrôle une portion du jardin délimitée par deux nains.\\
+Nous disons que le surveillant $A$ contrôle le surveillant $B$ si la région de $B$ est contenue dans celle de $A$.\\
+Parmi les surveillants il y a deux groupes: les apprentis et les maîtres. Chaque apprenti est contrôlé par exactement un maître, et ne contrôle personne, tandis que les maîtres ne sont contrôlés par personne.\\
+Le jardin dans son entier a les coûts d'entretien suivants:
+\begin{itemize}
+\item Un apprenti coûte 1 pièce d'or par année.
+\item Un maître coûte 2 pièces d'or par année.
+\item Un nain de jardin coûte 2 pièces d'or par année.
+\end{itemize}
+Montrer que les nains de jardins coûtent au moins autant que les surveillants.
+\fi
+\ifitalian %italian
+\fi
+}
+
+\IfStrEq*{\day}{4}{ %%%%% Day 4 %%%%%
+
+\item[\textbf{10.}] %% Exercise 10 %%
+\ifgerman %german
+%Sei $ABC$ ein spitzwinkliges Dreieck. Der Ankreis gegenüber von $A$ berühre die Geraden $BC, CA$ und $AB$ in den Punkten $D, E$ und $F$. Sei $M$ ein weiterer Punkt auf der Geraden $AB$ und $N$ ein weiterer Punkt auf der Geraden $AC$. Bezeichne mit $K$ den Schnittpunkt der Geraden $MC$ und $NB$ und mit $L$ den Schnittpunkt der Geraden $ME$ und $NF$.\\
+%Zeige, dass der Schnittpunkt der Geraden $KL$ und $AD$ nicht von der Wahl der Punkte $M$ und $N$ abhängt.
+
+Sei $ABCD$ ein Parallelogramm. Nehme an, es existiere ein Punkt $P$ im Innern des Parallelogramms, der auf der Mittelsenkrechten von $AB$ liegt und sodass $\angle PBA=\angle ADP$ gilt.\\
+Zeige, dass $\angle CPD=2 \,\angle BAP$ gilt.
+\fi
+\iffrench %french
+Soit $ABCD$ un parallélogramme. Supposons qu'il existe un point $P$ dans l'intérieur du parallélogramme qui se trouve sur la médiatrice de $AB$ et tel que $\angle PBA=\angle ADP$.\\
+Montrer que $\angle CPD=2 \,\angle BAP$.
+\fi
+\ifitalian %italian
+\fi
+
+\bigskip
+\bigskip
+
+\item[\textbf{11.}] %% Exercise 11 %%
+
+\ifgerman %german
+Im Teil-Land gibt es $n$ Städte. Je zwei Städte sind durch eine Einbahnstrasse verbunden, die entweder nur mit dem Töff oder nur mit dem Auto befahrbar ist. Zeige, dass es eine Stadt gibt, von der aus jede andere Stadt entweder mit dem Töff oder mit dem Auto erreicht werden kann.
+
+\textit{Bemerkung: Es muss nicht jede andere Stadt mit dem gleichen Verkehrsmittel erreicht werden.}
+
+\fi
+\iffrench %french
+A Thaï-Land il y a $n$ villes. Chaque paire de villes est reliée par une voie à sens unique qui ne peut être empruntée, selon son type, qu'à vélo ou qu'en voiture. Montrer qu'il existe une ville à partir de laquelle on peut atteindre n'importe quelle autre ville, soit à vélo, soit à voiture.
+
+\textit{Remarque: Il n'est pas nécessaire d'utiliser le même moyen de transport pour chaque ville.} 
+\fi
+\ifitalian %italian
+\fi
+
+\bigskip
+\bigskip
+
+\item[\textbf{12.}] %% Exercise 12 %%
+\ifgerman %german
+Gegeben sind zwei natürliche Zahlen $m$ und $n$. Zeige, dass es eine natürliche Zahl $c$ gibt, sodass jede von $0$ verschiedene Ziffer gleich oft in $cm$ und $cn$ vorkommt.
+\fi
+\iffrench %french
+Soient $m$ et $n$ deux entiers naturels. Montrer qu'il existe un entier naturel $c$ tel que chaque chiffre différent de $0$ apparaît aussi souvent dans $cm$ et dans $cn$.
+\fi
+\ifitalian %italian
+\fi
+}
+
+\bigskip
+
+\vspace{1cm}
+
+\center{\ifgerman Viel Glück! \fi \iffrench Bonne chance! \fi \ifitalian Buona fortuna! \fi}
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,170 @@
+%& -job-name=finalrunde_2017_de-2
+
+% ^^^^^^^ change the last bit to e.g. de-2 for second day, german ^^^^^^^^ 
+
+\documentclass[language=german,style=exam]{smo} %language is irrelevant in this case
+
+\examtime{%
+    \de{4 Stunden}%
+    \fr{4 heures}%
+    \ita{4 ore}%
+    \en{4 hours}%
+}
+\examdate{%
+    \IfStrEq*{\day}{1}{%
+        \de{10. März 2017}%
+        \fr{10 mars 2017}%
+        \ita{14 gennaio 2017}%
+        \en{14 January 2017}%
+    }{}%
+   \IfStrEq*{\day}{2}{%
+        \de{11. März 2017}%
+        \fr{11 mars 2017}%
+        \ita{14 gennaio 2017}%
+        \en{14 January 2017}%
+    }{}
+}
+\title{%
+    \de{SMO - Finalrunde 2017}%
+    \fr{OSM - Tour final 2017}%
+    \ita{OSM - Turno preliminare 2017}%
+    \en{SMO - Preliminary round 2017}%
+}
+\examplace{%
+    \de{\day. Prüfung}%
+    \fr{\IfStrEq*{\day}{1}{Premier}{Second} examen}%
+    \ita{???}%
+    \en{???}%
+}
+
+\begin{document}
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+
+\IfStrEq*{\day}{1}{ %%%%%%%%%%%%%%%%% Day 1 %%%%%%%%%%%%%%%%%
+
+\bigskip\bigskip
+
+\item
+\de{Seien $A$ und $B$ Punkte auf dem Kreis $k$ mit Mittelpunkt $O$, sodass $AB > AO$ gilt. Sei $C$ der von $A$ verschiedene Schnittpunkt der Winkelhalbierenden von $\angle OAB$ und $k$. Sei $D$ der von $B$ verschiedene Schnittpunkt der Geraden $AB$ mit dem Umkreis des Dreiecks $OBC$. Zeige, dass $AD = AO$ gilt.}
+\fr{Soient $A$ et $B$ des points sur un cercle $k$ de centre $O$ tels que $AB > AO$. Soit $C$ le deuxième point d'intersection de la bissectrice de $\angle OAB$ avec $k$. Soit $D$ le deuxième point d'intersection de la droite $AB$ avec le cercle circonscrit au triangle $OBC$. Montrer que $AD = AO$.}
+{}
+
+\bigskip\bigskip
+
+\item
+\de{Finde alle Funktionen $f\colon\R \to\R$, sodass für alle $x,y \in \R$ gilt:
+\[
+	f(x+yf(x)) = f(xf(y)) - x + f(y+f(x)).
+\]}
+\fr {Trouver toutes les fonctions $f\colon \R \to \R$ telles que pour tous $x,y \in \R$
+\[
+	f(x+yf(x)) = f(xf(y)) - x + f(y+f(x)).
+\]}
+
+\bigskip\bigskip
+
+\item
+\de{Das Hauptgebäude der ETH Zürich ist ein in Einheitsquadrate unterteiltes Rechteck. Jede Seite eines Quadrates ist eine Wand, wobei gewisse Wände Türen haben. Die Aussenwand des Hauptgebäudes hat keine Türen. Eine Anzahl von Teilnehmern der SMO hat sich im Hauptgebäude verirrt. Sie können sich nur durch Türen von einem Quadrat zum anderen bewegen. Wir nehmen an, dass zwischen je zwei Quadraten des Hauptgebäudes ein begehbarer Weg existiert.
+
+Cyril möchte erreichen, dass sich die Teilnehmer wieder finden, indem er alle auf dasselbe Quadrat führt. Dazu kann er ihnen per Walkie-Talkie folgende Anweisungen geben: Nord, Ost, Süd oder West. Nach jeder Anweisung versucht jeder Teilnehmer gleichzeitig, ein Quadrat in diese Richtung zu gehen. Falls in der entsprechenden Wand keine Türe ist, bleibt er stehen.
+
+Zeige, dass Cyril sein Ziel nach endlich vielen Anweisungen erreichen kann, egal auf welchen Quadraten sich die Teilnehmer am Anfang befinden.}
+\fr{Le bâtiment de maths de l'EPFL est un rectangle subdivisé en pièces carrées agencées en damier. Certains des murs délimitant les pièces ont une porte. Aucune porte ne donne sur l'extérieur du bâtiment. Un certain nombre de participants de la SMO s'est perdu dans le bâtiment. On peut passer d'une pièce à une pièce adjacente uniquement en empruntant une porte. On suppose que de chaque pièce on peut se rendre à n'importe quelle autre pièce.
+
+Louis aimerait rassembler tous les participants dans une même pièce. Pour les guider, il peut leur donner par Talkie-Walkie les instructions suivantes: nord, est, sud ou ouest. Après une indication, chaque participant essaie simultanément de franchir le mur dans la direction donnée. Si le mur correspondant n'a pas de porte, le participant reste dans la pièce où il se trouve.
+
+Montrer que Louis peut rassembler les participants dans une même pièce en donnant un nombre fini d'indications, quelle que soit la position de départ des participants.}
+{}
+
+\bigskip\bigskip
+
+\item
+\de{Sei $n$ eine natürliche Zahl und $p,q$ Primzahlen, sodass folgende Aussagen gelten:
+\begin{align*}
+pq &\div n^p + 2,\\
+n + 2 &\div n^p + q^p.
+\end{align*}
+Zeige, dass es eine natürliche Zahl $m$ gibt, sodass $q \div 4^m n +2$ gilt.
+}
+\fr{Soit $n$ un entier naturel et $p,q$ des nombres premiers tels que:
+\begin{align*}
+pq &\div n^p + 2,\\
+n + 2 &\div n^p + q^p.
+\end{align*}
+Montrer qu'il existe un entier naturel $m$ tel que $q \div 4^m n +2$.}
+{}
+
+\bigskip\bigskip
+
+\item
+\de{Sei $ABC$ ein Dreieck mit $AC > AB$. Sei $P$ der Schnittpunkt von $BC$ und der Tangente durch $A$ am Umkreis des Dreiecks $ABC$. Sei $Q$ der Punkt auf der Geraden $AC$, sodass $AQ = AB$ gilt und $A$ zwischen $C$ und $Q$ liegt. Seien $X$ respektive $Y$ die Mittelpunkte von $BQ$ respektive $AP$. Sei $R$ der Punkt auf $AP$, sodass $AR=BP$ gilt und $R$ zwischen $A$ und $P$ liegt. Zeige, dass $BR = 2XY$ gilt.}
+\fr{Soit $ABC$ un triangle avec $AC > AB$. Soit $P$ le point d'intersection de $BC$ avec la tangente au cercle circonscrit au triangle $ABC$ passant par $A$. Soit $Q$ le point sur la droite $AC$ tel que $AQ = AB$ et tel que $A$ soit entre $C$ et $Q$. Soient $X$, resp. $Y$ le milieu de $BQ$, resp. $AP$. Soit $R$ le point sur $AP$ tel que $AR = BP$ et tel que $R$ soit entre $A$ et $P$. Montrer que $BR = 2XY$.}
+{}
+
+}
+
+\IfStrEq*{\day}{2}{ %%%%%%%%%%%%%%%%% Day 2 %%%%%%%%%%%%%%%%%
+
+\bigskip\bigskip
+
+\item[\textbf{6.}]
+\de{Das SMO-Lager hat mindestens vier Leiter. Je zwei Leiter sind entweder gegenseitig befreundet oder verfeindet. In jeder Gruppe von vier Leitern gibt es mindestens einen, der mit den drei anderen befreundet ist. Gibt es immer einen Leiter, der mit allen anderen befreundet ist?}
+\fr{Au camp SMO, il y a au moins quatre Romands. Deux Romands sont soit mutuellement amis, soit mutuellement ennemis. Dans chaque groupe de quatre Romands, au moins un des Romands est ami avec les trois autres. Existe-t-il toujours un Romand qui est ami avec tous les autres?}
+\bigskip\bigskip
+
+\item[\textbf{7.}]
+\de{Sei $n$ eine natürliche Zahl, sodass es genau $2017$ verschiedene Paare natürlicher Zahlen $(a,b)$ gibt, welche die Gleichung
+\[
+ \frac{1}{a} + \frac{1}{b} = \frac{1}{n}
+\]
+erfüllen. Zeige, dass $n$ eine Quadratzahl ist.
+
+\textit{Bemerkung: $(7,4) \neq (4,7)$}}
+
+\fr{Soit $n$ un nombre naturel, tel que exactement $2017$ paires $(a, b)$ de nombres naturels satisfont l'équation
+\[
+ \frac{1}{a} + \frac{1}{b} = \frac{1}{n}.
+\]
+
+Montrer que $n$ est un carré parfait.
+
+\textit{Remarque: $(7,4) \neq (4,7)$}}
+
+\bigskip\bigskip
+
+\item[\textbf{8.}]
+\de{Sei $ABC$ ein gleichschenkliges Dreieck mit Scheitelpunkt $A$ und $AB > BC$. Sei $k$ der Kreis mit Zentrum $A$ durch $B$ und $C$. Sei $H$ der zweite Schnittpunkt von $k$ mit der Höhe des Dreiecks $ABC$ durch $B$. Weiter sei $G$ der zweite Schnittpunkt von $k$ mit der Schwerlinie durch $B$ im Dreieck $ABC$. Sei $X$ der Schnittpunkt der Geraden $AC$ und $GH$. Zeige, dass $C$ der Mittelpunkt der Strecke $AX$ ist.}
+\fr{Soit $ABC$ un triangle isocèle en $A$ avec $AB > BC$. Soit $k$ le cercle de centre $A$ passant par $B$ et $C$. Soit $H$ le deuxième point d'intersection de $k$ avec la hauteur du triangle $ABC$ passant par $B$. De plus, soit $G$ le deuxième point d'intersection de $k$ avec la médiane du triangle $ABC$ passant par $B$. Soit $X$ le point d'intersection des droites $AC$ et $GH$. Montrer que $C$ est le milieu du segment $AX$.}
+
+
+\bigskip\bigskip
+
+\item[\textbf{9.}]
+\de{Betrachte ein konvexes $15$-Eck mit Umfang $21$. Zeige, dass man davon drei paarweise verschiedene Eckpunkte auswählen kann, die ein Dreieck mit Fläche kleiner als $1$ bilden.}
+\fr{Soit un polygone convexe à $15$ côtés et de périmètre $21$. Montrer qu'il existe trois sommets différents de ce polygone qui forment un triangle d'aire strictement inférieure à $1$.}
+
+
+\bigskip\bigskip
+
+\item[\textbf{10.}]
+\de{Seien $x,y,z$ nichtnegative reelle Zahlen mit $xy + yz + zx = 1$. Zeige, dass gilt: 
+\[
+\frac{4}{x+y+z} \leq (x + y)(\sqrt{3}z + 1).
+\] }
+\fr{Soient $x,y,z$ des nombres réels positifs ou nuls avec $xy + yz + zx = 1$. Montrer que
+\[
+\frac{4}{x+y+z} \leq (x + y)(\sqrt{3}z + 1).
+\] }
+
+}
+
+\end{enumerate}
+
+\bigskip
+
+\vfill
+
+\center{\translation{Viel Glück!}{Bonne chance!}{Buona fortuna!}}
+
+\end{document}

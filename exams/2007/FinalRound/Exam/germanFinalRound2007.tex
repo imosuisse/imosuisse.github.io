@@ -1,0 +1,272 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=9in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+
+
+
+% Schriftabkürzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\wi}{\angle}
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge SMO Finalrunde 2007} \\
+\medskip erste Prüfung - 23. März 2007
+\end{center}
+\vspace{8mm}
+Zeit: 4 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{1.}] Bestimme alle positiven reellen Lösungen des folgenden Gleichungssystems:
+\vspace{-0.2cm}
+\begin{center}
+\begin{tabular}{cp{1cm}cp{1cm}c}
+$a=\max\{\frac{1}{b},\frac{1}{c}\}$ & & $b=\max\{\frac{1}{c},\frac{1}{d}\}$ & & $c=\max\{\frac{1}{d},\frac{1}{e}\}$\\
+$d=\max\{\frac{1}{e},\frac{1}{f}\}$ & & $e=\max\{\frac{1}{f},\frac{1}{a}\}$ & & $f=\max\{\frac{1}{a},\frac{1}{b}\}$\\
+\end{tabular}
+\end{center}
+
+\bigskip
+
+\item[\textbf{2.}] Seien $a,b,c$ drei ganze Zahlen, sodass $a+b+c$ durch 13 teilbar ist. Zeige, dass auch 
+\[a^{2007}+b^{2007}+c^{2007}+2\cdot 2007 abc\]
+durch 13 teilbar ist.\\
+
+\smallskip
+
+\item[\textbf{3.}] Die Ebene wird in Einheitsquadrate unterteilt. Jedes Feld soll mit einer von $n$ Farben gefärbt werden, sodass gilt: Können vier Felder mit einem L-Tetromino bedeckt werden, dann haben diese Felder vier verschiedene Farben (das L-Tetromino darf gedreht und gespiegelt werden). Bestimme den kleinsten Wert von $n$, für den das möglich ist.\\
+
+\smallskip
+
+\item[\textbf{4.}] Sei $ABC$ ein spitzwinkliges Dreieck mit $AB>AC$ und Höhenschnittpunkt $H$. Sei $D$ der Höhenfusspunkt von $A$ auf $BC$. Sei $E$ die Spiegelung von $C$ an $D$. Die Geraden $AE$ und $BH$ schneiden sich im Punkt $S$. Sei $N$ der Mittelpunkt von $AE$ und sei $M$ der Mittelpunkt von $BH$. Beweise, dass $MN$ senkrecht auf $DS$ steht.\\
+
+\smallskip
+
+\item[\textbf{5.}] Bestimme alle Funktionen $f:\BR_{\geq 0} \rightarrow \BR_{\geq 0}$ mit folgenden Eigenschaften:
+\begin{enumerate}
+\item[(a)] $f(1)=0$,
+\item[(b)] $f(x)>0$ für alle $x>1$,
+\item[(c)] Für alle $x,y \geq 0$ mit $x+y>0$ gilt
+\[f(xf(y))f(y)=f\left(\frac{xy}{x+y}\right).\]
+\end{enumerate}
+
+\end{enumerate}
+
+\vspace{1.5cm}
+
+\begin{center}
+ Viel Glück!
+\end{center}
+
+\pagebreak
+
+
+\begin{center}
+{\huge SMO Finalrunde 2007} \\
+\medskip zweite Prüfung - 24. März 2007
+\end{center}
+\vspace{8mm}
+Zeit: 4 Stunden \\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{6.}] Drei gleich grosse Kreise $k_1,k_2,k_3$ schneiden sich nichttangential in einem Punkt $P$. Seien $A$ und $B$ die Mittelpunkte der Kreise $k_1$ und $k_2$. Sei $D$ bzw. $C$ der von $P$ verschiedene Schnittpunkt von $k_3$ mit $k_1$ bzw. $k_2$. Zeige, dass $ABCD$ ein Parallelogramm ist.\\
+
+\medskip
+
+\item[\textbf{7.}] Seien $a,b,c$ nichtnegative reelle Zahlen mit arithmetischem Mittel $m=\frac{a+b+c}{3}$. Beweise, dass gilt
+\[\sqrt{a+\sqrt{b+\sqrt{c}}}+\sqrt{b+\sqrt{c+\sqrt{a}}}+\sqrt{c+\sqrt{a+\sqrt{b}}}\leq 3\;\sqrt{m+\sqrt{m+\sqrt{m}}}.\]
+
+\medskip
+
+\item[\textbf{8.}] Sei $M \subset \{1,2,3,\ldots,2007\}$ eine Menge mit folgender Eigenschaft: Unter je drei Zahlen aus $M$ kann man stets zwei auswählen, sodass die eine durch die andere teilbar ist. Wieviele Zahlen kann $M$ höchstens enthalten?\\
+
+\medskip
+
+\item[\textbf{9.}] Finde alle Paare $(a,b)$ natürlicher Zahlen, sodass 
+\[\frac{a^3+1}{2ab^2+1}\]
+eine ganze Zahl ist.\\
+
+\medskip
+
+\item[\textbf{10.}] Die Ebene wird in gleichseitige Dreiecke der Seitenlänge 1 unterteilt. Betrachte ein gleichseitiges Dreieck der Seitenlänge $n$, dessen Seiten auf den Gitterlinien liegen. Auf jedem Gitterpunkt auf dem Rand und im Innern dieses Dreiecks liegt ein Stein. In einem Spielzug wird ein Einheitsdreieck ausgewählt, welches auf genau 2 Ecken mit einem Stein belegt ist. Die beiden Steine werden entfernt, und auf die dritte Ecke wird ein neuer Stein gelegt. Für welche $n$ ist es möglich, dass nach endlich vielen Spielzügen nur noch ein Stein übrig bleibt?
+
+
+\end{enumerate}
+\vspace{1.5cm}
+
+\center{Viel Glück!}
+\end{document}

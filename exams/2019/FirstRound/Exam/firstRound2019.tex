@@ -1,0 +1,154 @@
+\documentclass[language=french, style=exam-preliminary]{smo} %language is relevant
+
+\input{TimeDateTitle}
+
+\begin{document}
+
+\vfill
+
+\vspace{-3mm}
+\center{\section*{\de{Geometrie}\fr{Géométrie}\ita{Geometria}\en{Geometry}}} % GEOMETRY
+\vspace{-3mm}
+
+\begin{enumerate}
+\item[\textbf{G1)}]
+\de{Sei $k$ ein Kreis mit Mittelpunkt $O$ und seien $A$, $B$ und $C$ drei Punkte auf $k$ mit $\angle ABC > 90^\circ$. Die Winkelhalbierende von $\angle AOB$ schneide den Umkreis des Dreiecks $BOC$ ein zweites Mal in $D$. Zeige, dass $D$ auf der Geraden $AC$ liegt.}
+\fr{Soit $k$ un cercle de centre $O$ et soient $A$, $B$ et $C$ trois points sur $k$ tels que $\angle ABC > 90^\circ$. La bissectrice de $\angle AOB$ coupe le cercle circonscrit au triangle $BOC$ une deuxième fois en $D$. Montrer que $D$ se trouve sur la droite $AC$.}
+\ita{Sia $k$ un cerchio con centro $O$ e siano $A,B,C$ tre punti giacenti su $k$ in modo tale che $\angle ABC>90^\circ$. La bisettrice dell'angolo $\angle AOB$ interseca il cerchio circoscritto al triangolo $BOC$ nel punto D. Mostrare che $D$ giace sulla retta $AC$.}%
+\en{Let $k$ be a circle with center $O$ and let $A$, $B$ and $C$ be three points on $k$ with $\angle ABC > 90^\circ$. The angle bisector of $\angle AOB$ intersects the circumcircle of triangle $BOC$ again at $D$. Prove that $D$ lies on the line $AC$. }%
+
+\item[\textbf{G2)}]
+\de{Sei $k_1$ ein Kreis und $l$ eine Gerade, die $k_1$ in zwei verschiedenen Punkten $A$ und $B$ schneidet. Sei $k_2$ ein weiterer Kreis ausserhalb von $k_1$, der $k_1$ in $C$ und $l$ in $D$ berührt. Sei $T$ der zweite Schnittpunkt von $k_1$ und der Geraden $CD$. Zeige, dass $AT=TB$ gilt.}%
+\fr{Soient $k_1$ un cercle et $l$ une droite qui coupe $k_1$ en deux points distincts $A$ et $B$. Soit $k_2$ un deuxième cercle à l'extérieur de $k_1$ qui touche $k_1$ tangentiellement en $C$ et qui touche $l$ tangentiellement en $D$. Soit $T$ la deuxième intersection de la droite $CD$ avec $k_1$. Montrer que $AT=TB$.}%
+\ita{Sia $k_1$ un cerchio e $l$ una linea intersecante $k_1$ in due punti distinti chiamati $A$ e $B$. Sia $k_2$ un secondo cerchio non contenuto (all'esterno di) in $k_1$ toccante $k_1$ tangenzialmente in $C$ e $l$ tangenzialmente in $D$. Sia $T$ la seconda intersezione di $k_1$ con la linea $CD$. Mostrare che $AT=TB$.}%
+\en{Let $k_1$ be a circle and $l$ a line that intersects $k_1$ in two distinct points $A$ and $B$. Let $k_2$ be another circle outside of $k_1$ that touches $k_1$ at $C$ and $l$ at $D$. Let $T$ be the second intersection of $k_1$ and the line $CD$. Prove that $AT=TB$.}%
+
+\end{enumerate}
+
+\vspace{-3mm}
+\center{\section*{\de{Kombinatorik}\fr{Combinatoire}\ita{Calcolo combinatorio}\en{Combinatorics}}} % COMBINATORICS
+\vspace{-3mm}
+
+\begin{enumerate}
+\item[\textbf{\de{K}\fr{C}\ita{C}\en{C}1)}] 
+\de{Für eine natürliche Zahl $n$ schreibt Quirin alle $2^n -1$ nichtleeren Teilmengen der Menge $\{1,2, \ldots, n \}$ auf eine Zeile. Dann schreibt er unter jede Menge das Produkt ihrer Elemente. Danach schreibt er von jeder Zahl den Kehrwert auf und zählt nun alle diese zusammen. Welche Summe wird er (abhängig von $n$) erhalten?
+
+\emph{Beispiel: Für $n=3$ macht er die folgenden Schritte: \vspace{-5mm} % <- don't know why this has to be here, don´t know either...
+\begin{center}
+\begin{tabular}{c c c c c c c c c c c c c c}
+$\{1\}$ && $\{2\}$ && $\{3\}$ && $\{1,2\}$ && $\{1,3\}$ && $\{2,3\}$ && $\{1,2,3\}$&\\[1mm]
+$1$ && $2$ && $3$ && $1 \cdot 2 = 2$ && $1\cdot 3 = 3$ && $2\cdot 3 = 6$ && $1\cdot 2 \cdot 3 = 6$&\\[1mm]
+\Large$\frac{1}{1}$ &$+$& \Large$\frac{1}{2}$ & $+$ & \Large$\frac{1}{3}$ & $+$ &\Large$\frac{1}{2}$ & $+$ & \Large$\frac{1}{3}$ & $+$ & \Large$\frac{1}{6}$ &$+$& \Large$\frac{1}{6}$& \large $= 3.$\\
+\end{tabular}
+\end{center}
+}%end emph
+}%
+\fr{Soit $n$ un entier strictement positif. Maurice écrit sur une même ligne tous les $2^n-1$ sous-ensembles non-vides de l'ensemble $\{1,2, \ldots, n \}$. Ensuite, en-dessous de chaque sous-ensemble, il écrit le produit de ses éléments. Finalement, il écrit les inverses des nombres présents sur la deuxième ligne et il en calcule la somme. Quelle sera la valeur de la somme (en fonction de $n$) que Maurice va obtenir ?
+
+\emph{Exemple: pour $n=3$, Maurice obtient \vspace{-5mm} % <- don't know why this has to be here, probably for the same reason as above 
+\begin{center}
+\begin{tabular}{c c c c c c c c c c c c c c}
+$\{1\}$ && $\{2\}$ && $\{3\}$ && $\{1,2\}$ && $\{1,3\}$ && $\{2,3\}$ && $\{1,2,3\}$&\\[1mm]
+$1$ && $2$ && $3$ && $1 \cdot 2 = 2$ && $1\cdot 3 = 3$ && $2\cdot 3 = 6$ && $1\cdot 2 \cdot 3 = 6$&\\[1mm]
+\Large$\frac{1}{1}$ &$+$& \Large$\frac{1}{2}$ & $+$ & \Large$\frac{1}{3}$ & $+$ &\Large$\frac{1}{2}$ & $+$ & \Large$\frac{1}{3}$ & $+$ & \Large$\frac{1}{6}$ &$+$& \Large$\frac{1}{6}$& \large $= 3.$\\
+\end{tabular}
+\end{center}
+}%end emph
+}%
+\ita{Dato un intero positivo $n$, Paolo scrive tutti i $2^n-1$ sottoinsiemi non vuoti di $\{1,\dots, n\}$ su una linea. In seguito, Paolo scrive sotto ogni singolo insieme il prodotto di tutti i loro elementi. Infine, scrive l'inverso di tutti i numeri nella seconda linea e calcola la loro somma. Determinare il valore della somma (in funzione di $n$) ottenuto da Paolo.
+
+\emph{Esempio: per $n=3$, Paolo ottiene: \vspace{-5mm} % <- don't know why this has to be here, again ?!? Same reason as the two above? Yes, but at one time it wasn't necessary in the german version but now it is. spooookyyyy....
+\begin{center}
+\begin{tabular}{c c c c c c c c c c c c c c}
+$\{1\}$ && $\{2\}$ && $\{3\}$ && $\{1,2\}$ && $\{1,3\}$ && $\{2,3\}$ && $\{1,2,3\}$&\\[1mm]
+$1$ && $2$ && $3$ && $1 \cdot 2 = 2$ && $1\cdot 3 = 3$ && $2\cdot 3 = 6$ && $1\cdot 2 \cdot 3 = 6$&\\[1mm]
+\Large$\frac{1}{1}$ &$+$& \Large$\frac{1}{2}$ & $+$ & \Large$\frac{1}{3}$ & $+$ &\Large$\frac{1}{2}$ & $+$ & \Large$\frac{1}{3}$ & $+$ & \Large$\frac{1}{6}$ &$+$& \Large$\frac{1}{6}$& \large $= 3.$\\
+\end{tabular}
+\end{center}
+}%end emph
+}%
+\en{For a positive integer $n$, Timothy writes all the $2^n-1$ nonempty subsets of $\{1,2, \ldots, n \}$ on a line. Then, under each subset, he writes down the product of its elements. Lastly, he writes down the inverses of all numbers in the second line and computes their sum. What is the value of the sum (depending on $n$) obtained by Timothy?
+
+\emph{Example: For $n=3$, Timothy obtains: \vspace{-5mm} % <- don't know why this has to be here, again ?!? Same reason as the two above?
+\begin{center}
+\begin{tabular}{c c c c c c c c c c c c c c}
+$\{1\}$ && $\{2\}$ && $\{3\}$ && $\{1,2\}$ && $\{1,3\}$ && $\{2,3\}$ && $\{1,2,3\}$&\\[1mm]
+$1$ && $2$ && $3$ && $1 \cdot 2 = 2$ && $1\cdot 3 = 3$ && $2\cdot 3 = 6$ && $1\cdot 2 \cdot 3 = 6$&\\[1mm]
+\Large$\frac{1}{1}$ &$+$& \Large$\frac{1}{2}$ & $+$ & \Large$\frac{1}{3}$ & $+$ &\Large$\frac{1}{2}$ & $+$ & \Large$\frac{1}{3}$ & $+$ & \Large$\frac{1}{6}$ &$+$& \Large$\frac{1}{6}$& \large $= 3.$\\
+\end{tabular}
+\end{center}
+}%end emph
+}%
+
+\vspace{2mm}
+\item[\textbf{\de{K}\fr{C}\ita{C}\en{C}2)}]
+\de{Sei $n$ eine natürliche Zahl. Ein Volleyballteam bestehend aus $n$ Frauen und $n$ Männern stellt sich für ein Spiel auf. Dabei besetzt jedes Teammitglied eine der Positionen $1, 2, \ldots , 2n$, wobei sich genau die Positionen $1$ und $n+1$ ausserhalb des Spielfelds befinden.
+Während des Spiels rotieren alle Teammitglieder, wobei jeweils von der Position $i$ auf die Position $i+1$ gewechselt wird (respektive von $2n$ auf $1$). Wie viele Möglichkeiten gibt es für die Startaufstellung, sodass immer mindestens $n-1$ Frauen auf dem Spielfeld sind, egal wie oft rotiert wird?
+
+\emph{Bemerkung: Zwei Startaufstellungen sind unterschiedlich, wenn mindestens ein Teammitglied eine andere Position besetzt.}
+}%
+\fr{Soit $n$ un entier strictement positif. Une équipe de volley-ball qui se compose de $n$ hommes et $n$ femmes se prépare à jouer. Chaque joueur est assigné une des positions $1,2,\ldots,2n$. Seules les positions $1$ et $n+1$ se situent à l'extérieur du terrain. Pendant la partie, les joueurs effectuent des rotations de telle manière que le joueur à la position $i$ passe à la position $i+1$ (respectivement de la position $2n$ à la position $1$). De combien de manières les positions peuvent-elles être initialement assignées de sorte qu'il y ait toujours au moins $n-1$ femmes sur le terrain, peu importe le nombre de rotations ?
+
+\emph{Remarque: deux positions initiales sont différentes, si au moins un joueur y occupe deux positions différentes. }
+}%
+\ita{Sia $n$ un intero positivo. Una squadra di volley composta da $n$ uomini e $n$ donne sta per giocare. Ad ogni giocatore è assegnata una delle posizioni $1, 2, \dots, 2n$. Tra queste posizioni, solo la $1$ e la $n+1$ giacciono fuori dal prato. Durante la partita i giocatori effettuano delle rotazioni come segue: il giocatore in postazione $i$ si muove nella postazione $i+1$ (il giocatore con la posizione $2n$ andrà ad accasarsi alla postazione 1). In quanti modi possiamo assegnare le posizioni di partenza in modo tale che ci siano sempre \textbf{almeno} $n-1$ donne sul prato, indipendentemente dal numero di rotazioni occorse durante la partita?
+
+\emph{Osservazione: due configurazioni iniziali sono considerate differenti se almeno un giocatore occupa una posizione differente nelle due configurazioni.}
+}%
+\en{Let $n$ be a positive integer. A volleyball team consisting of $n$ men and $n$ women is preparing to play. Every player is assigned one of the positions $1,2,\ldots,2n$ of which exactly the positions $1$ and $n+1$ lie outside the court. During the game, the players rotate in such a way that the player on position $i$ switches to position $i+1$ (respectively from position $2n$ to $1$). In how many ways can the positions initially be assigned so that there are always at least $n-1$ women on the court, no matter how many rotations have occured?
+
+\emph{Remark: Two initial positions are different, if at least one player is assigned to two different positions. }
+}%
+
+\end{enumerate}
+
+\vspace{-3mm}
+\center{\section*{\de{Zahlentheorie}\fr{Théorie des nombres}\ita{Teoria dei numeri}\en{Number Theory}}} % NUMBER THEORY
+\vspace{-3mm}
+
+\begin{enumerate}
+\item[\textbf{\de{Z}\fr{N}\ita{N}\en{N}1)}]
+\de{Bestimme alle Paare natürlicher Zahlen $(a,b)$, welche die folgende Gleichung erfüllen:
+\[
+ab+2 = a^3 + 2b.
+\]
+}%
+\fr{Déterminer toutes les paires d'entiers strictement positifs $(a,b)$ telles que
+\[
+ab+2 = a^3 + 2b.
+\]}%
+\ita{Determinare tutte le coppie di interi positivi $(a,b)$ tali che 
+$$ ab+2=a^3+2b.$$}%
+\en{Determine all pairs of positive integers $(a,b)$ such that
+\[
+ab+2 = a^3 + 2b.
+\]}%
+
+\item[\textbf{\de{Z}\fr{N}\ita{N}\en{N}2)}]
+\de{Bestimme alle natürlichen Zahlen $n \geq 2$, die eine Darstellung der Form
+\[
+n =  k^2 + d^2
+\]
+haben, wobei $k$ der kleinste Teiler von $n$ grösser als $1$ und $d$ ein beliebiger Teiler von $n$ ist.}%
+\fr{Déterminer tous les entiers strictement positifs $n\geq 2$ qui peuvent s'écrire sous la forme
+\[
+n =  k^2 + d^2,
+\]
+où $k$ est le plus petit diviseur de $n$ strictement supérieur à $1$ et où $d$ est un diviseur de $n$ quelconque.}%
+\ita{Determinare tutti gli interi positivi $n\geq 2$ tali da poter essere scritti come
+$$n=k^2+d^2,$$
+dove $k$ è il più piccolo divisore di $n$ diverso da 1 e $d$ è un (qualsiasi) divisore di $n$.}%
+\en{Determine all positive integers $n\geq 2$ that can be written as
+\[
+n =  k^2 + d^2,
+\]
+where $k$ is the smallest divisor of $n$ greater than $1$ and $d$ is any divisor of $n$.}
+\end{enumerate}
+
+\vfill\vfill
+
+\center{\de{Viel Glück!}\fr{Bonne chance!}\ita{Buona fortuna!}\en{Good luck!}} %<-why remove? Had no space before
+
+\vspace{-1.628cm}%don't ask
+
+\end{document}

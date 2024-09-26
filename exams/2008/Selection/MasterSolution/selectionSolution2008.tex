@@ -1,0 +1,600 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\oddsidemargin=0cm \headheight=-2.1cm
+\textwidth=16.4cm \textheight=25.7cm
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+
+
+
+
+
+% Schriftabkürzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\gaussk}[1]{\lfloor #1 \rfloor}
+\newcommand{\frack}[1]{\{ #1 \}}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+\newcommand{\dreieck}{\bigtriangleup}
+
+\newcommand{\csum}{\mathop{\sum_{\rm cyc}}}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge IMO Selektion 2008 Lösungen} \\
+\end{center}
+
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{1.}] Finde alle Tripel $(a,b,c)$ natürlicher Zahlen, sodass gilt:
+\[a \div bc-1, \qquad b \div ca-1, \qquad c \div ab-1.\] 
+
+\textbf{1. Lösung}
+
+Offenbar sind $a,b,c$ paarweise teilerfremd, denn zum Beispiel ist jeder gemeinsame Teiler von $a$ und $b$ wegen $a \div bc-1$ auch ein Teiler von $1$. Da $bc-1$ durch $a$ teilbar ist, muss auch $ab+bc+ca-1$ durch $a$ teilbar sein, und aus Symmetriegründen gilt dasselbe für $b$ und $c$. Wegen der Teilerfremdheit von $a$, $b$ und $c$ erhalten wir daher
+\[abc \div ab+bc+ca-1.\]
+Insbesondere ist die linke Seite nicht grösser als die rechte, das heisst nach Division mit $abc$
+\[\frac{1}{a}+\frac{1}{b}+\frac{1}{c}-\frac{1}{abc} \geq 1.\]
+Wir können nun $a \leq b \leq c$ annehmen und unterscheiden drei Fälle:
+\begin{enumerate}
+\item[(i)] Für $a \geq 3$ ist die linke Seite kleiner als 1, Widerspruch.
+\item[(ii)] Sei $a=2$. Für $b\geq 4$ ist die linke Seite kleiner als 1, folglich ist $b=2,3$. Nur $b=3$ führt zur Lösung $c=5$.  
+\item[(iii)] Für $a=1$ erhalten wir aus den ursprünglichen Bedingungen $c \div b-1$. Wegen $c \geq b$ folgt daraus $b=1$.  
+\end{enumerate}
+Man überlegt sich leicht, dass in den Fällen $(a,b,c)=(2,3,5)$ und $a=b=1$. die Bedingungen erfüllt sind, die gesuchten Tripel $(a,b,c)$ sind also die Permutationen von 
+\[(2,3,5) \qquad \mbox{und} \qquad (1,1,n), \quad n \geq 1.\]
+
+\textbf{2. Lösung}
+
+Multiplizieren der Teilbarkeitsbedingung liefert, dass $abc$ ein Teiler von $(ab-1)(bc-1)(ca-1)=(abc)^2-abc(a+b+c)+(ab+bc+ca)-1$ ist, also gilt wieder
+\[abc \div ab+ab+ca-1.\]
+Man kann nun wie in der ersten Lösung weiterfahren.\\
+
+
+\bigskip
+
+\item[\textbf{2.}] Seien $m,n$ natürliche Zahlen. Betrachte ein quadratisches Punktgitter aus $(2m+1) \times (2n+1)$ Punkten in der Ebene. Eine Menge von Rechtecken heisst \emph{gut}, falls folgendes gilt:
+\begin{enumerate}
+\item[(a)] Für jedes der Rechtecke liegen die vier Eckpunkte auf Gitterpunkten und die Seiten parallel zu den Gitterlinien.
+\item[(b)] Keine zwei der Rechtecke haben einen gemeinsamen Eckpunkt.
+\end{enumerate}
+Bestimme den grösstmöglichen Wert der Summe der Flächen aller Rechtecke in einer guten Menge.\\
+
+\textbf{Lösung}
+
+Wir führen Koordinaten ein, sodass das Gitter genau aus den Punkten $(x,y)$ mit ganzzahligen Koordinaten $-m \leq x \leq m$ und $-n\leq y \leq n$ besteht.  Wir bestimmen die grösstmögliche Anzahl Rechtecke in einer guten Menge, die ein festes Einheitsquadrat überdecken können. Aus Symmetriegründen können wir uns dabei auf den ersten Quadranten beschränken. Betrachte das Einheitsquadrat mit oberem rechtem Eckpunkt $(k+1,l+1)$, $k,l \geq 0$. Für jedes Rechteck, das dieses überdeckt, muss dessen oberer rechter Eckpunkt in der Menge $\{(x,y) \,| \, k+1 \leq x \leq m, \, l+1 \leq y \leq n\}$ liegen, und wegen (b) sind diese Eckpunkte alle verschieden. Daraus folgt, dass das Einheitsquadrat von höchstens $(m-k)(n-l)$ Rechtecken überdeckt wird.
+
+Somit ist die Summe der Flächen aller Rechtecke in einer guten Menge höchstens gleich
+\begin{eqnarray*}
+4\sum_{k=1}^m \sum_{l=1}^n kl &=& 4\Big(\sum_{k=1}^m k\Big) \Big(\sum_{l=1}^n l \Big)\\
+&=& 4 \cdot \frac{m(m+1)}{2} \cdot \frac{n(n+1)}{2} = mn(m+1)(n+1).
+\end{eqnarray*}
+
+Dieses Maximum wird auch angenommen: Die Menge aller Rechtecke mit Eckpunkten $(\pm k, \pm l)$, $1\leq k \leq m, 1\leq l \leq n$ ist gut und für sie gilt in obigen Abschätzungen überall Gleichheit.\\
+
+\bigskip
+
+\begin{figure}[h]
+\centering
+\includegraphics[height=10cm,angle=90]{imoselektion3}
+\caption{Konstruktion zur Lösung von Aufgabe 3}
+\end{figure}
+
+\item[\textbf{3.}] Sei $ABC$ ein Dreieck mit $\angle ABC \neq \angle BCA$. Der Inkreis $k$ des Dreiecks $ABC$ berühre die Seiten $BC$, $CA$ bzw. $AB$ in den Punkten $D$, $E$ bzw. $F$. Die Strecke $AD$ schneide $k$ ein weiteres Mal in $P$. Sei $Q$ der Schnittpunkt von $EF$ mit der Rechtwinkligen zu $AD$ durch $P$. Sei $X$ bzw. $Y$ der Schnittpunkt von $AQ$ mit $DE$ bzw. mit $DF$. Zeige, dass $A$ der Mittelpunkt von $XY$ ist.\\
+
+\textbf{Lösung}
+
+Sei $I$ der Inkreismittelpunkt des Dreiecks $ABC$ und $M$ der Mittelpunkt der Strecke $EF$. Wir zeigen zuerst, dass $IMPD$ ein Sehnenviereck ist. Wegen $AF=AE$ liegen $A$, $M$ und $I$ auf einer Geraden und $\angle FMI = 90^\circ$. Da auch $\angle AFI=90^\circ$ gilt, liegt der Umkreis von $FIM$ tangential zur Gerade $AF$. Nach dem Potenzsatz gilt nun 
+\[AM \cdot AI = AF^2 = AP \cdot AD,\]
+also ist $IMPD$ ein Sehnenviereck. Wegen $\angle QMA = 90^\circ = \angle QPA$ ist $QMPA$ ebenfalls ein Sehnenviereck. Eine kurze Winkeljagd zeigt, dass $BC$ und $AQ$ parallel sind:
+\[\angle ADC = 90^\circ - \angle IDP = 90^\circ - (180^\circ - \angle IMP) = \angle PME = \angle QAD.\]
+Daraus folgt, dass $AYF$ ähnlich zum gleichschenkligen Dreieck $BDF$ ist und $AXE$ ähnlich zum gleichschenkligen Dreieck $CDE$. Also ist $AY=AF$ und $AX=AE$. Somit gilt $AX=AE=AF=AY$.\\
+
+\bigskip
+
+\item[\textbf{4.}] Zwei Kreise $k_1$ und $k_2$ schneiden sich in $A$ und $B$. Sei $r$ eine Gerade durch $B$, die $k_1$ in $C$ und $k_2$ in $D$ schneidet, so dass B zwischen $C$ und $D$ liegt.
+Sei $s$ die Gerade parallel zu $AD$, die $k_1$ in $E$ berührt und zu $AD$ den kleinstmöglichen Abstand hat. Die Gerade $AE$ schneidet $k_2$ in $F$. Sei $t$ die Tangente zu $k_2$ durch $F$. Beweise dass gilt:
+\begin{enumerate}
+\item[(a)] Die Gerade $t$ ist parallel zu $AC$.
+\item[(b)] Die Geraden $r$, $s$ und $t$ schneiden sich in einem Punkt.\\
+\end{enumerate}
+
+\textbf{Lösung}
+
+\begin{enumerate}
+\item[(a)] Wir zeigen zuerst, dass $CE$ parallel zu $DF$ ist. Es gilt
+\[\angle CEF=\angle CEA=\angle ABD=\angle AFD=\angle EFD,\]
+also ist $CE$ parallel zu $DF$. Sei $X$ der Schnittpunkt von $s$ und $t$. Um die Parallelität von $AC$ und $t$ zu zeigen, genügt es $\angle DFX=\angle ECA$ zu beweisen, und dies folgt aus dem Sehnen-Tangentenwinkelsatz:
+\[\angle DFX=\angle DAF=\angle XEF=\angle ECA.\]
+\item[(b)] Sei $U$ der zweite Schnittpunkt des Umkreises von $EBF$ mit der Geraden $r$. Zudem sei $T$ bzw. $S$ der Schnittpunkt von $r$ mit $t$ bzw. $s$. Es gilt
+\[\angle UEF=\angle UBF=\angle DBF=\angle DAF=\angle SEF,\]
+also ist $S=U$. Weiter gilt
+\[\angle UFE=\angle UBE=\angle UBA+\angle ABE=\angle DBA+\angle ACE=\angle DFA+\angle TFD =\angle TFE,\]
+also ist $T=U$. Somit schneiden sich die drei Geraden $r$, $s$ und $t$ im Punkt $U$.\\
+\end{enumerate}
+
+\bigskip
+
+\item[\textbf{5.}] Seien $a,b,c$ positive reelle Zahlen. Beweise die folgende Ungleichung:
+\[\frac{a}{\sqrt{3a+2b+c}}+\frac{b}{\sqrt{3b+2c+a}}+\frac{c}{\sqrt{3c+2a+b}} \leq \frac{1}{\sqrt{2}}\sqrt{a+b+c}.\]
+
+\textbf{1. Lösung}
+
+Nach CS ist das Quadrat der linken Seite der Ungleichung höchstens gleich
+\[(a+b+c) \cdot \big(\underbrace{\frac{a}{3a+2b+c}+\frac{b}{3b+2c+a}+\frac{c}{3c+2a+b}}_{A}\big).\]
+Es genügt also $A \leq \frac{1}{2}$ zu zeigen, oder äquivalent dazu $3-2A\geq \frac{3}{2}$. Wir setzen $x=a+b$, $y=b+c$, $z=c+a$ und erhalten wegen $1-\frac{2a}{3a+2b+c}=\frac{a+2b+c}{3a+2b+c}=\frac{x+y}{2x+z}$ die äquivalente Ungleichung
+\[\frac{x+y}{2x+z}+\frac{y+z}{2y+x}+\frac{z+x}{2z+y} \geq \frac{3}{2}.\]
+Wieder nach CS ist die linke Seite mindestens gleich
+\[\frac{\big((x+y)+(y+z)+(z+x)\big)^2}{(x+y)(2x+z)+(y+z)(2y+x)+(z+x)(2z+y)},\]
+es genügt also zu zeigen, dass $4(x+y+z)^2 \geq 3((x+y)(2x+z)+(y+z)(2y+x)+(z+x)(2z+y))$ ist. Nach Vereinfachung lautet dies
+$x^2+y^2+z^2 \geq xy+yz+zx$, was nach AM-GM stimmt. Damit ist alles gezeigt.\\
+
+\textbf{2. Lösung}
+
+Für den ersten Schritt kann man auch die gewichtete Ungleichung von Jensen verwenden. Da die Ungleichung homogen ist, können wir $a+b+c=1$ annehmen, sodass $a,b,c$ ein Gewichtssatz ist. Die Funktion $f(x)=\sqrt{x}$ ist konkav für $x>0$, somit gilt nach Jensen für die linke Seite $L$:
+\[L= \csum af\Big( \frac{1}{3a+2b+c}\Big) \leq f\Big(\csum \frac{a}{3a+2b+c}\Big) = \sqrt{A},\]
+mit $A$ wie in der ersten Lösung. Homogenisiert man nun wieder, dann genügt es $A \leq \frac{1}{2}$ zu zeigen. Man kann wie in der ersten Lösung weiterfahren.\\
+
+\bigskip
+
+\item[\textbf{6.}] Ein reguläres $2008$-Eck wird irgendwie mit $2005$ sich nicht schneidenden Diagonalen in lauter Dreiecke zerlegt. Bestimme die kleinstmögliche Anzahl nicht gleichschenkliger Dreiecke, die in einer solchen Zerlegung auftreten können.\\
+
+\textbf{1. Lösung}
+
+Wir nennen ein gleichschenkliges Dreieck gut und ein nicht gleichschenkliges schlecht. Für eine natürliche Zahl $n$ bezeichne $n^{(2)}$ die Anzahl Einsen in der Binärdarstellung von $n$. Wir werden allgemeiner zeigen, dass in jeder Triangulierung eines regulären $n$-Ecks mindestens $n^{(2)}-2$ schlechte Dreiecke vorkommen. Dazu überlegt man sich zuerst leicht Folgendes:
+
+\begin{lem}
+Für beliebige natürliche Zahlen $a,b$ gilt $a^{(2)}+b^{(2)} \geq (a+b)^{(2)}$ mit Gleichheit genau dann, wenn bei der Addition $a+b$ im Binärsystem keine Überträge auftreten.
+\end{lem}
+
+Der Hauptschritt besteht aus folgendem Resultat:
+
+\begin{lem} \label{Segment}
+In jeder Triangulierung eines Segments des $n$-Ecks über einem Bogen aus $k \leq \frac{n}{2}$ Seiten treten mindestens $k^{(2)}-1$ schlechte Dreiecke auf. 
+\end{lem}
+
+\begin{proof}[Beweis]
+Wir verwenden Induktion nach $k \geq 1$. Für den degenerierten Fall $k=1$ ist die Behauptung trivial, wir nehmen daher $k>1$ an. Die begrenzende Diagonale dieses Segments ist Seite eines Dreiecks $\Delta$ in der Triangulierung. Der dritte Eckpunkt von $\Delta$ zerlege den Bogen in zwei Teilbögen der Längen $a,b$ mit $a+b=k$. Nach Induktionsvoraussetzung treten in der Triangulierung dieser Bögen mindestes $a^{(2)}-1$ bzw. $b^{(2)}-1$ schlechte Dreiecke auf. Wir unterscheiden zwei Fälle:
+\begin{enumerate}
+\item[(i)] $\Delta$ ist schlecht. Dann treten insgesamt mindestens $(a^{(2)}-1)+(b^{(2)}-1)+1 \geq (a+b)^{(2)}-1=k^{(2)}-1$ schlechte Dreiecke auf.
+\item[(ii)] $\Delta$ ist gut. Wegen $k \leq \frac{n}{2}$ muss dann $a=b=\frac{k}{2}$ sein. Die Anzahl schlechter Dreiecke ist daher wieder mindestens $(a^{(2)}-1)+(b^{(2)}-1)=2(k^{(2)}-1) \geq k^{(2)}-1$.
+\end{enumerate}
+\end{proof}
+
+Wir kommen nun zum eigentlichen Beweis und unterscheiden wieder zwei Fälle.
+\begin{enumerate}
+\item[(a)] Eine der Diagonalen geht durch den Mittelpunkt des $n$-Ecks. In diesem Fall ist $n=2k$ gerade und nach Lemma \ref{Segment} ist die Anzahl schlechter Dreiecke mindestens $2(k^{(2)}-1)=2(n^{(2)}-1) > n^{(2)}-2$.
+\item[(b)] Der Mittelpunkt liegt im Inneren eines Dreiecks $\Delta$, dessen Eckpunkte den Rand des $n$-Ecks in drei Bögen der Längen $a,b,c$ mit $a+b+c$ unterteilt. Ist $\Delta$ schlecht, dann ist die Anzahl schlechter Dreiecke mindestens $(a^{(2)}-1)+(b^{(2)}-1)+(c^{(2)}-1)+1 \geq (a+b+c)^{(2)}-2=n^{(2)}-2$. Ist $\Delta$ jedoch gut, dann sind zwei der drei Zahlen $a,b,c$ gleich, oBdA sei $a=b$. In diesem Fall ist die Anzahl schlechter Dreiecke mindestens $2a^{(2)}+c^{(2)}-3 \geq ((2a)^{(2)}+1)+c^{(2)}-3 \geq n^{(2)}-2$.
+\end{enumerate}
+
+Wegen $2008^{(2)}=7$ enthält also jede Triangulierung mindestens 5 schlechte Dreiecke. Zum Schluss konstruieren wir noch eine Beispiel mit 5 schlechten Dreiecken. Man überlegt sich leicht, dass jedes Segment über einem Bogen, dessen Länge eine Zweierpotenz ist, ohne schlechte Dreiecke trianguliert werden kann. Tut man dies für aufeinanderfolgende Sektoren der Längen 1024, 512, 256, 128, 64, 16 und 8, dann lässt sich das verbleibende 7-Eck natürlich mit 5 (schlechten) Dreiecken triangulieren. Damit ist alles gezeigt.\\
+
+\textbf{2. Lösung}
+
+Wir geben ein zweites Argument, dass mindestens $n^{(2)}-2$ schlechte Dreiecke existieren. 
+
+\begin{lem}
+\begin{enumerate}
+Sei $k \leq \frac{n}{2}$ eine natürliche Zahl.
+\item[\emph{(a)}] Lässt sich ein Segment des $n$-Ecks über einem Bogen aus $k$ Seiten ohne schlechte Dreiecke triangulieren, dann ist $k$ eine Zweierpotenz.
+\item[\emph{(b)}] Lässt sich ein Segment des $n$-Ecks über einem Bogen aus $k$ Seiten mit $s$ schlechten Dreicken triangulieren, dann auch jedes Segment über einem Bogen aus $2k$ Seiten.
+\end{enumerate} 
+\end{lem}
+
+\begin{proof}[Beweis]
+Für (a) verwenden wir Induktion nach $k$, der Fall $k=1$ ist trivial. Die begrenzende Diagonale dieses Segments ist Seite eines gleichschenkligen Dreiecks $\Delta$ in der Triangulierung, und wegen $k \leq \frac{n}{2}$ muss sie die Basis von $\Delta$ sein. Der dritte Eckpunkt von $\Delta$ zerlegt den Bogen also in zwei gleich grosse Teilbögen, deren Länge nach Induktionsvoraussetzung eine Zweierpotenz ist. Somit ist auch $k$ eine Zweierpotenz.\\
+Für (b) ``strecke'' man den Sektor mitsamt seiner Triangulierung um den Faktor 2 und füge am Rand $k$ kleine gleichschenklige Dreiecke hinzu.\\
+\end{proof}
+
+Wir betrachten nun eine Triangulierung des $n$-Ecks mit der \emph{kleinstmöglichen} Anzahl schlechter Dreiecke. Kommt gar kein schlechtes Dreieck vor, dann wählen wir ein Dreieck, das den Mittelpunkt des $n$-Ecks im Innern oder auf dem Rand enthält, und wenden (a) auf die drei Segmente an, die durch dessen Seiten begrenzt werden. Die Länge der zugehörigen Bögen sind also Zweierpotenzen und zwei davon sind gleich. Daraus folgt $n^{(2)} \leq 2$. Wir nehmen nun an, es existiere ein schlechtes Dreieck und bezeichnen die konvexe Hülle aller schlechten Dreiecke mit $H$, dies ist ein konvexes Polygon, dessen Eckpunkte auch Eckpunkte des $n$-Ecks sind. Sei $\Delta$ ein beliebiges gutes Dreieck. Die beiden gleich grossen Seiten begrenzen Segmente der Länge $<\frac{n}{2}$, und wir behaupten, dass in diesen Segmente kein schlechtes Dreieck vorkommt. Denn nach (b) lässt sich die Vereinigung $S$ der beiden Segmente und $\Delta$ mit gleich vielen schlechten Dreiecken triangulieren, wie einer der beiden Segmente. Aus der Minimalität folgt also, dass das jeweils andere Segment gar kein schlechtes Dreieck enthalten kann. Dies zeigt, dass $H$ und $S$ keinen gemeinsamen inneren Punkt haben und insbesondere $\Delta$ nicht in $H$ enthalten ist. Da $\Delta$ beliebig war, besteht $H$ also ausschliesslich aus schlechten Dreiecken. Die Seiten von $H$ begrenzen somit Segmente, die aus lauter guten Dreiecken bestehen, deren Länge ist nach (a) daher eine Zweierpotenz. Die Summe dieser Längen ist gleich $n$ und daher besitzt $H$ mindestens $n^{(2)}$ Seiten und die Triangulierung mindestens $n^{(2)}-2$ schlechte Dreiecke.\\
+
+\emph{Bemerkung:} Die kleinstmögliche Anzahl schlechter Dreiecke ist tatsächlich $n^{(2)}-2$ (respektive 0 falls $n$ eine Zweierpotenz ist). Die obige Konstruktion für $n=2008$ überträgt sich sofort auf den allgemeinen Fall. Die zweite Lösung gibt zudem sehr genaue Information über die Lage der schlechten Dreiecke in einer optimalen Triangulierung. \\
+
+\bigskip
+
+\item[\textbf{7.}] Seien $a,b$ natürliche Zahlen. Zeige, dass man die ganzen Zahlen mit drei Farben färben kann, sodass zwei ganze Zahlen mit Differenz $a$ oder $b$ stets verschieden gefärbt sind.\\
+
+\textbf{1. Lösung} 
+
+Wir färben $0$ beliebig und konstruieren die gesuchte Färbung zuerst induktiv für die positiven ganzen Zahlen. Nehme an, $0,1,\ldots, n-1$ seien schon gefärbt. Wir können jetzt $n$ einfach so färben, dass keine der beiden Zahlen $n-a$ und $n-b$ (sofern diese überhaupt schon gefärbt sind) dieselbe Farbe besitzt. Da wir drei Farben zur Verfügung haben, ist dies stets möglich. 
+
+Wir können nun dasselbe Verfahren anwenden, um die negativen ganzen Zahlen induktiv zu färben. Seien nämlich $-n+1,-n+2,\ldots$ schon gefärbt, dann färben wir $-n$ so, dass keine der beiden Zahlen $-n+a$ und $-n+b$ dieselbe Farbe besitzt. Damit sind wir fertig.\\
+
+\textbf{2. Lösung}
+
+Wir konstruieren eine $(a+b)$-periodische Färbung mit den geforderten Eigenschaften. Dazu können wir $a \leq b$ annehmen und setzen $b=na+r$ mit $0\leq r<a$ (Division mit Rest). Wir unterteilen die Zahlen $1,2, \ldots, a+b$ wie folgt in Blöcke:
+\begin{eqnarray*}
+&& \{1,2,\ldots, a\} \cup \{a+1,a+2,\ldots, 2a\} \cup \ldots \cup \{(n-1)a+1,(n-1)a+2,\ldots, na\} \\
+&& \cup \; \{na+1,na+2,\ldots, na+r=b\} \cup \{b+1, b+2, \ldots, a+b\}.
+\end{eqnarray*}
+Jeder dieser Blöcke besteht aus $a$ aufeinanderfolgenden Zahlen, ausser der zweitletzte, welcher aus $r$ solchen besteht (im Fall $r=0$ ist er leer). Wir färben nun diese Blöcke abwechselnd rot und blau ausser dem letzten, den färben wir grün, und setzen diese Färbung $(a+b)$-periodisch fort. Offenbar haben je zwei Zahlen mit Differenz $a$ verschiedene Farben. Seien andererseits $x$ und $y=x+b$ zwei Zahlen mit Differenz $b$ und derselben Farbe. Wegen der Periodizität haben dann auch $y$ und $x+a+b=y+a$ dieselbe Farbe und Differenz $a$, ein Widerspruch.\\
+
+\textbf{3. Lösung} 
+
+Wir nennen eine Färbung, die die Bedingungen der Aufgabe erfüllt, eine $(a,b)$-\emph{Färbung}. Ist $\ggT(a,b)=d>1$, dann können wir aus einer $(\frac{a}{d},\frac{b}{d})$-Färbung durch ``Blockbildung'' eine $(a,b)$-Färbung konstruieren: Färbe nämlich $kd,kd+1,\ldots,kd+(d-1)$ alle mit der entsprechenden Farbe von $k$ in einer $(\frac{a}{d},\frac{b}{d})$-Färbung.
+
+Wir können also annehmen, dass $a$ und $b$ teilerfremd sind, ausserdem sei $a>b$ (der Fall $a=b=1$ ist trivial). Wir betrachten zuerst den Fall $a=b+1$. Wir unterteilen $\BZ$ in Blöcke von je $b$ aufeinanderfolgenden Zahlen und färben diese Blöcke abwechselnd rot, blau und grün. Zwei ganze Zahlen mit Differenz $b$ liegen stets in aufeinanderfolgenden Blöcken und sind daher verschieden gefärbt. Zwei Zahlen mit Differenz $a$ liegen in zwei Blöcken, die aufeinander folgen, oder die einen einzigen Block zwischen sich haben, diese Zahlen sind also ebenfalls verschieden gefärbt.
+
+Sei nun $a>b+1$. Wir färben die ganzen Zahlen bezüglich ihrer Restklasse modulo $n=a-b \geq 2$. Es gilt $a \equiv b$ (mod $n$) und wir bezeichnen den gemeinsamen Rest von $a$ und $b$ bei Division durch $n$ mit $r$. Es genügt sicher, wenn wir eine Färbung konstruieren, sodass zwei Restklassen $\underline{x}$ und $\underline{y}$ mit $x-y \equiv r$ (mod $n$) stets verschieden gefärbt sind. Da $r$ und $n$ teilerfremd sind, durchlaufen die Zahlen $0,r,2r,\ldots, (n-1)r$ alle Restklassen modulo $n$ genau einmal. Wir färben diese daher abwechslungsweise rot und blau, ausser $(n-1)r$, welche wir grün färben. Dies erfüllt alle Bedingungen.\\
+
+\textbf{4. Lösung} 
+
+Wie in der 3. Lösung können wir annehmen, dass $a$ und $b$ teilerfremd sind. Nach dem Satz von Bezout lässt sich jede ganze Zahl in der Form $xa+yb$ schreiben und es ist $xa+yb=x'a+y'b$ genau dann, wenn $x'=x+kb$ und $y'=y-ka$ gilt für eine ganze Zahl $k$. Wir konstruieren nun die gesuchte Färbung in der $xy$-Ebene, das heisst wir färben jedes Paar $(x,y)$ mit einer von drei Farben, sodass folgende Eigenschaften erfüllt sind:
+\begin{enumerate}
+\item[(i)] Die Punkte $(x,y)$ und $(x,y+1)$ haben stets verschiedene Farben, ebenso wie die Punkte $(x,y)$ und $(x+1,y)$, denn diese Punktpaare entsprechen genau den Paaren ganzer Zahlen mit Differenz $a$ oder $b$.
+\item[(ii)] Die Punkte der Form $(x+kb,y-ka)$ haben für alle $k \in \BZ$ dieselbe Farbe, denn sie repräsentieren alle dieselbe ganze Zahl.
+\end{enumerate}
+Dazu färben wir die Punkte $(x,y)$ im vertikalen Streifen $0 \leq x \leq b-1$ mit der Standard-3-Färbung, d.h. entsprechend der Restklasse von $x+y$ (mod 3). Wir verschieben die Färbung dieses Streifen nun um ganzzahlige Vielfache des Vektors $(b,-a)$, diese Verschiebungen überdecken die Ebene lückenlos und überlappungsfrei. Diese Färbung der Ebene erfüllt Punkt (ii) und auch Punkt (i) innerhalb jedes vertikalen Streifens. An den Übergängen zwischen zwei Streifen ist (i) genau dann erfüllt, wenn $b-a \not\equiv 1$ (mod 3) gilt. Folglich liefert diese Konstruktion eine $(a,b)$-Färbung ausser im Fall $b-a \equiv 1$ (mod 3). Ist letzteres aber der Fall, dann gilt $a-b \not \equiv 1$ (mod 3) und somit liefert die gespiegelte Konstruktion mit vertauschten Rollen von $a$ und $b$ eine $(a,b)$-Färbung. Damit ist alles gezeigt.\\
+
+\emph{Bemerkung:} Das Argument der ersten Lösung liefert auch die Verallgemeinerung: 
+
+\emph{Sind $a_1,\ldots, a_n$ natürliche Zahlen, dann lassen sich die ganzen Zahlen mit $n+1$ Farben färben, sodass zwei ganze Zahlen $x,y$ mit $|x-y| \in \{a_1,\ldots, a_n\}$ stets verschieden gefärbt sind.} \\
+
+\bigskip
+
+\item[\textbf{8.}] Sei $ABC$ ein Dreieck und $D$ ein Punkt im Innern der Strecke $BC$. Sei $X$ ein weiterer Punkt im Innern der Strecke $BC$ verschieden von $D$ und sei $Y$ der Schnittpunkt von $AX$ mit  dem Umkreis von $ABC$. Sei $P$ der zweite Schnittpunkt der Umkreise von $ABC$ und $DXY$. Beweise, dass $P$ unabhängig von der Wahl von $X$ ist.\\
+
+\textbf{1. Lösung}
+
+Sei $A'$ die Spiegelung von $A$ an der Mittelsenkrechten von $BC$. Die Gerade $AA'$ ist dann parallel zu $BC$ und $A'$ liegt auf dem Umkreis von $ABC$. Sei $P'$ der zweite Schnittpunkt von $A'D$ mit dem Umkreis von $ABC$. Nun gilt
+\[\angle XYP'=\angle AYP'=\angle AA'P'=\angle CDP'=180^\circ-\angle XDP'\]
+also ist $XYP'D$ ein Sehnenvierreck und $P=P'$. Somit ist $P$ unabhängig von der Wahl von $X$.\\
+
+\begin{figure}[h]
+\centering
+
+\begin{minipage}[t]{7.6cm}
+\centering
+\includegraphics[width=7cm]{imoselektion8}
+\newline (a)
+\end{minipage}
+\quad
+\begin{minipage}[t]{7.6cm}
+\centering
+\includegraphics[width=7cm]{imoselektion8_fall2}
+\newline (b)
+\end{minipage}
+
+\caption{Konstruktionen zur Lösung 2 von Aufgabe 8}
+
+\end{figure}
+
+\textbf{2. Lösung}
+
+Wir nehmen oBdA an, dass $X$ im Innern der Strecke $BD$ liege und betrachten zuerst den Fall, wenn die Punkte $B,Y,P,C$ in dieser Reihenfolge auf dem Umkreis von $\bigtriangleup ABC$ liegen (siehe Abbildung 2 (a)). Seien $\alpha = \angle BDP$, $\beta = \angle PBC$ und $\gamma = ACB$. Da nach Konstruktion $XYPD$ ein Sehnenviereck ist, gilt $\angle PYX = 180^\circ - \alpha$, und weil $AYPC$ ebenfalls ein Sehnenviereck ist, gilt $\angle PCA = \alpha$. Mit dem Peripheriewinkelsatz über der Strecke $PC$ zeigen wir, dass $\angle PAC = \beta$ gilt. Damit haben wir gezeigt, dass die beiden Dreiecke $BPD$ und $APC$ ähnlich sind und schliessen daraus $\angle DPB = \angle CPA$. Ziehen wir von dieser Gleichung den Winkel $\angle DPA$ ab, erhalten wir $\angle CPD = \angle APB$. Mit dem Peripheriewinkelsatz über der Sehne $AB$ sieht man, dass $\angle APB = \gamma$ gilt, also unabhängig von der Wahl von $X$ ist. Der Punkt $P$ ist somit einer der Schnittpunkte des Umkreises von $\bigtriangleup ABC$ und des Ortsboges mit Winkel $\gamma$ über der Strecke $DC$. Einer dieser Schnittpunkte ist $C$ und kann nicht mit $P$ zusammenfallen, weil $X,D$ und $C$ auf einer Geraden liegen. Damit haben wir gezeigt, dass $P$ für alle $X$ mit dem zweiten dieser Schnittpunkte zusammenfällt.\\
+Es bleibt noch der Fall, dass die Punkte $B,P,Y,C$ in dieser Reihenfolge auf dem Umkreis von $\bigtriangleup ABC$ (siehe Abbildung 2(b)). In diesem Fall finden wir $\angle PCA = \angle PYA = \angle PDB$, also ebenfalls $\alpha$. Der Rest funktioniert genau gleich wie oben.\\
+
+\bigskip
+
+\item[\textbf{9.}] Sei $\BR^+$ die Menge der positiven reellen Zahlen. Bestimme alle Funktionen $f: \BR^+ \rightarrow \BR^+$, sodass für alle $x,y>0$ gilt
+\[f(x+f(y))=f(x+y)+f(y).\]
+
+\textbf{1. Lösung}
+
+Offenbar ist $f(x)=2x$ eine Lösung und wir zeigen, dass es die einzige ist. Wir zeigen zuerst, dass $f(z)>z$ gilt für alle $z>0$. Wäre $f(z)=z$, dann folgt mit $y=z$ sofort der Widerspruch $f(x+z)=f(x+z)+f(z)>f(x+z)$. Sei also $f(z)<z$ und setze $x=z-f(z)>0$ und $y=z$ in die Gleichung ein, dann folgt
+\[f(z)=f(z-f(z)+f(z))=f(2z-f(z))+f(z)>f(z),\]
+ein Widerspruch. Wir definieren eine neue Funktion durch $g(z)=f(z)-z$ und haben gerade gezeigt, dass $g: \BR^+ \rightarrow \BR^+$. Die gegebene Gleichung wird nun zu $g(x+y+g(y))=g(x+y)+y$, beziehungsweise mit $z=x+y>y$ zu
+\[g(z+g(y))=g(z)+y \qquad \mbox{für alle } z>y>0.\]
+Daraus folgt sofort, dass $g$ injektiv ist. Für $u,v>0$ wählen wir ein $w>u+v$ und setzen der Reihe nach $z=w+g(u), y=v$ und $z=w, y=u+v$ ein (beachte, dass dabei $z>y$ gilt), dann folgt
+\begin{eqnarray*}
+g(w+g(u)+g(v)) &=& g(w+g(u))+v=g(w)+u+v,\\
+g(w+g(u+v)) &=& g(w)+u+v.
+\end{eqnarray*}
+Da die rechten Seiten der beiden Gleichungen übereinstimmen, folgt aus der Injektivität von $g$ unmittelbar
+\[g(u+v)=g(u)+g(v), \qquad x,y>0.\]
+Somit ist $g$ streng monoton steigend und bekanntlich folgt daraus, dass $g$ von der Form $g(x)=ax$ mit einer positiven Konstanten $a$ ist. Einsetzen zeigt $a=1$, somit ist $f(x)=2x$ wie behauptet.\\
+
+
+\textbf{2. Lösung}
+
+Wie in der ersten Lösung folgt $f(x)>x$ für alle $x>0$. Wir zeigen zunächst, dass $f$ injektiv ist, und nehmen dazu an, es gelte $f(a)=f(b)$ für zwei Zahlen $a>b>0$. Setze $y=a$ respektive $y=b$ in die Gleichung ein, für alle $x>0$ folgt dann
+\[f(x+a)=f(x+f(a))-f(a)=f(x-f(b))-f(b)=f(x+b).\]
+Für $x>a$ gilt also $f(x+c)=f(x)$ mit $c=b-a>0$, somit ist $f$ ab einer bestimmten Stelle periodisch. Dies widerspricht aber der Abschätzung $f(x)>x$ für grosse $x$, Widerspruch.
+
+Seien nun $x,y,z>0$ beliebig. Einerseits gilt
+\begin{eqnarray*}
+f(x+f(y+f(z))) &=& f(x+f(y+z)+f(z)) = f((x+f(z))+f(y+z))\\
+&=& f(x+y+z+f(z))+f(y+z) \\
+&=& f(x+y+2z)+f(y+z)+f(z),
+\end{eqnarray*}
+andererseits aber auch
+\[f(x+f(y+f(z))) = f(x+y+f(z))+f(y+f(z)) = f(x+y+f(z))+f(y+z)+f(z).\]
+Daraus folgt sofort $f(x+y+f(z))=f(x+y+2z)$, wegen der Injektivität von $f$ also $x+y+f(z)=x+y+2z$ und somit schliesslich $f(z)=2z$ für alle $z>0$.\\
+
+
+\textbf{3. Lösung}
+
+Wie in der ersten Lösung folgt $f(x)>x$ für alle $x>0$. Wir benötigen folgendes
+
+\begin{lem} \label{Sekante}
+Sei $n$ eine ganze Zahl und seien $x,y$ positive reelle Zahlen mit
+\begin{equation} \label{Bedingung}
+x-y > 
+\begin{cases}
+0 & n>0, \\
+-n(f(y)-y) & n<0,
+\end{cases}
+\end{equation}
+dann gilt
+\[f(x+n(f(y)-y)) = f(x)+nf(y).\]
+\end{lem}
+
+\begin{proof}[Beweis]
+Dies ist trivial für $n=0$. Für $n>0$ verwende man Induktion nach $n$ und ersetze in der ursprünglichen Gleichung $x$ durch $x-y+(n-1)(f(y)-y) \geq x-y>0$. Für $n<0$ verwende man ebenfalls Induktion (diesmal abwärts) und ersetze $x$ durch $x-y-n(f(y)-y)>0$.\\
+\end{proof}
+
+
+Wir behaupten nun, dass die Funktion $h(x) = \frac{f(x)}{f(x)-x}$ konstant ist auf $\BR^+$. Nehme an, dies sei nicht der Fall und wähle $a,b>0$ mit $h(a)<h(b)$. Da die positiven rationalen Zahlen dicht liegen in $\BR^+$, existieren natürliche Zahlen $k,l$ mit $\frac{f(a)}{f(b)} < \frac{k}{l} < \frac{f(a)-a}{f(b)-b}$. Wir wählen ein festes $x>\max \{a,b\}$ und erhalten mit dem Lemma für jede natürliche Zahl $m$ die Gleichung
+\begin{eqnarray*}
+f \Big(x+mk(f(a)-a)-ml(f(b)-b)\Big) &=& f\Big(x+mk(f(a)-a)\Big)-mlf(b) \\
+&=& f(x) +m(kf(a)-lf(b)),
+\end{eqnarray*}
+dabei ist die Bedingung (\ref{Bedingung}) wegen $x>a,b$ und $k(f(a)-a)>l(f(b)-b)$ bei beiden Anwendungen erfüllt. Für grosse $m$ wird die rechte Seite von obiger Gleichung wegen $kf(a)<lf(b)$ aber negativ, Widerspruch. Folglich ist also $h$ konstant, und eine Umformung zeigt, dass auch $\frac{f(x)}{x}$ konstant sein muss. Daher existiert eine positive Konstante $c$, sodass für alle $x>0$ gilt $f(x)=cx$. Einsetzen zeigt $c=2$.\\
+
+
+\emph{Bemerkung:} Die dritte Lösung erscheint sehr technisch, ist aber durch folgende geometrische Überlegungen motiviert: Im Fall $n=1$ besagt Lemma \ref{Sekante} folgendes: Ist $x$ gross genug (grösser als $y$), dann ist neben $(x,f(x))$ jeweils auch $(x+(f(y)-y), f(x)+f(y))$ ein Punkt auf dem Graphen von $f$. Die Sekante zwischen diesen Punkten hat die von $x$ unabhängige Steigung $h(y)=\frac{f(y)}{f(y)-y}$. Wäre nun $h$ nicht konstant, dann könnte man von einem festen Punkt aus mit einer gewissen Steigung auf dem Graphen von $f$ schrittweise nach rechts wandern und mit einer grösseren Steigung schrittweise wieder zurück. Wenn man dies lange genug macht, erreicht man aber einen Punkt $(u,v)$ mit $v<0<u$, der sicher nicht auf dem Graphen liegen kann, ein Widerspruch. Die Ausführung dieses Arguments beinhaltet gewisse Tücken, zum Beispiel müssen die Anzahl Schritte vor und zurück sehr genau aufeinander abgestimmt werden, dies geschieht in obiger Lösung mit der rationalen Zahl $\frac{k}{l}$.\\
+
+
+\bigskip
+
+\item[\textbf{10.}] Sei $P(x)=x^4-2x^3+px+q$ ein Polynom mit reellen Koeffizienten, dessen Nullstellen alle reell sind. Zeige, dass die grösste dieser Nullstellen im Intervall $[1,2]$ liegt.\\
+
+\textbf{Lösung}
+
+Seien $a, b, c, d$ diese Nullstellen. Nach Vieta gilt $a+b+c+d=2$ und $ab+ac+ad+bc+bd+cd=0$. Quadriert man die erste dieser Gleichungen und subtrahiert das Doppelte der zweiten, dann folgt $a^2+b^2+c^2+d^2=4$. Wir können $a \geq b \geq c \geq d$ annehmen und müssen $1\leq a \leq 2$ zeigen. Wäre $a>2$, dann auch $a^2+b^2+c^2+d^2 \geq a^2> 4$, Widerspruch. Wir nehmen nun $a<1$ an und unterscheiden zwei Fälle. Ist $d \leq -1$, dann folgt $a+b+c+d < 1+1+1+(-1)=2$, Widerspruch. Ist $d>-1$, dann gilt $a,b,c,d \in\; ]-1,1[$ und somit $a^2+b^2+c^2+d^2<4$, Widerspruch.\\
+
+\emph{Bemerkung:} Die beiden Extrema $a=1$ und $a=2$ werden auch wirklich angenommen, und zwar nur für die Polynome $P(x)=x^4-2x^3+2x-1$ respektive $P(x)=x^4-2x^3$.\\
+
+
+\bigskip
+
+
+\item[\textbf{11.}] Sei $A=(a_1,a_2,\ldots,a_n)$ eine Folge ganzer Zahlen. Der \emph{Nachfolger} von $A$ ist die Folge $A'=(a'_1,a'_2,\ldots,a'_n)$ mit 
+\[a'_k = |\{i<k \; | \; a_i<a_k\}|-|\{i>k \; | \; a_i>a_k\}|.\]
+Sei $A_0$ eine endliche Folge ganzer Zahlen und für $k \geq 0$ sei $A_{k+1}=A'_k$ der Nachfolger von $A_k$. Zeige, dass eine natürliche Zahl $m$ existiert mit $A_m=A_{m+1}$.\\
+
+
+\textbf{Lösung}
+
+Wir nennen ein Paar $(i,j)$ von Indizes mit $i<j$ \emph{konstant} bzw. \emph{steigend}, falls $a_i=a_j$ bzw. $a_i<a_j$ gilt. Es gilt folgendes:
+\begin{enumerate}
+\item[(i)] Ist $(i,j)$ steigend, dann bleibt es auch steigend. Denn gilt $a_i<a_j$, dann ist jedes Folgeglied rechts von $j$, das grösser als $a_j$ ist, auch grösser als $a_i$ und jedes Folgeglied links von $i$, das kleiner als $a_i$ ist, auch kleiner als $a_j$. Zudem ist aber noch $a_i$ links von $j$ und kleiner als $a_j$ und analog $a_j$ rechts von $i$ und grösser als $a_i$. Somit gilt $a'_i<a'_j$.
+\item[(ii)] Ist $(i,j)$ ein konstantes Paar, dann wird es im Nachfolger steigend, ausser im Fall $a_i=a_{i+1}= \ldots =a_j$ wo es für immer konstant bleibt. In der Tat zeigt dieselbe Überlegung wie in (i) dass $a'_i \leq a'_j$ gilt. Falls nun ein Index $k$ existiert mit $i<k<j$ und $a_k \neq a_i=a_j$, dann ist $a_k$ ein zusätzliches Folgeglied, das entweder rechts von $i$ steht und grösser als $a_i$ ist oder links von $j$ steht und kleiner als $a_j$ ist. In beiden Fällen gilt dann aber $a'_i<a'_j$.
+\end{enumerate}
+Sei nun $S$ die Anzahl steigender Paare und sei $T$ die Anzahl konstanter Paare. Wir haben gezeigt, dass $S$ und $T$ während den Iterationen monoton steigen, andererseits sind beide Grössen nach oben beschränkt und nehmen nur ganzzahlige Werte an. Folglich ändern sie sich irgendwann nicht mehr. Das bedeutet aber, dass sich die gegenseitige Grössenbeziehung der Folgeglieder ab diesem Zeitpunkt nicht mehr ändert. Das heisst, es ändert sich nichts mehr an der Anzahl Folgeglieder, die kleiner oder grösser als ein festes $a_k$ sind und links oder rechts von $k$ stehen, mit anderen Worten: nach einem weiteren Schritt ändert sich die Folge nicht mehr.\\
+
+
+\emph{Bemerkung:} Indem man auch noch die ``fallenden'' Paare in die Betrachtungen mit einbezieht, kann man leicht zeigen, dass die Folge monoton steigend werden muss, bevor sie sich stabilisiert.
+
+Ausserdem lässt sich aus obigem Argument eine effektive Schranke für das kleinste $m$ mit $A_m=A_{m+1}$ herausschälen, diese Schranke wächst allerdings quadratisch in $n$. Computerexperimente zeigen jedoch, dass $m$ höchstens \emph{linear} in $n$ zu wachsen scheint, für $n=11$ zum Beispiel ist stets $m \leq 6$. Wir haben keine Erklärung für dieses Phänomen.\\
+
+
+\bigskip
+
+\item[\textbf{12.}] Seien $x,y,n$ natürliche Zahlen mit $x \geq 3$, $n\geq 2$ und
+\[x^2+5=y^n.\]
+Zeige, dass jeder Primteiler $p$ von $n$ die Kongruenz $p \equiv 1$ (mod $4$) erfüllt.\\
+
+\textbf{Lösung}
+
+Ist $n=2k$ gerade, dann ist $5=(y^k)^2-x^2$ Differenz von zwei Quadraten. Dies ist nur für $y^k=3$ und $x=2$ möglich, im Widerspruch zu $x \geq 3$. Folglich ist jeder Primteiler von $n$ ungerade.
+
+Ist $x$ ungerade, dann ist die linke Seite durch 2 aber nicht durch $4$ teilbar, im Widerspruch zu $n\geq 2$. Folglich ist $x$ gerade und somit $y$ ungerade. Daraus folgt weiter $y \equiv y^n = x^2+5 \equiv 1$ (mod 4).
+
+Wir benötigen nun:
+
+\begin{lem}
+Sind $a$, $b$ ganze Zahlen und ist $p \geq 3$ ein Primteiler von $a^2+b^2$, dann sind entweder $a$ und $b$ durch $p$ teilbar oder es gilt $p \equiv 1$ $(\mod 4)$.
+\end{lem}
+
+\begin{proof}[Beweis]
+Wir können $p \notdiv a,b$ annehmen. Nach Voraussetzung gilt dann $(ab^{-1})^2 \equiv -1$, also auch $(ab^{-1})^4 \equiv 1$ (mod $p$). Wegen $p \geq 3$ ist die Ordnung von $ab^{-1}$ modulo $p$ folglich 4. Andererseits ist diese Ordnung ein Teiler von $\phi(p)=p-1$, daraus folgt $p \equiv 1$ (mod 4) wie gewünscht.
+\end{proof}
+
+Sei nun $p$ ein Primteiler von $n$. Da $p$ und $y$ ungerade sind, ist auch $N=y^{p-1}+\ldots +y+1$ ungerade. Wegen
+\[N=y^{p-1}+\ldots +y+1 \div y^p-1 \div y^n-1=x^2+4\]
+und dem Lemma erfüllt jeder Primteiler $q$ von $N$ die Kongruenz $q \equiv 1$ (mod 4), somit gilt auch $N \equiv 1$ (mod 4). Andererseits ist wegen $y \equiv 1$ (mod 4) aber auch $N \equiv 1+ \ldots +1 = p$ (mod 4). Dies zeigt $p \equiv 1$ (mod 4) wie gewünscht.
+
+
+
+
+
+
+\end{enumerate}
+\end{document}

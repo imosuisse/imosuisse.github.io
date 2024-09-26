@@ -1,0 +1,360 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\oddsidemargin=0cm \headheight=-2.1cm
+\textwidth=16.4cm \textheight=25.7cm
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+\newcommand{\de}{\triangle}
+
+% Schriftabkürzungen
+
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{Satz}[thm]{Satz}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Korollar}
+\newtheorem{alg}[thm]{Algorithmus}
+\newtheorem{bsp}{Beispiel}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+\renewcommand{\phi}{\varphi}
+\newcommand{\eps}{\varepsilon}
+
+\newcommand{\pfeil}{\quad \Longrightarrow \quad}
+
+\newcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\nequiv}{\not \equiv}
+\newcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\Mod}[1]{(\mod\;#1)}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\newcommand{\sgn}{\mathop{\rm sign}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+\newcommand{\gaussk}[1]{\lfloor #1 \rfloor}
+\newcommand{\frack}[1]{\{ #1 \}}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+\newcommand{\id}{\mathrm{id}}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge IMO - Selektion 1999 Lösungen} \\
+\end{center}
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{1.}] Zwei Kreise schneiden sich in den beiden Punkten $M$ und $N$. Sei $A$ ein weiterer Punkt auf dem
+ersten Kreis, verschieden von $M$ und $N$. Die Geraden $AM$ und $AN$ schneiden den zweiten Kreis nochmals in den
+Punkten $B$ und $C$. Zeige, dass die Tangente an den ersten Kreis im Punkt $A$ parallel zur Geraden $BC$ ist.\\
+
+\textbf{Lösung}
+
+Sei $P$ ein Punkt auf der Tangente an den ersten Kreis durch $A$, sodass $P$ und $N$ auf verschiedenen Seiten
+der Geraden $AM$ liegen. Nach dem Tangentenwinkelsatz gilt $\wi PAM = \wi ANM$. Da $MNCB$ ein
+Sehnenviereck ist, gilt ausserdem $\wi CBM = 180^\circ - \wi CNM = \wi ANM$. Zusammen ergibt das $\wi PAB= \wi
+CBA$, also sind die Tangente und die Gerade $BC$ nach dem Stufenwinkelsatz parallel.\\
+
+\bigskip
+
+
+\item[\textbf{2.}] Ist es möglich, die Menge $\{1,2,\ldots,33\}$ derart in 11 disjunkte Teilmengen zu zerlegen,
+dass jede Teilmenge 3 Elemente enthält, von denen eines die Summe der beiden anderen ist?\\
+
+\textbf{Lösung}
+
+Nein dies ist nicht möglich. Nehme an, doch. Jede der 11 Teilmengen ist dann von der Form $\{a,b,a+b\}$,
+insbesondere ist die Summe $2(a+b)$ dieser drei Elemente gerade. Da die Teilmengen disjunkt sind, ist daher auch
+die Summe aller 33 Elemente gerade. Im Widerspruch dazu ist aber
+\[1+2+\ldots+33 = \frac{34\cdot 33}{2}=17\cdot 33\]
+ungerade.\\
+
+\bigskip
+
+
+\item[\textbf{3.}] Bestimme alle Funktionen $f:\BR\setminus\{0\} \rightarrow\BR$, für die gilt
+\[\frac{1}{x}f(-x)+f\left(\frac{1}{x}\right)=x\qquad \forall x \in \BR\setminus\{0\}.\]
+
+\textbf{Lösung}
+
+Für $x \neq 0$ können wir in der Gleichung $x$ durch $-1/x$ ersetzen und erhalten
+\begin{equation}
+-xf\left(\frac{1}{x}\right)+f(-x)=-\frac{1}{x}.
+\end{equation}
+Multipliziert man die ursprüngliche Gleichung mit $x$ und addiert sie zu (1), dann folgt $2f(-x)=x^2-1/x$.
+Ersetzt man hier schliesslich noch $x$ durch $-x$, erhält man
+\[f(x)=\frac{1}{2}\left(x^2+\frac{1}{x}\right),\qquad \forall x \in \BR\setminus\{0\}.\]
+Man rechnet leicht nach, dass dies tatsächlich eine Lösung der ursprünglichen Gleichung ist.\\
+
+\bigskip
+
+
+\item[\textbf{4.}]  Bestimme alle reellen Lösungen $(x,y,z)$ des Systems
+\[\frac{4x^2}{1+4x^2}=y,\qquad \frac{4y^2}{1+4y^2}=z,\qquad \frac{4z^2}{1+4z^2}=x.\]
+
+\textbf{Lösung}
+
+Offensichtlich sind die Tripel $(x,y,z)=(0,0,0)$ und $(x,y,z)=(\frac{1}{2},\frac{1}{2},\frac{1}{2})$ Lösungen.
+Wir zeigen, dass es die einzigen sind. Setze $f(t)=4t^2/(1+4t^2)$. Es gilt $f(t) \geq 0$ für alle $t \in \BR$,
+also sind $x,y,z$ nichtnegativ. Ausserdem gilt
+\[f(t) \leq t, \qquad \mbox{für alle $t \geq 0$.}\]
+Dies ist nämlich äquivalent zu $4t^2 \leq t(1+4t^2)$ (beachte, dass der Nenner von $f(t)$ positiv ist), und dies
+wiederum zu $t(2t-1)^2 \geq 0$. Letzteres ist für $t \geq 0$ richtig und Gleichheit gilt nur für $t=0$ und
+$t=\frac{1}{2}$. Nehme nun an, es gäbe eine Lösung des Systems, so dass $x \neq 0, \frac{1}{2}$ ist. Nach obigen
+Überlegungen ist dann
+\[x=f(z)\leq z=f(y)\leq y=f(x)<x,\]
+wobei in der letzten Abschätzung strikte Ungleichheit gilt. Dies ist ein Widerspruch. Also ist $x=0$ oder $x=
+\frac{1}{2}$ und durch Einsetzen rechnet man leicht nach, dass dies zu den beiden Lösungen oben führt.\\
+
+\bigskip
+
+
+\item[\textbf{5.}] Es sei $ABCD$ ein Rechteck und $P$ sei ein Punkt auf der Geraden $CD$. $M$ und $N$ seien die
+Mittelpunkte von $AD$ und $BC$. Die Gerade $PM$ schneide $AC$ in $Q$. Zeige, dass $MN$ die Winkelhalbierende des
+Winkels $\wi QNP$ ist.\\
+
+\textbf{Lösung}
+
+Sei $S$ der Schnittpunkt von $AB$ und $QN$. Wir zeigen im Folgenden, dass $\frac{AS}{SB} = \frac{DP}{PC}$ gilt. Daraus folgt offensichtlich, dass $\de MSN$ und $\de MPN$ kongruent sind und somit wären wir fertig. \\
+Die Punkte $S,N$ und $Q$ liegen nach Konstruktion auf einer Geraden, somit gilt nach Menelaos im Dreick $ABC$
+$$ \frac{AS}{SB} \frac{BN}{NC} \frac{CQ}{QA} = -1 \quad \Leftrightarrow \quad \frac{AS}{SB} = \frac{QA}{QC}. $$
+Ebenfalls liegen die Punkte $P,Q$ und $M$ auf einer Geraden und nach Menelaos im Dreieck $DCA$ gilt
+$$ \frac{DP}{PC} \frac{CQ}{QA} \frac{AM}{MD} = -1 \quad \Leftrightarrow \quad \frac{DP}{PC} = \frac{QA}{QC} = \frac{AS}{SB}. $$
+
+\bigskip
+
+\item[\textbf{6.}] Es seien $m$ und $n$ zwei positive ganze Zahlen, sodass $m^2+n^2-m$ durch $2mn$ teilbar ist.
+Zeige, dass $m$ eine Quadratzahl ist.\\
+
+\textbf{Lösung}
+
+Wir können annehmen, dass $m>1$ gilt. Für eine Primzahl $p$ und eine ganze Zahl $x$ bezeichne $\ord_p(x)$ die
+grösste ganze Zahl $a$, sodass $x$ durch $p^a$ teilbar ist (der sogenannte $p$-Exponent von $x$). Sei $p$ ein
+Primteiler von $m$ und sei $a=\ord_p(m)>0$ und $b=\ord_p(n)$. Da $p$ ein Teiler ist von $m^2+n^2-m$, ist auch
+$n$ durch $p$ teilbar und daher $b>0$. Es gilt $\ord_p(2mn)=a+b$ für $p \geq 3$ und $=a+b+1$ für $p=2$. Nach
+Voraussetzung muss gelten
+\[\ord_p(2mn) \leq \ord_p(m^2+n^2-m).\]
+Es gilt $\ord_p(m^2)=2a>a$. Wäre nun $a \neq 2b$, dann folgt daraus, dass $\ord_p(m^2+n^2-m)=\min(a,2b)\leq a
+<a+b$, ein Widerspruch. Folglich ist $a=2b$ gerade. Da dies für jeden Primteiler von $m$ gilt, ist $m$ eine
+Quadratzahl (genauer ergibt sich $m=n^2$ und man rechnet leicht nach, dass genau die Paare $(m,n)=(4k^2,2k)$ mit
+$k \neq 0$ die Bedingung der Aufgabe erfüllen).\\
+
+\bigskip
+
+
+\item[\textbf{7.}] Ein Quadrat ist in Rechtecke zerlegt, deren Seiten parallel zu den Quadratseiten liegen. Für
+jedes dieser Rechtecke wird das Verhältnis seiner kürzeren Seite zu seiner längeren gebildet. Zeige, dass die
+Summe dieser Verhältnisse mindestens 1 beträgt.\\
+
+\textbf{Lösung}
+
+Das Quadrat habe Seitenlänge $s$ und sei in die Rechtecke $R_i$ mit Seitenlängen $a_i \leq b_i$ zerlegt. Die
+Summe der Flächen aller Rechtecke $R_i$ ist gleich der Fläche des Quadrates, also gleich $s^2$. Dies ergibt
+\[s^2=\sum_i a_i\cdot b_i =\sum_i \frac{a_i}{b_i}\cdot b_i^2 \stackrel{(*)}{\leq} s^2\sum_i \frac{a_i}{b_i}, \]
+wobei wir bei (*) benützt haben, dass $b_i \leq s$ ist für alle $i$. Kürzt man dies mit $s^2$, ergibt sich das
+Gewünschte.\\
+
+\bigskip
+
+
+\item[\textbf{8.}] Bestimme alle ganzen Zahlen $n$, für die es positive reelle Zahlen $0<a_1 \leq a_2 \leq
+\ldots \leq a_n$ gibt mit
+\[\sum_{k=1}^{n} a_k=96,\qquad \sum_{k=1}^{n} a_k^2=144,\qquad \sum_{k=1}^{n} a_k^3=216.\]
+
+\textbf{Lösung}
+
+Für positive Zahlen $a_k$ gilt nach CS
+\[\left(\sum_{k=1}^{n} a_k \right) \left(\sum_{k=1}^{n} a_k^3 \right) \geq \left(\sum_{k=1}^{n} a_k^2\right)^2.\]
+Setzt man hier die gegeben Werte für die drei Summen ein, dann gilt Gleichheit. Nach den allgemeinen
+Gleichheitsbedingungen für CS gibt es also eine positive Zahl $\lambda$ mit $a_k^3=\lambda^2 a_k$ für $1 \leq k
+\leq n$. Dies ist äquivalent zu $a_k^2=\lambda^2$, also zu $a_k =\lambda$, da alle $a_k$ positiv sind. Setzt man
+$a_1=\ldots=a_n=\lambda$ in die drei Gleichungen ein, dann folgt
+\[n\lambda = 96,\qquad n\lambda^2=144,\qquad n\lambda^3=216.\]
+Die einzige Lösung ist $\lambda=3/2$ und $n=64$.\\
+
+\bigskip
+
+
+\item[\textbf{9.}] Beweise, dass es zu jedem Polynom $P(x)$ vom Grad 10 mit ganzzahligen Koeffizienten eine (in
+beiden Richtungen) unendliche arithmetische Folge ganzer Zahlen gibt, die keinen der Werte $P(k)$, $k\in \BZ$
+enthält.\\
+
+\textbf{Lösung}
+
+Wir bemerken zuerst, dass die Existenz einer solchen arithmetischen Folge äquivalent dazu ist, dass es
+natürliche Zahlen $a,m$ gibt, sodass $P(x) \not \equiv a$ (mod $m$) gilt für alle $x \in \BZ$. Wir müssen also
+zeigen, dass die Werte von $P$ bei den ganzen Zahlen eine gewisse Kongruenzklasse auslassen.
+
+Für ein Polynom $P$ mit ganzen Koeffizienten gilt $a-b \div P(a)-P(b)$ für alle ganzen Zahlen $a \neq b$. Daraus
+folgt insbesondere, dass für jede natürliche Zahl $m$ und alle ganzen Zahlen $x,y$ gilt
+\[x \equiv y \;\;(\mod m) \quad \Longrightarrow \quad P(x) \equiv P(y) \;\;(\mod m).\]
+Daher wird jede Restklasse (mod $m$), welche $P$ an irgendeiner Stelle annimmt, bereits unter den $m$ Werten
+$P(0),P(1),\ldots,P(m-1)$ angenommen. Es genügt zu zeigen, dass für ein gewisses $m$ zwei dieser Werte
+übereinstimmen (mod $m$), dann muss nämlich eine Restklasse ausgelassen werden.
+
+Für alle $k \geq 1$ gilt $P(k)=P(0)+a_k\cdot k$ für eine ganze Zahl $a_k$. Ist $a_k=0$ für ein $k$, dann setze
+$m=k+1$. Wenn $|a_k|=1$ gilt für alle $k$, dann ist $P(x)/x$ beschränkt, also muss $P$ linear sein, ein
+Widerspruch zur Voraussetzung. Wenn $|a_k|\geq 2$ gilt, dann setze $m=a_k \cdot k>k$, die Werte $P(0)$ und
+$P(k)$ sind dann kongruent (mod $m$).\\
+
+\bigskip
+
+
+\item[\textbf{10.}] Zeige, dass das Produkt von 5 aufeinanderfolgenden natürlichen Zahlen keine Quadratzahl
+ist.\\
+
+\textbf{Lösung}
+
+Je zwei dieser fünf Zahlen haben eine Differenz $\leq 4$. Jede Primzahl $p \geq 5$, die eine dieser Zahlen
+teilt, kann daher keine weitere teilen und muss deshalb mit geradem Exponenten in der Primfaktorzerlegung dieser
+Zahl auftreten. Wir ordnen jeder dieser fünf Zahlen ein Paar $(a,b)$ zu. Dabei ist $a$ gleich 0 oder 1, je
+nachdem ob 2 in der Primfaktorzerlegung dieser Zahl mit geradem oder ungeradem Exponenten auftaucht, und $b$ ist
+ebenfalls gleich 0 oder 1, je nachdem ob 3 in der Primfaktorzerlegung dieser Zahl mit geradem oder ungeradem
+Exponenten auftaucht. Es gibt nur vier mögliche solcher Folgen, nach dem Schubfachprinzip besitzen also zwei der
+fünf Zahlen dieselbe Folge. Nach obigen Ausführungen bedeutet das aber, dass diese Zahlen von der Form $am^2$
+und $an^2$ sind, wobei $a \in \{1,2,3,6\}$ und $m \neq n$. Deren Differenz $a(n+m)(n-m)$ muss $\leq 4$ sein,
+daher ist $a=1,m=1,n=2$ und die fünf Zahlen sind $1,2,3,4,5$. Deren Produkt ist aber keine Quadratzahl.
+
+\end{enumerate}
+\end{document}

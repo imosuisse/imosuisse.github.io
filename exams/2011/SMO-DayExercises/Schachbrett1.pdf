@@ -1,0 +1,242 @@
+%PDF-1.4
+%‚„œ”
+
+1 0 obj
+   << 
+      /Title ()
+      /Author ()
+      /Subject ()
+      /Keywords ()
+      /Creator (FreeHEP Graphics2D Driver)
+      /Producer (org.freehep.graphicsio.b.i Revision: 1.6 )
+      /CreationDate (D:20110323173625+01'00')
+      /ModDate (D:20110323173625+01'00')
+      /Trapped /False
+   >>
+endobj
+
+2 0 obj
+   << 
+      /Type /Catalog
+      /Pages 3 0 R
+      /Outlines 4 0 R
+      /PageMode /UseOutlines
+      /ViewerPreferences 5 0 R
+      /OpenAction [6 0 R /Fit]
+   >>
+endobj
+
+5 0 obj
+   << 
+      /FitWindow true
+      /CenterWindow false
+   >>
+endobj
+
+6 0 obj
+   << 
+      /Parent 3 0 R
+      /Type /Page
+      /Contents 7 0 R
+   >>
+endobj
+
+7 0 obj
+   << 
+      /Length 8 0 R
+   >>
+stream
+.18820 0.0000 0.0000 -.18820 20.000 630.09 cm
+q
+0.0000 0.0000 m
+2949.0 0.0000 l
+2949.0 2493.0 l
+0.0000 2493.0 l
+h
+W
+n
+q
+/Alpha1 gs
+0.0000 0.0000 0.0000 rg
+0.0000 0.0000 0.0000 RG
+1.0000 0.0000 0.0000 1.0000 0.0000 0.0000 cm
+Q
+q
+1.0000 0.0000 0.0000 1.0000 0.0000 0.0000 cm
+0.0000 0.0000 m
+0.0000 2493.0 l
+2949.0 2493.0 l
+2949.0 0.0000 l
+h
+W
+n
+4.6092 0.0000 0.0000 4.6092 0.0000 0.0000 cm
+Q
+q
+4.6092 0.0000 0.0000 4.6092 0.0000 0.0000 cm
+0.0000 0.0000 m
+640.00 0.0000 l
+640.00 541.00 l
+0.0000 541.00 l
+h
+W
+n
+/Alpha1 gs
+1.0000 1.0000 1.0000 rg
+1.0000 1.0000 1.0000 RG
+0.0000 0.0000 m
+640.00 0.0000 l
+640.00 541.00 l
+0.0000 541.00 l
+0.0000 0.0000 l
+h
+f
+/Alpha1 gs
+0.0000 0.0000 0.0000 rg
+0.0000 0.0000 0.0000 RG
+2.5000 w
+1 J
+1 j
+102.00 61.275 m
+102.00 471.28 l
+S
+102.00 471.28 m
+512.00 471.28 l
+S
+512.00 61.275 m
+512.00 471.28 l
+S
+512.00 61.275 m
+102.00 61.275 l
+S
+153.25 61.275 m
+153.25 471.28 l
+S
+204.50 471.28 m
+204.50 61.275 l
+S
+255.75 61.275 m
+255.75 471.28 l
+S
+307.00 471.28 m
+307.00 61.275 l
+S
+358.25 61.275 m
+358.25 471.28 l
+S
+409.50 471.28 m
+409.50 61.275 l
+S
+460.75 61.275 m
+460.75 471.28 l
+S
+512.00 420.02 m
+102.00 420.02 l
+S
+102.00 368.78 m
+512.00 368.78 l
+S
+512.00 317.52 m
+102.00 317.52 l
+S
+102.00 266.28 m
+512.00 266.28 l
+S
+512.00 215.02 m
+102.00 215.02 l
+S
+102.00 163.77 m
+512.00 163.77 l
+S
+102.00 112.52 m
+512.00 112.52 l
+S
+Q
+Q
+
+endstream
+endobj
+
+8 0 obj
+   1342
+endobj
+
+3 0 obj
+   << 
+      /Parent null
+      /Type /Pages
+      /MediaBox [0.0000 0.0000 595.00 791.00]
+      /Resources 9 0 R
+      /Kids [6 0 R]
+      /Count 1
+   >>
+endobj
+
+10 0 obj
+   [/PDF /Text /ImageC]
+endobj
+
+11 0 obj
+   << 
+      /Alpha1
+      << 
+         /ca 1.0000
+         /CA 1.0000
+         /BM /Normal
+         /AIS false
+      >>
+   >>
+endobj
+
+9 0 obj
+   << 
+      /ProcSet 10 0 R
+      /ExtGState 11 0 R
+   >>
+endobj
+
+4 0 obj
+   << 
+      /Type /Outlines
+      /First 12 0 R
+      /Last 12 0 R
+   >>
+endobj
+
+12 0 obj
+   << 
+      /Parent 4 0 R
+      /Title (Page 1 \(untitled\))
+      /Prev null
+      /Next null
+      /Dest [6 0 R /Fit]
+   >>
+endobj
+
+xref
+0 13
+0000000000 65535 f
+0000000016 00000 n
+0000000327 00000 n
+0000002108 00000 n
+0000002539 00000 n
+0000000509 00000 n
+0000000586 00000 n
+0000000675 00000 n
+0000002084 00000 n
+0000002464 00000 n
+0000002279 00000 n
+0000002320 00000 n
+0000002629 00000 n
+
+trailer
+<< 
+   /Size 12
+   /Root 2 0 R
+   /Info 1 0 R
+>>
+
+startxref
+2773
+
+%%EOF

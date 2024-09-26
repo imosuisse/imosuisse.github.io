@@ -1,0 +1,243 @@
+\RequirePackage[l2tabu]{nag}
+
+\newif\ifgerman \newif\iffrench \newif\ifitalian
+% v v v Select language
+\germanfalse
+\frenchtrue
+\italianfalse
+% ^ ^ ^ Select language
+\newif \iftitlepage
+\titlepagefalse
+
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{parskip}
+\usepackage[left=24mm, right=24mm, top=30mm, bottom=20mm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\ifgerman \usepackage[ngerman]{babel}\fi
+\iffrench \usepackage[french]{babel}\fi
+\ifitalian \usepackage[italian]{babel}\fi
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{mathtools}%DeclarePairedDelimiter
+\usepackage{graphicx}
+
+\begingroup %parskip and amsthm fix
+\makeatletter
+   \@for\theoremstyle:=definition,remark,plain\do{%
+     \expandafter\g@addto@macro\csname th@\theoremstyle\endcsname{%
+        \addtolength\thm@preskip\parskip
+     }%
+   }
+\endgroup
+
+\theoremstyle{plain}
+\ifgerman \newtheorem{thm}{Theorem}[section] \fi
+\iffrench \newtheorem{thm}{Théorèm}[section] \fi
+\ifitalian \newtheorem{thm}{Teorema}[section] \fi
+\ifgerman \newtheorem{satz}[thm]{Satz} \fi
+\iffrench \newtheorem{satz}[thm]{Théorèm} \fi
+\ifitalian \newtheorem{satz}[thm]{Teorema} \fi
+\ifgerman \newtheorem{lem}[thm]{Lemma} \fi
+\iffrench \newtheorem{lem}[thm]{Lemme} \fi
+\ifitalian \newtheorem{lem}[thm]{Lemma} \fi
+\ifgerman \newtheorem{cor}[thm]{Korollar} \fi
+\iffrench \newtheorem{cor}[thm]{Corollaire} \fi
+\ifitalian \newtheorem{cor}[thm]{Corollario} \fi
+\ifgerman \newtheorem{alg}[thm]{Algorithmus} \fi
+\iffrench \newtheorem{alg}[thm]{Algorithme} \fi
+\ifitalian \newtheorem{alg}[thm]{Algoritmo} \fi
+\ifgerman \newtheorem{bsp}{Beispiel} \fi
+\iffrench \newtheorem{bsp}{Exemple} \fi
+\ifitalian \newtheorem{bsp}{Esempio} \fi
+\theoremstyle{definition}
+\ifgerman \newtheorem{defn}{Definition}[section] \fi
+\iffrench \newtheorem{defn}{Définition}[section] \fi
+\ifitalian \newtheorem{defn}{Definizione}[section] \fi
+
+\DeclareMathOperator{\ggT}{ggT}
+\DeclareMathOperator{\kgV}{kgV}
+\DeclareMathOperator{\ord}{ord}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\DeclarePairedDelimiter\frack{\{}{\}}
+
+\renewcommand{\phi}{\varphi} %kleines Phi
+\newcommand{\nequiv}{\not \equiv}
+\renewcommand{\div}{\, | \,}
+
+\newcommand{\ndiv}{\mathopen{\mathchoice{\not{|}\,}{\not{|}\,}{\!\not{\:|}}{\not{|}}}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge Sélection IMO 2014} \\
+\medskip Premier examen - 3 mai 2014
+\end{center}
+\vspace{8mm}
+Zeit: 4.5 heures\\
+Chaque exercice vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{1.}] Trouver toutes les fonctions $f: \mathbb{N} \to \mathbb{N}$, telles que pour tous $m,n\in \mathbb{N}$, on ait
+\[m^2+f(n)|mf(m)+n.\]
+
+
+\bigskip
+\bigskip
+
+\item[\textbf{2.}] Soient $2n$ jetons côte à côte, en ligne. Un coup consiste à échanger deux jetons voisins. Combien doit-on effectuer de coups au minimum pour que chaque jeton ait été au moins une fois au début et à la fin de la ligne ?
+
+\bigskip
+\bigskip
+
+\item[\textbf{3.}] Soient $4$ points dans le plan disposés de sorte que les $4$ triangles qu'ils forment possèdent tous le même rayon du cercle inscrit. Montrer que les $4$ triangles sont égaux.
+
+\end{enumerate}
+
+\vspace{15mm}
+\begin{center}
+Bonne chance !
+\end{center}
+
+\pagebreak
+
+
+
+
+\begin{center}
+{\huge Sélection IMO 2014} \\
+\medskip Deuxième examen - 4 mai 2014
+\end{center}
+\vspace{8mm}
+Zeit: 4.5 heures\\
+Chaque exercice vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{4.}] Déterminer tous les polynômes $P$ à coefficients réels tels que pour tout $x \in\mathbb{R}$, on ait
+\[(x+2014)P(x)=xP(x+1).\]
+\bigskip
+\bigskip
+\item[\textbf{5.}] Soit $ABC$ un triangle dans lequel $\alpha=\angle BAC$ est le plus petit angle (strictement). Soit $P$ un point sur le côté $BC$ et $D$ un point de la droite $AB$ tel que $B$ se situe entre $A$ et $D$ et $\angle BPD=\alpha$. De même, soit $E$ un point de la droite $AC$ tel que $C$ se situe entre $A$ et $E$ et $\angle EPC=\alpha$. Montrer que les droites $AP$, $BE$ et $CD$ sont concourantes si et seulement si $AP$ est perpendiculaire à $BC$.
+
+\bigskip
+\bigskip
+
+\item[\textbf{6.}] Montrer qu'il n'existe pas deux nombres entiers naturels distincts tels que leur moyenne harmonique, géométrique, arithmétique et quadratique soient toutes des nombres entiers naturels.
+
+
+ 
+\end{enumerate}
+
+\vspace{15mm}
+\begin{center}
+Bonne chance !
+\end{center}
+
+\pagebreak
+
+
+\begin{center}
+{\huge Sélection IMO 2014} \\
+\medskip troisième examen - 17 mai 2014
+\end{center}
+\vspace{8mm}
+Temps : 4 heures 30\\
+Chaque exercice vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{7.}] Deux cercles $\omega_1$ et $\omega_2$ se touchent tangentiellement en un point $A$ et se trouvent à l'intérieur d'un cercle $\Omega$. De plus, $\omega_1$ touche tangentiellement $\Omega$ en un point $B$ et $\omega_2$ touche tangentiellement $\Omega$ en un point $C$. La droite $AC$ coupe $\omega_1$ une deuxième fois en un point $D$.\\
+Montrer que le triangle $DBC$ est rectangle si $A$, $B$ et $C$ ne sont pas alignés.
+
+\bigskip
+\bigskip
+
+\item[\textbf{8.}] Trouver toutes les fonctions $f:\mathbb{R} \rightarrow \mathbb{R}$ telles que pour tous $x,y \in \mathbb{R}$ :
+\[f(f(x)-y^2)= f(x^2) +y^2f(y) -2f(xy)\]
+
+\bigskip
+\bigskip
+
+\item[\textbf{9.}] Soit $n$ un nombre naturel et $A=\{P_1,P_2,\dots,P_n\}$ un ensemble de $n$ points dans le plan tel que trois de ces points ne sont jamais alignés. Un \textit{chemin à travers $A$} consiste en $n-1$ segments $P_{\sigma(i)}P_{\sigma(i+1)}$ avec $i=1,\dots,n-1$, où $\sigma$ est une permutation de $\{1,2,\dots,n\}$, tel qu'aucun segment ne coupe un autre.\\
+Montrer que le nombre de chemins distincts à travers $A$ est minimal si et seulement si les points de $A$ forment un $n$-gone convexe.
+
+
+
+%Sei $n$ eine natürliche Zahl. Der Präsident von IMO-Land möchte die $n$ Städte seines Landes mit $n-1$ Strassen verbinden, sodass folgendes gilt:
+%\begin{enumerate}
+%\item[(i)] Man kann von jeder Stadt in jede andere Stadt entlang der $n-1$ Strassen fahren.
+%\item[(ii)] Keine Stadt liegt an mehr als zwei Strassen.
+%\item[(iii)] Keine zwei Strassen überkreuzen sich.
+%\end{enumerate}
+%Zeige, dass die Anzahl Möglichkeiten, die der Präsident hat um die Strassen zu bauen, genau dann minimal ist, wenn die $n$ Städte ein konvexes $n$-Eck bilden.
+
+
+
+
+\end{enumerate}
+
+
+
+
+\bigskip
+\bigskip
+\begin{center}
+Puisse le sort vous être favorable.
+\end{center}
+
+\pagebreak
+
+
+\begin{center}
+{\huge Sélection IMO 2014} \\
+\medskip quatrième examen - 18 mai 2014
+\end{center}
+\vspace{8mm}
+Temps : 4 heures 30\\
+Chaque exercice vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{10.}] Un carré $7\times 7$ est divisé en $49$ petits carrés $1\times 1$. Deux scarabées marchent le long des côtés des petits carrés, de manière à ce que chaque scarabée parcourt son propre chemin fermé et qu'il passe exactement une fois par chacun des $64$ sommets des petits carrés. \\
+Quel est le nombre minimal de côtés des petits carrés qui ont été parcourus par les deux scarabées ?
+
+
+\bigskip
+\bigskip
+
+
+\item[\textbf{11.}] Déterminer tous les entiers naturels $n$ avec la propriété suivante : \\
+Pour tout premier $p<n$, $n-\lfloor \frac{n}{p}\rfloor p$ n'est pas divisible par le carré d'un nombre naturel plus grand que $1$.\\
+\textit{Remarque : Pour $x \in \mathbb{R}$, $\lfloor x\rfloor$ est défini comme le plus grand entier plus petit ou égal à $x$.}
+\bigskip
+\bigskip
+
+\item[\textbf{12.}] Soient $n$ un entier naturel et $a_1,a_2, \dots,a_n$ des entiers naturels. On prolonge périodiquement la suite de sorte que $a_{n+i} = a_i$ pour tout $i\geq 1$. Supposons que les deux conditions suivantes sont vérifiées :
+\begin{enumerate}
+\item[(i)] 	$a_1\leq a_2\leq\dots \leq a_n\leq a_1 +n$.
+\item[(ii)] $a_{a_i} \leq n+i-1$ pour $i=1,2\dots,n$.
+\end{enumerate}
+Montrer que :
+\[a_1+a_2+\dots +a_n \leq n^2\]
+
+\end{enumerate}
+\bigskip
+\begin{center}
+Bon chance !
+\end{center}
+
+\end{document}

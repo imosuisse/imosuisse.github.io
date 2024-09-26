@@ -1,0 +1,50 @@
+\examtime{%
+    \de{4.5 Stunden}%
+    \fr{4,5 heures}%
+    \ita{4.5 ore}%
+    \en{4.5 hours}%
+}
+\examdate{%
+    \IfStrEq*{\day}{1}{%
+        \de{4. Mai 2019}%
+        \fr{4 mai 2019}%
+        \ita{4 ?? 2019}%
+        \en{4 May 2019}%
+    }{}%
+   \IfStrEq*{\day}{2}{%
+        \de{5. Mai 2019}%
+        \fr{5 mai 2019}%
+        \ita{5 ?? 2019}%
+        \en{5 May 2019}%
+    }{}%
+    \IfStrEq*{\day}{3}{%
+        \de{18. Mai 2019}%
+        \fr{18 mai 2019}%
+        \ita{18 ?? 2019}%
+        \en{18 May 2019}%
+    }{}%
+    \IfStrEq*{\day}{4}{%
+        \de{19. Mai 2019}%
+        \fr{19 mai 2019}%
+        \ita{19 ??? 2019}%
+        \en{19 May 2019}%
+    }{}%
+}
+\title{%
+    \de{Selektion 2019}%
+    \fr{Sélection 2019}%
+    \ita{?? 2019}%
+    \en{Selection 2019}%
+}
+\examplace{%
+    \de{\day. Prüfung}%
+    \fr{\IfStrEq*{\day}{1}{Premier}{}%
+        \IfStrEq*{\day}{2}{Deuxième}{}%
+        \IfStrEq*{\day}{3}{Troisième}{}%
+        \IfStrEq*{\day}{4}{Quatrième}{} examen}%
+    \ita{???}%
+    \en{\IfStrEq*{\day}{1}{First}{}%
+        \IfStrEq*{\day}{2}{Second}{}%
+        \IfStrEq*{\day}{3}{Third}{}%
+        \IfStrEq*{\day}{4}{Fourth}{} exam}%
+}

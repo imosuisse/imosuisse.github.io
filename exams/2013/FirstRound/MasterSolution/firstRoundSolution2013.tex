@@ -1,0 +1,381 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\usepackage[ansinew]{inputenc}
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+
+\usepackage{graphicx}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+
+% Schriftabk¬¨‚àèrzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % sch√Ä√únes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge Lˆsungen zur Vorrundenpr¸fung 2013} \\
+\end{center}
+\vspace{8mm}
+
+Zuerst einige Bemerkungen zum Punkteschema. Eine vollst‰ndige und korrekte Lˆsung einer Aufgabe ist jeweils 7 Punkte wert. F¸r Komplette Lˆsungen mit kleineren Fehlern oder Ungenauigkeiten, die aber keinen wesentlichen Einfluss auf die Richtigkeit der dargestellten Lˆsung haben, geben wir 6 Punkte. Bei unvollst‰ndigen Lˆsungen wird der Fortschritt und der Erkenntnissgewinn bewertet (Teilpunkte). Oft gibt es mehrere Lˆsungen f¸r ein Problem. Versucht jemand zum Beispiel eine Aufgabe auf zwei verschiedenen Wegen zu lˆsen, erreicht auf dem ersten Weg 3 Punkte, auf dem zweiten 2 Punkte, dann wird seine Punktzahl nicht 5, sondern 3 sein. Punkte, die auf verschiedenen Wegen erreicht werden, sind also \emph{nicht} kumulierbar. Die unten angegebenen Bewertungsschemata sind nur Orientierungshilfe. Gibt jemand eine alternative Lˆsung, dann werden wir versuchen, die Punktzahl entsprechend zu w‰hlen, dass f¸r gleiche Leistung gleich viele Punkte verteilt werden. Die Schemata sind stets wie folgt zu interpretieren:\\
+Kommt jemand in seiner Lˆsung bis und mit hierhin, dann gibt das soviele Punkte.\\ 
+Ausnahmen von dieser Regel sind jeweils ausdr¸cklich deklariert.
+
+\vspace{8mm}
+
+Quelques remarques concernant le barËme. Une solution complËte et correcte d'un exercice vaut 7 points. Pour des solutions complËtes avec quelques erreurs mineures ou des imprÈcisions qui n'ont pas d'influence essentielle sur la justesse de la solution, nous donnons 6 points. Pour des solutions incomplËtes nous Èvaluons le progrËs (points partiels). Souvent il y a plusieurs solutions pour un problËme. Par exemple, si quelqu'un essaie de rÈsoudre un exercice de deux maniËres diffÈrentes et obtient 3 points pour la premiËre tentative et 2 points pour la deuxiËme solution incomplËte, alors son total de points ne sera pas 5 mais 3. Des points obtenus pour des solutions diffÈrentes ne sont \emph{pas} cumulable. Les barËmes donnÈes ci-dessous sont une aide ‡ l'orientation. Si quelqu'un donne une solution alternative, nous essayerons de choisir le nombre de point juste pour que la mÍme performance vaut le mÍme nombre de points. Les barËmes sont ‡ interprÈter comme ceci:\\
+Si quelqu'un arrive dans une solution jusqu'‡ cet endroit, alors il obtient tant de points.\\
+Des exceptions ‡ cette rËgle sont mentionnÈes explicitement.
+
+\vspace{8mm}
+
+\begin{enumerate}
+
+%% Aufgabe 1
+
+\item[\textbf{1.}]
+
+Zuerst stellt man fest, dass es f¸r jede Person genau eine Rotation des Tisches gibt, sodass diese Person ihr Namensschild vor sich hat. Nun l‰sst sich die Aufgabe mit dem Schubfachprinzip lˆsen. Als "Schubf‰cher" w‰hlen wir 2013 verschiedenen Mˆglichkeiten, den Tisch zu rotieren und als "Perlen" w‰hlen wir die 2013 Personen. Wir ordnen jede Person der Drehung zu, sodass sie beim passenden Namensschild sitzt.
+
+Da am Anfang niemand am richtigen Platz sitzt, bleibt dieses "Schubfach" leer. Wir verteilen also 2013 Leute auf 2012 Schubf‰cher. Deshalb gibt es mindestens ein "Schubfach", welches mindestens zwei "Perlen" enth‰lt. Nach unserer Definition heisst das genau, dass es mindestens eine Drehung des Tisches gibt, f¸r welche mindestens zwei Personen das richtige Namensschild vor sich haben.
+
+\emph{Zum Punkteschema:}
+
+Wenn man bemerkt hat, dass es f¸r jede Person eine Drehung gibt, sodass diese Person am richtigen Platz ist, erh‰lt man daf¸r einen Punkt.
+
+F¸r folgende Aussage erh‰lt man insgesamt f¸nf Punkte: Nehme an, dass die Aussage falsch ist. Dann sitzt bei jeder der 2013 Drehungen genau eine Person am richtigen Ort.
+
+F¸r eine komplette Lˆsung gibt es sieben Punkte.
+
+\bigskip
+
+%% Aufgabe 2
+
+\item[\textbf{2.}]
+
+Da die Tangenten an $k_1,k_2$ in $P$ senkrecht aufeinander stehen, liegen $M_1$ und $M_2$ auf ihnen. Sei $R$ der Schnittpunkt der Senkrechten zu $M_1M_2$ durch $M_2$ und der Geraden $PQ$. Wir wollen zeigen, dass $R$ auf $k_2$ liegt.\\
+Wir definieren $\alpha=\angle RPM_2$. Als Mittelpunktswinkel ist $\angle QM_1P$ doppelt so gross wie der Sehnentangentenwinkel $\angle RPM_2$, also $\angle QM_1P=2\alpha$. Mit der Innenwinkelsumme im Dreieck $M_1M_2P$ folgt $\angle M_1M_2P=90^\circ-2\alpha$. Nun folgt mit der Innenwinkelsumme im Dreieck $PRM_2$, dass $\angle PRM_2=\alpha$ gilt. Dies bedeutet, dass $PRM_2$ ein gleichschenkliges Dreieck ist und $PM_2=RM_2$ gilt. Hieraus folgt nat¸rlich, dass $R$ auf $k_2$ liegt, da auch schon $P$ auf $k_2$ liegt.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{Aufg2}
+\end{center}
+\end{figure}
+
+\newpage
+
+\emph{Zum Punkteschema:} 
+
+Eine sinnvolle ‹bersetzung der Behauptung in eine Winkelaussage gab einen Punkt, wie z.B.:
+"Es gen¸gt zu zeigen, dass $\angle RPM_2=\angle PRM_2$ gilt, da dann $RPM_2$ ein gleichschenkliges Dreieck ist, woraus $PM_2=RM_2$ folgt, was wiederum impliziert, dass $R$ auf $k_2$ liegt, da es $P$ auch tut."
+Eine korrekte Lˆsung ohne die Begr¸ndung, wieso $\angle M_1PM_2=90^\circ$ gilt, war 5 Punkte wert. Es ist n‰mlich nicht von vornherein klar, dass die Mittelpunkte auf den Tangenten in $P$ liegen m¸ssen. (Es musste zumindest explizit erw‰hnt werden, dass die Mittelpunkte $M_1,M_2$ auf den Tangenten liegen.)
+Eine grosse Fehlerquelle war, dass benutzt wurde, dass $R$ auf $k_2$ liegt. Das darf man jedoch nicht, da man dies ja gerade zeigen mˆchte. In dieser Aufgabe war es also von Vorteil, eine ungenaue Skizze zu zeichnen, sodass $R$ nicht auf $k_2$ liegt.
+
+\bigskip
+
+%% Aufgabe 3
+
+\item[\textbf{3.}]
+
+On peut commencer par dÈcomposer les nombres sympathiques en trois parties disjointes:
+\begin{eqnarray*}
+X &=& \text{ Les nombres sympathiques qui ont uniquement des chiffres impairs.}\\
+Y &=& \text{ Les nombres sympathiques qui ont uniquement des chiffres pairs.}\\
+Z &=& \text{ Les nombres sympathiques qui ont des chiffres pairs et impairs.}
+\end{eqnarray*}
+
+On remarque que pour les nombres dans $X$ et $Y$, la condition (b) est toujours satisfaite. (Car il n'y a jamais un chiffre pair et un chiffre impair.) Les nombres dans $X$ sont avec des chiffres parmi $\{1,3,5,7,9\}$ dont tous les chiffres apparaissent au plus une fois. Parmi eux on trouve:
+
+$5$ nombres qui ont exactement un chiffre.
+
+$5\cdot 4 = 20$ nombres qui ont exactement deux chiffres. (5 choix pour la dizaine et 4 pour l'unitÈ.)
+
+$5\cdot 4\cdot 3 = 60$ nombres qui ont exactement 3 chiffres.
+
+$5\cdot 4\cdot 3\cdot 2 = 120$ nombres qui ont exactement 4 chiffres et
+
+$5\cdot 4\cdot 3\cdot 2 \cdot 1= 120$ nombres qui ont exactement 5 chiffres.\\
+Donc $|X| = 120+120+60+20+5 = 325$.
+
+On peut procÈder de maniËre similaire avec les nombres dans $Y$ qui ont des chiffres distincts dans $\{0,2,4,6,8\}$. Il faut faire attention car le chiffre le plus ‡ gauche ne peut pas Ítre un $0$. Il y a donc
+
+$4$ nombres qui ont exactement un chiffre.
+
+$4\cdot 4 = 16$ nombres qui ont exactement deux chiffres.
+
+$4\cdot 4\cdot 3 = 48$ nombres qui ont exactement 3 chiffres.
+
+$4\cdot 4\cdot 3\cdot 2 = 96$ nombres qui ont exactement 4 chiffres et
+
+$4\cdot 4\cdot 3\cdot 2 \cdot 1= 96$ nombres qui ont exactement 5 chiffres.\\
+Donc $|Y| = 96 + 96 + 48 + 16 + 4 = 260$.
+
+Il reste ‡ compter les ÈlÈments de $Z$ qui ont des chiffres pairs et impairs. Une premiËre observation est que quelque part dans un tel chiffre il y a un chiffre pair $A$ ‡ cÙtÈ d'un chiffre impair $B$. Entre eux il n'y a $0$ autres chiffres, il faut alors que $A+B-1 = 0$ ou autrement dit que $A=0$ et $B=1$.
+
+La premiËre consÈquence de cette observation est que il n'y a qu'une unique frontiËre entre chiffres pairs et chiffres impairs. Car sinon soit $0$ soit $1$ doit apparaitre deux fois dans la reprÈsentation.
+
+Si les chiffres impairs sont ‡ gauche des chiffres pairs. Alors entre le chiffre $C$ avec $k$ chiffres entre lui et $1$ (s'il y en a un) satisfait
+\[C/2 = k.\]
+Donc du cÙtÈ des chiffres pairs, on retrouve les chiffres paires en ordre croissant. Un calcul analogue montre que de l'autre cÙtÈ on a les chiffres impairs en ordre croissant. Autrement dit ‡ gauche il y a $97531,7531,531,31$ ou $1$ et ‡ droite il y a $02468,0246,024,02$ ou $0$. Ces deux choix Ètant indÈpendants il y a $5\cdot 5$ tels nombres.
+
+Si en revanche les chiffres pairs sont ‡ gauche, le mÍme raisonnement montre que le bloc des pairs peut Ítre $86420,6420,420$ ou $20$ (0 n'Ètant pas une possibilitÈ) et on garde $5$ possibilitÈs pour le bloc des chiffres impairs. Il y a donc $4\cdot 5$ tels nombres.
+
+Finalement on a $|Z| = 25+20 = 45$ et on arrive ‡ un total de
+\[325+260+45 = 630\]
+nombres sympathiques.
+
+
+\emph{Concernant le barËme:}\\
+Une solution complËte vaut $7$ points. Une faute de multiplication ou d'addition rÈsulte en un total de $6$ points si tous les arguments de comptage sont prÈsents et corrects.
+
+Sinon les points (indÈpendants) suivants pouvaient Ítre obtenus (si les rÈsultats Ètaient justifiÈs correctement):
+\begin{enumerate}
+  \item[$+1$] point pour la distinction entre nombres contenant des chiffres pairs/impairs uniquement et ceux qui contiennent chiffres pairs et impairs.
+  \item[$+1$] point pour le comptage des nombres ‡ chiffres impairs.
+  \item[$+1$] point pour le comptage des nombres ‡ chiffres pairs.
+  \item[$+1$] point pour la preuve que (pour les chiffres dans $Z$) on a un unique bloc de chiffres pairs et un unique bloc de chiffres impairs.
+  \item[$+1$] point pour la preuve que depuis la 'sÈparation' pair/impair les chiffres sont en ordre croissant.
+  \item[$+1$] point pour avoir comptÈ les nombres dans $Z$ correctement.
+\end{enumerate}
+         
+\newpage
+
+%% Aufgabe 4
+
+\item[\textbf{4.}]
+
+\textbf{1. Lˆsung:}
+Ohne Beschr‰nkung der Allgemeinheit gelte $m\ge n$. Es gilt nun:
+$$
+m^2=\frac{m+1}{n} \cdot \frac{m}{n} \cdot (m-1)!+\frac{n+1}{n} \cdot \frac{n}{n} \cdot (n-1)! > (m-1)!
+$$
+Nun f¸r $m \ge 6$ ist $(m-1)! \ge (m-1) \cdot 2 \cdot (m-2)\cdot 3=(m+m-2)\dot (m + 2(m-3)) > m^2.$
+Das heisst es muss $n\le m \le 5$ gelten. Durchtesten aller F‰lle zeigt, dass nur $(n,m)=(3,4)$ eine Lˆsung ist und entsprechend auch die symmetrische Vertauschung davon.\\
+
+\textbf{2. Lˆsung:}
+Ohne Beschr‰nkung der Allgemeinheit gelte $m\ge n$. Nehme an, dass $m\ge n+2$, so ist $(m+1)!=(m+1)\cdot m\cdot \dots \cdot (n+1) \cdot n \cdot \dots \cdot 2 \cdot 1 \ge (m+1) \cdot m \cdot (n+1) \cdot n > m^2n^2$. Gilt $m=n$ so muss gelten $2(m+1)!=m^4$ nun ist $m+1>1$ und teilt die linke Seite, aber ist Teilerfremd zur rechten Seite - ein Widerspruch. Gilt $m=n+1$, so muss gelten: $m!(1+m+1)=m^2(m-1)^2$. F¸r $m \ge 5$ gilt aber $m!(m+2) \ge (m+2) \cdot m \cdot (m-1) \cdot (m-2) \cdot 2 > m^2 \cdot  (m-1) \cdot  (m-1+m-3) > m^2(m-1)^2$. Durchtesten von $m\le 4$ liefert wieder die Lˆsungen.\\
+
+Es gab 3-5 Punkte, falls man zeigen konnte, dass gilt $\max{m,n} \le A$ f¸r eine Konstante $A$, wobei die Anzahl Punkte davon abhing wie gross $A$ ist. Ein Beweis f¸r die Existenz einer solchen Zahl (ohne konkret eine anzugeben) war kein Punkt Wert.\\
+Es gab 1-3 Punkte, falls man zeigen konnte, dass gilt $\min{m,n} \le A$ oder $|m-n|\le A$ f¸r eine Konstante $A$, wobei die Anzahl Punkte davon abhing wie gross $A$ ist. Ein Beweis f¸r die Existenz einer solchen Zahl (ohne konkret eine anzugeben) war kein Punkt Wert.
+Konnte man ferner zeigen, dass $|m-n|=1$ gelten muss oder es auf den Fall $m=n$ reduzieren konnte. So war dies 4 Punkte Wert.\\
+War eine Ungleichung ungen¸gend begr¸ndet so gab dies Abzug. Desweiteren musste das Durchtesten der restlichen F‰lle explizit erfolgen, denn die Zahlen wurden schnell gross.
+
+\bigskip
+
+%% Aufgabe 5
+\item[\textbf{5.}]
+
+Pour $n = 68$ nous pouvons choisir l'ensemble
+\[S=\left\{33,34,\ldots,100\right\}\]
+et comme la somme de trois ÈlÈments distincts de $S$ vaut au moins $33+34+35=102>100$, aucune de ces sommes est dans $S$.
+Ceci prouve que $n\geq 69$. Il faut maintenant montrer que $n\leq 69$. Soit $S$ un ensemble ‡ $69$ ÈlÈments.
+
+
+\emph{PremiËre solution:} \\
+Soient $a,b$ les deux plus petits nombres dans $S$. Si $a+b \geq 67$ alors $b\geq 34$ et $S$ doit contenir $67$ ÈlÈments de l'ensemble $\{35,36,\ldots,100\}$. Contradiction.
+Donc $a+b\leq 66$ et parmi les $34$ paires
+\[(x, a+b+x) \quad x=1,2,\ldots 34\]
+il y a au moins $32$ ne contenant ni $a$ ni $b$ et de ces paires au plus un des nombres $x$, $a+b+x$ peut Ítre dans $S$. Donc $|S| \leq 100-32 = 68$ Contradiction.
+
+\emph{Zweite Lˆsung:} \\
+Sei $a$ die kleinste Zahl und $b$ die grˆsste Zahl in $S$. Dann gibt es in $S$ mindestens $67-a$ Zahlen die kleiner als $b-a$ sind. Andererseits gilt aber auch $b+a\leq 132$, was ‰quivalent ist zu $(b-a)/2+1\leq 67-a$. Also gibt es mit dem Schubfachprinzip mindestens zwei Zahlen in den verbleibenden Elementen von $S$, deren Summe $b-a$ ist. Man kann also immer die grˆsste Zahl aus $S$ als Summe von drei anderen schreiben.
+
+
+
+\emph{Concernant le barËme:}\\
+Pour avoir trouvÈ l'exemple et en avoir dÈduit que $n\geq 69$ on obtient $1$ point. L'exemple sans estimation pour $n$ ou l'estimation sans l'exemple ne valent pas de points.
+
+
+Dans cet exercice il Ètait essentiellement possible d'obtenir $0,1$ ou $7$ points. Notamment on ne donnait pas de points pour des arguments qui donnaient itÈrativement des bornes de plus en plus petites pour la somme des deux plus petits ÈlÈments de $S$.
+
+\end{enumerate}
+
+
+\end{document}

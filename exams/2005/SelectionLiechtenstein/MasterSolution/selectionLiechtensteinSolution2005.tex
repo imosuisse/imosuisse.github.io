@@ -1,0 +1,159 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{enumerate}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=9.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+
+\newcommand{\dreieck}{\Delta}
+
+\begin{document}
+
+\begin{center}
+{\huge Lösungen zur\\IMO-Selektion Liechteinstein 2005} \\
+\medskip 16. April 2005
+\end{center}
+
+\vspace{10mm}
+
+\begin{enumerate}
+\item[\textbf{1.}] Zeige für alle $a,b,c \geq 0$ die Ungleichung
+$$ \frac{a^2}{3^3} + \frac{b^2}{4^3} + \frac{c^2}{5^3} \geq \frac{(a+b+c)^2}{6^3}. $$
+Wann gilt Gleichheit? \\
+
+\textbf{Lösung} \\ \\
+Als erstes beobachten wir, dass gilt
+$$ 3^3 + 4^3 + 5^3 = 27 + 64 + 125 = 216 = 6^3. $$
+Mit dieser Identität können wir die Unleichung umschreiben zu
+$$ \left( \frac{a^2}{3^3} + \frac{b^2}{4^3} + \frac{c^2}{5^3} \right) \left( 3^3 + 4^3 + 5^3 \right) \geq (a+b+c)^2. $$
+Dies gilt nach Cauchy-Schwarz (mit den Vektoren $\left( \frac{a}{3^{1.5}},\frac{b}{4^{1.5}}, \frac{c}{5^{1.5}} \right)$ und $ \left( 3^{1.5}, 4^{1.5}, 5^{1.5} \right)$). Gleichheit gilt, falls die beiden Vektoren in die gleiche Richtung zeigen, d.h. hier wenn
+$$ \frac{a}{3^3} = \frac{b}{4^3} = \frac{c}{5^3}. $$
+Das Tripel $(a,b,c)$ lässt sich also schreiben als $(3^3 x, 4^3 x, 5^3 x)$ für irgend ein $x \geq 0$.
+
+\bigskip
+
+\item[\textbf{2.}] Seien $g$ und $h$ die Tangenten durch $B$, respektive $C$ an den Umkreis des beliebigen Dreiecks $ABC$. Die Punkte $D$ und $E$ liegen auf $BC$, sodass $AD \enspace || \enspace g$ und $AE \enspace || \enspace h$. Zeige
+$$ \frac{BD}{CE} = \left( \frac{AB}{AC} \right)^2.$$ \\
+
+\textbf{Lösung} \\ \\
+Wir benennen als Erstes die Winkel bei $A, B$ und $C$ mit $\alpha, \beta$, respektive $\gamma$. Nach Tangentenwinkelsatz ist $\wi (AB,g) = \gamma$ und weiter $\wi (g,BC) = 180^\circ - \beta - \gamma = \alpha$. Weil $g$ und $AD$ parallel sind ist auch $\wi ADB = \alpha$. Daraus folgt, dass die beiden Dreiecke $ABC$ und $DBA$ ähnlich sind. Es gilt deshalb
+$$ \frac{BC}{AB} = \frac{AB}{BD} \quad \Leftrightarrow \quad BC = \frac{AB^2}{BD}$$
+Völlig analog leitet man her, dass auch $\dreieck EAC$ ähnlich ist zu $\dreieck ABC$. Es folgt daraus
+$$ \frac{BC}{AC} = \frac{AC}{CE} \quad \Leftrightarrow \quad BC = \frac{AC^2}{CE}$$
+Wir schliessen nun den Beweis ab, indem wir die beiden Gleichungen kombinieren
+$$ \frac{AC^2}{CE} = BC = \frac{AB^2}{BD} \quad \Leftrightarrow \quad \frac{BD}{CE} = \left( \frac{AB}{AC} \right)^2$$
+
+\bigskip
+
+\item[\textbf{3.}] Die natürliche Zahl $n$ besitzt genau 16 positive Teiler
+$$ 1 = d_1 < d_2 < \ldots < d_{15} < d_{16} = n. $$
+Ausserdem gilt $d_6 = 18$ und $d_9-d_8 = 17$. Bestimme alle solchen $n$. \\
+
+\textbf{Lösung} \\ \\
+Da 18 ein Teiler von $n$ ist, sind auch $2,3,6,9$ Teiler von $n$. Mit $1$ sind damit schon fünf Teiler gefunden, die kleiner sind als $d_6 = 18$ und es kann deshalb keine weiteren geben. Wir haben
+$$ d_1 = 1 \quad d_2 = 2 \quad d_3=3 \quad d_4=6 \quad d_5=9 \quad d_6=18. $$
+Betrachten wir nun die Primfaktorzerlegung von $n$. Sie hat die Form
+$$ n = 2^1 \cdot 3^{2+c} \cdot p_3^{\alpha_3} \cdot \ldots \cdot p_r^{\alpha_r}. $$
+2 kann nur in der ersten Potenz vorkommen, weil 4 kein Teiler von $n$ ist. Jedoch kann 3 noch in einer höheren Potenz vorkommen ($c \geq 0$). Aus den Exponenten der Primfaktoren können wir die Anzahl Teiler berechnen, diese muss 16 sein
+$$ (1+1) \cdot (2+c+1) \cdot (\alpha_3+1) \cdot \ldots \cdot (\alpha_r+1) = 16. $$
+Wegen $3+c \geq 3$ ergeben sich daraus noch zwei Fälle.\\ \\
+\underline{1.Fall: $3+c=8$} Damit ist $n = 2 \cdot 3^7$ und
+$$ d_7 = 27 \quad d_8 = 54 \quad d_9 = 81 $$
+Es gilt also $d_9 - d_8 = 27 \neq 17$. Widerspruch zur Voraussetzung. \\ \\
+\underline{2.Fall: $3+c=4$} Damit ist $n = 2 \cdot 3^3 \cdot p$ für irgend eine weitere Primzahl $p>18$.
+
+\begin{itemize}
+\item Ist $p<27$, so ist
+$$ d_7 = p \quad d_8 = 27 \quad d_9=2p $$
+Nach Voraussetzung muss nun gelten $d_9 - d_8 = 2p - 27 = 17$ und damit $p = 22$. Widerspruch, da dies keine Primzahl ist.
+
+\item Für $27<p<54$, erhalten wir
+$$ d_7 = 27 \quad d_8 = p \quad d_9=54 $$
+Nun haben wir $54-p=17$ und damit mit $p = 37$ endlich eine erste Lösung: $n=2 \cdot 3^3 \cdot 37 = 1998$.
+
+\item Für $p>54$, ergibt sich
+$$ d_7 = 27 \quad d_8 = 54 \quad d_9=p $$
+Mit $p-54=17$ erhalten wir noch eine zweite Lösung: $n= 2 \cdot 3^3 \cdot 71 = 3834$.
+\end{itemize}
+Die Lösungsmenge ist also $\BL = \{ 1998, 3834 \}$.
+
+\bigskip
+
+\item[\textbf{4.}] Finde die kleinste natürliche Zahl $S$, sodass folgendes gilt: \\
+Es ist möglich die Zahlen $0,1,2, \ldots , 9$ so auf einem Kreis anzuordnen, dass die Summe von je drei aufeinander folgenden Zahlen höchstens $S$ beträgt. \\
+
+\textbf{Lösung} \\ \\
+Wir betrachten eine beliebige Anordung. Wenn wir die 0 ignorieren und die restlichen neun Zahlen der Reihe nach in drei 3er-Gruppen einteilen, so muss die Summe der Zahlen in jeder Gruppe kleiner oder gleich $S$ sein. Es gilt also
+$$ 3S \geq 1+2+\ldots+9 = 45 \quad \Leftrightarrow \quad S \geq 15 $$
+Für $S=15$ findet man tatsächlich eine Anordung. Zur gezielten Konstruktion einer Anordung, bei der die Summe von je drei aufeinander folgenden Zahlen höchstens 15 beträgt, benutzen wir die obige Beobachtung. Wir suchen als erstes eine Aufteilung der Zahlen $1,\ldots,9$ in drei 3er-Gruppen, sodass die Summe in jeder Gruppe genau 15 beträgt. Dafür gibt es zwei Möglichkeiten, hier eine davon
+$$ \{9,5,1\} \quad \{8,4,3\} \quad \{7,6,2\} $$
+Eine gültige Anordung erhält man nun, indem man diese drei Blocks gerade so hintereinander schreibt, die 6 und die 2 noch vertauscht und die 0 am Schluss anfügt
+$$ 9,5,1,8,4,3,7,2,6,0 $$
+(man stelle sich einen Kreis vor, d.h. nach der 0 kommt wieder die $9,5, \ldots$) \\
+Die richtige Lösung ist damit $S=15$.
+
+\bigskip
+
+\item[\textbf{5.}] Sei $f:\BN_0 \rightarrow \BN_0$ eine bijektive Funktion. Für jedes $n \geq 1$ gelte entweder $f(n+1) = f(n) - 1$ oder $f(n+1) = 3 \cdot f(n)-1$. Finde alle möglichen Werte von $f(1639)$. \\
+
+\textbf{Lösung} \\ \\
+Wegen der Bijektivität gibt es ein $k \in \BN_0$, sodass $f(k)=0$. Wäre $k>0$, so wäre $f(k+1)=-1$, Widerspruch. Es folgt $f(0)=0$. \\
+Sei $f(1) = a > 0$. Alle Zahlen zwischen 0 und $a$ müssen von der Funktion genau einmal angenommen werden. Die einzige Möglichkeit dafür ist
+$$ f(1) = a \quad f(2) = a-1 \quad f(3) = a-2 \quad \ldots \quad f(a) = 1 $$
+Würde in dieser Folge einmal die Rekursionsformel $f(n+1) = 3\cdot f(n) - 1 > f(n)$ benützt, so könnten die Werte zwischen 0 und $f(n)$ von der Funktion nicht mehr angenommen werden, da die Funktion nur in 1er-Schritten fallen kann und kein Wert zwei Mal angenommen werden darf. Aus $f(a) = 1$ folgt dann $f(a+1) = 3\cdot f(a)-1 = 2$. Diese Zahl muss grösser sein als $f(1) = a$, da alle Zahlen von 0 bis $a$ schon vergeben sind. Es bleibt nur die Möglichkeit $a=1$, d.h. $f(1) = 1$. \\
+Die nächsten beiden Funktionswerte sind Eindeutig: $f(2) = 3-1 = 2$ und $f(3) = 3\cdot2 - 1 = 5$. Mit der gleichen Überlegung wie oben, kann man zeigen, dass die Funktion eindeutig bestimmt ist. Nach der Anwendung der Rekursionsformel $f(k+1)=3\cdot f(k) -1$ für ein $k > 1$, muss die Funktion in 1er-Schritten fallen, bis alle Werte, die kleiner sind als $f(k+1)$ angenommen worden sind. Zur Veranschaulichung berechnen wir die Funktion für einige Werte. Die Stellen, wo $f(k) > f(k-1)$ sind fett gedruckt.
+\begin{eqnarray*}
+f(0)&=&0 \\
+\textbf{f(1)}&\textbf{=}&\textbf{1} \\
+\textbf{f(2)}&\textbf{=}&\textbf{2} \\
+\textbf{f(3)}&\textbf{=}&\textbf{5} \\
+f(4)&=&4\\
+f(5)&=&3 \\
+\textbf{f(6)}&\textbf{=}&\textbf{8} \\
+f(7)&=&7 \\
+f(8)&=&6 \\
+\textbf{f(9)}&\textbf{=}&\textbf{17} \\
+f(10)&=&16 \\
+f(11)&=&15 \\
+f(12)&=&14 \\
+f(13)&=&13 \\
+f(14)&=&12 \\
+f(15)&=&11 \\
+f(16)&=&10 \\
+f(17)&=&9 \\
+\textbf{f(18)}&\textbf{=}&\textbf{26} \\
+f(19)&=&25
+\end{eqnarray*}
+Wir beobachten, dass für $n>1$ der Funktionswert $f(n)$ steigt, wenn $n$ von der Form $3^k$ oder $2 \cdot 3^k$ ist. Der Funktionswert an diesen Stellen ist $f(3^k) = 2 \cdot 3^k - 1$ und $f(2 \cdot 3^k) = 3^{k+1} - 1$. Dass dies stimmt, kann man sich mit vollständiger Induktion klar machen. Ein expliziter Induktionsbeweis wird nicht verlangt, weil man, um auf diese Formeln zu kommen, genau die Ideen haben muss, die auch für Induktionsbeweis benötigt werden. \\
+Es bleibt noch $f(1639)$ zu berechnen. Dazu berechnen wir als erstes die 3er-Potenzen
+$$ 3,9,27,81,243,729,2187 $$
+Mit den obigen Formeln finden wir nun
+$$f(1458) = f(2 \cdot 729) = f(2 \cdot 3^6) = 3^7 - 1 = 2186. $$
+Nach 1458 sinkt der Funktionswert in 1er-Schritten, wir erhalten deshalb
+$$f(1639) = 1458 + 2186 - 1639 = 2005 $$
+als einzigen möglichen Wert.
+\end{enumerate}
+
+\end{document}
+

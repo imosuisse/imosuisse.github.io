@@ -1,0 +1,504 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amstext}
+
+\oddsidemargin=0cm \headheight=-2.1cm
+\textwidth=16.4cm \textheight=25.7cm
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+% Schriftabkürzungen
+
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{Satz}[thm]{Satz}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{lemma*}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Korollar}
+\newtheorem{alg}[thm]{Algorithmus}
+\newtheorem{bsp}{Beispiel}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+\renewcommand{\phi}{\varphi}
+\newcommand{\eps}{\varepsilon}
+
+\newcommand{\pfeil}{\quad \Longrightarrow \quad}
+
+\newcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\nequiv}{\not \equiv}
+\newcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\Mod}[1]{(\mod\;#1)}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\newcommand{\sgn}{\mathop{\rm sign}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+\newcommand{\gaussk}[1]{\lfloor #1 \rfloor}
+\newcommand{\frack}[1]{\{ #1 \}}
+\newcommand{\wi}{\angle}
+\newcommand{\id}{\mathrm{id}}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge IMO - Selektion 2001 Lösungen} \\
+\end{center}
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{1.}] Einem Kreis ist ein konvexes Viereck $ABCD$ einbeschrieben. Zeige, dass die Sehne, welche die
+Mittelpunkte der beiden Bogen $\widehat{AB}$ und $\widehat{CD}$ verbindet, senkrecht steht auf der Sehne, welche
+die beiden Bogenmittelpunkte von $\widehat{BC}$ und $\widehat{DA}$ miteinander verbindet.\\
+
+\textbf{Lösung}
+
+\textbf{Lemma.} \textit{Sei $ABCD$ ein konvexes Sehnenviereck und $P$ der Diagonalenschnittpunkt. Es gilt}
+$$ \wi APB = \wi ACB + \wi CBD $$
+\textit{oder in Worten ausgedrückt: der Winkel $\wi APB$ ist so gross wie die Summe der beiden Periphieriewinkel über $AB$ und $CD$.}
+
+\begin{proof}[Beweis des Lemmas]
+Aussenwinkelsatz in $\triangle BCP$.
+\end{proof}
+
+Wir nennen die Bogenmittelpunkte von $\widehat{AB}, \widehat{BC}, \widehat{CD}$ und $\widehat{DA}$ mit $M,N,P$ bzw. $Q$. Nach obigem Lemma stehen die Geraden $MP$ und $NQ$ senkrecht aufeinander, wenn die Summe der beiden Bogen $\widehat{MN}$ und $\widehat{PQ}$ einen Halbkreis bildet. Dies ist der Fall, denn
+\begin{eqnarray*}
+\widehat{MN} + \widehat{PQ} &=& \widehat{MB} + \widehat{BN} + \widehat{PD} + \widehat{DQ} \\
+ &=& \widehat{MA} + \widehat{CN} + \widehat{PC} + \widehat{AQ} \\
+ &=& \widehat{QM} + \widehat{NP}
+\end{eqnarray*}
+Somit ist $\widehat{MN} + \widehat{PQ} = \widehat{QM} + \widehat{NP} =$ halber Kreisumfang.
+
+\bigskip
+
+\item[\textbf{2.}] Die reellen Zahlen $a_1,a_2,\ldots,a_{16}$ erfüllen die beiden Bedingungen
+\[\sum_{i=1}^{16} a_i =100 \qquad \mbox{und} \qquad \sum_{i=1}^{16} a_i^2=1000.\]
+Was ist der grösstmögliche Wert, den $a_{16}$ annehmen kann?\\
+
+\textbf{Lösung}
+
+Setze $S=a_1+\ldots+a_{15}$ und $Q=a_1^2+\ldots +a_{15}^2$. Nach AM-QM gilt $S^2 \leq 15Q$. Die Nebenbedingungen
+lauten $100-a_{16}=S$ und $1000-a_{16}^2=Q$. Quadriert man die erste und subtrahiert 15 mal die zweiten, dann
+folgt
+\[16a_{16}^2-200a_{16}-5000=S^2-15Q \leq 0.\]
+Das quadratische Polynom links hat die Nullstellen $-25/2$ und $25$. Daher gilt $a_{16} \leq 25$. Gilt
+Gleichheit, dann muss auch in AM-GM Gleichheit herrschen, also $a_1=\ldots=a_{15}$. Einsetzen in die
+Nebenbedingungen liefert die Lösung $a_1=\ldots=a_{15}=5$ und $a_{16}=25$. Der grösstmögliche Wert ist also in
+der Tat $a_{16}=25$.\\
+
+\bigskip
+
+\item[\textbf{3.}] Gegeben sind ein gleichseitiges Dreieck mit der Seitenlänge 1 und fünf gleich grosse,
+gleichseitige Dreiecke der Seitenlänge $s<1$. Zeige: Lässt sich das grosse Dreieck mit den fünf kleinen
+überdecken, so lässt es sich auch schon mit vier der kleinen überdecken.\\
+
+\textbf{Lösung}
+
+Betrachte folgende 6 Punkte im oder auf dem Rand des grossen Dreiecks: die drei Eckpunkte und die drei
+Seitenmittelpunkte. Wenn sich das grosse Dreieck mit den fünf kleinen überdecken lässt, muss nach dem
+Schubfachprinzip eines der kleinen Dreiecke mindestens 2 dieser 6 Punkte überdecken. Diese 6 Punkte haben aber
+gegenseitige Abstände $\geq 1/2$, also gilt $s \geq 1/2$. Nun ist klar, dass bereits vier der Dreiecke genügen,
+um das grosse zu überdecken.\\
+
+\bigskip
+
+\item[\textbf{4.}] Es sei $q(n)$ die Quersumme der natürlichen Zahl $n$. Bestimme den Wert von
+\[q(q(q(2000^{2000}))).\]
+
+\textbf{Lösung}
+
+Es gilt $q(2000^{2000})=q(2^{2000})$, denn die beiden Zahlen unterscheiden sich nur um angehängte Nullen. Wir
+schätzen nun ab. Es gilt $2^{2000}=4 \cdot 8^{666}<10^{667}$ und somit
+\[q(2^{2000}) \leq 9 \cdot 667= 6003.\]
+Weiter ist damit
+\[q(q(2^{2000})) \leq 5+9+9+9=32 \qquad \mbox{und} \qquad q(q(q(2^{2000}))) \leq 2+9=11.\]
+Andererseits gilt bekanntlich $q(n)\equiv n$ (mod 9) für alle natürlichen Zahlen $n$. Mit $\varphi(9)=6$ ergibt
+sich
+\[2000^{2000} \equiv 2^{333 \cdot 6+2} = (2^6)^{333} \cdot 4 \equiv 4 \quad \mbox{(mod 9).}\]
+Die gesuchte Zahl ist also einerseits $\leq 11$ und andererseits $\equiv 4$ (mod 9), also gleich 4.\\
+
+
+\bigskip
+
+\item[\textbf{5.}] Mit Hilfe der drei Buchstaben \textsf{I, M, O} werden Wörter der Länge $n$ gebildet.
+Wieviele solche Wörter der Länge $n$ gibt es, in denen keine benachbarten \textsf{M}'s vorkommen?\\
+
+\textbf{Lösung}
+
+Wir nennen ein Wort \textit{zulässig}, wenn es keine zwei benachbarten \textsf{M}'s enthält. Sei $a_n$ die
+Anzahl zulässiger Wörter der Länge $n$ und $b_n$ die Anzahl zulässiger Wörter der Länge $n$, die nicht mit einem
+\textsf{M} beginnen. Nehme ein zulässiges Wort der Länge $n$ und entferne den ersten Buchstaben, das
+verbleibende Wort nennen wir \textit{Stumpf}. Der Stumpf ist ein zulässiges Wort der Länge $n-1$. Beginnt das
+Wort nicht mit einem \textsf{M}, dann gibt es keine Einschränkung an den Stumpf, also $a_{n-1}$ Möglichkeiten.
+Beginnt es aber mit einem \textsf{M}, darf der Stumpf nicht auch mit \textsf{M} beginnen, es bleiben also
+$b_{n-1}$ Möglichkeiten. Dies liefert die Rekursionsgleichungen $a_n=2a_{n-1}+b_{n-1}$ und $b_n=2a_{n-1}$.
+Kombination dieser Gleichungen liefert sofort
+\[a_n=2a_{n-1}+2a_{n-2},\qquad n \geq 3.\]
+Das charakteristische Polynom dieser Rekursionsgleichung lautet $x^2-2x-2$ und hat die Nullstellen $1 \pm
+\sqrt{3}$. Es gibt daher reelle Konstanten $A$ und $B$ mit
+\[a_n=A(1+\sqrt{3})^n+B(1-\sqrt{3})^n.\]
+Einsetzen von $a_1=3$ und $a_2=8$ liefert für $A$ und $B$ die Gleichungen $3=(1+\sqrt{3})A+(1-\sqrt{3})B$ und
+$8=(4+2\sqrt{3})A+(4-2\sqrt{3})B$. Daraus folgt $A=(3+2\sqrt{3})/6$ und $B=(3-2\sqrt{3})/6$, es gilt also die
+explizite Formel
+\[a_n = \frac{1}{6} \left[(3+2\sqrt{3})(1+\sqrt{3})^n+(3-2\sqrt{3})(1-\sqrt{3})^n\right].\]
+Die ersten paar Werte finden sich in untenstehender Tabelle:
+\begin{center}
+\begin{tabular}{l|ccccccc}
+$n$ & 1 & 2 & 3 & 4 & 5 & 6 & 7\\ \hline
+$a_n$ & 3 & 8 & 22 & 60 & 164 & 448 & 1224\\
+\end{tabular}
+\end{center}
+
+
+\bigskip
+
+\item[\textbf{1a.}] Die positiven reellen Zahlen $x,y$ und $z$ haben Summe 1. Zeige, dass gilt
+\[\sqrt{7x+3}+\sqrt{7y+3}+\sqrt{7z+3} \leq 7.\]
+Kann die Zahl $7$ auf der rechten Seite durch eine kleinere Zahl ersetzt werden?\\
+
+\textbf{Lösung}
+
+Nach AM-QM ist die linke Seite höchstens gleich
+\[3 \cdot \sqrt{\frac{(7x+3)+(7y+3)+(7z+3)}{3}}=3 \cdot \sqrt{16/3}= 4\sqrt{3}<7.\]
+
+\bigskip
+
+
+\item[\textbf{2a.}] Beweise, dass die Gleichung
+\[14x^2+15y^2=7^{2000}\]
+keine ganzzahlige Lösungen $(x,y)$ besitzt.\\
+
+\textbf{Lösung}
+
+Betrachte die Gleichung modulo 3. Wegen $7 \equiv 1$ (mod 3) lautet sie
+\[2x^2 \equiv 1 \qquad \mbox{(mod 3).}\]
+Quadrate sind aber $\equiv 0,1$ (mod 3), also nimmt die linke Seite nur die Werte $0$ und $2$ an, Widerspruch.
+Es gibt keine ganzzahligen Lösungen.\\
+
+\bigskip
+
+
+\item[\textbf{3a.}] Für $x>0$ sei $f(x)=4^x/(4^x+2)$. Bestimme den Wert der Summe
+\[\sum_{k=1}^{1290} f\left(\frac{k}{1291}\right).\]
+
+\textbf{Lösung}
+
+Es gilt für $0<x<1/2$
+\[f\left(\frac{1}{2}+x\right)+f\left(\frac{1}{2}-x\right)=\frac{2 \cdot 4^x}{2 \cdot 4^x+2}+
+\frac{2 \cdot 4^{-x}}{2 \cdot 4^{-x}+2} = \frac{4^x}{4^x+1}+ \frac{1}{1+4^x}=1,\] wobei wir beide Brüche mit 2
+gekürzt und den zweiten mit $4^x$ erweitert haben. Damit folgt nun leicht
+\[\sum_{k=1}^{1290} f\left(\frac{k}{1291}\right)=\sum_{k=1}^{645} f\left(\frac{k}{1291}\right)+
+f\left(1-\frac{k}{1291}\right) = \sum_{k=1}^{645} \; 1 =645.\]
+
+\bigskip
+
+
+\item[\textbf{4a.}] Gegeben sind zwei Kreise $k_1$ und $k_2$, die sich in den verschiedenen Punkten $P$ und $Q$
+schneiden. Konstruiere eine durch $P$ verlaufende Strecke $AB$ mit ihren Endpunkten auf $k_1$ und $k_2$, sodass
+das Produkt $|AP|\cdot|PB|$ maximal ist.\\
+
+\textbf{Lösung}
+
+Seien $t_1$ und $t_2$ die Tangenten an $k_1$ und $k_2$ in $P$. Diese zerlegen die Ebene in vier Gebiete, von
+denen eines den Punkt $Q$ enthält. Sei $G$ die Vereinigung der beiden gegenüberliegenden Gebiete, welche den
+Punkt $Q$ nicht enthalten. Offenbar muss die Strecke $AB$ ganz in $G$ verlaufen denn sonst ist $A=P$ oder $B=P$
+und das Produkt $|AP|\cdot|PB|$ verschwindet. Sei $\alpha$ der Öffnungswinkel von $G$ und sei $0 \leq \phi \leq
+\alpha$ der Winkel zwischen $AB$ und $t_1$. Seien $r_1,r_2$ die Radien der Kreise $k_1,k_2$. Nach dem
+Tangenten-Zentriwinkelsatz besitzt die Sehne $AP$ in $k_1$ den Zentriwinkel $2\phi$ und hat daher die Länge
+$|AP|=2r_1\sin(\phi)$. Der Winkel zwischen $PB$ und $t_2$ ist gleich $\alpha-\phi$ und man erhält analog
+$|PB|=2r_2\sin(\alpha-\phi)$. Um nun das Produkt $|AP|\cdot|PB|$ zu maximieren, müssen wir das Maximum von $\sin(\phi) \cdot \sin(\alpha-\phi)$ finden. Nach der Produkt-zu-Summen Formel gilt
+\[\sin(\phi) \cdot \sin(\alpha-\phi) = \frac{1}{2}(\cos(2\phi-\alpha)-\cos(\alpha)).\]
+Dies ist genau dann maximal, wenn der erste Summand den grösstmöglichen Wert annimmt, also wenn $\phi=\alpha/2$.
+Die gesuchte Strecke liegt also auf der in $G$ liegenden Winkelhalbierenden der beiden Tangenten.\\
+
+\bigskip
+
+
+\item[\textbf{5a.}] Auf einer kreisförmigen Rennbahn ist an $n$ verschiedenen Positionen je ein Auto startbereit.
+Jedes von ihnen fährt mit konstantem Tempo und braucht eine Stunde pro Runde. Sobald das Startsignal ertönt,
+fährt jedes Auto sofort los, egal in welche der beiden möglichen Richtungen. Falls sich zwei Autos begegnen,
+ändern beide ihre Richtung und fahren ohne Zeitverlust weiter. Zeige, dass es einen Zeitpunkt gibt, in dem sich
+alle Autos wieder in ihren ursprünglichen Startpositionen befinden.\\
+
+\textbf{Lösung}
+
+Nehme an, jedes Auto führt eine Fahne mit sich. Wenn sich zwei Autos begegnen, tauschen sie die Fahnen aus. Die
+Fahnen ändern also nie ihre Bewegungsrichtung und sind daher nach einer Stunde alle wieder an ihrem
+ursprünglichen Platz. Das bedeutet aber, dass auch die $n$ Autos wieder alle auf den Startpositionen stehen,
+aber eventuell permutiert. Sei $\pi$ diese Permutation. Jede weitere Stunde permutiert die Autos offenbar wieder
+in derselben Weise (die Fahrtrichtung an jedem der Sartplätze ist dieselbe wie am Anfang), also ist die
+Platzvertauschung der Autos nach $k$ Runden gegeben durch die Permutation $\pi^k=\pi \circ \ldots \circ \pi$.
+Wir zeigen nun, dass eine Zahl $d$ existiert, sodass $\pi^d=\id$ die
+Identität ist. Dann befinden sich alle Autos nach $d$ Runden wieder auf ihrem Startplatz.\\
+Betrachte dazu die Folge $\pi, \pi^2,\pi^3,\ldots$. Da es nur endlich viele Permutationen von $n$ Dingen gibt
+(nämlich $n!$ Stück), müssen zwei Gleider in dieser Folge übereinstimmen, das heisst, es gibt $i<j$ mit
+$\pi^i=\pi^j$. Da $\pi$ eine bijektive Abbildung ist, können wir diese Gleichung mit $\pi^i$ kürzen und erhalten
+$\pi^{j-i}=\id$, wie gewünscht.\\
+
+\bigskip
+
+
+\item[\textbf{6.}] Jede Ecke eines regelmässigen $2n$-Ecks ($n \geq 3$) soll mit einer Zahl aus der Menge
+$\{1,2,\ldots,2n\}$ beschriftet werden, und zwar so, dass die Summe der Zahlen benachbarter Ecken stets gleich
+ist wie die Summe der Zahlen in den beiden diametral gegenüberliegenden Ecken. Zudem müssen die in den $2n$
+Ecken stehenden Zahlen alle verschieden sein. Zeige, dass dies genau dann möglich ist, wenn $n$ ungerade ist.\\
+
+\textbf{Lösung}
+
+Die Zahlen in den Ecken seien $a_1,\ldots,a_{2n}$ in dieser Reihenfolge, die Indizes werden wir modulo $2n$
+betrachten. Wir können oBdA annehmen, dass $a_1>a_{n+1}$ ist. Da $a_1+a_2=a_{n+1}+a_{n+2}$ gilt, muss $a_2<
+a_{n+2}$ sein. Mit der gleichen Argumentation folgt induktiv $a_i>a_{n+i}$ falls $i$ ungerade ist und
+$a_i<a_{n+i}$ falls $i$ gerade ist. Wenn nun $n$ gerade ist, folgt daraus insbesondere $a_{n+1}>a_{2n+1}=a_1$,
+im Widerspruch zur Annahme. Daher muss $n$ ungerade sein. Man rechnet leicht nach, dass für ungerades $n=2k+1$
+folgende Zahlverteilung die gewünschte Eigenschaft hat:
+\begin{center}
+\begin{tabular}{rclcl}
+$a_{2i+1}$ & $=$ & $1+4i$ & & $0 \leq i \leq k$\\
+$a_{2i}$ & $=$ & $4i$ & & $1 \leq i \leq k$\\
+$a_{n+2i+1}$ & $=$ & $2+4i$ & & $0 \leq i \leq k$\\
+$a_{n+2i}$ & $=$ & $-1+4i$ & & $1 \leq i \leq k$\\
+\end{tabular}
+\end{center}
+Damit sind die Bedingungen der Aufgabe genau dann erfüllbar, wenn $n$ ungerade ist.\\
+
+\bigskip
+
+
+\item[\textbf{7.}] Bestimme alle Funktionen $f: \BR \rightarrow \BR$, sodass für alle reellen Zahlen $x$ und $y$
+gilt
+\[f(f(x)+y)=f(x^2-y)+4yf(x).\]
+
+\textbf{Lösung}
+
+Setzt man in der Gleichung $y=-f(x)$ ein, dann folgt
+\begin{equation}
+f(0)=f(x^2+f(x))-4f(x)^2.
+\end{equation}
+Für $y=x^2$ erhält man
+\begin{equation}
+f(f(x)+x^2)=f(0)+4x^2f(x).
+\end{equation}
+Kombination von (1) und (2) ergibt nun $4f(x)^2=f(f(x)+x^2)-f(0)=4x^2f(x)$, also $f(x)(f(x)-x^2)=0$ für alle $x
+\in \BR$. Daraus folgt, dass für jede relle Zahl $x$ entweder $f(x)=0$ oder $f(x)=x^2$ gilt. Insbesondere ist
+$f(0)=0$ und Einsetzen von $x=0$ in der ursprünglichen Gleichung ergibt $f(y)=f(-y)$ für alle $y \in \BR$,
+folglich ist $f$ eine gerade Funktion.
+
+Nehme nun an, es gäbe reelle Zahlen $a,b \neq 0$ mit $f(a)=0$ und $f(b)=b^2$. Einsetzen von $x=a$ und $y=b$
+ergibt dann $b^2=f(b)=f(a^2-b)$. Die rechte Seite ist gleich 0 oder gleich $(a^2-b)^2$. Ersteres kann nicht
+sein, denn dann wäre $a=0$, im Widerspruch zur Annahme. Daher gilt $b^2=(a^2-b)^2$, also $a^2-b=\pm b$. Steht
+rechts das Minuszeichen, folgt wieder $a=0$, Widerspruch. Folglich muss $a^2=2b$ gelten. Da $f$ gerade ist, gilt
+nun auch $f(-b)=(-b)^2$ und dieselbe Argumentation mit $a$ und $-b$ ergibt $a^2=-2b$. Daraus folgt $a=b=0$,
+Widerspruch. Folglich ist entweder $f(x)=0$ für alle $x \in \BR$ oder $f(x)=x^2$ für alle $x \in \BR$. Man
+rechnet leicht nach, dass diese beiden Funktionen tatsächlich Lösungen der Gleichung sind.\\
+
+\bigskip
+
+
+\item[\textbf{8.}] Der Inkreis des Dreiecks $ABC$ berührt die Seiten $AB$, $BC$ und $CA$ in den Punkten $D$, $E$
+und $F$. Sei $P$ ein Punkt im Innern von $ABC$, sodass der Inkreis von $ABP$ die Seite $AB$ ebenfalls in $D$
+berührt und die Seiten $AP$ und $BP$ in den Punkten $Q$ und $R$. Zeige, dass die vier Punkte $E, F, R$ und $Q$
+auf einem Kreis liegen.\\
+
+\textbf{Lösung}
+
+Wir zeigen im Folgenden mit Winkeljagd, dass $\wi FER + \wi FQR = 180 ^\circ$ gilt. \\
+Sei $I$ der Inkreismittelpunkt und $k_1$ der Inkreis von $\triangle ABC$ und $k_2$ der Inkreis von $\triangle ABP$. Die Geraden $AF$ und $AD$ liegen beide tangential an $k_1$, es gilt also $AF = AD$. Ebenfalls liegen $AQ$ und $AD$ beide tangential an $k_2$, woraus $AQ = AD$ folgt. Zusammen und mit analoger Überlegung für $B$ erhalten wir
+$$ AD = AQ = AF \qquad \text{und} \qquad BD = BR = BE. $$
+Wir benennen den Kreis mit Mittelpunkt $A$ und Radius $AD$ mit $k_A$ und den Kreis mit Mittelpunkt $B$ und Radius $BD$ mit $k_B$. Nun führen wir Bezeichnungen für die Winkel ein:
+$$ \wi DAQ = 2\alpha \qquad \wi QAF = 2\beta \qquad \wi DBR = 2\gamma \qquad \wi RBE = 2\delta. $$
+Aus dem Zentri-Peripheriewinkelsatz folgt daraus
+$$ \wi DFQ = \alpha \qquad \wi QDF = \beta \qquad \wi DER = \gamma \qquad \wi RDE = \delta. $$
+Weil $ADIF$ ein Sehnenviereck ist (rechte Winkel bei $D$ und $F$), gilt $\wi FID = 180^\circ - 2\alpha - 2\beta$. Vom Zentri-Peripheriewinkelsatz in $k_1$ erhalten wir nun
+$$ \wi FER = \wi FED - \wi DER = \frac{1}{2} \wi FID - \gamma = 90^\circ - \alpha - \beta - \gamma. $$ 
+Wir wollen nun noch $\wi FQR$ berechnen. Dazu bemerken wir als erstes, dass aus der Gleichschenkligkeit von $\triangle BDR$ folgt $\wi DRB = 90^\circ - \gamma$. Die Gerade $BR$ liegt tangential an $k_2$ und nach dem Tangentenwinkelsatz erhalten wir $\wi RQD = 90^\circ - \gamma$. Wir können nun $\wi FQR$ ausrechnen
+\begin{eqnarray*}
+\wi FQR &=& 360^\circ - \wi FQD - \wi DQR = 360^\circ - (180^\circ - \alpha - \beta) - (90^\circ - \gamma) \\
+ &=& 90^\circ + \alpha + \beta + \gamma
+\end{eqnarray*}
+Offensichtlich gilt nun $\wi FER + \wi FQR = 180 ^\circ$.
+
+\bigskip
+
+
+\item[\textbf{9.}] Sei $P$ ein Polynom vom Grad $n$, sodass gilt
+\[P(k)=\frac{k}{k+1} \qquad \mbox{für} \qquad k=0,1,2, \ldots, n.\]
+Finde $P(n+1)$.\\
+
+\textbf{Lösung}
+
+Betrachte das Polynom $Q(x)=(x+1)P(x)-x$. $Q$ hat Grad $n+1$ und nach Voraussetzung die $n+1$ Nullstellen
+$k=0,1,\ldots,n$. Es gibt also eine Konstante $a$ mit
+\[Q(x)=a x (x-1)(x-2) \cdots (x-n).\]
+Ausserdem ist $Q(-1)=((-1)+1)P(x)-(-1)=1$. Einsetzen von $x=-1$ in obige Formel liefert dann $1=(-1)^{n+1}(n+1)!
+\cdot a$, also $a=(-1)^{n+1}/(n+1)!$. Daraus folgt jetzt $Q(n+1)=(-1)^{n+1}$ und somit
+\[P(n+1)=\frac{Q(n+1)+(n+1)}{n+2}= \left\{
+\begin{tabular}{cl}
+$1$ & $n$ ungerade,\\
+${\displaystyle \frac{n}{n+2}}$ & $n$ gerade.
+\end{tabular}
+\right.
+\]
+
+\bigskip
+
+
+\item[\textbf{10.}] Es sei $S=\{P_1,P_2,\ldots,P_{2000}\}$ eine Menge von 2000 Punkten im Innern eines Kreises
+vom Radius 1, sodass einer der Punkte der Kreismittelpunkt ist. Für $i=1,2,\ldots,2000$ bezeichne $x_i$ den
+Abstand von $P_i$ zum nächstgelegenen Punkt $P_j \neq P_i$ aus $S$. Zeige, dass gilt
+\[x_1^2+x_2^2+\ldots+x_{2000}^2 < 9.\]
+
+
+\textbf{Lösung}
+
+Da einer der Punkte der Kreismittelpunkt ist, gilt $x_i < 1$ für alle $i$. Zeichne um jeden Punkt $P_i \in S$
+einen Kreis mit Radius $x_i/2$. Je zwei dieser Kreise haben höchstens einen Randpunkt gemeinsam. Falls nicht,
+dann gibt es zwei Indizes $i,j$ und einen Punkt $A$ der im Innern des Kreises um $P_i$ und im Innern oder auf
+dem Rand des Kreises um $P_j$ liegt. Nach der Dreiecksungleichung folgt dann aber
+\[|P_i P_j| \leq |P_iA|+|AP_j| < x_i/2+ x_j/2 \leq \max\{x_i,x_j\},\]
+im Widerspruch zur Definition von $x_i$ und $x_j$. Betrachte einen grossen Kreis vom Radius $3/2$ mit demselben
+Mittelpunkt wie der gegebene Kreis von Radius 1. Alle kleinen Kreise liegen ganz in diesem grossen Kreis drin,
+denn es gilt ja $x_i<1$ für alle $i$. Da sie sich nicht überlappen, ist die Summe ihrer Flächen höchstens so
+gross wie die Fläche des grossen Kreises (in der Tat echt kleiner!). Dies liefert
+\[\sum_{i=1}^{2000} \pi (x_i/2)^2 < \pi (3/2)^2.\]
+Kürzt man dies mit $\pi/4$, dann folgt die Behauptung.
+
+\end{enumerate}
+\end{document}

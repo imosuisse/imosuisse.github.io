@@ -1,0 +1,416 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+
+
+
+
+
+% Schriftabkürzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+\newcommand{\eck}[1]{\langle #1 \rangle}
+
+\newcommand{\wi}{\mathop{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}} %Schönes Winkel-Zeichen
+
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge Lösungen zur SMO Finalrunde 2008} \\
+\medskip erste Prüfung - 14. März 2008
+\end{center}
+
+\vspace{15mm}
+
+
+\begin{enumerate}
+
+\item[\textbf{1.}] Sei $ABC$ ein Dreieck mit $\wi BAC \neq 45^\circ$ und $\wi ABC \neq 135^\circ$. Sei $P$ der Punkt auf der Geraden $AB$ mit $\wi CPB = 45^\circ$. Seien $O_1$ und $O_2$ die Umkreismittelpunkte der Dreiecke $ACP$ und $BCP$. Zeige, dass die Fläche des Vierecks $CO_1PO_2$ gleich gross ist wie die Fläche des Dreiecks $ABC$.\\
+
+\textbf{Lösung}
+
+Da $O_1$ und $O_2$ auf der Mittelsenkrechten der Strecke $AP$ liegen, ist das Dreieck $AO_1O_2$ kongruent zum Dreieck $PO_2O_1$. Es genügt also zu zeigen, dass die Fläche des Dreiecks $AO_1O_2$ halb so gross ist wie die Fläche des Dreiecks $ABC$. Wir zeigen zuerst, dass die beiden Dreiecke ähnlich sind. Falls $\wi CBA<45^\circ$ gilt nach dem Peripherie-Zentriwinkelsatz
+\[\wi O_1O_2A = \frac{1}{2} \wi PO_2A = \wi CBA,\]
+und falls $\wi CBA>45^\circ$ gilt ähnlich
+\[\wi O_1O_2A = \frac{1}{2} \wi PO_2A = 180^\circ - \wi PBA = \wi CBA.\]
+Analog folgt $\wi O_2O_1A = \wi BCA$, wie behauptet.
+Wieder nach dem Peripherie-Zentriwinkelsatz ist $\wi CO_1A = 2 \wi CPA = 90^\circ$, und wegen $O_1A=O_1C$ ist $AO_1C$ ein gleichschenklig rechtwinkliges Dreieck. Es gilt also $AC=\sqrt{2}AO_1$. Die Fläche des Dreiecks $ABC$ ist also wie gewünscht um den Faktor $(\sqrt{2})^2=2$ grösser als die Fläche des Dreiecks $AO_1O_2$.
+
+\bigskip
+
+\item[\textbf{2.}] Bestimme alle Funktionen $f: \BR^+ \rightarrow \BR^+$, sodass für alle $x,y >0$ gilt:
+\[f(xy) \leq \frac{xf(y)+yf(x)}{2}\]
+
+\textbf{Lösung}
+
+Sei $a=f(1)>0$. Setze $y=1$, dann folgt $f(x) \leq \frac{1}{2}(xa+f(x))$, also $f(x) \leq ax$. Setze nun $y=\frac{1}{x}$, unter Verwendung der eben gezeigten Abschätzung folgt weiter $a \leq \frac{1}{2}(xf(\frac{1}{x})+\frac{1}{x}f(x)) \leq \frac{1}{2}(x\cdot a\frac{1}{x}+\frac{1}{x}f(x)) \leq \frac{1}{2}(a+\frac{1}{x}f(x))$, also $f(x) \geq ax$. Insgesamt gilt also $f(x)=ax$ für alle $x>0$ und Einsetzen zeigt, dass dies tatsächlich für jedes $a>0$ eine Lösungen der Funktionalungleichung ist.\\
+
+\bigskip
+
+\item[\textbf{3.}] Zeige, dass jede Zahl der Form 
+\[2^{5^{2^{5^{\cdot^\cdot}}}} + 4^{5^{4^{5^{\cdot^\cdot}}}}\]
+durch 2008 teilbar ist, wobei die Exponententürme beliebige, voneinander unabhängige Höhen $\geq 3$ haben.\\
+
+
+\textbf{Lösung}
+
+Es gilt $2008=8 \cdot 251$ und offensichtlich ist jeder der beiden Summanden in der Aufgabenstellung durch 8 teilbar. Es genügt daher zu zeigen, dass die Summe auch durch 251 teilbar ist. Modulo 251 gilt $2^8 =256 \equiv 5$ und daher $2^{25} \equiv 2 \cdot 5^3 = 250 \equiv -1$. Ausserdem ist $4^{25} = (2^{25})^2 \equiv (-1)^2 =1$.
+
+Der Exponent des ersten Summanden ist nach Voraussetzung eine echte Potenz von $5$ und somit ein ungerades Vielfaches von 25, das heisst, es gilt $5^{2^{5^{\cdot^\cdot}}}=25u$ mit $u$ ungerade. Analog ist der Exponent des zweiten Summanden ein Vielfaches von 25, wir schreiben $5^{4^{5^{\cdot^\cdot}}}=25v$. Dies ergibt schliesslich
+\[2^{5^{2^{5^{\cdot^\cdot}}}} + 4^{5^{4^{5^{\cdot^\cdot}}}} = 2^{25u}+4^{25v} \equiv (-1)^u +1^v =0 \quad (\mod 251).\]
+
+\bigskip
+
+\item[\textbf{4.}] Betrachte drei Seitenquadrate eines $n\times n \times n$-Würfels, die an einer der Würfelecken zusammenstossen. Für welche $n$ ist es möglich, diese vollständig und überlappungsfrei mit Papierstreifen der Grösse $3\times 1$ zu bedecken? Die Papierstreifen können dabei auch über Würfelkanten hinweggeklebt werden.\\
+
+\textbf{Lösung}
+
+Wenn $n$ durch 3 teilbar ist. Führe in jeder Seitenfläche Koordinaten ein, sodass $(1,1)$ das Feld in der gemeinsamen Ecke ist und $(n,n)$ das diametrale Eckfeld. Färbe alle Felder $(a,b)$ mit $a,b \not \equiv 2$ (mod 3) schwarz und den Rest weiss. Dann bedeckt jeder Papierstreifen eine gerade Anzahl schwarzer Felder und somit muss die Gesamtzahl schwarzer Felder gerade sein. Eine kurze Rechnung zeigt aber, dass die Anzahl schwarzer Felder pro Seitenfläche für $n=3m+1$ und $n=3m+2$ gleich $(2m+1)^2$ ist, also ungerade. Somit ist auch die Gesamtzahl schwarzer Felder ungerade, ein Widerspruch. Also muss $n$ durch 3 teilbar sein. In diesem Fall lässt sich aber sogar jede Seitenfläche einzeln mit Papierstreifen bedecken.
+
+
+\bigskip
+
+
+\item[\textbf{5.}] Sei $ABCD$ ein Quadrat mit Seitenlänge $1$ in der Ebene. Bestimme den geometrischen Ort aller Punkte $P$ mit der Eigenschaft 
+\[AP \cdot CP + BP \cdot DP = 1.\]
+
+\textbf{1. Lösung}
+
+Der gesuchte Ort ist die Vereinigung der beiden Diagonalen des Quadrates. Wir führen Koordinaten ein und setzen $A=(0,0)$, $B=(1,0)$, $C=(1,1)$, $D=(1,0)$ und $P=(a,b)$. Es gilt dann nach CS
+\begin{eqnarray*}
+AP \cdot CP + BP \cdot DP &=& \sqrt{a^2+b^2}\sqrt{(1-b)^2+(1-a)^2}+\sqrt{(1-a)^2+b^2}\sqrt{(1-b)^2+a^2}\\
+&\geq& \big(|a(1-b)|+|b(1-a)|\big) + \big(|(1-a)(1-b)|+|ab|\big)\\
+&\geq& a(1-b)+b(1-a)+(1-a)(1-b)+ab=1.
+\end{eqnarray*}
+In der zweiten Abschätzung gilt Gleichheit genau dann, wenn $a,b,1-a,1-b$ alle dasselbe Vorzeichen haben, das heisst, wenn $P$ im Innern oder auf dem Rand des Quadrats liegt. In der ersten Abschätzung gilt Gleichheit genau dann, wenn die Vektoren $(a,b)$ und $(1-b,1-a)$ kollinear sind, ebenso wie die Vektoren $(a,1-b)$ und $(b,1-a)$. Eine kurze Rechnung zeigt, dass dies genau dann der Fall ist, wenn $a=b$ oder $a+b=1$ gilt, also dann wenn $P$ auf einer der beiden Diagonalen des Quadrates liegt.\\
+
+\textbf{2. Lösung}
+
+Wir nehmen zuerst an, dass der Punkt $P$ im Innern oder auf dem Rand des Quadrates liegt. Offenbar erfüllen die vier Eckpunkte die Bedingung, wir nehmen daher im Folgenden $P \neq A,B,C,D$ an. Sei $Q$ die Translation von $P$ um den Vektor $\vec{DA}$. Nach Konstruktion gilt $CP=BQ$ und $DP=AQ$. Der Satz von Ptolemäus ergibt nun für das Viereck $AQBP$ 
+\[AP \cdot CP + BP \cdot DP = AP \cdot BQ + BP \cdot AQ \geq AB \cdot PQ = 1\cdot 1 = 1.\]
+Gleichheit gilt genau dann, wenn $AQBP$ ein Sehnenviereck ist, was wir im Folgenden annehmen. Das Viereck $PQBC$ ist ein Parallelogram und daher gilt
+\[\wi PAB = \wi PQB = \wi PCB,\]
+was gleichbedeutend damit ist, dass $P$ auf einer der beiden Diagonalen des Quadrates liegt.
+
+Schliesslich betrachten wir den Fall, wo $P$ ausserhalb des Quadrates liegt. Wir können oBdA annehmen, dass $P$ auf der anderen Seite der Geraden $CD$ liegt als die Punkte $A,B$. Wie man leicht sieht, verkleinert sich die Summe strikt, wenn wir $P$ auf die Gerade $CD$ projizieren. Nach 2-maligem Anwenden einer solchen Projektion liegt der Punkt auf den Rand des Quadrates und nach dem schon Gezeigten ist die Summe für einen Punkt ausserhalb des Quadrates immer grösser als $1$. 
+
+\bigskip
+
+\item[\textbf{6.}] Bestimme alle ungeraden natürlichen Zahlen der Form
+\[\frac{p+q}{p-q},\]
+wobei $p>q$ Primzahlen sind.\\
+
+\textbf{1. Lösung}
+
+Sei $n$ diese Zahl. Nach Voraussetzung gilt $n(p-q)=p+q=(p-q)+2q$, folglich ist $p-q$ ein Teiler von $2q$. Wegen $\ggT(p-q,q)=1$ gilt daher $p-q=1$ oder $p-q=2$. Im ersten Fall ist $p$ oder $q$ gerade, also $p=3, q=2$ und $n=5$. Im zweiten Fall sind $p$ und $q$ ungerade und somit ist $n=\frac{p+q}{p-q}=\frac{2q+2}{2}=q+1$ gerade, Widerspruch. Die einzige solche Zahl ist daher $n=5$.\\
+
+\textbf{2. Lösung}
+
+Wir betrachten wieder die Gleichung $n(p-q)=p+q$. Wir nehmen zuerst an, $p$ und $q$ seien ungerade. Im Fall $p \equiv q$ (mod 4) ist die linke Seite der Gleichung durch 4 teilbar, die rechte aber nicht. Im Fall $p \not \equiv q$ (mod 4) ist die rechte Seite durch 4 teilbar, die linke aber nicht da $n$ ungerade ist. Dieser Widerspruch zeigt $q=2$. In diesem Fall ist schliesslich $n=\frac{p+2}{p-2} = 1+\frac{4}{p-2}$, also ist $p-2$ ein Teiler von $4$ und somit ist $p=3$ und $n=5$.\\
+
+\textbf{3. Lösung}
+
+Umformen der Gleichung aus der zweiten Lösung ergibt $p(n-1)=q(n+1)$. Da $p$ und $q$ teilerfremd sind, gilt $n+1=ap$ und $n-1=bq$ für natürliche Zahlen $a,b$. Einsetzen zeigt $a=b$ und daher gilt $a(p-q)=(n+1)-(n-1)=2$. Wieder folgt $p-q=1$ oder $=2$ und man kann wie in der ersten Lösung schliessen.
+ 
+\bigskip
+
+\item[\textbf{7.}] Ein $8 \times 11$-Rechteck wird irgendwie in 21 Gebiete zerlegt, wobei jedes dieser Gebiete zusammenhängend ist und aus Einheitsquadraten besteht, deren Kanten parallel zu den Kanten des Rechtecks liegen. Beweise, dass mindestens zwei dieser Gebiete bis auf Rotationen und Spiegelungen dieselbe Form haben.\\
+
+\textbf{Lösung}
+
+Nehme an, dies sei nicht der Fall. Das Rechteck hat Fläche 88. Die Anzahl zusammenhängender Teile aus 1, 2, 3 respektive 4 Einheitsquadraten ist gleich 1, 1, 2 respektive 5, wie man sich leicht überlegt. Wenn nun keine zwei Teile in der Zerlegung dieselbe Form haben, dann ist die Gesamtfläche der 21 Teile also mindestens
+\[1+2+(3+3)+(4+4+4+4+4)+ \underbrace{(5+\ldots +5)}_{12} = 89 >88,\]
+ein Widerspruch.
+
+\bigskip
+
+\item[\textbf{8.}] Sei $ABCDEF$ ein konvexes Sechseck mit einem Umkreis. Beweise, dass sich die Diagonalen $AD, BE$ und $CF$ genau dann in einem Punkt schneiden, wenn gilt
+\begin{equation} \label{Verh}
+\frac{AB}{BC} \cdot \frac{CD}{DE} \cdot \frac{EF}{FA} = 1.
+\end{equation}
+
+\textbf{1. Lösung}
+
+Wir nehmen zuerst an, dass sich die Diagonalen in einem Punkt $S$ schneiden. Es gilt $\wi ASB = \wi DSE$ und $\wi BAS = \wi DES$, letzteres weil beides Peripheriewinkel über der Sehne $BD$ sind. Also sind die Dreiecke $ABS$ und $EDS$ ähnlich. Analog zeigt man die Ähnlichkeit der Dreiecke $BCS$ und $FES$ sowie der Dreiecke $CDS$ und $AFS$. Diese Ähnlichkeiten liefern die Verhältnisse (beachte die Asymmetrie)
+\[\frac{AB}{DE}=\frac{BS}{DS}, \qquad \frac{BC}{EF}=\frac{BS}{FS}, \qquad \frac{CD}{FA}=\frac{DS}{FS},\] 
+und Multiplikation ergibt (\ref{Verh}).
+
+Für die Umkehrung argumentieren wir rückwärts. Dazu gehen wir von der Situation aus, wo sich alle drei Diagonalen in einem Punkt schneiden und verschieben die Gerade $AD$ parallel in Richtung von $E$ und $F$. Während dieser Verschiebung nehmen die Längen $AB$ und $CD$ strikt zu, wogegen $DE$ und $FA$ strikt abnehmen. Insgesamt wächst also die linke Seite von (\ref{Verh}) streng monoton. Analog fällt sie streng monoton bei einer Verschiebung in Richtung von $B$ und $C$. Folglich gibt es höchstens eine Position der Geraden $AD$, sodass (\ref{Verh}) gilt und nach dem ersten Teil ist das dann der Fall wenn sich die Diagonalen in einem Punkt schneiden.\\
+
+\textbf{2. Lösung}
+
+Wir nehmen wieder zuerst an, dass sich die Diagonalen in einem Punkt $S$ schneiden. Wie in der ersten Lösung erhält man die drei Paare ähnlicher Dreiecke. Daraus folgt (diesmal zyklisch)
+\[\frac{AB}{BC} \cdot \frac{CD}{DE} \cdot \frac{EF}{FA} = \frac{AB}{DE} \cdot \frac{EF}{BC} \cdot \frac{CD}{FA} = 
+\frac{SB}{SD} \cdot \frac{SE}{SC} \cdot \frac{SD}{SF} = \frac{SB \cdot SE}{SC \cdot SF}.\]
+Eine Anwendung des Potenzsatzes auf $S$ und den Umkreis des Sechsecks zeigt, dass der letzte Bruch den Wert $1$ hat.
+
+Die andere Richtung beweisen wir rückwärts. Angenommen die drei Diagonalen schneiden sich nicht in einem Punkt. Der Schnittpunkt von $BE$ und $FC$ sei $S$. Die Gerade $AS$ schneide den Kreis nochmals in $D'\neq D$. Da \ref{Verh} nach dem schon Gezeigten sowohl für $D$ als auch für $D'$ gilt, folgt
+\[\frac{ED}{DC} = \frac{ED'}{D'C},\]
+was ist aber nicht möglich ist, da dieses Verhältnis streng monoton wächst, wenn man $D'$ von $E$ nach $C$ bewegt.
+
+\bigskip
+
+\item[\textbf{9.}] Betrachte sieben verschiedene Geraden in der Ebene. Ein Punkt heisst \emph{gut}, falls er auf mindestens drei dieser Geraden liegt. Bestimme die grösstmögliche Anzahl guter Punkte.\\
+
+\textbf{1. Lösung}
+
+Man überlegt sich leicht, dass 6 gute Punkte möglich sind. Wir zeigen nun, dass dies die grösstmögliche Anzahl guter Punkte ist. Wir nennen die sieben Geraden aus der Aufgabenstellung \emph{gut}, um sie von irgendwelchen anderen Geraden zu unterscheiden.
+
+Für $n \geq 2$ sei $a_n$ die Anzahl guter Punkte, die auf genau $n$ guten Geraden liegen. Wir zählen die Paare $(P,\{g_1,g_2\})$ aus einem guten Punkt und einem ungeordneten Paar von zwei guten Geraden, sodass $P \in g_1 \cap g_2$.
+\begin{enumerate}
+\item[(i)] Nach Definition von $a_n$ sind dies genau 
+\[\sum_{n \geq 2} a_n \binom{n}{2} = a_2+3a_3+6a_4+\ldots\]
+\item[(ii)] Andererseits gibt es $\binom{7}{2}=21$ mögliche Wahlen für $\{g_1,g_2\}$ und für jede solche Wahl gibt es höchstens einen Schnittpunkt der beiden Geraden.
+\end{enumerate}
+Insgesamt folgt also $a_2+3a_3+6a_4+\ldots \leq 21$. Gibt es nun mindestens 7 gute Punkte, dann gilt $a_3+a_4+a_5+ \ldots \geq 7$. Diese beiden Abschätzungen können nur für $a_3=7, a_2=a_4=a_5=\ldots =0$ erfüllt sein, und dann gilt in (ii) Gleichheit. Insbesondere gibt es genau 7 gute Punkte, keine zwei gute Geraden sind parallel und wegen $a_2=0$ ist jeder Schnittpunkt von zwei guten Geraden ein guter Punkt, das heisst, durch jeden Schnittpunkt von zwei dieser Geraden geht noch eine dritte. 
+
+Aus dem folgenden Lemma folgt nun aber, dass höchstens eine guter Punkt existiert, ein Widerspruch.
+
+\begin{lem}
+Gegeben seien $n$ Geraden in der Ebene, die paarweise nicht parallel sind. Geht durch jeden Schnittpunkt von zweien noch eine dritte, dann schneiden sich alle $n$ Geraden in einem Punkt.
+\end{lem}
+
+\begin{proof}[Beweis]
+Nehme an, es gehen nicht alle Geraden durch einen Punkt und wähle ein Paar $(S,g)$ aus einem Schnittpunkt $S$ zweier Geraden und einer dritten Geraden $g$, die $S$ nicht enthält, sodass der Abstand von $S$ zu $g$ unter all diesen Paaren \emph{minimal} ist (nach Annahme gibt es ein solches Paar). Sei $P$ die Projektion von $S$ auf $g$. Durch $S$ gehen mindestens drei Geraden $g_1,g_2,g_3$ und diese schneiden $g$ in den Punkten $P_1,P_2,P_3$. Davon liegen sicher zwei auf derselben Seite von $P$, wir können also oBdA annehmen, dass $P_1,P_2,P$ in dieser Reihenfolge auf $g$ liegen, wobei $P_2=P$ zugelassen ist. Dann ist aber der Abstand von $P_2$ zu $g_1$ kleiner als der Abstand von $S$ zu $g$, ein Widerspruch.\\
+\end{proof}
+
+\textbf{2. Lösung}
+
+Wir zeigen, dass nicht $n \geq 7$ gute Punkte auftreten können und zählen dazu die Anzahl der Paare $(P,g)$ aus einem guten Punkt $P$ und einer guten Geraden $g$, sodass $P$ auf $g$ liegt, auf zwei Arten. Einerseits liegen auf keiner guten Geraden 4 oder mehr gute Punkte, denn dafür wären  mindesten 9 gute Geraden nötig. Folglich gibt es höchstens $7 \cdot 3=21$ solche Paare. Andererseits liegt jeder der $n$ guten Punkte auf mindestens 3 guten Geraden, folglich gibt es mindestens $3n$ Paare. Insgesamt folgt $3n \leq 21$ und somit $n \leq 7$. Im Fall $n=7$ gilt in allen Abschätzungen Gleichheit, insbesondere liegen auf jeder guten Geraden \emph{genau} drei gute Punkte. 
+
+Als nächstes zeigen wir, dass jede Verbindungsgerade zweier guter Punkte gut ist und zählen dazu die Anzahl Paare $(\{P_1,P_2\},g)$ aus einem ungeordneten Paar guter Punkte und einer guten Geraden, sodass $P_1,P_2 \in g$, auf zwei Arten. Einerseits gibt es $\binom{7}{2}=21$ mögliche Wahlen für $\{P_1,P_2\}$ und für jede solche \emph{höchstens} eine gute Gerade $g$, die beide Punkte enthält. Andererseits liegen auf jeder guten Geraden genau 3 gute Punkte, also ist die Anzahl solcher Paare gleich $7\binom{3}{2}=21$. Ein Vergleich zeigt nun, dass in der ersten Abschätzung Gleichheit gelten muss, dies ist die Behauptung. 
+
+Die gesammelten Informationen widersprechen jetzt dem folgenden Resultat:
+
+\begin{lem}[Sylvester]
+Gegeben seien $n$ Punkte in der Ebene. Enthält jede Gerade durch zwei dieser Punkte noch einen dritten, dann sind alle $n$ Punkte kollinear.
+\end{lem}
+
+\begin{proof}
+Nehme an, die Punkte seien nicht alle kollinear und wähle ein Paar $(S,g)$ aus einer Geraden $g$ durch zwei der Punkte und einem dritten Punkt $S$, der nicht auf $g$liegt, sodass der Abstand von $S$ zu $g$ unter allen solchen Paaren \emph{minimal} ist (nach Annahme gibt es ein solches Paar). Sei $P$ die Projektion von $S$ auf $g$. Nach Voraussetzung liegen auf $g$ mindestens drei der $n$ Punkte. Davon liegen sicher zwei auf derselben Seite von $P$, wir können also oBdA annehmen, dass $P_1,P_2,P$ in dieser Reihenfolge auf $g$ liegen, wobei $P_2=P$ zugelassen ist. Nun ist aber der Abstand von $P_2$ zu der Geraden durch $P_1$ und $S$ kleiner als der Abstand von $S$ zu $g$, ein Widerspruch.\\
+\end{proof}
+
+\textbf{3. Lösung}
+
+Wie in der ersten Lösung zeigt man, dass im Fall von $n \geq 7$ guten Punkten keine zwei gute Geraden parallel sein können, dass jeder gute Punkt auf genau drei guten Geraden liegt und dass der Schnittpunkt zweier guter Geraden ein guter Punkt sein muss. Aus der zweiten Lösung folgt ausserdem, dass jede Verbindungsgerade zweier guter Punkte gut sein muss, wir geben hier noch ein alternatives Argument: Seien $P_1,P_2$ zwei gute Punkte, deren Verbindungsgerade nicht gut ist. Dann gehen durch $P_1$ und $P_2$ je (mindestens) drei gute Geraden und diese sind paarweise verschieden. Ausserdem können sich keine drei dieser Geraden in einem guten Punkt $\neq P_1,P_2$ schneiden, denn sonst wären zwei davon gleich. Folglich liegen alle anderen guten Punkte auf der siebten guten Geraden. Somit können dies höchstens drei Stück sein, im Widerspruch zu $n \geq 7$.
+
+Betrachte nun die konvexe Hülle $H$ aller guten Punkte. Diese ist ein konvexes $m$-Eck mit $m \geq 3$, dessen Seiten alle auf guten Geraden liegen, wir nennen sie die \emph{Trägergeraden}. Wäre $m \geq 4$, dann können wir zwei nicht benachbarte Seten von $H$ wählen, deren Trägergeraden schneiden sich dann in einem guten Punkt ausserhalb von $H$, Widerspruch. Daher ist $H$ ein Dreieck. Wir zeigen nun, dass jede gute Gerade $g$, die keine Trägergerade ist, durch (genau) einen Eckpunkt von $H$ geht. Wäre dies nicht so, dann würden mindestens zwei der drei Eckpunkte von $H$ auf derselben Seite von $g$ liegen und $g$ würde die Trägergerade durch diese beiden Eckpunkte ausserhalb von $H$ schneiden, Widerspruch. Folglich gibt es einen Eckpunkt, der auf zwei Trägergeraden und noch mindestens zwei anderen guten Geraden liegt, ein Widerspruch dazu, dass jeder gute Punkt auf genau drei guten Geraden liegt.
+
+\bigskip
+
+\item[\textbf{10.}] Finde alle Paare $(\alpha,\beta)$ von positiven reellen Zahlen mit folgenden Eigenschaften:
+\begin{enumerate}
+\item[(a)] Für alle positiven reellen Zahlen $x,y,z,w$ gilt
+\[x+y^2+z^3+w^6 \geq \alpha (xyzw)^\beta.\]
+\item[(b)] Es gibt ein Quadrupel $(x,y,z,w)$ von positiven reellen Zahlen, sodass in (a) Gleichheit gilt.\\
+\end{enumerate}
+
+\textbf{Lösung}
+
+Sei $(\alpha,\beta)$ ein Paar wie in der Aufgabenstellung. Wir bemerken zuerst, dass für festes $\beta$ höchstens ein $\alpha$ wie in (b) existiert, denn $\alpha$ ist dann die \emph{grösste} positive reelle Zahl, für die (a) gilt. Setze nun $x=t^6$, $y=t^3$, $z=t^2$ und $w=t$ für $t>0$, dann gilt insbesondere $4t^6 \geq \alpha t^{12\beta}$, also
+\[t^{6-12\beta} \geq \frac{\alpha}{4}\]
+für alle $t>0$. Für sehr kleine $t$ kann diese Abschätzung nur gelten, wenn der Exponent auf der linken Seite nicht negativ ist. Für grosse $t$ hingegen nur dann, wenn der Exponent nicht positiv ist. Folglich muss $\beta=\frac{1}{2}$ sein. 
+
+Andererseits erhält man mit AM-GM
+\begin{eqnarray*}
+x+y^2+z^3+w^6 &=& \Big(\underbrace{\frac{x}{6}+ \ldots +\frac{x}{6}}_{6}\Big) + \Big(\frac{y^2}{3}+\frac{y^2}{3}+\frac{y^2}{3}\Big) + \Big(\frac{z^3}{2}+\frac{z^3}{2}\Big) + w^6\\
+&\geq& 12 \sqrt[12]{\Big(\frac{x}{6}\Big)^6 \cdot \Big(\frac{y^2}{3}\Big)^3 \cdot \Big(\frac{z^3}{2}\Big)^2 \cdot w^6} = \big(2^{\frac{4}{3}} 3^{\frac{1}{4}}\big) \sqrt{xyzw}.
+\end{eqnarray*}
+Gleichheit gilt für $(x,y,z,w)=(6,\sqrt{3},\sqrt[3]{2},1)$, also sind (a) und (b) erfüllt für das einzige Paar $(\alpha,\beta)=(2^{\frac{4}{3}} 3^{\frac{1}{4}}, \frac{1}{2})$.
+
+\end{enumerate}
+
+\end{document}

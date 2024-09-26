@@ -1,0 +1,169 @@
+\de{
+Bestimme alle natürlichen Zahlen $n \geq 2$, sodass für jeden Teiler $d > 1$ von $n$
+\[d^2+n \, \div \, n^2+d\]
+gilt.
+
+\textbf{Antwort:} $n$ erfüllt die Bedingung genau dann, wenn es eine Primzahl ist.
+
+\textbf{Lösung:} Zuest bemerken wir, dass alle Primzahlen die Voraussetzung tatsächlich erfüllen: Wenn $n$ eine Primzahl ist, muss $d=n$ gelten. Für diese Wahl von $d$ gilt offensichtlich
+\[n^2 + n \, \div \, n^2 + n. \]
+
+Wenn nun $n$ keine Primzahl ist, finden wir $a,b > 1$, sodass $n=ab$ gilt. Nun können wir $d=a$ wählen und erhalten
+\[
+a^2 + ab \, \div \, (ab)^2 + a.
+\]
+Hier können wir beide Seiten durch $a$ teilen und erhalten die äquivalente Teilbarkeitsbedingung
+\[
+a+b \, \div \, ab^2 + 1.
+\]
+Analog dazu können wir auch $d=b$ wählen und erhalten
+\[
+b^2 + ab \, \div \, (ab)^2 + b \quad \Longleftrightarrow \quad b + a \, \div \, a^2b + 1.
+\]
+Wir sehen also, dass $a+b$ sowohl $ab^2+1$ als auch $ab^2+1$ teilt, also auch deren Summe:
+\[
+a+b \, \div \,  ab(a+b)+2.
+\]
+Offensichtlich ist $ab(a+b)$ durch $a+b$ teilbar. Dann sagt uns die obige Bedingung, dass
+\[
+a+b \, \div \, 2
+\]
+gilt. Dies steht aber im Widerspruch zu $a,b > 1$! Wir folgern also, dass alle nicht-Primzahlen die Bedingung der Aufgabe nicht erfüllen.
+
+\textbf{Alternative:} Wir können auch die Differenz von $ab^2+1$ und $a^2b+1$ betrachten, woraus wir
+\[a+b \div ab(a-b)\]
+erhalten. Falls wir nun ggT$(a,b) = 1$ wählen können, würde dies ggT$(a+b,ab)=1$ und somit
+\[a+b \div a-b\]
+implizieren, was unmöglich ist.\\
+Wir können $a$ und $b$ allerdings nur dann teilerfremd wählen, falls $n$ mindestens zwei verschiedene Primteiler hat. Wir müssen also den Fall, in dem $n$ eine Primpotenz ist, noch separat behandeln: \\
+Falls $n= p^k$ für $p$ prim und $k\ge 2$, können wir aber einfach $d=p$ wählen um
+\[
+p^2 + p^k \, | \, p^{2k} + p \quad \Longrightarrow \quad p^2 \, | \, p\left(p^{2k-1}+1\right) \quad \Longrightarrow \quad p \, | \, p^{2k-1} + 1
+\]
+zu erhalten, was auch unmöglich ist.
+
+\textbf{Marking scheme (Additiv)}
+ \begin{itemize}
+    \item 1P: Beobachtung, dass alle Primzahlen funktionieren
+    \item 1P: Eine Teilbarkeitsbedingung der Form $a+b \, | \, ab^2 + 1$ für $n=ab$
+    \item 2P: Die zweite Teilbarkeitsbedigung der Form $a+b \, | \, a^2b + 1$ für $n=ab$
+    \item 2P: $a+b \, | \, a^2b + ab^2 + 2$ \textbf{oder} $a+b \, | \, ab(b-a)$ und den Fall $n=p^k$ ausschliessen
+    \item 1P: Vervollständigung des Beweises
+    \end{itemize}
+}
+
+\en{
+Find all positive integers $n \geq 2$ such that, for every divisor $d> 1$ of $n$, we have
+\[d^2+n \, \div \, n^2+d.\]
+
+\textbf{Answer:} $n$ satisfies the condition of the problem if and only if it is a prime.
+
+\textbf{Solution:} First we observe that all prime numbers satisfy the condition: If $n$ is a prime number, the only allowed value for $d$ is $d=n$ and plugging this into the divisibility condition, we get
+\[n^2 + n \, \div \, n^2 + n, \]
+which is obviously true.
+
+Now, if $n$ is not a prime number, we can write $n=ab$, where $a$ and $b$ are integers greater than $1$. Assume that $n$ satisfies the conditions of the problem. If we choose $d=a$ and substitute $n=ab$ into the divisibility, we get
+\[
+a^2 + ab \, \div \, (ab)^2 + a.
+\]
+Observe that both sides are divisible by $a$, so we can divide both sides by $a$ to obtain the equivalent statement
+\[
+a + b \, \div ab^2 + 1.
+\]
+Analogously, if we choose $d=b$ instead, we get
+\[
+b^2 + ab \, \div \, (ab)^2 + b \quad \Longleftrightarrow \quad b + a \, \div \, a^2b + 1.
+\]
+Hence, we see that $a+b$ divides both the expressions $ab^2+1$ and $a^2b+1$, so it divides their sum as well:
+\[
+a+b \, \div \,  ab(a+b)+2.
+\]
+Since $ab(a+b)$ is obviously divisible by $a+b$, the above condition tells us
+\[
+a+b \, \div \, 2.
+\]
+However, since $a,b > 1$, we must have $a+b > 2$ and this is clearly a contradiction to the divisibility above. We conclude that therefore all non-primes cannot satisfy the condition of the problem.
+
+\textbf{Alternative route:}
+We can also take the difference of $a^2b+1$ and $ab^2+1$ to obtain
+\[
+a+b \, | \, ab(a-b).
+\]
+Now, if we could choose gcd$(a,b)=1$, this would also imply gcd$(a+b,ab)=1$, and hence 
+\[
+a+b \, | \, a-b,
+\]
+which is impossible. We can choose $a,b$ coprime if and only if $n$ has at least two different prime factors, so the case where $n$ is a prime power is not covered. However, if $n=p^k$ for some $k \geq 2$, we can choose $d=p$ and get 
+\[
+p^2 + p^k \, | \, p^{2k} + p \quad \Longrightarrow \quad p^2 \, | \, p(p^{2k-1}+1) \quad \Longrightarrow \quad p \, | \, p^{2k-1} + 1,
+\]
+which is clearly impossible.
+
+\textbf{Marking scheme (additive)}
+\begin{itemize}
+    \item 1P: Stating that all primes work
+    \item 1P: A divisibility condition of the form $a+b \, | \, ab^2 + 1$ for $n=ab$
+    \item 2P: The second divisibility condition $a+b \, | \, a^2b + 1$ for $n=ab$
+    \item 2P: $a+b \, | \, a^2b + ab^2 + 2$ \textbf{or} $a+b \, | \, ab(b-a)$ and excluding the case $n=p^k$
+    \item 1P: Finishing the proof
+\end{itemize}
+}
+
+\fr{
+Trouver tous les nombres entiers $n \geq 2$ tels que tout diviseur $d > 1$ de $n$ vérifie
+\[d^2+n \, \div \, n^2+d.\]
+
+\textbf{Réponse:} $n$ satisfait la condition du problème si et seulement si c'est un nombre premier.
+
+\textbf{Solution:} Tout d'abord nous observons que tous les nombres premiers satisfont la condition: Si $n$ est un nombre premier, la seule valeur que peut prendre $d$ est $d=n$ et en remplaçant dans l'équation on a besoin de 
+\[n^2 + n \, \div \, n^2 + n, \]
+qui est clairement vraie.
+
+Maintenant, si $n$ n'est pas un nombre premier, on peut écrire $n=ab$, où $a$ et $b$ sont des entiers plus grands que $1$. Supposons que $n$ satisafait les conditions du problème. Si on choisit $d=a$ et on substitue $n=ab$ dans la divisibilité, on obtient
+\[
+a^2 + ab \, \div \, (ab)^2 + a.
+\]
+Observons que les deux côtés sont divisibles par $a$, et on peut diviser les deux par $a$ pour obtenir l'affirmation équivalente
+\[
+a + b \, \div ab^2 + 1.
+\]
+De façon analogue, en choisissant $d=b$, nous obtenons
+\[
+b^2 + ab \, \div \, (ab)^2 + b \quad \Longleftrightarrow \quad b + a \, \div \, a^2b + 1.
+\]
+Ainsi, nous voyons que $a+b$ divise les expressions $ab^2+1$ et $a^2b+1$, donc $a+b$ divise leur somme:
+\[
+a+b \, \div \,  ab(a+b)+2.
+\]
+Comme $ab(a+b)$ est clairement divisible par $a+b$, la condition du dessus nous donne
+\[
+a+b \, \div \, 2.
+\]
+Cependant, comme $a,b > 1$, nous avons $a+b > 2$, une contradiction avec la divisibilité plus haut. Nous concluons alors qu'aucun nombre composé (qui n'est pas premier) ne peut satisfaire la condition du problème.
+
+\textbf{Route alternative:}
+Nous pouvons aussi soustraire $ab^2+1$ de $a^2b+1$ et ainsi obtenir
+\[
+a+b \, | \, ab(a-b).
+\]
+Maintenant, si nous pouvions forcer pgdc$(a,b)=1$, cela impliquerait pgdc$(a+b,ab)=1$, et ainsi
+\[
+a+b \, | \, a-b,
+\]
+ce qui est impossible. On peut choisir $a, b$ premiers entre eux si et seulement si $n$ a au moins deux diviseurs premiers distincts, donc il nous manque juste le cas où $n$ est une puissance d'un premier. Or, si $n=p^k$ pour $k\geq 2$, nous pouvons choisir $d=p$ et obtenir
+\[
+p^2 + p^k \, | \, p^{2k} + p \quad \Longrightarrow \quad p^2 \, | \, p(p^{2k-1}+1) \quad \Longrightarrow \quad p \, | \, p^{2k-1} + 1,
+\]
+ce qui est clairement impossible.
+
+\newpage
+
+\textbf{Marking scheme (additif)}
+\begin{itemize}
+    \item 1P: Affirmer que tous les premiers fonctionnent.
+    \item 1P: Une condition de divisibilité de la forme $a+b \, | \, ab^2 + 1$ pour $n=ab$.
+    \item 2P: La seconde condition de divisibilité $a+b \, | \, a^2b + 1$ pour $n=ab$.
+    \item 2P: $a+b \, | \, a^2b + ab^2 + 2$ \textbf{ou} $a+b \, | \, ab(b-a)$ et exclure le cas $n=p^k$.
+    \item 1P: Terminer la preuve.
+\end{itemize}
+}

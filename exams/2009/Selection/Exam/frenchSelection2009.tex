@@ -1,0 +1,357 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage[french]{babel}
+\usepackage[latin2]{inputenc}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+% \catcode`\� = \active \catcode`\� = \active \catcode`\� = \active \catcode`\� = \active \catcode`\� = \active
+% \catcode`\� = \active 
+% 
+% \def�{"A}
+% \def�{"a}
+% \def�{"O}
+% \def�{"o}
+% \def�{"U}
+% \def�{"u}
+
+
+
+
+
+
+
+
+% Schriftabk�rzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % sch�nes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\gaussk}[1]{\lfloor #1 \rfloor}
+\newcommand{\frack}[1]{\{ #1 \}}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+\newcommand{\dreieck}{\bigtriangleup}
+
+\parindent0mm
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge S\'election OIM 2009} \\
+\medskip Premier examen - le 16 mai 2009
+\end{center}
+\vspace{8mm}
+Dur\'ee : 4.5 heures\\
+Chaque exercice vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{1.}] Soit $GERMANYISHOT$ un dod\'ecagone r\'egulier et soit $P$ le point d'intersection de $GN$ et $MI$. Montrer que
+\begin{enumerate}
+\item[(a)] le cercle circonscrit du triangle $GIP$ a la m\^eme taille que le cercle circonscrit de $GERMANYISHOT$.
+\item[(b)] le segment $PA$ a la m\^eme longueur qu'un c\^ot\'e de $GERMANYISHOT$.
+\end{enumerate}
+
+
+\bigskip
+\bigskip
+
+\item[\textbf{2.}] Trouver toutes les paires $(m,n)$ de nombres naturels impairs tels que
+\[m \div n^2+8, \qquad n \div m^2+8.\]
+
+
+\bigskip
+\bigskip
+
+\item[\textbf{3.}] Soit $n$ un nombre naturel. Trouver le nombre de permutations $(a_1,\ldots,a_n)$ 
+de l'ensemble $\{1,2,\ldots, n\}$ qui ont la propri\'et\'e suivante:
+\[2(a_1+\ldots +a_k) \quad \mbox{est divisible par $k$} \quad \forall k\in \{1,2,\ldots ,n\}.\]
+
+
+\end{enumerate}
+
+\pagebreak
+
+
+\begin{center}
+{\huge S\'election OIM 2009} \\
+\medskip Deuxi\`eme examen - le 17 mai 2009
+\end{center}
+\vspace{8mm}
+Dur\'ee : 4.5 heures\\
+Chaque exercice vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{4.}] Pour quels nombres naturels $n$ existe-t-il un polyn\^ome $P(x)$ \`a coefficients entiers tel que
+pour tout diviseur positif $d$ de $n$ on a $P(d)=(n/d)^2$?\\
+
+\bigskip
+\bigskip
+
+\item[\textbf{5.}] Soit $ABCD$ un quadrilat\`ere convexe et soient $P$ et $Q$ des points \`a l'int\'erieur de $ABCD$ tels que $PQDA$ et $QPBC$ sont des quadrilat\`eres inscrits. Supposons qu'il existe un point $E$ sur le segment $PQ$ tel que $\angle PAE = \angle QDE$ et $\angle PBE = \angle QCE$. Montrer que $ABCD$ est un quadrilat\`ere inscrit.
+
+\bigskip
+\bigskip
+
+\item[\textbf{6.}] Soit $P$ l'ensemble des premiers 2009 nombres premiers et soit $X$ l'ensemble de tous les nombres naturels qui  poss\`edent uniquement des diviseurs premiers qui sont dans $P$. Trouver tous les nombres naturels $k$ pour lesquels il existe une fonction $f: X\rightarrow X$ qui satisfait l'\'equation suivante pour tout $m,n\in X$:
+\[f(mf(n))=f(m)n^k.\]
+ 
+\end{enumerate}
+
+
+\pagebreak
+
+
+\begin{center}
+{\huge S\'election OIM 2009} \\
+\medskip Troisi\`eme examen - le 23 mai 2009
+\end{center}
+\vspace{8mm}
+Dur\'ee : 4.5 heures\\
+Chaque exercice vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{7.}] Consid\'erer un ensemble $A$ de 2009 points dans le plan parmi lesquels il n'y a pas trois qui sont colin\'eaires. Un triangle dont tous les sommets appartiennent \`a $A$ s'appelle \emph{triangle int\'erieur}. Montrer que chaque point de $A$ est contenu dans un nombre pair de triangles int\'erieurs.\\
+
+
+\bigskip
+\bigskip
+
+
+\item[\textbf{8.}] Trouver toutes les fonctions $f:\BR \rightarrow \BR$ telles que pour tous les nombres r\'eels $x,y$ l'\'equation suivante est satisfaite:
+\[f(f(x)-f(y))=(x-y)^2f(x+y).\]
+
+
+
+\bigskip
+\bigskip
+
+\item[\textbf{9.}] Soient $BE$ et $CF$ les hauteurs dans un triangle $ABC$ \`a angles aigus.
+Deux cercles passant par $A$ et $F$ touchent la droite $BC$ en $P$ et $Q$ de telle mani\`ere que $B$ se trouve entre $C$ et $Q$. Montrer que le point d'intersection de $PE$ et $QF$ est sur le cercle circonscrit de $AEF$.
+
+
+\end{enumerate}
+
+
+\pagebreak
+
+
+\begin{center}
+{\huge S\'election OIM 2009} \\
+\medskip Quatri\`eme examen - le 24 mai 2009
+\end{center}
+\vspace{8mm}
+Dur\'ee : 4.5 heures\\
+Chaque exercice vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{10.}] Soit $n$ un nombre naturel et soient $a,b$ deux nombres entiers distincts avec la propri\'et\'e suivante: Pour tout nombre naturel $m$, $a^m-b^m$ est divisible par $n^m$. Montrer que les deux nombres $a$ et $b$ sont divisibles par $n$.\\
+
+
+\bigskip
+\bigskip
+
+
+\item[\textbf{11.}] On consid\`ere $n$ points colin\'eaires $P_1, \ldots, P_n$ et tous les cercles avec diam\`etre $P_iP_j$ pour $1 \leq i<j \leq n$. Chacun de ces cercles est color\'e avec une de $k$ couleurs. Un tel ensemble de cercles color\'es s'appelle un $(n,k)$-\emph{fouillis}. Un \emph{huit unicolore} consiste en deux cercles de m\^eme couleur qui sont tangents de l'ext\'erieur. Montrer que tout $(n,k)$-fouillis contient un huit unicolore si et seulement si on a $n>2^k$.\\
+
+
+
+\bigskip
+\bigskip
+
+\item[\textbf{12.}]Soient $x,y,z$ des nombres r\'eels satisfaisant l'\'equation $x+y+z=xy+yz+zx$. 
+Montrer que 
+\[\frac{x}{x^2+1}+\frac{y}{y^2+1}+\frac{z}{z^2+1} \geq -\frac{1}{2}.\]
+
+
+\end{enumerate}
+
+
+\end{document}

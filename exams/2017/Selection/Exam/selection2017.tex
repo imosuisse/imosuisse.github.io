@@ -1,0 +1,237 @@
+%& -job-name=imoselektion_2017_fr-4
+% ^^^^^^^ change the last bit to e.g. de-2 for second day, german ^^^^^^^^ 
+
+\documentclass[language=french,style=exam]{smo} %language is irrelevant
+
+\examtime{%
+    \de{4.5 Stunden}%
+    \fr{4.5 heures}%
+    \ita{4.5 ore}%
+    \en{4.5 hours}%
+}
+\examdate{%
+    \IfStrEq*{\day}{1}{%
+        \de{6. Mai 2017}%
+        \fr{6 mai 2017}%
+        \ita{??}%
+        \en{??}%
+    }{}%
+   \IfStrEq*{\day}{2}{%
+        \de{7. Mai 2017}%
+        \fr{7 mai 2017}%
+        \ita{??}%
+        \en{??}%
+    }{}%
+       \IfStrEq*{\day}{3}{%
+        \de{20. Mai 2017}%
+        \fr{20 mai 2017}%
+        \ita{??}%
+        \en{??}%
+    }{}%
+       \IfStrEq*{\day}{4}{%
+        \de{21. Mai 2017}%
+        \fr{21 mai 2017}%
+        \ita{??}%
+        \en{??}%
+    }{}%
+}
+\title{%
+    \de{SMO - Selektion 2017}%
+    \fr{OSM - Sélection 2017}%
+    \ita{OSM - ???}%
+    \en{SMO - ???}%
+}
+\examplace{%
+    \de{\day. Prüfung}%
+    \fr{\IfStrEq*{\day}{1}{Premier}{}\IfStrEq*{\day}{2}{Deuxième}{}\IfStrEq*{\day}{3}{Troisième}{}\IfStrEq*{\day}{4}{Quatrième}{} examen}%
+    \ita{???}%
+    \en{???}%
+}
+
+\begin{document}
+
+\bigskip
+\bigskip
+
+\begin{enumerate}
+
+\IfStrEq*{\day}{1}{%%%%%%%%%%%%%%%%% Day 1 %%%%%%%%%%%%%%%%%
+
+\item[\textbf{1.}] %% Exercise 1 %%
+\de{Finde alle Funktionen $f\colon \Z \to \Z$, sodass gilt:
+\begin{enumerate}[(i)] 
+\item $f(p) > 0$ für alle Primzahlen $p$,
+\item $p \div (f(x) + f(p))^{f(p)} - x$ für alle Primzahlen $p$ und alle $x \in \Z$. 
+\end{enumerate}
+}%
+\fr{Trouver toutes les fonctions $f\colon \Z \to \Z$ telles que:
+\begin{enumerate}[(i)] 
+\item $f(p) > 0$ pour tout nombre premier $p$,
+\item $p \div (f(x) + f(p))^{f(p)} - x$ pour tout nombre premier $p$ et pour tout $x \in \Z$. 
+\end{enumerate}
+}%
+\ita{}%
+\en{}%
+
+\bigskip
+\bigskip
+
+\item[\textbf{2.}] %% Exercise 2 %%
+\de{Sei $n\geq 1$ eine natürliche Zahl und seien $x_1,\ldots,x_n$ strikt positive reelle Zahlen. Zeige, dass man $a_1,\ldots,a_n\in\{-1,1\}$ wählen kann, sodass
+\[
+\sum_{i=1}^na_ix_i^2\geq\left(\sum_{i=1}^n a_ix_i\right)^2.
+\]}%
+\fr{Soit $n\geq 1$ un entier positif et soient $x_1,\ldots,x_n$ des nombres réels strictement positifs. Montrer que l'on peut choisir $a_1,\ldots,a_n\in\{-1,1\}$ tels que:
+\[
+\sum_{i=1}^na_ix_i^2\geq\left(\sum_{i=1}^n a_ix_i\right)^2.
+\]}%
+\ita{}%
+\en{}%
+
+\bigskip
+\bigskip
+
+\item[\textbf{3.}] %% Exercise 3 %%
+\de{Sei $n\geq3$ eine natürliche Zahl. Wie viele Diagonalen eines regulären $n$-Ecks kann man maximal einzeichnen, sodass falls sich zwei Diagonalen im Innern schneiden, sie senkrecht aufeinander stehen?}%
+\fr{Soit $n\geq3$ un entier positif. Quel est le nombre maximal de diagonales d'un $n$-gone régulier que l'on peut tracer, telles que si deux diagonales tracées se coupent à l'intérieur du $n$-gone, alors elles sont perpendiculaires ?}%
+\ita{}%
+\en{}%
+
+}%END Day 1%
+
+
+\IfStrEq*{\day}{2}{%%%%%%%%%%%%%%%%% Day 2 %%%%%%%%%%%%%%%%
+
+\item[\textbf{4.}] %% Exercise 4 %%
+\de{Sei $k$ ein Kreis und $AB$ eine Sehne von $k$, sodass der Mittelpunkt von $k$ nicht auf $AB$ liegt. Sei $C$ ein von $A$ und $B$ verschiedener Punkt auf $k$. Für jede Wahl von $C$ seien $P_C$ und $Q_C$ die Projektionen von $A$ auf $BC$ respektive $B$ auf $AC$. Weiter sei $O_C$ der Umkreismittelpunkt des Dreiecks $P_{C}Q_{C}C$. Zeige, dass es einen Kreis $\omega$ gibt, sodass $O_C$ für jede Wahl von $C$ auf $\omega$ liegt.}%
+\fr{Soit $k$ un cercle et $AB$ une corde de $k$ tel que le centre de $k$ ne se trouve pas sur $AB$. Soit $C$ un point sur $k$ différent de $A$ et de $B$. Pour chaque choix de $C$, soient $P_C$ et $Q_C$ les projections de $A$ sur $BC$ respectivement $B$ sur $AC$. Soit encore $O_C$ le centre du cercle circonscrit au triangle $P_{C}Q_{C}C$. Montrer qu'il existe un cercle $\omega$ tel que $O_C$ se trouve sur $\omega$ pour chaque choix de $C$.}%
+\ita{}%
+\en{}%
+
+\bigskip
+\bigskip
+
+\item[\textbf{5.}] %% Exercise 5 %%
+\de{Bestimme die kleinste reelle Konstante $C$, sodass für beliebige, nicht notwendigerweise verschiedene, $a_1,a_2,a_3,a_4,a_5\in \R_{>0}$ immer vier paarweise verschiedene Indizes $i,j,k,l$ existieren, sodass gilt:
+\[
+\abs*{\frac{a_i}{a_j}-\frac{a_k}{a_l}}\leq C.
+\]}%
+\fr{Déterminer la plus petite constante réelle $C$ telle que pour tous $a_1,a_2,a_3,a_4,a_5\in \R_{>0}$, pas nécessairement distincts, il existe toujours quatre indices distincts $i,j,k,l$ tels que:
+\[
+\abs*{\frac{a_i}{a_j}-\frac{a_k}{a_l}}\leq C.
+\]}%
+\ita{}%
+\en{}%
+
+\bigskip
+\bigskip
+
+\item[\textbf{6.}] %% Exercise 6 %%
+\de{Finde alle Funktionen $f\colon\R_{>0}\to\R_{\geq0}$, sodass für alle  $x,y\in\R_{>0}$ gilt:
+\[
+f(x)-f(x+y)=f(x^2f(y)+x).
+\]}%
+\fr{Trouver toutes les fonctions $f\colon\R_{>0}\to\R_{\geq0}$ telles que pour tous  $x,y\in\R_{>0}$:
+\[
+f(x)-f(x+y)=f(x^2f(y)+x).
+\]}%
+\ita{}%
+\en{}%
+
+}%End Day 2%
+
+\IfStrEq*{\day}{3}{ %%%%%%%%%%%%%% Day 3 %%%%%%%%%%%%%%%%%
+
+\item[\textbf{7.}] %% Exercise 7 %%
+\de{Der brasilianische IMO-Leader wählt zwei natürliche Zahlen $n$ und $k$ mit $n>k$, und sagt diese dann seinem Deputy und einem Teilnehmer. Dann flüstert der Leader dem Deputy eine binäre Folge der Länge $n$ ins Ohr. Der Deputy schreibt alle binären Folgen der Länge $n$ auf, die sich genau an $k$ Stellen von der Folge des Leaders unterscheiden. (Beispiel für $n=3$ und $k=1$: Wenn der Leader $101$ wählt, schreibt der Deputy 001, 100, 111 auf.) Der Teilnehmer schaut sich die Folgen an, die der Deputy aufgeschrieben hat. Nun versucht der Teilnehmer, die ursprüngliche Folge vom Leader herauszufinden.
+	
+Wie viele Male muss er mindestens raten (abhängig von $n$ und $k$), bis er sicher einmal korrekt geraten hat?
+	 
+Bemerkung: Eine binäre Folge der Länge $n$ ist eine Folge der Länge $n$, die nur aus $0$ und $1$ besteht.}%
+\fr{Le leader de l'équipe IMO brésilienne choisit deux nombres naturels $n$ et $k$ avec $n>k$ et les dit à son Deputy Leader ainsi qu'à un participant. Ensuite, le Leader chuchote à l'oreille de son Deputy une suite binaire de longueur $n$. Le Deputy écrit toutes les suites binaires de longueur $n$ qui diffèrent de la suite du Leader en exactement $k$ places. (Par exemple pour $n=3$ et $k=1$: Si le Leader choisit $101$, le Deputy écrit $001, 110, 111$.) Le Participant regarde ensuite les suites que le Deputy a écrites et essaye de trouver la suite choisie par le Leader.
+
+Combien de fois doit-il deviner au minimum (en fonction de $n$ et $k$) pour être sûr d'avoir trouvé la bonne suite?
+
+Remarque: Une suite binaire de longueur $n$ est une suite de longueur $n$ composée uniquement de $0$ et de $1$.}%
+\ita{}%
+\en{}%
+
+\bigskip
+\bigskip
+
+\item[\textbf{8.}] %% Exercise 8 %%
+
+\de{Finde alle monoton steigenden Folgen $a_1, a_2, a_3, \ldots$ natürlicher Zahlen, sodass $i+j$ und $a_i+a_j$ für alle $i,j \in \mathbb{N}$ die gleiche Anzahl Teiler haben.}%
+\fr{Trouver toutes les suites croissantes de nombres naturels $a_1, a_2, a_3, \ldots$ telles que pour tous $i,j \in \N$, $i+j$ et $a_i + a_j$ ont le même nombre de diviseurs.}%
+\ita{}%
+\en{}%
+
+\bigskip
+\bigskip
+
+\item[\textbf{9.}] %% Exercise 9 %%
+\de{Sei $ABC$ ein Dreieck mit $AB=AC\neq BC$ und $I$ dessen Inkreismittelpunkt. Die Gerade $BI$ schneidet $AC$ in $D$, und die Senkrechte  auf $AC$ durch $D$ schneidet $AI$ in $E$. Zeige: Die Spiegelung von $I$ an $AC$ liegt auf dem Umkreis von Dreieck $BDE$.}%
+\fr{Soit $ABC$ un triangle avec $AB=AC\neq BC$ et $I$ le centre de son cercle inscrit. La droite $BI$ coupe $AC$ en $D$, et la perpendiculaire à $AC$ passant par $D$ coupe $AI$ en $E$. Montrer que la réflexion de $I$ par rapport à la droite $AC$ est sur le cercle circonscrit au triangle $BDE$.}%
+\ita{}%
+\en{}%
+
+}%End Day 3%
+
+\IfStrEq*{\day}{4}{ %%%%%%%%%%%%%%% Day 4 %%%%%%%%%%%%%%%%%%
+
+\item[\textbf{10.}] %% Exercise 10 %%
+\de{Finde alle Polynome $P$ mit ganzzahligen Koeffizienten, sodass $P(2017n)$ für alle natürlichen Zahlen $n$ prim ist.}%
+\fr{Trouver tous les polynômes $P$ à coefficients entiers tels que $P(2017n)$ est un nombre premier pour tout nombre naturel $n$.}%
+\ita{}%
+\en{}%
+
+\bigskip
+\bigskip
+
+\item[\textbf{11.}] %% Exercise 11 %%
+
+\de{Seien $B=(-1,0)$ und $C=(1,0)$ fixe Punkte in der Ebene. Eine nichtleere, beschränkte Teilmenge $S$ der Ebene heisst \emph{nett}, falls die folgenden Bedingungen gelten:
+
+\begin{enumerate}[(i)]
+\item Es gibt einen Punkt $T$ in $S$, sodass für jeden anderen Punkt $Q$ in $S$ die Strecke $TQ$ vollständig in $S$ liegt.
+\item Für jedes Dreieck $P_1P_2P_3$ existiert ein eindeutiger Punkt $A$ in $S$ und eine Permutation $\sigma$ von $\{1, 2, 3\}$, sodass die Dreiecke $ABC$ und $P_{\sigma(1)}P_{\sigma(2)}P_{\sigma(3)}$ ähnlich sind.
+\end{enumerate}
+
+Zeige, dass es zwei verschiedene nette Teilmengen $S$ und $S'$ der Menge $\{(x,y):x\geq 0,y\geq 0\}$ mit folgender Eigenschaft gibt: Das Produkt $BA\cdot BA'$ ist unabhängig von der Wahl des Dreiecks $P_1P_2P_3$, wobei $A\in S$ und $A'\in S'$ jeweils die eindeutigen Punkte aus (ii) für ein beliebiges Dreieck $P_1P_2P_3$ sind.}%
+\fr{Soient $B=(-1,0)$ et $C=(1,0)$ deux points du plan. Un sous-ensemble non-vide et borné $S$ du plan est appelé \emph{incroyable} si les conditions suivantes sont vérifiées:
+
+\begin{enumerate}[(i)]
+\item Il existe un point $T$ dans $S$ tel que pour chaque autre point $Q$ dans $S$ le segment $TQ$ est entièrement inclus dans $S$.
+\item Pour tout triangle $P_1P_2P_3$, il existe un unique point $A$ dans $S$ et une permation $\sigma$ de $\{1, 2, 3\}$ tels que les triangles $ABC$ et $P_{\sigma(1)}P_{\sigma(2)}P_{\sigma(3)}$ sont semblables.
+\end{enumerate}
+
+Montrer qu'il existe deux sous-ensembles incroyables différents $S$ et $S'$ de l'ensemble $\{(x,y):x\geq 0,y\geq 0\}$ avec la propriété suivante: Le produit $BA\cdot BA'$ est indépendant du choix du triangle $P_1P_2P_3$, où $A\in S$ et $A'\in S'$ sont les points donnés par la propriété (ii) pour le triangle $P_1P_2P_3$.}%
+\ita{}%
+\en{}%
+
+\bigskip
+\bigskip
+
+\item[\textbf{12.}] %% Exercise 12 %%
+\de{Seien $a,c\in\N$ und sei $b\in\Z$. Zeige, dass es ein $x\in\N$ gibt, sodass
+\[
+a^x+x\equiv b \mod c.
+\]}%
+\fr{Soient $a, c\in  \N$ et $b\in \Z$. Prouver qu'il existe $x\in \N$ tel que
+\[
+a^x+x\equiv b \mod c.
+\]}%
+\ita{}%
+\en{}%
+
+}%End Day 4%
+
+\bigskip
+
+\vfill
+
+\center{\de{Viel Glück!}\fr{Bonne chance!}\ita{Buona fortuna!}\en{Good Luck!}}
+
+\end{enumerate}
+
+\end{document}

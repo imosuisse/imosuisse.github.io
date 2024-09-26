@@ -1,0 +1,44 @@
+Let $n\geq 2$ be an integer. Consider an $n\times n$ chessboard with the usual chessboard colouring. A move consists of choosing a $1\times 1$ square and switching the colour of all squares in its row and column (including the chosen square itself). For which $n$ is it possible to get a monochrome chessboard after a finite sequence of moves?
+
+\textbf{Answer:} All even numbers $n=2k$ are solution.
+
+\textbf{Solution 1} (Ivan, David, Arnaud)\\
+We will prove that the task is possible for even $n$ and impossible for odd $n$.
+\\
+For $n=2k$, consider all squares that are initially black. We claim that if we make a move on all of those squares, the chessboard will be completely white in the end. Obviously, the order of moves does not matter, so we only have to count the number of times a given $1 \times 1$-square has changed its colour. Since a square changes its colour if and only if a move is played on a square in the same row or column, we can simply count the number of initially black squares that share a row or column with a given square.
+\begin{itemize}
+    \item Initially, each black square has $k-1$ other black squares in its row and $k-1$ other black squares in its column. Since the square itself is black, the total number of black squares that share a row or column with the given square is $(k-1)+(k-1)+1 = 2k-1$. This means that any black square will change colour $2k-1$ times in total, and since this number is odd, the square will be white in the end.
+    \item Analogously, every initially white square has $k$ initially black squares in its row and $k$ black squares in its column. This means that it changes its colour $2k$ times in total, so it will still be white in the end.
+\end{itemize}
+To show that the task is impossible for odd $n$, we simply consider the first two rows. Initially, there are $n$ black and $n$ white squares in the first two rows. However, any move will change the colour of either $n+1$ or $2$ of those squares ($n+1$ if the chosen square is in the first two rows and $2$ if it is not). So in any case, the number of squares in the first two rows that change their colour is even. This implies that the parity of the number of black squares in the first two rows will never change. In particular, it will never be possible to reach $0$ or $2n$ black squares in the first two rows, so the chessboard will never be monochrome.
+\newpage
+
+\textbf{Solution 2} (Julia and Tanish)\\
+For $n$ even, proceed as above.
+For $n$ odd, suppose WLOG that the corner squares are black, and we are aiming to get to a fully black board (this is equivalent to reaching a white board since there is a path between the two, notably by selecting every square once). We note that every move changes the parity of the total number of black squares, as we are flipping an odd number of squares in total (and hence a different number of black and white squares, mod 2). As our initial and final state both have an odd number of black squares, the total number of moves must be even.
+Now we consider a row with an even number of black squares (showing the existence of such a row is trivial). We count the total number of moves again, this time considering 
+\begin{itemize}
+\item The row itself;
+\item Every other column \textbf{without} the square in it belonging to the mentioned row. We call these \emph{wolumns} if a white square was removed and \emph{bolumns} if a black square was removed.
+\end{itemize}
+Suppose the row has an odd number of moves applied to it. Then every bolumn must also have an odd number of moves applied to it (so that the black squares in our row stay unchanged) and every wolumn has a even number of moves applied to it (so that the white rows in our row change). The total number of moves, summing over the row, bolumns and wolumns, is therefore\\ odd + (odd $\times$ even) + (even $\times$ odd) = odd.\\
+Similarly, if the row had an even number of moves applied to it, then the bolumns get an even number of moves and the wolumns odd. The total number of moves is now\\
+even + (even $\times$ even) + (odd $\times$ odd) = odd.\\
+In both cases, we have a contradiction. 
+
+\textbf{Marking scheme}
+\begin{enumerate}
+    \item Non-additive point:
+\begin{itemize}
+    \item 1P: Find that the correct solution is only for even $n$ without proof
+    \item 2P: A counterproof for only 1 or 3 modulo 4.
+\end{itemize}
+
+\item Additive points:
+\begin{itemize}
+    \item   3P: Correct and proven construction for even $n$
+    \item   4P: A complete proof that for odd $n$ no solution exists
+\end{itemize}
+Partial points can be awarded for important ideas but incomplete proof (for example by looking at two consecutive rows for the case $n$ odd).
+
+\end{enumerate}

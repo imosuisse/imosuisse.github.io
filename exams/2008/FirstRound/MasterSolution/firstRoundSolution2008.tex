@@ -1,0 +1,304 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\oddsidemargin=0cm \headheight=-2.1cm
+\textwidth=16.4cm \textheight=26cm
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+
+
+
+
+
+% Schriftabkürzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\gaussk}[1]{\lfloor #1 \rfloor}
+\newcommand{\frack}[1]{\{ #1 \}}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+\newcommand{\dreieck}{\bigtriangleup}
+
+
+\begin{document}
+
+\pagestyle{empty}
+\begin{center}
+{\huge Lösungen zur Vorrundenprüfung 2008}
+\end{center}
+\vspace{15mm}
+
+Zuerst einige Bemerkungen zum Punkteschema. Eine vollständige und korrekte Lösung einer Aufgabe ist jeweils 7 Punkte wert. Für komplette Lösungen mit kleineren Fehlern oder Ungenauigkeiten, die aber keinen wesentlichen Einfluss auf die Richtigkeit der dargestellten Lösung haben, geben wir 6 Punkte. Bei unvollständigen Lösungen wird der Fortschritt und der Erkenntnisgewinn bewertet (Teilpunkte). Oft gibt es mehrere Lösungen für ein Problem. Versucht jemand zum Beispiel eine Aufgabe auf zwei verschiedenen Wegen zu lösen, erreicht auf dem ersten Weg 3 Punkte, auf dem zweiten 2 Punkte, dann wird seine Punktzahl nicht 5, sondern 3 sein. Punkte, die auf verschiedenen Wegen erreicht werden, sind also \textit{nicht} kummulierbar. Die unten angegebenen Bewertungsschemen sind nur Orientierungshilfe. Gibt jemand eine alternative Lösung, dann werden wir versuchen, die Punktzahl entsprechend zu wählen, dass für gleiche Leistung gleich viele Punkte
+verteilt werden.
+
+\begin{enumerate}
+\item[\textbf{1.}] Gegeben sind fünf Teiler von $10^{2008}$. Zeige, dass es zwei dieser Teiler gibt, deren Produkt eine Quadratzahl ist.\\
+
+\textbf{Lösung:}
+
+Jeder Teiler einer Zehnerpotenz ist von der Form $2^a5^b$ mit ganzen Zahlen $a,b \geq 0$. Die fünf Teiler können wir auf vier Schubfächer verteilen, je nachdem welche der beiden Zahlen $a$ und $b$ gerade sind. Zwei dieser Teiler, sagen wir $2^{a_1}5^{b_1}$ und $2^{a_2}5^{b_2}$, liegen dann im gleichen Schubfach. Ihr Produkt $2^{a_1+a_2}5^{b_1+b_2}$ ist eine Quadratzahl, denn nach Konstruktion sind $a_1+a_2$ und $b_1+b_2$ gerade.\\
+
+\textit{Bemerkungen und Punkteschema:}
+
+Einen Punkt für gaben wir für die Erkenntnis, dass alle Teiler von $10^{2008}$ von der Form $2^a5^b$ mit ganzen Zahlen $a,b \geq 0$ sind. Ein weiterer Punkt bekam, wer schrieb, dass das Produkt von zwei Teilern genau dann ein Quadrat ist, wenn der Exponent von 2 und der Exponent von 5 beide gerade sind. 
+
+\bigskip
+
+\item[\textbf{2.}] Ein \emph{Weg} in der Ebene führt vom Punkt $(0,0)$ zum Punkt $(6,6)$, wobei man in jedem Schritt entweder um $1$ nach rechts oder um $1$ nach oben gehen kann. Wieviele Wege gibt es, die weder den Punkt $(2,2)$ noch den Punkt $(4,4)$ enthalten?\\
+
+\textbf{Lösung:}
+
+Für $a,b \geq 0$ ist allgemein die Anzahl Wege vom Punkt $(x,y)$ zum Punkt $(x+a,y+b)$, bei denen man in jedem Schritt um $1$ nach rechts oder nach oben geht, gleich $\binom{a+b}{a}=\binom{a+b}{b}$. Denn ein solcher Weg ist dadurch festgelegt, dass man in der Folge der $a+b$ nötigen Schritten die Positionen der $a$ Schritte nach rechts (oder äquivalent dazu diejenige der $b$ Schritte nach oben) festlegt.
+
+Insgesamt gibt es also $\binom{12}{6}$ Wege von $(0,0)$ nach $(6,6)$. Von diesen enthalten genau $\binom{4}{2}\binom{8}{4}$ den Punkt $(2,2)$ und ebenso viele den Punkt $(4,4)$. Schliesslich enthalten genau $\binom{4}{2}^3$ davon beide Punkte. Nach der Ein-/Ausschaltformel ist die gesuchte Anzahl Wege also
+\[\binom{12}{6}-\left[ 2\binom{8}{4}\binom{4}{2}-\binom{4}{2}^3 \right] = 300.\]
+
+\textit{Bemerkungen und Punkteschema:}
+
+Fand jemand heraus, dass die Anzahl Wege vom Punkt $(x,y)$ zum Punkt $(x+a,y+b)$, bei denen man in jedem Schritt um $1$ nach rechts oder nach oben geht, gleich $\binom{a+b}{a}$ ist, vergaben wir zwei Punkte. Ein weiterer Punkt bekam man für die korrekte Berechnung der Anzahl Wege über einen der Punkte dazwischen. War das Resultat falsch, weil die Ein-/Ausschaltformel falsch angewendet wurde, gab es insgesamt vier Punkte.
+
+\bigskip
+
+\item[\textbf{3.}] Sei $ABCD$ ein Sehnenviereck mit $CD<AD$ und $CD<BC$. Die Diagonalen $AC$ und $BD$ schneiden sich im Punkt $S$. Die Spiegelung der Gerade $AB$ an $AC$ sei $e$ und die Spielgelung der Geraden $AB$ an $BD$ sei $f$. Die Gerade $CD$ schneide $e$ und $f$ in den Punkten $E$ bzw. $F$. Beweise, dass das Dreieck $SEF$ gleichschenklig ist.\\
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=15cm]{vorrunde_aufgabe3}
+\caption{Konstruktion zur Lösung von Aufgabe 3}
+\end{figure}
+
+\textbf{Lösung:}
+
+Wir definieren $\alpha = \angle BAC, \beta = \angle DBA$ und $\gamma = \angle CAD$. Weil $ABCD$ ein Sehnenviereck ist, gilt $\angle BDC = \alpha$, $\angle DCA = \beta$ und $\angle CBD = \gamma$ (Siehe Abbildung 1). Nach Konstruktion von $e$ und $f$ gilt $\angle SAE = \alpha$ bzw. $\angle FBS = \beta$. Somit haben wir
+$$ \angle SDC = \angle SAE \qquad \text{und} \qquad \angle SCD = \angle SBF. $$
+Daraus folgt, dass $ASDE$ und $BFCS$ beides Sehnenvierecke sind. Mit dem Peripheriewinkelsatz folgern wir, dass $\angle SED = \angle SAD = \gamma$ bzw. $\angle SFC = \angle SBC = \gamma$. Damit haben wir $\angle SEF = \angle SFE$ gezeigt und $SEF$ ist gleichschenklig.
+
+\textit{Bemerkungen und Punkteschema:}\\
+Die Nebenbedingungen $CD<AD$ und $CD<BC$ führen dazu, dass die Punkte $E$ und $F$ ausserhalb der Strecke $CD$ liegen. Die Aufgabe ist auch ohne diese Nebenbedingungen richtig, jedoch wäre zur vollständigen Lösung eine Fallunterscheidung notwendig. Deshalb entschieden wir uns die Aufgabe mit den Nebenbedingungen zu stellen.\\
+Für sinnvolles Anwenden des Peripheriewinkelsatzes im Sehnenviereck $ABCD$ gab es einen Punkt. Fand jemand eine Winkelbeziehung aus der man direkt schliessen kann, dass $ASDE$ oder $BFCS$ ein Sehenviereck ist, vergaben wir zwei Punkte.
+
+\bigskip
+
+\item[\textbf{4.}] Finde alle natürlichen Zahlen $n>1$, sodass die Anzahl positiver Teiler von $n$ gleich dem drittkleinsten positiven Teiler von $n$ ist.\\
+
+\textbf{Lösung:}
+
+Sei $n=p_1^{a_1}\cdots p_k^{a_k}$ mit $p_1<p_2<\ldots <p_k$ die Primfaktorzerlegung von $n$. Die Anzahl positiver Teiler von $n$ ist $(a_1+1)\cdots (a_k+1)$ und der drittkleinste positive Teiler von $n$ ist $p_1^2$ oder $p_2$. Es soll also gelten
+\begin{equation} \label{Teiler}
+(a_1+1)\cdots (a_k+1) \in \{p_1^2, p_2\}.
+\end{equation}
+Wir betrachten die beiden Fälle getrennt. Sei zuerst $p_2$ der drittkleinste positive Teiler von $n$. Aus (\ref{Teiler}) folgt dann aber $k=1$, da alle Klammern auf der linken Seite grösser als $1$ sind, $p_2$ aber prim ist. Dies ist ein Widerspruch. Sei nun also $p_1^2$ der drittkleinste Teiler. Dann ist (\ref{Teiler}) genau dann erfüllt, wenn gilt $k=1$,  $a_1=p_1^2-1$ oder $k=2$, $p_2>p_1^2$, $a_1=a_2=p_1-1 \geq 2$. Die gesuchten Zahlen sind also genau diejenigen von der Form
+\begin{eqnarray*}
+n &=& p^{p^2-1} \qquad \;\;\mbox{für $p$ prim}, \\
+n &=& (pq)^{p-1} \qquad \mbox{für Primzahlen $p,q$ mit $q>p^2$, $p\geq 3$.} 
+\end{eqnarray*}
+
+\textit{Bemerkungen und Punkteschema:}
+
+Die Formel für die Anzahl Teiler von $n$ und die Bestimmung aller Fälle für den drittkleinsten Teiler von $n$ waren je einen Punkt wert. Wenn man den Fall von $p_2$ ausgeschlossen hat, gab dies weitere 2 Punkte. Im Fall von $p_1^2$ war die Familie $p^{p^2-1}$ einen Punkt und die Familie $(pq)^{p-1}$ \textit{inklusive aller Bedingungen} an $p,q$ 2 Punkte wert. Fehlten diese Bedingungen oder Teile davon, gab es für die zweite Familie bloss einen Punkt.\\
+Unabhängig davon vergaben wir einen Punkt, wenn jemand die Familie $p^{p^2-1}$ gefunden hat, sonst jedoch \textit{keine} Punkte erzielte.
+
+\newpage
+
+\item[\textbf{5.}] Ein quadratisches Spielbrett besteht aus $2n \times 2n$ Feldern. Es sollen $n$ dieser Felder markiert werden, sodass keine zwei markierten Felder in derselben oder benachbarten Zeilen liegen, und sodass auch keine zwei markierten Felder in derselben oder benachbarten Spalten liegen. Auf wieviele Arten ist dies möglich?\\
+
+\textbf{Lösung:}
+
+Wir nennen eine Zeile oder Spalte \emph{markiert}, wenn sie ein markiertes Feld enthält. Von den $2n$ Zeilen sind genau $n$ markiert und keine zwei davon sind benachbart. Nummeriert man die Zeilen von $1$ bis $2n$, dann sieht man leicht, dass die markierten Zeilen die Nummern 
+\[1,3, \ldots, 2k+1, 2k+4, \ldots, 2n-2, 2n\]
+tragen müssen, wobei $0 \leq k \leq n$ ist. Man kann die $n$ markierten Zeilen also auf genau $n+1$ Arten wählen. Analog kann man die $n$ markierten Spalten auf $n+1$ Arten wählen. Schliesslich gibt es bei vorgegebenen markierten Zeilen und Spalten genau $n!$ Möglichkeiten, die markierten Felder zu wählen. Insgesamt ist die Antwort also $(n+1)^2n!$.
+
+\textit{Bemerkungen und Punkteschema:}
+
+Für die Erkenntnis und vollständige Argumentation, dass es je $n+1$ Möglichkeiten gibt, die Zeilen bzw. Spalten korrekt zu markieren, wurden drei Punkte vergeben.
+
+\end{enumerate}
+\end{document}

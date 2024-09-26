@@ -1,0 +1,34 @@
+\en{
+For which integers $n\geq 2$ can we arrange the numbers $1,2,\dots,n$ in a row, such that for all integers $1\leq k\leq n$ the sum of the first $k$ numbers in the row is divisible by $k$?
+
+\bigskip
+
+\textbf{Answer:}
+This is only possible for $n = 3$.
+
+\bigskip
+
+\textbf{Solution (Valentin):}
+If we let $k = n$ we find that
+$$n\div\frac{n(n+1)}{2}$$
+which implies that $n$ has to be odd. For $n = 3$ the arrangement $1,3,2$ satisfies the condition. From now on assume that $a_1,a_2,\dots,a_n$ is a valid arrangement for an odd $n\geq 5$. If we now let $k = n-1$ we find that
+$$n-1\div\frac{n(n+1)}{2}-a_n \implies a_n \equiv n\cdot \frac{n+1}{2} \equiv \frac{n+1}{2} \mod n-1.$$
+But $1\leq a_n \leq n$ and $n \geq 5$ implies that $a_n = \frac{n+1}{2}$ since $\frac{n+1}{2}+n-1$ would already exceed $n$. Now we let $k = n-2$ to find
+$$n-2 \div \frac{n(n+1)}{2} - \frac{n+1}{2} - a_{n-1} \implies a_{n-1} \equiv \frac{n^2-1}{2} = (n-1)\cdot \frac{n+1}{2} \equiv \frac{n+1}{2} \mod n-2.$$
+But similarly to before since $1\leq a_{n-1} \leq n$ and $n \geq 5$ this implies that $a_{n-1} = \frac{n+1}{2}$ as well, a contradiction. We conclude that $n = 3$ is the only value for which this is possible.
+
+\bigskip
+
+\textbf{Marking Scheme}
+
+\begin{itemize}
+    \item 1P: Proving that $n$ must be odd.
+    \item 1P: Finding a valid arrangement for $n = 3$, namely (1 3 2) or (3 1 2).
+    \item 2P: Proving that the last number in the row must be $(n+1)/2$.
+    \item 2P: Proving that the second to last number in the row must be $(n+1)/2$ as well.
+    \item 1P: Finishing the proof.
+\end{itemize}
+
+
+
+}

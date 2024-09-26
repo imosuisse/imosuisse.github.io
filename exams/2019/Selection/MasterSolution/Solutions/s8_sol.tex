@@ -1,0 +1,25 @@
+Seien $k,n$ und $r$ natürliche Zahlen mit $r<n$. Quirin besitzt $kn+r$ schwarze und $kn+r$ weisse Socken. Er möchte sie so auf seiner Wäscheleine aufhängen, dass es keine $2n$ aufeinanderfolgenden Socken gibt, von denen $n$ schwarz und $n$ weiss sind. Zeige, dass Quirin dies genau dann schaffen kann, wenn $r\geq k$ und $n > k+r$ gelten.
+
+\textbf{Solution:}(Louis)
+
+La première observation importante pour ce problème est que si une suite de $2n$ chaussettes contient plus de chaussettes blanches que de noires et une autre suite de $2n$ chaussettes qui contient plus de chaussettes noires que de chaussettes blanches, alors il existe quelque part une suite de $2n$ chaussettes qui contient autant de chaussettes blanches que de chaussettes noires. En effet, si on décale la suite d'une chaussette vers la droite alors soit le nombre de chaussettes noires reste le même, soit il augmente ou diminue de $1$. Cela implique alors que pour passer d'une séquence à l'autre il faut passer par tous les nombres de chaussettes noires entre deux, et en particulier une séquence contiendra exactement $n$ chaussettes noires.
+
+On sépare maintenant les $2(kn+r)$ chaussettes en $k$ groupes de $2n$ chaussettes consécutives et un dernier groupe de $2r$ chaussettes. Par la remarque précédente on peut supposer que chacun des $k$ groupes contient au moins $n+1$ chaussettes blanches. Il y a donc au moins $k(n+1)$ chaussettes blanches parmi ces groupes, donc on obtient l'inégalité $kn+k \leq kn+r$ et donc $k \leq r$. Pour obtenir l'autre inégalité on regarde les $2r$ dernières chaussettes. Par la discussion précédente il y a au maximum $r-k$ chaussettes blanches parmi ces $2r$ chaussettes, et donc il y a au minimum $r+k$ chaussettes noires. Puisque $r < n$, toutes ces $2r$ chaussettes font partie de la suite de $2n$ dernières chaussettes, et donc par la remarque du début on doit avoir $r+k < n$.
+
+On a déjà montré que s'il existe une telle séquence, les inégalités doivent effectivement être vérifiées. Il reste à prouver que quand ces inégalités sont vérifiées on peut construire une telle séquence. On effectue pour cela la construction suivante:\\
+On commence par placer $k$ blocs de $2n$ chaussettes, constitués chacun de $n-1$ chaussettes noires à gauche et $n+1$ chaussettes blanches à droite. Finalement on place un bloc de $2r$ chaussettes, constitué de $k+r$ chaussettes noires à gauche et $r-k$ chaussettes blanches à droite.
+Les inégalités impliquent que $r-k \leq 0$ et $k+r < n$. Maintenant si on prend une suite de $2n$ chaussettes, s'il contient des chaussettes d'un seul groupe de chaussettes noires alors par construction il contient au maximum $n-1$ chaussettes noires. S'il contient des chaussettes appartenant à deux groupes noires différents, alors il doit contenir les $n+1$ chaussettes blanches placées entre ces deux groupes, et donc il peut contenir au plus $n-1$ chaussettes noires.
+
+\textbf{Marking Scheme:}
+\begin{itemize}
+    \item 1P: If we displace a sequence of $2n$ socks one sock to the left, the number of black socks changes by at most $1$.
+    \item 1P: Every sequence of $2n$ socks contains more white socks than black socks.
+    \item 3P: Prove both inequalities.
+    \begin{itemize}
+        \item 2P: Prove only one of these inequalities.
+    \end{itemize}
+    \item 2P: Find a construction
+    \begin{itemize}
+        \item 1P: Construction without a sufficient justification.
+    \end{itemize}
+\end{itemize}

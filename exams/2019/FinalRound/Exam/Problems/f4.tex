@@ -1,0 +1,24 @@
+\de{Sei $n$ eine natürliche Zahl. In einer Reihe stehen $n+1$ Schüsseln, die von links nach rechts mit den Zahlen $0,1,\ldots,n$ nummeriert sind. Am Anfang liegen $n$ Steine in der Schüssel $0$ und kein Stein in den anderen Schüsseln. Sisyphus will diese $n$ Steine in die Schüssel $n$ bewegen. Dafür bewegt Sisyphus in jedem Zug genau einen Stein von einer Schüssel mit $k \geq 1$ Steinen um höchstens $k$ Schüsseln nach rechts. Sei $T$ die minimale Anzahl Züge, die Sisyphus benötigt, um alle Steine in die Schüssel $n$ zu bewegen. Zeige, dass gilt:
+\[
+    T\geq \left\lceil \frac{n}{1} \right\rceil + \left\lceil \frac{n}{2} \right\rceil + \ldots + \left\lceil \frac{n}{n} \right\rceil.
+\]
+
+\textit{Bemerkung: Für eine reelle Zahl $x$ ist $\lceil x \rceil$ die kleinste ganze Zahl, die grösser als oder gleich $x$ ist.}}
+\fr{Soit $n$ un nombre entier strictement positif. On dispose de $n+1$ urnes alignées. Les urnes sont numérotées de gauche à droite à l'aide des nombres $0,1, 2, \ldots, n$. Au départ, $n$ pierres sont déposées dans l'urne $0$ et toutes les autres urnes sont vides. Sisyphe souhaite déplacer les $n$ pierres jusqu'à l'urne $n$. Pour ce faire, à chaque tour, Sisyphe déplace une pierre d'une urne contenant $k\geq 1$ pierres d'au plus $k$ urnes vers la droite
+%choisit à chaque tour une case non-vide et déplace une des pierres posées sur cette case d'au plus $k$ cases vers la droite, avec $k$ le nombre de pierres contenues sur la case choisie
+(la pierre ne peut pas dépasser la dernière urne). Soit $T$ le nombre minimal de tours nécessaires pour amener toutes les pierres dans l'urne $n$. Montrer que 
+\[
+    T\geq \left\lceil \frac{n}{1} \right\rceil + \left\lceil \frac{n}{2} \right\rceil + \ldots + \left\lceil \frac{n}{n} \right\rceil.
+\]
+
+\textit{Remarque: pour un nombre réel $x$, $\lceil x \rceil$ dénote le plus petit nombre entier qui est plus grand ou égal à $x$.}}
+\ita{}
+\en{Let $n$ be a positive integer. We place $n+1$ bowls in a row and number them from left to right by the numbers $0,1,\ldots,n$. In the beginning, $n$ stones lie in bowl $0$ and no stone lies in any of the other bowls. Sisyphus wants to move all $n$ stones to bowl $n$. To do this, in one step Sisyphus moves exactly one stone from a bowl containing $k\geq 1$ stones at most $k$ bowls to the right. Let $T$ be the minimal number of steps which Sisyphus needs to move all stones to bowl $n$. Show that:
+
+
+%Let $n$ be a given positive integer. Sisyphus performs a sequence of turns on a board consisting of $n+1$ squares in a row, numbered $0$ to $n$ from left to right. Initially $n$ stones are put into square $0$, and the other squares are empty. At every turn, Sisyphus chooses any nonempty square, say with $k$ stones, take one of those stones and moves it to the right by at most $k$ squares (the stone should stay within the board). Sisyphus' aim is to move all $n$ stones to square $n$. Prove that Sisyphus cannot reach the aim in less than 
+\[
+    T\geq \left\lceil \frac{n}{1} \right\rceil + \left\lceil \frac{n}{2} \right\rceil + \ldots + \left\lceil \frac{n}{n} \right\rceil.
+\]
+
+\textit{Remark: As usual $\lceil x \rceil$ stands for the least integer larger than or equal to $x$.}}

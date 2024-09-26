@@ -1,0 +1,472 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{enumerate}
+
+\oddsidemargin=0cm \headheight=-2.1cm
+\textwidth=16.4cm \textheight=25.7cm
+
+\catcode`\� = \active \catcode`\� = \active \catcode`\� = \active
+\catcode`\� = \active \catcode`\� = \active \catcode`\� = \active
+
+\def�{"A}
+\def�{"a}
+\def�{"O}
+\def�{"o}
+\def�{"U}
+\def�{"u}
+
+
+
+
+
+
+
+% Schriftabk�rzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % sch�nes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+%\renewcommand{\binom}[2]{\left(\genfrac{#1}{#2}\right)}
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+\newcommand{\dreieck}{\bigtriangleup}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge Solutions de l'examen du tour pr�liminaire 2005}
+\end{center}
+\vspace{15mm}
+
+Tout d'abord voici quelques remarques � propos de la distribution
+des points. Une solution compl�te et correcte vaut 7 points pour
+chaque exercice. Pour une solution compl�te avec quelques fautes ou
+impr�cisions mineures qui n'influencent pas significativement la
+justesse de la solution propos�e, nous donnons 6 points. Quand il
+s'agit d'une solution non compl�t�e, on distribue des points
+partiels en fonction des r�sultats interm�diaires obtenus. Un
+exercice poss�de souvent plusieurs solutions. Si quelqu'un essaie
+par exemple de r�soudre un exercice de deux fa�ons diff�rentes et
+obtient 3 points pour la premi�re solution, 2 points pour la
+deuxi�me, alors le nombre de ses points sera 3 et non pas 5.
+Autrement dit, les points obtenus � travers diff�rentes solutions
+d'un m�me exercice ne sont \emph{pas} cumulables. Les sch�mas de
+correction ne sont pr�sent�s ici qu'� titre indicatif. Si quelqu'un
+propose une solution diff�rente, nous essaierons de lui donner les
+points qu'il aurait eus pour la m�me prestation en rendant une
+solution d�j� pr�sent�e. Les sch�mas ci-dessous sont � interpr�ter
+de la mani�re suivante:\\
+Si quelqu'un arrive jusqu'� une �tape donn�e, il obtient les points
+correspondants.\\
+Les exceptions � cette r�gle sont toujours clairement mentionn�es.
+
+\begin{enumerate}
+
+\item[\textbf{1.}] Dans un rectangle $ABCD$ donn�, tel que $|AD| \leq |AB|$, soient $M$ le milieu
+du segment $AD$ et $N$ le milieu du segment $BC$. Soit $E$ la
+projection de $B$ sur $CM$.
+
+\begin{enumerate}
+\item[(a)] Montrer que $ANEM$ est un trap�ze isoc�le.
+\item[(b)] Montrer que l'aire du quadrilat�re $ABNE$ vaut la moiti�
+de l'aire de $ABCD$.
+\end{enumerate}
+
+\textbf{Solution:}
+
+A cause de $|AD| \leq |AB|$, le point $E$ se trouve � l'int�rieur du
+rectangle $ABCD$.
+\begin{enumerate}
+\item[(a)] Comme le segment $AN$ peut �tre envoy� sur $MC$ par une
+translation de vecteur $\overrightarrow{AM}$, $AN$ et $ME$ sont
+parall�les. Il reste � prouver que $\wi MAN = \wi ENA$. Soit $F$
+l'itersection de $AN$ avec $EB$ et posons $\alpha = \wi MAN$. Dans
+l'ordre, nous trouvons ensuite les r�sultats suivants (les
+explications sont entre parenth�ses, � comparer avec la figure):
+
+\begin{enumerate}[1.)]
+
+\item $\wi BNA = \alpha$ (Angles alternes internes aux parall�les $AD$ et
+$BC$)
+
+\item $\wi NBF = 90^\circ - \alpha$ ($\dreieck BNF$ est un triangle
+rectangle, car $AN$ est parall�le � $MC$ et $MC$ est par hypoth�se
+perpendiculaire � $EB$.)
+
+\item $\wi BEN = 90^\circ - \alpha$ (Le cercle de Thal�s du segment
+$BC$ montre que $\dreieck NEB$ est un triangle rectangle.)
+
+\item $\wi ENA = \alpha$ ($\dreieck ENF$ est �galement un triangle
+rectangle.)
+\end{enumerate}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8cm]{pictureSolution1}
+\end{figure}
+
+\item[(b)] Comme les triangles $\dreieck ABN$ et $\dreieck CDM$ sont
+semblables, on peut simplifier le probl�me: il nous suffit de
+montrer que $\dreieck ANE$ couvre la moiti� du parall�logramme
+$ANCM$. Cela peut �tre fait de diverses mani�res, nous allons
+pr�senter ici deux solutions qui utilisent le fait que $ANEM$ est un
+trap�ze isoc�le (les crochets repr�sentent l'aire):
+
+\begin{enumerate}[1.)]
+\item $[ANCM] = AN \cdot EF = 2 \cdot \frac{1}{2} \cdot AN \cdot
+EF = 2 \cdot [ANE]$
+
+\item Soit $P$ le point d'intersection de $AN$ avec la droite
+parall�le � $NC$ passant par $E$. $APEM$ est alors un
+parall�logramme qui est d�coup� en deux parties �gales par $AE$. Une
+moiti� appartient au triangle $ANE$, l'autre pas. Raisonnement
+analogue pour le parall�logramme $PNCE$.
+\end{enumerate}
+\end{enumerate}
+
+
+\textit{Remarques et sch�ma des points:}
+
+La partie (a) valait quatre points. Il y avait des points partiels \emph{ind�pendants} pour les observations suivantes: \\
+$AN$ est parall�le � $MC$ (1 P)\\
+Remarquer qu'il suffisait ensuite de montrer que $\dreieck BNE$ est isoc�le (1 P). \\
+La partie (b) donnait trois points. Il n'y a pas eu de points partiels.
+
+\bigskip
+
+\item[\textbf{2.}] Montrer que dans un enn�agone (polygone � neuf
+c�t�s), il existe deux diagonales distinctes telles que les droites
+sur lesquelles elles se trouvent sont parall�les ou forment un angle
+plus petit que $7^\circ$.
+
+\textbf{1�re solution:}
+
+Un enn�agone convexe poss�de $\binom{9}{2}-9=27$ diagonales. On fait
+glisser les diagonales parall�lement jusqu'� ce qu'il se coupent
+toutes en un point $P$ fix�. On choisit ensuite une diagonale
+arbitraire et on l'appelle $d_1$. Si on tourne $d_1$ dans le sens
+contraire aux aiguilles d'une montre autour de $P$, elle va couvrir
+les autres diagonales les unes apr�s les autres. On appelle
+celles-ci dans cet ordre-l� $d_2, \ldots, d_{27}$. Soit maintenant
+$\alpha_i$ l'angle entre $d_i$ et $d_{i+1}$ pour $1 \leq i \leq 26$
+et $\alpha_{27}$ l'angle entre $d_{27}$ et $d_1$. Nous avons ainsi
+$\alpha_1+\ldots+\alpha_{27}= 180^\circ$, ce qui entra�ne qu'un des
+angles vaut au plus $180^\circ /27 < 7^\circ$. Les diagonales
+correspondantes de l'enn�agone sont alors parall�les ou les droites
+sur lesquelles elles se trouvent forment un angle plus petit que
+$7^\circ$.\\
+
+\textbf{2e solution:}
+
+Soient $d_1, \ldots, d_{27}$ les diagonales de l'enn�agone. On
+choisit une droite horizontale $h$ qui se trouve sous l'enn�agone et
+on d�finit l'angle $\alpha_i$ comme le plus petit angle duquel on
+doit tourner la droite $h$ pour qu'elle soit parall�le � $d_i$ (donc
+$\alpha_i=0$ si $d_i$ et $h$ sont parall�les). Par construction, $0
+\leq \alpha_i < 180^\circ$. En divisant l'intervalle $[\,0^\circ,
+180^\circ\,[$ en 26 sous-intervalles de longueur identique, on
+trouve, d'apr�s le principe des tiroirs, que deux angles $\alpha_i$
+sont dans le m�me sous-intervalle. Les diagonales correspondantes
+sont alors parall�les ou les droites sur lesquelles elles se
+trouvent forment un angle plus petit que
+$7^\circ$.\\
+
+\textit{Remarques et sch�ma des points:}
+
+Calculer correctement le nombre de diagonales donnait 1 point. En fonction de la justesse et la compl�tude de l'argumentation pr�sent�e, le nombre total des points variait entre 2 et 7. Avoir remarqu� que $180^\circ / 27 < 7^\circ$ donnait en tout 2 points. Les solutions n'ayant pas introduit de point ou de droite fixe ne donnaient en g�n�ral pas droit � plus que 5 points.
+
+\bigskip
+
+\item[\textbf{3.}] Soient $n$ et $m$ deux nombres naturels premiers
+entre eux. Montrer que dans ce cas
+\[m^3+mn+n^3 \qquad  \mbox{et} \qquad mn(m+n)\]
+sont �galement premiers entre eux.
+
+\textbf{Solution:}
+
+On montre d'abord que $m^3+mn+n^3$ et $m$ sont premiers entre eux.
+Supposons le contraire, il existe alors un nombre premier qui divise
+les deux � la fois. Mais $p$ doit alors �galement diviser
+$(m^3-mn+n^3)-m(m^2+n)=n^3$, donc $n$, ce qui est en contradiction
+avec le fait que $m$ et $n$ sont premiers entre eux. De fa�on
+analogue, on peut montrer que $m^3+mn+n^3$ et $n$ sont premiers
+entre eux. Soit ensuite $p$ un diviseur commun de $m^3+mn+n^3$ et de
+$m+n$. Il divise alors �galement
+$(m^3+mn+n^3)-(m+n)(m^2-mn+n^2)=mn$, donc $m$ ou $n$, ce qui
+contredit les r�sultats obtenus pr�c�demment. On peut en conclure
+que le premier nombre n'a pas de diviseur commun plus grand que 1
+avec les trois facteurs de droite, donc avec leur produit non plus.
+Les deux nombres sont ainsi premiers entre eux.\\
+
+\textit{Remarques et sch�ma des points:}
+
+Avoir remarqu� qu'il suffit de montrer que le c�t� gauche et les nombres $n$, $m$ et $m+n$ resp. sont premiers entre eux, valait 1 point. Deux points \emph{suppl�mentaires} ont �t� donn�s pour avoir montr� que $pgdc(m^3+ mn + n^3, m) = 1$.\\
+Beaucoup de participants ont essay� d'argumenter � l'aide de la divisibilit� ou avec des diviseurs arbitraires de $m$ et $n$. Dans ces cas, il fallait faire attention au fait que 'premiers entre eux' et 'ne divise pas' ne sont pas synonymes. Pour une argumentation incorrecte, des points ont �t� enlev�s en cons�quence.
+
+\bigskip
+
+\item[\textbf{4.}] Soit $ABC$ un triangle avec $\wi BAC = 60^\circ$. Trouver tous les points $P$
+� l'int�rieur du triangle qui ont la propri�t� suivante:
+
+Si $D$ est la projection de $P$ sur $BC$, $E$ la projection de $P$
+sur $CA$ et $F$ la projection de $P$ sur $AB$, alors $\wi EDF =
+30^\circ$.
+
+\textbf{Solution:}
+
+On pose $\alpha=\wi CAB$, $\beta = \wi ABC$, $\gamma = \wi BCA$,
+ainsi que $\phi=\wi EDP$ et $\psi= \wi FDP$. Comme $\wi PEC = \wi
+PDC = 90^\circ$, $EPDC$ est un quadrilat�re inscrit, ce qui entra�ne
+$\wi ECP = \phi$. De fa�on analogue, $FPDB$ est un quadrilat�re
+inscrit, ce qui entra�ne $\wi FBP = \psi$. Il s'ensuit que
+\begin{eqnarray*}
+\wi BPC &=& 180^\circ - \wi PBC - \wi PCB\\
+&=& 180^\circ - (\beta - \psi) - (\gamma - \phi)\\
+&=& (180^\circ - \beta - \gamma) + \phi + \psi\\
+&=& \alpha + (\phi+\psi) = 60^\circ + \wi EDF.
+\end{eqnarray*}
+Nous avons donc $\wi EDF=30^\circ$ si et seulement si $\wi
+BPC=90^\circ$. Les points $P$ cherch�s sont ainsi exactement les
+point qui sont � l'int�rieur de $ABC$ et qui se trouve sur le cercle
+de Thal�s du segment $BC$.\\
+
+\textit{Remarques et sch�ma des points:}
+
+Trouver les quadrilat�res inscrits $EPDC$ et $FPDB$ valait 1 points (mais pas le quadrilat�re inscrit $AFPE$). \emph{Ind�pendamment de cela}, diviser l'angle $ \wi EDF $ en deux angles $ \wi EDP$ et $ \wi PDF$ donnait �galement 1 point. Il pouvait y avoir un troisi�me point si on combinait ces deux informations pour montrer que $ \wi EDP = \wi ECP$ et $\wi PDF = PBF$. 1 point a �t� enlev� � ceux qui n'ont pas montr� que tous les points du cercle de Thal�s remplissaient la condition.
+
+\bigskip
+
+\item[\textbf{5.}] Soit $M$ un ensemble � $n$ �l�ments. Combien y
+a-t-il de possibilit�s de choisir trois sous-ensembles $A,B,C$ de
+$M$ tels que
+\[A \cap B \neq \emptyset, \quad B \cap C \neq \emptyset, \quad C \cap A \neq \emptyset,\]
+\[A \cap B \cap C = \emptyset.\]
+
+\textbf{Solution:}
+
+Consid�rons le diagramme de Venn de la figure. Choisir un triple
+$(A,B,C)$ revient au m�me que de distribuer les $n$ �l�ments de $M$
+dans les huit secteurs du diagramme, en laissant le secteur $w$
+vide, mais pas les secteurs $x,y$ et $z$.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8cm]{pictureSolution5}
+\end{figure}
+
+Nous comptons d'abord le nombres de triples $(A,B,C)$ tels que $A
+\cap B \cap C = \emptyset$. Les $n$ �l�ments peuvent �tre plac�s
+dans n'importe quel secteur en dehors de $w$. Selon la r�gle de
+multiplication, il y a $7^n$ tels triples.
+
+Nous devons encore enlever de ce r�sultat le nombre de triples
+$(A,B,C)$ tels que $A \cap B = \emptyset$ ou $B \cap C = \emptyset$
+ou $C \cap A = \emptyset$ (attention, nous avons ici automatiquement
+$A \cap B \cap C = \emptyset$, cette condition n'est donc plus �
+prendre en consid�ration). On pose
+\begin{eqnarray*}
+X &=& \{(A,B,C) \; | \; A \cap B = \emptyset\},\\
+Y &=& \{(A,B,C) \; | \; B \cap C = \emptyset\},\\
+Z &=& \{(A,B,C) \; | \; C \cap A = \emptyset\}.
+\end{eqnarray*}
+Selon le principe d'inclusion-exclusion, nous avons
+\[|X \cup Y \cup Z| = |X| + |Y| + |Z| - |X \cap Y| - |Y \cap Z| - |Z \cap X| +|X \cap Y \cap Z|,\]
+de plus, pour des raisons de sym�trie, $|X|=|Y|=|Z|$ et $|X \cap
+Y|=|Y \cap Z|=|Z \cap X|$. Les triples en $X$ correspondent � la
+distribution, o� $x$ et $w$ restent vides, nous avons ainsi
+$|X|=6^n$. Chez les triples de $|X \cap Y|$, c'est les secteurs
+$w,x$ et $y$ qui doivent rester vides, ce qui nous donne $|X \cap
+Y|=5^n$. Finalement, chez les triples de $|X \cap Y \cap Z|$ aucun
+�l�ment n'est mis dans les secteurs $w,x,y$ et $z$, donc $|X \cap Y
+\cap Z|=4^n$. En combinant ces r�sultats, nous obtenons $|X \cup Y
+\cup Z| = 3 \cdot 6^n -3 \cdot 5^n+4^n$. Le nombre cherch� vaut donc
+\[7^n-3 \cdot 6^n+3 \cdot 5^n -4^n.\]
+
+\textit{Remarques et sch�ma des points:}
+
+L'application de la formule $7^n$ moins le nombre de distributions avec $A \cap B = \emptyset$ ou $ B \cap C = \emptyset$ ou $A \cap C = \emptyset$  donnait 2 points. Une impl�mentation juste de la formule d'inclusion-exclusion valait deux points \emph{suppl�mentaires}.\\
+D'autres approches donnaient en g�n�ral maximum 1 point, car elles n'aboutissaient pas � une formule explicite.
+
+\end{enumerate}
+
+\end{document}

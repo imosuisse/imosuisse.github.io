@@ -1,0 +1,110 @@
+\de{
+Falls $p\geq 5$ eine Primzahl ist, sei $q$ die kleinste Primzahl sodass $q>p$ und sei $n$ die Anzahl der positiven Teiler von $p+q$ ($1$ und $p+q$ inklusive).
+\begin{enumerate}[a)]
+    \item Zeige, dass egal welche Primzahl $p$ gewählt wurde, die Zahl $n$ grösser oder gleich $4$ ist.
+    \item Finde den kleinstmöglichen Wert $m$, den $n$ annehmen kann unter allen möglichen Wahlen von $p$. Das heisst:
+    \begin{enumerate}
+    \item[b\textsubscript{1})] Gib ein Beispiel für eine Primzahl $p$ an, sodass der Wert $m$ erreicht wird.
+    \item[b\textsubscript{2})] Zeige, dass es keine Primzahl $p$ gibt für die der Wert von $n$ kleiner als $m$ ist.
+    \end{enumerate}
+\end{enumerate}
+
+\textbf{Lösung:} Da $p\geq 5$, sind die beiden Primzahlen $p, q$ beide ungerade und somit $p+q$ gerade, also $p+q$ durch $1, 2, \frac{p+q}{2}$ und $p+q$ teilbar. Zusätzlich ist $p+q > 4$ und somit sind die genannten Teiler alle unterschiedlich. Dies beweist Teil a).
+
+für Teil b\textsubscript{1}) können wir kleine Fälle von $p$ testen und sehen, dass $n$ nicht kleiner als $6$ zu sein scheint. Wir sehen auch, dass $p+q$ genau $6$ Teiler hat wenn $p=5$, $q=7$ (Diese wären $1, 2, 3, 4, 6, 12$).
+
+Für b\textsubscript{2}) ist die Kernidee, dass $\frac{p+q}{2}$ keine Primzahl ist, da sie zwischen den aufeinanderfolgenden Primzahlen $p$ und $q$ liegt. ($p < \frac{p+q}{2} < q$). Es gibt nun einige Fälle, die wir untersuchen müssen:
+\begin{itemize}
+    \item Falls $\frac{p+q}{2}$ durch zwei unterschiedliche Primzahlen $s, t \neq 2$ teilbar ist, dass hat $p+q$ mindestens $8$ Teiler: $1, 2, s, t, 2s, 2t, st, 2st$. 
+    \item Falls $\frac{p+q}{2}$ durch $2, s$ teilbar ist, wobei $s\neq 2$ prim ist, dann hat $p+q$ mindestens $6$ Teiler: $1, 2, 4, s, 2s, 4s$.
+    \item Falls $\frac{p+q}{2}$ durch $s^2$ teilbar ist mit $s\neq 2$ prim, dann hat $p+q$ auch mindestens $6$ Teiler: $1, 2, s, 2s, s^2, 2s^2$.
+    \item Falls $\frac{p+q}{2}$ eine Zweierpotenz ist, dann ist $p+q$ auch eine. Weil nun $32 = 2^5$ genau $6$ Teiler hat und jede höhere Zweierpotenz auch durch diese $6$ Teiler teilbar ist, genügt es zu beweisen, dass $p+q$ keine Zweierpotenz kleiner als $32$ sein kann. Da $5\leq p < q$, folgt, dass $p+q > 8$ und somit ist der einzige übrige Fall, dass $p+q = 16$. Wir sehen, dass $5+7 = 12 < 16$ und $7+11 = 18 > 16$. Weil jedes $p > 7$ eine noch höhere Summe ergibt, schlussfolgern wir, dass $p+q = 16$ nicht möglich ist.
+\end{itemize}
+
+\textbf{Marking Scheme}
+\begin{itemize}
+    \item 1P : Beweis, dass $n\geq 4$.
+    \item 1P : Behaupte den richtigen Wert $m=6$ mit einem expliziten Beispiel.
+    \item 2P : Beweis, dass $\frac{p+q}{2}$ keine Primzahl ist.
+    \item +3P : Den Beweis beenden.
+\end{itemize}
+
+Falls in der Fallunterscheidung ein Fall ausgelassen wird, zählt dies nicht als kleiner Fehler und höchstens $5$ Punkte können erreicht werden.
+
+}
+
+\fr{
+Si $p\geq 5$ est un nombre premier, soit $q$ le plus petit nombre premier tel que $q>p$ et soit $n$ le nombre de diviseurs positifs de $p+q$ ($1$ et $p+q$ inclus).
+\begin{enumerate}[a)]
+    \item Montrer que quel que soit le choix de $p$, le nombre $n$ est toujours plus grand ou égal à $4$.
+    \item Trouver la véritable valeur minimale $m$ que peut prendre $n$ parmi tous les choix possibles pour $p$. C'est-à-dire:
+    \begin{enumerate}
+    \item[b\textsubscript{1})] Donner un exemple d'un nombre premier $p$ pour lequel la valeur $m$ est atteinte.
+    \item[b\textsubscript{2})] Montrer qu'il n'existe pas de nombre premier $p$ tel que $n$ soit strictement inférieur a $m$.
+    \end{enumerate}
+\end{enumerate}
+
+\textbf{Solution (Louis):} Puisque $p\geq 5$ les deux nombres premiers $p, q$ sont tous les deux impairs, donc leur somme $p+q$ est paire, et ainsi $p+q$ est divisible par $1, 2, \frac{p+q}{2}, p+q$. De plus, $p+q > 4$ donc les 4 diviseurs donnés sont distincts, ce qui prouve la partie a).
+
+Pour la partie b\textsubscript{1}) on essaye les petites valeurs de $p$ et on constate que $n$ n'est jamais inférieur à $6$ et que $p+q$ admet $6$ diviseurs lorsque $p=5$, $q=7$ par exemple. En effet dans ce cas $p+q = 12$ a pour diviseurs les nombres $1, 2, 3, 4, 6, 12$.
+
+Finalement pour b\textsubscript{2}) l'observation cruciale est que $\frac{p+q}{2}$ n'est pas un nombre premier. En effet, puisque $p$ et $q$ sont deux nombres premiers consécutifs, et que $p < \frac{p+q}{2} < q$, ce nombre ne peut pas être un nombre premier. Il y a donc les situations suivantes à étudier:
+\begin{itemize}
+    \item Si $\frac{p+q}{2}$ est divisible par deux nombres premiers distincts $s, t \neq 2$, alors $p+q$ est divisible par les nombres $1, 2, s, t, 2s, 2t, st, 2st$, et admet potentiellement d'autres diviseurs. Ainsi dans ce cas $p+q$ admet au moins $8$ diviseurs positifs distincts et $8 > 6$.
+    \item Si $\frac{p+q}{2}$ est divisible par $2s$ avec $s\neq 2$ un nombre premier, alors $p+q$ est divisible par $1, 2, 4, s, 2s, 4s$, et admet potentiellement d'autres diviseurs. En particulier $p+q$ est divisible par au moins $6$ diviseurs.
+    \item Si $\frac{p+q}{2}$ est divisible par $s^2$ avec $s\neq 2$ un nombre premier, un raisonnement similaire au cas précédent prouve que $p+q$ admet au minimum $6$ diviseurs.
+    \item Si $\frac{p+q}{2}$ est une puissance de $2$, alors c'est aussi le cas de $p+q$. Puisque $32 = 2^5$ admet $6$ diviseurs distincts, il suffit de prouver qu'il est impossible d'obtenir une puissance de $2$ inférieure à $32$. Puisque $5\leq p < q$, il s'ensuit que $p+q > 8$, donc il suffit d'exclure le cas $p+q = 16$. Pour cela on constate que $5+7 = 12 < 16$ et $7+11 = 18 > 16$. Si l'on prend $p > 7$ la somme obtenue sera encore plus grande donc on ne peut jamais obtenir $p+q = 16$.
+\end{itemize}
+
+\textbf{Marking Scheme}
+\begin{itemize}
+    \item 1P : Prouver que $n\geq 4$.
+    \item 1P : Affirmer que la valeur correcte est $m=6$ avec un exemple explicite.
+    \item 2P : Prouver que $\frac{p+q}{2}$ n'est pas un nombre premier.
+    \item +3P : Conclure.
+\end{itemize}
+
+Si dans la dernière étape de la preuve au moins une situation possible n'est pas traitée, cela ne sera pas considéré comme une erreur mineure et il ne sera pas possible d'obtenir plus que 5 points.
+}
+
+\ita{}
+
+\en{If $p\geq 5$ is a prime number, let $q$ denote the smallest prime number such that $q>p$ and let $n$ be the number of positive divisors of $p+q$ ($1$ and $p+q$ included).
+\begin{enumerate}[a)]
+    \item Prove that no matter the choice of $p$, the number $n$ is always at least $4$.
+    \item Find the actual minimal value $m$ that $n$ can reach among all possible choices for $p$. That is:
+    \begin{enumerate}
+    \item[b\textsubscript{1})] Give an example of a prime number $p$ for which the value $m$ is reached.
+    \item[b\textsubscript{2})] Prove that there is no prime number $p$ for which $n$ is smaller than $m$.
+    \end{enumerate}
+\end{enumerate}
+
+\textbf{Solution:} As $p\geq 5$ the two prime numbers $p, q$ are both odd and so $p+q$ is even, implying $p+q$ is divisible by $1, 2, \frac{p+q}{2}, p+q$. Additionally, $p+q > 4$ so the four given divisors are distinct, proving part a).
+
+For part b\textsubscript{1}) testing small values of $p$ shows that $n$ doesn't seem to be inferior to $6$ and that $p+q$ has $6$ divisors when $p=5$, $q=7$ for example, where the divisors are $1, 2, 3, 4, 6, 12$.
+
+For b\textsubscript{2}) the key idea is that $\frac{p+q}{2}$ is not prime. Since $p$ and $q$ are two consecutive primes and $p < \frac{p+q}{2} < q$, this number cannot be prime. There are a few subcases we have to evaluate:
+\begin{itemize}
+    \item If $\frac{p+q}{2}$ is divisible by two distinct primes $s, t \neq 2$, then $p+q$ has at least 8 divisors: $1, 2, s, t, 2s, 2t, st, 2st$. 
+    \item If $\frac{p+q}{2}$ is divisible by $2, s$ with $s\neq 2$ a prime number, then $p+q$ has at least 6 divisors: $1, 2, 4, s, 2s, 4s$.
+    \item If $\frac{p+q}{2}$ is divisible by $s^2$ with $s\neq 2$ a prime number, then $p+q$ has at least 6 divisors: $1, 2, s, 2s, s^2, 2s^2$.
+    \item If $\frac{p+q}{2}$ is a power of $2$, then so is $p+q$. As $32 = 2^5$ has $6$ distinct divisors, and every subsequent power of 2 is divisible by these 6 divisors, it suffices to prove $p+q$ cannot be a power of $2$ inferior to $32$. As $5\leq p < q$, it follows that $p+q > 8$, and so the only remaining case is $p+q = 16$. For this we remark that $5+7 = 12 < 16$ and $7+11 = 18 > 16$, and taking $p > 7$ will yield an even higher sum and so $p+q = 16$ is impossible.
+\end{itemize}
+
+\textbf{Marking Scheme}
+\begin{itemize}
+    \item 1P : Proving $n\geq 4$.
+    \item 1P : Stating the correct value $m$ with an explicit example.
+    \item 2P : Proving that $\frac{p+q}{2}$ is not prime.
+    \item +3P : Finishing the proof.
+\end{itemize}
+
+If in the case distinction at the end of the proof, one possible situation is not covered, this will not be considered a minor mistake and at most 5 points can be awarded.
+}
+
+
+
+
+
+
+\newpage

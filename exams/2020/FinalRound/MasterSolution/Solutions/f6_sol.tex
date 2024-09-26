@@ -1,0 +1,33 @@
+Let $n$ be a positive integer. Consider the following game: Initially, $k$ stones are distributed among the $n^2$ squares of an $n\times n$ chessboard. A move consists of choosing a square containing at least as many stones as the number of its adjacent squares (two squares are \textit{adjacent} if they share a common edge) and moving one stone from this square to each of its adjacent squares.
+
+Determine all positive integers $k$ such that:
+\begin{enumerate}[(a)]
+\item There is an initial configuration with $k$ stones such that no move is possible.
+\item There is an initial configuration with $k$ stones such that an infinite sequence of moves is possible.
+\end{enumerate}
+
+\textbf{Answer:} The possible values of $k$ are all the values in the range $[2n^2 - 2n, 3n^2-4n]$.
+
+\textbf{Solution (Tanish)}
+
+Clearly, the first requirement imposes an \emph{upper bound} on $k$ (if there is an initial configuration with $k$ stones where no moves are possible, then taking away stones from this configuration will not suddenly make a move possible) and the second requirement imposes a \emph{lower bound} on $k$ (similarly, if infinitely many moves are possible for a given $k$ then we can just add stones and ignore their presence altogether).
+
+First, we determine the upper bound. Note that if we place on each square a number of stones that is one less than the number of squares adjacent to it (so 1 on every corner, 2 on every edge and 3 on "inner" squares) then no moves are possible, as no square has enough stones for a move to be made. However, should we take any more than this number, then a pigeonhole principle on the squares shows that, for any given configuration with this many stones, a move is always possible because at least one square will have at least as many stones as it does adjacent squares. Calculating the total number of stones, we get $3n^2-4n$.
+
+Now, we propose a lower bound for the second condition of $2n^2-2n$. A configuration with this many stones that has an infinite number of possible moves does indeed exist; place on all the white squares a number of stones equivalent to the number of squares bordering them. Then firstly perform a move on all of the white squares. After this has been done, each of the black squares will have a number of stones equivalent to the number of squares bordering them. After doing a move on each of the black squares, we find ourselves back at our original state, and proving there is a loop between the same state is sufficient to finish, as one has merely to repeat this loop indefinitely to have the desired infinite sequence. 
+
+Now let us show that $2n^2-2n$ is indeed a bound. If an infinite sequence is possible, as there are only finitely many configurations available to us, you must be able to go from some configuration to itself in a finite number of moves. To do so, you must apply a move on every square at least once (it can be proven that you have to apply the same number of moves to every square, but this is not necessary to finish) as if there are squares that are untouched, at least one square not used for a move is adjacent to a square that has been used and the net movement of stones to the unused square has to be positive, which is a contradiction with the fact the net movement should be 0 everywhere to return to the same state. Now, each stone can be labelled with an edge (here, an edge is defined as the border between two squares). To do so, all we do is the first time an edge is crossed by a stone, we assign that stone to the edge permanently, and henceforth the stone in question is made to cross over that edge exclusively. This can be done as to displace the stone you must play a move on its new square, but this will always enable you to return to its original square, and so forth. Clearly, only one stone is associated to each edge, and since every edge is crossed at least once, we must assign a stone to all edges, so we need at least $2n^2-2n$ stones. Note that not all stones are necessarily assigned an edge by the end; this can be thought of as a injective function from edges to stones. 
+
+\textbf{Marking scheme} 
+\begin{itemize}
+  
+\item 1P: Stating the upper bound or construction of 0-move configuration for $3n^2-4n$
+\item 1P: Any correct justification as to why this is the upper bound. 
+\item 1P: Stating the construction with infinite moves for $2n^2-2n$ 
+\item 1P: Stating this is the lower bound
+\item 3P: Any correct justification as to why this is the lower bound. \begin{itemize}
+            \item 1P: At least one move per square with justification
+            \item 1P: Idea of looking for an injective function from edges to stones
+            \item 1P: Finding a well-defined function and concluding
+        \end{itemize}
+\end{itemize}

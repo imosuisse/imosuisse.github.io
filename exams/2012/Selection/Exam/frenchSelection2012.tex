@@ -1,0 +1,398 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage[french]{babel} %Langues
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+% \defÄ{"A}
+% \defä{"a}
+% \defÖ{"O}
+% \defö{"o}
+% \defÜ{"U}
+% %\defü{"u}
+
+
+
+% Schriftabkürzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemme}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Définition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Remarque}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\gaussk}[1]{\lfloor #1 \rfloor}
+\newcommand{\frack}[1]{\{ #1 \}}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+\newcommand{\dreieck}{\bigtriangleup}
+
+\parindent0mm
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge Sélection OIM 2012} \\
+\medskip Premier examen - 28 avril 2012
+\end{center}
+\vspace{8mm}
+Dur\'ee: 4.5 heures\\
+Chaque exercice vaut 7 points.
+
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{1.}] 
+Soit $n$ un nombre naturel. Trouver le plus grand nombre naturel $d$ en fonction de $n$, tel qu'il existe une permutation $a_1,a_2,\ldots, a_n$ des nombres $1,2,\ldots,n$ avec
+$$
+	| a_i  - a_{i+1} | \geq d, \ \text{ pour } i = 1,2,\ldots, n-1.
+$$
+
+
+\bigskip\bigskip
+
+
+\item[\textbf{2.}] 
+Un nombre entier $m$ est une \emph{vraie puissance}, s'il existe des nombres entiers positifs $a$ et $n$, tels que $n>1$ et $m=a^n$.
+\begin{enumerate}
+\item[(a)] Montrer qu'il existe $2012$ entiers positifs distincts, tels que pour tout sous-ensemble de ces nombres, la somme des éléments du sous-ensemble n'est pas une vraie puissance.
+\item[(b)] Montrer qu'il existe $2012$ entiers positifs distincts, tels que la somme des éléments de chaque sous-ensemble de ces nombres est une vraie puissance.
+\end{enumerate}
+
+
+\bigskip\bigskip
+
+
+
+\item[\textbf{3.}] 
+Soit $ABCD$ un quadrilatère inscrit et $k$ son cercle circonscrit. Soit $S$ le point d'intersection de $AB$ et $CD$ et $T$ le point d'intersection des tangentes à $k$ aux points $A$ et $C$. Montrer que $ADTS$ est un quadrilatère inscrit si et seulement si $BD$ coupe le segment $AC$ en deux. \\
+
+
+\end{enumerate}
+\bigskip
+\begin{center}
+Bonne chance!
+\end{center}
+\pagebreak
+
+
+\begin{center}
+{\huge Sélection OIM 2012} \\
+\medskip Deuxième examen - 29 avril 2012
+\end{center}
+\vspace{8mm}
+Dur\'ee: 4.5 heures\\
+Chaque exercice vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{4.}] 
+Soit $ABC$ un triangle avec $\angle BAC = 60^\circ$. Soit $E$ un point sur la droite $AB$ tel que $B$ est entre $A$ et $E$ et tel que $BE$= $BC$. De manière analogue, soit $F$ un point sur $AC$ tel que $C$ est entre $A$ et $F$ et tel que $CF$ = $BC$. Soit $K$ le point d'intersection du cercle circonscrit de $ACE$ avec la droite $EF$. Montrer que $K$ est sur la bissectrice de l'angle $\angle BAC$.
+
+\bigskip\bigskip
+
+
+\item[\textbf{5.}] Soit $n\geq 6$ un nombre naturel. On considère un ensemble $S$ de $n$ nombres réels distincts. Montrer qu'il existe au moins $n-1$ sous-ensembles de deux éléments de $S$ distincts, tels que la moyenne arithmétique des deux éléments du sous-ensemble est supérieure ou égale à la moyenne arithmétique de tous les éléments de $S$.
+
+
+\bigskip\bigskip
+
+
+\item[\textbf{6.}] Trouver toutes les fonctions surjectives $ f  : \mathbb{R} \longrightarrow \mathbb{R}$  telles que pour tous $x,y\in\mathbb{R}$  :
+
+$$f(x + f(x) + 2f(y)) = f(2x) + f(2y)$$
+
+
+\end{enumerate}
+
+\bigskip
+\begin{center}
+Bonne chance!
+\end{center}
+
+\pagebreak
+
+
+\begin{center}
+{\huge Sélection OIM 2012} \\
+\medskip Troisième examen - 12 mai 2012
+\end{center}
+\vspace{8mm}
+Dur\'ee: 4.5 heures\\
+Chaque exercice vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{7.}] 
+%Soient $d_1,d_2,\ldots,d_n$ neuf nombres naturels distincts. Montrer qu'il existe un $N\in\mathbb{N}$ tel pour tous les nombres naturels $n\geq N$, le nombre
+
+%\[(n + d_1)(n + d_2)\dots (n + d_9)\]
+
+%admet un diviseur premier supérieur à $20$.\\
+
+%oder\\
+
+Soient $p$ et $q$ deux nombres premiers tels que
+
+\[pq \ | \ 2012^{p+q-1} -1.\]
+
+Montrer qu'exactement un des deux nombres premiers est égal à $2011$.
+
+\bigskip
+\bigskip
+
+\item[\textbf{8.}]  
+Soient $f,g$ deux polynômes à coefficients entiers et soient $a,b$ des points fixes entiers de $f\circ g$. Montrer qu'il existe des points fixes entiers $c,d$ de $g\circ f$ tels que $a+c = b+d$.\\
+\textit{Indication: Pour deux polynômes $p,q$ on définit $p\circ q$ par $(p\circ q)(x) = p(q(x))$.}
+
+
+
+\bigskip
+\bigskip
+
+\item[\textbf{9.}] 
+Déterminer le plus grand nombre naturel $k$ avec la propriété suivante: Il est possible de partager les nombres naturels en $k$ sous-ensembles disjoints $A_1,\ldots,A_k$ de telle sorte que pour tout $i\in\{1,\ldots,k\}$, tout nombre naturel $n\geq 15$ est somme de deux éléments distincts de $A_i$.
+
+
+\end{enumerate}
+
+\bigskip
+\begin{center}
+Bonne chance !
+\end{center}
+
+\pagebreak
+
+
+\begin{center}
+{\huge Sélection OIM 2012} \\
+\medskip Quatrième examen - 13 mai 2012
+\end{center}
+\vspace{8mm}
+Dur\'ee: 4.5 heures\\
+Chaque exercice vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{10.}] Soient $a,b,c$ des nombres réels positifs avec $abc \geq 1$. Démontrer l'inégalité
+
+\[\frac{a^4-1}{ab^3+abc+ac^3} + \frac{b^4-1}{bc^3+abc+ba^3} + \frac{c^4-1}{ca^3+abc+cb^3}\ge 0.\]
+
+
+\bigskip
+\bigskip
+
+
+\item[\textbf{11.}] Soit $ABC$ un triangle. Soient $I$ le centre du cercle inscrit et $AD$ le diamètre du cercle circonscrit de $ABC$.
+Soient $E$ et $F$ des points sur les rayons $BA$ et $CA$ tels que 
+
+\[BE = CF = \frac{AB+BC+CA}{2}.\]
+
+Montrer que les droites $EF$ et $DI$ sont perpendiculaires.
+
+\bigskip
+\bigskip
+
+\item[\textbf{12.}] Trouver tous les nombres entiers $m,n\geq 2$ satisfaisant les deux conditions suivantes:
+
+\begin{enumerate}
+\item[(i)] $m+1$ est un nombre premier de la forme $4k + 3$ pour un entier $k$. 
+\item[(ii)] Il existe un nombre premier $p$ et un nombre entier $a\geq 0$ avec
+
+\[\frac{m^{2^n-1}-1}{m-1} = m^n + p^a.\]
+\end{enumerate}
+
+\end{enumerate}
+
+\bigskip
+\begin{center}
+Bonne chance!
+\end{center}
+
+
+\end{document}

@@ -1,0 +1,433 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+\begin{document}
+
+\pagestyle{empty}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+
+\begin{center}
+{\huge Lösungen zur Vorselektionsprüfung} \\
+\end{center}
+\vspace{15mm}
+
+
+Ich möchte zuerst einige Bemerkungen zum Punkteschema machen. Eine vollständige und korrekte Lösung einer
+Aufgabe ist jeweils 7 Punkte wert. Für komplette Lösungen mit kleineren Fehlern oder Ungenauigkeiten, die aber
+keinen wesentlichen Einfluss auf die Richtigkeit der dargestellten Lösung haben, geben wir 6 Punkte. Bei
+unvollständigen Lösungen wird der Fortschritt und der Erkenntnisgewinn bewertet (Teilpunkte). Oft gibt es
+mehrere Lösungen für ein Problem. Versucht jemand zum Beispiel eine Aufgabe auf zwei verschiedenen Wegen zu
+lösen, erreicht auf dem ersten Weg 3 Punkte, auf dem zweiten 2 Punkte, dann wird seine Punktzahl nicht 5,
+sondern 3 sein. Punkte, die auf verschiedenen Wegen erreicht werden, sind also \textit{nicht} kummulierbar. Die
+unten angegebenen Bewertungsschemen sind nur Orientierungshilfe. Gibt jemand eine alternative Lösung, dann
+werden wir versuchen, die Punktzahl entsprechend zu wählen, dass für gleiche Leistung gleich viele Punkte
+verteilt werden. Die Schemen sind stets wie folgt zu interpretieren:\\
+Kommt jemand in seiner Lösung bis und mit hierhin, dann gibt das soviele Punkte.\\
+Ausnahmen von dieser Regel sind jeweils ausdrücklich deklariert.\\
+
+\begin{enumerate}
+
+\item[\textbf{1.}]67 Schüler schreiben eine Prüfung. Die Prüfung besteht aus 6 multiple-choice Fragen, die alle
+mit \textit{ja} oder \textit{nein} beantwortet werden müssen. Jeder Schüler beantwortet dabei alle 6 Fragen.
+Eine richtige Antwort auf die $k$-te Frage gibt $k$ Punkte, eine falsche Antwort $-k$ Punkte.
+\begin{enumerate}
+\item Zeige, dass mindestens zwei Schüler das Prüfungsblatt gleich ausgefüllt haben.
+\item Zeige, dass mindestens vier Schüler gleich viele Punkte erzielten.\\
+\end{enumerate}
+
+\textit{Lösung:}
+
+\begin{enumerate}
+\item Es sind sechs Fragen zu beantworten. Zu jeder Frage gibt es genau 2 mögliche Antworten, insgesamt kann man
+das Prüfungsblatt also auf $2^6=64$ Arten ausfüllen. Da in der Klasse $67>64$ Schüler sind, müssen nach dem
+Schubfachprinzip zwei Schüler das Prüfungsblatt gleich ausgefüllt haben.
+\item Was für Punktzahlen sind möglich? Die grösstmögliche Punktezahl wird mit 6 richtigen Antworten erreicht,
+ist also $1+2+3+4+5+6=21$, die kleinstmögliche Punktezahl ist $-21$. Ausserdem können nur ungerade Punktezahlen
+erreicht werden. Dafür gibt es mehrere Begründungen, zum Beispiel die folgende:\\
+Die erste, dritte und fünfte Aufgabe geben je eine ungerade Punktezahl (ob positiv oder nicht ist egal), die
+anderen drei Aufgaben eine gerade Punktezahl. Jede erreichbare Gesamtpunktezahl ist also die Summe von drei
+geraden und drei ungeraden Zahlen, also ungerade.\\
+Man sieht unmittelbar, dass es genau 22 ungerade Zahlen $k$ mit $-21 \leq k \leq 21$ gibt, also sind höchstens
+22 verschiedene Gesamtpunktzahlen möglich (man überlegt sich leicht, dass es tatsächlich 22 sind, das wird aber
+nicht benötigt). Nun ist $67>3\cdot 22$, nach dem Schubfachprinzip haben also mindestens vier Schüler gleich
+viele Punkte erzielt.\\
+\end{enumerate}
+
+\textit{Bemerkungen und Punkteschema:}
+
+Die obige Lösung ist sehr direkt und im Wesentlichen wohl auch die einzige mögliche.
+
+Teil a) gibt 3 Punkte. Teilpunkte:\\
+Es gibt 64 Möglichkeiten, das Prüfungsblatt auszufüllen: 1 Punkt \\
+Teil b) gibt 4 Punkte. Teilpunkte:\\
+Die Punktzahlen sind alle ungerade: 1 Punkt,\\
+Höchstens 22 mögliche Punktzahlen: 2 Punkte.
+
+\bigskip
+
+\item[\textbf{2.}] $ABC$ sei ein spitzwinkliges Dreieck mit Umkreismittelpunkt $O$. Das Lot von $A$ auf $BC$
+schneide den Umkreis im Punkt $D \neq A$, und die Gerade $BO$ schneide den Umkreis im Punkt $E \neq B$. Zeige,
+dass $ABC$ und $BDCE$ denselben Flächeninhalt haben.\\
+
+\textit{Lösung:}
+
+Wir berechnen alle Flächeninhalte über der gemeinsamen Basis $BC$. Sei $P$ der Schnittpunkt von $AD$ mit $BC$.
+Nach Voraussetzung ist $AD \perp BC$ und da $O$ auf $BE$ liegt, ist $BE$ ein Durchmesser des Umkreises und daher
+$\angle BCE = 90$, also auch $CE \perp BC$. Damit können wir folgende Flächen berechnen:
+\begin{eqnarray*}
+\mathrm{F}(ABC) &=& \overline{BC} \cdot \overline{AP} /2\\
+\mathrm{F}(BCD) &=& \overline{BC} \cdot \overline{DP} /2\\
+\mathrm{F}(BCE) &=& \overline{BC} \cdot \overline{CE} /2.
+\end{eqnarray*}
+Es genügt also zu zeigen, dass $\overline{AP}=\overline{DP}+\overline{CE}$. Die Gerade $BC$ steht senkrecht auf
+$AD$ und $CE$, also ist $AD \parallel CE$. Betrachte nun die Gerade $m$ durch $O$, senkrecht zu $AD$ und $EC$.
+Wegen $\overline{AO}=\overline{DO}$  sind $A$ und $D$ symmetrisch bezüglich $m$. Analog sieht man, dass $C$ und
+$E$ symmetrisch bezüglich $m$ sind. Sei $Q$ der Schnittpunkt von $m$ mit $AD$. Dann haben wir also
+\[\overline{AP}-\overline{CE}/2=\overline{AQ}=\overline{DQ}=\overline{DP}+\overline{CE}/2,\]
+und das ist die Behauptung.\\
+
+\textit{Bemerkungen und Punkteschema:}
+
+Die Lösung erfordert im Wesentlichen zwei Ideen: Die Flächen alle über der Basis $BC$ zu berechnen und die
+Symmetrie im zweiten Teil des Beweises zu sehen. Entsprechend werden die Punkte vergeben:
+
+$\angle BCE = 90$: 1 Punkt,\\
+Berechnung der drei Dreiecksflächen über $BC$: 2 Punkte,\\
+Erkenntnis, dass es genügt $\overline{AP}=\overline{DP}+\overline{CE}$ zu zeigen: 3 Punkte,\\
+\textit{Zusätzlich} zu diesen Punkten:\\
+Erkennen der Symmetrie von $A,D$ sowie $C,E$ bezüglich $m$ (egal ob mit oder ohne Beweis): 1 Punkt.
+
+Eine vollständige Lösung ohne Begründung für die Symmetrie von $A,D$ und $C,E$ ist 5 Punkte wert.
+
+\bigskip
+
+\item[\textbf{3.}] Bestimme alle Funktionen $f: \mathbb{R} \rightarrow \mathbb{R}$, sodass für alle $x,y \in
+\mathbb{R}$ die folgende Gleichung erfüllt ist:
+\[f((x-y)^2)=x^2-2yf(x)+(f(y))^2\]
+
+\textit{Lösung:}
+
+Wir setzen zuerst verschiedene Dinge für $x$ und $y$ ein:
+\begin{eqnarray}
+x=y=0 &\Rightarrow& f(0)=f(0)^2\\
+y=0 &\Rightarrow& f(x^2)=x^2+f(0)^2\\
+x=0 &\Rightarrow& f(y^2)=-2yf(0)+f(y)^2\\
+x=y &\Rightarrow& f(0)=x^2-2xf(x)+f(x)^2=(f(x)-x)^2
+\end{eqnarray}
+Wir geben zwei Lösungen, die eine benützt Gleichung (2), die andere (3) und (4).\\
+
+\textit{1. Lösung:}
+
+Da jede nichtnegative Zahl von der Form $x^2$ ist, folgt aus (2) sofort
+\begin{equation}
+f(x)=x +f(0)^2 \quad \forall x \geq 0.
+\end{equation}
+Sei nun $z > 0$. Setze in der ursprünglichen Gleichung $x=-z$ und $y=z$, dann folgt
+$f(4z^2)=z^2-2zf(-z)+f(z)^2$. Nach (5) ist ausserdem $f(4z^2)=4z^2+f(0)^2$ und $f(z)=z+f(0)^2$. Setzt man dies
+ein, dann ergibt sich
+\begin{eqnarray*}
+2zf(-z) &=& z^2+f(z)^2-f(4z^2)\\
+&=& z^2+(z+f(0)^2)^2-(4z^2+f(0)^2)\\
+&=& 2z(-z+f(0)^2)+\underbrace{(f(0)^4-f(0)^2)}_{=0} = 2z(-z+f(0)^2),
+\end{eqnarray*}
+wobei wir in der letzten Zeile noch (1) verwendet haben, quadrieren liefert nämlich $f(0)^2=f(0)^4$. Wegen $z>0$
+können wir durch $2z$ teilen und erhalten $f(-z)=-z+f(0)^2$, also
+\begin{equation}
+f(x)=x+f(0)^2 \quad \forall x < 0.
+\end{equation}
+Schliesslich folgt aus (1) noch $f(0)=0$ oder $f(0)=1$, mit (5) und (6) ergeben sich damit die zwei Funktionen
+\[f(x)=x \quad \mathrm{und} \quad f(x)=x+1.\]
+Durch Einsetzen bestätigt man leicht, dass beides tatsächlich Lösungen sind.\\
+
+\textit{2. Lösung:}
+
+Aus (1) folgt $f(0)=0$ oder $f(0)=1$, wir unterscheiden diese zwei Fälle.
+
+\underline{1. Fall} $f(0)=0$\\
+Aus (4) folgt $(f(x)-x)^2=0$, also
+\[f(x)=x \quad \forall x \in \mathbb{R}.\]
+
+\underline{2. Fall} $f(0)=1$\\
+Aus (4) folgt $(f(x)-x)^2=1$, also
+\begin{equation}
+f(x)=x \pm 1 \quad \forall x \in \mathbb{R}.
+\end{equation}
+Nehme an, es existiert ein $b \in \mathbb{R}$ mit $f(b)=b-1$. Setze in (3) $y=b$, dann folgt
+\[f(b^2)=-2bf(0)+f(b)^2=-2b+(b-1)^2=b^2+(1-4b).\]
+Ausserdem ist ja wegen (7) auch $f(b^2)=b^2 \pm 1$, also $(1-4b)=\pm 1$. Dies führt zu $b=0$ oder $b=1/2$.
+Ersteres ist nicht möglich, da $f(0) \neq -1$. Das zweite ist aber ebenfalls unmöglich, denn dann wäre $b=1/2$
+die einzige reelle Zahl mit $f(b)=b-1$. Setzt man aber in (3) $y=1/2$, dann folgt $f(1/4)=1/4-1$, Widerspruch.
+Folglich gilt in diesem Fall
+\[f(x)=x+1 \quad \forall x \in \mathbb{R}.\]
+Einsetzen bestätigt, dass die beiden gefundenen Funktionen tatsächlich Lösungen sind.\\
+
+\textit{Bemerkungen und Punkteschema:}
+
+Die erste Lösung ist in dieser Form wohl nicht allzu naheliegend, einige werden eine ähnliche Lösung gefunden
+haben, jedoch auch die Fallunterscheidung für $f(0)$ gemacht haben. Die zweite Lösung ist vielleicht
+naheliegender, da wir ein ähnliches Vorgehen am Vorbereitungstreffen in Bern gesehen haben. Der Fall $f(0)=1$
+kann auf viele andere Arten vervollständigt werden, als jene oben. Natürlich sind auch Kombinationen dieser zwei
+Lösungen sowie andere Ansätze möglich, was die Punkteverteilung etwas schwierig macht. Wir werden die Punkte der
+jeweiligen Lösung anpassen, halten uns aber weitestgehend an die folgenden Schemen:
+
+\textit{1. Lösung}, wobei wir annehmen, dass eine Fallunterscheidung für $f(0)$ gemacht wurde:\\
+Da beide Fälle völlig analog gelöst werden können, gibt es einfach für den ersten erledigten Fall 4 Punkte, für
+den zweiten weitere 3 Punkte. Der Grund dafür ist, dass man nach dem ersten gelösten Fall bereits das ganze
+Know-How für den zweiten zusammen hat. Folgende Teilschritte geben dabei Punkte:\\
+Gleichung (5): 1 Punkt,\\
+Gleichungen (5) und (6): 4 Punkte.
+
+\textit{2. Lösung}\\
+Erkennen des Binoms in Gleichung (4): 1 Punkt,\\
+Nun gibt es für die beiden Fälle \textit{zusätzliche} Teilpunkte wie folgt:\\
+$f(0)=0$ Fall vollständig: 1 Punkt.\\
+Im Fall $f(0)=1$ Gleichung (7): 1 Punkt,\\
+Im Fall $f(0)=1$ die einschränkende Gleichung $b=1/2$ oder $b=0$ (oder etwas analoges): 3 Punkte.\\
+
+Eine vollständige Lösung ohne Einsetzkontrolle, ob die gefundenen Funktionen tatsächlich Lösungen sind: 6
+Punkte.
+
+\bigskip
+
+\item[\textbf{4.}] Betrachte eine Tabelle mit $m$ Zeilen und $n$ Spalten. Auf wieviele Arten kann diese Tabelle
+mit lauter Nullen und Einsen ausgefüllt werden, sodass in jeder Zeile und jeder Spalte eine gerade Anzahl Einsen
+stehen?\\
+
+\textit{1. Lösung:}
+
+Nenne eine Tabelle, die die Forderungen der Aufgabe erfüllt, \textit{zulässig}. Wir zeigen zuerst, dass eine
+zulässige Tabelle durch die Einträge in der oberen linken $m-1 \times n-1$ Tabelle bereits eindeutig bestimmt
+ist. Denn die Einträge in der letzten Spalte, ausgenommen das Feld unten rechts, müssen 0 oder 1 sein, je
+nachdem, ob in der entsprechenden Zeile bereits eine gerade oder eine ungerade Anzahl Einsen stehen. Nun sind
+die Einträge in der untersten Zeile ebenfalls bestimmt, denn sie sind 0 oder 1, je nachdem, ob in der
+entsprechenden Spalte bereits eine gerade oder eine ungerade Anzahl Einsen stehen.\\
+Jetzt zeigen wir, dass jede $m-1 \times n-1$ Tabelle durch hinzufügen einer weiteren Spalte rechts und einer
+weiteren Zeile unten zu einer zulässigen Tabelle vervollständigt werden kann. Dies kann dann nach obigen
+Ausführungen auf genau eine Art geschehen. Dazu gehen wir wie folgt vor: schreibe in jedes Feld der letzten
+Spalte ausser jenem unten rechts eine 0 oder 1, sodass die Zahl Einsen in der entsprechenden Zeile gerade ist.
+Verfahre analog mit den Feldern der untersten Zeile ausser jenem unten rechts. Stehen nun in der letzten Spalte
+und der untersten Zeile entweder zweimal ein gerade oder zweimal eine ungerade Anzahl Einsen, dann schreibe ins
+Feld unten rechts eine 0 bzw. eine 1. Die so konstruierte Tabelle ist dann offensichtlich zulässig. Dies können
+wir aber immer machen, denn es gilt:
+\begin{eqnarray*}
+&& \mbox{Die Anzahl Einsen in der letzten Spalte ist ungerade.}\\
+&\Longleftrightarrow& \parbox{12cm}{Die Anzahl Zeilen mit einer ungeraden Anzahl Einsen in der oberen linken
+$m-1 \times n-1$ Tabelle ist ungerade.}\\
+&\Longleftrightarrow& \mbox{Die Anzahl Einsen in dieser } m-1 \times n-1 \mbox{ Tabelle ist ungerade}\\
+&\Longleftrightarrow& \parbox{12cm}{Die Anzahl Spalten mit einer ungeraden Anzahl Einsen in dieser
+$m-1 \times n-1$ Tabelle ist ungerade.}\\
+&\Longleftrightarrow& \mbox{Die Anzahl Einsen in der untersten Zeile ist ungerade.}
+\end{eqnarray*}
+Nun können wir die obere linke $m-1 \times n-1$ Tabelle auf genau $2^{(m-1)(n-1)}$ Arten mit Nullen und Einsen
+füllen, und jede solche Tabelle lässt sich auf genau eine Art zu einer zulässigen Tabelle vervollständigen.
+Daher ist die Lösung der Aufgabe
+\[2^{(m-1)(n-1)}.\]
+
+\textit{2. Lösung:}
+
+Wir füllen die Tabelle zeilenweise. Es gibt genau $2^{n-1}$ Möglichkeiten eine Zeile der Länge $n$ mit Nullen
+und Einsen zu füllen, sodass eine gerade Zahl Einsen in dieser Zeile stehen. Wir geben zwei Begründungen.\\
+Erstens: Fülle die ersten $n-1$ Felder beliebig, dann muss im letzten Feld eine Null oder Eins stehen, je
+nachdem, ob die Anzahl Einsen in den ersten $n-1$ Feldern gerade ist oder nicht. Dies geht auf $2^{n-1}$
+Arten.\\
+Zweitens: Es gibt genau $\left( {n}\atop{0} \right) + \left( {n}\atop{2} \right) + \left( {n}\atop{4} \right)
++\ldots$ Möglichkeiten, eine gerade Anzahl Einsen zu verwenden. Dies ist gleich $2^{n-1}$, wie man durch
+Addition der beiden Formeln
+\begin{eqnarray*}
+2^n=(1+1)^n &=& \sum_{k=1}^{n} \left( {n}\atop{k} \right) 1^k 1^{(n-k)} = \left( {n}\atop{0} \right) +\left(
+{n}\atop{1} \right) +\left( {n}\atop{2} \right) + \ldots\\
+0=(1-1)^n &=& \sum_{k=1}^{n} \left( {n}\atop{k} \right) 1^k (-1)^{(n-k)} = \left( {n}\atop{0} \right) -\left(
+{n}\atop{1} \right) +\left( {n}\atop{2} \right) -+ \ldots\\
+\end{eqnarray*}
+und Halbieren des Ergebnisses sieht.\\
+Fülle nun die ersten $m-1$ Zeilen in dieser Weise, dies geht auf $(2^{n-1})^{m-1}=2^{(m-1)(n-1)}$ verschiedene
+Arten. Wir zeigen jetzt, dass jede solche $m-1 \times n$ Tabelle auf genau eine Weise durch Hinzufügen
+einer weiteren Zeile zu einer zulässigen $m \times n$ Tabelle vervollständigt werden kann.\\
+Offensichtlich ist die unterste Zeile bereits bestimmt durch die Forderung, dass alle Spalten eine gerade Zahl
+Einsen enthalten soll, die Vervollständigung kann daher auf höchstens eine Weise geschehen. Andererseits können
+wir die Felder der untersten Zeile entsprechend mit 0 oder 1, füllen, je nachdem, ob die Spalte dieses Feldes
+bereits ein gerade oder eine ungerade Anzahl Einsen enthält. Um zu zeigen, dass die so konstruierte $m \times n$
+Tabelle zulässig ist, müssen wir lediglich noch zeigen, dass die Anzahl Einsen in der untersten Zeile gerade
+ist. Betrachte dazu die äquivalenten Aussagen
+\begin{eqnarray*}
+&& \mbox{Die Anzahl Einsen in der letzten Zeile ist gerade.}\\
+&\Longleftrightarrow& \parbox{12cm}{Die Anzahl Spalten mit einer ungeraden Anzahl Einsen in der oberen
+$m-1 \times n$ Tabelle ist gerade.}\\
+&\Longleftrightarrow& \mbox{Die Anzahl Einsen in dieser } m-1 \times n \mbox{ Tabelle ist gerade.}
+\end{eqnarray*}
+Letzteres ist aber richtig, da jede Zeile der oberen $m-1 \times n$ Tabelle nach Konstruktion eine gerade Anzahl
+Einsen enthält.\\
+Folglich ist die Anzahl zulässiger Tabellen gleich
+\[2^{(m-1)(n-1)}.\]
+
+\textit{Bemerkungen und Punkteschema:}
+
+Hier unterscheiden sich die Bewertungen für die beiden Lösungen nur unwesentlich: Eine erkennbare Strategie und
+Zielsetzung im Rahmen der \textit{1. Lösung} (ich betrachte die $m-1 \times n-1$ Tabelle und versuche sie zu
+vervollständigen, usw.) ist 2 Punkte wert. Dasselbe im Rahmen der \textit{2. Lösung} nur 1 Punkt. Dafür gibt es
+einen weiteren Punkt, wenn man die Anzahl Möglichkeiten, eine Zeile mit einer geraden Anzahl Einsen zu füllen,
+korrekt berechnet. Die folgenden Punkte werden \textit{zusätzlich} verteilt, für die jeweiligen Aussagen in den
+beiden Beweisen:\\
+Eindeutigkeit (ich kann auf höchstens eine Art vervollständigen): 1 Punkt,\\
+Existenz (ich kann immer auf mindestens eine Art vervollständigen): 3 Punkte.
+
+\bigskip
+
+\item[\textbf{5.}]  Beweise für positive reelle Zahlen $x,y,z$ mit $x+y+z=1$ die folgende Ungleichung:
+\[\frac{x^2+y^2}{z}+\frac{y^2+z^2}{x}+\frac{z^2+x^2}{y}\geq 2\]
+
+\textit{Lösung:}
+
+Es gibt sehr viele Wege, diese Ungleichung zu beweisen. Wir geben 10 verschiedene Lösungen als Auswahl. Wir
+verwenden folgende Abkürzungen:\\
+HM, GM, AM, QM: harmonisches, geometrisches, arithmetisches, quadratisches Mittel.\\
+C.S.: Ungleichung von Cauchy-Schwarz.\\
+Setze
+\[A=\frac{x^2+y^2}{z}+\frac{y^2+z^2}{x}+\frac{z^2+x^2}{y}.\]
+
+\textit{erste Lösung}\\
+Zuerst C.S., dann AM-QM:
+\begin{eqnarray*}
+A=A\cdot 1 &=& \left(\frac{x^2+y^2}{z}+\frac{y^2+z^2}{x}+\frac{z^2+x^2}{y}\right)(x+y+z)\\
+&\geq& (\sqrt{x^2+y^2}+\sqrt{y^2+z^2}+\sqrt{z^2+x^2})^2\\
+&\geq& \left(\sqrt{2}\cdot\frac{x+y}{2}+\sqrt{2}\cdot\frac{y+z}{2}+\sqrt{2}\cdot\frac{z+x}{2}\right)^2\\
+&=&(\sqrt{2}\cdot(x+y+z))^2=2.
+\end{eqnarray*}
+
+\bigskip
+
+\textit{zweite Lösung}\\
+\begin{eqnarray*}
+A &=& \frac{x^2}{z}+\frac{y^2}{z}+\frac{y^2}{x}+\frac{z^2}{x}+\frac{z^2}{y}+\frac{x^2}{y}\\
+&=& \frac{1}{3} \left(\frac{x^2}{y}+\frac{x^2}{y}+\frac{y^2}{x}\right)+
+\frac{1}{3} \left(\frac{x^2}{z}+\frac{x^2}{z}+\frac{z^2}{x}\right)+ \ldots +
+\frac{1}{3} \left(\frac{z^2}{y}+\frac{z^2}{y}+\frac{y^2}{z}\right)\\
+&\geq& x+x+y+y+z+z=2,
+\end{eqnarray*}
+wenn man AM-GM auf jeden Summanden anwendet.
+
+\bigskip
+
+\textit{dritte Lösung}\\
+Brute Force
+\begin{eqnarray*}
+A \geq 2 &\Leftrightarrow& \frac{x^2+y^2}{z}+\frac{y^2+z^2}{x}+\frac{z^2+x^2}{y} \geq 2(x+y+z)\\
+&\Leftrightarrow& x^3y+x^3z+y^3x+y^3z+z^3x+z^3y \geq 2(x^2yz+y^2zx+z^2xy)
+\end{eqnarray*}
+Letzteres folgt aus AM-GM, indem man die Ungleichung
+\[\frac{x^3y+x^3z+y^3x+z^3x}{4} \geq \sqrt[4]{x^8y^4z^4}=x^2yz\]
+sowie die dazu analogen aufsummiert (das ist nichts anderes als Bunching, für all jene, die damit vertraut
+sind).
+
+\bigskip
+
+\textit{vierte Lösung}\\
+AM-QM ergibt
+\[x^2+y^2=x^2+y^2+z^2-z^2 \geq 3\left(\frac{x+y+z}{3}\right)^2-z^2=\frac{1}{3}-z^2.\]
+Aus dieser und den analogen Ungleichungen folgt
+\begin{eqnarray*}
+A &\geq& \frac{\frac{1}{3}-z^2}{z}+\frac{\frac{1}{3}-x^2}{x}+\frac{\frac{1}{3}-y^2}{y}\\
+&=& \frac{1}{3} \left(\frac{1}{x}+\frac{1}{y}+\frac{1}{z}\right)-(x+y+z)\\
+&\geq& \frac{3}{x+y+z}-(x+y+z)=3-1=2,
+\end{eqnarray*}
+wenn man noch AM-HM benützt.
+
+\bigskip
+
+\textit{fünfte Lösung}\\
+AM-QM ergibt
+\[\frac{x^2+y^2}{z} \geq \frac{2\left(\frac{x+y}{2}\right)^2}{z}=\frac{(x+y)^2}{2z}=\frac{(1-z)^2}{2z}=
+\frac{1}{2z}-1+\frac{z}{2}.\] Aus dieser und den analogen Ungleichungen folgt
+\begin{eqnarray*}
+A &\geq& \frac{1}{2x}+\frac{1}{2y}+\frac{1}{2z}-3+\frac{x+y+z}{2}=\frac{1}{2}\left(\frac{1}{x}+\frac{1}{y}
++\frac{1}{z}\right)-\frac{5}{2}\\
+&\geq& \frac{1}{2} \frac{9}{x+y+z}-\frac{5}{2}=2.
+\end{eqnarray*}
+wenn man noch AM-HM benützt.
+
+\bigskip
+
+\textit{sechste Lösung}\\
+Die Folgen $(x^2+y^2,y^2+z^2,z^2+x^2)$ und $(1/z,1/x,1/y)$ sind gleich geordnet, also folgt mit Tschebyschef
+\begin{eqnarray*}
+A &\geq& \frac{1}{3}(x^2+y^2+y^2+z^2+z^2+x^2)\left(\frac{1}{x}+\frac{1}{y}+\frac{1}{z}\right)\\
+&=& \frac{2}{3}(x^2+y^2+z^2+2(x^2+y^2+z^2))\cdot\frac{1}{3}\left(\frac{1}{x}+\frac{1}{y}+\frac{1}{z}\right)\\
+&\geq& \frac{2}{3}(x^2+y^2+z^2+2xy+2yz+2zx)\frac{3}{x+y+z}\\
+&=& \frac{2}{3}(x+y+z)^2\frac{3}{x+y+z}=2,
+\end{eqnarray*}
+wobei der erste Faktor in der zweiten Zeile mit AM-GM oder dem Hauptsatz oder C.S. (oder Bunching) und der
+zweite Faktor mit AM-HM abgeschätzt wird.
+
+\bigskip
+
+\textit{siebte Lösung}\\
+Die Folgen $(x^2+y^2,y^2+z^2,z^2+x^2)$ und $(1/z,1/x,1/y)$ sind gleich geordnet, also folgt mit dem Hauptsatz
+\begin{eqnarray*}
+A &\geq& \frac{x^2+y^2}{x}+\frac{y^2+z^2}{y}+\frac{z^2+x^2}{z}=x+y+z+\frac{y^2}{x}+\frac{z^2}{y}+\frac{x^2}{z}\\
+&=& 1+\frac{y^2}{x}+\frac{z^2}{y}+\frac{x^2}{z},
+\end{eqnarray*}
+sowie analog
+\begin{eqnarray*}
+A &\geq& \frac{x^2+y^2}{y}+\frac{y^2+z^2}{z}+\frac{z^2+x^2}{x}=x+y+z+\frac{x^2}{y}+\frac{y^2}{z}+\frac{z^2}{x}\\
+&=& 1+\frac{x^2}{y}+\frac{y^2}{z}+\frac{z^2}{x}.
+\end{eqnarray*}
+Addieren ergibt $2A \geq 2+A$, also $A \geq 2$.
+
+\bigskip
+
+\textit{achte Lösung}\\
+Anwenden von AM-GM auf jeden Summanden ergibt
+\[A \geq \frac{2xy}{z}+\frac{2yz}{x}+\frac{2zx}{y}.\]
+Die Folgen $(2xy,2yz,2zx)$ und $(1/z,1/x,1/y)$ sind gleich geordnet, also folgt mit dem Hauptsatz
+\[A \geq \frac{2xy}{x}+\frac{2yz}{y}+\frac{2zx}{z}=2(x+y+z)=2.\]
+
+\bigskip
+
+\textit{neunte Lösung}\\
+Setze $s=x^2+y^2+z^2$, dann folgt leicht mit AM-QM oder C.S. $s \geq (x+y+z)^2/3=1/3$. Ausserdem ist
+\[A = \frac{s-z^2}{z}+\frac{s-x^2}{x}+\frac{s-y^2}{y}.\]
+Die Funktion $f(x)= \frac{s-x^2}{x}$ ist konvex für $0<x<s$, also folgt mit Jensen
+\begin{eqnarray*}
+A &=& 3\left(\frac{1}{3}f(x)+\frac{1}{3}f(y)+\frac{1}{3}f(z)\right) \geq 3f\left(\frac{x+y+z}{3}\right)\\
+&=&3f\left(\frac{1}{3}\right)=9s-1 \geq 2.
+\end{eqnarray*}
+
+\bigskip
+
+\textit{zehnte Lösung}\\
+Setze $s=x^2+y^2+z^2$, dann ist
+\begin{eqnarray*}
+A &=& \frac{s-z^2}{z}+\frac{s-x^2}{x}+\frac{s-y^2}{y}=s\left(\frac{1}{x}+\frac{1}{y}+\frac{1}{z}\right)-(x+y+z)\\
+&=& (x^2+y^2+z^2)\left(\frac{1}{x}+\frac{1}{y}+\frac{1}{z}\right)-1.
+\end{eqnarray*}
+Die Folgen $(x^2,y^2,z^2)$ und $(1/x,1/y,1/z)$ sind gegensätzlich geordnet, also folgt mit Tschebyschef
+\[A \geq 3\left(\frac{x^2}{x}+\frac{y^2}{y}+\frac{y^2}{y}\right)-1=3/(x+y+z)-1=2.\]
+
+\textit{Bemerkungen und Punkteschema:}
+
+Hier ist eine gerechte Bewertung besonders schwierig, da fast alle Manipulationen zu einer Lösung
+vervollständigt werden können. Wird die Ungleichung nicht vollständig bewiesen, geben wir daher 1 bis 2 Punkte
+für eine sinnvolle Manipulation, Abschätzung, Umformung, etc. der Ungleichung, je nach Qualität derselben.
+Weitere Teilpunkte gibt es nicht.
+
+\end{enumerate}
+
+\end{document}
+

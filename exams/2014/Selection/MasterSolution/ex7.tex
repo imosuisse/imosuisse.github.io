@@ -1,0 +1,30 @@
+\documentclass[a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{verbatim}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage[ansinew]{inputenc}
+\usepackage{cite}
+\usepackage{setspace, color}
+\usepackage[english]{babel}
+\usepackage{tikz}
+
+\begin{document}
+
+\textbf{1. Lösung:} Sei $O$ der Mittelpunkt von $\Omega$ und seien $M_1$ und $M_2$ die Mittelpunkte von $\omega_1$ respektive $\omega_2$. Nach Voraussetzung liegen $M_1,A,M_2$ auf einer Geraden. Dasselbe gilt auch für $B,M_1,O$ und $C,M_2,O$.\\
+Sei $E$ der zweite Schnittpunkt von $BC$ und $\omega_1$. Weiter definieren wir $\alpha=\angle M_2CA$ und $\beta=\angle ACB$. Nun gilt:
+\[\angle M_1DA=\angle DAM_1=\angle CAM_2=\angle M_2CA=\alpha\]
+\[\angle M_1EB=\angle EBM_1=\angle CBO=\angle OCB=\alpha+\beta\]
+Wegen $\angle M_1EB=\angle M_2CB$ sind die Strecken $M_1E$ und $M_2C$ parallel. Dann ist $\angle EM_1A$ als Wechselwinkel aber gerade gleich gross wie $\angle OM_2A$, und der ist nach dem Aussenwinkelsatz am Dreieck $ACM_2$ $2\alpha$.\\
+Hieraus folgt nun $\angle EM_1A+\angle AM_1D=2\alpha+(180^\circ-2\alpha)=180^\circ$, das heisst $E,M_1,D$ liegen auf einer Geraden. Dann ist $B$ aber ein Punkt auf dem Thaleskreis über $ED$ und somit gilt $\angle EBD=90^\circ$.\\
+
+\textbf{2. Lösung:} Sei $E$ der zweite Schnittpunkt von $AB$ und $\omega_2$. Da sich $\omega_1$ und $\omega_2$ in $A$ berühren, existiert eine zentrische Streckung mit Streckzentrum $A$, die den Kreis $\omega_1$ auf $\omega_2$ abbildet. Dabei wird $B$ auf $E$ und $D$ auf $C$ abgebildet, folglich sind die Dreiecke $ADB$ und $ACE$ ähnlich. Ausserdem folgt daraus auch, dass $BD$ und $CE$ parallel sind.\\
+Seien $D'$ und $A_1$ die weiteren Schnittpunkte von $\Omega$ mit $BD$ respektive $BA$. Da sich $\omega_1$ und $\Omega$ in $B$ berühren, existiert eine zentrische Streckung mit Streckzentrum $B$, die $D$ auf $D'$ und $A$ auf $A_1$ abbildet. Somit sind die Dreiecke $ADB$ und $A_1D'B$ ähnlich.\\
+Analog definieren wir $E'$ und $A_2$ als die weiteren Schnittpunkte von $\Omega$ mit $CE$ respektive $CA$. Hier erhalten wir, dass die Dreiecke $ACE$ und $A_2CE'$ ähnlich sind.\\
+Insgesamt können wir schliessen, dass die Dreiecke $A_1D'B$ und $A_2CE'$ ähnlich sind. Da beide Dreiecke denselben Umkreisradius besitzen, sind sie sogar kongruent. Entsprechende Seiten sind somit gleich lang, was uns $BD'=CE'$ liefert. Wie wir bereits festgestellt haben, sind $BD$ und $CE$ parallel, also auch $BD'$ und $CE'$. $BD'$ und $CE'$ sind daher parallele Sehnen in $\Omega$ mit gleicher Länge, woraus wir folgern können, dass $BCE'D'$ ein Rechteck ist. Die Aussage folgt nun sofort.
+
+\end{document}

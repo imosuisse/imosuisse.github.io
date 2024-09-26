@@ -1,0 +1,157 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}%ngerman, french, italian
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{mathtools}%DeclarePairedDelimiter
+\usepackage{enumerate}
+
+\usepackage{graphicx}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{satz}[thm]{Satz}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Korollar}
+\newtheorem{alg}[thm]{Algorithmus}
+\newtheorem{bsp}{Beispiel}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\renewcommand{\phi}{\varphi} %kleines Phi
+\newcommand{\nequiv}{\not \equiv}
+
+\DeclareMathOperator{\ggT}{ggT}
+\DeclareMathOperator{\kgV}{kgV}
+\DeclareMathOperator{\ord}{ord}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\DeclarePairedDelimiter\frack{\{}{\}}
+
+\renewcommand{\div}{\, | \,}
+\newcommand{\ndiv}{\mathopen{\mathchoice{\not{|}\,}{\not{|}\,}{\!\not{\:|}}{\not{|}}}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge SMO Finalrunde 2014} \\
+\medskip erste Prüfung - 14. März 2014
+\end{center}
+\vspace{8mm}
+Zeit: 4 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{1.}]
+Die Punkte $A, B, C$ und $D$ liegen in dieser Reihenfolge auf dem Kreis $k$. Sei $t$ die Tangente an $k$ durch $C$ und $s$ die Spiegelung von $AB$ an $AC$. Sei $G$ der Schnittpunkt der Geraden $AC$ und $BD$ und $H$ der Schnittpunkt der Geraden $s$ und $CD$. Zeige, dass $GH$ parallel zu $t$ ist.
+
+\bigskip
+
+\item[\textbf{2.}]
+Seien $a,b$ natürliche Zahlen, für die gilt:
+\[ab(a-b)\div a^3+b^3+ab\]
+Zeige, dass $\kgV(a,b)$ eine Quadratzahl ist.
+
+\bigskip
+
+\item[\textbf{3.}] 
+Finde alle Funktionen $f:\R \rightarrow \R$, sodass für alle $x,y \in \R$ folgende Gleichung gilt:
+\[
+f(x^2) + f(xy)=f(x)f(y)+yf(x)+xf(x+y)
+\]
+
+\bigskip
+
+\item[\textbf{4.}]
+Gegeben sei die karierte Ebene (unendlich grosses Häuschenpapier). Für welche Paare $(a,b)$ kann man jedes der Felder mit einer von $a\cdot b$ Farben färben, sodass jedes Rechteck der Grösse $a \times b$ oder $b \times a$, welches passend in die karierte Ebene gelegt wird, stets ein Einheitsquadrat jeder Farbe enthält?
+
+\bigskip
+
+\item[\textbf{5.}]
+Sei $a_1, a_2, \ldots$ eine Folge ganzer Zahlen, sodass für jedes $n \in \N$ gilt:
+ \[
+\sum_{d\div n}a_d = 2^n
+\]
+Zeige für jedes $n \in \N$, dass $n$ ein Teiler von $a_n$ ist.
+
+\emph{Bemerkung: Für $n=6$ lautet die Gleichung $a_1+a_2+a_3+a_6=2^6$.}
+\end{enumerate}
+\bigskip
+\begin{center}
+Viel Glück !
+\end{center}
+
+\newpage
+
+\begin{center}
+{\huge SMO Finalrunde 2014} \\
+\medskip zweite Prüfung - 15. März 2014
+\end{center}
+\vspace{8mm}
+Zeit: 4 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{6.}]
+Seien $a,b,c \in \R_{\geq 0}$ mit $a+b+c=1$. Zeige, dass gilt:
+\[
+\frac{3-b}{a+1}+\frac{a+1}{b+1}+\frac{b+1}{c+1}\geq 4
+\]
+
+\bigskip
+
+\item[\textbf{7.}]
+
+An einem runden See liegen $n\geq 4$ Städte, zwischen denen $n-4$ Personenfähren und eine grüne Autofähre verkehren. Jede Fähre verbindet zwei nicht benachbarte Städte, wobei sich keine zwei Fährenrouten überkreuzen, damit Kollisionen vermieden werden können.\\
+Um die Transportrouten besser den Bedürfnissen der Passagiere anzupassen, kann folgende Änderung vorgenommen werden: Einer beliebigen Fähre kann eine neue Route zugeordnet werden. Dabei dürfen die Routen der restlichen Fähren nicht überkreuzt und auch nicht gleichzeitig verändert werden.\\
+Seien Santa Marta und Kapstadt zwei nicht benachbarte Städte. Zeige, dass man endlich viele Routenänderungen vornehmen kann, sodass die grüne Autofähre nach diesen Änderungen zwischen Santa Marta und Kapstadt verkehrt.
+
+\emph{Bemerkung: Zu keinem Zeitpunkt dürfen zwei Fähren zwischen denselben Städten oder eine Fähre zwischen zwei benachbarten Städten verkehren.}
+
+\bigskip
+
+\item[\textbf{8.}]
+
+Im spitzwinkligen Dreieck $ABC$ sei $M$ der Mittelpunkt der Höhe $h_b$ durch $B$ und $N$ der Mittelpunkt der Höhe $h_c$ durch $C$. Weiter sei $P$ der Schnittpunkt von $AM$ und $h_c$ und $Q$ der Schnittpunkt von $AN$ und $h_b$. Zeige, dass $M, N, P$ und $Q$ auf einem Kreis liegen.
+
+\bigskip
+
+\item[\textbf{9.}]
+Die Folge $a_1, a_2, \ldots $ ganzer Zahlen sei wie folgt definiert:
+\[
+a_n = 
+\begin{cases}
+0 \text{\,,\, falls $n$ eine gerade Anzahl an Teilern grösser als 2014 besitzt}\\
+1 \text{\,,\, falls $n$ eine ungerade Anzahl an Teilern grösser als 2014 besitzt}
+\end{cases}
+\] 
+Zeige, dass die Folge $a_n$ nie periodisch wird.
+
+\bigskip
+
+\item[\textbf{10.}] 
+Sei $k$ ein Kreis mit Durchmesser $AB$. Sei $C$ ein Punkt auf der Geraden $AB$, sodass $B$ zwischen $A$ und $C$ liegt. Sei $T$ ein Punkt auf $k$, sodass $CT$ eine Tangente an $k$ ist. Sei $l$ die Parallele zu $CT$ durch $A$ und $D$ der Schnittpunkt von $l$ und der Senkrechten zu $AB$ durch $T$.\\
+Zeige, dass die Gerade $DB$ die Strecke $CT$ halbiert.
+
+\end{enumerate}
+\bigskip
+\begin{center}
+Viel Glück !
+\end{center}
+\end{document}

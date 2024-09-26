@@ -1,0 +1,265 @@
+%& -job-name=imoselektion_2018_en-3
+% ^^^^^^^ change the last bit to e.g. de-2 for second day, german ^^^^^^^^ 
+
+\documentclass[language=french,style=exam]{smo} %language is irrelevant
+
+\examtime{%
+    \de{4.5 Stunden}%
+    \fr{4.5 heures}%
+    \ita{4.5 ore}%
+    \en{4.5 hours}%
+}
+\examdate{%
+    \IfStrEq*{\day}{1}{%
+        \de{12. Mai 2018}%
+        \fr{12 mai 2018}%
+        \ita{??}%
+        \en{12 May 2018}%
+    }{}%
+   \IfStrEq*{\day}{2}{%
+        \de{13. Mai 2018}%
+        \fr{13 mai 2018}%
+        \ita{??}%
+        \en{13 May 2018}%
+    }{}%
+       \IfStrEq*{\day}{3}{%
+        \de{26. Mai 2018}%
+        \fr{26 mai 2018}%
+        \ita{??}%
+        \en{26 May 2018}%
+    }{}%
+       \IfStrEq*{\day}{4}{%
+        \de{27. Mai 2018}%
+        \fr{27 mai 2018}%
+        \ita{??}%
+        \en{27 May 2018}%
+    }{}%
+}
+\title{%
+    \de{SMO - Selektion 2018}%
+    \fr{OSM - Sélection 2018}%
+    \ita{OSM - ???}%
+    \en{IMO - Selection 2018}%
+}
+\examplace{%
+    \de{\day. Prüfung}%
+    \fr{\IfStrEq*{\day}{1}{Premier}{}\IfStrEq*{\day}{2}{Deuxième}{}\IfStrEq*{\day}{3}{Troisième}{}\IfStrEq*{\day}{4}{Quatrième}{} examen}%
+    \ita{???}%
+    \en{\IfStrEq*{\day}{1}{First}{}\IfStrEq*{\day}{2}{Second}{}\IfStrEq*{\day}{3}{Third}{}\IfStrEq*{\day}{4}{Fourth}{} exam}%
+}
+
+\begin{document}
+
+\bigskip
+\bigskip
+
+\begin{enumerate}
+
+\IfStrEq*{\day}{1}{%%%%%%%%%%%%%%%%% Day 1 %%%%%%%%%%%%%%%%%
+
+\item[\textbf{1.}] %% Exercise 1 %%
+\de{Sei $k \geq 0$ eine ganze Zahl. Bestimme alle reellen Polynome $P$ von Grad $k$ mit $k$ verschiedenen reellen Nullstellen, sodass für alle Nullstellen $a$ von $P$ gilt:
+\[
+P(a+1) = 1.
+\]}%
+\fr{Soit $k \geq 0$ un nombre entier. Déterminer tous les polynômes à coefficients réels $P$ de degré $k$ tels que $P$ possède $k$ zéros réels distincts et tels que pour tous les zéros $a$ de $P$
+\[
+P(a+1) = 1.
+\]}%
+\ita{}%
+\en{Let $k\geq 0$ be an integer. Determine all polynomials $P$ of degree $k$ with real coefficients such that $P$ has $k$ distinct real roots and for any root $a$ of $P$
+\[
+P(a+1) = 1.
+\]}%
+
+\bigskip
+\bigskip
+
+\item[\textbf{2.}] %% Exercise 2 %%
+\de{Sei $ABC$ ein spitzwinkliges Dreieck mit Umkreismittelpunkt $O$. Die Gerade $OA$ schneide die Höhe $h_b$ in $P$ und die Höhe $h_c$ in $Q$. Sei $H$ der Höhenschnittpunkt des Dreiecks $ABC$. Zeige, dass der Umkreismittelpunkt des Dreiecks $PQH$ auf der Schwerelinie durch den Punkt $A$ des Dreiecks $ABC$ liegt.
+
+\textit{Bemerkung: Die Höhe $h_a$ ist die Gerade durch $A$, die senkrecht zu $BC$ ist.}}%
+\fr{Soit $ABC$ un triangle aigu et $O$ le centre de son cercle circonscrit. La droite $OA$ coupe la hauteur $h_b$ en $P$ et la hauteur $h_c$ en $Q$. Soit $H$ l'orthocentre du triangle $ABC$. Prouver que le centre du cercle circonscrit au triangle $PQH$ est sur la médiane du triangle $ABC$ passant par $A$.
+
+\textit{Remarque: La hauteur $h_a$ est la droite perpendiculaire à $BC$ passant par $A$.}}%
+\ita{}%
+\en{Let $O$ be the circumcenter of an acute triangle $ABC$. The line $OA$ intersects the altitude $h_b$ at $P$ and the altitude $h_c$ at $Q$. Let $H$ be the orthocenter of $ABC$. Prove that the circumcenter of $PQH$ lies on the median of $ABC$ through $A$.
+
+\textit{Remark: the altitude $h_a$ is the line through $A$ perpendicular to $BC$.}}%
+
+\bigskip
+\bigskip
+
+\item[\textbf{3.}] %% Exercise 3 %%
+\de{Entlang der Küste einer kreisrunden Insel befinden sich 20 verschiedene Dörfer. Jedes dieser Dörfer hat 20 Kämpfer, wobei alle 400 Kämpfer unterschiedlich stark sind.
+
+Jeweils zwei benachbarte Dörfer $A$ und $B$ machen nun einen Wettkampf, indem sich jeder der 20 Kämpfer des Dorfs $A$ mit jedem der 20 Kämpfer des Dorfs $B$ misst. Dabei gewinnt jeweils der stärkere Kämpfer. Wir sagen, dass das Dorf $A$ \emph{stärker} ist als das Dorf $B$, falls in mindestens $k$ der 400 Kämpfe ein Kämpfer von Dorf $A$ gewinnt.
+
+Es stellt sich heraus, dass jedes Dorf stärker als sein Nachbardorf im Uhrzeigersinn ist. Bestimme den maximalen Wert von $k$, sodass dies der Fall sein kann.}%
+\fr{Il y a 20 villages distincts le long de la côte d'une île circulaire. Chacun de ces villages a 20 combattants, et tous ces 400 combattants sont de force différente.
+
+Chaque paire de villages voisins $A$ et $B$ organise une compétition, au cours de laquelle chacun des 20 combattants du village $A$ se mesure à chacun des 20 combattants du village $B$. Un combat est toujours remporté par le combattant le plus fort. On dit que le village $A$ est \emph{plus fort} que le village $B$ si, lors de au moins $k$ des 400 combats, le combattant du village $A$ gagne.
+
+Il s'avère que chaque village est plus fort que le village voisin dans le sens des aiguilles d'une montre. Déterminer la valeur maximale de $k$ qui permette une telle issue.}%
+\ita{}%
+\en{Along the coast of a round island there are 20 different villages. Each of these villages has 20 fighters and all 400 fighters have different strengths.
+
+Every pair of neighbouring villages $A$ and $B$ organises a competition during which all 20 fighters from village $A$ battles individually against every fighter from the village $B$. The winner of a battle is always the stronger fighter. We say that the village $A$ is \emph{stronger} than the village $B$, if during at least $k$ out of the 400 battles, a fighter from village $A$ has won.
+
+It turns out that every village is stronger than its clockwise neighbouring village. Determine the maximal value of $k$ that allows such an outcome.}%
+
+}%END Day 1%
+
+
+\IfStrEq*{\day}{2}{%%%%%%%%%%%%%%%%% Day 2 %%%%%%%%%%%%%%%%
+
+\item[\textbf{4.}] %% Exercise 4 %%
+\de{Sei $n$ eine gerade natürliche Zahl. Wir teilen die Zahlen $1, 2,\ldots, n^2$ in zwei gleiche grosse Mengen $A$ und $B$ auf, sodass jede der $n^2$ Zahlen in genau einer der Mengen ist. Seien $S_A$ und $S_B$ die Summe aller Elemente in $A$ respektive $B$. Bestimme alle $n$, sodass es eine Aufteilung gibt mit
+\[
+\frac{S_A}{S_B} = \frac{39}{64}.
+\]}%
+\fr{Soit $n$ un nombre naturel pair. On partitionne les nombres $1, 2, \ldots, n^2$ en deux ensembles $A$ et $B$ de taille égale, de telle manière que chacun des $n^2$ nombres appartient à exactement un des deux ensembles. Soient $S_A$ et $S_B$ la somme de tous les éléments dans $A$ et $B$ respectivement. Déterminer tous les $n$ pour lesquels il existe une partition telle que
+\[
+\frac{S_A}{S_B} = \frac{39}{64}.
+\]}%
+\ita{}%
+\en{Let $n$ be an even positive integer. We partition the numbers $1,2,\ldots,n^2$ into two sets $A$ and $B$ with the same size such that all of the $n^2$ numbers belong to exactly one of the two sets. Let $S_A$ and $S_B$ be the sum of all the elements in $A$ respectively $B$. Determine all $n$ such that there is a partition with
+\[
+\frac{S_A}{S_B} = \frac{39}{64}.
+\]}%
+
+\bigskip
+\bigskip
+
+\item[\textbf{5.}] %% Exercise 5 %%
+\de{Für eine natürliche Zahl $n$ sei ein $n \times n$ Brett gegeben. Wir färben nun $k$ der Felder schwarz ein, sodass es für jeweils drei Spalten maximal eine Reihe gibt, in der alle Kreuzungsfelder mit den drei Spalten schwarz gefärbt sind. Zeige, dass gilt:
+\[
+\frac{2k}{n} \leq \sqrt{8n-7}+1.
+\]}%
+\fr{Soit $n$ un nombre naturel. On considère une grille $n\times n$. On colorie $k$ cases en noir, de telle manière que, pour n'importe quelles trois colonnes, il existe au plus une ligne qui intersecte chacune de ces trois colonnes en une case noire. Prouver que
+\[
+\frac{2k}{n} \leq \sqrt{8n-7}+1.
+\]}%
+\ita{}%
+\en{Let $n$ be a positive integer. We consider an $n\times n$ grid. We colour $k$ squares in black, such that given any three columns, there exists at most one row that intersects the three columns at a black square. Prove that
+%for every pair of rows, there are at most two columns that intersect the two rows at a black square. Prove that
+\[
+\frac{2k}{n} \leq \sqrt{8n-7}+1.
+\]}%
+
+\bigskip
+\bigskip
+
+\item[\textbf{6.}] %% Exercise 6 %%
+\de{Seien $A$, $B$, $C$ und $D$ vier Punkte, die in dieser Reihenfolge auf einem Kreis liegen. Nehme an, es gibt einen Punkt $K$ auf der Strecke $AB$, sodass $BD$ die Strecke $KC$ und $AC$ die Strecke $KD$ halbiert. Bestimme den kleinstmöglichen Wert, den $\abs*{\frac{AB}{CD}}$ annehmen kann.}%
+\fr{Soient $A$, $B$, $C$ et $D$ quatre points sur un cercle, placés dans cet ordre. Supposons qu'il existe un point $K$ sur le segment $AB$ tel que $BD$ coupe $KC$ en son milieu et que $AC$ coupe $KD$ en son milieu. Déterminer la valeur minimale que $\abs*{\frac{AB}{CD}}$ peut atteindre.}%
+\ita{}%
+\en{Let $A$, $B$, $C$ and $D$ be four points on a circle in this order. Assume that there is a point $K$ on the segment $AB$ such that $BD$ bisects $KC$ and $AC$ bisects $KD$. Determine the minimal value that $\abs*{\frac{AB}{CD}}$ can take.}%
+}%End Day 2%
+
+\IfStrEq*{\day}{3}{ %%%%%%%%%%%%%% Day 3 %%%%%%%%%%%%%%%%%
+
+\item[\textbf{7.}] %% Exercise 7 %%
+\de{Sei $n$ eine natürliche Zahl. Wir nennen eine Sequenz bestehend aus $3n$ Buchstaben \emph{rumänisch}, falls die Buchstaben $I$, $M$ und $O$ alle genau $n$ Mal vorkommen. Ein \emph{swap} ist eine Vertauschung von zwei benachbarten Buchstaben. Zeige, dass für jede rumänische Sequenz $X$ eine rumänische Sequenz $Y$ existiert, sodass mindestens $\frac{3n^2}{2}$ swaps nötig sind, um die Sequenz $Y$ aus der Sequenz $X$ zu erhalten.}%
+\fr{Soit $n$ un nombre naturel. Une suite de $3n$ lettres est appelée \emph{roumaine} si les lettres $I$, $M$ et $O$ y apparaissent chacune exactement $n$ fois. Un \emph{swap} est l'échange de deux lettres voisines. Montrer que pour toute suite roumaine $X$ il existe une suite roumaine $Y$ telle qu'il est impossible d'obtenir $Y$ à partir de $X$ avec strictement moins de $\frac{3n^2}{2}$ swaps.}
+\ita{}%
+\en{Let $n$ be a positive integer. A sequence of $3n$ letters is called \emph{Romanian} if the letters $I$, $M$ and $O$ appear exactly $n$ times each. Define a \emph{swap} to be the transposition of two adjacent letters. Prove that for any Romanian sequence $X$, there exists a Romanian sequence $Y$ such that $Y$ cannot be obtained from $X$ using fewer than $\frac{3n^2}{2}$ swaps.}%
+
+\bigskip
+\bigskip
+
+\item[\textbf{8.}] %% Exercise 8 %%
+
+\de{Bestimme alle natürlichen Zahlen $n \geq 2$, sodass für alle ganzen Zahlen $0 \leq i, j \leq n$ gilt:
+\[
+i+j \equiv \binom{n}{i} + \binom{n}{j} \pmod{2}.
+\]}%
+\fr{Déterminer tous les nombres naturels $n\geq 2$ tels que pour tous les nombres entiers $0 \leq i,j \leq n$:
+\[
+i+j \equiv \binom{n}{i} + \binom{n}{j} \pmod{2}.
+\]}%
+\ita{}%
+\en{Determine all the integers $n\geq 2$ such that for every integer $0 \leq i, j \leq n$:
+\[
+i+j \equiv \binom{n}{i} + \binom{n}{j} \pmod{2}.
+\]}%
+
+\bigskip
+\bigskip
+
+\item[\textbf{9.}] %% Exercise 9 %%
+\de{Seien $a,b,c,d$ reelle Zahlen. Beweise:
+\[
+(a^2-a+1)(b^2-b+1)(c^2-c+1)(d^2-d+1) \ge \frac{9}{16} (a-b)(b-c)(c-d)(d-a).
+\]}%
+\fr{Soient $a,b,c,d$ des nombres réels. Montrer que
+\[
+(a^2-a+1)(b^2-b+1)(c^2-c+1)(d^2-d+1) \ge \frac{9}{16} (a-b)(b-c)(c-d)(d-a).
+\]}%
+\ita{}%
+\en{Let $a,b,c,d$ be real numbers. Prove that
+\[
+(a^2-a+1)(b^2-b+1)(c^2-c+1)(d^2-d+1) \ge \frac{9}{16} (a-b)(b-c)(c-d)(d-a).
+\]}
+}%End Day 3%
+
+\IfStrEq*{\day}{4}{ %%%%%%%%%%%%%%% Day 4 %%%%%%%%%%%%%%%%%%
+
+\item[\textbf{10.}] %% Exercise 10 %%
+\de{Sei $ABC$ ein Dreieck, $M$ der Mittelpunkt der Strecke $BC$ und $D$ ein Punkt auf der Geraden $AB$, sodass $B$ zwischen $A$ und $D$ liegt. Sei $E$ ein Punkt auf der anderen Seite der Geraden $CD$ als $B$, sodass $\angle EDC = \angle ACB$ und $\angle DCE = \angle BAC$. Sei $F$ der Schnittpunkt von $CE$ mit der Parallelen zu $DE$ durch $A$ und sei $Z$ der Schnittpunkt von $AE$ und $DF$. Zeige, dass sich die Geraden $AC$, $BF$ und $MZ$ in einem Punkt schneiden.}%
+\fr{Soit $ABC$ un triangle, $M$ le milieu du segment $BC$ et $D$ un point sur la droite $AB$, tel que $B$ se situe entre $A$ et $D$. Soit $E$ un point %du côté opposé de la droite $CD$ par rapport à $B$
+tel que $E$ et $B$ se situent de part et d'autre de la droite $CD$  et tel que $\angle EDC = \angle ACB$ et $\angle DCE = \angle BAC$. Soit $F$ le point d'intersection de $CE$ avec la parallèle à $DE$ passant par $A$ et soit $Z$ le point d'intersection de $AE$ et $DF$. Prouver que les droites $AC$, $BF$ et $MZ$ se coupent en un point.}%
+\ita{}%
+\en{Let $ABC$ be a triangle, $M$ the midpoint of $BC$ and $D$ a point on the line $AB$ such that $B$ lies between $A$ and $D$. Let $E$ be a point such that $E$ and $B$ are on different sides with respect to the line $CD$ and such that $\angle EDC = \angle ACB$ and $\angle DCE = \angle BAC$. Let $F$ be the intersection  point of $CE$ with the parallel line to $DE$ through $A$. Let $Z$ be the intersection point of $AE$ and $DF$. Prove that the lines $AC$, $BF$ and $MZ$ intersect in a point.}%
+
+\bigskip
+\bigskip
+
+\item[\textbf{11.}] %% Exercise 11 %%
+\de{Bestimme alle Paare $(f,g)$ zweier Funktionen $f,g \colon \R \to \R$, sodass für alle $x, y \in \R$ gilt:
+\begin{enumerate}[(i)]
+\item $f(x) \geq 0$,
+\item $f(x+g(y)) = f(x) + f(y) + 2yg(x) - f(y-g(y))$.
+\end{enumerate}
+}%
+\fr{Déterminer toutes les paires $(f,g)$ de fonctions $f,g \colon \R \to \R$ telles que pour tous $x, y \in \R$
+\begin{itemize}
+\item $f(x)\geq 0$,
+\item $f(x+g(y)) = f(x) + f(y) + 2yg(x) - f(y-g(y))$.
+\end{itemize}}%
+\ita{}%
+\en{Determine all the pairs $(f,g)$ of functions $f,g \colon \R \to \R$ such that for all $x,y\in\R$
+\begin{itemize}
+\item $f(x)\geq 0$,
+\item $f(x+g(y)) = f(x) + f(y) + 2yg(x) - f(y-g(y))$.
+\end{itemize}}%
+
+\bigskip
+\bigskip
+
+\item[\textbf{12.}] %% Exercise 12 %%
+\de{David und Linus spielen folgendes Spiel:
+David wählt eine Teilmenge $Q$ der Menge $\{1, \dots ,2018\}$. Dann wählt Linus eine natürliche Zahl $a_1$ und berechnet die Zahlen $a_2, \dots , a_{2018}$ rekursiv, wobei $a_{n+1}$ das Produkt der positiven Teiler von $a_n$ ist.
+
+Sei $P$ die Menge der natürlichen Zahlen $k\in\{1,\dots,2018\}$, für die $a_k$ eine Quadratzahl ist. Linus gewinnt, falls $P=Q$. Ansonsten gewinnt David. Wer hat eine Gewinnstrategie?}%
+\fr{David et Linus jouent au jeu suivant:
+David choisit un sous-ensemble $Q$ de l'ensemble $\{1, \dots ,2018\}$. Ensuite Linus choisit un nombre naturel $a_1$ et calcule récursivement les nombres $a_2, \dots, a_{2018}$, avec $a_{n+1}$ le produit de tous les diviseurs positifs de $a_n$.
+
+Soit $P$ l'ensemble des entiers $k\in\{1,\dots,2018\}$ pour lesquels $a_k$ est un carré parfait. Linus gagne si $P=Q$. Autrement David gagne. Déterminer lequel des joueurs a une stratégie gagnante?}%
+\ita{}%
+\en{David and Linus play the following game: 
+David chooses a subset $Q$ of $\{1, \dots ,2018\}$. Then Linus chooses a natural number $a_1$ and computes inductively the numbers $a_2, \dots, a_{2018}$ with $a_{n+1}$ being the product of all positive divisors of $a_n$.
+
+Let $P$ be the set of integers $k\in\{1,\dots,2018\}$ for which $a_k$ is a perfect square. Linus wins if $P=Q$. Otherwise David wins. Determine which player has a winning strategy.}%
+
+}%End Day 4%
+
+\bigskip
+
+\vfill
+
+\center{\de{Viel Glück!}\fr{Bonne chance!}\ita{Buona fortuna!}\en{Good Luck!}}
+
+\end{enumerate}
+
+\end{document}

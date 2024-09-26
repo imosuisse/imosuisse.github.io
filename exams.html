@@ -1,0 +1,35 @@
+---
+layout: default
+title: Past Exams
+nav: 2
+languages: [["english", "en"], ["german", "de"], ["french", "fr"], ["italian", "it"]]
+rounds: ["FirstRound", "SecondRound", "FinalRound", "PreSelection", "Selection"]
+---
+
+<div class = "exams">
+{% assign pdfs = site.static_files | where: "extname", ".pdf" | where_exp: "file", "file.path contains '/Exam/'" %}
+
+{% for year in (1997..2024) reversed %}
+	{% assign year-list = pdfs | where_exp: "file", "file.path contains year" %}
+	{% if year-list != empty %}
+		<h3>{{ year }}</h3>
+		<table>
+		{% for round in page.rounds %}
+			<tr>
+			{% assign round-list = year-list | where_exp: "file", "file.path contains round" %}
+			{% if round-list != empty %}
+				<td class = "round-label">{{ round }}</td>
+				{% for lang in page.languages %}
+					{% assign dir = '/exams/' | append: year | append: '/' | append: round | append: '/Exam/' %}
+					{% assign name = lang[0] | append: round | append: year | append: '.pdf' %}
+					{% assign path = dir | append: name %}
+					{% assign file = site.static_files | where: "path", path | first %}
+					<td>{% if file %}<a href = "{{ dir | append: name }}">{{ lang[1] }}</a>{% endif %}</td>
+				{% endfor %}
+			{% endif %}
+			</tr>
+		{% endfor %}
+		</table>
+	{% endif %}
+{% endfor %}
+</div>

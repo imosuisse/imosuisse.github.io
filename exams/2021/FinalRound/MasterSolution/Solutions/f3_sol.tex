@@ -1,0 +1,65 @@
+\en {Find all finite sets $S$ of positive integers with at least two elements, such that if $m>n$ are two elements of $S$, then $$\frac{n^2}{m-n}$$
+is also an element of $S$.
+
+\newline
+\newline
+
+\textbf{Answer}: $S=\{s,2s\}$, for a positive integer $s$.
+
+\textbf{Solution}(Arnaud):
+
+Trying to apply number theoretical methods to deduce something from the fact that $m-n$ divides $n^2$ does not seem to lead anywhere. Instead, we will try to find the extreme values that the quotient $n^2/(m-n)$ can achieve. This will give us some interesting bounds on the elements of $S$.
+
+\begin{enumerate}
+    \item First, since $S$ contains at least two elements, we take $l>s$ to be the largest and smallest elements of $S$. Since $s^2/(l-s)$ also belongs to $S$ we must have
+    \[
+    \frac{s^2}{l-s}\geq s\quad \Longrightarrow \quad 2s\geq l.
+    \]
+    \item Now, consider $k<l$ the second largest element of $S$. The number $k^2/(l-k)$ belongs to $S$. We claim that $k^2/(l-k)\neq l$, which implies
+    \[
+    \frac{k^2}{l-k}\leq k\quad \Longrightarrow \quad 2k\leq l.
+    \]
+\end{enumerate}
+
+We prove the previous claim in the following lemma.
+
+\begin{lem}
+The equation $k^2/(l-k)= l$ has no positive integer solutions $l>k$.
+\end{lem}
+\begin{proof}
+Assume such a solution exists, then it also solves
+    \[
+    l^2=k^2+kl.
+    \]
+    Since the equation is homogeneous (of degree 2), we can assume that $\gcd (k,l)=1$. Since we must have $l\div k^2$, we deduce that $l=1$. This is a contradiction since $k$ is a positive integer with $k<l$.
+\end{proof}
+
+Combining the two relations above, and using that $s\leq k$, we get
+\[
+l\leq 2s\leq 2k\leq l.
+\]
+Therefore $k=s$ and $S$ contains exactly two elements. Moreover, the inequalities above also implies $l=2s$. So $S=\{s,2s\}$ as desired.
+
+Any such set satisfies the desired property because
+\[
+\frac{s^2}{2s-s}=s\in S.
+\]
+
+\newpage
+
+\textbf{Marking scheme}
+
+Case $\vert S\vert =2$ (3P)
+\begin{itemize}
+    \item 1P: Stating the correct answer and checking that it indeed works.
+    \item 2P: Statement and proof of the lemma.
+\end{itemize}
+
+Reduction to $\vert S\vert =2$ (4P)
+\begin{itemize}
+    \item 1P: Considering the smallest and largest elements of $S$.
+    \item 1P: $l\leq 2k_1$ for some $k_1\neq l$ in $S$ (e.g.\ $k_1=s$).
+    \item 2P: Conclude.
+\end{itemize}
+-1P for logical flaws.
+}

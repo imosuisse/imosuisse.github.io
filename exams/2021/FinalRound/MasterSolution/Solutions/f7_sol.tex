@@ -1,0 +1,70 @@
+\en {
+Let $m\geq n$ be positive integers. Frieder is given $mn$ posters of Linus with different integer dimensions $k \times l$ with $1 \le k \le m$ and $1 \le l \le n$. He must put them all up one by one on his bedroom wall without rotating them. Every time he puts up a poster, he can either put it on an empty spot on the wall, or on a spot where it entirely covers a single visible poster and does not overlap any other visible poster. Determine the minimal area of the wall that will be covered by posters.
+\\
+\emph{Remark: a wall is a structure often made of bricks and concrete (or cardboard if you live in Winterthur) commonly found in houses.}
+
+\newline
+\newline
+\textbf{Answer:}  $m\frac{n(n-1)}{2}$
+
+\textbf{Solution (Tanish):}
+We introduce the following definitions\footnote{Funnily enough, these are not randomly chosen words, but the same definitions you will see when you study partially ordered sets later on.}:
+\begin{itemize}
+    \item A \emph{chain} is a sequence of posters, each of which covers the previous one completely. 
+    \item An \emph{antichain} is a group of posters, none of which can be placed over any of the others because it would not cover any of the others completely.
+    \item The \emph{minimal} and \emph{maximal} elements in a chain are the first (smallest) and last (largest) elements in that chain, respectively.
+    \item The \emph{degree} of a poster is the sum of its length and width.
+\end{itemize}
+With these definitions we can note two facts already: the total area of the wall covered is the total area of the maximal elements of all chains (this is trivial), and all elements of an antichain must belong to different chains (this is because the relationship "can be placed over" is transitive: if Poster A can be placed over Poster B and Poster B can be placed over Poster C, then Poster A can be placed over poster C). 
+
+Firstly, note that the $n$ posters with dimension $m \times 1, m-1 \times 2, \dots , m-n-1 \times n$ form an antichain (more generally, you can say all posters of a given degree $x$ form an antichain) and so we must have at least $n$ different chains. We therefore have at least $n$ maximal posters of degree $\ge m+1$. Analogously we have at least $n+1-k$ maximal posters of degree $\ge m+k$ for any $k \in \{1, 2, \dots , n\}$ (using the same argument as before with the antichain of posters of degree $m+k$). 
+
+With this information, let us try and find a lower bound on the total area of these maximal posters (we don't know if satisfying these facts will be enough, but we can use it to give a bound and then try to attain this bound with a construction). Suppose there are no maximal elements of some degree $m+k$; the pigeonhole principle tells us there must therefore be two or more maximal posters of some degree $m+l$, $l > k$. However for any poster of degree $m+l$ there is always a poster of degree $m+k$ that fits inside it, and so changing one of the maximal posters of degree $m+l$ for such a poster of degree $m+k$ will strictly reduce the total area. In other words, a set of maximal posters with minimal combined area would have at least one element of degree $m+k,  \forall k \in \{1, 2, \dots , n\}$. The smallest poster of degree $m+k$ is the poster $m \times k$ (once the perimeter is fixed the area is minimised by maximising the difference between height and width) and so a lower bound on the total area of the posters would be:
+\begin{align*}
+    (m + 2m + \dots + nm) = m\frac{n(n+1)}{2}.
+\end{align*}
+However, this bound can easily be attained: one construction would be to create chains by placing all the posters $x \times y, 1 \le x \le m$ on top of each other. This gives a chain for each $y \in \{1, 2, \dots , n\}$.
+\newpage
+
+\textbf{Marking scheme}
+Contestants are awarded the maximum of the sum of the points they obtain from the additive section and the highest-scoring item they obtain from the non-additive section. 
+Upper bound (additive):
+\begin{itemize}
+\item +1P: Stating the answer $m\frac{n(n+1)}{2}$ or equivalent. 
+\item +1P: Any correct construction for this value. If the contestant nests the posters in the "wrong coordinate" they should not be awarded points.
+\end{itemize}
+
+Upper bound (non-additive):
+\begin{itemize}
+    \item 1P: Introducing the notion of degrees or an equivalent idea and claiming we want to put each poster over a poster whose degree is 1 lower.
+    \item 1P: Correct answer for case $m = n$.
+\end{itemize}
+
+Lower bound (additive):
+\begin{itemize}
+\item +1P: Any antichain of size $n$ with the claim that all these posters must be in different chains.
+\item +1P: The generalisation of the previous claim with a good choice of antichain: the $n+1-k$ posters of degree $m+k$ are in different chains. 
+\item +1P: Any claim that minimal area would occur with at least one maximal poster of degree $m+k$ for $k \in \{1, 2, \dots , n\}$
+\item +1P: Proof of the aforementioned claim.
+\item +1P: Concluding that a lower bound is $m\frac{n(n+1)}{2}$.
+\end{itemize}
+
+Lower bound (non-additive):
+\begin{itemize}
+    \item 1P: Any reference to the fact that the posters form a poset.
+    \item 1P: Any drawing that reflects the partial order, e.g. a Hasse diagram (or something that looks like one). 
+    \item 2P: Any flawed attempt to create chains starting at highest degree and working down (for example, putting the poster of degree $m+n$ in a chain, stating only one of the two posters of degree $m+n-1$ can go into this chain and so the other poster must maximise a new chain, and continuing downwards. This argument fails because you assume one of the two posters of degree $m+n-1$ must go into the chain with the poster of degree $m+n$ but you ignore the possibility that neither does (and you should prove that this would not be optimal for a perfect solution). 
+    \item 3P: Correct proof of bound for case $m = n$.
+\end{itemize}
+
+%Minor mistakes:
+%\begin{itemize}
+    %\item -1P: Taking the $m \times k$ poster without at least claiming it is the smallest. 
+    %\item -2P: Any minor mistake with reference to the structure of the poset (e.g. assuming that if you have a set of elements of degree $x$ and a set of the same size of elements of degree $x+1$ such that every element in the first set is related to an element of the second set and vice versa, there is a perfect pairing between them). -1P may be deducted if the mistake does not seriously affect the argument.
+%\end{itemize}
+
+
+
+
+
+}

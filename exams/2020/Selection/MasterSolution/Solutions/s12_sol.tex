@@ -1,0 +1,66 @@
+Let $a,b,c,d$ be positive real numbers such that $a+b+c+d=1$. Prove that 
+\[
+\left( \frac{a^2}{a+b}+\frac{b^2}{b+c}+\frac{c^2}{c+d}+\frac{d^2}{d+a}\right)^5 \geq 5^5\left(\frac{ac}{27}\right)^2.
+\]
+
+\textbf{Solution} (David):
+The goal is to exploit the condition $a+b+c+d$ somehow such that we only get $a$ and $c$ on the right hand side. An observation that can help doing this is the equality case $(a,b,c,d) = (\frac{1}{3},\frac{1}{6},\frac{1}{3},\frac{1}{6})$. One way to achieve our goal is to apply Cauchy-Schwarz:
+\vspace{2mm}
+\[
+\left( \frac{a^2}{a+b}+\frac{b^2}{b+c}+\frac{c^2}{c+d}+\frac{d^2}{d+a}\right) \left( 4(a+b) + (b+c) + 4(c+d) + (d+a) \right) \geq \left(2a + b + 2c + d \right)^2
+\]
+\begin{equation}
+\label{CS}
+\Leftrightarrow \quad \left( \frac{a^2}{a+b}+\frac{b^2}{b+c}+\frac{c^2}{c+d}+\frac{d^2}{d+a}\right) \geq \frac{(a+c+1)^2}{5}
+\end{equation} 
+
+Where we applied the condition $a+b+c+d = 1$ on both the left hand side and the right hand side. Now, we are already very close to our goal. To get the term $ac$ on the right hand side, we apply AM-GM:
+\[
+a+c+1 = a + c + \frac{1}{3} + \frac{1}{3} + \frac{1}{3} \geq 5 \cdot \sqrt[5]{\frac{ac}{27}}.
+\]
+Plugging in this estimation into the inequality \eqref{CS} above, we get
+\[
+\left( \frac{a^2}{a+b}+\frac{b^2}{b+c}+\frac{c^2}{c+d}+\frac{d^2}{d+a}\right) \geq \frac{(5 \cdot \sqrt[5]{\frac{ac}{27}})^2}{5} = 5 \left( \sqrt[5]{\frac{ac}{27}} \right)^2. 
+\]
+Raising both sides to the fifth power yields 
+\[
+\left( \frac{a^2}{a+b}+\frac{b^2}{b+c}+\frac{c^2}{c+d}+\frac{d^2}{d+a}\right)^5 \geq 5^5\left(\frac{ac}{27}\right)^2,
+\]
+which is exactly what we wanted to prove.
+\vspace{3mm}
+
+\textbf{Alternative approach} (David): We can also simply observe the symmetry between the variables: If we exchange $a$ and $c$ at the same time as $b$ and $d$, the expressions on both sides don't change. This is the motivation to try to estimate the two terms
+\[
+\left( \frac{a^2}{a+b}+\frac{c^2}{c+d} \right), \quad \left(\frac{b^2}{b+c}+\frac{d^2}{d+a}\right)
+\]
+separately. This can also be done using Cauchy Schwarz:
+\[
+\left( \frac{a^2}{a+b}+\frac{c^2}{c+d} \right)(a+b+c+d) \geq (a+c)^2, \quad \left(\frac{b^2}{b+c}+\frac{d^2}{d+a}\right)(b+c+d+a) \geq (b+d)^2.
+\]
+Using $a+b+c+d=1$ and setting $t=a+c$, we get the two inequalities
+\[
+\left( \frac{a^2}{a+b}+\frac{c^2}{c+d} \right) \geq t^2, \quad \left(\frac{b^2}{b+c}+\frac{d^2}{d+a}\right) \geq (1-t)^2 = t^2 - 2t + 1,
+\]
+so combined:
+\[
+\left( \frac{a^2}{a+b}+\frac{b^2}{b+c}+\frac{c^2}{c+d}+\frac{d^2}{d+a}\right) \geq (2t^2 - 2t + 1).
+\]
+Now, the objective is to estimate the right hand side of this inequality to get something nicer. Here it is very useful to know the value of $t$ in the equality case. It turns out that 
+\[
+(3t-2)^2 \geq 0 \; \Leftrightarrow \; 9t^2 - 12t + 4 \geq 0 \; \Leftrightarrow \; 10t^2 - 10t + 5 \geq t^2 + 2t + 1 \; \Leftrightarrow \; 2t^2-2t+1 \geq \frac{(t+1)^2}{5} 
+\]
+and so we arrive at inequality \eqref{CS} again and finish in the same way.
+\newpage
+
+\textbf{Marking Scheme:} \\
+Partial points (not additive to the rest):
+\begin{itemize}
+    \item 1P: Finding the equality case $(\frac{1}{3}, \frac{1}{6}, \frac{1}{3}, \frac{1}{6}$)
+    \item 1P: Any useful estimation on the Left Hand side using only $a$ and $c$
+\end{itemize} 
+Points for (almost) complete solutions:
+\begin{itemize}
+    \item 2P: Making the term $\left( \frac{(a+c+1)^2}{5} \right)^5$ appear
+    \item 3P: Showing that $\left( \frac{(a+c+1)^2}{5} \right)^5$ is greater or equal to the right hand side.
+    \item 2P: Showing that $\left( \frac{(a+c+1)^2}{5} \right)^5$ is smaller or equal to the left hand side.
+\end{itemize}

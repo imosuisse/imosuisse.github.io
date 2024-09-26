@@ -1,0 +1,117 @@
+Let $(a,b)$ be a pair of positive integers. Henning and Paul are playing a game: Initially, there are two piles of $a$ and $b$ stones, respectively, on a table. The pair $(a,b)$ is called the \textit{initial configuration} of the game. The players proceed as follows:
+
+\begin{itemize}
+    \item The players alternate and Henning begins.
+    \item In each turn, a player either removes a positive number of stones from one of the two piles or the same positive number of stones from both piles.
+    \item The player who removes the last stone from the table wins the game.
+\end{itemize} 
+
+Let $A$ be the set of all positive integers $a$ for which there exists a positive integer $b<a$ such that Paul has a winning strategy for the initial configuration $(a,b)$. Order the elements of $A$ increasingly as $a_1<a_2<\ldots$.
+
+\begin{enumerate}
+    \item[(a)] Prove that the set $A$ is infinite.
+    \item[(b)] Prove that the sequence $(m_k)_{k \geq 1}$ defined by $m_k := a_{k+1} - a_k$ for all $k\geq 1$ is not eventually periodic.
+\end{enumerate}
+
+\textit{Remark}: A sequence $(x_k)_{k \geq 1}$ is \textit{eventually periodic} if there exists an integer $k_0\geq 0$ such that the sequence $(x_{k+k_0})_{k\geq 1}$ is periodic.
+
+\textbf{Erste Lösung:} (David, by Patrick)
+\begin{enumerate}
+    \item[(a)] Wir nennen ein allgemeines Paar von Startwerten $(a,b)$ \textit{gut}, falls Paul dafür eine Gewinnstrategie besitzt. Hier erlauben wir der Vollständigkeit halber auch $a=0$ oder $b=0$ und nennen $(0,0)$ auch gut. Analog nennen wir alle Paare, die nicht gut sind, \textit{schlecht} und bemerken, dass für diese Startwerte Henning offenbar eine Gewinnstrategie besitzt. Wir benutzen das folgende allgemeine Prinzip:
+    \newline \newline
+    Wenn $(a,b)$ gut ist, dann sind $(a+n,b), \, (a,b+n), \, (a+n,b+n)$ für jedes $n \in \N$ schlecht, da Henning in seinem ersten Zug einfach die Werte $(a,b)$ erreichen könnte und dann Paul ein neues Spiel beginnen muss mit Startwerten, die nun für Henning gut sind. Also gibt es für jedes $a$ höchstens ein $b$, sodass $(a,b)$ gut ist.
+    \newline 
+    Zudem gilt: Falls Henning für die Startwerte $(a,b)$ in seinem ersten Zug nur schlechte Werte erreichen kann, ist $(a,b)$ gut, weil Paul dann unabhängig von Hennings Zug nach obiger Bemerkung eine Gewinnstrategie hat.
+    \newline
+    \newline
+    Nehme nun an, dass $A$ nur endlich viele Elemente hat. Dann gibt es auch nur endlich viele gute Startwerte (denn für jedes gute Feld gibt es nach obigem Prinzip und wegen $(a,b) \, \text{gut} \iff (b,a) \, \text{gut}$ genau ein Element aus $A$, nämlich der kleinere der beiden Startwerte). Insbesondere gibt es eine Zahl $C$ die strikt grösser ist als alle $a, b$ mit $(a,b)$ gut. Dann gilt allerdings für $(C,2C)$, dass die Paare $(C-n,2C) \, (C-n, 2C-n)$ für jedes $n \in \{1,2,\dots,C\}$ und $(C,2C-m)$ für jedes $m \in \{1,2,\dots, 2C \}$ schlecht sind, nach Konstruktion von $C$, also ist $(C,2C)$ gut. Widerspruch!
+    
+    \item[(b)] Wir wollen nun erst einmal zeigen, dass jede natürliche Zahl entweder in $A$ oder in $B = \{b_k  \mid \, (a_k,b_k) \text{ gut} \}$ vorkommt. Was wir in Teilaufgabe (a) herausgefunden haben impliziert, dass eine natürliche Zahl nicht in beiden Mengen vorkommen kann. Nehme nun an, es gäbe ein $n \in \N$, sodass $n$ weder in $A$ noch in $B$ auftritt und wähle $n$ minimal. Mit anderen Worten ist für alle Zahlen $m \in \N$ das Paar $(m,n)$ schlecht. Das bedeutet aber auch, dass für jedes $m$ eines der Paare $(m,n-1), (m,n-2), \dots, (m,0), (m-1,n-1), (m-2,n-2) \dots (m - \text{min}\{m,n\}, n-\text{min}\{m,n\}) $ gut ist. Betrachten wir beispielsweise $m=n+1, \, 2n+1, \, 3n+1, \, \dots (n+1)n+1$, so sind alle diese Tupel paarweise verschieden. Wir erhalten also mit unserer Annahme $n+1$ verschiedene gute Paare, die alle von der Form $(x,y)$ sind mit $y \in \{0,1, \dots ,n-1\}$. Dann müssten allerdings nach Schubfachprinzip zwei $y$ den gleichen Wert annehmen, was unserem Zwischenresultat aus (a) widerspricht. Somit wissen wir also $A \sqcup B = \N$
+    \newline
+    \newline
+    Der nächste Schritt besteht darin zu zeigen, dass $a_k - b_k = k$ gilt für alle $k \in \N$ und dass jeweils $b_k = \text{min}(\N \backslash \{a_1, \dots a_{k-1}, b_1, \dots, b_{k-1} \} ) $ gilt. Das findet man leicht durch Ausprobieren und lässt sich mit Induktion beweisen.
+    \begin{itemize}
+        \item Verankerung: Offensichtlich sind $a_0=0$, $b_0=0$ und $a_1=2$, $b_1=1$ die ersten guten Paare und erfüllen die Aussage.
+        \item Nehme nun an, die Zahlen $a_1, \dots, a_n$ und $b_1, \dots, b_n$ erfüllen die Aussage. Nun setzen wir $b_{n+1} = \text{min}(\N \backslash \{a_1, \dots a_n, b_1, \dots, b_n \} )$. Weil nach Induktionsannahme $b_k < b_{n+1}$ gilt für alle $k \leq n$, gilt für $b_{n+1} + n+1$ auch $ b_{n+1} + n + 1 > b_k + k = a_k$ für alle $k \leq n$. Insbesondere können wir einmal $a_{n+1} = b_{n+1} + n+1$ setzen, denn dieses ist noch nicht in der Menge $\{a_1, \dots , a_n, b_1, \dots , b_n \}$ enthalten. Es bleibt zu zeigen, dass das Paar $(a_{n+1},b_{n+1})$ tatsächlich gut ist. Dafür unterscheiden wir die folgenden Möglichkeiten für Hennings ersten Zug mit Startwerten $(a_{n+1},b_{n+1})$:
+        \newline
+        Wenn Henning nur den Stapel mit $b_{n+1}$ Münzen verkleinert, erreicht er nach Konstruktion eine Anzahl Münzen, die bereits in der Menge $\{ a_0, a_1, \dots , a_n, b_0, b_1, \dots, b_n \}$ liegt. In jedem Fall kann Paul nun durch Verkleinern des Stapels mit $a_{n+1}$ Münzen ein gutes Paar erreichen, denn es gilt $a_{n+1} > a_k \geq b_k$ für alle $k \in \N \cup \{0\}$.
+        \newline
+        Wenn Henning beide Stapel verkleinert, ist der Stapel mit ursprünglich $b_{n+1}$ Münzen auf eine Anzahl in $\{ a_0, a_1, \dots , a_n, b_0, b_1, \dots, b_n \}$ geschrumpft. Falls es ein $a_k$ ist, kann Paul den anderen Stapel natürlich auf $b_k$ Münzen reduzieren wegen $a_{n+1}-x > b_{n+1}-x = a_k \geq b_k$.
+        Falls es ein $b_k$ ist, kann Paul den anderen Stapel auf $a_k$ Münzen reduzieren wegen $a_k = b_k + k < b_k +n+1 = (b_{n+1}-x) + n+1 = a_{n+1} - x$.
+        \newline
+        Verkleinert Henning nur den Stapel mit $a_{n+1}$ auf $x$ Münzen, gibt es wieder einige Möglichkeiten:
+        \newline 
+        Falls $x \geq b_{n+1}$ gilt, hat Henning die Differenz der beiden Stapel verkleinert. Wegen $b_{n+1} > b_k$ für alle $k \in \{0,1, \dots, n \}$, erreicht Paul durch Entfernen einer geeigneten Anzahl Münzen von beiden Stapeln das Paar mit der neuen Differenz.
+        \newline
+        Falls $x < b_{n+1}$ gilt, dann gilt entweder $x=a_k$ oder $x=b_k$ für ein $k \leq n$. Falls $x=a_k$ gilt, dann gilt $b_k \leq a_k < b_{n+1}$, also kann Paul durch Verkleinern des Stapels mit $b_{n+1}$ Münzen das gute Paar $(a_k,b_k)$ erreichen. Falls $x=b_k$ gilt, dann unterscheiden wir noch einmal zwei Fälle: Entweder es gilt $a_k = b_k + k < b_{n+1}$; in diesem Fall verkleinert Paul den Stapel mit $b_{n+1}$ Münzen, um das gute Paar $(a_k,b_k)$ zu erreichen, oder aber es gilt $a_k = b_k + k > b_{n+1}$ (beachte, dass $a_k = b_{n+1}$ nach Konstruktion von $b_{n+1}$ nicht auftreten kann). In diesem Fall gilt $b_{n+1} - x < a_k - x = a_k - b_k = k$. Also ist die Differenz von $x$ und $b_{n+1}$ kleiner als $k$ und Paul kann durch Entfernen einer geeigneten Anzahl Münzen das gute Paar mit dieser Differenz erreichen.
+        \newline
+        \newline
+        Das sind alle möglichen Fälle. Somit haben wir gezeigt, dass auch $(a_{n+1},b_{n+1})$ gut ist.
+    \end{itemize}
+    
+    Nun verwenden wir alle diese Erkenntnisse, um zu zeigen, dass die Folge $(m_k)_{k\geq 1}$ niemals periodisch werden kann:
+    \newline
+    Nehme an, die Folge $(m_k)_{k\geq K}$ sei periodisch mit Periode $c \geq 1$. Wir definieren uns $d = a_{K+c}-a_K$ und bemerken (induktiv), dass $a_{k+nc}=a_k + nd$ gilt für alle $k \geq K$ und $n \in \N$. Zudem gilt $d > c$, weil sonst aufgrund der Periodizität jede natürliche Zahl grösser als $K$ in der Menge $A$ enthalten wäre und somit die Menge $B$ endlich wäre, was offensichtlich absurd ist. Also gibt es ein $n \in \N$, das $n(d-c) \geq K$ erfüllt. Für dieses $n$ gilt jedoch:
+    \[
+    b_{nd} = a_{nd} - nd = a_{n(d-c)}
+    \]
+    Also ein Widerspruch zu $A$ und $B$ disjunkt! Somit sind wir fertig.
+\end{enumerate} 
+
+\textbf{Zweite Lösung:} (Linus)
+Wie in der ersten Lösung zeigen wir, dass $A^{(0)}:=\{a\in\N_0\ |\ \exists 0\leq b\leq a:\ (a,b)\text{ gut}\}=\{a_0,a_1,…\}$ (wobei $a_0<a_1<…$) unendlich ist. Darüber hinaus bemerken wir, dass falls $(a,b)$ und $(a’,b’)$ gut sind und zusätzlich $a=a’$ oder $b=b’$ oder $a-b=a’-b’$, dann gilt $(a,b)=(a’,b’)$. Das führt dazu, dass für jedes $a_k\in A^{(0)}$ genau ein $b_k\in\N_0$ existiert sodass $(a_k,b_k)$ gut ist; per Definition von $A^{(0)}$ gilt zusätzlich $a_k\geq b_k$. Darüber hinaus folgt, dass wenn wir $B^{(0)}:=\{b_0,b_1,…\}$ setzen, wir $A^{(0)}\cap B^{(0)}=\{0\}$ haben, da falls $a_k=b_l$ mit $k,l>0$ die Paare $(a_l,a_k)$ und $(b_k,a_k)$ gut sind, aber auch $b_k<a_k=b_l<a_l$, Widerspruch. Zeigen wir nun per starker Induktion, dass für alle $k\geq 1$ folgendes gilt:
+\begin{enumerate}
+\item[(i)] $\{0,1,…,b_k\}\subset\{a_0,…,a_k\}\cup\{b_0,…,b_k\}$
+\item[(ii)] $a_k-b_k=k$
+\item[(iii)] $$
+(a_k,b_k)=
+\begin{cases}
+(a_{k-1},b_{k-1})+(2,1) & \text{falls } b_{k-1}+1\notin\{a_0,…,a_{k-1}\}\\
+(a_{k-1},b_{k-1})+(3,2) & \text{ansonsten.}
+\end{cases}
+$$
+\end{enumerate}
+Die Aussage gilt für $k=1$ und $k=2$, nehmen wir also an, sie gilt für alle $i\leq k$ wobei $k\geq 2$. Nehmen wir an, es gäbe ein gutes Paar $(a_k+1,b)$, dann muss nach (i) der Induktionshypothese $b>b_k$, da alle Werte bis und mit $b_k$ schon in einem guten Paar mit kleinerem anderen Stapel auftauchen. Dann haben wir aber $a_k+1-n\leq k$, was ein Widerspruch ist, da diese Differenz schon von einem kleineren guten Paar besetzt ist, nach (ii) der Induktionshypothese. Wir machen nun eine Fallunterscheidung.\\
+Fall 1: $b_k+1\notin\{a_0,…,a_k\}$\\
+Wir zeigen, dass $(a_k+2,b_k+1)$ gut ist, und somit $(a_{k+1},b_{k+1})=(a_k,b_k)+(2,1)$. Tatsächlich sind alle $(a_k+2,b_k+1-m)$ schlecht, da nach (i) $b_k+1-m$ schon in einem guten Paar mit kleinerem anderem Stapel auftaucht, $(a_k+2-m,b_k+1-m)$ ist schlecht da $m=1$ wegen dem obigen Argument nicht geht und da falls für $m\geq 2$ das Paar $(a_k+2-m,b_k+1-m)$ gut wäre, wir zwingend $(a_k+2-m,b_k+1-m)=(a_l,b_l)$ für ein $l\leq k$ hätten, was wegen $k+1=(a_k+2-m)-(b_k+1-m)=a_l-b_l=l$ nicht geht. Schliesslich ist auch $(a_k+2-m,b_k+1)$ schlecht, da erneut $m=1$ nicht geht, und falls $(a_k+2-m,b_k+1)$ gut ist und $m\geq 2$, dann kann $b_k+1$ nicht der kleinere Stapel sein da er sonst höchstens $b_k$ Steine enthalten könnte. Weil aber $b_k+1\leq b_k+k=a_k$ muss somit $b_k+1\in\{a_0,…,a_k\}$, was unserer Annahme widerspricht.\\
+Fall 2: $b_k+1\in\{a_0,…,a_k\}$\\
+Wir zeigen zuerst, dass $a_{k+1}\geq a_k+3$. Dazu nehmen wir an, es gäbe ein gutes Paar $(a_k+2,b)$. Da alle Werte bis und mit $b_k$ schon in einem guten Paar vorkommen wobei der andere Stapel strikt weniger als $a_k+2$ Steine hat, muss $b>b_k$ gelten. Da nach Annahme $b_k+1\in\{a_0,…,a_k\}$ ist $b=b_k+1$ auch nicht möglich. Somit gilt aber $a_k+2-b\leq a_k+2-(b_k+2)=k$, was erneut ein Widerspruch ist, da diese Differenz schon von einem kleineren guten Paar besetzt ist. Zeigen wir nun, dass $(a_k+3,b_k+2)$ gut ist und somit $(a_{k+1},b_{k+1})=(a_k,b_k)+(3,2)$. Tatsächlich ist $(a_k+3,b_k+2-m)$ schlecht da alle Werte bis und mit $b_k+1$ schon in einem kleineren guten Paar vorkommen, $(a_k+3-m,b_k+2-m)$ ist schlecht da wir $m=1$ resp. $m=2$ schon zu Beginn dieses Falls resp. zu Beginn der Induktion ausgeschlossen haben, und falls $(a_k+3-m,b_k+2-m)$ gut ist mit $m\geq 3$, so gilt zwingend $(a_k+3-m,b_k+2-m)=(a_l,b_l)$ für ein $l\leq k$, was wegen $k+1=(a_k+3-m)-(b_k+2-m)=a_l-b_l=l$ widersprüchlich ist. Schliesslich ist auch $(a_k+3-m,b_k+2)$ schlecht, da wir $m=1$ und $m=2$ schon ausgeschlossen haben, und falls $(a_k+3-m,b_k+2)$ mit $m\geq 3$ gut ist, so muss $b_k+2$ der grössere der beiden Stapel sein, da er sonst höchstens $b_k$ Steine enthalten könnte. Somit gilt, da $b_k+2\leq b_k+k\leq a_k$, dass $b_k+2\in\{a_0,…,a_k\}$, was unserer Annahme $b_k+1\in\{a_0,…,a_k\}$ widerspricht, da nach (iii) der Induktionshypothese die Differenz zweier Werte aus $\{a_0,…,a_k\}$ nicht gleich $1$ sein kann.
+Somit haben wir (iii) für $k+1$ bewiesen, woraus (i) und (ii) direkt folgen. Zusätzlich bemerken wir, dass aus (i) $\N_0=A^{(0)}\cup B^{(0)}$ folgt.
+Berechnet man die ersten paar Werte der Folgen $(a_k)$ und $(b_k)$, so kommt man zur Vermutung, dass die folgende, etwas anschaulichere Rekursionsformel gilt:
+$$
+(a_k,b_k)=
+\begin{cases}
+(a_{k-1},b_{k-1})+(2,1) & \text{falls } k-1\in\{a_0,…,a_{k-1}\}\\
+(a_{k-1},b_{k-1})+(3,2) & \text{ansonsten.}
+\end{cases}
+$$
+Um diese zu zeigen brauchen wir folgendes Zwischenresultat, welches wir per Induktion für alle $k\geq 1$ zeigen: anscheinend gilt $b_{b_k}+1=a_k$ und $b_{b_k+1}=a_k+1$. Die beiden Gleichungen gelten für $k=1$, nehmen wir daher an, sie gelten für ein $k\geq 1$. Wir machen die gleiche Fallunterscheidung wie vorher.\\
+Fall 1: $b_k+1\notin\{a_0,…,a_k\}$\\
+Wir haben also $b_{k+1}=b_k+1$ und somit $b_{b_{k+1}}+1=b_{b_k+1}+1=a_k+1+1=a_{k+1}$ nach unserer Induktionshypothese. Da aber somit insbesondere $b_{b_k+1}+1\in\{a_0,…,a_{b_k+1}\}$, gilt dank unserer schon bewiesenen Rekursionsformel, dass $b_{b_{k+1}+1}=b_{b_k+2}=b_{b_k+1}+2=a_k+3=a_{k+1}+1$.\\
+Fall 2: $b_k+1\in\{a_0,…,a_k\}$\\
+In diesem Fall gilt $b_{k+1}=b_k+2$ und $a_{k+1}=a_k+3$. Nach Induktionshypothese haben wir $b_{b_k+1}+1=a_k+2<a_{k+1}$ und somit $b_{b_k+1}+1\notin\{a_0,…,a_{b_k+1}\}$. Daraus folgt $b_{b_{k+1}}+1=b_{b_k+2}+1=b_{b_k+1}+1+1=a_k+1+1+1=a_{k+1}$. Da somit insbesondere auch $b_{b_k+2}+1\in\{a_0,…,a_{b_k+2}\}$ folgt, erhalten wir auch $b_{b_{k+1}+1}=b_{b_k+3}=b_{b_k+2}+2=a_{k+1}+1$. Somit sind die beiden Gleichungen bewiesen.\\
+Nun können wir folgende Äquivalenz zeigen: $b_k+1\in\{a_0,…,a_k\}\iff k\notin\{a_0,…,a_k\}$. Denn falls $b_k+1=a_l$ dann folgt $l\geq 1$ und somit $b_k+1=a_l=b_{b_l}+1$ und somit $b_k=b_{b_l}\implies k=b_l\implies k\notin\{a_0,…,a_k\}$. Und falls $k\notin\{a_0,…,a_k\}$, so gibt es $l\geq 1$ mit $k=b_l$ und daher $b_k+1=b_{b_l}+1=a_l\in\{a_0,…,a_k\}$. Diese Äquivalenz führt direkt zur anschaulicheren Rekursionsformel. Definiert man nun $s_k=|\{l\geq 0\ |\ a_l<k\}|$ so folgt daraus wiederum $a_k=3(k-s_k)+2s_k=3k-s_k$. Kommen wir nun endlich zum eigentlichen Beweis.\\
+Nehmen wir an, es gibt ein $K$ sodass $(m_k)_{k\geq K}$ periodisch ist mit Periode $c\geq 1$. Setzt man $A:=a_{K+c}-a_K$, so folgt aus der Periodizität, dass $a_{k+c}-a_k=A$ für alle $k\geq K$. Wir bemerken ebenfalls, dass falls $k\geq a_K$, dann enthält $\{l\geq 0\ |\ k\leq a_l<k+A\}$ genau $c$ Elemente, woraus $s_{k+A}=s_k+c$ für alle $k\geq a_K$ folgt (am besten überlegt man sich das mit einer Zeichnung). Sei nun $k\geq\max\{K,a_K\}$, dann erhalten wir
+$$
+a_k+A^2=a_{k+cA}=3(k+cA)-s_{k+cA}=3(k+cA)-s_k-c^2
+$$
+und somit
+$$
+A^2-3cA+c^2=3k-a_k-s_k=0.
+$$
+Daraus erhalten wir jedoch schliesslich, dass $\frac{A}{c}\in\{\varphi^{-2},\varphi^2\}$, wobei $\varphi$ der goldene Schnitt ist. Das ist ein Widerspruch, da $\varphi^{-2}$ und $\varphi^2$ irrational sind.
+
+\newpage
+\textbf{Marking scheme:}
+
+\begin{enumerate}
+    \item Erste Lösung:
+\begin{itemize}
+    \item +1P: $A$ is infinite
+    \item +1P: Geometric: In every row and coloumn is exactly. Algebraic: $A \bigsqcup B = \N$
+    \item +1P: $a_k - b_k = k$
+    \item +1P: $(a_{k+1},b_{k+1}) = (a_k +2, b_k +1)$ or $(a_k+3,b_k+2)$
+    \item +2P: Idea to mirror the minimal period length
+    \item +1P: finish
+\end{itemize}
+\end{enumerate}

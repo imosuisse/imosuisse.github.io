@@ -1,0 +1,31 @@
+\en{
+Let $(m, n)$ be a pair of positive integers. Julia has carefully planted $m$ rows of $n$ dandelions in an $m \times n$ array in her back garden. Now, Jana and Viviane decide to play a game with a lawnmower they just found. Taking alternating turns and starting with Jana, they can mow down all the dandelions in a straight horizontal or vertical line (and they must mow down at least one dandelion!). The winner is the player who mows down the final dandelion. Determine all pairs $(m,n)$ for which Jana has a winning strategy.
+
+\bigskip
+
+\textbf{Answer:}
+Jana has a winning strategy if and only if $m+n$ is odd or if one of $m, n$ is equal to $1$. 
+
+\bigskip
+
+\textbf{Solution (Paul):}
+
+First we make two general observations about the problem. Firstly, since the game always finishes in a finite number of moves there is always a winner and consequently a player who has a winning strategy at the start. Secondly, when a player mows down a row or a column, it does not matter which row or column is chosen (as long as it is still a row respectively a column). The remaining dandelions are affected by further moves in the exact same manner no matter which rows or columns were previously mowed down. \par 
+Due to the second observation, each move results in a situation which can be viewed as the start of a game, but this time the other player begins and either $m$ or $n$ is decreased by $1$. Therefore we can deduce which player has a winning strategy by considering the smaller array. This suggests an inductive approach to the problem. \par
+If $m=1$ or $n=1$, then Jana can clearly win the game with a single move. Now we prove the answer above using induction over $m+n$, so suppose that $m+n$ is odd and $m,n>1$. The case $m+n=1$ is impossible and $m+n=3$ has already been taken care of. If $m+n \geq 5$, then one of $m,n$ is at least $3$ and it is possible for Jana to mow down a line such that at least $2$ rows and $2$ columns are left. Then Viviane cannot win in her next move and afterwards the sum of the number of rows and columns will be odd again. By induction, we know that Jana will have a winning strategy for the remainder of the game. \par
+If $m+n$ is even and $m,n>1$, then Jana's first move will result in a configuration for which Viviane has a winning strategy.
+
+\newpage
+
+\textbf{Marking scheme}
+
+\begin{itemize}
+    \item 1P: Dealing with the case $m=1$ or $n=1$.
+    \item 1P: Stating the rest of the correct answer.
+    \item 1P: Noting that it does not matter which row or column is chosen in a move.
+    \item 1P: Noting that after a move we get a new game with $m$ or $n$ decreased by $1$ and opposite starting player.
+    \item 2P: Proving that Jana has a winning strategy if $m+n$ is odd and $m,n>1$.
+    \item 1P: Proving that Jana does not have a winning strategy if $m+n$ is even and $m,n>1$
+\end{itemize}
+
+}

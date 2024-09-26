@@ -1,0 +1,64 @@
+Find all polynomials $Q$ with integer coefficients such that every prime number $p$ and any two positive integers $a,b$ with $p\div ab-1$ satisfy
+\[
+p\div Q(a)Q(b)-1.
+\]
+
+\textbf{Answer}: The constant polynomials $Q\equiv \pm 1$ and $Q(x)=\pm x^n$ for $n\geq 1$.
+
+\textbf{Solution 1}(Arnaud)
+
+First observe that the only constant solutions are the polynomials $Q\equiv \pm 1$. From now on let $Q$ be a solution of degree $n\geq 1$. 
+
+We fix $a$ and take $p>a$. Let $b=a^{-1}$ be the unique inverse of $a$ modulo $p$ such that $1\leq a^{-1}<p$. Clearly $a^{-1}$ depends on both $p$ and $a$. But what about $Q(a^{-1})$ ? Does it still depend on $p$ ? Thinking of $Q$ now as a function $\R\to \R$ that maps integers to integers we can make the following crucial observation. Let $Q(x)=c_nx^n+\ldots+c_0$. Then
+\[
+a^nQ(a^{-1})\equiv c_n+c_{n-1}a+\ldots+c_0a^n\pmod{p}.
+\]
+The latter is nothing but $a^n$ times the evaluation of $Q$ on the real number $1/a$ (careful, $1/a\neq a^{-1}$). So if we denote $P(x):=x^nQ(1/x)$, we obtain
+\[
+p\div Q(a)Q(a^{-1})-1\quad\Rightarrow\quad p\div a^nQ(a)Q(a^{-1})-a^n\quad\Rightarrow\quad p\div Q(a)P(a)-a^n.
+\]
+Now, the term $Q(a)P(a)-a^n$ does not depend on $p$ anymore ! Since the above relation holds for all $p>a$, we must have $Q(a)P(a)=a^n$ for all $a$. Since $P$ is also a polynomial with integer coefficients, we can treat $Q(a)P(a)=a^n$ as a relation of polynomials with integers coefficients. So, looking at the degree we get
+\[
+n=deg(a^n)=deg(QP)=deg(P)+deg(Q)=deg(P)+n.
+\]
+Hence $P$ has degree zero, or said differently $P$ is constant. This implies $Q(a)=ca^n$ for some constant $c$.
+
+The initial relation implies, for $a=b=1$, that $Q(1)=\pm 1$, hence $c=\pm 1$. 
+
+Clearly, $Q(x)=\pm x^n$ are solutions for all $n\geq 1$.
+
+\textbf{Solution 2} (David)
+
+This approach is more algebraic, even analytic. Clearly the only constant solutions are $Q\equiv \pm 1$ and all monomials $Q(x)=\pm x^n$ are solutions. Moreover, observe that $Q$ is a solution if and only if $-Q$ is as well. So we can assume that the leading coefficient of $Q$ is $c>0$.
+
+If $Q$ is a solution of degree $n\geq 1$ that is not of the form above, then there exists a polynomial $R$ with integer coefficients and of degree at most $n-1$ such that $Q(x)=cx^n+R(x)$ and ($c\neq 1$ or $R\neq 0$). Since the degree of $Q$ is $n$, there exists an integer $N$ such that for all $a\geq N$
+\[
+a^{n-1}<Q(a)<a^{n+1}.
+\]
+Moreover since $c\neq 1$ or $R\neq 0$, then up to increasing the value of $N$, we can assume that for all $a\geq N$ it holds $Q(a)\neq a^{n}$. In particular if $a\geq N$ is prime, then $Q(a)$ is not a power of $a$ and is therefore divisible by some other prime $p$. Let $b$ be the inverse of $a$ modulo $p$. So $p\div ab-1$ and $p\div Q(a)$. This is a contradiction. So the only solutions are the ones given above.
+
+\newpage 
+
+\textbf{Marking scheme}
+
+1P: stating that the set of \textbf{all} solutions is $Q\equiv \pm 1$ and $Q(x)=\pm x^n$ and verification 
+
+Solution 1
+\begin{itemize}
+    \item 1P: trying to connect $Q(a^{-1})$ and $Q(1/a)$ modulo $p$
+    \item 2P: introducing $P(x)=x^nQ(1/x)$
+    \item 1P: obtaining $p\div Q(a)P(a)-a^n$
+    \item 1P: concluding that $Q(a)=ca^n$
+    \item 1P: proving $c=\pm 1$ and concluding
+\end{itemize}
+
+Solution 2
+\begin{itemize}
+    \item 1P: the idea of finding $p$ such that there exists $a\neq 0 \pmod p$ with $p\div Q(a)$
+    \item 1P: the idea that it is actually enough to find a prime $q$ such that $Q(q)$ is not a power of $q$
+    \item 1P: asymptotic estimations of $Q$ with higher or lower degree terms
+    \item 2P: proving that $Q(q)$ is not a power of $q$ for large prime $q$
+    \item 1P: conclusion
+\end{itemize}
+
+

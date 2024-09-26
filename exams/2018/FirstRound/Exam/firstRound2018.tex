@@ -1,0 +1,152 @@
+%& -job-name=vorrunde_2018_en-1
+% ^^^^^^^ change the last bit to e.g. de-2 for second day, german ^^^^^^^^ 
+
+\documentclass[language=german,style=exam-preliminary]{smo} %language is irrelevant in this case
+
+\examtime{%
+    \de{3 Stunden}%
+    \fr{3 heures}%
+    \ita{3 ore}%
+    \en{3 hours}%
+}
+\examdate{\IfStrEq*{\day}{1}{%
+        \de{13. Januar 2018}%
+        \fr{13 janvier 2018}%
+        \ita{13 gennaio 2018}%
+        \en{13 January 2018}%
+    }{}
+}
+\title{%
+    \de{SMO - Vorrunde 2018}%
+    \fr{OSM - Tour préliminaire 2018}%
+    \ita{OSM - Turno preliminare 2018}%
+    \en{SMO - Preliminary round 2018}%
+}
+\examplace{%
+    \de{Lausanne, Lugano, Zürich}%
+    \fr{Lausanne, Lugano, Zürich}%
+    \ita{Lausanne, Lugano, Zürich}%
+    \en{Lausanne, Lugano, Zürich}%
+}
+
+\begin{document}
+
+\begin{problemday} % DAY 1
+
+\vspace{-3mm}
+\center{\section*{\de{Geometrie}\fr{Géométrie}\ita{Geometria}\en{Geometry}}} % GEOMETRY
+\vspace{-3mm}
+
+\begin{enumerate}
+\item[\textbf{G1)}]
+\de{Sei $ABC$ ein Dreieck und sei $\gamma = \angle ACB$, sodass $\gamma /2 < \angle BAC$ und $\gamma/2 < \angle CBA$ gilt. Sei $D$ der Punkt auf der Strecke $BC$, sodass $\angle BAD = \gamma/2$ gilt. Sei $E$ der Punkt auf der Strecke $CA$, sodass $\angle EBA = \gamma/2$ gilt. Ausserdem sei $F$ der Schnittpunkt der Winkelhalbierenden von $\angle ACB$ und der Strecke $AB$. Zeige, dass $EF + FD = AB$ gilt.
+}%
+\fr{Soit $ABC$ un triangle et soit $\gamma = \angle ACB$. Supposons que les inégalités $\gamma/2 < \angle BAC$ et $\gamma/2 < \angle CBA$ soient vérifiées. Soit $D$ le point sur le côté $BC$ tel que $\angle BAD = \gamma/2$. Soit $E$ le point sur le côté $CA$ tel que $\angle EBA = \gamma/2$. De plus soit $F$ le point d'intersection de la bissectrice de l'angle $\angle ACB$ avec le côté $AB$. Montrer que $EF + FD = AB$.}%
+\ita{}%
+\en{Let $ABC$ be a triangle and let $\gamma = \angle ACB$. Assume that $\gamma /2 < \angle BAC$ and $\gamma/2 < \angle CBA$ hold. Let $D$ be the point on the side $BC$ such that $\angle BAD = \gamma/2$. Let $E$ be the point on the side $CA$ such that $\angle EBA = \gamma/2$. Let furthermore $F$ denote the intersection point of the angle bisector of $\angle ACB$ with the side $AB$. Prove that $EF + FD = AB$.}%
+
+\item[\textbf{G2)}]
+\de{Sei $ABCD$ ein Sehnenviereck mit Umkreismittelpunkt $O$, sodass die Diagonalen $AC$ und $BD$ senkrecht aufeinander stehen. Sei $g$ die Spiegelung der Diagonalen $AC$ an der Winkelhalbierenden von $\angle BAD$. Zeige, dass der Punkt $O$ auf der Geraden $g$ liegt.}%
+\fr{Soit $ABCD$ un quadrilatère inscrit et $O$ le centre de son cercle circonscrit. Supposons que les diagonales $AC$ et $BD$ soient perpendiculaires. Soit $g$ la réflexion de la diagonale $AC$ par rapport à la bissectrice de l'angle $\angle BAD$. Montrer que la droite $g$ passe par le point $O$.}%
+\ita{}%
+\en{Let $ABCD$ be an inscribed quadrilateral with circumcenter $O$ such that the diagonals $AC$ and $BD$ are perpendicular. Let $g$ be the line symmetric of the diagonal $AC$ with respect to the angle bisector of $\angle BAD$. Prove that $O$ lies on the line $g$.}%
+
+\end{enumerate}
+
+\vspace{-3mm}
+\center{\section*{\de{Kombinatorik}\fr{Combinatoire}\ita{Calcolo combinatorio}\en{Combinatorics}}} % COMBINATORICS
+\vspace{-3mm}
+
+\begin{enumerate}
+\item[\textbf{\de{K}\fr{C}\ita{C}\en{C}1)}] 
+\de{Das SMO-Land hat 1111 Einwohner. Die elf Spieler der Liechtensteiner Nationalmannschaft verteilen Autogramme an alle Einwohner, wobei kein Einwohner ein Autogramm doppelt erhält (d.h. jeder Einwohner erhält von jedem Spieler entweder kein oder ein Autogramm).
+\begin{enumerate}[(a)] 
+\item Wie viele Möglichkeiten gibt es, welche Autogramme ein Einwohner erhalten kann?
+\item Nach dem Verteilen stellen die Einwohner fest, dass keine zwei von ihnen von genau denselben Spielern Autogramme erhalten haben. Zeige, dass es zwei Einwohner gibt, die zusammen von jedem Spieler genau ein Autogramm besitzen.
+\end{enumerate}}%
+\fr{À OSM-Land vivent 1111 habitants. Les onze joueurs de l'équipe de football du Liechtenstein distribuent des autographes à tous les habitants de sorte qu'aucun habitant ne reçoive un même autographe à double (c'est-à-dire: chaque habitant, pour un joueur donné, soit reçoit un autographe de sa part, soit n'en reçoit pas).
+\begin{enumerate}[(a)] 
+\item Combien de lots différents d'autographes un habitant peut-il recevoir?
+\item Après la distribution, les habitants constatent qu'il n'existe pas deux d'entre eux qui ont reçu leurs autographes précisément de la part des mêmes joueurs. Montrer qu'il existe deux habitants qui, s'ils mettent en commun leurs autographes, ont exactement un autographe de chaque joueur.
+\end{enumerate}}%
+\ita{}%
+\en{SMO-Land has 1111 inhabitants. The eleven players of the national football team of Liechtenstein are distributing autographs to the inhabitants such that everybody gets at most one autograph from each player (i.e. every inhabitant gets from each player either one or zero autograph).
+\begin{enumerate}[(a)] 
+\item How many distinct sets of autographs can be distributed by the players to some given inhabitant?
+\item After the distribution, it is noted that no two inhabitants received autographs from the exact same players. Prove that there are two inhabitants who, after putting together all their autographs, have exactly one autograph of each player.
+\end{enumerate}}%
+
+\item[\textbf{\de{K}\fr{C}\ita{C}\en{C}2)}]
+\de{Ein Hochhaus hat $7$ Lifte, wobei aber jeder nur in $6$ Stockwerken hält. Trotzdem gibt es für je zwei Stockwerke immer einen Lift, der die beiden Stockwerke direkt verbindet.
+
+Zeige, dass das Hochhaus höchstens $14$ Stockwerke haben kann, und dass ein solches Hochhaus mit 14 Stockwerken tatsächlich realisierbar ist.}%
+\fr{Dans une tour il y a $7$ ascenseurs qui s'arrêtent chacun à seulement $6$ étages. Cependant, pour deux étages distincts il est toujours possible de les relier à l'aide d'un seul ascenseur.
+
+Montrer que cette tour peut avoir au maximum $14$ étages et qu'il est possible de construire une telle tour de $14$ étages.}%
+\ita{}%
+\en{A building has $7$ lifts and each lift only stops at $6$ floors. However, for any two floors there is always a lift connecting them directly.
+
+Prove that this building has at most $14$ floors and that one can build such a building with $14$ floors.}%
+
+\end{enumerate}
+
+\vspace{-3mm}
+\center{\section*{\de{Zahlentheorie}\fr{Théorie des nombres}\ita{Teoria dei numeri}\en{Number Theory}}} % NUMBER THEORY
+\vspace{-3mm}
+
+\begin{enumerate}
+\item[\textbf{\de{Z}\fr{N}\ita{N}\en{N}1)}]
+\de{Sei $n\geq 2$ eine natürliche Zahl. Seien $d_1, \ldots, d_r$ alle verschiedenen positiven Teiler von $n$, die kleiner sind als $n$ selbst. Bestimme alle $n$, für die gilt:
+\[
+\kgV(d_1, \ldots, d_r) \neq n.
+\]
+
+\textit{Bemerkung: Für $n=18$ hätte man beispielsweise $d_1 = 1, d_2 = 2, d_3 = 3, d_4 = 6, d_5=9$ und somit $\kgV(1,2,3,6,9) = 18$.}}%
+\fr{Soit $n\geq 2$ un entier naturel. Soient $d_1, \ldots, d_r$ tous les diviseurs positifs de $n$ qui sont strictement plus petits que $n$. Déterminer tous les $n$ pour lesquels
+\[
+\kgV(d_1, \ldots, d_r) \neq n.
+\]
+
+\textit{Remarque: pour $n=18$ on aurait par exemple $d_1 = 1, d_2 = 2, d_3 = 3, d_4 = 6, d_5=9$ et ainsi $\kgV(1,2,3,6,9) = 18$.}}%
+\ita{}%
+\en{Let $n\geq 2$ be a positive integer. Let $d_1, \ldots, d_r$ be all the positive divisors of $n$ that are smaller that $n$. Determine every $n$ for which
+\[
+\kgV(d_1, \ldots, d_r) \neq n.
+\]
+\textit{Remark: for $n=18$ we have for instance $d_1 = 1, d_2 = 2, d_3 = 3, d_4 = 6, d_5=9$ and thus $\kgV(1,2,3,6,9) = 18$.}}%
+
+\item[\textbf{\de{Z}\fr{N}\ita{N}\en{N}2)}]
+\de{Seien $m$ und $n$ natürliche Zahlen und $p$ eine Primzahl, sodass $m < n <p$ gilt. Weiter gelte:
+\[
+p \div m^2+1\quad\text{und}\quad p\div n^2+1.
+\]
+Zeige, dass gilt:
+\[
+p \div mn -1.
+\]}%
+\fr{Soient $m$ et $n$ des entiers naturels et soit $p$ un nombre premier tels que $m < n < p$. Supposons de plus que
+\[
+p \div m^2+1\quad\text{et}\quad p\div n^2+1.
+\]
+Montrer que
+\[
+p \div mn -1.
+\]}%
+\ita{}%
+\en{Let $m$ and $n$ be positive integers and $p$ a prime number for which $m<n<p$. Assume furthermore 
+\[
+p \div m^2+1\quad\text{and}\quad p\div n^2+1.
+\]
+Prove that
+\[
+p \div mn -1.
+\]}%
+\end{enumerate}
+
+\end{problemday} % END DAY 1
+
+%\vfill
+
+%\center{\de{Viel Glück!}\fr{Bonne chance!}\ita{Buona fortuna!}\en{Good luck!}}
+
+\end{document}

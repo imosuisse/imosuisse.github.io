@@ -1,0 +1,50 @@
+\de{Eine Gruppe von Kindern sitzt im Kreis. Am Anfang hat jedes Kind eine gerade Anzahl Bonbons. In jedem Schritt muss jedes Kind die Hälfte seiner Bonbons dem Kind zu seiner Rechten abgeben. Sollte ein Kind nach einem Schritt eine ungerade Anzahl Bonbons haben, bekommt es vom Kindergärtner ein zusätzliches Bonbon geschenkt. Zeige, dass nach einer endlichen Anzahl Schritten alle Kinder gleich viele Bonbons haben.
+
+\textbf{Erste Lösung:} (David by Patrick):
+Der Vollständigkeit halber bemerken wir kurz, dass nach jedem Zug alle Kinder stets eine gerade Anzahl an Bonbons haben.
+Wir bezeichnen mit $2m_i$ die Anzahl Bonbons, die das Kind mit den wenigsten Bonbons vor dem $i$-ten Schritt hat und analog dazu $2M_i$ die Anzahl Bonbons, die das Kind mit den. meisten Bonbons vor dem $i$-ten Schritt hat. Offensichtlich gilt $2m_i \leq 2M_i$ für jedes $i \in \N$. Falls irgendwann Gleichheit gilt, haben alle Kinder gleich viele Bonbons und wir sind fertig.
+\\ \\
+\textbf{Lemma:} Es gilt $2m_{i+1} \geq 2m_{i}$ und $2M_{i+1} \leq 2M_{i}$.
+\\ \\
+\textbf{Beweis:} Im $i$-ten Schritt erhält jedes Kind mindestens $m_i$ und höchstens $M_i$ Bonbons von seinem linken Nachbar und behält selbst mindestens $m_i$ und höchstens $M_i$ Bonbons. Das allfällige Zusatzbonbon vom Kindergärtner ändert dabei fürs Maximum nichts, weil $2M_i$ gerade ist.
+\\
+\\
+Wegen $M_i \geq m_i \; \forall i \in \N$ und unserem Lemma müssen die beiden Folgen ab irgendeinem Zeitpunkt einen konstanten Wert annehmen. Seien $M$ und $m$ diese Werte. Falls $M=m$ gilt, sind wir fertig. Sei nun $M>m$. In jedem Schritt betrachten die Anzahl \textit{trauriger} Kinder, die genau $2m$ Bonbons besitzen. Den Rest nennen wir \textit{glücklich}. Da nach Annahme nicht alle Kinder traurig sind, gibt es ein trauriges Kind, dessen linker Nachbar mehr als $2m$ Bonbons besitzt. Dieses Kind ist nach dem nächsten Zug sicher glücklich, da es selbst $m$ Bonbons behält und von seinem Nachbarn mehr als $m$ Bonbons bekommt. Zudem kann ein glückliches Kind niemals traurig werden, weil es selbst mehr als $m$ Bonbons behält und von seinem linken Nachbarn mindestens $m$ Bonbons erhält. Somit verringert sich die Anzahl trauriger Kinder um mindestens eins. Das bedeutet aber, dass irgendwann alle Kinder glücklich sind und die minimale Anzahl Bonbons pro Kind grösser geworden ist. Dies ist ein Widerspruch zu $m$ konstant! Also muss $M=m$ gelten.
+\\ \\
+\textbf{Zweite Lösung:} (David by Cyril)
+ Sei $n$ die Anzahl Kinder. Analog wie in der ersten Lösung zeigen wir, dass $M_i$ monoton fallend ist. Da die Folge sicher nicht negativ werden kann, wird sie irgendwann konstant und wir nennen diesen Wert wieder $M$. Nun betrachten wir für jeden Zug zwei Fälle:
+ \\ \\
+ \textbf{Fall 1:} Die Anzahl Bonbons wird insgesamt grösser; damit wächst auch die durchschnittliche Anzahl Bonbons pro Kind um mindestens $\frac{1}{n}$ (eigentlich mehr, aber das ist hier egal).
+ \\ \\
+ \textbf{Fall 2:} Der Kindergärtner verteilt in dieser Runde kein zusätzliches Bonbon. In diesem Fall können wir analog zur ersten Lösung zeigen, dass die Anzahl Kinder, die genau $2M$ Bonbons besitzt, abnehmen muss.
+ \\ \\
+ Da die durchschnittliche Anzahl Bonbons nicht grösser werden kann als $M$, kann der erste Fall nicht unendlich oft eintreten. Sobald der erste Fall nicht mehr eintritt, zeigen wir analog zur ersten Lösung, dass auch der zweite Fall nicht beliebig oft eintreten kann, weil sonst irgendwann alle Kinder weniger als $2M$ Bonbons haben (falls nicht ohnehin schon alle Kinder gleich viele Bonbons haben).
+ \\ \\
+
+\textbf{Marking scheme (Erste Lösung):}
+\begin{enumerate}
+\item 1P: Bemerkung, dass $M_i$ monoton fallend oder $m_i$ monoton wachsend ist
+\item 1P: Beweis für diese Aussage(n)
+\item 4P: Beweis, dass das $m_i$ strikt grösser wird, falls nicht alle Kinder gleichviele Bonbons haben
+\begin{itemize}
+    \item davon 1P: Bemerkung / Idee, dass dies der Fall ist
+    \item davon 1P: Betrachtung eines traurigen Kinds mit glücklichem linken Nachbar
+    \item davon 1P: Beweis, dass die Anzahl trauriger Kinder 0 erreicht
+\end{itemize}
+\item 1P: fertig machen 
+\item -1P: Fehlende Begründungen etc.
+\\
+\\
+\textbf{(Zweite Lösung):}
+\item 1P: Bemerkung, dass $m_i$ monoton wachsend ist
+\item 1P: Begründung dafür
+\item 4P: Beweis, dass entweder der Durchschnitt grösser wird oder $M_i$ kleiner.
+\begin{itemize}
+    \item davon 1P: Idee für diese Fallunterscheidung
+    \item davon 1P: Betrachtung eines Kindes mit $2M$ Bonbons, das einen linken Nachbarn mit weniger Bonbons hat
+    \item davon 1P: Beweis, dass die Anzahl Kinder mit $2M$ Bonbons abnimmt 
+\end{itemize}
+\item 1P: fertig machen
+\item -1P: Fehlende Begründungen etc.
+\end{enumerate}
+}

@@ -1,0 +1,46 @@
+\de{
+On appelle un nombre naturel $n \geq 2$ \emph{résistant} s'il est premier avec la somme de tous ses diviseurs ($1$ et $n$ inclus). Quelle est la longueur maximale d'une suite de nombres résistants consécutifs ?
+
+\textbf{Réponse:} La longueur maximale d'une telle suite est $5$.
+
+\textbf{Solution:} (Louis) Avant toute chose dans ce genre de problèmes il est important d'essayer les petites valeurs de $n$, en espérant que cela nous apporte des idées pour résoudre le problème. On constate que parmi les nombres entre $2$ et $30$ les nombres résistants sont $2$, $3$, $4$, $5$, $7$, $8$, $9$, $11$, $13$, $16$, $17$, $19$, $21$, $23$, $25$, $27$, $29$. On constate d'une part que parmi ces nombres la plus longue suite de nombre résistants consécutifs est la suite $2, 3, 4, 5$, de longueur $4$. La longueur recherchée vaut donc au moins $4$, et il faut déterminer s'il existe quelque part une suite plus longue. D'autre part il semble qu'il existe peu de nombre pairs résistants. Il est donc intéressant d'étudier les nombres pairs pour voir ce qu'il se passe exactement.
+
+Pour qu'un nombre pair $n$ soit résistant, il est nécessaire (mais pas suffisant) que la somme de ses diviseurs soit impaire. Clairement la somme des diviseurs de $n$ est impaire si et seulement si $n$ a un nombre impair de diviseurs impairs. On peut écrire $n = 2^k m$ avec $m$ impair, et alors les diviseurs impairs de $n$ sont les diviseurs de $m$. Il faut ainsi que $m$ ait un nombre impair de diviseurs, autrement dit que $m$ soit un carré parfait. Puisque $2^k$ est soit un carré parfait, soit le double d'un carré parfait, on trouve alors que pour qu'un nombre pair soit résistant il faut qu'il soit de la forme $n = s^2$ ou $n = 2 s^2$.
+
+Puisque les carrés parfaits sont plutôt rares parmi les nombres entiers on s'attend à ce qu'il soit difficile de trouver beaucoup de nombres pairs successifs qui soient résistants. Essayons de formaliser cette intuition:\\
+Si $n$ et $n+2$ sont deux nombres pairs résistants, ils doivent en particulier être tous deux de la forme $s^2$ ou $2 s^2$.
+\begin{itemize}
+    \item Si $n = s^2$ et $n+2 = t^2$ on a $2 = t^2 - s^2 = (t-s)(t+s)$, mais comme les deux facteurs ont la même parité il est impossible que leur produit donne $2$.
+    \item Si $n = 2 s^2$ et $n+2 = 2 t^2$ on obtient $2 = 2 t^2 - 2 s^2$, qu'on peut simplifier en $1 = t^2-s^2 = (t-s)(t+s)$, la seule solution dans ce cas est $s=0$, qui est impossible car $n\geq 2$.
+\end{itemize}
+Pour que $n$ et $n+2$ soient deux nombres pairs résistants il faut donc que l'un des deux soit de la forme $s^2$ et l'autre soit de la forme $2 t^2$. Est-il possible que $n+4$ soit aussi résistant? Par la remarque précédente il faut pour que ce soit le cas que $n$ et $n+4$ soient tous les deux des carrés parfaits ou qu'ils soient tous les deux le double d'un carré parfait.
+\begin{itemize}
+    \item S'ils sont tous les deux des carrés parfaits on obtient $4 = t^2 - s^2 = (t-s)(t+s)$ et comme les deux facteurs ont la même parité on doit nécessairement avoir $(t-s) = (t+s) = 2$ et donc $s=0$, ce qui est impossible.
+    \item S'ils sont tous les deux le double d'un carré parfait on obtient $2 = t^2 - s^2$, et on a déjà prouvé plus haut que ce cas est impossible.
+\end{itemize}
+On remarque donc qu'il est impossible de trouver trois nombres pairs successifs qui soient tous résistants. On conclut donc qu'il ne peut exister aucune suite de longueur 6 ou plus.
+
+Nous nous trouvons maintenant dans une situation fréquente, où l'on sait que la réponse est $4$ ou $5$, sans être encore capable de dire laquelle est la bonne réponse. À partir de là il y a deux manières de continuer le problème: soit on essaie de trouver une suite de longueur $5$, soit un essaie de prouver qu'il n'existe aucune suite de longueur $5$. Dans le cas présent, comme on a une condition assez forte sur la forme que doivent avoir les deux nombres pairs de la suite il est intéressant dans un premier temps de chercher une suite de longueur $5$. Si on y parvient on a terminé le problème, et si on n'y parvient pas on peut essayer de trouver ce qui nous empêche de trouver une suite de longueur $5$ pour soit restreindre davantage les valeurs étudiées soit essayer de démontrer que ce ne sera jamais possible.
+
+Afin de trouver une telle suite il faut en premier lieu trouver deux nombres naturels $a$ et $b$ tels que $\abs{a^2 - 2b^2} = 2$. Ceux qui connaissent l'équation de Pell peuvent utiliser la formule qui donnent toutes les solutions à l'équation écrite ci-dessus, mais il est également possible sans cela de procéder par force brute, en essayant juste tous les nombres pour trouver les premières paires $(a, b)$ qui sont solution. Avant de commencer à chercher on peut encore constater que pour avoir une solution il faut que $a$ soit pair et proche de $\sqrt{2} b$, ce qui réduit le nombre de paires à tester. Quelle que soit la méthode utilisée on trouve que les premières solutions $(a, b)$ sont
+\[
+    (2, 1),\ (4, 3),\ (10, 7),\ (24, 17),\ (58, 41).
+\]
+La dernière paire est déjà difficile à trouver si on ne connaît pas la formule de Pell, mais ce n'est pas important car en essayant les 4 premières paires on trouve que $(24, 17)$ donne la suite $575, 576, 577, 578, 579$ et un rapide calcul montre que ces 5 nombres sont tous résistants, ce qui conclut la preuve.
+
+\textbf{Marking Scheme:}
+\begin{itemize}
+    \item 2P: \textbf{Trouver (avec justification) une suite de nombres résistants de longueur $5$.}
+    \item 5P: \textbf{Établir que la longueur maximale vaut au plus $5$.}
+    \begin{itemize}
+        \item 2P: Trouver la condition nécessaire pour qu'un nombre pair soit résistant.
+        \item 2P: Trouver la condition nécessaire pour que deux nombres pairs successifs soit résistants.
+        \item 1P: Exclure le cas où 3 nombres pairs successifs sont résistants et conclure.
+    \end{itemize}
+\end{itemize}
+
+Points partiels et pénalités:
+\begin{itemize}
+    \item 1P: Prouver une borne supérieure non optimale à la longueur de la suite.
+\end{itemize}
+}

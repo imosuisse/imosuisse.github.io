@@ -1,0 +1,295 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+
+
+
+
+
+% Schriftabkürzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge SMO Finalrunde 2009} \\
+\medskip erste Prüfung - 13.März 2009
+\end{center}
+\vspace{8mm}
+Zeit: 4 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{1.}] Se considera un hexágono regular $P$. Por und punto $A$ dado,  $d_1 \leq d_2 \leq \ldots \leq d_6$ denotan las distancias entre $A$ y los seis esquinas de $P$, en orden de su valor. Encontrar el lugar geométrico de $A$ al interior y en el borde de $P$, donde
+\begin{enumerate}
+\item[(a)] $d_3$ toma el valor más pequeño possible.
+\item[(b)] $d_4$ toma el valor más grande possible.\\
+\end{enumerate}
+
+\bigskip
+
+\item[\textbf{2.}] Un \emph{palíndromo} es un número natural, de forma que en el sistema decimal su valor es lo mismo, independiente de que si es leido de delante ó de atras. (por ejemplo $1129211$ oder $7337$). Determinar todas las parejas $(m,n)$ de numéros naturales tal que
+\[(\underbrace{11\ldots 11}_{m})\cdot (\underbrace{11\ldots 11}_{n})\]
+es und palíndromo.\\
+
+\bigskip
+
+\item[\textbf{3.}] Sean $a,b,c,d$ números reales positivos. Demonstrar la desigualdad siguiente y determinar los casos de igualdad:
+\[\frac{a-b}{b+c}+\frac{b-c}{c+d}+\frac{c-d}{d+a}+\frac{d-a}{a+b} \geq 0.\]
+
+\bigskip
+
+\item[\textbf{4.}] Sea $n$ un número natural. Cada una de las casillas de und quadrado de $n\times n$ contiene uno $n$ símbolos distintos, de forma que cada símbolo está en precisamente $n$ casillas. Demonstrar que existe una línea o una columna que contiene al menos $\sqrt{n}$ símbolos distintos.\\
+
+\bigskip
+
+\item[\textbf{5.}] Sea $ABC$ un triángulo con $AB \neq AC$ y incentro $I$. 
+La circunferencia inscrita toca $BC$ en $D$. El punto medio de $BC$ sea $M$. Demonstrar que la recta $IM$ biseca la
+
+Der Inkreis berühre $BC$ bei $D$. Der Mittelpunkt von $BC$ sei $M$. Zeige, 
+dass die Gerade $IM$ die Strecke $AD$ halbiert.
+
+\end{enumerate}
+
+\pagebreak
+
+
+\begin{center}
+{\huge SMO Finalrunde 2009} \\
+\medskip zweite Prüfung - 14. März 2009
+\end{center}
+\vspace{8mm}
+Zeit: 4 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{6.}] Finde alle Funktionen $f: \BR_{>0}\rightarrow \BR_{>0}$, welche für alle $x>y>z>0$ die folgende Gleichung erfüllen:
+\[f(x-y+z)=f(x)+f(y)+f(z)-xy-yz+xz.\]
+
+\bigskip
+
+\item[\textbf{7.}] Die Punkte $A$, $M_1$, $M_2$ und $C$ liegen in dieser Reihenfolge auf 
+einer Geraden. Sei $k_1$ der Kreis mit Mittelpunkt $M_1$ durch $A$ und $k_2$ 
+der Kreis mit Mittelpunkt $M_2$ durch $C$. Die beiden Kreise schneiden 
+sich in den Punkten $E$ und $F$. Eine gemeinsame Tangente an $k_1$ 
+und $k_2$ berühre $k_1$ in $B$ und $k_2$ in $D$. Zeige, dass sich die Geraden $AB$, $CD$ und 
+$EF$ in einem Punkt schneiden.\\
+
+
+\bigskip
+
+\item[\textbf{8.}] Gegeben ist ein Bodengrundriss, der aus $n$ Einheitsquadraten zusammengesetzt ist. Albert und Berta möchten diesen Boden mit Kacheln bedecken, wobei alle Kacheln die Form eines $1\times 2$-Dominos oder eines T-Tetrominos haben. Albert hat nur Kacheln von einer Farbe zur Verfügung, Berta hingegen hat Dominos in zwei Farben und Tetrominos in vier Farben zur Verfügung. Albert kann diesen Bodengrundriss in $a$ Arten mit Kacheln bedecken, Berta auf $b$ Arten. Unter der Annahme, dass $a\neq 0$ gilt, bestimme das Verhältnis $b/a$.\\
+
+\bigskip
+
+\item[\textbf{9.}] Finde alle injektiven Funktionen $f:\BN \rightarrow \BN$, sodass für alle natürlichen Zahlen $n$ gilt 
+\[f(f(n)) \leq \frac{f(n)+n}{2}.\]
+
+\bigskip
+
+\item[\textbf{10.}] Sei $n>3$ eine natürliche Zahl. Beweise, dass $4^n+1$ einen Primteiler $>20$ besitzt.
+
+\end{enumerate}
+\end{document}

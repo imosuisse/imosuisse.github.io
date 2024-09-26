@@ -1,0 +1,60 @@
+We call a set $S$ of integers \textit{laikable} if for any positive integer $n$ and any $a_0,a_1,\ldots,a_n\in S$, all integer roots of the polynomial $a_nx^n+\ldots+a_1x+a_0$ are also in $S$, given it is not the zero polynomial. Find all laikable sets of integers that contain all numbers of the form $2^a-2^b$ for positive integers $a, b$.
+
+\textbf{Answer:} The only solution is $S = \Z$, the set of all integers.
+
+\textbf{Solution 1:} The set $\Z$ of all integers is clearly a solution. We shall prove that any well-rounded set containing all the numbers of the form $2^a -2^b$ for $a,b > 0$ must be all of $\Z$.
+
+First, note that $0 = 2^1 - 2^1 \in S$ and $2 = 2^2 - 2^1 \in S$. Now, $-1\in S$, since it is a root of $2x+2$, ad $1\in S$, since it is a root of $2x^2-x-1$. Also, if $n\in S$ then $-n$ is a root of $x+n$, so it suffices to prove that all positive integers must be in $S$.
+
+Now, we claim that any positive integer $n$ has a multiple in $S$. Indeed, suppose that $n = 2^{\alpha}t$ for $\alpha \geq 0$ and $t$ odd. Then $t\div 2^{\phi(t)}-1$, so $n\div 2^{\alpha + \phi(t)+1} - 2^{\alpha +1}$. Moreover $2^{\alpha + \phi(t)+1} - 2^{\alpha +1}\in S$, so $S$ contains a multiple of every positive integer $n$.
+
+We will now prove by induction that all positive integers are in $S$. Suppose that $0,1, \ldots, n-1 \in S$; furthermore, let $N$ be a multiple of $n$ in $S$. Consider the base-$n$ expansion of $N$, say $N = a_kn^k+a_{k-1}n^{k-1}+\cdots+a_1n+a_0$. Since $0\leq a_i < n$ for each $a_i$, we have that all the $a_i$ are in $S$. Furthermore $a_0 = 0$ since $N$ is a multiple of $n$. Therefore, $a_kn^k+a_{k-1}n^{k-1}+\cdots+a_1n-N=0$, so $n$ is a root of a polynomial with coefficients in $S$. This tells us that $n\in S$, completing the induction.
+
+\textbf{Solution 2:} As in the previous solution, we can prove that $0, 1$ and $-1$ must all be in any well-rounded set $S$ containing all numbers of the form $2^a-2^b$ for $a, b \in \Z_{>0}$. 
+
+We show that, in fact, every integer $k$ with $\abs{k}>2$ can be expressed as a root of a polynomial whose coefficients are of the form $2^a-2^b$. Observe that it suffices to consider the case where $k$ is positive, as if $k$ is a root of $a_nx^n + \ldots + a_1x+a_0=0$, then $-k$ is a root of $(-1)^na_nx^n + \ldots -a_1x+a_0$.
+
+Note that 
+\[
+    (2^{a_n}-2^{b_n})k^n + \ldots + (2^{a_0} - 2^{b_0}) = 0
+\]
+is equivalent to
+\[
+    2^{a_n}k^n + \ldots + 2^{a_0} = 2^{b_n}k^n + \ldots + 2^{b_0}.
+\]
+
+Hence our aim is to show that two numbers of the form $2^{a_n}k^n + \ldots + 2^{a_0}$ are equal, for a fixed value of $n$. We consider such polynomials where every term $2^{a_i}k^i$ is at most $2k^n$; in other words, where $2\leq 2^{a_i} \leq 2k^{n-i}$, or, equivalently, $1\leq a_i \leq 1+(n-i)\log_2k$. Therefore, there must be $1+\floor{(n-i)\log_2k}$ possible choices for $a_i$ satisfying these constraints.
+
+The number of possible polynomials is then
+\[
+    \prod_{i=0}^n{(1+\floor{(n-i)\log_2k}} \geq \prod_{i=0}^{n-1}{(n-i)\log_2k} = n!(\log_2k)^n
+\]
+where the inequality holds as $1+\floor{x} \geq x$.
+
+As there are $(n+1)$ such terms in the polynomial, each at most $2k^n$, such a polynomial must have value at most $2k^n(n+1)$. However, for large $n$, we have $n!(\log_2k)^n > 2k^n(n+1)$. Therefore there are more polynomials than possible values, so some two must be equal, as required.
+
+\newpage
+
+\textbf{Marking Scheme}
+-1P: Having a solution which is correct for all but $\leq 10$ integers.
+
+ Solution 1:
+\begin{itemize}
+    \item 0P: Prove that $0$, $\pm 1$, $\pm 2$, etc. belong to $S$.
+    \item 0P: Prove that if $n\in S$, then $-n \in S$.
+    \item 2P: Considering the smallest $n\notin S$ and working with the base-$n$ expansion.
+    \item 2P: Prove that every (positive) odd integer has a multiple in $S$.
+    \item 1P: Prove that every (positive) integer has a multiple in $S$.
+    \item 2P: Conclude
+\end{itemize}
+
+Solution 2:
+\begin{itemize}
+    \item 1P: Reformulating the problem as finding two polynomials whose value at $k$ is identical for non-trivial reasons.
+    \item 1P: Trying to estimate the number of polynomials and the number of values at $k$.
+    \item 3P: Estimating the number of polynomials
+    \item 1P: Estimating the number of values these polynomials can take at $k$
+    \item 1P: Conclude
+\end{itemize}
+
+\textit{Remark:} Different approaches are possible for solving this problem with approximations. The 4 points for the estimations may be spread differently if the difficulty of the two steps is significantly different from this solution.

@@ -1,0 +1,320 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[latin1]{inputenc}
+\usepackage[centertags]{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+
+
+
+
+
+% Schriftabkürzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm pgcd}\nolimits}
+\newcommand{\kgV}{\mathop{\rm ppcm}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge OSM Tour final 2013} \\
+\medskip premier examen - le 8 mars 2013
+\end{center}
+\vspace{8mm}
+Durée : 4 heures\\
+Chaque exercice vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{1.}]
+Déterminer tous les triples $(a,b,c)$ de nombres naturels, tels que les ensembles
+\[\Big\{\ggT(a,b),\ \ggT(b,c),\ \ggT(c,a),\ \kgV(a,b),\ \kgV(b,c),\ \kgV(c,a)\Big\}\]
+et $$\big\{2, 3, 5, 30, 60\big\}$$ sont égaux.
+
+\textit{Remarque: Par exemple les ensembles $\left\{1,2013\right\}$ et $\left\{1,1,2013\right\}$ sont égaux.}
+
+
+\bigskip
+
+\item[\textbf{2.}] Soit $n$ un nombre naturel et $p_1,...,p_n$ des nombres premiers deux à deux distincts. Montrer que
+$$
+p_1^2+p_2^2+\dots + p_n^2 > n^3.
+$$
+
+
+\bigskip
+
+\item[\textbf{3.}] 
+Soit $ABCD$ un quadrilatère inscrit avec $\angle ADC=\angle DBA$. De plus soit $E$ la projection de $A$ sur $BD$. Montrer qu'on a $BC=DE-BE$.
+
+
+\bigskip
+
+\item[\textbf{4.}]
+Trouver toutes les fonctions $f: \BR_{>0} \to \BR_{>0}$ satisfaisant la condition
+$$
+f\left(\frac{x}{y+1}\right)=1-xf(x+y) \quad \text{pour tout}\quad x>y>0\ .
+$$
+
+
+
+\bigskip
+
+\item[\textbf{5.}]
+Dans une classe de $2n+1$ élèves, chacun choisit un ensemble non vide de nombres entiers consécutifs. Deux élèves sont amis s'il existe un nombre qu'ils ont choisi tous les deux. Chaque élève est ami avec au moins $n$ autres élèves. Montrer qu'il existe un élève qui est ami avec tous les autres.
+
+
+\end{enumerate}
+
+\bigskip
+\begin{center}Bonne chance !\end{center}
+\newpage
+
+\begin{center}
+{\huge OSM Tour final 2013} \\
+\medskip deuxième examen - le 9 mars 2013
+\end{center}
+\vspace{8mm}
+Durée: 4 heures\\
+Chaque exercice vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{6.}]
+Sur une table il y a deux piles non vides de $n$, respectivement $m$ pièces de monnaie. Les opérations suivantes sont autorisées:
+\begin{itemize}
+	\item Enlever le même nombre de pièces de chaque pile.
+	\item Multiplier par trois le nombre de pièces d'une des piles.
+\end{itemize}
+Pour quelles paires $(n,m)$ est-il possible qu'après un nombre fini d'opérations il n'y a plus de pièces sur la table?
+
+\bigskip
+
+\item[\textbf{7.}] 
+Soit $O$ le centre du cercle circonscrit du triangle $ABC$ avec $AB\neq AC$. De plus, soient $S$ et $T$ des points sur les demi-droites $AB$, respectivement $AC$ tels que $\angle ASO=\angle ACO$ et $\angle ATO= \angle ABO$. Montrer que $ST$ coupe le segment $BC$ en deux parties égales.
+
+\bigskip
+
+\item[\textbf{8.}] 
+Soient $a,b,c >0$ des nombres réels. Montrer l'inéquation suivante:
+$$
+a^2\cdot\frac{a-b}{a+b}+b^2\cdot\frac{b-c}{b+c}+c^2\cdot\frac{c-a}{c+a} \ge 0\ .
+$$
+Quand y a-t-il égalité?
+
+
+\bigskip
+
+\item[\textbf{9.}]
+Trouver tous les quadruples $(p,q,m,n)$ de nombres naturels, tels que $p$ et $q$ sont premiers et l'équation suivante est satisfaite:
+$$
+p^m-q^3=n^3.
+$$
+
+\bigskip
+
+\item[\textbf{10.}] 
+Soit $ABCD$ un quadrilatère circonscrit avec $BC>BA$. Le point $P$ se situe sur le segment $BC$ de sorte que $BP=BA$. Montrer que la bissectrice de $\angle BCD$, la perpendiculaire à $BC$ passant par $P$ et la perpendiculaire à $BD$ passant par $A$ se coupent en un point.
+
+
+
+\end{enumerate}
+\bigskip
+\begin{center}Bonne chance !\end{center}
+\newpage
+\end{document}

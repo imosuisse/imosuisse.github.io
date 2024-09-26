@@ -1,0 +1,368 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+
+\usepackage{graphicx}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+
+% Schriftabk¬∏rzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schÀÜnes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge Lösungen zur Vorrundenprüfung 2014} \\
+\end{center}
+\vspace{8mm}
+
+Zuerst einige Bemerkungen zum Punkteschema. Eine vollständige und korrekte Lösung einer Aufgabe ist jeweils 7 Punkte wert. Für Komplette Lösungen mit kleineren Fehlern oder Ungenauigkeiten, die aber keinen wesentlichen Einfluss auf die Richtigkeit der dargestellten Lösung haben, geben wir 6 Punkte. Bei unvollständigen Lösungen wird der Fortschritt und der Erkenntnissgewinn bewertet (Teilpunkte). Oft gibt es mehrere Lösungen für ein Problem. Versucht jemand zum Beispiel eine Aufgabe auf zwei verschiedenen Wegen zu lösen, erreicht auf dem ersten Weg 3 Punkte, auf dem zweiten 2 Punkte, dann wird seine Punktzahl nicht 5, sondern 3 sein. Punkte, die auf verschiedenen Wegen erreicht werden, sind also \emph{nicht} kumulierbar. Die unten angegebenen Bewertungsschemata sind nur Orientierungshilfe. Gibt jemand eine alternative Lösung, dann werden wir versuchen, die Punktzahl entsprechend zu wählen, dass für gleiche Leistung gleich viele Punkte verteilt werden. Die Schemata sind stets wie folgt zu interpretieren:\\
+Kommt jemand in seiner Lösung bis und mit hierhin, dann gibt das soviele Punkte.\\ 
+Ausnahmen von dieser Regel sind jeweils ausdrücklich deklariert.
+
+\vspace{8mm}
+
+Quelques remarques concernant le barème. Une solution complète et correcte d'un exercice vaut 7 points. Pour des solutions complètes avec quelques erreurs mineures ou des imprécisions qui n'ont pas d'influence essentielle sur la justesse de la solution, nous donnons 6 points. Pour des solutions incomplètes nous évaluons le progrès (points partiels). Souvent il y a plusieurs solutions pour un problème. Par exemple, si quelqu'un essaie de résoudre un exercice de deux manières différentes et obtient 3 points pour la première tentative et 2 points pour la deuxième solution incomplète, alors son total de points ne sera pas 5 mais 3. Des points obtenus pour des solutions différentes ne sont \emph{pas} cumulable. Les barèmes données ci-dessous sont une aide à l'orientation. Si quelqu'un donne une solution alternative, nous essayerons de choisir le nombre de point juste pour que la même performance vaut le même nombre de points. Les barèmes sont à interpréter comme ceci:\\
+Si quelqu'un arrive dans une solution jusqu'à cet endroit, alors il obtient tant de points.\\
+Des exceptions à cette règle sont mentionnées explicitement.
+
+\vspace{8mm}
+\newpage
+\begin{enumerate}
+
+%% Aufgabe 1
+
+\item[\textbf{1.}]
+
+\textbf{1. Lösung:}\\
+$d$ ist ein Teiler von $n$, also können wir $n=k\cdot d$ schreiben, wobei $k$ eine natürliche Zahl ist. $n-d$ können wir somit als $(k-1)\cdot d$ schreiben. $n-d$ ist ein Teiler von $n$, also ist $(k-1)\cdot d$ ein Teiler von $k\cdot d$. Daraus können wir schliessen, dass $k-1$ ein Teiler von $k$ sein muss. $k-1$ teilt $k-1$ und $k$, also auch $k-(k-1)=1$. Dies ist aber nur möglich, wenn $k-1=1$, also $k=2$ gilt. Aus $n=k\cdot d=2d$ folgt, dass 2 ein Teiler von $n$ ist. Dies bedeutet, dass $d=2$ gilt, da $n$ ja keinen Teiler haben kann, der noch kleiner als 2, aber gleichzeitig grösser als 1 ist. Mit $d=2$ erhalten wir nun die einzige Lösung $n=2d=4$.\\
+
+\emph{Zum Punkteschema:}
++1 Einen Ansatz mit $n=k\cdot d$.\\
++2 $k-1$|k\\
++2 $k=2$\\
++2 $n=4$\\
+
+\textbf{2. Lösung:}\\
+$n-d$ teilt $n-d$ und $n$, also auch $n-(n-d)=d$. Wir wollen zeigen, dass $d$ eine Primzahl ist. Nehme an, es gäbe einen Teiler $t$ von $d$, für den $1<t<d$ gilt. Dann ist $t$ aber auch ein Teiler von $n$ und somit ist $d$ nicht der kleinste positive Teiler von $n$, der grösser als 1 ist, Widerspruch. $d$ muss also eine Primzahl sein. Dies bedeutet natürlich, dass $d$ nur die Teiler 1 und $d$ besitzt. Folglich muss $n-d=1$ oder $n-d=d$ gelten, da $n-d$ ein Teiler von $d$ ist.\\
+Im Fall $n-d=1$ teilt $d$ die linke Seite, also auch die rechte, d.h. $d$ teilt 1. Dies ist aber nicht möglich, da $d$ grösser als 1 ist.\\
+Im Fall $n-d=d$ gilt $n=2d$. Wie in der 1. Lösung können wir hieraus folgern, dass $n=4$ gilt.\\
+
+\emph{Zum Punkteschema:}
++2 $n-d|d$\\
++1 $d$ ist eine Primzahl.\\
++1 für eine Fallunterscheidung für $n-d=1$ oder $n-d=d$\\
++2 für den ersten Fall lösen\\
++1 für den zweiten Fall lösen\\
+
+\textbf{3. Lösung:}\\
+Wie in der 2. Lösung leiten wir wieder her, dass $n-d$ ein Teiler von $d$ ist. $d$ ist nicht 0, also gilt $n-d\leq d$, was äquivalent zu $n\leq 2d$ ist. Da $d$ ein Teiler von $n$ ist, kommen nur noch die Möglichkeiten $n=d$ und $n=2d$ in Frage. Die erste Möglichkeit führt uns auf keine Lösung, da $n-d=0$ ist, und 0 keine Zahlen ausser sich selbst teilt. Die zweite Möglichkeit gibt uns wie in der 1. Lösung wieder $n=4$.\\
+
+\emph{Zum Punkteschema:}
++2 $n-d|d$\\
++1 $n-d \leq d$\\
++1 für eine Fallunterscheidung $n=d$ oder $n=2d$\\
++2 für den ersten Fall lösen\\
++1 für den zweiten Fall lösen\\
+\newpage
+%\bigskip
+
+%% Aufgabe 2
+
+\item[\textbf{2.}]
+
+Deux cercles $k_1,k_2$ ayant pour centres $M_1$ resp. $M_2$ se coupent aux points $A$ et $B$. La tangente à $k_1$ par A coupe $k_2$ une nouvelle fois au point $P$. De plus, la droite $M_1B$ coupe aussi une nouvelle fois $k_2$ au point $Q$. Supposons que $Q$ se trouve en dehors de $k_1$ et que $P\neq Q$. Prouver que $PQ$ est parallèle à $M_1M_2$.
+
+\bigskip\noindent
+\textbf{1$^\text{ère}$ solution:}
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{sol1.png}
+\caption{1$^\text{ère}$ solution de l'exercice 2.}
+\end{figure}
+Posons $\alpha= \angle BM_1M_2$. Comme les triangles $\triangle M_1 A M_2$ et $\triangle M_1 BM_2$ sont égaux, $\angle A M_1 M_2 = \alpha$ Par le théorème de l'angle tangent,  
+$$\angle BAP= \frac{1}{2} \angle BM_1 A = \alpha .$$
+Or $BQPA$ est un quadrilatère inscrit au cercle $k_2$, donc $$\angle BQP = 180^\circ - \alpha.$$ Ainsi $PQ$ est parallèle à $M_1M_2$ car  $$\angle PQM_1 = 180^\circ - \alpha = 180^\circ - \angle QM_1M_2.$$
+
+\emph{Zum Punkteschema:}
+
++1 für die Strategie, die beiden Winkel zu vergleichen\\
++1 für das Erkennen der Symmetrie ($\angle M_2M_1A=\angle M_2M_1B$) \\
++2 für Zusammenhang zwischen $\angle BAP$ und Winkel im Dreieck $AM_1B$\\
++1 für $\angle BAP=\angle M_2M_1B$\\
++1 erkennen des Sehnenvierecks ABQP.\\
++1 für $\angle PQB = 180^\circ-\angle BAP$\\
+
+\bigskip\noindent
+\textbf{2$^\text{ème}$ solution:}
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{sol2.png}
+\caption{2$^\text{ème}$ solution de l'exercice 2.}
+\end{figure}
+Appelons $Z$ le point d'intersection de $AP$ avec $M_1M_2$. Posons $\beta=\angle AZM_1$.
+On remarque que le quadrilatère $AM_1BZ$ est inscrit car on y trouve un angle droit en $A$ et par symétrie aussi en $B$. Ainsi  
+$$
+	\angle M_1BA = \angle M_1ZA = \beta.
+$$
+Donc $\angle ABQ = 180^\circ - \beta$ et de plus, comme le quadrilatère $ABQP$ est inscrit au cercle $k_2$ on trouve
+$$
+	\angle APQ = 180^\circ - \angle ABQ = \beta. 
+$$
+On en déduit que les deux droites sont parallèles.
+
+\newpage
+%% Aufgabe 3
+
+\item[\textbf{3.}]
+
+Als erstes stellen wir mal fest, dass keine Ziffer mehrfach auftreten kann. Wir fixieren die acht Ziffern, die wir zur Zusammenstellung einer solchen Zahl benutzen möchten, und unterscheiden dabei, ob 0 eine dieser Ziffern ist oder nicht.\\
+\begin{itemize}
+\item 0 ist keine dieser Ziffern: Wir haben $\binom{9}{8}$ Möglichkeiten, die 8 Ziffern auszuwählen, aus denen wir unsere Zahl zusammenstellen möchten. Seien $d_1<d_2<...<d_8$ diese ausgewählten Ziffern. Der Trick ist nun, dass wir die Zahl von rechts aufbauen. Für die Stelle ganz rechts, also die Einerstelle, kommen nur $d_1$ und $d_8$ in Frage. Stellen wir nämlich eine andere Ziffer an diese Stelle, so befinden sich sowohl $d_1$ als auch $d_8$ links von dieser Ziffer, und somit kann diese Ziffer nicht grösser oder kleiner als alle Ziffern links von ihr sein.\\
+Wir haben also 2 Möglichkeiten, wie wir die Stelle ganz rechts besetzen können. Wie sieht es aus mit der zweiten Stelle von rechts? Zuerst einmal können wir feststellen, dass wir die Stelle ganz rechts nicht mehr beachten müssen, da die dort platzierte Ziffer auf jeden Fall die gewünschte Bedingung erfüllt. Für die zweite Stelle von rechts können wir wieder dasselbe Argument wie oben benutzen, d.h. es kommt nur die grösste oder kleinste der verbleibenden Ziffern in Frage und wir haben wieder 2 Möglichkeiten. Wir sehen, dass wir für jede Stelle 2 Möglichkeiten haben, ausser für die ganz links, für welche dann klarerweise nur noch eine Ziffer übrig bleibt.\\
+Insgesamt gibt es in diesem Fall also $\binom{9}{8}\cdot 2^7$ mögliche Zahlen.\\
+\item 0 ist eine dieser Ziffern: Wir haben noch $\binom{9}{7}$ Möglichkeiten, die restlichen Ziffern auszuwählen. Prinzipiell können wir die Anzahl Zahlen wie oben zählen und erhalten $2^7$. Wir müssen aber noch die Zahlen abziehen, bei denen 0 an erster Stelle steht, da diese Zahlen nicht achtstellig sind. Wir müssen uns also fragen: Wie viele Zahlen gibt es, welche die gewünschte Bedingung erfüllen, bei denen 0 an erster Stelle steht und die restlichen 7 Ziffern schon fixiert sind? Seien $d_1<d_2<...<d_7$ diese restlichen Ziffern. Wenn $d_7$ nicht ganz rechts steht, ist die Ziffer ganz rechts kleiner als $d_7$ und grösser als 0, also nicht grösser oder kleiner als alle Ziffern links von ihr. Folglich steht $d_7$ an der Stelle ganz rechts. Mit demselben Argument sehen wir, dass die Zahl nur die Form $0d_1d_2d_3d_4d_5d_6d_7$ haben kann, d.h. wir müssen 1 Möglichkeit wieder abziehen.\\
+Insgesamt gibt es in diesem Fall also $\binom{9}{7}\cdot(2^7-1)$ Möglichkeiten.\\
+\end{itemize}
+Wenn wir diese Ausdrücke aufsummieren und ausrechnen, erhalten wir, dass es $5724$ solcher Zahlen gibt.
+\newpage
+%% Aufgabe 4
+
+\item[\textbf{4.}]
+
+
+\textit{1. Lösung} Wir fixieren zuerst einen beliebigen Eckpunkt $P$ des 11-Ecks. Da 11 eine ungerade Zahl ist, gibt es für jeden von $P$ verschiedenen Eckpunkt $E$ genau einen weiteren Eckpunkt $F$, sodass die Strecken $PE$ und $PF$ gleichlang sind. Folglich gibt es 5 gleichschenklige Dreiecke, welche aus erlaubten Strecken bestehen und $P$ als Spitze haben. Insgesamt gibt es also $11*5 = 55$ verschiedene gleichschenklige Dreiecke.
+
+Als Schubfach betrachten wir die Kanten eines gleichschenkligen Dreiecks. Es gibt also 55 Schubfächer. Wenn aus einem Schubfach zwei Strecken eingezeichnet sind, dann kann man diese natürlich durch Hinzufügen einer weiteren Strecke zu einem gleichschenkligen Dreieck erweitern.
+
+Insgesamt werden $\frac{4*11}{2} = 22$ Strecken eingezeichnet. Doch jede dieser Strecken gehört zu drei verschiedenen Schubfächern, denn es gibt drei verschiedene gleichschenklige Dreiecke, welche diese Strecke als Seite enthalten. Also verteilen wir insgesamt 66 Perlen.
+
+Nach dem Schubfachprinzip gibt es also mindestens ein Schubfach, welches zwei Perlen enthält. In anderen Worten heisst das, dass zwei Strecken eingezeichnet sind, welche Seiten eines gleichschenkligen Dreiecks sind. Diese können nun mithilfe einer weiteren Strecke zu einem gleichschenkligen Dreieck ergänzt werden.
+
+%\emph{Zum Punkteschema:} 
+\begin{itemize}
+\item 1 Punkt für: Es sind 22 Strecken eingezeichnet.
+\item 1 Punkt für: Es gibt 55 gleichschenklige Dreiecke.
+\item 3 Punkte für: Jede Strecke kommt in 3 gleichschenkligen Dreiecken vor und somit werden 66 Perlen auf 55 Schubfächer aufgeteilt.
+\item 2 Punkte für fehlerfreie Zuendeführung der Argumentation.
+\end{itemize}
+\textit{2. Lösung} Wir nennen eine Strecke $ AB$ eine Parallele zum Punkt $C$, falls die Distanz von $A$ nach $C$ gleich der Distanz von $B$ nach $C$ ist und somit $ABC$ ein gleichschenkliges Dreieck ist.das Dreieck $ABC$ gleichschenklig ist. Bemerke dass jede Strecke eine Parallele zu genau einem Punkt ist. Es gibt $22$ eingezeichnete Strecken und somit $22$ eingezeichnete Parallelen. Da es $11$ Punkte gibt, gibt es nach dem Schubfachprinzip einen Punkt mit mindestens $2$ eingezeichneten Parallelen. Dieser Punkt ist zusätzlich mit $4$ anderen Punkten verbunden. Entweder ist er mit einem Endpunkt einer seiner Parallelen verbunden oder von ihm gehen zwei Strecken derselben Länge aus. In beiden Fällen kann mit einer Strecke ein gleichschenkliges Dreieck vervollständigt werden.
+\bigskip
+\newpage
+%% Aufgabe 5
+
+\item[\textbf{5.}]
+
+\textit{1. Lösung} Zuerst sieht man, dass $p=2$ keine Lösung gibt und $n>m$. Zudem können wir $m$ und $n$ teilerfremd wählen. Nun gilt $ggt(p+1,p^2+1= ggt(p+1,2p) =2$. Wir schreiben die Gleichung nun als
+\[\frac{p^2+1}{2}m^2=\frac{p+1}{2}n^2.\]
+Da jeder der beiden Faktoren links teilerfremd zu einem der Faktoren rechts ist erhalten wir
+\begin{eqnarray}
+p^2+1&=&2n^2\\
+p+1&=&2m^2.
+\end{eqnarray}
+Wir subtrahieren die beiden Seiten voneinander und faktorisieren
+\begin{eqnarray}p(p-1)=2n^2 - 2m^2=2(n-m)(n+m).
+\end{eqnarray}
+Da $p$ ungerade ist können wir nun zwei Fälle unterscheiden.\\
+1. Fall $p | n-m$: Dann gilt $2(n+m)|p-1$ und somit $2(n+m) \leq p-1 < p \leq n-m$, was ein Wiederspruch ist.\\
+2.Fall $p|n+m$: Dann gilt $2(n-m)|p-1$ und somit $2(n-m) < n+m$, also $n<3m$. Insgesammt also $\frac{p^2+1}{p+1} = \frac{n^2}{m^2}<9$. Mit der Abschätzung $\frac{p^2+1}{p+1} > p-1$ sieht man, dass man nun noch die Primzahlen kleiner $10$ überprüfen muss und findet als einzige Lösung $p=7$.\\
+
+\textit{2. Lösung} Wir argumentieren gleich wie oben ausser im 2. Fall. Denn aus den Gleichungen (1) und (2) folgt insbesondere, dass $m,n < p$, also $n+m <2p$. Somit folgt aus $p|n+m$ sogar $p=n+m$. Dies können wir nun in (3) einsetzen und erhalten $p-1=2(p-2m)$ und schliesslich $m=\frac{p+1}{4}$. Dies setzten wir nun in (2) ein und erhalten $p^2-6p-7=0$ mit der einzigen positiven Lösung $p=7$.\\
+
+\textit{Zum Punkteschema:} Für die Gleichungen (1) und (2) gab es einen Punkt. Gleichung (3) und die Behandlung des ersten Falles gaben je einen weiteren Punkt. In der ersten Lösung gab die Abschätzung $\frac{n^2}{m^2} < 9$ zwei weitere Punkte  und dann nochmals zwei, falls man fertig wird. In der zweiten Lösung gab es für die Gleichung $p=x+y$ zwei Punkte und nochmals zwei, falls man das Gleichungssytem richtig auflöst. 
+
+
+
+
+
+
+
+
+
+\end{enumerate}
+
+\end{document}

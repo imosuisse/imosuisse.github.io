@@ -1,0 +1,48 @@
+\de{Zeige, dass keine Funktion $f:\Z\to\Z$ existiert, sodass für alle ganzen Zahlen $m,n$ gilt:
+\[
+    f(m+f(n))=f(m)-n.
+\]
+
+\textbf{Lösung:} (Paul) Wir nehmen an, dass die Funktionalgleichung eine Lösung hat und führen dies zu einem Widerspruch. Setzen wir $m=0$ ein, dann erhalten wir die Gleichung
+\[
+f(f(n)) = f(0)-n.
+\]
+Daraus folgt sofort, dass $f$ eine surjektive Funktion ist ($f$ ist sogar bijektiv, das brauchen wir aber nicht für die Lösung). Also können wir ein $a\in\Z$ finden sodass $f(a)=0$. Nun setzen wir $m=n=a$ ein, dies ergibt die Gleichung $0=a$, woraus wir $f(0)=0$ schliessen. 
+
+Die Gleichung oben wird dann zu $f(f(n))=-n$. Jetzt ersetzen wir in der ursprünglichen Gleichung $n$ durch $f(n)$ und $m$ durch $m+n$. Dies ergibt
+\[
+f(m) = f(m+n)-f(n)
+\]
+für alle $m,n\in\N$. Diese Funktionalgleichung hat die Lösungen $f(n)=f(1)n$ (siehe Beispiel 11). Dann gilt jedoch
+\[
+-1 = f(f(1)) = f(1)^2,
+\]
+der gewünschte Widerspruch.
+
+\textbf{Alternative:} (Arnaud) On commence par poser $m=0$ et on obtient de même que $f$ est bijective. En posant à présent $n=0$, on obtient $f(m+f(0))=f(m)$ et donc, en utilisant l'injectivité pour simplifier par $f$, on obtient $f(0)=0$.
+
+Observer que l'égalité $f(m+f(0))=f(m)$ implique que $f$ est périodique de période $f(0)$. Comme $f$ est bijective, elle ne peut pas être périodique, ce qui implique également $f(0)=0$.
+
+Il également possible de montrer directement que $f(f(n))=-n$ (sans passer par $f(0)=0$). Si on remplace $n$ par $n+f(m)$, on obtient 
+\[
+-n=f(m)-(n+f(m))=f(m+f(n+f(m)))=f(m+f(n)-m)=f(f(n)).
+\]
+
+\textbf{Marking scheme:}
+\begin{enumerate}
+\item +3P: $f(f(n))=-n$ with maximum 2 \textbf{non-additive} partial points
+\begin{itemize}
+    \item 1P: $f$ is surjevctive (enough to get $f^{-1}(\{0\})\neq\emptyset$) or $f$ is injective or $f(0)\neq 0\Rightarrow f$ periodic.
+    \item 2P: $f(0)=0$
+\end{itemize}
+\item +3P: $f(n)=nf(1)$ with maximum 2 \textbf{non-additive} partial points
+\begin{itemize}
+    \item 1P: a first inductive step to get $f(n)=nf(1)$ (eg. $f(2m)=2f(m)$)
+    \item 2P: $f(m+n)=f(m)+f(n)$
+\end{itemize}
+
+\item +1P: conclude
+\end{enumerate}
+
+
+}

@@ -1,0 +1,30 @@
+\en{We call a positive integer \emph{silly} if the sum of its positive divisors is a square. Prove that there are infinitely many silly numbers.
+
+\bigskip
+
+\textbf{Solution (Louis):} Let $\sigma(n)$ denote the sum of all positive divisors of the integer $n$, and we will order the prime numbers $2=p_1 < p_2 < p_3 < \ldots$. An important observation is that $\sigma(n)$ is multiplicative, in the sense that if $n_1, n_2$ are coprime, then $\sigma(n_1n_2) = \sigma(n_1)\sigma(n_2)$. More generally, we have the identity
+\[
+\sigma(p_1^{\alpha_1}\cdot\ldots\cdot p_k^{\alpha_k}) = \prod_{i=1}^k{(1 + p_i + \ldots + p_i^{\alpha_i})}.
+\]
+
+We could first try to solve the exercise in the following way: For any integer $k > 2$, consider $S = \{p_1, \ldots, p_k\}$ the set of the $k$ smallest prime numbers. We notice that all prime factors of the numbers $\sigma(p_i)$ are smaller that $p_k$ (since either $\sigma(p_i) < p_k$ or $\sigma(p_k) = p_k + 1$ is not prime). Therefore there are $2^k$ subsets $A$ of $S$, but if we consider the product of all elements in $A$, the sum of its divisors will only be divisible by primes among $p_1, \ldots, p_{k-1}$ so if we consider the parity of the exponent of each of these primes there are only $2^{k-1}$ results possible, so by the pigeonhole principle there must exist two distinct subsets $A$ and $A'$ such that all the exponents have the same parity. Therefore the product of all the elements in the symmetric difference $A\Delta A'$ will be a silly number (the symmetric difference of two sets is defined as the set of all elements that belong to exactly one of the sets).
+
+This contains most of the ideas for the solution, but the problem is that if we found sets $A, A'$ for $k$, we will also find these same sets for $k+1$ so this argument is not enough to guarantee the existence of infinitely many silly numbers and we need a more subtle argument.
+
+Assume that we already have $l$ silly numbers $n_1, \ldots, n_l$. We will prove that there exist a silly number distinct of all these numbers. Let $p_{\alpha}$ be the largest prime factor of one of these $l$ silly numbers and let $\gamma$ be the largest exponent in the prime factor decompositions of these numbers. Finally let $p_{\beta}$ be a prime number larger than $\sigma(p_{\alpha}^{\gamma+1})$ and consider the set 
+\[
+    S = \{p_1^{\gamma+1}, \ldots, p_{\alpha}^{\gamma+1}, p_{\alpha+1}, \ldots, p_{\beta}\}.
+\]
+
+Now by construction we can prove again that for each $a\in S$ the prime factors of $\sigma(a)$ are smaller that $p_{\beta}$ so we can make the same argument as before, but now the element we will construct will be distinct from all the $n_1, \ldots, n_l$, since either it will be divisible by a prime number which does not divide any of these numbers, or one of the prime numbers will appear with a higher multiplicity than in any of the $l$ silly numbers. 
+
+\bigskip
+
+\textbf{Marking Scheme (additive):}
+
+\begin{enumerate}
+    \item 1P: Notice that $\sigma(p_1), \ldots, \sigma(p_k)$ are only divisible by $p_1, \ldots, p_{k-1}$.
+    \item 2P: Use pigeonhole to construct a silly number as the product of the elements of a certain subset.
+    \item 4P: Finish the solution.
+\end{enumerate}
+}

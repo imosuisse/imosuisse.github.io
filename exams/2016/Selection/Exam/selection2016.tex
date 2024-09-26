@@ -1,0 +1,250 @@
+%& -job-name=imoselektion_2016_de-4
+% ^^^^^^^ change the last bit to e.g. de-2 for second day, german ^^^^^^^^ 
+
+\documentclass[language=french,style=exam]{smo} %language is relevant for the math functions (e.g. \ggt) and for punctuation. One can use \selectlanguage{} to switch the loaded language, but this does not fix the \ggt issue.
+
+\usepackage{xstring}
+\usepackage{tikz}
+
+\usepackage[ngerman,french,italian,english]{babel}
+
+\StrRight{\jobname}{4}[\mystring]
+\IfSubStr*{\mystring}{fr}{\germanfalse \frenchtrue \italianfalse \selectlanguage{french}}{}
+\IfSubStr*{\mystring}{de}{\germantrue \frenchfalse \italianfalse \selectlanguage{ngerman}}{}
+\IfSubStr*{\mystring}{it}{\germanfalse \frenchfalse \italiantrue \selectlanguage{italian}}{}
+
+\StrRight{\jobname}{1}[\day]
+
+\examtime{\translation{4.5 Stunden}{4.5 heures}{???}}
+\examplace{Zürich}
+\examdate{
+\ifgerman \IfStrEq*{\day}{1}{7. Mai 2016}{}\IfStrEq*{\day}{2}{8. Mai 2016}{}\IfStrEq*{\day}{3}{21. Mai 2016}{}\IfStrEq*{\day}{4}{22. Mai 2016}{}\fi
+\iffrench \IfStrEq*{\day}{1}{7 Mai 2016}{}\IfStrEq*{\day}{2}{8 Mai 2016}{}\IfStrEq*{\day}{3}{21 Mai 2016}{}\IfStrEq*{\day}{4}{22 Mai 2016}{}\fi
+\ifitalian ??? \fi
+}
+
+\title{\translation
+{IMO-Selektion - \day. Prüfung}
+{Sélection IMO - \day\IfStrEq*{\day}{1}{er}{ème} examen}
+{}
+}
+
+\begin{document}
+
+\begin{enumerate}
+
+\IfStrEq*{\day}{1}{ %%%%%%%%%%%%%%%%% Day 1 %%%%%%%%%%%%%%%%%
+
+\item[\textbf{1.}] %% Exercise 1 %%
+\ifgerman %german
+Sei $n$ eine natürliche Zahl. Wir nennen ein Zahlenpaar \emph{unverträglich}, falls ihr grösster gemeinsamer Teiler gleich 1 ist. Wie viele unverträgliche Paare treten mindestens auf, wenn man die Zahlen $\{1, 2, \ldots, 2n\}$ in $n$ Paare aufteilt?
+\fi
+\iffrench %french
+Soit $n$ un nombre naturel. On appelle une paire de nombres \emph{insociable} si leur plus grand diviseur commun vaut 1. On répartit les nombres $\{1, 2, \ldots, 2n\}$ en $n$ paires. Quel est le nombre minimum de paires insociables qui sont ainsi formées?
+\fi
+\ifitalian %italian
+\fi
+
+\bigskip
+\bigskip
+
+\item[\textbf{2.}] %% Exercise 2 %%
+\ifgerman %german
+Finde alle Polynome $P$ mit reellen Koeffizienten, sodass folgende Gleichung für alle $x \in \R$ gilt:
+\[
+(x-2)P(x+2)+(x+2)P(x-2)=2xP(x).
+\]
+\fi
+\iffrench %french
+Trouver tous les polynômes $P$ à coefficients réels tels que
+\[
+(x-2)P(x+2)+(x+2)P(x-2)=2xP(x)
+\]
+pour tous $x\in \R$.
+\fi
+\ifitalian %italian
+\fi
+
+\bigskip
+\bigskip
+
+\item[\textbf{3.}] %% Exercise 3 %%
+\ifgerman %german
+Sei $ABC$ ein Dreieck mit $\angle BCA = 90^\circ$ und $H$ der Höhenfusspunkt von $C$. Sei $D$ ein Punkt innerhalb des Dreiecks $BCH$, sodass $CH$ die Strecke $AD$ halbiert. Sei $P$ der Schnittpunkt der Geraden $BD$ und $CH$. Sei $\omega$ der Halbkreis mit Durchmesser $BD$, der die Strecke $CB$ schneidet. Die Tangente von $P$ an $\omega$ berühre diesen in $Q$. Zeige, dass der Schnittpunkt der Geraden $CQ$ und $AD$ auf $\omega$ liegt.
+\fi
+\iffrench %french
+Soit $ABC$ un triangle avec $\angle BCA = 90^\circ$ et soit $H$ le pied de la hauteur issue de $C$. Soit $D$ un point à l'intérieur du triangle $BCH$ tel que $CH$ coupe le segment $AD$ en son milieu. Soit $P$ le point d'intersection des droites $BD$ et $CH$. Soit $\omega$ le demi-cercle de diamètre $BD$ qui intersecte le côté $CB$. La tangente à $\omega$ passant par $P$ touche $\omega$ au point $Q$. Montrer que les droites $CQ$ et $AD$ se coupent sur $\omega$.
+\fi
+\ifitalian %italian
+\fi
+
+}
+
+\IfStrEq*{\day}{2}{ %%%%%%%%%%%%%%%%% Day 2 %%%%%%%%%%%%%%%%
+
+\item[\textbf{4.}] %% Exercise 4 %%
+\ifgerman %german
+Bestimme alle natürlichen Zahlen $n$, sodass für beliebige reelle Zahlen $x_1, \ldots, x_n$ gilt:
+\[
+\left(\frac{x_1^n + \ldots + x_n^n}{n} - x_1 \cdot\ldots\cdot x_n\right) \left(x_1 + \ldots + x_n \right)  \geq 0.
+\]
+\fi
+\iffrench %french
+Trouver tous les nombres entiers $n\geq 1$ tels que pour tous $x_1,...,x_n\in\R$ l'inégalité suivante soit vérifiée.
+\[
+\left(\frac{x_1^n + \ldots + x_n^n}{n} - x_1 \cdot\ldots\cdot x_n\right) \left(x_1 + \ldots + x_n \right)  \geq 0.
+\]
+\fi
+\ifitalian %italian
+\fi
+
+\bigskip
+\bigskip
+
+\item[\textbf{5.}] %% Exercise 5 %%
+
+\ifgerman %german
+Für eine endliche Menge $A$ von natürlichen Zahlen nennen wir eine Aufteilung in zwei disjunkte nichtleere Teilmengen $A_1$ und $A_2$ \emph{dämonisch}, falls das kleinste gemeinsame Vielfache von $A_1$ gleich dem grössten gemeinsamen Teiler von $A_2$ ist. Bestimme die minimale Anzahl Elemente in $A$, sodass es genau 2016 dämonische Aufteilungen gibt.
+\fi
+\iffrench %french
+Soit $A$ un ensemble fini de nombres naturels. Une partition de $A$ en deux sous-ensembles disjoints non-vides $A_1$ et $A_2$ est appelée \emph{démoniaque} si le plus petit multiple commun des éléments de $A_1$ est égal au plus grand diviseur commun des éléments de $A_2$. Quel est le plus petit nombre d'éléments que $A$ doit avoir pour qu'il existe exactement 2016 partitions démoniaques?
+%Combien d'éléments $A$ doit-il avoir au minimum pour qu'il existe exactement 2016 partitions démoniaques?
+\fi
+\ifitalian %italian
+
+\fi
+
+\bigskip
+\bigskip
+
+\item[\textbf{6.}] %% Exercise 6 %%
+\ifgerman %german
+Sei $n$ eine natürliche Zahl. Zeige, dass $7^{7^{n}}+1$ mindestens $2n+3$ nicht notwendigerweise verschiedene Primteiler hat.
+
+\textit{Bemerkung: $18 = 2\cdot 3\cdot 3$ hat 3 Primteiler.}
+\fi
+\iffrench %french
+Soit $n$ un nombre entier naturel. Montrer que $7^{7^{n}}+1$ a au moins $2n+3$ facteurs premiers (non nécessairement distincts).
+
+\textit{Remarque: $18 = 2\cdot 3\cdot 3$ a 3 diviseurs premiers.}
+\fi
+\ifitalian %italian
+\fi
+}
+
+\IfStrEq*{\day}{3}{ %%%%%%%%%%%%%% Day 3 %%%%%%%%%%%%%%%%%
+
+\item[\textbf{7.}] %% Exercise 7 %%
+\ifgerman %german
+Finde alle natürlichen Zahlen $n$, sodass gilt:
+\[
+\sum_{\substack{d\div n\\ 1\leq d < n}} d^2=5(n+1).
+\]
+\fi
+\iffrench %french
+Trouver tous les nombres naturels $n$ tels que
+\[
+\sum_{\substack{d\div n\\ 1\leq d < n}} d^2=5(n+1).
+\]
+\fi
+\ifitalian %italian
+\fi
+
+\bigskip
+\bigskip
+
+\item[\textbf{8.}] %% Exercise 8 %%
+
+\ifgerman %german
+Sei $ABC$ ein Dreieck mit $AB \neq AC$ und $M$ der Mittelpunkt von $BC$. Die Winkelhalbierende von $\angle BAC$ schneide die Gerade $BC$ in $Q$. Sei $H$ der Höhenfusspunkt von $A$ auf $BC$. Die Senkrechte zu $AQ$ durch $A$ schneide die Gerade $BC$ in $S$. Zeige, dass $MH \cdot QS = AB \cdot AC$ gilt.
+\fi
+\iffrench %french
+Soit $ABC$ un triangle avec $AB\neq AC$ et soit $M$ le milieu de $BC$. La bissectrice de $\angle BAC$ coupe la droite $BC$ en $Q$. Soit $H$ le pied de la hauteur en $A$ sur $BC$. La perpendiculaire à $AQ$ passant par $A$ coupe la droite $BC$ en $S$. Montrer que $MH\cdot QS = AB \cdot AC$.
+\fi
+\ifitalian %italian
+\fi
+
+\bigskip
+\bigskip
+
+\item[\textbf{9.}] %% Exercise 9 %%
+\ifgerman %german
+Finde alle Funktionen $f\colon \R \to \R$, sodass für alle $x,y\in\R$ gilt:
+\[
+(f(x)+y)(f(x-y)+1)= f(f(xf(x+1)) - yf(y-1)).
+\]
+\fi
+\iffrench %french
+Trouver toutes les fonctions $f\colon \R \to \R$ telles que
+\[
+(f(x)+y)(f(x-y)+1)= f(f(xf(x+1)) - yf(y-1))
+\]
+pour tous $x,y\in \R $.
+\fi
+\ifitalian %italian
+\fi
+}
+
+\IfStrEq*{\day}{4}{ %%%%%%%%%%%%%%% Day 4 %%%%%%%%%%%%%%%%%%
+
+\item[\textbf{10.}] %% Exercise 10 %%
+\ifgerman %german
+Sei $ABC$ ein nicht rechtwinkliges Dreieck und $M$ der Mittelpunkt von $BC$. Sei $D$ ein Punkt auf $AB$, sodass $CA=CD$ gilt und $E$ ein Punkt auf $BC$, sodass $EB=ED$ gilt. Die Parallele zu $ED$ durch $A$ schneide die Gerade $MD$ im Punkt $I$ und die Geraden $AM$ und $ED$ schneiden sich im Punkt $J$. Zeige, dass die Punkte $C$, $I$ und $J$ auf einer Geraden liegen.
+\fi
+\iffrench %french
+Soit $ABC$ un triangle non-rectangle avec $M$ le milieu de $BC$. Soit $D$ un point sur la droite $AB$ tel que $CA=CD$ et soit $E$ un point sur la droite $BC$ tel que $EB=ED$. La parallèle à $ED$ passant par $A$ coupe la droite $MD$ au point $I$ et la droite $AM$ coupe la droite $ED$ au point $J$. Montrer que les points $C$, $I$ et $J$ sont alignés.
+\fi
+\ifitalian %italian
+\fi
+
+\bigskip
+\bigskip
+
+\item[\textbf{11.}] %% Exercise 11 %%
+
+\ifgerman %german
+%Sei $n$ eine natürliche Zahl. Zeige, dass es im offenen Intervall $]n^2, (n+1)^2[$ keine zwei verschiedene ganze Zahlen gibt, sodass ihr Produkt eine Quadratzahl ist.
+%\vspace{2cm}
+Seien $m$ und $n$ natürliche Zahlen mit $m>n$. Definiere
+\[
+x_k = \frac{m+k}{n+k}\text{ für }k=1, \ldots, n+1.
+\]
+Zeige: Wenn alle $x_i$ ganzzahlig sind, ist $x_1\cdot x_2 \cdot \ldots \cdot x_{n+1} - 1$
+keine Zweierpotenz.
+\fi
+\iffrench %french
+%Soit $n$ un nombre naturel. Montrer qu'il n'existe pas deux nombres entiers différents dans l'intervalle $]n^2, (n+1)^2[$ dont le produit est un carré parfait.
+%\vspace{2cm}
+Soient $m$ et $n$ des nombres naturels avec $m>n$. On définit
+\[
+x_k = \frac{m+k}{n+k}\text{ pour }k=1, \ldots, n+1.
+\]
+Montrer que si tous les $x_i$ sont entiers, alors $x_1\cdot x_2 \cdot \ldots \cdot x_{n+1} - 1$ n'est pas une puissance de deux.% \newline
+%Variante: est divisible par un nombre premier impair.
+\fi
+\ifitalian %italian
+\fi
+
+\bigskip
+\bigskip
+
+\item[\textbf{12.}] %% Exercise 12 %%
+\ifgerman %german
+An einer EGMO-Prüfung gibt es drei Aufgaben, wobei bei jeder Aufgabe eine ganzzahlige Punkt\-zahl zwischen 0 und 7 erreicht werden kann. Zeige, dass es unter 49 Schülerinnen immer zwei gibt, sodass die eine in jeder der drei Aufgaben mindestens so gut war wie die andere.
+\fi
+\iffrench %french
+Lors d'un examen d'EGMO, il y a trois exercices, qui peuvent chacun apporter un nombre entier de points compris entre 0 et 7. Montrer que, parmi 49 participantes, on peut toujours en trouver deux telles que la première a au moins aussi bien réussi chacun des trois exercices que la seconde.
+\fi
+\ifitalian %italian
+\fi
+}
+
+\bigskip
+
+\vspace{1cm}
+
+\center{\ifgerman Viel Glück! \fi \iffrench Bonne chance! \fi \ifitalian Buona fortuna! \fi}
+
+\end{enumerate}
+
+\end{document}

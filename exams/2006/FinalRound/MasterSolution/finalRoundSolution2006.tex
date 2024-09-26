@@ -1,0 +1,576 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{floatflt}
+\usepackage{subfigure}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+
+
+
+
+
+% Schriftabkürzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+
+\newcommand{\wi}{\mathop{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}} %Schönes Winkel-Zeichen
+
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge Lösungen zur SMO Finalrunde 2006} \\
+\medskip erste Prüfung - 31. März 2006
+\end{center}
+
+\vspace{15mm}
+
+
+\begin{enumerate}
+\item[\textbf{1.}] Finde alle Funktionen $f: \BR \rightarrow \BR$, sodass für alle $x,y \in \BR$ gilt
+\[yf(2x)-xf(2y)=8xy(x^2-y^2).\]
+
+\textbf{1. Lösung}
+
+Setze $y=1/2$ und $x=z/2$, dann folgt
+\[\frac{f(z)}{2}-\frac{f(1)z}{2} = \frac{z^3-z}{2}.\]
+Mit $c=f(1)-1$ gilt also $f(z)=z^3+cz$ für alle $z \in \BR$. Einsetzen zeigt, dass diese Funktionen für alle $c \in \BR$ Lösungen der Gleichung sind.\\
+
+\textbf{2. Lösung}
+
+Mit $y=0$ folgt $f(0)=0$. Ausserdem kann man die Gleichung für $x,y \neq 0$ umformen zu
+\[\frac{f(2x)}{x}-8x^2=\frac{f(2y)}{y}-8y^2 \qquad \forall x,y \neq 0.\]
+Daraus folgt unmittelbar, dass $f(2x)/x-8x^2$ konstant ist für $x \neq 0$, zum Beispiel gleich $c/4$. Auflösen
+ergibt $f(x)=x^3+cx$ und wegen $f(0)=0$ gilt dies überall.\\
+
+\bigskip
+
+
+\item[\textbf{2.}] Sei $ABC$ ein gleichseitiges Dreieck und sei $D$ ein innerer Punkt der Seite $BC$. Ein Kreis
+berühre $BC$ in $D$ und scheide die Seiten $AB$ und $AC$ in den inneren Punkten $M, N$ und $P,Q$. Beweise, dass
+gilt
+\[|BD|+|AM|+|AN| = |CD|+|AP|+|AQ|.\]
+
+\textbf{1. Lösung}
+
+Anwenden des Potenzsatzes bei den Punkten $A$, $B$, $C$ ergibt der Reihe nach
+\begin{eqnarray}
+|AM|\cdot|AN| &=& |AP|\cdot|AQ|\\
+|BM|\cdot|BN| &=& |BD|^2\\
+|CP|\cdot|CQ| &=& |CD|^2.
+\end{eqnarray}
+Wir bezeichnen die Seitenlänge des gleichseitigen Dreiecks $ABC$ mit $s$. Einerseits gilt nun
+\begin{equation}
+|BD|^2-|CD|^2 = (|BD|+|CD|)(|BD|-|CD|)=s(|BD|-|CD|),
+\end{equation}
+andererseits folgt mit (2) und (3)
+\begin{eqnarray*}
+|BD|^2-|CD|^2 &=& |BM|\cdot|BN| - |CP|\cdot|CQ|\\
+&=& (s-|AM|)(s-|AN|)-(s-|AP|)(s-|AQ|)\\
+&=& \left(|AM|\cdot|AN|-|AP|\cdot|AQ|\right)-s\left(|AM|+|AN|-|AP|-|AQ|\right).
+\end{eqnarray*}
+Hier verschwindet die erste Klammer in der letzten Zeile wegen (1). Ein Vergleich mit (4) ergibt nach Division
+mit $s$ gerade die Behauptung.\\
+
+\textbf{2. Lösung}
+
+Sei $O$ der Mittelpunkt des gegebenen Kreises und seien $E$ und $F$ die Projektionen von $O$ auf $AB$ bzw. $AC$. Weil $\triangle OMN$ gleichschenklig ist, gilt $|AM| + |AN| = 2|AE|$ und analog $|AP| + |AQ| = 2|AF|$. \\
+Seien $R$ und $S$ die Projektionen von $D$ auf $AB$ bzw. $AC$. Wegen $\angle ABC = 60^\circ$ gilt $|BD| = 2|BR|$ und analog $|CD| = 2|CS|$.\\ Nun ist klar, dass die Gleichung aus der Aufgabenstellung wegen $|AB| = |AC|$ genau dann gilt, wenn $|ER| = |FS|$. Dies ist der Fall, denn
+$$|ER| = \frac{\sqrt{3}}{2} |OD| = |FS|. $$
+
+\bigskip
+
+
+\item[\textbf{3.}] Berechne die Quersumme der Zahl
+\[9 \times 99 \times 9999 \times \cdots \times \underbrace{99\ldots 99}_{2^n},\]
+wobei sich die Anzahl Neunen in jedem Faktor verdoppelt.\\
+
+\textbf{1. Lösung}
+
+Wir beweisen allgemeiner folgendes 
+
+\begin{lem}
+Sei $a$ eine Zahl mit höchstens $m$ Dezimalstellen, sodass die letzte Ziffer von $a$ nicht $0$ ist. Dann ist die Quersumme von $\underbrace{99\ldots 99}_{m} \times a$ gleich $9m$.
+\end{lem}
+
+\begin{proof}[Beweis]
+Sei $a_{m-1}\ldots a_1 a_0$ die Dezimaldarstellung von $a$ mit $a_0 \neq 0$. Es gilt $99\ldots 99 \times a = 10^m \cdot a - a$. In der Subtraktion
+\begin{center}
+\begin{tabular}{cccccccccc}
+& $a_{m-1}$ & $\cdots$ & $a_1$ & $a_0$ & $0$ & $0$ & $\cdots$ & $0$ & $0$ \\
+$-$ &  &  &  &  & $a_{m-1}$ & $a_{m-2}$ & $\cdots$ & $a_1$ & $a_0$  \\ \hline 
+& $b_{2m-1}$ & $\cdots$ & $b_{m+1}$ & $b_m$ & $b_{m-1}$ & $b_{m-2}$ & $\cdots$ & $b_1$ & $b_0$ \\
+\end{tabular}
+\end{center}
+gibt es nun einen Übertrag von 1 an den $m$ letzten Stellen. Da dieser Übertrag immer gleich 1 ist, und da $a_0$ nach Voraussetzung nicht verschwindet, gibt es an der $m+1$-ten und somit auch allen folgenden Stellen keine weiteren Überträge. Es gilt also $b_0+a_0=10$, für $1 \leq k \leq m-1$ gilt $b_k+a_k=9$, ausserdem ist $b_m+1=a_0$ sowie $b_k=a_{k-m}$ für $k \geq m+1$. Insgesamt also
+\[\sum_{k=0}^{2m-1} b_k = (10-a_0) + \sum_{k=1}^{m-1} (9-a_k) + (a_0-1) + \sum_{k=1}^{m-1} a_k = 9m.\]
+\end{proof}
+
+Die Zahl $a=9 \times 99 \times 9999 \times \cdots \times \underbrace{99\ldots 99}_{2^{n-1}}$ endet nicht mit einer Null und ist ausserdem kleiner als $10 \cdot 10^2 \cdot 10^4 \cdots 10^{2^{n-1}}= 10^{2^n-1}$, besitzt also höchstens $2^n-1$ Stellen. Aus dem Lemma folgt nun mit $m=2^n$, dass die gesuchte Quersumme gleich $9\cdot 2^n$ ist.\\ 
+
+%\textbf{2. Lösung}
+
+%Es gilt
+%\begin{eqnarray*}
+%a=9 \times 99 \times 9999 \times \cdots \times \underbrace{99\ldots 99}_{2^n} &=& (10-1)(10^2-1)(10^4-1)\cdots (10^{2^n}-1)\\
+%&=& \sum_{k=0}^{2^{n+1}-1} \eps(k) \cdot 10^k,
+%\end{eqnarray*}
+%wobei $\eps(k)=\pm 1$, je nachdem, ob die Anzahl Nullen in der Binärdarstellung von $k$ gerade oder ungerade ist. Multipliziert man das Produkt in der ersten Zeile nämlich aus, dann tritt jeder Summand $10^k$ mit $0 \leq k \leq 1+2+4+\ldots+2^n=2^{n+1}-1$ genau einmal auf. Das Vorzeichen hängt davon ab, in wie vielen Klammern man $-1$ und in wievielen man die Zehnerpotenz wählt. Da die Binärdarstellung von $2^{n+1}-1$ nur aus Einsen besteht, ist $\eps(2^{n+1}-1)=1$. Wir zeigen nun induktiv, dass die Dezimaldarstellung $a_{2^{n+1}-1}\ldots a_1a_0$ von $a$ wie folgt aussieht:
+%\[a_k = \left\{ \;\;
+%\parbox{1cm}{
+%$1$\\ $0$\\ $9$\\ $8$
+%}
+%\quad \mbox{falls} \quad
+%(\eps(k),\eps(k-1)) = \left\{ \;\;
+%\parbox{2cm}{
+%$(1,1)$\\ $(1,-1)$\\ $(-1,1)$\\ $(-1,-1)$
+%}.
+%\]
+
+
+
+
+
+
+\bigskip
+
+\item[\textbf{4.}] Ein Kreis mit Umfang $6n$ wird durch $3n$ Punkte in je $n$ Intervalle der Länge 1, 2 und 3 zerlegt. Zeige, dass es stets zwei dieser Punkte gibt, welche auf dem Kreis diametral gegenüber liegen.\\
+
+\textbf{1. Lösung}
+
+Wir betrachten neben den 3n Intervallendpunkten auch die Mittelpunkte aller Intervalle der Länge 2 und die Drittelpunkte aller Intervalle der Länge 3. Diese $6n$ Punkte bilden ein reguläres Polygon. Wir färben die Intervallendpunkte schwarz, die anderen Punkte weiss. Nehme an, es gäbe keine zwei gegenüberliegende schwarze Punkte. Für je zwei benachbarte weisse Punkte $A,B$ müssen dann die beiden gegenüberliegenden Punkte $C,D$ schwarz sein. Entferne nun die Intervalle $AB$ und $CD$ und verklebe die zwei verbleibenden Kreisbogen bei $A,B$ und $C,D$, sodass nach kleiner Deformation ein neuer Kreis entsteht, dessen Unfang um 2 kleiner ist. Dieses Herausschneiden beseitigt ein Intervall der Länge 1 und ersetzt ein Intervall der Länge 3 durch eines der Länge 2. Ausserdem bleiben bei diesem Vorgang alle Paare von Diametralpunkten erhalten, mit anderen Worten, zwei Punkte sind nach dem Herausschneiden genau dann diametral gegenüber, wenn sie es vorher schon waren.  
+
+Nach $n$ solchen Operationen hat der Kreis den Umfang $4n$ und die verbleibenden $4n$ Punkte sind abwechselnd schwarz und weiss. In dieser Situation haben aber gegenüberliegende Punkte immer dieselbe Farbe. Insbesondere gibt es zwei schwarze Diametralpunkte, dies muss also bereits am Anfang der Fall gewesen sein, im Widerspruch zur Annahme.\\
+
+
+\bigskip
+
+
+\item[\textbf{5.}] Ein Kreis $k_1$ liegt innerhalb eines zweiten Kreises $k_2$ und berührt diesen im Punkt $A$.
+Eine Gerade durch $A$ schneide $k_1$ nochmals in $B$ und $k_2$ in $C$. Die Tangente an $k_1$ durch $B$ schneide
+$k_2$ in den Punkten $D$ und $E$. Die Tangenten an $k_1$ durch $C$ berühren $k_1$ in den Punkten $F$ und $G$.
+Beweise, dass $D,E,F$ und $G$ auf einem Kreis liegen.\\
+
+\textbf{Lösung}
+
+Wir zeigen, dass die vier Punkte alle den gleichen Abstand zu $C$ haben.
+
+\begin{lem}
+Sei $P$ ein Punkt auf einem Kreis $k$. Schneidet eine zu der Tangenten von $k$ durch $P$ parallele Gerade den Kreis $k$ in den Punkten $R$ und $S$, so gilt $PR = PS$.
+\end{lem}
+
+\begin{proof}[Beweis des Lemmas]
+Wir betrachten die Gerade durch $P$, welche senkrecht auf den beiden parallen Geraden steht. Da sie senkrecht zu der Tangente ist, geht sie durch den Mittelpunkt des Kreises und ist deshalb Symmetrieachse der ganzen Figur. Damit ist klar, dass $PR = PS$ gilt. Alternativ kann man mit einfacher Winkeljagd zeigen, dass $\triangle PRS$ gleichschenklig ist.
+\end{proof}
+
+\begin{enumerate}
+\item $CF = CG$. Ist klar (Tangentenabschnitte).
+
+\item $CD = CE$. Sei $t$ die Tangente an $k_2$ durch $C$. Wir betrachten die zentrische Streckung an $A$, bei der $k_1$ in $k_2$ übergeht. Dabei geht $B$ in $C$ über und somit werden auch die Tangenten durch diese Punkte aufeinander abgebildet, d.h. $DE$ und $t$ sind parallel. $CD = CE$ folgt aus dem Lemma.
+
+\item $CD = CF$. Es genügt zu zeigen, dass die Dreiecke $CDB$ und $CAD$ ähnlich sind, denn aus
+$$ \frac{CD}{CB} = \frac{CA}{CD} $$
+folgt mit der Potenz von $C$ an $k_1$
+$$ CD^2 = CA \cdot CB = CF^2.$$
+Tatsächlich ist $\triangle CDB \sim \triangle CAD$, denn (siehe Abbildung)
+\begin{eqnarray*}
+\angle CAD &=& \angle CED \quad \text{(Peripheriewinkelsatz)} \\
+ &=& \angle EDC. \quad \text{($\triangle CED$ ist gleichschenklig)}
+\end{eqnarray*}
+\end{enumerate}
+Aus (a),(b) und (c) folgt, dass die Punkte $D,E,F$ und $G$ auf einem Kreis mit Mittelpunkt $C$ liegen.
+
+\end{enumerate}
+
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{11cm}
+\centering
+\includegraphics[width=10cm]{smo5}
+\end{minipage}
+\end{figure}
+\pagebreak
+
+
+\begin{center}
+{\huge Lösungen zur SMO Finalrunde 2006} \\
+\medskip zweite Prüfung - 1. April 2006
+\end{center}
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{6.}] In einem Tennistournier haben mindestens drei Spieler teilgenommen. Dabei haben je zwei Spieler
+genau einmal gegeneinander gespielt, und jeder Spieler hat mindestens ein Match gewonnen. Zeige, dass es drei
+Spieler $A,B,C$ gibt, sodass $A$ gegen $B$, $B$ gegen $C$ und $C$ gegen $A$ gewonnen hat.\\
+
+\textbf{1. Lösung}
+
+Wähle einen Spieler $A$, der unter allen Spielern die kleinste Anzahl Matches gewonnen hat. Seien $U$ und $V$
+die Mengen der Spieler, gegen die $A$ gewonnen bzw. verloren hat. Nach Annahme sind $U$ und $V$ nicht leer. Hat
+ein Spieler $B$ aus $U$ gegen einen Spieler $C$ aus $V$ gewonnen, dann erfüllen $A,B,C$ die Bedingungen der
+Aufgabe und wir sind fertig. Wenn alle Spieler aus $U$ gegen alle Spieler aus $V$ verloren haben, dann haben die
+Spieler in $U$ aber allesamt weniger Matches gewonnen als $A$, ein Widerspruch zur Wahl von $A$.\\
+
+\textbf{2. Lösung}
+
+Jeder der $n$ Spieler hat mindestens 1 und höchstens $n-1$ Matches gewonnen. Nach dem Schubfachprinzip gibt es
+also zwei Spieler $A$ und $B$, die gleichviele Matches gewonnen haben. Wir können annehmen, dass $A$ gegen $B$
+gewonnen hat, und bezeichnen die Menge der Spieler, die gegen $B$ verloren haben, mit $U$. Mindestens ein
+Spieler $C$ aus $U$ muss gegen $A$ gewonnen haben, denn sonst hätte $A$ gegen $B$ und alle Spieler in $U$
+gewonnen, also gegen mindestens einen Spieler mehr als $B$, ein Widerspruch. $A,B,C$ erfüllen die Bedingungen
+der Aufgabe.\\
+
+\textbf{3. Lösung}
+
+Die Notation $X\rightarrow Y$ bedeute, dass $X$ sein Match gegen $Y$ gewonnen hat. Wir nennen eine Folge von verschiedenen
+Spielern $X_1 \rightarrow X_2 \rightarrow \ldots \rightarrow X_k \rightarrow X_1$ einen Zyklus. Es gibt
+mindestens einen Zyklus: Wähle einen beliebigen Spieler $A_1$. Dieser hat gegen mindestens einen anderen Spieler
+$A_2$ gewonnen. Dieser wiederum gegen einen Spieler $A_3$. Fährt man so weiter, muss irgendwann ein Spieler zum
+zweiten Mal in dieser Folge auftauschen. Jede minimale Sequenz zwischen zwei solchen Wiederholungen liefert einen Zyklus.\\
+Sei nun $X_1 \rightarrow X_2 \rightarrow \ldots \rightarrow X_k \rightarrow X_1$ ein Zyklus minimaler Länge. Wir
+zeigen, dass $k=3$ gilt, was den Beweis beendet, denn die drei Spieler eines solchen Zyklus erfüllen genau die
+Bedingungen der Aufgabe. Nehme also $k>3$ an. Wenn $X_1$ gegen $X_3$ gewonnen hat, ist $X_1 \rightarrow X_3 \rightarrow X_4 
+\ldots \rightarrow X_k \rightarrow X_1$ ein Zyklus kleinerer Länge,
+Widerspruch. Wenn $X_3$ aber gegen $X_1$ gewonnen hat, dann ist $X_1 \rightarrow X_2
+\rightarrow X_3 \rightarrow X_1$ ein Zyklus der Länge $3<k$, wieder ein Widerspruch.\\
+
+\textbf{4. Lösung}
+
+Wir verwenden Induktion nach $n$, der Fall $n=3$ ist klar. Sei $S$ die Menge aller Spieler. Wir benötigen
+folgende Beobachtung:
+\begin{equation}
+\parbox{13cm}{Wenn es eine nichtleere Menge $U$ von Spielern gibt,
+sodass jeder Spieler aus $U$ gegen jeden Spieler aus $S \setminus U$ verloren hat, dann erfüllen die Spieler in
+$U$ ebenfalls die Bedingungen der Aufgabe.}
+\end{equation}
+In der Tat, jeder Spieler in $U$ hat mindestens ein Match gewonnen, und zwar nach Voraussetzung gegen einen
+anderen Spieler in $U$. Ausserdem sind mindestens drei Spieler in $U$, denn ist $ A$ einer davon, dann hat er
+gegen einen zweiten $B$ gewonnen, der wiederum gegen einen dritten Spieler $C$ aus $U$ gewonnen hat, und
+natürlich sind diese drei Spieler alle verschieden. \\
+Wähle nun einen beliebigen Spieler $A$. Hat $A$ gegen alle anderen Spieler gewonnen, dann folgt die Behauptung
+induktiv aus (5) mit der Menge $U=S \setminus \{A\}$. Nehme an, das sei nicht der Fall. Seien $X$ und $Y$ die
+nichtleeren Mengen der Spieler, gegen die $A$ gewonnen bzw. verloren hat. Hat ein Spieler $B$ aus $X$ gegen
+einen Spieler $C$ aus $Y$ gewonnen, dann erfüllen $A,B,C$ die Bedingungen der Aufgabe. Wenn nicht, dann haben
+alle Spieler aus $X$ gegen alle Spieler aus $Y \cup \{A\}$ verloren und die Behauptung folgt wieder induktiv aus
+(5) mit $U=X$.\\
+
+\bigskip
+
+\item[\textbf{7.}] Sei $ABCD$ ein Sehnenviereck mit $\angle ABC = 60^\circ$. Nehme an, es sei $|BC|=|CD|$. Beweise, dass gilt
+\[|CD|+|DA| = |AB|.\]
+
+
+\textbf{1. Lösung}
+
+Sei $P$ der Punkt auf $AB$ mit $|BP|=|BC|$, sodass $A$ und $P$ auf der gleichen Seite von $B$ liegen. Nach Konstruktion ist $\triangle PBC$ gleichschenklig und wegen $\angle ABC = 60^\circ$ sogar gleichseitig. Sei $\angle CBD = \angle CAD = \alpha$. Offensichtlich ist $\alpha < \angle CBA = 60^\circ$. Wir zeigen, dass die Dreiecke $ADC$ und $APC$ ähnlich und damit wegen der gemeinsamen Seite $AC$ kongruent sind. Aus $|BC|=|CD|$ folgt, dass der Peripheriewinkel über der Sehne $BC$ ebenfalls gleich $\alpha$ ist, insbesondere gilt $\angle CAD = \angle CAB = \alpha$. Da $\angle CAB = \alpha < 60^\circ = \angle CPB$ ist nun klar, dass der Punkt $P$ im Innern der Seite $AB$ liegt. Somit gilt
+$$ \angle APC = 120^\circ = 180^\circ - 60^\circ = 180^\circ - \angle ABC = \angle ADC. $$
+Letzteres gilt, weil $ABCD$ ein Sehnenviereck ist. Damit ist gezeigt, dass $\triangle ADC \equiv \triangle APC$ und bemerken abschliessend
+$$ |AB| = |AP| + |PB| = |AD| + |BC| = |AD| + |CD|. $$
+
+\textbf{2. Lösung}
+
+Sei $E$ das Bild von $A$ bei der Spiegelung an der Mittelsenkrechten von $BD$. Weil $\triangle CDB$ gleichschenklig ist, bleibt $C$ fix, $B$ geht in $D$ über und $E$ liegt auf dem Umkreis von $ABCD$. Nach Peripheriewinkelsatz gilt $\angle AEC = \angle ABC = 60^\circ$ und wegen Symmetrie auch $\angle EAC = \angle AEC = 60^\circ$. $\triangle AEC$ ist also gleichseitig und weil $B$ auf dem Umkreis dieses Dreiecks liegt, gilt nach der Eigenschaft vom gleichseitigen Dreieck
+$$ |BA| = |BE| + |BC| = |AD| + |CD|, $$
+wobei wir benutzt haben, dass wegen Symmetrie $|BE| = |AD|$ gilt.\\
+
+\textbf{3. Lösung}
+
+Weil $|BC|=|CD|$ gilt, ist $AC$ die Winkelhalbierende von $\angle BAD$. Somit liegt das Bild von $D$ bei der Spiegelung an $AC$ auf der Geraden $AB$, wir nennen diesen Punkt $P$. Wegen Symmetrie und weil $ABCD$ ein Sehnenviereck ist, erhalten wir $\angle APC = \angle ADC = 180^\circ - \angle ABC = 120^\circ$. Somit ist $\angle BPC = 60^\circ$ und $\triangle BPC$ also gleichseitig. Es gilt nun
+$$ |AB| = |AP| + |PB| = |AD| + |BC| = |AD| + |CD|. $$
+
+\textbf{4. Lösung}
+
+Weil $ABCD$ ein Sehnenviereck ist, folgt aus $\angle ABC = 60^\circ$, dass $\angle ADC = 120^\circ$. Es sei $a = |AB|$, $b = |BC| = |CD|$ und $c = |DA|$. Wir berechnen die Länge von $AC$ auf zwei verschiedene Wege:
+\begin{eqnarray*}
+|AC|^2 &=& a^2 + b^2 - 2 a b \cdot \cos 60^\circ \quad \text{(Cosinussatz im Dreieck $ABC$)} \\
+|AC|^2 &=& b^2 + c^2 - 2 b c \cdot \cos 120^\circ \quad \text{(Cosinussatz im Dreieck $ADC$)}
+\end{eqnarray*}
+Es ist $\cos 60^\circ = - \cos 120^\circ = \frac{1}{2}$. Wir subtrahieren nun die zweite von der ersten Gleichung und faktorisieren zu
+$$ b(a+c) = (a-c)(a+c). $$
+Wir dividieren durch $(a+c)$ und erhalten wie gewünscht
+$$ a = b+c. $$
+
+\bigskip
+
+\item[\textbf{8.}] Leute aus $n$ verschiedenen Ländern sitzen an einem runden Tisch, sodass für je zwei Personen aus demselben Land ihre direkten Sitznachbarn rechts von ihnen aus verschiedenen Ländern stammen. Was ist die grösstmögliche Anzahl Personen, die am Tisch Platz nehmen können?\\
+
+\textbf{1. Lösung}
+
+Die Personen aus einem festen Land haben rechts Sitznachbarn aus paarweise verschiedenen Ländern, es können also höchstens $n$ Leute pro Land am Tisch sitzen. Dies ergibt die obere Grenze $n^2$. 
+
+Wir zeigen nun induktiv, dass diese Grenze erreicht werden kann. Im Folgenden repräsentieren wir Personen aus dem $k$-ten Land mit einem $k$. Wenn wirklich $n^2$ Personen am Tisch sitzen, dann muss jedes Paar $(k,l)$, $1 \leq k,l \leq n$ genau einmal als Sitznachbarpaar vorkommen. Für $n=2$ funktioniert die zyklische Anordnung $1122$. Nehme an, wir hätten bereits eine Anordnung für $n-1$ gefunden. Ersetze nun das Nachbarpaar $11$ durch $1nn11$ und erstze für $2 \leq k \leq n-1$ das Paar $kk$ durch $knkk$. Die neue Anordnung enthält nun jedes Paar $(k,l)$, $1 \leq k,l \leq n$ wiederum genau einmal. Der Induktionsschritt ist komplett.\\
+
+\textbf{2. Lösung}
+
+Wir geben eine alternative Konstruktion einer Sitzordnung für $n^2$ Personen. Für $n=2$ verwenden wir wieder die Anordnung $1122$. Wir nehmen nun an, dass wir für $n-1$ bereits eine solche Anordnung konstruiert haben, sodass ausserdem die erste Person aus Land 1 und die letzte Person aus Land $n-1$ stammt. Ergänze diese Anordnung durch 
+\[1\; n \; 2 \; n \; 3 \; n \ldots n \; (n-1) \; n \; n \]
+um eine solche für $n$ zu erhalten.\\
+
+
+\bigskip
+
+\item[\textbf{9.}] Seien $a,b,c,d$ reelle Zahlen. Beweise, dass gilt
+\[(a^2+b^2+1)(c^2+d^2+1) \geq 2(a+c)(b+d).\]
+
+\textbf{1. Lösung}
+
+Wenn wir $a,b,c,d$ durch ihre Beträge ersetzen, bleibt die linke Seite gleich, die rechte Seite wird höchstens
+grösser. Es genügt also, den Fall $a,b,c,d \geq 0$ zu betrachten. Nach C.S. gilt
+\begin{eqnarray*}
+\left(a^2+b^2+\frac{1}{2}+\frac{1}{2}\right)\left(\frac{1}{2}+\frac{1}{2}+c^2+d^2\right) &\geq&
+\left(\frac{a}{\sqrt{2}}+\frac{b}{\sqrt{2}}+\frac{c}{\sqrt{2}}+\frac{d}{\sqrt{2}}\right)^2\\
+&=& \frac{1}{2}(a+b+c+d)^2.
+\end{eqnarray*}
+Andererseits ist nach AM-GM
+\[2(a+c)(b+d)\leq 2\left(\frac{(a+c)+(b+d)}{2}\right)^2 = \frac{1}{2}(a+b+c+d)^2.\]
+
+
+\textbf{2. Lösung}
+
+Wir können wieder annehmen, dass $a,b,c,d$ nichtnegativ sind. Ersetze $a,b$ respektive $c,d$ durch ihr jeweiliges quadratisches Mittel. Die linke Seite bleibt dabei gleich, die rechte wird jedoch grösser, denn es gilt
+\[(a+c)(b+d) \leq \left(\frac{a+b+c+d}{2}\right)^2 \leq \left(\sqrt{\frac{a^2+b^2}{2}}+\sqrt{\frac{c^2+d^2}{2}}\right)^2\]
+nach AM-GM und AM-QM. Es genügt daher den Fall $a=b$ und $c=d$ zu betrachten, die Ungleichung lautet dann 
+\[(2a^2+1)(2c^2+1) \geq 2(a+c)^2.\]
+Dies ist aber äquivalent zu $(2ac-1)^2 \geq 0$.\\
+
+
+\textbf{3. Lösung}
+
+Die Differenz zwischen der linken und der rechten Seite ist gleich
+\begin{eqnarray*}
+\left(ac-\frac{1}{2}\right)^2+\left(ad-\frac{1}{2}\right)^2+\left(bc-\frac{1}{2}\right)^2+
+\left(bd-\frac{1}{2}\right)^2 && \\
++\frac{1}{2}(a-b+c-d)^2+\frac{1}{2}(a-b)^2+\frac{1}{2}(c-d)^2 &\geq& 0.
+\end{eqnarray*}
+
+
+
+\bigskip
+
+\item[\textbf{10.}] Entscheide, ob es eine ganze Zahl $n>1$ gibt mit folgenden Eigenschaften:
+\begin{enumerate}
+\item[(a)] $n$ ist keine Primzahl.
+\item[(b)] Für alle ganzen Zahlen $a$ ist $a^n-a$ durch $n$ teilbar.
+\end{enumerate}
+
+\textbf{Lösung}
+
+Ja, zum Beispiel $n=561$.\\
+Eine solche Zahl $n$ ist quadratfrei: nehme an, $m^2>1$ sei ein Teiler von $n$ und setze $a=m$. Dann ist $a^n-a$
+durch $m$, aber nicht durch $m^2$ teilbar, also auch nicht durch $n$. Es muss somit $n=p_1\cdots p_r$ gelten mit
+verschiedenen Primzahlen $p_i$. Ist $a$ durch $p_i$ teilbar, dann natürlich auch $a^n-a$. Ist $a$ jedoch
+teilerfremd zu $p_i$, dann gilt nach dem kleinen Satz von Fermat $a^n \equiv a^{n/p_i}$ (mod $p_i$), und somit
+\[p_i \div a^n-a \quad \Longleftrightarrow \quad  a^{n/p_i} \equiv a
+\quad \Longleftrightarrow \quad a^{n/p_i-1} \equiv 1 \quad \mbox{(mod $p$).}\] Wenn der Exponent $n/p_i-1$ nun
+durch $p_i-1$ teilbar ist, dann ist obige Kongruenz wiederum nach dem Satz von Fermat sicher erfüllt. Wir
+erhalten also als \textit{hinreichende} Bedingung an $n$ das folgende System von Teilbarkeitsbeziehungen
+\[p_i-1 \div p_1\cdots p_{i-1}p_{i+1}\cdots p_r-1  \qquad 1\leq i \leq r.\]
+Für $r=2$ ist dieses nie erfüllt, gilt nämlich $p_1<p_2$, dann ist $p_2-1 \notdiv p_1-1$. Der nächsteinfache
+Fall ist $r=3$. Offenbar müssen alle $p_i$ ungerade sein. Wir versuchen $p=3<q<r$ und erhalten die Bedingungen
+\[q-1 \div 3r-1,\qquad r-1 \div 3q-1.\]
+Aus $r-1=3q-1$ würde $r=3q$ folgen, ein Widerspruch. Ausserdem gilt $3q-1\leq 3(r-1)-1 < 3(r-1)$, also ist
+$3q-1=2(r-1)$ und somit $2r=3q+1$. Multilpiziert man die erste Teilbarkeitsbedingung mit 2 und setzt ein, ergibt
+sich $2q-2 \div 9q+1$ mit der einzigen Lösung $q=11$. Dies ergibt $r=17$ und man rechnet leicht nach, dass diese
+drei Primzahlen alle Bedingungen erfüllen, somit ist $n=3\cdot 11 \cdot 17=561$ eine solche Zahl.\\
+
+\end{enumerate}
+
+\end{document}

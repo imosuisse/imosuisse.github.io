@@ -1,0 +1,50 @@
+\examtime{%
+    \de{4.5 Stunden}%
+    \fr{4.5 heures}%
+    \ita{4.5 ore}%
+    \en{4.5 hours}%
+}
+\examdate{%
+    \IfStrEq*{\examday}{1}{%
+        \de{8. Mai 2021}%
+        \fr{8 mai 2021}%
+        \ita{1 gennaio 2019}%
+        \en{8 May 2021}%
+    }{}%
+   \IfStrEq*{\examday}{2}{%
+        \de{9. Mai 2021}%
+        \fr{9 mai 2021}%
+        \ita{9 gennaio 2019}%
+        \en{9 May 2021}%
+    }{}%
+  \IfStrEq*{\examday}{3}{%
+        \de{22. Mai 2021}%
+        \fr{22 mai 2021}%
+        \ita{1 gennaio 2019}%
+        \en{22 May 2021}%
+    }{}%
+   \IfStrEq*{\examday}{4}{%
+        \de{23. Mai 2021}%
+        \fr{23 mai 2021}%
+        \ita{2 gennaio 2019}%
+        \en{23 May 2021}%
+    }{}%
+}
+\title{%
+  \de{IMO-Selektion 2021}%
+    \fr{Sélection IMO 2021}%
+    \ita{Turno preliminare 2021}%
+    \en{IMO-Selection 2021}%
+}
+\examplace{%
+    \de{\examday. Prüfung}%
+    \fr{\IfStrEq*{\examday}{1}{Premier}{}%
+        \IfStrEq*{\examday}{2}{Deuxième}{}%
+        \IfStrEq*{\examday}{3}{Troisième}{}%
+        \IfStrEq*{\examday}{4}{Quatrième}{} examen}%
+    \ita{???}%
+    \en{\IfStrEq*{\examday}{1}{First}{}%
+        \IfStrEq*{\examday}{2}{Second}{}%
+        \IfStrEq*{\examday}{3}{Third}{}%
+        \IfStrEq*{\examday}{4}{Fourth}{} exam}%
+}

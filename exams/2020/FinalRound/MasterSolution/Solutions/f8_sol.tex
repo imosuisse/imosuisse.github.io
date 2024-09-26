@@ -1,0 +1,73 @@
+Soit $n$ un nombre entier strictement positif. Soient $x_1\leq x_2\leq\ldots\leq x_n$ des nombres réels tels que $x_1+x_2+\ldots+x_n=0$ et $x_1^2+x_2^2+\ldots+x_n^2=1$. Montrer que $x_1x_n\leq -1/n$.
+
+\textbf{Solution 1 (Arnaud)}
+On commence par élever au carré la condition que la somme des $x_i$ est 0:
+\[
+\underbrace{\sum x_i^2}_{=1} +\sum_{i\neq j} 2x_ix_j=\left(\sum x_i\right)^2=0
+\]
+et donc on conclut que 
+\[
+\sum_{i\neq j}2x_ix_j=-1.
+\]
+
+Le but est de faire apparaître seulement des termes $x_1x_n$. Dans ce but, on peut réécrire la somme ci-dessus comme
+\begin{align*}
+\sum_{i\neq j}2x_ix_j&=2x_1x_n+\sum_{k=2}^{n-1} x_kx_1+x_kx_n+x_k\underbrace{(x_1+\ldots+x_{k-1}+x_{k+1}+\ldots+x_n)}_{=-x_k}\\
+&= 2x_1x_n +\sum_{k=2}^{n-1} x_1x_k+x_nx_k-x_k^2.
+\end{align*}
+
+Il suffit donc de montrer que $x_1x_k+x_nx_k-x_k^2\geq x_1x_n$ pour conclure. On propose deux arguments.
+
+\begin{enumerate}
+    \item (David's clever trick) L'inégalité se factorise en $(x_i-x_1)(x_n-x_1)\geq 0$ qui est clairement vraie.
+    \item Observer que comme $x_1+\ldots+x_n=0$ et que toutes les variables ne peuvent pas être 0 simultanément (à cause de la seuxième condition), alors on doit avoir $x_1<0$ et $x_n>0$.
+
+On distingue deux cas:
+\begin{enumerate}
+    \item Si $x_k\geq 0$, alors $x_nx_k-x_k^2=x_k(x_n-x_k)\geq 0$. De plus, $x_1x_k\geq x_1x_n$ car $x_1<0$ et $x_n\geq x_k$. Donc on a bien $x_1x_k+x_nx_k-x_k^2\geq x_1x_n$.
+    
+    \item Si $x_k\leq 0$, alors $x_1x_k-x_k^2=x_k(x_1-x_k)\geq 0$. De plus, $x_nx_k\geq x_1x_n$ car $x_n>0$ et $x_k\geq x_1$. Donc dans ce cas aussi on conclut que $x_1x_k+x_nx_k-x_k^2\geq x_1x_n$.
+\end{enumerate}
+\end{enumerate}
+
+\textbf{Solution 2}
+A nouveau, on a $x_1<0$ et $x_n>0$. Dans cette solution, on trouve l'indice $k$ tel que $x_i\leq 0$ pour $i\leq k$ et $x_i>0$ pour $i>k$. On estime à présent la somme des carrés:
+
+\[
+\sum_{i=1}^k x_i^2\leq \sum_{i=1}^k x_1x_i= -x_1\sum_{i=k+1}^n x_i\leq (n-k)(-x_1)x_n,
+\]
+
+et
+
+\[
+\sum_{i=k+1}^n x_i^2\leq x_n\sum_{i=k+1}^n x_i=x_n\sum_{i=1}^k -x_i\leq k(-x_1)x_n.
+\]
+
+En sommant ces deux inégalités on obtient bien $1\leq -nx_1x_n$.
+
+\newpage
+\textbf{Marking scheme}
+
+\begin{enumerate}
+    \item Solution 1
+    \begin{itemize}
+        \item 1P: get $2x_1x_n+2\sum_{i\neq j, (i,j)\neq (1,n)}x_ix_j=-1$ (i.e. put the $x_1x_n$ apart)
+        \item 2P: get $2\sum_{i\neq j, (i,j)\neq (1,n)}x_ix_j=\sum_{i=2}^{n-1} x_1x_i+x_nx_i-x_i(\hat{x_i})$
+        \item 1P: get $x_1x_i+x_nx_i-x_i(\hat{x_i})=x_1x_i+x_nx_i-x_i^2$
+        \item 2P: claim that $x_1x_i+x_nx_i-x_i^2\geq x_ix_n$ is sufficient to conclude
+        \item 2P: conclusion \begin{itemize}
+            \item 2P: factorisation
+            \item 1P each: distinguishing $x_i\geq 0$ and $x_i\neq 0$
+        \end{itemize}
+    \end{itemize}
+    
+    \item Solution 2
+    \begin{itemize}
+        \item 1P: locating zero, i.e. $x_1\leq\ldots\leq x_k\leq 0<x_{k+1}\leq \ldots\leq x_n$
+        \item 1P: observing that $\sum_{i=1}^k (-x_i)=\sum_{i=k+1}^nx_i$
+        \item 2P: bound one of the sums with the largest term, eg. $\sum_{i=1}^k(-x_i)\leq k(-x_1)$
+        \item 2P: bound one of the sums of the squares with the largest term, eg. $\sum_{i=1}^k x_i^2\leq x_ix_k$
+        \item 1P: conclude
+    \end{itemize}
+\end{enumerate}
+

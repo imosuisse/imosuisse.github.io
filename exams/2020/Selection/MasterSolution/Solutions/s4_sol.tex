@@ -1,0 +1,35 @@
+Déterminer tous les entiers positifs impairs $n$ tels que pour toute paire $a,b$ de diviseurs de $n$ premiers entre eux
+\[
+a+b-1\div n.
+\]
+
+\textbf{Réponse:} Les solutions sont tous les nombres de la forme $n = p^k$ avec $p$ un nombre premier impair et $k\geq 0$.
+
+\textbf{Solution 1} (Louis)
+
+Si $n = 1$, le seul diviseur est $1$ et $1+1-1\div 1$, donc $n=1$ est une solution. Autrement on peut supposer que $n$ admet au moins un facteur premier $p$.
+On vérifie facilement que tout nombre de la forme $n = p^k$ avec $p$ un nombre premier impair est une solution. En effet, la seule manière de trouver deux diviseurs $a, b$ de $n$ premiers entre eux est que l'un d'entre eux soit égal à $1$. Disons que $a=1$. Dans ce cas $a+b-1 = b$ est effectivement un diviseur de $n$.
+
+Supposons maintenant que $n$ ne soit pas une puissance d'un nombre premier et soit $p$ le plus petit facteur premier de $n$. On écrit $n = p^k m$ avec $k\geq 1$ et $m>1$ premier avec $p$. Par hypothèse le nombre $p+m-1$ est un diviseur de $n$, et puisque $p$ est le plus petit facteur premier de $n$ il s'ensuit que $p-1$ est premier avec $m$. Par conséquent $p+m-1$ doit être une puissance de $p$. Disons que $p+m-1 = p^r$. Si $k = 1$ on obtient alors $r = 1$ et donc $p+m-1 = p$, ou encore $m=1$, en contradiction avec le fait que $n$ n'est pas une puissance d'un nombre premier. Autrement on peut refaire le même raisonnement avec $p^2$ à la place de $p$. Puisque $p^2-1 = (p+1)(p-1)$ et que par hypothèse $p\neq 2$, il s'ensuit que $p+1$ et $p-1$ sont tous les deux premiers avec $m$ et donc de nouveau $p^2 + m - 1 = p^s$ avec $s\geq 3$. En prenant la différence entre les deux expressions on obtient $p^2 - p = p^s - p^r$, et cette égalité est vérifiée uniquement pour $s=2, r=1$. Ces valeurs de $r$ et $s$ impliquent cependant que $m=1$, en contradiction avec le fait que $n$ n'est pas une puissance d'un nombre premier.
+
+
+\textbf{Solution 2} (David)
+
+Similarly to the solution above, we write $n=p^k m$ for some $k \geq 1$ and $m>1$, such that $p$ is the smallest prime factor of $n$ and $p \ndiv m$. We find again that $p+m-1$ is a power of $p$. We can also find that $(p+m-1) + m - 1$ is a power of $p$ because $p-2$ is not equal to zero and therefore coprime to $m$. Now, we have three different powers of $p$:
+\[
+p < p+m-1=p^a < p+2(m-1)=p^b
+\]
+Since $m-1 = p^b - p^a$, we deduce that $p^a \div m-1$. But at the same time, $m-1 = p^a - p$, we get that $p^a \ndiv m-1$, contradiction.
+
+
+\textbf{Marking scheme}
+
+\begin{itemize}
+    \item 1P: Prouver que tous les nombres de la forme $n=p^k$ sont solution.
+    \item +2P: Prouver que $p+m-1$ est une puissance de $p$.
+    \item +3P: Trouver une autre expression qui est aussi une puissance de $p$.
+    \item +1P: Conclure
+\end{itemize}
+
+2P: Proving that $n= p^k$ is solution and that $n = pm$ with all prime factors of $m$ greater than $p$ is not a solution \newline
+-1P: Forgetting the case $n=1$.

@@ -1,0 +1,210 @@
+%& -job-name=finalrunde_2018_en-2
+
+% ^^^^^^^ change the last bit to e.g. de-2 for second day, german ^^^^^^^^ 
+
+\documentclass[language=german,style=exam]{smo} %language is irrelevant in this case
+
+\examtime{%
+    \de{4 Stunden}%
+    \fr{4 heures}%
+    \ita{4 ore}%
+    \en{4 hours}%
+}
+\examdate{%
+    \IfStrEq*{\day}{1}{%
+        \de{16. März 2018}%
+        \fr{16 mars 2018}%
+        \ita{16 gennaio 2018}%
+        \en{16 January 2018}%
+    }{}%
+   \IfStrEq*{\day}{2}{%
+        \de{17. März 2018}%
+        \fr{17 mars 2018}%
+        \ita{17 gennaio 2018}%
+        \en{17 January 2018}%
+    }{}
+}
+\title{%
+    \de{SMO - Finalrunde 2018}%
+    \fr{OSM - Tour final 2018}%
+    \ita{OSM - Turno preliminare 2018}%
+    \en{SMO - Final round 2018}%
+}
+\examplace{%
+    \de{\day. Prüfung}%
+    \fr{\IfStrEq*{\day}{1}{Premier}{Second} examen}%
+    \ita{???}%
+    \en{\IfStrEq*{\day}{1}{First}{Second} exam}%
+}
+
+\begin{document}
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+
+\IfStrEq*{\day}{1}{ %%%%%%%%%%%%%%%%% Day 1 %%%%%%%%%%%%%%%%%
+
+\bigskip\bigskip
+
+\item
+\de{Alle Felder eines $8\times 8$ Quadrats sind anfangs weiss gefärbt. In einem Zug darf man alle Felder eines horizontalen oder vertikalen $1\times 3$ Rechtecks umfärben (alle weissen Felder werden schwarz und alle schwarzen Felder weiss).
+Ist es möglich, dass nach einer endlichen Anzahl Zügen alle Felder schwarz gefärbt sind? }
+\fr{Les cases d'un échiquier $8\times 8$ sont toutes blanches. Un coup consiste à échanger les couleurs des cases d'un rectangle $1\times 3$ horizontal ou vertical (les cases blanches deviennent noires et inversement). Est-il possible qu'après un nombre fini de coups toutes les cases de l'échiquier soient noires ? }
+\ita{}
+\en{The cells of an $8\times 8$ chessboard are all coloured in white. A move consists in inverting the colours of a rectangle $1\times 3$ horizontal or vertical (the white cells become black and conversely). Is it possible to colour all the cells of the chessboard in black in a finite number of moves ?}
+
+\bigskip\bigskip
+
+\item
+\de{Seien $a$, $b$ und $c$ natürliche Zahlen. Finde den kleinsten Wert, den folgender Ausdruck annehmen kann:
+\[
+\frac{a}{\ggT (a+b,a-c)}+\frac{b}{\ggT (b+c,b-a)}+\frac{c}{\ggT (c+a,c-b)}.
+\]
+\\
+\textit{Bemerkung: $\ggT(6,0)=6$ und $\ggT(3,-6)=3$.}}
+\fr{Soient $a$, $b$ et $c$ des nombres entiers naturels. Déterminer la plus petite valeur que l'expression suivante peut atteindre:
+\[
+\frac{a}{\ggT (a+b,a-c)}+\frac{b}{\ggT (b+c,b-a)}+\frac{c}{\ggT (c+a,c-b)}.
+\] 
+\textit{Remarque: $\gcd(6,0)=6$ et $\gcd(3,-6)=3$.}}
+\ita{}
+\en{Let $a$, $b$ and $c$ be natural numbers. Determine the smallest value that the following expression can take:
+\[
+\frac{a}{\ggT (a+b,a-c)}+\frac{b}{\ggT (b+c,b-a)}+\frac{c}{\ggT (c+a,c-b)}.
+\] 
+\textit{Remark: $\gcd(6,0)=6$ and $\gcd(3,-6)=3$.}}
+
+\bigskip\bigskip
+
+\item
+\de{Finde alle natürlichen Zahlen $n$, für die kein Tripel natürlicher Zahlen $(a,b,c)$ existiert, sodass die folgende Gleichung erfüllt ist:
+\[
+n=\frac{a\cdot\kgV(b,c)+b\cdot\kgV(c,a)+c\cdot\kgV(a,b)}{\kgV(a,b,c)}.
+\]}
+\fr{Déterminer tous les entiers naturels $n$ pour lesquels il n'existe aucun triplet de nombres naturels $(a,b,c)$ tel que:
+\[
+n=\frac{a\cdot\kgV(b,c)+b\cdot\kgV(c,a)+c\cdot\kgV(a,b)}{\kgV(a,b,c)}.
+\]}
+\ita{}
+\en{Determine all natural integers $n$ for which there is no triplet $(a,b,c)$ of natural numbers such that:
+\[
+n=\frac{a\cdot\kgV(b,c)+b\cdot\kgV(c,a)+c\cdot\kgV(a,b)}{\kgV(a,b,c)}.
+\]}
+
+\bigskip\bigskip
+
+\item
+\de{Sei $D$ ein Punkt im Inneren eines spitzwinkligen Dreiecks $ABC$, sodass $\angle BAD= \angle DBC$ und $\angle DAC=\angle BCD$. Sei $P$ ein Punkt auf dem Umkreis des Dreiecks $ADB$. Nehme an, $P$ befinde sich ausserhalb des Dreiecks $ABC$. Eine Gerade durch $P$ schneide den Strahl $BA$ in $X$ und den Strahl $CA$ in $Y$, sodass $\angle XPB=\angle PDB$ gilt. Zeige, dass sich $BY$ und $CX$ auf $AD$ schneiden. 
+
+\textit{Bemerkung: Für zwei Punkte $F$ und $G$ bezeichnet der Strahl $FG$ alle Punkte auf der Geraden $FG$, die sich auf der selben Seite von $F$ befinden wie $G$.}}
+\fr{Soit $D$ un point à l'intérieur d'un triangle aigu $ABC$ tel que $\angle BAD= \angle DBC$ et $\angle DAC=\angle BCD$. Soit $P$ un point sur le cercle circonscrit au triangle $ADB$. On suppose que $P$ se trouve à l'extérieur du triangle $ABC$. Une droite passant par $P$ coupe la demi-droite $BA$ en $X$ et la demi-droite $CA$ en $Y$ de telle sorte que $\angle XPB=\angle PDB$. Montrer que $BY$ et $CX$ se coupent sur $AD$.
+
+\textit{Remarque: Pour deux points $F$ et $G$, la demi-droite $FG$ est composée de tous les points de la droite $FG$ situés du même côté de $F$ que $G$.}}
+\ita{}
+\en{Let $D$ be a point inside an acute triangle $ABC$ such that $\angle BAD= \angle DBC$ and $\angle DAC=\angle BCD$. Let $P$ be a point on the circumcircle of triangle $ADB$. We assume that $P$ lies outside of the triangle $ABC$. A line through $P$ intersects the ray $BA$ in $X$ and the ray $CA$ in $Y$ such that $\angle XPB=\angle PDB$. Prove that $BY$ and $CX$ intersect on $AD$.
+
+\textit{Remark: For two points $F$ and $G$, the ray $FG$ is the set of points on the line $FG$ that lies on the same side of $F$ than $G$.}}
+
+\bigskip\bigskip
+
+\item %5
+\de{Zeige, dass keine Funktion $f\colon \R_{>0} \to \R_{>0}$ existiert, sodass für alle $x,y\in\R_{>0}$ gilt:
+\[
+f(xf(x)+yf(y))=xy.
+\]}
+\fr{Montrer qu'il n'existe aucune fonction $f\colon \R_{>0} \to \R_{>0}$ telle que pour tous $x,y\in\R_{>0}$
+\[
+f(xf(x)+yf(y))=xy.
+\]
+}
+\ita{}
+\en{Prove that there exists no function $f\colon \R_{>0} \to \R_{>0}$ such that for every $x,y\in\R_{>0}$
+\[
+f(xf(x)+yf(y))=xy.
+\]}
+
+}
+
+\IfStrEq*{\day}{2}{ %%%%%%%%%%%%%%%%% Day 2 %%%%%%%%%%%%%%%%%
+
+\setcounter{enumi}{5}
+
+\bigskip\bigskip
+
+\item
+\de{Sei $k$ der Inkreis des Dreiecks $ABC$ mit Inkreismittelpunkt $I$. Der Kreis $k$ berühre die Seiten $BC$, $CA$ und $AB$ in den Punkten $D$, $E$, respektive $F$. Sei $G$ der Schnittpunkt der Geraden $AI$ und des Kreises $k$, der zwischen $A$ und $I$ liegt. Nehme an, $BE$ und $FG$ seien parallel. Zeige, dass $BD=EF$ gilt.}
+\fr{Soit $k$ le cercle inscrit au triangle $ABC$ de centre $I$. Le cercle $k$ touche les côtés $BC$, $CA$ et $AB$ aux points $D,E$ et $F$ respectivement. Soit $G$ le point d'intersection de la droite $AI$ et du cercle $k$ situé entre $A$ et $I$. On suppose que les droites $BE$ et $FG$ sont parallèles. Montrer que $BD=EF$.}
+\ita{}
+\en{Let $k$ be the incircle of triangle $ABC$ with center $I$. The circle $k$ touches the sides $BC$,$CA$ and $AB$ at the points $D,E$ and $F$ respectively. Let $G$ be the intersection point of the segment $AI$ with the circle $k$. We assume that the lines $BE$ and $FG$ are parallel. Prove that $BD=EF$.}
+
+\bigskip\bigskip
+
+\item
+\de{Sei $n$ eine natürliche Zahl. Sei $k$ die Anzahl Möglichkeiten, $n$ als Summe von einer oder mehreren aufeinanderfolgenden natürlichen Zahlen darzustellen. Zeige, dass $k$ der Anzahl ungerader positiver Teiler von $n$ entspricht.
+
+\textit{Beispiel: 9 hat drei ungerade positive Teiler und $9=9$,\, $9=4+5$,\, $9=2+3+4$.} }
+\fr{Soit $n$ un entier naturel et soit $k$ le nombre de manières d'écrire un entier naturel $n$ comme la somme d'un ou plusieurs entiers naturels consécutifs. Montrer que $k$ est égal au nombre de diviseurs positifs impairs de $n$.
+
+\textit{Exemple: le nombre 9 a trois diviseurs positifs impairs et $9=9$,\, $9=4+5$,\, $9=2+3+4$.} }
+\ita{}
+\en{Let $n$ be a natural integer and let $k$ be the number of ways to write $n$ as the sum of one or more consecutive natural integers. Prove that $k$ is equal to the number of odd positive divisors of $n$.
+
+\textit{Example: 9 has three positive odd divisors and $9=9$,\, $9=4+5$,\, $9=2+3+4$.}}
+
+\bigskip\bigskip
+
+\item
+\de{Seien $a$, $b$, $c$, $d$ und $e$ positive reelle Zahlen. Bestimme den grössten Wert, den folgender Ausdruck annehmen kann:
+\[
+\frac{ab+bc+cd+de}{2a^2+b^2+2c^2+d^2+2e^2}.
+\]}
+\fr{Soient $a$, $b$, $c$, $d$ et $e$ des nombres réels strictement positifs. Déterminer la plus grande valeur que l'expression suivante peut atteindre:
+\[
+\frac{ab+bc+cd+de}{2a^2+b^2+2c^2+d^2+2e^2}.
+\]
+}
+\ita{}
+\en{Let $a$, $b$, $c$, $d$ and $e$ be positive real numbers. Determine the largest value that the following expression can take:
+\[
+\frac{ab+bc+cd+de}{2a^2+b^2+2c^2+d^2+2e^2}.
+\]}
+
+\bigskip\bigskip
+
+\item
+\de{Sei $n$ eine natürliche Zahl und $G$ die Menge der Punkte $(x,y)$ in der Ebene, sodass $x$ und $y$ ganze Zahlen mit $1\leq x,y \leq n$ sind. Eine Teilmenge von $G$ heisst \textit{parallelogrammfrei}, wenn sie keine vier nicht-kollineare Punkte enthält, die die Eckpunkte eines Parallelogramms sind. Wie viele Elemente kann eine parallelogrammfreie Teilmenge von $G$ höchstens enthalten?
+}
+\fr{Soit $n$ un entier naturel et $G$ l'ensemble des points $(x,y)$ du plan tels que $x$ et $y$ soient des nombres entiers avec $1\leq x,y\leq n$. Un sous-ensemble de $G$ est appelé \textit{sans-parallélogramme} s'il ne contient pas quatre points non-alignés qui sont les sommets d'un parallélogramme. Combien de points au maximum peut contenir un sous-ensemble sans-parallélogramme ?}
+\ita{}
+\en{Let $n$ be a natural integer and $G$ be the set of points $(x,y)$ in the plane such that $x$ and $y$ are integers with $1\leq x,y\leq n$. A subset of $G$ is called \textit{parallelogramfree} if it does not contain four non-collinear points that are the vertices of a parallelogram. How many points at most can a parallelogramfree subset contain ? }
+
+\bigskip\bigskip
+
+\item
+\de{Sei $p\geq 2$ eine Primzahl. Louis und Arnaud wählen abwechselnd einen Index $i\in\{0,1,\ldots,p-1\}$, der bisher noch nicht gewählt wurde, und eine Ziffer $a_i\in\{0,1,\ldots,9\}$. Louis beginnt. Wenn alle Indizes ausgewählt wurden, berechnen sie die folgende Summe:
+\[
+a_0+a_1\cdot 10+\ldots+a_{p-1}\cdot 10^{p-1}=\sum_{i=0}^{p-1}a_i\cdot 10^i.
+\]
+Wenn diese Summe durch $p$ teilbar ist, gewinnt Louis, ansonsten gewinnt Arnaud. Zeige, dass Louis eine Gewinnstrategie hat.}
+\fr{Soit $p\geq 2$ un nombre premier. Arnaud et Louis choisissent à tour de rôle un indice $i\in\{0,1,\ldots,p-1\}$ qui n'a pas encore été choisi et un chiffre $a_i\in\{0,1,\ldots,9\}$. Arnaud commence. Une fois que tous les indices ont été choisis, ils calculent la somme suivante: 
+\[
+a_0+a_1\cdot 10+\ldots+a_{p-1}\cdot 10^{p-1}=\sum_{i=0}^{p-1}a_i\cdot 10^i.
+\]
+Si la somme est divisible par $p$, Arnaud gagne. Dans le cas contraire, Louis gagne. Montrer qu'Arnaud a une stratégie gagnante.}
+\ita{}
+\en{Let $p\geq 2$ be a prime number. Arnaud and Louis alternatively choose an index $i\in \{0,1,\ldots,p-1\}$ that has not already been chosen and a digit $a_i\in\{0,1,\ldots,9\}$. Arnaud starts. Once every index has been chosen, they compute the following sum:
+\[
+a_0+a_1\cdot 10+\ldots+a_{p-1}\cdot 10^{p-1}=\sum_{i=0}^{p-1}a_i\cdot 10^i.
+\]
+If the sum is divisible by $p$, Arnaud wins. Otherwise Louis wins. Prove that Arnaud has a winning strategy.}
+
+}
+
+\end{enumerate}
+
+\bigskip
+
+\vfill
+
+\center{\translation{Viel Glück!}{Bonne chance!}{Buona fortuna!}}
+
+\end{document}

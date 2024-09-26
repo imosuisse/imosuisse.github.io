@@ -1,0 +1,478 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+%\usepackage[centertags]{amsmath}
+%\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{matrix,arrows}
+\usepackage[english, ngerman]{babel}
+\usepackage[ansinew]{inputenc}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage[nottoc,numbib]{tocbibind}
+
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+%\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+%\catcode`\Ü = \active
+
+%\defÄ{"A}
+%\defä{"a}
+%\defÖ{"O}
+%\defö{"o}
+%\defÜ{"U}
+%\defü{"u}
+
+
+
+
+
+
+
+% Schriftabkürzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}[section]
+\newtheorem{prop}[lem]{Proposition}
+\newtheorem{thm}[lem]{Theorem}
+\newtheorem{cor}[lem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{defn}[lem]{Definition}
+\newtheorem*{ex}{Example}
+
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}    %[section]
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\nin}{\notin}
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\height}{\mathop{\rm height}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\nequiv}{\not \equiv}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Iso}{\mathop{\rm Iso}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+\newcommand{\GL}{\mathop{\rm GL}\nolimits}
+
+\newcommand{\quotient}[2]{
+        \mathchoice
+            {% \displaystyle
+                \text{\raise1ex\hbox{$#1$}\Big/\lower1ex\hbox{$#2$}}%
+            }
+            {% \textstyle
+                #1\,/\,#2
+            }
+            {% \scriptstyle
+                #1\,/\,#2
+            }
+            {% \scriptscriptstyle  
+                #1\,/\,#2
+            }
+    }
+		
+\newcommand{\doublequotient}[4]{\quotient{\textstyle \left( \quotient{$#1$}{$#2$} \right)}{\textstyle \left( \quotient{$#3$}{$#4$} \right)}}
+
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+\newcommand{\tr}{\mathop{\rm tr}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Div}{\mathop{\rm Div}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+\newcommand{\chara}{\mathop{\rm char}\nolimits}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\gaussk}[1]{\lfloor #1 \rfloor}
+\newcommand{\frack}[1]{\{ #1 \}}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+\newcommand{\dreieck}{\bigtriangleup}
+
+\parindent0mm
+
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge Lösungen zur IMO-Selektionsprüfung 2013} \\
+\end{center}
+\vspace{8mm}
+
+
+
+\begin{enumerate}
+	\item[\textbf{1.}] Die Winkel im Dreieck ABC seien $\alpha, \beta$ bzw. $\gamma$. Der Inkreismittelpunkt sei I. Wir zeigen nun, dass $I_1$ auf dem Inkreis liegt.\\
+Es gilt $\angle{ZAX}=\alpha$. Da das Dreieick ZAX gleichschenklig ist (die Strecken AX und AZ sind gleich lang), ist $\angle{AZX}=\angle{AXZ}=90^{\circ}-\frac{\alpha}{2}$ und somit $\angle{I_1ZX}=\angle{ZXI_1}=45^{\circ}-\frac{\alpha}{4}$. Damit ist $\angle{ZI_1X}=90^{\circ}+\frac{\alpha}{2}$.\\
+Aus $\angle{BYX}=90^{\circ}-\frac{\beta}{2}$ (wie vorher) und $\angle{BYI}=90^{\circ}$ erhält man $\angle{XYI}=\frac{\beta}{2}$ und analog $\angle{ZYI}=\frac{\gamma}{2}$. Somit ist $\angle{ZYX}=\frac{\beta}{2}+\frac{\gamma}{2}$ die Ergänzung auf $180^{\circ}$ zu $\angle{ZI_1X}$ und damit liegt $I_1$ auf dem Inkreis. Analog erhält man, dass auch $I_2$ und $I_3$ auf dem Inkreis liegen.\\
+Da $\angle{AXI}$ ein rechter Winkel ist, gilt $\angle{XIA}=90^{\circ}-\frac{\alpha}{2}$ und analog $\angle{BIX}=90^{\circ}-\frac{\beta}{2}$. Nach dem Zentriwinkelsatz ist nun $\angle{I_1I_3I_2}=90^{\circ}-\frac{\alpha}{4}-\frac{\beta}{4}=45^{\circ}+\frac{\gamma}{4}$ (da $\alpha+\beta+\gamma=180^{\circ}$). Analog folgt $\angle{I_2I_1I_3}=45^{\circ}+\frac{\alpha}{4}$ und $\angle{I_3I_2I_1}=45^{\circ}+\frac{\beta}{4}$.\\
+Damit haben wir im Dreieck $I_1I_2I_3$ die Winkel ${45^{\circ}+\frac{\alpha}{4},45^{\circ}+\frac{\beta}{4},45^{\circ}+\frac{\gamma}{4}}$. Da dies zwingend gleich geordnet ist wie ${\alpha,\beta,\gamma}$ muss $\alpha=45^{\circ}+\frac{\alpha}{4}$, $\beta=45^{\circ}+\frac{\beta}{4}$ und $\gamma=45^{\circ}+\frac{\gamma}{4}$ gelten, damit diese Winkel übereinstimmen. Daraus folgt $\alpha=60^\circ,\beta=60^{\circ}$ und $\gamma=60^{\circ}$.
+
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=0.90\textwidth]{./Aufgabe1V2.png}
+	\label{fig:Aufgabe1}
+\end{figure}
+
+	
+	\item[\textbf{2.}] Wir wenden Induktion an auf folgendes Problem:\\
+Sei $n \in \mathbb{N}_0$ und $P$ ein Polynom mit ganzzahligen Koeffizienten, sodass folgendes gilt:
+$u^{2^n}-v^{2^n}| P(u)-P(v), \ \forall u,v \in \mathbb{N}$.
+Zeige es existiert ein Polynom $Q$ mit ganzzahligen Koeffizienten, sodass $P(x)=Q(x^{2^n})$ gilt.
+
+Für $n=0$ ist das die Eigenschaft $u-v|P(u)-P(v)$, welches jedes ganzzahlige Polynom besitzt und es ist nichts zu zeigen.\\
+Induktionsschritt $n \to n+1$: Es gilt $u^{2^n}-v^{2^n}|u^{2^{n+1}}-v^{2^{n+1}}| P(u)-P(v), \ \forall u,v \in \BN$. Es lässt sich also die Induktionsvoraussetzung benützen und man folgert, dass ein ganzzahliges Polynom $Q'$ existiert, sodass $P(x)=Q'(x^{2^n})$ gilt.
+Es gilt nun $a-b | Q'(a)-Q'(b)$ für alle $a,b \in \mathbb{Z}$. Dies zeigt insbesondere für $a=u^{2^n}$ und $b=-v^{2^n}$, dass $u^{2^n}+v^{2^n} | Q'(u^{2^n})-Q'(-v^{2^n})$ für alle $u,v \in \mathbb{N}$ gilt.
+Andererseits gilt nach Voraussetzung $u^{2^n}+v^{2^n} | u^{2^{n+1}}-v^{2^{n+1}} | Q'(u^{2^n})-Q'(v^{2^n})$ für alle $u,v \in \mathbb{N}$. Kombiniert man nun beides, so erhält man, dass $u^{2^n}+v^{2^n} | Q'(v^{2^n})-Q'(-v^{2^n})$ für alle $u,v \in \mathbb{N}$. Fixiert man nun $v$, kann man $u$ gross genug wählen, sodass $u^{2^n}+v^{2^n} > |Q'(v^{2^n})-Q'(-v^{2^n})|$ gilt, das heisst es muss $Q'(v^{2^n})=Q'(-v^{2^n})$ gelten und zwar für jedes $v \in \mathbb{N}$. Da $v^{2^n}$ unendlich viele Werte annimmt für $v \in \mathbb{N}$, hat das Polynom $Q'(x)-Q'(-x)$ unendlich viele Nullstellen, das heisst es muss das Nullpolynom sein. Ausrechnen der Koeffizienten zeigt, dass jeder ungerade Koeffizient gleich $0$ sein muss. Insbesondere gibt es ein ganzzahliges Polynom $Q$, sodass $Q'(x)=Q(x^2)$ gilt. Nun gilt $P(x)=Q'(x^{2^n})=Q(x^{2^{n+1}})$.
+	
+	\item[\textbf{3.}]	\textbf{1. Lösung:} Für eine strikt monoton wachsende Folge gilt $a\cdot b=n$. Wir wollen zeigen, dass $a\cdot b$ nicht kleiner werden kann und somit $m=n$ gilt.\\
+	Definiere $f(i)$ als die maximale Länge einer monoton steigenden Unterfolge, welche mit $x_i$ beginnt. Es gilt nun $a \ge f(i)$ und ferner gibt es nach Schubfachprinzip ein $a \ge c \ge 1$, sodass
+	\[|f^{-1}(\{c\})| = |\{i \in \{1,2,\dots,n\}| f(i)=c\}| \ge \left \lceil \frac{n}{a} \right \rceil\]
+gilt.	Sei $f^{-1}(\{c\})=\{i_1, \dots , i_k\}$ mit $i_1 < \dots < i_k$, dann muss die Unterfolge $x_{i_1}, \dots, x_{i_{k}}$ strikt monoton fallend sein, denn sonst wäre $f(i_j)>f(i_{j+1})$ für ein $1\le j<k$. Insbesondere gilt $b \ge k \ge \lceil \frac{n}{a} \rceil$ und somit $a \cdot b \ge a \cdot \lceil \frac{n}{a} \rceil \ge a \cdot \frac{n}{a}=n$.\\
+	
+	\textbf{2. Lösung:} Wir zeigen eine weitere Möglichkeit, wie man $a\cdot b\geq n$ beweisen kann.\\
+Für $1\leq 1\leq n$ definieren wir die Zahlen $a_i,b_i$ folgendermassen:\\[0.5em]
+$a_i:=$maximale Länge einer monoton steigenden Unterfolge von $x_1,...,x_n$, die in $x_i$ endet\\
+$b_i:=$maximale Länge einer monoton fallenden Unterfolge von $x_1,...,x_n$, die in $x_i$ endet\\[0.5em]
+Betrachte nun die Paare $(a_i,b_i)$. Sei $i<j$. Gilt $x_i\leq x_j$, dann gilt $a_j>a_i$. Gilt hingegen $x_i>x_j$, dann ist $b_j>b_i$. Die Paare $(a_i,b_i)$ und $(a_j,b_j)$ sind folglich verschieden und insgesamt haben wir $n$ paarweise verschiedene Paare.\\
+Nehme nun an, es gelte $a\cdot b<n$. Dann kann es aber nicht $n$ verschiedene Paare geben, da $a_i\leq a$ und $b_i\leq b$ für alle $1\leq i\leq n$ gilt. Folglich erhalten wir $a\cdot b\geq n$.
+	
+	\item[\textbf{4.}] Da $x,y,z$ drei verschiedene natürliche Zahlen kleiner als $p$ sind, muss $p \ge 5$ gelten.
+Es gilt nun $p|x^3-y^3=(x-y)(x^2+xy+y^2)$. Nun ist $-p<x-y<p$ und $x\neq y$, das heisst $p\notdiv x-y$ und da $p$ prim ist folgt $p|x^2+xy+y^2$. Das selbige Argument funktioniert natürlich auch für die symmetrischen Ausdrücke.
+Es gilt nun auch $p| (x^2+xy+y^2)-(z^2+zy+y^2)=(x-z)(x+y+z)$ und somit wieder $p|x+y+z$. Ferner gilt $0<x+y+z<3p$, das heisst es muss $x+y+z=p \text{ oder } 2p$ gelten.
+Auf der anderen Seite gilt $p|2(x^2+xy+y^2)+2(y^2+yz+z^2)+2(z^2+xz+x^2)=3(x^2+y^2+z^2)+(x+y+z)^2$ und somit $p|x^2+y^2+z^2$, da $p \ge 5$. Desweiteren gilt $w^2\equiv w \mod(2)$, das heisst $2|x+y+z \Leftrightarrow 2| x^2+y^2+z^2$, da $(2,p)=1$ folgt das Gewünschte.
+	
+	\item[\textbf{5.}] \textbf{1. Lösung:} Wir verwenden Induktion nach $n$ und behaupten die Lösung ist $2n$. Dies stimmt für $n=1$:  $\{\{\},\{1\}\}$.
+Betrachte nun $n+1$. Die ganze Menge und die leere Menge sind in einem maximalen Set immer dabei.
+Betrachte nun alle übrigen. Führe die Ordnung $\subseteq$ ein und nehme alle maximalen Mengen, jene sind nach Voraussetzung alle paarweise disjunkt und besitzen eine Kardinalität von höchstens $n$. Jede weitere Menge ist in (genau) einer maximalen enthalten. Seien $k_1,\dots, k_m$ die Kardinalitäten der maximalen Mengen. Es gilt also $\sum_{i=1}^m k_i \le n+1$. Nach Induktionsvoraussetzung ist die maximale Anzahl Mengen $\le 2+ \sum_{i=1}^m (2k_i-1) \le 2-m +2(n+1)$, falls $m \ge 2$ sind wir fertig. Es bleibt also noch den Fall $m=1$ zu betrachten, aber dann gibt $k_1\le n$ die gewünschte Abschätzung.
+Gleichheit wird unter anderem bei $\{\{\},\{1\},\dots, \{n\}, \{1,2\},\{1,2,3\},\dots, \{1,2,\dots, n\} \}$ erreicht.\\
+
+\textbf{2. Lösung:} Seien $A_1,\dots, A_{k}$ verschiedene Teilmengen von $\{1,\dots,n\}$ mit der gewünschten Eigenschaft. Dann haben offensichtlich auch die Teilmengen $A_1\cap\{1,\dots,n-1\},\dots, A_k\cap\{1,\dots,n-1\}$ diese Eigenschaft. Wir zeigen nun, dass wir auf diese weise höchstens $2$ Teilmengen verlieren. Nehme also an es existieren natürliche Zahlen $i\neq j$ und $k \neq l$, so dass $A_i \cap\{1,\dots,n-1\} = A_j\cap\{1,\dots,n-1\}$ und $A_k \cap\{1,\dots,n-1\} = A_l\cap\{1,\dots,n-1\}$. Dann gilt o.B.d.A. $A_i = A_j \cup \{n\}$ und  $A_k = A_l \cup \{n\}$. Da nun $n$ ein Element von $A_i$ und $A_k$ ist, können wir zudem annehmen, dass $A_k \subseteq A_i$ und somit auch $A_l \subseteq A_j$. Schliesslich also $A_l \subseteq A_k \cap A_j$ und daher gilt $A_l = \emptyset$ oder $A_l \subseteq A_j \subsetneq A_k$. Letzteres ist aber nur der Fall, falls $A_l=A_j$ gilt. Dies kann jedoch nur gelten, falls $l=j$ und $k=i$ gilt.\\
+Iteriert man dieses Argument, so folgt $k \leq 2n$ und Gleichheit kann man wie bei der ersten Lösung konstruieren.\\
+
+\textbf{3. Lösung:} Für $n=1$ ist offensichtlich $\{\{\},\{1\}\}$ maximal. Sei nun $n \ge 2$. Seien $A_1,\dots, A_k$ Teilmengen von $A$, sodass $k$ maximal ist. Behauptung: Es existiert ein $i$ mit $|A_i|=2$. Klarerweise gibt es Mengen mit $|A_j| \ge 2$, denn bei einem maximalen Set ist $A$ enthalten. Nehme nun $A_i$ mit $|A_i|$ minimal und $\ge 2$. Betrachte nun eine zwei elementige Teilmenge $B$ von $A_i$. Behauptung: Wir können nun $B$ zum Set hinzufügen. Für jede ein elementige oder leere Menge ist die Bedingung sicherlich erfüllt. Sei nun $A_j$ eine Menge mit mindestens zwei Elemente, dann gilt sogar $|A_j| \ge |A_i|$. Angenommen $A_j \cap B \neq \emptyset$, so ist auch $A_i \cap A_j \neq \emptyset$ und somit $A_j \subseteq A_i$ oder $B \subseteq A_i \subseteq A_j$. Der zweite Fall geht in Ordnung und im ersten Fall folgt $A_i=A_j$, da $|A_j| \ge |A_i|$. Da das Set maximal ist muss nun aber $B=A_i$ gelten, insbesondere ist $A_i$ zwei elementige Menge.
+Sei nun $A_i=\{a,b\}$. Jede weitere Menge ist entweder disjunkt zu $A_i$, enthält $A_i$ oder ist eine der Mengen $\{a\},\{b\},\{\}$. Wir können nun die Mengen $\{a\},\{b\}$ streichen und $a,b$ als ein Element betrachten. Es lässt sich also Induktion anwenden und man folgert $k\le 2n$. Gleichheit kann man wie bei der ersten Lösung konstruieren.\\
+
+\textbf{4. Lösung:} Seien $A_1,...,A_k$ Teilmengen von $A$, sodass $k$ maximal ist. Betrachte nun die nichtleere Teilmenge $A_i\subsetneq A$ und sei $A_j$ die kleinste Menge aus $A_1,...,A_k$, in welcher $A_i$ echt enthalten ist. $A_j$ ist eindeutig: Nehme an, es gäbe verschiedene Mengen $A_{j_1},A_{j_2}$ mit $|A_{j_1}|=|A_{j_2}|$, welche jeweils $A_i$ echt enthalten. Dann sind $A_{j_1}$ und $A_{j_2}$ aber einerseits nicht disjunkt und andererseits enthält keine davon die andere (da sie sonst nicht verschieden wären), Widerspruch. Folglich ist $A_j$ eindeutig definiert.\\
+Bezeichne nun mit $A_i^c$ das Komplement von $A_i$ in $A_j$. Nehme an, $A_i^c$ sei keine der Mengen $A_1,...,A_k$. Sei $1\leq m\leq k$. Wir wollen zeigen, dass $A_m$ und $A_i^c$ entweder disjunkt sind oder dass eine davon die andere enthält. Dazu unterscheiden wir mehrere Fälle:\\
+\textbf{$A_j$ und $A_m$ sind disjunkt:} Wegen $A_i^c\subsetneq A_j$ sind auch $A_i^c$ und $A_m$ disjunkt.\\
+\textbf{$A_j$ ist in $A_m$ enthalten:} In diesem Fall ist auch $A_i^c$ in $A_m$ enthalten.\\
+\textbf{$A_m$ ist in $A_j$ enthalten:} Falls $A_i$ und $A_m$ disjunkt sind, dann ist $A_m$ in $A_i^c$ enthalten. Ist $A_m$ in $A_i$ enthalten, dann sind $A_m$ und $A_i^c$ disjunkt. Wenn $A_i$ in $A_m$ enthalten ist, gilt entweder $A_m=A_i$ oder $A_m=A_j$. Im ersten Fall sind $A_i^c$ und $A_m$ disjunkt, im zweiten Fall ist $A_i^c$ in $A_m$ enthalten.\\
+Die Teilmengen $A_1,...,A_k,A_i^c$ bilden also eine Menge von $k+1$ Teilmengen von $A$ mit der gewünschten Eigenschaft, im Widerspruch zur Maximalität von $k$. Folglich ist $A_i^c$ bereits eine der Mengen $A_1,...,A_k$.\\
+Sei $A_t$ eine der Mengen $A_1,...,A_k$ mit mindestens zwei Elementen. Dann enthält $A_t$ zwei eindeutige disjunkte Mengen $A_s$ und $A_s^c$, deren Vereinigung gerade $A_t$ ist: Erst einmal ist es klar, dass $A_t$ überhaupt irgendwelche Mengen aus $A_1,...,A_k$ enthält (ansonsten ist $k$ nicht maximal). Wähle nun eine inklusionsmaximale Menge $A_s$ von $A_t$ (insbesondere ist $A_s$ nicht leer). $A_t$ ist die kleinste Menge, welche $A_s$ echt enthält: Nehme an, es gäbe eine Menge $A_u\neq A_t$ mit $|A_u|\leq|A_t|$ und $A_s\subsetneq A_u$. Aufgrund der Inklusionsmaximalität von $A_s$ kann $A_u$ nicht vollständig in $A_t$ enthalten sein. Dann sind $A_u$ und $A_t$ aber nicht disjunkt und keine der beiden enthält die andere ($A_t$ kann wegen $|A_u|\leq|A_t|$ und $A_u\neq A_t$ nicht in $A_u$ enthalten sein), Widerspruch.\\
+$A_t$ ist also die kleinste Menge, welche $A_s$ echt enthält, und damit ist das Komplement $A_s^c$ von $A_s$ in $A_t$ ebenfalls eine der Mengen $A_1,...,A_k$. Somit existieren immer zwei disjunkte Mengen $A_s, A_s^c$, deren Vereinigung $A_t$ ist.\\
+$A_s$ und $A_s^c$ sind eindeutig: Nehme an, es gäbe noch ein weiteres Paar von disjunkten Mengen $A_r,A_r^c$ mit $A_r\cup A_r^c=A_t$. Dann finden wir unter $A_s,A_s^c,A_r,A_r^c$ aber zwei Mengen, die nicht disjunkt sind und von denen keine die andere enthält.\\
+Wir haben also gesehen, dass die Mengen $A_1,...,A_k$ die folgende Struktur aufweisen: Für jede Menge $A_i$ mit $\emptyset\subsetneq A_i\subsetneq A$ gibt es eine disjunkte Menge $A_i^c$, sodass $A_i\cup A_i^c$ die "nächstgrössere" Menge ist. Ausserdem kann jede Menge $A_t$ mit $\emptyset\subsetneq A_t\subsetneq A$, die aus mindestens zwei Elementen besteht, in zwei Mengen aus $A_1,...,A_k$ aufgespaltet werden.\\
+Es genügt also folgendes Problem zu lösen:\\
+\textit{Sei $A$ eine $n$-elementige Menge. Mit einem Schnitt können wir jeweils eine Menge mit mindestens zwei Elementen in zwei kleinere nichtleere Mengen aufteilen. Wieviele Schnitte können wir maximal durchführen?}\\
+Lösung: Am Anfang haben wir eine Menge, und wir können sie in bis zu $n$ nicht leere Mengen aufteilen. Bei jedem Schnitt entsteht genau eine Menge mehr, das heisst wir können $n-1$ Schnitte durchführen.\\
+Zurück zum ursprünglichen Problem: Das maximale $k$ enstpricht nun genau der doppelten Anzahl Schnitte (da jeder Schnitt die Menge in zwei Mengen aufteilt) plus zwei ($A$ und die leere Menge). Damit ergibt sich ein Wert von $2\cdot (n-1)+2=2n$ für das maximale $k$.
+
+	
+	\item[\textbf{6.}] Wir nehmen ohne Beschränkung der Allgemeinheit an, dass die Seitenlänge des Raumes $1$ ist. Seien $(x_{1},y_{1})$ die Koordinaten des Bürgermeisters und seien $(x_{2},y_{2})$ die Koordinaten des Kopfgeldjägers. Hierbei sind die Zahlen $x_{1},x_{2},y_{1},y_{2}$ natürlich alle aus dem Intervall $[0,1]$.
+Nun spiegeln wir den Raum wiederholt an seinen Seitenwänden und erhalten dadurch eine vollständige \"{U}berdeckung der Ebene (siehe Skizze, der rote Punkt ist der Kopfgeldjäger und die grünen Punkte sind die Spiegelbilder des Bürgermeisters).
+
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=0.40\textwidth]{./aufgabe_6.png}
+	\label{fig:aufgabe_6}
+\end{figure}
+
+
+Es ist nicht schwer zu sehen, dass jede Bahn des Lasers im Raum genau einer Geraden in der Ebene, welche durch den Kopfgeldjäger geht, entspricht. Ausserdem wird der Bürgermeister genau dann vom Laser getroffen, wenn die zugehörige Gerade durch eines der Spiegelbilder des Bürgermeisters geht.
+
+Bemerke, dass alle möglichen Koordinaten eines Spiegelbildes des Bürgermeisters von einer der folgenden vier Formen sind:
+
+\begin {align}
+&(x_{1}+k,y_{1}+l) \\
+&(1-x_{1}+k,y_{1}+l) \\
+&(x_{1}+k,1-y_{1}+l) \\
+&(1-x_{1}+k,1-y_{1}+l),
+\end{align}
+wobei $k$ und $l$ ganze Zahlen sind. Wir betrachten von nun an nur den ersten Fall, alle anderen Fälle funktionieren analog.
+
+Für ein beliebiges Spiegelbild des Bürgermeisters $P = (x_{1}+k,y_{1}+l)$ platzieren wir einen Bodyguard in der Mitte der Strecke zwischen $P$ und dem Kopfgeldjäger, also bei
+\[
+(x_{2},y_{2}) + \frac{1}{2}(x_{1}+k-x_{2},y_{1}+l-y_{2}) = \frac{1}{2}(x_{1}+x_{2}+k,y_{1}+y_{2}+l).
+\]
+Wenn man diesen Punkt zurück in den ursprünglichen Raum spiegelt, sieht man, dass er von einer der folgenden vier Formen sein muss, da sowohl $\frac{k}{2}$ als auch $\frac{l}{2}$ nur die Werte $0$ oder $\frac{1}{2}$ modulo 1 annehmen können:
+
+\begin {align*}
+&\frac{1}{2}(x_{1}+x_{2},y_{1}+y_{2}) ~ \mod ~ 1	 \\
+&\frac{1}{2}(x_{1}+x_{2}+1,y_{1}+y_{2}) ~ \mod ~ 1	 \\
+&\frac{1}{2}(x_{1}+x_{2},y_{1}+y_{2}+1) ~ \mod ~ 1	 \\
+&\frac{1}{2}(x_{1}+x_{2}+1,y_{1}+y_{2}+1) ~ \mod ~ 1	.
+\end{align*}
+
+Diese Punkte sind nicht abhängig von der Wahl der ganzen Zahlen $k$ und $l$. Wenn wir also irgendeine Strecke zwischen dem Kopfgeldjäger und einem der Spiegelbilder von der Form (1) zurück in das ursprüngliche Quadrat spiegeln, dann wird sie durch einen dieser vier Punkte gehen. Deshalb genügen vier Bodyguards auf diesen Punkten für alle Spiegelbilder des Bürgermeisters der Form (1).
+Ganz analog findet man für die drei weiteren Formen der Spiegelbilder jeweils vier weitere (nicht unbedingt verschiedene) Punkte im ursprünglichen Raum, an welchen der Bürgermeister einen Bodyguard aufstellen kann.
+Insgesamt kann sich der Bürgermeister also mit höchstens 16 Bodyguards schützen.\\
+
+Es gilt jedoch noch folgenden Problemfall zu betrachten: An jenem Ort, welcher ein Bodyguard platziert werden sollte, ist bereits der Kopfgeldjäger oder der Bürgermeister. Um dieses Problem zu beheben betrachten wir wie am Anfang alle Spiegelungen vom Bürgermeister und dieses Mal auch vom Kopfgeldjäger. Wir fixieren nun jeweils ein Spiegelbild vom Kopfgeldjäger und vom Bürgermeister (es kann sich auch um die Originale handeln). Die Behauptung ist nun, dass auf der Strecke zwischen jenen Zweien ein Bodyguard steht. Bemerke dazu folgendes: Es gibt eine positive Minimale Distanz zwischen zwei Personen. Zum Beispiel nehme das Minimum aus den Distanzen zwischen Bürgermeister und Kopfgeldjäger, Bürgermeister und Wand (auf welcher er sich nicht befindet), Kopfgeldjäger und Wand (auf welcher er sich nicht befindet). Die Strecke hat endliche Länge, das heisst es können sich nur endlich viele Personen auf der Strecke befinden. Lässt man die Bodyguards erstmal ausser acht, so gibt einen Ort auf der Strecke, bei welcher ein Spiegelbild des Bürgermeisters auf ein Spiegelbild des Kopfgeldjägers folgt. In der Mitte jener Zweier ist ein Bodyguard, insbersondere kann der Kopfgeldjäger jene Strecke nicht benützen, um den Bürgermeister zu treffen.
+
+%Nun muss man noch ausschliessen, dass beim Zurückspiegeln einer der Bodyguards auf dem Bürgermeister oder dem Kopfgeldjäger zu liegen kommt. Falls der Punkt
+%\[
+%Q=(x_{2},y_{2}) + \frac{1}{2}(x_{1}+k-x_{2},y_{1}+l-y_{2}) = \frac{1}{2}(x_{1}+x_{2}+k,y_{1}+y_{2}+l).
+%\]
+%beim Zurückspiegeln auf den Bürgermeister zu liegen kommt, dann befindet sich bei $Q$ ebenfalls ein Spiegelbild des Bürgermeisters. Deshalb kann man den Bodyguard bereits in der Mitte der Strecke zwischen dem Kopfgeldjäger und $Q$ aufstellen.
+%Falls der Punkt $Q$ beim Zurückspiegeln auf den Kopfgeldjäger zu liegen kommt, dann bedeutet das, dass der Laserstrahl auf seinem Weg zum Bürgermeister zuerst ein weiteres mal durch den Kopfgeldjäger geht. In diesem Fall gibt es eine kürzere Schussbahn vom Kopfgeldjäger zum Bürgermeister und wir platzieren den Bodyguard stattdessen in der Mitte dieser Bahn.
+%Da zwischen dem Kopfgeldjäger und $P$ nur endlich viele Spiegelbilder des Bürgermeisters und des Kopfgeldjägers liegen, kann dieses Argument wiederholt werden, bis die Länge der Schussbahn minimal ist.
+
+	\item[\textbf{7.}] Nous allons montrer qu'il y a toujours au minimum $n$ cases blanches.
+
+Premièrement c'est la meilleure borne possible. Si l'on considère une des $n$ colonnes, alors la dernière pièce posée sur cette colonne y laisse une case blanche. Donc il y a au moins $n$ cases blanches restantes.
+
+Montrons maintenant que cette borne est atteinte: Nous allons construire un recouvrement qui laisse blanc une des diagonales. Pour faire cela sur un échiquier $2\times 2$ c'est facile: il suffit de poser une petite pièce. Supposons maintenant qu'on sait le faire pour un échiquier $n\times n$ et construisons le recouvrement pour l'échiquier $(n+1)\times (n+1)$. En fait nous pouvons commencer par poser $n$ pièces qui recouvrent les deux colonnes de gauche et qui laissent toutes les cases de la première colonne en noir sauf la case dans l'angle. Posons maintenant des pièces sur les deux lignes du haut de droite à gauche de la même manière. Alors nous avons recouvert la première ligne et la première colonne avec des cases noires à l'exception de la case de l'angle. En utilisant le recouvrement $n\times n$ sur le reste de l'échiquier la construction est finie.
+
+Il reste à échanger les couleurs noir et blanc pour compléter la solution.
+
+	
+	\item[\textbf{8.}] \textbf{1. Lösung:} Es gilt $p(p+1)=q^3-1$ und somit $p| q^3-1$. Sei nun $d$ die Ordnung von $q$ modulo $p$. Dann ist $d=1,3$. Falls $d=1$, so gilt $p|q-1$ und somit $q^2+q+1|p+1 \Rightarrow q\ge p+1 \ge q^2+q+1$ Widerspruch. Es gilt also $d=3$ und somit $3|\phi(p)=p-1$, dann gilt aber für die linke Seite $p^2+p+1 \equiv 0 \mod(3)$. Das heisst $3|q \Rightarrow q=3$, dies hat aber keine Lösung.\\
+	
+	\textbf{2. Lösung:} Die Gelichung ist äquivalent zu $p(p+1) = (q-1)(q^2+q+1)$.
+Falls $p|q-1$, so erhält man einen Wiederspruch wie in der ersten Lösung, also $p|q^2+q+1$. und somit $q-1 | p+1$. Schreibe $p = k(q-1) - 1$ mit $k \geq 1$ und setze in die urspürngliche Gleichung ein. Dann gilt $(k(q-1)-1)k = q^2+q+1 \Leftrightarrow q^2+q(1-k^2) + 1+k+k^2=0$. Die Diskriminante ist $D = k^4 -6k^2 -4k-3$
+ und für $k \geq 5$ gilt $(k^2-3)^2 > D > (k^2-4)^2$. Für $k<5$ kann man von Hand ausrechnen, dass $D$ nie ein Quadrat ist.
+	
+	\item[\textbf{9.}] Wir zeigen zuerst, dass für jedes $z \in \mathbb{R}_{>0}$ die Funktion $f_z(x)=f(x,z)$ injektiv ist. Sei also $f_z(a)=f_z(b)$, dann gilt mit $y=z, x=az,bz$.
+	$$
+	azf(1,z)=f( f( a,z ),z ) = f( f( b,z ),z ) = bzf(1,z) \Rightarrow a=b.
+	$$
+	Als nächstes zeigen wir, dass $f(a,b)$ nur vom Produkt $ab$ abhängt. Sei nun $ab=a'b'$, dann gilt mit $x=ab, y=b$ und $x=a'b', y=b'$:
+	$$
+	f_z(f(a,b))=f(f(a,b),z)=abf(1,z)=a'b'f(1,z)=f(f(a',b'),z)=f_z(f(a',b'))$$
+	$$
+	\Rightarrow f(a,b)=f(a',b').
+	$$
+	Wir setzen nun $h(x)=f(x,1)=f_1(x)$ und es gilt $f(x,y)=h(xy)$. Die Bedingungen in der neuen Funktion sind:
+	\begin{enumerate}
+		\item $h(h(x)z)=xh(z)$ für alle $x,z \in \mathbb{R}_{>0}$;
+		\item Die Funktion $h(x^2)$ ist monoton.
+	\end{enumerate}
+	Letzteres impliziert sogar, dass die Funktion $h(x)$ monoton ist. Einsetzen von $x=z=1$ gibt $h(h(1))=h(1)$ und man folgert $h(1)=1$ mit Injektivität. Einsetzen von $z=1$ zeigt nun $h(h(x))=x$. Ersetzt man $x$ durch $h(y)$ so erhält man $h(yz)=h(y)h(z)$ für alle $y,z \in \mathbb{R}_{>0}$. Dies ist eine Cauchy-Funktionalgleichung und wir wissen bereits, dass $h(x)$ monoton ist. Das heisst $h$ muss von der Form $h(x)=x^{\alpha}$ für alle $x \in \mathbb{R}_{>0}$ sein. Es muss nun $x^{\alpha^2}=h(h(x))=x$ für alle $x \in \mathbb{R}_{>0}$ gelten, daraus folgt $\alpha= \pm 1$. Einsetzen zeigt, dass sowohl $f(x,y)=xy$ für alle $x,y \in \mathbb{R}_{>0}$ als auch $f(x,y)=\frac{1}{xy}$ für alle $x,y \in \mathbb{R}_{>0}$ Lösungen von (a) sind. Für diese Lösungen ist entweder $g(x)=x^2$ für alle $x\in\mathbb{R}_{>0}$ oder $g(x)=\frac{1}{x^2}$ für alle $x\in\mathbb{R}_{>0}$, was beides monotone Funktionen sind.
+	
+	\item[\textbf{10.}] Es gilt nach AM-GM und AM-QM:
+	$$
+	\sum_{cyc} \frac{1}{x+y+\sqrt{xy}} \le \sum_{cyc} \frac{1}{3\sqrt{xy}} \le \left( \frac{1}{3} \sum_{cyc} \frac{1}{xy}\right)^{\frac{1}{2}} \le \sqrt{\frac{k}{3}}.
+	$$
+	Gleichheit gilt, falls $x=y=z=\sqrt{\frac{3}{k}}$. Es muss also $\sqrt{\frac{k}{3}} \le \sqrt{\frac{3}{k}}$ gelten, dies ist aber genau dann der Fall, falls $k \le 3$ gilt. Das heisst also $k_{\text{max}}=3$.
+	
+	
+	\item[\textbf{11.}] Die Winkel im Dreieck $ABC$ seien $\alpha, \beta$ bzw. $\gamma$ und der Inkreismittelpunkt sei $I$. Bezeichne mit $X'$ den Schnittpunkt der Geraden $MN$ und $BI$. Wir wollen zeigen, dass $X'$ auf dem Kreis $k$ liegt.\\
+Das Dreieck $MCN$ ist gleichschenklig, also folgt $\angle{CNM}=90^{\circ}-\frac{\gamma}{2}$ und damit $\angle{X'NB}=90^{\circ}+\frac{\gamma}{2}$. Mit der Innenwinkelsumme im Dreieck $X'NB$ und $\alpha+\beta+\gamma=180^{\circ}$ folgt $\angle{NX'B}=\frac{\alpha}{2}$.\\
+Nun ist $\angle{MAI}=\angle{MX'I}$, womit nach Peripheriewinkelsatz $IMX'A$ ein Sehnenviereck ist. Daraus folgt $\angle{AX'I}=\angle{AMI}=90^{\circ}$. Folglich liegt $X'$ auf dem Thaleskreis $k$ und entspricht dem Punkt $X$ aus der Aufgabenstellung.\\
+Analog wird gezeigt, dass $Y$ auf der Geraden $AI$ liegt und $\angle{XYA}={\frac{\beta}{2}}$ gilt. Das Dreieck $AOY$ ist gleichschenklig, demnach ist $\angle{OYA} = \frac{\alpha}{2}$. Gleichermassen ist $\angle{BXO}={\frac{\beta}{2}}$. Mit der Innenwinkelsumme im Dreieck $OYX$ folgt $\angle{YOX}=180^{\circ}-\frac{\alpha}{2}-\frac{\beta}{2}-\frac{\alpha}{2}-\frac{\beta}{2}=\gamma$.
+
+
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=0.80\textwidth]{./Aufgabr11v2.png}
+	\label{fig:Aufgabr11v2}
+\end{figure}
+
+
+	
+	\item[\textbf{12.}] Sei $\omega(n)=|\{p|n \ \big| p \text{ prim} \}|$ die Anzahl verschiedener Primteiler von $n$.\\
+	\textbf{1. Fall $\omega(n)=0$:} Dann ist $n=1$ und dies erfüllt die Gleichung nicht.\\
+	\textbf{2. Fall $\omega(n)=1$:} Dann ist $n=p^{\alpha}$ mit $\alpha \ge 1$ und es muss
+	$$
+	\frac{p^{4(\alpha+1)}-1}{p^{4}-1}=p^{4\alpha}+p^{4 (\alpha-1)}+ \dots + p^4+1=p^{4\alpha}+p^{3\alpha}+\dots +1=\frac{p^{5 \alpha}-1}{p^{\alpha}-1}
+	$$
+	gelten. Dies ist äquivalent zu $(p^{4(\alpha+1)}-1)(p^{\alpha}-1)=(p^4-1)(p^{5\alpha}-1)$ betrachtet man diese Gleichung modulo $p^4$ erhält man $p^{\alpha} \equiv 0 \mod(p^4)$ also $\alpha \ge 4$. Rechnet man modulo $p^{\alpha}$ erhält man $p^4\equiv 0 \mod(p^{\alpha})$ also $4 \ge \alpha$ und somit $\alpha = 4$. Dies sind dann auch tatsächlich Lösungen.\\
+	\textbf{3. Fall $\omega(n)=2$:} Dann ist $n=p^{\alpha}q^{\beta}$ mit $p\neq q$ und $\alpha, \beta \ge 1$. Nehme nun an $\alpha=1$ so folgt wenn man die Gleichung modulo $q$ betrachtet: $1+p^4 \equiv 1 \mod(q)$ und somit $p=q$ Widerspruch! Aus Symmetrie gilt also $\alpha,\beta \ge 2$. Für die linke Seite gilt:
+	$$\begin{aligned}
+	(1+p^4+\dots + p^{4\alpha} )(1+q^4+\dots + q^{4 \beta} ) & \ge (1+p^{2\alpha}+p^{4\alpha})(1+q^{2 \beta}+q^{4\beta})\\
+	& \ge (1+n+n^2)^2 > 1+n+n^2+n^3+n^4.
+	\end{aligned}$$
+	Wobei die zweite Ungleichung aus Cauchy-Schwarz folgt und die erste aus der folgenden Ungleichung:
+	$$
+	(1+p^4+\dots + p^{4\alpha} ) \ge (1+p^{2\alpha}+p^{4\alpha}).
+	$$
+	Jene Ungleichung gilt, da sie für $\alpha=2$ eine Gleichheit ist und für $\alpha \ge 3$ gilt $\alpha-1>1$ und $p^4+p^{4(\alpha-1)} \ge 2 p^{2 \alpha}> p^{2 \alpha}$. Somit hat es in diesem Fall auch keine Lösung.\\
+	\textbf{4. Fall $\omega(n)=3$:} Dann ist $n=p^{\alpha}q^{\beta}r^{\gamma}$ mit $p\neq q \neq r \neq p$ und $\alpha,\beta,\gamma \ge 1$. Nehme an es gelte $\alpha=\beta=\gamma=1$, dann ist die Gleichung:
+	$$
+	(1+p^4)(1+q^4)(1+r^4)=n^4+n^3+n^2+n+1.
+	$$
+	Die linke Seite ist kongruent zu $ 4,8$ modulo $5$, da höchstens eine Primzahl gleich $5$ sein kann. Die rechte Seite ist aber kongruent zu $0,1$ modulo $5$ Widerspruch! Ohne Beinschränkung der Allgemeinheit sei $\alpha \ge 2$. Dann gilt für die linke Seite:
+	$$\begin{aligned}
+	LS & =(1+p^4+\dots+p^{4\alpha})(1+q^4+\dots +q^{4\beta})(1+r^4+\dots+ r^{4\gamma})\\
+	& \ge (1+p^{2 \alpha}+p^{4\alpha})(1+q^{4\beta})(1+r^{4\gamma}) \ge (1+p^{2 \alpha}+p^{4\alpha})(1+q^{2\beta}r^{2\gamma})^2 \\
+	& > (1+p^{2 \alpha}+p^{4\alpha})(1+q^{2\beta}r^{2\gamma}+q^{4\beta}r^{4\gamma})\\
+	& \ge (1+n+n^2)^2 > 1+n+\dots + n^4.
+	\end{aligned}$$ Also auch keine Lösung in diesem Fall.\\
+	\textbf{5. Fall $\omega(n)\ge 4$:} Dann ist $n=p_1^{\alpha_1}\cdot\dots\cdot p_{\omega(n)}^{\alpha_{\omega(n)}}$. Dann gilt für die linke Seite:
+	$$\begin{aligned}
+	LS \ge & \prod_{i=1}^{\omega(n)}(1+p_i^{4\alpha_i}) \ge \prod_{i=1}^{4}(1+p_i^{4\alpha_i}) \cdot \prod_{i=5}^{\omega(n)}p_i^{4\alpha_i} \\
+	& \ge (1+p_1^{\alpha_1}p_2^{\alpha_2}p_3^{\alpha_3}p_4^{\alpha_4})^4 \cdot \prod_{i=5}^{\omega(n)}p_i^{4\alpha_i} \ge (1+n)^4\\
+	& > 1+n +\dots + n^4.
+	\end{aligned}$$
+	Und somit auch keine Lösung in diesem Fall.\\
+	Alle Lösungen sind $n=p^4$ für $p$ eine Primzahl.
+	
+	
+\end{enumerate}
+
+
+
+\end{document}

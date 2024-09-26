@@ -1,0 +1,38 @@
+\documentclass[language={french},day={1,2},style=exam]{smo}
+
+\input{TimeDateTitle}
+
+\begin{document}
+
+\bigskip\bigskip
+\begin{enumerate}[label=\textbf{\arabic*.}]
+\IfStrEq*{\examday}{1}{ %%%%%%%%%%%%%%%%% Day 1 %%%%%%%%%%%%%%%%%
+\item \input{problems/f1.tex}
+\bigskip\bigskip
+\item \input{problems/f2.tex}
+\bigskip\bigskip
+\item \input{problems/f3.tex}
+\bigskip\bigskip
+\item \input{problems/f4.tex}
+}{}
+
+\IfStrEq*{\examday}{2}{ %%%%%%%%%%%%%%%%% Day 2 %%%%%%%%%%%%%%%%%
+\setcounter{enumi}{4}
+\item \input{problems/f5.tex}
+\bigskip\bigskip
+\item \input{problems/f6.tex}
+\bigskip\bigskip
+\item \input{problems/f7.tex}
+\bigskip\bigskip
+\item \input{problems/f8.tex}
+}{}
+
+\end{enumerate}
+
+\bigskip
+
+\vfill
+
+{\begin{center}{\de{Viel Glück!}\fr{Bonne chance!}\ita{Buona fortuna!}\en{Good Luck!}}\end{center}}
+
+\end{document}

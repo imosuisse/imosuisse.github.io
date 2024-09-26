@@ -1,0 +1,350 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+
+
+
+
+
+% Schriftabkürzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\gaussk}[1]{\lfloor #1 \rfloor}
+\newcommand{\frack}[1]{\{ #1 \}}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+\newcommand{\dreieck}{\bigtriangleup}
+
+\parindent0mm
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge IMO Selektion 2008} \\
+\medskip erste Prüfung - 17. Mai 2008
+\end{center}
+\vspace{8mm}
+Zeit: 4.5 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{1.}] Finde alle Tripel $(a,b,c)$ natürlicher Zahlen, sodass gilt:
+\[a \div bc-1, \qquad b \div ca-1, \qquad c \div ab-1.\] 
+
+\bigskip
+\bigskip
+
+\item[\textbf{2.}] Seien $m,n$ natürliche Zahlen. Betrachte ein quadratisches Punktgitter aus $(2m+1) \times (2n+1)$ Punkten in der Ebene. Eine Menge von Rechtecken heisst \emph{gut}, falls folgendes gilt:
+\begin{enumerate}
+\item[(a)] Für jedes der Rechtecke liegen die vier Eckpunkte auf Gitterpunkten und die Seiten parallel zu den Gitterlinien.
+\item[(b)] Keine zwei der Rechtecke haben einen gemeinsamen Eckpunkt.
+\end{enumerate}
+Bestimme den grösstmöglichen Wert der Summe der Flächen aller Rechtecke in einer guten Menge.\\
+
+\bigskip
+\bigskip
+
+\item[\textbf{3.}]  Sei $ABC$ ein Dreieck mit $\angle ABC \neq \angle BCA$. Der Inkreis $k$ des Dreiecks $ABC$ berühre die Seiten $BC$, $CA$ bzw. $AB$ in den Punkten $D$, $E$ bzw. $F$. Die Strecke $AD$ schneide $k$ ein weiteres Mal in $P$. Sei $Q$ der Schnittpunkt von $EF$ mit der Rechtwinkligen zu $AD$ durch $P$. Sei $X$ bzw. $Y$ der Schnittpunkt von $AQ$ mit $DE$ bzw. mit $DF$. Zeige, dass $A$ der Mittelpunkt der Strecke $XY$ ist.
+
+\end{enumerate}
+
+\pagebreak
+
+
+\begin{center}
+{\huge IMO Selektion 2008} \\
+\medskip zweite Prüfung - 18. Mai 2008
+\end{center}
+\vspace{8mm}
+Zeit: 4.5 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{4.}] Zwei Kreise $k_1$ und $k_2$ schneiden sich in $A$ und $B$. Sei $r$ eine Gerade durch $B$, die $k_1$ in $C$ und $k_2$ in $D$ schneidet, so dass B zwischen $C$ und $D$ liegt.
+Sei $s$ die Gerade parallel zu $AD$, die $k_1$ in $E$ berührt und zu $AD$ den kleinstmöglichen Abstand hat. Die Gerade $AE$ schneidet $k_2$ in $F$. Sei $t$ die Tangente zu $k_2$ durch $F$. Beweise dass gilt:
+\begin{enumerate}
+\item[(a)] Die Gerade $t$ ist parallel zu $AC$.
+\item[(b)] Die Geraden $r$, $s$ und $t$ schneiden sich in einem Punkt.\\
+\end{enumerate}
+
+
+\bigskip
+\bigskip
+
+\item[\textbf{5.}] Seien $a,b,c$ positive reelle Zahlen. Beweise die folgende Ungleichung:
+\[\frac{a}{\sqrt{3a+2b+c}}+\frac{b}{\sqrt{3b+2c+a}}+\frac{c}{\sqrt{3c+2a+b}} \leq \frac{1}{\sqrt{2}}\sqrt{a+b+c}.\]
+
+\bigskip
+\bigskip
+
+\item[\textbf{6.}] Ein reguläres $2008$-Eck wird irgendwie mit $2005$ sich nicht schneidenden Diagonalen in lauter Dreiecke zerlegt. Bestimme die kleinstmögliche Anzahl nicht gleichschenkliger Dreiecke, die in einer solchen Zerlegung auftreten können.
+ 
+\end{enumerate}
+
+
+\pagebreak
+
+
+\begin{center}
+{\huge IMO Selektion 2008} \\
+\medskip dritte Prüfung - 24. Mai 2008
+\end{center}
+\vspace{8mm}
+Zeit: 4.5 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{7.}]  Seien $a,b$ natürliche Zahlen. Zeige, dass man die ganzen Zahlen mit drei Farben färben kann, sodass zwei ganze Zahlen mit Differenz $a$ oder $b$ stets verschieden gefärbt sind. \\
+
+\bigskip
+\bigskip
+
+\item[\textbf{8.}] Sei $ABC$ ein Dreieck und $D$ ein Punkt im Innern der Strecke $BC$. Sei $X$ ein weiterer Punkt im Innern der Strecke $BC$ verschieden von $D$ und sei $Y$ der Schnittpunkt von $AX$ mit  dem Umkreis von $ABC$. Sei $P$ der zweite Schnittpunkt der Umkreise von $ABC$ und $DXY$. Beweise, dass $P$ unabhängig von der Wahl von $X$ ist.\\
+
+\bigskip
+\bigskip
+
+\item[\textbf{9.}] Sei $\BR^+$ die Menge der positiven reellen Zahlen. Bestimme alle Funktionen $f: \BR^+ \rightarrow \BR^+$, sodass für alle $x,y>0$ gilt
+\[f(x+f(y))=f(x+y)+f(y).\]
+
+\end{enumerate}
+
+
+\pagebreak
+
+
+\begin{center}
+{\huge IMO Selektion 2008} \\
+\medskip vierte Prüfung - 25. Mai 2008
+\end{center}
+\vspace{8mm}
+Zeit: 4.5 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{10.}] Sei $P(x)=x^4-2x^3+px+q$ ein Polynom mit reellen Koeffizienten, dessen Nullstellen alle reell sind. Zeige, dass die grösste dieser Nullstellen im Intervall $[1,2]$ liegt.\\
+
+\bigskip
+\bigskip
+
+
+\item[\textbf{11.}] Sei $A=(a_1,a_2,\ldots,a_n)$ eine Folge ganzer Zahlen. Der \emph{Nachfolger} von $A$ ist die Folge $A'=(a'_1,a'_2,\ldots,a'_n)$ mit 
+\[a'_k = |\{i<k \; | \; a_i<a_k\}|-|\{i>k \; | \; a_i>a_k\}|.\]
+Sei $A_0$ eine endliche Folge ganzer Zahlen und für $k \geq 0$ sei $A_{k+1}=A'_k$ der Nachfolger von $A_k$. Zeige, dass eine natürliche Zahl $m$ existiert mit $A_m=A_{m+1}$.\\
+
+
+\bigskip
+\bigskip
+
+\item[\textbf{12.}] Seien $x,y,n$ natürliche Zahlen mit $x \geq 3$, $n\geq 2$ und
+\[x^2+5=y^n.\]
+Zeige, dass jeder Primteiler $p$ von $n$ die Kongruenz $p \equiv 1$ (mod $4$) erfüllt.
+
+
+\end{enumerate}
+
+
+\end{document}

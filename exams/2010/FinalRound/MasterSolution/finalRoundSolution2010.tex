@@ -1,0 +1,462 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{german}
+\usepackage[latin1]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{amsmath}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{floatflt}
+\usepackage{subfigure}
+
+\oddsidemargin=0cm \headheight=-2.1cm
+\textwidth=16.4cm \textheight=25.7cm
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+% Schriftabkürzungen
+
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{Satz}[thm]{Satz}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Korollar}
+\newtheorem{alg}[thm]{Algorithmus}
+\newtheorem{bsp}{Beispiel}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+\renewcommand{\phi}{\varphi}
+\newcommand{\eps}{\varepsilon}
+
+\newcommand{\pfeil}{\quad \Longrightarrow \quad}
+
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\Mod}[1]{(\mod\;#1)}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\newcommand{\sgn}{\mathop{\rm sign}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+             
+        
+\newcommand{\csum}{\sum_{cyc}}             
+             
+\parindent0mm
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\Large Lösungen zur SMO Finalrunde 2010}
+\end{center}
+
+\vspace{15mm}
+
+
+\begin{enumerate}
+
+\item[\textbf{1.}] Betrachte drei Steine auf der reellen Geraden mit ganzzahligen Koordinaten. In einem Schritt kann man zwei dieser Steine auswählen, den einen um 1 nach links und den anderen um 1 nach rechts verschieben. Für welche Anfangspositionen lassen sich alle drei Steine mit einer geeigneten Folge von Schritten auf denselben Punkt verschieben?\\
+
+\textbf{1. Lösung}
+
+Antwort: Dies ist genau dann der Fall, wenn die Summe $S$ der Koordinaten der drei Steine durch 3 teilbar ist.
+
+Offenbar ändert sich $S$ bei einem Schritt nicht. Sind am Schluss alle Steine auf demselben Punkt $n$, dann muss $S=3n$ also durch 3 teilbar sein.
+
+Sei umgekehrt $S=3n$. Wähle einen Stein aus und verschiebe ihn mit einer Folge von Schritten auf den Punkt $n$. Nach Annahme haben die beiden anderen Steine dann die Koordinaten $n-a$ und $n+a$ für eine nichtnegative ganze Zahl $a$. Offenbar lassen sich diese beiden Steine nun in $a$ Schritten beide ebenfalls nach $n$ verschieben.\\
+
+\textbf{2. Lösung}
+
+Wir geben ein zweites Argument für die Rückrichtung. Sei $S$ durch 3 teilbar. Solange die maximale Distanz zweier Steine mindestens 2 ist, kann man die beiden Steine mit der kleinsten und der grössten Koordinate in einem Schritt näher zusammenrücken. Da diese maximale Distanz bei jedem solchen Schritt kleiner wird (denn sonst wären auf diesen beiden extremalen Punkten je mindestens zwei Steine), liegen nach endlich vielen Schritten alle drei Steine auf zwei benachbarten Punkten. Da $S$ durch 3 teilbar ist, liegen sie dann aber bereits alle auf dem gleichen Punkt.\\
+
+
+\bigskip
+
+\item[\textbf{2.}] Sei $ABC$ ein Dreieck mit $AB\neq AC$ und Inkreismittelpunkt $I$. Der Inkreis berühre die Seiten $BC$, $CA$ bzw. $AB$ bei $D$, $E$ bzw. $F$. Sei $M$ der Mittelpunkt von $EF$. Die Gerade $AD$ schneide den Inkreis bei $P\neq D$. Beweise, dass $PMID$ ein Sehnenviereck ist.\\
+
+\textbf{Lösung}
+
+Da das Dreieck $AFE$ gleichschenklig und der Punkt $M$ der Mittelpunkt von der Strecke $EF$ ist, liegt $M$ auf der Winkelhalbierenden von $\angle FAE$, also auf $AI$. Wir zeigen nun, dass $AP \cdot AD=AM \cdot AI$. Aus dem Potenzsatz folgt dann die Behauptung. Da $AE$ die Tangente an den Inkreis ist, gilt wieder nach dem Potenzsatz, dass $AP \cdot AD~=~AE^2$. Da $\angle AME$ und $\angle AEI$ beides rechte Winkel sind, ist das Dreieck $AME$ ähnlich zu $AEI$. Es gilt also
+\[\frac{AE}{AM}=\frac{AI}{AE} \ \Rightarrow \ AE^2=AM \cdot AI.\]
+Insgesamt folgt also wie gewünscht
+\[AP \cdot AD=AE^2=AM \cdot AI.\]
+
+\begin{figure}\centering
+\includegraphics[width=8.5cm]{geometrie2}
+\label{Aufgabe2}
+\end{figure}
+
+
+\bigskip
+
+\item[\textbf{3.}] Sei $n$ eine natürliche Zahl. Bestimme die Anzahl Paare $(a,b)$ natürlicher Zahlen, für welche die folgende Gleichung erfüllt ist:
+\[(4a-b)(4b-a)=2010^n.\]
+
+\textbf{Lösung}
+
+Setze $x=4a-b$ und $y=4b-a$. Wegen $xy>0$ und $x+y=3(a+b)>0$ sind $x$ und $y$ natürliche Zahlen. Ausserdem gilt
+\[a=\frac{4x+y}{15}, \qquad b=\frac{4y+x}{15},\]
+also müssen $4x+y$ und $4y+x$ beide durch 15 teilbar sein. Wegen $15 \div xy$ ist aber mindestens eine der beiden Zahlen $x,y$ durch 3 teilbar und mindestens eine der beiden durch 5 teilbar. Somit müssen sogar beide durch 15 teilbar sein und in diesem Fall sind $a,b$ tatsächlich ganz. Diese Betrachtungen liefern eine Bijektion zwischen der Menge aller Paare $(a,b)$, welche obige Gleichung erfüllen, und der Menge $S$ aller Paare $(x,y)$ von natürlichen Zahlen mit den Eigenschaften 
+\begin{itemize}
+\item $15 \div x$ und $15 \div y$.
+\item $xy=2010^n$.
+\end{itemize}
+Wegen $2010=2\cdot 3 \cdot 5 \cdot 67$ ist $x$ von der Form $x=2^a\cdot 3^b \cdot 5^c \cdot 67^d$ mit $0\leq a,d \leq n$ und $1\leq b,c \leq n-1$ und $y=2010^n/x$. Insgesamt gibt es also 
+\[(n+1)^2(n-1)^2=(n^2-1)^2\]
+Lösungen dieser Gleichung.\\
+
+\bigskip
+
+\item[\textbf{4.}] Seien $x,y,z>0$ reelle Zahlen mit $xyz=1$. Beweise die Ungleichung
+\[\frac{(x+y-1)^2}{z} + \frac{(y+z-1)^2}{x} + \frac{(z+x-1)^2}{y} \geq x+y+z.\]
+
+\textbf{1. Lösung}
+
+Die Nebenbedingung liefert zusammen mit AM-GM die Abschätzung $x+y+z \geq 3\sqrt[3]{xyz}=3$. Damit und mit CS erhält man nun für die linke Seite $A$ der Ungleichung
+\begin{eqnarray*}
+(x+y+z) \cdot A &\geq& \big(|x+y-1|+|y+z-1|+|z+x-1|\big)^2\\
+&\geq& \big(2(x+y+z)-3\big)^2
+\geq (x+y+z)^2.
+\end{eqnarray*}
+Die Behauptung folgt nun nach Division mit $x+y+z$.\\
+
+\textbf{2. Lösung}
+
+Mit AM-GM folgt
+\[\frac{(x+y-1)^2}{z}+z \geq 2(x+y-1)\]
+und analog für die beiden anderen Terme. Also gilt $LS+RS \geq 4RS-6$. Es genügt nun, $RS=x+y+z \geq 3$ zu zeigen, und dies macht man wie in der ersten Lösung.\\
+
+
+\textbf{3. Lösung}
+
+Die Differenz zwischen der linken und der rechten Seite ist gleich
+\begin{eqnarray*}
+&& \sum_{cyc} \frac{(x+y-1)^2-z^2}{z} = \sum_{cyc} \frac{(x+y+z-1)(x+y-z-1)}{z}\\
+&=& (x+y+z-1)\Big(\frac{x+y-z-1}{z}+\frac{y+z-x-1}{x}+\frac{z+x-y-1}{y}\Big). 
+\end{eqnarray*}
+Wegen $x+y+z\geq 3\sqrt[3]{xyz}=3$ ist die erste Klammer immer positiv. Es genügt also zu zeigen, dass die zweite Klammer $B$ nicht negativ ist. Aufsummieren der Ungleichung
+\[1+\frac{y}{x}+\frac{z}{x} = \frac{x}{x}+\frac{y}{x}+\frac{z}{x} \geq 3\sqrt[3]{\frac{xyz}{x^3}} = \frac{3}{x}\]
+und der beiden analogen liefert nun
+\begin{eqnarray*}
+&& 3 + \frac{x}{y}+\frac{x}{z}+\frac{y}{x}+\frac{y}{z}+\frac{z}{x}+\frac{z}{y} \geq 3\Big(\frac{1}{x}+\frac{1}{y}+\frac{1}{z}\Big)\\
+&=& \Big(\frac{1}{x}+\frac{1}{y}+\frac{1}{z}\Big) + 2\Big(\frac{1}{x}+\frac{1}{y}+\frac{1}{z}\Big)\\
+&\geq& \Big(\frac{1}{x}+\frac{1}{y}+\frac{1}{z}\Big) + \frac{6}{\sqrt[3]{xyz}}\\
+&=& \Big(\frac{1}{x}+\frac{1}{y}+\frac{1}{z}\Big) + 6,
+\end{eqnarray*}
+wobei wir am Schluss nochmals AM-GM und die Nebenbedingung verwendet haben. Dies ist äquivalent zu $B\geq 0$.
+
+Alternativ kann man für den Nachweis von $B\geq 0$ auch die Ungleichung von Chebychef verwenden. Da die Folge der Zähler und die Folge der Nenner entgegengesetzt geordnet sind, gilt nämlich
+\[B \geq \frac{1}{3}\Big(\frac{1}{x}+\frac{1}{y}+\frac{1}{z}\Big)(x+y+z-3) \geq 0\]
+wegen $x+y+z\geq 3$.\\
+
+\textbf{4. Lösung}
+
+Setze $s=x+y+z$. Es gilt dann
+\[\frac{(x+y-1)^2}{z} = \frac{(s-z-1)^2}{z} = \frac{(s-1)^2}{z}-2(s-1)+z.\]
+Die Ungleichung lässt sich somit umschreiben zu
+\[(s-1)^2 \Big(\frac{1}{x}+\frac{1}{y}+\frac{1}{z}\Big) \geq 6(s-1).\]
+Wegen $s \geq 3\sqrt[3]{xyz}=3$ können wir mit $s-1\geq 2$ kürzen und erhalten schliesslich die äquivalente Ungleichung
+\[(x+y+z-1) \Big(\frac{1}{x}+\frac{1}{y}+\frac{1}{z}\Big) \geq 6.\]
+Der erste Faktor ist wie schon erwähnt mindestens gleich $2$, der zweite ist nach AM-GM mindestens gleich $3/\sqrt[3]{xyz} = 3$, damit ist alles gezeigt.\\ 
+
+\textbf{5. Lösung}
+
+Es gilt $(x+y-1)^2 \geq 2xy-1$ denn dies ist äquivalent zu $(x-1)^2+(y-1)^2 \geq 0$. Es genügt also,
+\[2\Big(\frac{xy}{z}+\frac{yz}{x}+\frac{zx}{y}\Big) \geq x+y+z+\frac{1}{x}+\frac{1}{y}+\frac{1}{z}\]
+zu zeigen. Einerseits gilt aber nach AM-GM
+\begin{eqnarray*}
+\frac{xy}{z}+\frac{yz}{x}+\frac{zx}{y} &=& \frac{1}{2}\Big(\frac{zx}{y}+\frac{xy}{z}\Big) +\frac{1}{2}\Big(\frac{xy}{z}+\frac{yz}{x}\Big)+\frac{1}{2}\Big(\frac{yz}{x}+\frac{zx}{y}\Big)\\
+&\geq& \sqrt{\frac{x^2yz}{yz}}+\sqrt{\frac{y^2zx}{zx}}+\sqrt{\frac{z^2xy}{xy}} = x+y+z,
+\end{eqnarray*}
+andererseits mit AM-QM und AM-GM
+\begin{eqnarray*}
+\frac{xy}{z}+\frac{yz}{x}+\frac{zx}{y} &=& \frac{1}{x^2}+\frac{1}{y^2}+\frac{1}{z^2}\geq \frac{1}{3}\Big(\frac{1}{x}+\frac{1}{y}+\frac{1}{z}\Big)^2\\
+&\geq& \frac{1}{\sqrt[3]{xyz}}\Big(\frac{1}{x}+\frac{1}{y}+\frac{1}{z}\Big) = \frac{1}{x}+\frac{1}{y}+\frac{1}{z}.
+\end{eqnarray*}
+Aufsummieren liefert das Gewünschte.\\
+
+
+\bigskip
+
+\item[\textbf{5.}] Betrachte die Eckpunkte eines regulären $n$-Ecks und verbinde diese mit Seiten oder Diagonalen irgendwie zu einem geschlossenen Streckenzug, der jede Ecke genau einmal durchläuft. Ein \textit{paralleles Paar} ist eine Menge von zwei verschiedenen parallelen Strecken in diesem Streckenzug. Zeige:
+\begin{enumerate}
+\item[(a)] Ist $n$ gerade, dann gibt es stets mindestens ein paralleles Paar.
+\item[(b)] Ist $n$ ungerade, dann existiert nie genau ein paralleles Paar.\\
+\end{enumerate} 
+
+\textbf{Lösung}
+
+Nummeriere die Ecken der Reihe nach von $1$ bis $n$. Jeder solche Streckenzug entspricht einer Permutation $(a_1,\ldots, a_n)$ der Menge $\{1,2,\ldots,n\}$. Zwei Strecken $a_i a_{i+1}$ und $a_j a_{j+1}$ sind dabei genau dann parallel, wenn
+\begin{equation} \label{Kongruenz}
+a_i+a_{i+1} \equiv a_j+a_{j+1} \qquad (\mod n).
+\end{equation}
+gilt. Betrachte also die $n$ Summen $a_1+a_2, \ldots, a_n+a_1$ (mod $n$) und insbesondere deren Summe $S$. Einerseits gilt 
+\begin{equation} \label{Kongruenz2}
+S = \sum_{i=1}^n (a_i+a_{i+1}) = 2(a_1+\ldots + a_n) = n(n+1) \equiv 0 \qquad (\mod n).
+\end{equation}
+\begin{enumerate}
+\item[(a)] Ist (\ref{Kongruenz}) nie erfüllt für $i\neq j$, dann liegt in jeder Restklasse (mod $n$) genau eine der Summen $a_i+a_{i+1}$. Also erhält man 
+\[S \equiv 0+1+ \ldots +(n-1) = \frac{n(n-1)}{2} = (n-1)\frac{n}{2} \not \equiv 0 \qquad (\mod n),\]
+da $n$ gerade ist. Ein Widerspruch zu (\ref{Kongruenz2}).
+
+\item[(b)] Ist (\ref{Kongruenz}) für genau ein ungeordnetes Paar $i\neq j$ erfüllt, dann liegen in $n-2$ der Restklassen (mod $n$) je genau eine der Summen $a_i+a_{i+1}$, in einer Restklasse genau zwei und in einer keine. Sei $k$ diejenige Restklasse, welche zwei dieser Summen enthält, und sei $l$ diejenige, welche keine enthält. Dann gilt
+\[S \equiv 0+1+ \ldots +(n-1) + (k-l) = n\frac{n-1}{2} +(k-l) \equiv k-l \not\equiv 0 \qquad (\mod n),\]
+da $n$ ungerade ist und $k\not \equiv l$ (mod $n$) gilt. Dies ist wieder ein Widerspruch zu (\ref{Kongruenz2}).\\
+\end{enumerate}
+
+\bigskip
+
+\item[\textbf{6.}] Finde alle Funktionen $f\colon \BR \to \BR$, sodass für alle reellen $x,y$ die folgende Gleichung erfüllt ist:
+\[f(f(x))+f(f(y))=2y+f(x-y).\]
+
+\textbf{1. Lösung}
+
+Wir setzen $a=f(0)$. Mit $x=y$ folgt 
+\begin{equation} \label{Aufgabe 6}
+f(f(x))=x+\frac{a}{2}.
+\end{equation}
+Setzt man dies auf der linken Seite der Gleichung ein und vereinfacht, dann folgt
+\[f(x-y)=(x-y)+a,\] 
+also $f(z)=z+a$ für alle reellen $z$. Einsetzen in die ursprüngliche Gleichung zeigt, dass $a=0$ sein muss, die einzige Lösung der Gleichung ist also die Identität $f(x)=x$.\\
+
+\textbf{2. Lösung}
+
+Setzt man $x=0$ in (\ref{Aufgabe 6}), dann erhält man $f(a)= \frac{3a}{2}$. Ausserdem folgt aus (\ref{Aufgabe 6}) sofort, dass $f$ surjektiv ist. Wir können also ein $c$ wählen mit $f(c)=0$. Setzt man nun $x=c$ und $y=0$ in die ursprüngliche Gleichung, dann folgt mit dem schon gezeigten
+\[\frac{5a}{2}=a+f(a)=0,\]
+also $a=0$ und damit $f(0)=0$. Setzt man schliesslich $y=0$ in die ursprüngliche Gleichung ein, dann ergibt sich $f(f(x))=f(x)$ und wegen der Surjektivität von $f$ muss $f(x)=x$ daher die Identität sein.\\
+
+\textbf{3. Lösung}
+
+Aus (\ref{Aufgabe 6}) folgt $f(f(\frac{a}{2}))=a$, und auch dass $f$ injektiv ist. Setze nun $y=\frac{a}{2}$ in die ursprüngliche Gleichung, dann folgt
+\[f(f(x))=f(x-\tfrac{a}{2}),\]
+also $f(x)=x-\frac{a}{2}$ für alle $x$ wegen der Injektivität. Einsetzen zeigt $a=0$.\\
+
+\bigskip
+
+\item[\textbf{7.}] Seien $m,n$ natürliche Zahlen, sodass $m+n+1$ prim ist und ein Teiler von $2(m^2+n^2)-1$. Zeige, dass $m=n$ gilt.\\
+
+\textbf{1. Lösung}
+
+Nach Voraussetzung ist $p=m+n+1$ auch ein Teiler von 
+\[2(m+n)\cdot (m+n+1)-\big(2(m^2+n^2)-1\big) = 4mn+2m+2n+1=(2m+1)(2n+1).\]
+Da $p$ prim ist, muss es daher einen der beiden Faktoren rechts teilen. Ausserdem ist $p$ kein echter Teiler dieser Faktoren wegen $p>\tfrac{1}{2}(2m+1)$ und $p>\tfrac{1}{2}(2n+1)$. Also gilt $p\in \{2m+1,2n+1\}$ und somit $m=n$.\\
+
+\textbf{2. Lösung}
+
+Sei $p=m+n+1$. Dann gilt
+\[0 \equiv 2(m^2+n^2)-1 \equiv 2((n+1)^2+n^2)+1=(2n+1)^2 \qquad (\mod p),\]
+und da $p$ prim ist, teilt $p$ auch $2n+1$. Analog ist $p$ ein Teiler von $2m+1$. Im Fall $m\neq n$ gilt nun aber 
+\[p=m+n+1>\min\{2m+1,2n+1\},\]
+ein Widerspruch.\\
+
+\bigskip
+
+\item[\textbf{8.}] In einem Dorf mit mindestens einem Einwohner gibt es mehrere Vereine. Jeder Einwohner des Dorfes ist Mitglied in mindestens $k$ Vereinen und je zwei verschiedene Vereine haben höchstens ein gemeinsames Mitglied. Zeige dass mindestens $k$ dieser Vereine dieselbe Anzahl Mitglieder haben.\\
+
+\textbf{Lösung}
+
+Wir können annehmen, dass jeder Verein mindestens ein Mitglied besitzt, denn das Entfernen aller leeren Vereine ändert nichts an den Voraussetzungen. Wähle unter allen Vereinen einen mit maximaler Mitgliederzahl $m$. Dann ist jeder dieser $m$ Mitglieder noch in mindestens $k-1$ anderen Vereinen und diese $m(k-1)$ Vereine sind nach Voraussetzung paarweise verschieden. Insgesamt existieren also mindestens $m(k-1)+1$ verschiedene Vereine und jeder davon hat mindestens $1$ und höchstens $m$ Mitglieder. Nach dem Schubfachprinzip existieren also mindestens $k$ Vereine mit derselben Mitgliederzahl.\\
+
+\bigskip
+
+\item[\textbf{9.}] Seien $k$ und $k'$ zwei konzentrische Kreise mit Mittelpunkt $O$. Der Kreis $k'$ sei grösser als der Kreis $k$. Eine Gerade durch $O$ schneide $k$ in $A$ und $k'$ in $B$, sodass $O$ zwischen $A$ und $B$ liegt. Eine andere Gerade durch $O$ schneidet $k$ in $E$ und $k'$ in $F$, sodass $E$ zwischen $O$ und $F$ liegt. Zeige, dass sich der Umkreis von $OAE$, der Kreis mit Durchmesser $AB$ und der Kreis mit Durchmesser $EF$ in einem Punkt schneiden.\\
+
+\textbf{1. Lösung}
+
+Sei $S\neq O$ der zweite Schnittpunkt der Umkreise von $OAE$ und $OBF$. Wir zeigen nun, dass $S$ auf den Kreisen mit Durchmesser $AB$ und $EF$ liegt. Sei $\angle AEO=\alpha$. Da die Dreiecke $AOE$ und $BOF$ gleichschenklig sind gilt $\angle EAO=\alpha$ und
+\[\angle OBF=\angle OFB=\frac{180^\circ-\angle BOF}{2}=\frac{AOE}{2}= 90^\circ-\alpha.\]
+Der Peripheriewinkelsatz angewandt auf die beiden Sehnenvierecke $AOES$ und $OBFS$ ergibt
+\[\angle ASB=\angle ASO+\angle OSB=\angle AEO+\angle OFB=\alpha +90^\circ-\alpha=90^\circ.\]
+Der Punkt $S$ liegt also auf dem Kreis mit Durchmesser $AB$. Fast analog gilt
+\[\angle ESF=\angle OSF-\angle OSE=\angle OAE+180^\circ-\angle OBF=90^\circ\]
+und es folgt, dass $S$ auf Kreis mit Durchmesser $EF$ liegt. Somit schneidet sich der Umkreis von $OAE$, der Kreis mit Durchmesser $AB$ und der Kreis mit Durchmesser $EF$ im Punkt $S$.
+
+\begin{figure}[h!]\centering
+\includegraphics[width=7cm]{geometrie_9_1}
+\label{Aufgabe9}
+\end{figure}
+
+\pagebreak
+
+\textbf{2. Lösung}
+
+Wir definieren $S\neq A$ als den zweiten Schnittpunkt vom Kreis mit Durchmesser $AB$ und dem Umkreis vom Dreieck $AOE$. Definiere $J$ als Schnittpunkt von $BS$ mit $k'$ und $I$ als Schnitpunkt von $JO$ mit $k$. Da die Dreiecke $JOB$ und $IOK$ durch eine zentrische Streckung in $O$ in einander übergehen sind $JB$ und $IK$ parallel. Weiter gilt $\angle ASB = \angle AIB = 90^\circ$ (Thaleskreise) und daher liegen $J$,$I$ und $O$ auf einer Geraden. 
+Nun hat man $\angle SOE = \angle SAE$ da ja $S$ nach Konstruktion nach auf dem Umkreis von $AOE$ liegt und $\angle SAE = \angle IAE = \frac{1}{2}\angle IOE$ nach dem Zentriwinkelsatz. Somit ist $OS$ die Winkelhalbierende des gleichschenkligen Dreiecks $FOJ$. Durch Spiegelung an $OS$ kommt also $E$ auf $I$ und $F$ auf $J$ zu liegen und daher $\angle FSE = \angle JSI =90^\circ$. Somit liegt $S$ auf dem Thaleskreis über $FE$, womit alles gezeigt ist.
+
+\begin{figure}[h!]\centering
+\includegraphics[width=7cm]{geometrie_9_2}
+\label{Aufgabe9}
+\end{figure}
+
+\bigskip
+
+\item[\textbf{10.}] Sei $n \geq 3$ und sei $P$ ein konvexes $n$-Eck. Beweise, dass sich $P$ mit Hilfe von $n-3$ sich nicht schneidenden Diagonalen in Dreiecke zerlegen lässt, sodass der Umkreis von jedem dieser Dreiecke ganz $P$ enthält. Wann existiert genau eine solche Zerlegung?\\
+
+\textbf{Lösung}
+
+Ein Dreieck mit verschiedenen Eckpunkten von $P$, dessen Umkreis ganz $P$ enthält, nennen wir \emph{gut}. Eine Zerlegung von $P$ in disjunkte gute Dreiecke wie in der Aufgabenstellung nennen wir ebenfalls \emph{gut}. Wir starten mit folgenden zwei Beobachtungen, die sofort aus dem Peripheriewinkelsatz folgen:
+\begin{enumerate}
+\item[(i)] Sei $AB$ eine beliebige Seite von $P$ und sei $X$ ein weiterer Eckpunkt, dann ist das Dreieck $ABX$ genau dann gut, wenn der Winkel $\angle AXB$ minimal ist unter allen Winkeln $\angle AXB$ mit einem Eckpunkt $X\neq A,B$ von $P$. Insbesondere existiert immer ein gutes Dreieck mit Seite $AB$.
+
+\item[(ii)] Sei $AB$ eine Diagonale von $P$, die keine Seite ist. Die Punkte $A,B$ zerlegen dann den Umfang von $P$ in zwei Teile (Streckenzüge). Seien $X_1,\ldots,X_r$ die Eckpunkte auf dem einen dieser Teile und $Y_1,\ldots,Y_s$ die Punkte auf dem anderen Teil. Es existiert genau dann ein Kreis durch $A$ und $B$, der ganz $P$ enthält, wenn
+\[\min_{1 \leq i \leq r} \angle AX_iB + \min_{1 \leq i \leq s} \angle AY_iB \geq 180^\circ.\]
+Ist dies der Fall, dann ist das Dreieck $AX_kB$ genau dann gut, wenn
+\[\angle AX_kB = \min_{1 \leq i \leq r} \angle AX_iB.\]
+Analoges gilt für Dreiecke $AY_lB$. Insbesondere existiert genau dann ein gutes Dreieck der Form $AX_kB$, wenn ein gutes Dreieck der Form $AY_lB$ existiert.
+\end{enumerate}
+
+Wir zeigen zuerst, dass man jedes beliebige gute Startdreieck $ABC$ sukzessive zu einer guten Zerlegung von $P$ ausbauen kann (welche dann insbesondere $ABC$ als eines der Dreiecke enthält). Sei also $ABC$ gut. Als Folge von (ii) existieren nun gute Dreiecke mit Seiten $AB$, $BC$ und $CA$, die mit $ABC$ keinen Inneren Punkt gemeinsam haben, sofern diese Strecken nicht schon Seiten von $P$ sind. Iteriert man dieses Argument, dann erhält man schliesslich eine gute Zerlegung von $P$. Genauer kann man so argumentieren: Sei $\CZ$ die Menge aller Eckenteilmengen $Z$ von $P$, sodass $A,B,C\in Z$ gilt, und sodass die konvexe Hülle $H(Z)$ eine Zerlegung in gute Dreiecke (bezüglich $P$) besitzt, wobei $ABC$ eines dieser Dreiecke ist. Nach Annahme ist $\{A,B,C\}\in \CZ$, also ist $\CZ$ nicht leer. Wähle ein maximales Element $Z$ von $\CZ$ und nehme an, es gelte $H(Z)\neq P$. Wähle eine Seite $DE$ von $H(Z)$, die keine Seite (aber natürlich eine Diagonale) von $P$ ist. Nach Annahme existiert ein Punkt $F\in Z$, sodass $DEF$ gut ist. Nach (ii) existiert dann aber eine Ecke $G$ von $P$, die auf der anderen Seite der Geraden $DE$ liegt als $F$, und sodass $DEG$ ebenfalls gut ist. Dann ist aber $Z \cup \{G\}$ ebenfalls in $\CZ$ und strikt grösser als $Z$, ein Widerspruch.
+
+
+Wir können nun zeigen, dass $P$ stets eine gute Zerlegung besitzt. Zudem ist diese genau dann eindeutig, wenn kein Kreis existiert, der ganz $P$ enthält und durch mindestens vier Ecken von $P$ geht (wir nennen so einen Kreis einen \emph{starken Umkreis} von $P$). Wähle dazu eine beliebige Seite $AB$ von $P$. Nach (i) existiert ein gutes Dreieck $ABC$ und nach obigem Argument also eine gute Zerlegung von $P$. Besitzt $P$ nun keinen starken Umkreis, dann stimmen je zwei gute Zerlegungen überein. Beide enthalten nämlich ein gutes Dreieck mit Seite $AB$. Führt man nun die oben beschriebene Konstruktion einer guten Zerlegung von $P$ mit Startkante $AB$ durch, so sind alle Schritte eindeutig bestimmt. Das heisst, jedes gute Dreieck, welches man hinzufügt, ist durch die schon bestehende Konstellation eindeutig bestimmt. Wäre dies nämlich nicht so, dann hätte man an einem bestimmten Punkt die Wahl zwischen zwei neuen guten Dreiecken $DEF$ und $DEG$. Dann gilt aber $\angle DFE = \angle DGE$ nach (i) respektive (ii). Somit liegen $D,E,F,G$ auf einem starken Umkreis von $P$, ein Widerspruch. Besitzt $P$ hingegen einen starken Umkreis, dann wähle vier Ecken $D,E,F,G$, welche in dieser Reihenfolge darauf liegen. Die Dreiecke $DEF$ und $DEG$ sind dann beide gut, lassen sich also zu guten Zerlegungen ergänzen. Nun haben diese beiden Dreiecke aber einen gemeinsamen inneren Punkt, also sind die beiden guten Zerlegungen von $P$ verschieden.\\
+
+\textit{Bemerkung}: Ein generisches, d.h. "`zufällig"' gewähltes konvexes $n$-Eck besitzt natürlich keinen starken Umkreis. Daher kann man sagen, dass diese Zerlegung für fast alle solchen $n$-Ecke eindeutig bestimmt ist. Das ist doch einigermassen überraschend.
+
+
+
+
+
+
+
+
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,504 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+
+
+
+
+
+% Schriftabkürzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+
+\newcommand{\wi}{\mathop{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}} %Schönes Winkel-Zeichen
+
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge Lösungen zur SMO Finalrunde 2004} \\
+\medskip erste Prüfung - 24. März 2005
+\end{center}
+
+\vspace{15mm}
+
+
+\begin{enumerate}
+\item[\textbf{1.}] Sei $ABC$ ein beliebiges Dreieck und $D, E, F$ die Seitenmitten von $BC, CA, AB$. Die Schwerlinien $AD$, $BE$ und $CF$ schneiden sich im Schwerpunkt $S$. Mindestens zwei der Vierecke
+\[AFSE,\quad BDSF,\quad CESD\]
+seien Sehnenvierecke. Zeige, dass das Dreieck $ABC$ gleichseitig ist.\\
+
+\textbf{Lösung}
+
+Wir können aus Symmetriegründen annehmen, dass $AFSE$ und $BDSF$ Sehnenvierecke sind.
+
+\textit{1. Lösung}
+
+Beachte, dass $AB$ parallel ist zu $ED$, analog für die anderen Seiten. In den folgenden Gleichungen bedeutet
+$(*)$ Gleichheit von Stufenwinkeln und $(**)$ Peripheriewinkelsatz im Kreis. Es gilt
+\[\phi = \wi ECS \stackrel{(*)}{=} \wi SFD \stackrel{(**)}{=} \wi SBD \stackrel{(*)}{=} \wi SEF
+\stackrel{(**)}{=} \wi SAF\] und
+\[\psi = \wi DCS \stackrel{(*)}{=} \wi SFE \stackrel{(**)}{=} \wi SAE \stackrel{(*)}{=} \wi SDF
+\stackrel{(**)}{=} \wi SBF.\] Insbesondere sind alle drei Winkel des Dreiecks $ABC$ gleich $\phi+\psi$, also ist
+$ABC$ gleichseitig.\\
+
+\textit{2. Lösung}
+
+Die Schwerelinie $CF$ ist die Potenzlinie der Umkreise von $AFSE$ und $BDSF$. Folglich besitzt $C$ dieselbe
+Potenz bezüglich dieser Kreise. Daraus folgt $|CA|\cdot|CE|=|CB|\cdot|CD|$, und wegen $|CA|=2|CE|$, $|CB|=2|CD|$
+somit $|CA|=|CB|$. Das Dreieck ist also gleichschenklig.
+
+Insbesondere steht die Schwerelinie $CF$ senkrecht auf $AB$. Da $AFSE$ und $BDSF$ Sehnenvierecke sind, stehen
+dann auch die beiden anderen Schwerelinien senkrecht auf den entsprechenden Seiten, folglich ist $ABC$
+gleichseitig.\\
+
+\pagebreak
+
+\textit{3. Lösung}
+
+Da $AFSE$ ein Sehnenviereck ist, gilt $\wi FAS = \wi FES$. Analog folgt $\wi FBS = \wi FDS$. Insbesondere sind
+die Dreiecke $AFD$ und $EFB$ ähnlich, daraus folgt $\wi AFD = \wi EFB$ und somit auch $\wi AFE = \wi BFD$. Da
+$FD$ parallel zu $AC$ und $FE$ parallel zu $BC$ ist, folgt daraus $\wi BAC = \wi ABC$, also ist $ABC$
+gleichschenklig.
+
+Die Schwerelinie $CF$ ist somit eine Symmetrieachse des Dreiecks, somit folgt $\wi FAS = \wi FES = \wi FBS = \wi
+FDS$. Nach der Unkehrung des Peripheriewinkelsatzes liegen $A,E,D,B$ auf einem Kreis um $F$, folglich ist
+$|AF|=|EF|=|DF|=|BF|$. Ausserdem sind $D,E,F$ die Mittelpunkte der entsprechenden Seiten, daher gilt auch
+$|AE|=|FD|$ und $|BD|=|FE|$. Die Dreiecke $AEF$ und $BDF$ sind also gleichseitig, daraus folgt $\wi ABC = \wi
+BAC = 60^\circ$, wie gewünscht.\\
+
+\bigskip
+
+\item[\textbf{2.}] Von $4n$ Punkten in einer Reihe sind $2n$ weiss und $2n$ schwarz gefärbt. Zeige, dass es $2n$
+aufeinanderfolgende Punkte gibt, von denen genau $n$ weiss und $n$ schwarz sind.\\
+
+\textbf{Lösung}
+
+Nummeriere die Punkte von links nach rechts mit $P_1,\ldots,P_{4n}$. Für $1 \leq k \leq 2n+1$ sei $a_k$ die
+Anzahl weisser Punkte unter den $2n$ aufeinanderfolgenden $P_k,\ldots,P_{k+2n-1}$. Wir müssen zeigen, dass
+$a_k=n$ ist für mindestens ein $k$.
+
+Man überlegt sich leicht, dass sich $a_k$ und $a_{k+1}$ um höchstens 1 unterscheiden. Ist $a_1=n$, dann sind wir
+fertig. Wir nehmen an, es gelte $a_1<n$. Da unter den $4n$ Punkten genau $2n$ weiss sind, folgt daraus
+$a_{2n+1}=2n-a_1>n$. In der Folge $a_1,a_1,\ldots,a_{2n+1}$ ist die erste Zahl kleiner als $n$, die letzte
+grösser als $n$ und zwei benachbarte Zahlen unterscheiden sich um höchstens 1. Daraus folgt, dass $a_k=n$ gelten
+muss für mindestens ein $k$, wie gewünscht. Analog schliesst man, wenn $a_1>n$ ist.\\
+
+\bigskip
+
+
+\item[\textbf{3.}] Beweise für alle $a_1,\ldots,a_n>0$ die folgende Ungleichung und bestimme alle Fälle, in
+denen das Gleichheitszeichen steht:
+\[\sum_{k=1}^n ka_k \leq \binom{n}{2} + \sum_{k=1}^n a_k^k.\]
+
+\textbf{1. Lösung}
+
+Für $1 \leq k \leq n$ gilt nach AM-GM
+\[a_k^k+(k-1) = a_k^k+\underbrace{1+\ldots+1}_{k-1} \geq k\cdot \sqrt[k]{a_k^k \cdot 1\cdots 1} =ka_k.\]
+Addiert man diese $n$ Ungleichungen, dann folgt
+\[\sum_{k=1}^n a_k^k + \sum_{k=1}^n (k-1) \geq \sum_{k=1}^n ka_k.\]
+Wegen $\sum_{k=1}^n (k-1) = (n-1)n/2 =\binom{n}{2}$ ist dies gerade die gesuchte Ungleichung. Gleichheit gilt in obiger Abschätzung nur für $a_2= \ldots=a_n=1$ und beliebiges $a_1>0$.\\
+
+\textbf{2. Lösung}
+
+Wir geben einen alternativen Beweis für die Ungleichung $a^k+(k-1)\geq ka$ für $a>0$. Wir verwenden Induktion
+nach $k$, der Fall $k=1$ ist trivial. Nehme an, dies gelte für $k$ und multipliziere die Ungleichung mit $a$.
+Dies ergibt $a^{k+1} \geq ka^2-(k-1)a$. Damit folgt $a^{k+1}+k \geq ka^2-(k-1)a+k$, und es genügt zu zeigen, dass die rechte Seite mindestens gleich $(k+1)a$ ist. Letzteres ist nach Vereinfachen äquivalent zu $a^2+1 \geq 2a$, also zu $(a-1)^2 \geq 0$.\\
+
+\textbf{3. Lösung}
+
+Die Ungleichung $a^k+(k-1)\geq ka$ für $a>0$ kann auch wie folgt bewiesen werden. Sie ist äquivalent zu $a^k-1 \geq k(a-1)$. Ist $a>1$, dann kann man mit $a-1$ kürzen, ohne dass sich das Ungleichheitszeichen dreht. Nach den binomischen Formeln ergibt dies $1+a+\ldots+a^{k-1} \geq k$ 
+
+
+\bigskip
+
+\item[\textbf{4.}] Bestimme alle Mengen $M$ natürlicher Zahlen, sodass für je zwei (nicht notwendig verschiedene) Elemente $a,b$ aus $M$ auch
+\[\frac{a+b}{\ggT(a,b)}\]
+in $M$ liegt.\\
+
+\textbf{Lösung}
+
+Wir setzen zur Abkürzung $f(a,b)=(a+b)/\ggT(a,b)$. Die Lösung verläuft in mehreren Schritten. 
+\begin{enumerate}
+\item[(i)] Sei $a \in M$ ein beliebiges Element. Dann ist $f(a,a)=2 \in M$. Beachte, dass $M=\{2\}$ eine Lösung ist.
+\item[(ii)] Nehme an, $M$ enthält noch eine weitere gerade Zahl. Sei $2m$ die kleinste gerade Zahl in $M$ mit $m \geq 2$. Dann ist auch $f(2m,2)=m+1$ in $M$ und wegen $2<m+1<2m$ und der Minimalität von $m$ ist diese Zahl ungerade. Also enthält $M$ ein ungerades Element.  
+\item[(iii)] Nehme an, $u \in M$ sei ungerade. Wegen $f(u,2)=u+2$ liegt auch $u+2$ in $M$, induktiv folgt daraus, dass $M$ alle ungeraden Zahlen $\geq u$ enthält. Insbesondere ist $3u \in M$ und daher 
+\[4=f(3u,u) \in M \quad \Longrightarrow \quad 3=f(4,2) \in M.\]
+Nach obigem Argument enthält $M$ also alle ungeraden Zahlen $\geq 3$. 
+\item[(iv)] Sei $2m$ eine beliebige gerade Zahl. Da 3 und $3(2m-1)$ nach (iii) in $M$ liegen, folgt $2m=f(3(2m-1),3) \in M$, daher enthält $M$ auch alle geraden Zahlen. Folglich ist $M= \BN$ oder $M=\BN \setminus \{1\}$, und man sieht leicht, dass dies beides Lösungen sind.
+\end{enumerate}
+
+\bigskip
+
+\item[\textbf{5.}] Ein konvexes $n$-Eck zu \textit{zwacken} bedeutet Folgendes: Man wählt zwei benachbarte Seiten $AB$ und $BC$ aus und ersetzt diese durch den Streckenzug $AM, MN, NC$, wobei $M \in AB$ und $N \in BC$ beliebige Punkte im Innern dieser Strecken sind. Mit anderen Worten, man schneidet eine Ecke ab und erhält ein $(n\!+\!1)$-Eck.\\
+Ausgehend von einem regulären Sechseck $\CP_6$ mit Flächeninhalt 1 wird durch fortlaufendes Zwacken eine Folge $\CP_6, \CP_7, \CP_8,\ldots$ konvexer Polygone erzeugt. Zeige, dass der Flächeninhalt von $\CP_n$ für alle $n\geq 6$ grösser als $\frac{1}{2}$ ist, unabhängig davon wie gezwackt wird.\\
+
+\textbf{1. Lösung}
+
+Bei jedem Zwacken bleibt von den benachbarten Seiten ein Teilsegment positiver Länge übrig, da die gewählten Punkte $M$ und $N$ \textit{innere} Punkte der entsprechenden Seiten sind. Folglich gibt es in $\CP_n$ stets sechs Seiten, die Teilsegmente der ursprünglichen Seiten von $\CP_6$ sind. Wähle aus diesen Seiten je einen beliebigen inneren Punkt. Da $\CP_n$ konvex ist, muss die konvexe Hülle $H$ dieser sechs Punkte in $\CP_n$ enthalten sein. Nach Konstruktion ist $H$ ein 6-Eck, dessen Ecken innere Punkte der verschiedenen Seiten von $\CP_6$ sind.\\
+Wir zeigen nun, dass die Fläche von $H$ grösser als $\frac{1}{2}$ ist. Dazu verallgemeinern wir ein wenig und betrachten 6 Punkte $A_1,\ldots,A_6$, die in dieser Reihenfolge auf den verschiedenen Seiten von $\CP_6$ liegen, sowie deren konvexe Hülle $H'$. Die Fläche des (möglicherweise degenerierten) Dreiecks $A_1 A_2 A_3$ hängt bei festen Punkten $A_1$ und $A_3$ nur von der Distanz von $A_2$ zur Geraden $A_1 A_3$ ab. Daher kann man $A_2$ stets in einen der beiden Endpunkte der entsprechenden Seite von $\CP_6$ verschieben, sodass sich diese Fläche nicht vergrössert. Wiederholt man dieses Argument für die übrigen 5 Punkte, genügt es den Fall zu betrachten, wo $A_1,\ldots,A_6$ alles Eckpunkte von $\CP_6$ sind. Eine kurze Inspektion zeigt, dass $H'$ in all diesen Fällen mindestens Fläche $\frac{1}{2}$ besitzt mit Gleichheit genau dann, wenn $H$ ein Dreieck ist, also wenn $A_1=A_2, A_3=A_4, A_5=A_6$ oder $A_2=A_3, A_4=A_5, A_6=A_1$. Da die Ecken von $H$ aber innere Punkte der Seiten von $\CP_6$ sind, ist die Fläche von $H$ strikt grösser als $\frac{1}{2}$. Damit ist alles gezeigt.\\
+
+\textbf{2. Lösung}
+
+Wir geben einen anderen Beweis dafür, dass die Fläche von $H'$ mindestens die Hälfte der Fläche von $\CP_6$ ist. Dazu können wir nach einer Streckung annehmen, dass $\CP_6$ Seitenlänge 1 besitzt. Benenne die Ecken von $\CP_6$ der Reihe nach $B_1,\ldots,B_6$, sodass $A_k$ auf der Seite $B_k B_{k+1}$ liegt. Setze $x_k=|B_k A_k|$ für $k=1,\ldots,6$, dann gilt $0 \leq x_k \leq 1$. Das Gebiet $\CP_6 \setminus H'$ hat den Flächeninhalt
+\[\frac{\sqrt{3}}{4}\left((1-x_1)x_2+(1-x_2)x_3+(1-x_3)x_4+(1-x_4)x_5+(1-x_5)x_6+(1-x_6)x_1\right).\]
+Dies ist eine \textit{lineare} Funktion in jeder der 6 Variablen $x_k$, sie nimmt ihr Minimum daher in einer Ecke des Definitionsbereiches $[0,1]^6$ an. Es genügt daher den Fall zu betrachten, wo jedes $x_k$ entweder 0 oder 1 ist. Eine kurze Auflistung zeigt, dass das Minimum $3 \sqrt{3}/4$ bei $x_1=x_3=x_5=0$, $x_2=x_4=x_6=1$ oder bei $x_1=x_3=x_5=1$, $x_2=x_4=x_6=0$ angenommen wird. Da $\CP_6$ die Fläche $3\sqrt{3}/2$ hat, ist damit alles gezeigt.
+
+
+
+\end{enumerate}
+
+
+\pagebreak
+
+
+\begin{center}
+{\huge Lösungen zur SMO Finalrunde 2005} \\
+\medskip zweite Prüfung - 25. März 2005
+\end{center}
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{6.}] Seien $a,b,c$ positive reelle Zahlen mit $abc=1$. Bestimme alle möglichen Werte, die der
+Ausdruck
+\[\frac{1+a}{1+a+ab}+\frac{1+b}{1+b+bc}+\frac{1+c}{1+c+ca}\]
+annehmen kann.\\
+
+\textbf{Lösung}
+
+Sei $A$ der gegebene Ausdruck. Es gilt wegen $abc=1$
+\begin{eqnarray*}
+A &=& \frac{1+a}{1+a+ab}+\frac{a(1+b)}{a(1+b+bc)}+\frac{ab(1+c)}{ab(1+c+ca)}\\
+&=& \frac{1+a}{1+a+ab}+\frac{a+ab}{1+a+ab}+\frac{ab+1}{1+a+ab}\\
+&=& \frac{2(1+a+ab)}{1+a+ab} =2.
+\end{eqnarray*}
+Der Ausdruck ist also immer gleich 2, unabhängig von $a,b,c$.\\
+
+\bigskip
+
+\item[\textbf{7.}] Sei $n \geq 1$ eine natürliche Zahl. Bestimme alle positiven ganzzahligen Lösungen der
+Gleichung
+\[7 \cdot 4^n=a^2+b^2+c^2+d^2.\]
+
+\textbf{Lösung}
+
+Sei zuerst $n \geq 2$. Dann ist die linke Seite durch 8 teilbar, also auch die rechte. Insbesondere sind
+$a,b,c,d$ alle gerade, alle ungerade oder genau zwei davon gerade und zwei ungerade. Betrachte die Gleichung
+modulo 8. Die einzigen quadratischen Reste (mod 8) sind $0,1,4$. Wären $a,b,c,d$ alle ungerade, dann gilt
+$a^2+b^2+c^2+d^2 \equiv 4 \not \equiv 0$. Wären genau zwei gerade und zwei ungerade, folgt $a^2+b^2+c^2+d^2
+\equiv 2 \not \equiv 0$. Folglich sind $a,b,c,d$ gerade und wir können schreiben $a=2a_1$, $b=2b_1$, $c=2c_1$
+und $d=2d_1$. Dabei ist $(a_1,b_1,c_1,d_1)$ eine positive ganzzahlige Lösung der ursprünglichen Gleichung, wobei
+$n$ durch $n-1$ ersetzt ist. Induktiv folgt daraus, dass $a=2^{n-1}x, b=2^{n-1}y, c=2^{n-1}z, d=2^{n-1}w$ gilt,
+mit $28=x^2+y^2+z^2+w^2$. Man rechnet leicht nach, dass $(5,1,1,1)$, $(4,2,2,2)$ und $(3,3,3,1)$ bis auf Permutation die
+einzigen Lösungen dieser Gleichung sind. Folglich sind die gesuchten Lösungen die Permutationen von
+\[(5\cdot 2^{n-1},2^{n-1},2^{n-1},2^{n-1}), \quad (2^{n+1},2^n,2^n,2^n) \quad \mbox{und} \quad
+(3\cdot 2^{n-1},3\cdot 2^{n-1},3\cdot 2^{n-1},2^{n-1}).\]
+
+\bigskip
+
+\item[\textbf{8.}] Sei $ABC$ ein spitzwinkliges Dreieck. $M$ und $N$ seien zwei beliebige Punkte auf den
+Seiten $AB$ respektive $AC$. Die Kreise mit den Durchmessern $BN$ und $CM$ schneiden sich in den Punkten $P$ und $Q$.
+Zeige, dass die Punkte $P$, $Q$ und der Höhenschnittpunkt des Dreiecks $ABC$ auf einer Geraden liegen.\\
+
+\textbf{Lösung}
+
+Bezeichne die beiden Kreise mit $\Gamma_B$ und $\Gamma_C$. Die Punkte $P$ und $Q$ liegen auf der Potenzlinie von
+$\Gamma_B$ und $\Gamma_C$, es genügt daher zu zeigen, dass auch der Höhenschnittpunkt $H$ dieselbe Potenz bezüglich beider Kreise
+besitzt. Bezeichne die Fusspunkte der Höhen von $B$ und $C$ mit $H_B$ und $H_C$. Entweder ist $H_C=M$ oder es gilt $\wi CH_CM = 90^\circ$
+und $H_C$ liegt auf dem Thaleskreis über der Strecke $CM$, also auf $\Gamma_C$. Analog liegt $H_B$ auf $\Gamma_B$.
+Es genügt daher zu zeigen, dass $HB \cdot HH_B = HC \cdot HH_C$ gilt. Dies folgt unmittelbar aus der
+Ähnlichkeit der beiden Dreiecke $HBH_C$ und $HCH_B$. Auch ist dies die Potenz von $H$ an den Thaleskreis über $BC$. \\
+
+\bigskip
+
+\item[\textbf{9.}] Finde alle Funktionen $f:\BR^+ \rightarrow \BR^+$, sodass für alle $x,y>0$ gilt
+\[f(yf(x))(x+y)=x^2(f(x)+f(y)).\]
+
+\textbf{1. Lösung}
+
+Setze $x=y$, dann folgt $f(xf(x))\cdot 2x = x^2 \cdot 2f(x)$. Wegen $x,f(x)>0$ ist dies äquivalent zu
+$f(xf(x))=xf(x)$ für alle $x>0$. Das bedeutet aber, dass $xf(x)$ ein \textit{Fixpunkt} ist von $f$ für alle
+$x>0$. Wir zeigen nun, dass $f$ nur einen Fixpunkt besitzt und nehmen dazu an, $a$ und $b$ seien zwei Fixpunkte.
+Setze $x=a$ und $y=b$, dann folgt wegen $f(a)=a$ und $f(b)=b$ die Gleichung
+\begin{equation}
+f(ab)(a+b)=a^2(a+b) \quad \Longleftrightarrow \quad f(ab)= a^2.
+\end{equation}
+Setzt man $x=b$ und $y=a$, dann folgt analog
+\begin{equation}
+f(ab)(a+b)=b^2(a+b) \quad \Longleftrightarrow \quad f(ab)= b^2.
+\end{equation}
+Ein Vergleich von (1) und (2) zeigt, dass $a=b$ ist, folglich besitzt $f$ nur einen Fixpunkt $a$. Insbesondere
+ist $xf(x)=a$ für alle $x>0$. Die einzigen möglichen Lösungen sind von der Form $f(x)=a/x$. Einsetzen liefert
+nun $a=1$. Die einzige Lösung der Gleichung lautet
+\[f(x) = \frac{1}{x}.\]
+
+\textbf{2. Lösung}
+
+Wir setzen $c=f(1)$. Einsetzen von $x=y=1$ ergibt $f(c)=c$. Setze nun $x=c$ und $y=1$. Mit $f(c)=c$ folgt nun
+$f(c)(c+1)=c^2(c+c)$ also
+\[c(c+1)=2c^3 \quad \Longleftrightarrow \quad c(c-1)(c+{\textstyle \frac{1}{2}})=0.\]
+Wegen $c>0$ muss $f(1)=c=1$ gelten. Setze nun $x=1$, dann folgt
+\[f(y)(1+y)=1+f(y) \quad \Longleftrightarrow \quad f(y)=\frac{1}{y},\quad \forall y >0.\]
+Einsetzen zeigt, dass dies wirklich eine Lösung ist.\\
+
+\bigskip
+
+\item[\textbf{10.}] An einem Fussballturnier nehmen $n>10$ Mannschaften teil. Dabei spielt jede Mannschaft
+genau einmal gegen jede andere. Ein Sieg gibt zwei Punkte, ein Unentschieden einen Punkt, und eine Niederlage
+keinen Punkt. Nach dem Turnier stellt sich heraus, dass jede Mannschaft genau die Hälfte ihrer Punkte in den
+Spielen gegen die 10 schlechtesten Mannschaften gewonnen hat (insbesondere hat jede dieser 10 Mannschaften die
+Hälfte ihrer Punke gegen die 9 übrigen gemacht). Bestimme alle möglichen Werte von $n$, und gib
+für diese Werte ein Beispiel eines solchen Turniers an.\\
+
+\textbf{1. Lösung}
+
+Wir nennen die 10 schlechtesten Mannschaften die \textit{Verlierer}, die $n-10$ besten Mannschaften die
+\textit{Gewinner}. Wir verwenden wiederholt folgende Tatsache: Spielen $k$ Manschaften gegeneinander, dann ist
+die Gesamtzahl gewonnener Punkte genau $k(k-1)$. Wir zählen die Gesamtzahl gewonnener Punkte auf zwei Arten.
+Einerseits sind dies genau $n(n-1)$. Andererseits erhalten die 10 Verlierer in den Spielen unter sich genau
+$10\cdot 9=90$ Punkte. Nach Voraussetzung ist dies genau die Hälfte der Gesamtpunktzahl, welche diese 10
+Mannschaften erreicht haben. Folglich ist die Gesamtpunktzahl der Verlierer $180$. Die $n-10$ Gewinner erreichten
+in den Spielen unter sich insgesamt $(n-10)(n-11)$ Punkte. Wieder ist das die Hälfte der Gesamtpunktzahl,
+letztere ist daher gleich $2(n-10)(n-11)$. Ein Vergleich liefert die Gleichung
+\[n(n-1)=180+2(n-10)(n-11).\]
+Diese ist äquivalent zu $n^2-41n+400=0$ und hat die Lösungen $n=16$ und $n=25$.
+
+Nach obigen Rechnungen folgt ausserdem, dass die Durchschnittspunktzahl der $n-10$ Gewinner gleich $2(n-11)$ ist,
+die Durchschnittspunktzahl der 10 Verlierer gleich $18$. Natürlich muss nun $2(n-10) \geq 18$ gelten, also $n \geq
+20$. Folglich ist $n=16$ nicht möglich.
+
+Schliesslich zeigen wir, dass so ein Tournier für $n=25$ existiert. Die 10 Verlierer spielen unter sich stets
+unentschieden, ebenso wie die $n-10$ Gewinner unter sich. Folgendes Schema zeigt die Spiele der 15 Gewinner
+$G_i$ gegen die 10 Verlierer $V_j$. Dabei bedeutet 2 ein Gewinn von $G_i$, 0 ein Gewinn von $V_j$ und 1 ein
+Unentschieden.
+\begin{center}
+\begin{tabular}{c|ccccccccccccccc} & $G_1$ & $G_2$ & $G_3$ & $G_4$ & $G_5$ & $G_6$ & $G_7$ & $G_8$ & $G_9$ &
+$G_{10}$ & $G_{11}$ & $G_{12}$ & $G_{13}$ & $G_{14}$ & $G_{15}$ \\ \hline
+$V_1$ & 1 & 2 & 2 & 2 & 2 & 2 & 2 & 0 & 0 & 1 & 1 & 2 & 2 & 2 & 0\\
+$V_2$ & 1 & 1 & 2 & 2 & 2 & 2 & 2 & 2 & 0 & 0 & 1 & 2 & 2 & 2 & 0\\
+$V_3$ & 0 & 1 & 1 & 2 & 2 & 2 & 2 & 2 & 2 & 0 & 0 & 1 & 2 & 2 & 2\\
+$V_4$ & 0 & 0 & 1 & 1 & 2 & 2 & 2 & 2 & 2 & 2 & 0 & 1 & 2 & 2 & 2\\
+$V_5$ & 2 & 0 & 0 & 1 & 1 & 2 & 2 & 2 & 2 & 2 & 2 & 0 & 1 & 2 & 2\\
+$V_6$ & 2 & 2 & 0 & 0 & 1 & 1 & 2 & 2 & 2 & 2 & 2 & 0 & 1 & 2 & 2\\
+$V_7$ & 2 & 2 & 2 & 0 & 0 & 1 & 1 & 2 & 2 & 2 & 2 & 2 & 0 & 1 & 2\\
+$V_8$ & 2 & 2 & 2 & 2 & 0 & 0 & 1 & 1 & 2 & 2 & 2 & 2 & 0 & 1 & 2\\
+$V_9$ & 2 & 2 & 2 & 2 & 2 & 0 & 0 & 1 & 1 & 2 & 2 & 2 & 2 & 0 & 1\\
+$V_{10}$ & 2 & 2 & 2 & 2 & 2 & 2 & 0 & 0 & 1 & 1 & 2 & 2 & 2 & 0 & 1\\
+\end{tabular}
+\end{center}
+Insgesamt ist die Endpunktzahl von jedem Gewinner gleich 28, wovon genau 14 Punkte aus Spielen gegen die
+Verlierer stammen. Jeder Verlierer hat eine Endpunktzahl von 18, wovon wieder die Hälfte aus Spielen gegen die
+anderen Verlierer stammt. Damit ist alles gezeigt.\\
+
+\textbf{2. Lösung}
+
+Wir geben ein weiteres Beispiel für ein solches Turnier. Wiederum spielen die Verlierer und die Gewinner untereinander jeweils unentschieden. Nun nimmt man an, dass nie ein Gewinner gegen einen Verlierer verliert. Ein Gewinner erzielt gegen die anderen Gewinner insgesamt 14 Punkte, also muss er gegen die Verlierer auch 14 Punkte erzielen. Dafür muss er viermal gewinnen und sechsmal unentschieden spielen. Analog spielt jeder Verlierer neunmal Unentschieden. Wir können nun die $10 \times 15$-Tabelle von oben in $2\times 3$-Kästchen unterteilen und erhalten mit den selben Notationen folgende Tabelle:
+\begin{center}
+\begin{tabular}{c|ccccc}
+& $G_1, G_2, G_3$ & $G_4, G_5, G_6$ & $G_7, G_8, G_9$ &
+$G_{10}, G_{11}, G_{12}$ & $G_{13}, G_{14}, G_{15}$ \\ \hline
+$V_1, V_2$ & 1 & 1 & 1 & 2 & 2\\
+$V_3, V_4$ & 2 & 1 & 1 & 1 & 2\\
+$V_5, V_6$ & 2 & 2 & 1 & 1 & 1\\
+$V_7, V_8$ & 1 & 2 & 2 & 1 & 1\\
+$V_9, V_{10}$ & 1 & 1 & 2 & 2 & 1\\
+\end{tabular}
+\end{center}
+
+\end{enumerate}
+\end{document}

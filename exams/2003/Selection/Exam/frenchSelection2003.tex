@@ -1,0 +1,166 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+\catcode`\é = \active
+\catcode`\è = \active
+\catcode`\à = \active
+\catcode`\ù = \active
+\catcode`\ô = \active
+\catcode`\ç = \active
+
+\defç{\c{c}}
+\defô{\^{o}}
+\defù{\`{u}}
+\defé{\'{e}}
+\defè{\`{e}}
+\defà{\`{a}}
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+\renewcommand{\phi}{\varphi}
+\newcommand{\eps}{\varepsilon}
+
+\newcommand{\pfeil}{\quad \Longrightarrow \quad}
+
+\newcommand{\wi}{\mathop{\hspace{1pt}<\hspace{-6pt})\hspace{2pt}}\nolimits}
+
+
+\newcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\nequiv}{\not \equiv}
+\newcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\Mod}[1]{(\mod\;#1)}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\newcommand{\sgn}{\mathop{\rm sign}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+
+\begin{document}
+
+\begin{center}
+{\huge OMI Séléction Suisse} \\
+\medskip premier examen - 9 mai 2003
+\end{center}
+\vspace{8mm}
+Temps: 4 heures\\
+Chaque problème vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{1.}] Les nombres réels $x,y,a$ satisfont les équations suivantes:
+\begin{eqnarray*}
+x+y &=& a\\
+x^3+y^3 &=& a\\
+x^5+y^5 &=& a.
+\end{eqnarray*}
+Trouver toutes les valeurs possibles de $a$.
+
+\bigskip
+
+\item[\textbf{2.}] Soit $ABC$ un triangle aigu. $E$ et $F$ soient
+les points d'intersection des hauteurs par $B$ et $C$ et leurs
+cotés opposés. $G$ soit la projection de $B$ sur la droite $EF$ et
+$H$ la projection de $C$ sur $EF$. Enoncer que
+\[|HE|=|FG|.\]
+
+\bigskip
+
+\item[\textbf{3.}] Trouver le nombre réel le plus grand $C_{1}$ et le nombre réel le plus petit
+$C_{2}$, tels que tous les nombres réels $a,b,c,d,e$ satisfont
+\[C_{1}<\frac{a}{a+b}+\frac{b}{b+c}+\frac{c}{c+d}+\frac{d}{d+e}+\frac{e}{e+a}<C_{2}.\]
+
+\bigskip
+
+\item[\textbf{4.}] Trouver le nombre naturel le plus grand $n$,
+qui divise $a^{25}-a$ pour tout $a$ entier.
+
+\bigskip
+
+\item[\textbf{5.}] Sur un camps de $5 \times 9$ carrés se trouvent $n$ pièces, mais au maximum
+une par carré pendant tout le jeu. Un tour de jeu consiste en
+déplacer chaque pièce dans un des carrés touchants en haut, en
+bas, à gauche ou à droite. Tous les pièces doivent bouger
+simultanément. Une pièce ayant bougé dans une direction
+horizontale au tour précedent doit bouger dans une direction
+verticale et vice versa. Détérminer la valeur maximale de $n$, tel
+qu'il existe une position de début des $n$ pièces et une suite de
+tour de jeu, tel que le jeu puisse être continué jusqu'à la fin du
+monde.
+
+
+\end{enumerate}
+
+
+\pagebreak
+
+\begin{center}
+{\huge OMI Séléction Suisse} \\
+\medskip deuxième examen - 24 mai 2003
+\end{center}
+\vspace{8mm}
+Temps: 4 heures\\
+Chaque problème vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{6.}] Soient les nombres r\'{e}els positifs $a,b,c$, tels que $a+b+c=2$. Montrer l'inégalité suivante, et déterminer tous les cas où il y a l'égalité.
+\[\frac{1}{1+ab}+\frac{1}{1+bc}+\frac{1}{1+ca}\geq \frac{27}{13}\]
+
+\bigskip
+
+\item[\textbf{7.}] Trouver tous les polynômes
+$Q(x)=ax^2+bx+c$ avec coefficients entiers, tels qu'il existe trois nombres premiers différents
+ $p_{1},p_{2},p_{3}$ avec la propriété
+\[|Q(p_{1})|=|Q(p_{2})|=|Q(p_{3})|=11.\]
+
+\bigskip
+
+\item[\textbf{8.}] Soient $A_{1}A_{2}A_{3}$ un triangle et $\omega_1$ un cercle, qui traverse
+ $A_1$ et $A_2$.
+Supposons qu'il existe les cercles
+ $\omega_2, \ldots, \omega_7$ avec les propriétés suivantes:
+\begin{enumerate}
+\item $\omega_k$ traverse les points $A_k$ et $A_{k+1}$ pour $k=2,3, \ldots, 7$, \hspace{8mm}($A_i=A_{i+3}$)
+\item $\omega_k$ et $\omega_{k+1}$ se touchent par l'extérieur pour $k=1,2, \ldots, 6$.
+\end{enumerate}
+Montrer: $\omega_1=\omega_7$.
+
+\bigskip
+
+\item[\textbf{9.}] Soient donnés les nombres entiers $0<a_{1}<a_{2}< \ldots <a_{101}<5050$, montrer que l'on peut toujours en choisir quatre
+ $a_{k},a_{l},a_{m},a_{n}$ différents, et avec la propriété
+\[5050 | (a_{k}+a_{l}-a_{m}-a_{n}).\]
+
+\bigskip
+
+\item[\textbf{10.}] Trouver toutes les fonctions strictement monotones $f: \mathbb{N}\rightarrow \mathbb{N}$, telles que pour tout
+$n \in \mathbb{N}$ on a
+\[f(f(n))=3n.\]
+
+\end{enumerate}
+\end{document}

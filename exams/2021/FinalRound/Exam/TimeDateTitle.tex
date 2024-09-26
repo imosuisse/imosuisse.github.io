@@ -1,0 +1,32 @@
+\examtime{%
+    \de{4 Stunden}%
+    \fr{4 heures}%
+    \ita{4 ore}%
+    \en{4 hours}%
+}
+\examdate{%
+    \IfStrEq*{\examday}{1}{%
+        \de{19. Februar 2021}%
+        \fr{19 février 2021}%
+        \ita{19 febbraio 2021}%
+        \en{19 February, 2021}%
+    }{}%
+   \IfStrEq*{\examday}{2}{%
+        \de{20. Februar 2021}%
+        \fr{20 février 2021}%
+        \ita{20 febbraio 2021}%
+        \en{20 February, 2021}%
+    }{}
+}
+\title{%
+    \de{Finalrunde 2021}%
+    \fr{Tour final 2021}%
+    \ita{Turno ?? 2021}%
+    \en{Final round 2021}%
+}
+\examplace{%
+    \de{\examday. Prüfung}%
+    \fr{\IfStrEq*{\examday}{1}{Premier}{Second} examen}%
+    \ita{???}%
+    \en{\IfStrEq*{\examday}{1}{First}{Second} exam}%
+}

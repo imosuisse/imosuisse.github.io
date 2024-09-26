@@ -1,0 +1,81 @@
+\en{Prove that there are infinitely many positive integers $n$ such that \[ n^2+1 \div n! \]
+holds.
+\bigskip
+
+\textbf{Solution 1 (Raphi):}
+So we want all the factors of $n^2+1$ to be less than $n$. The best way to ensure that this is true, would be by somehow factorising $n^2+1$. Aha, looks like a job for the factorising master Sophie-Germain.
+
+Choose $n=2k^2$. We then have 
+$$n^2+1 = 4k^4 + 4k^2 + 1 - 4k^2 = (2k^2+1)^2-(2k)^2 = (2k^2+2k+1)(2k^2-2k+1)$$
+We further get that 
+\begin{align*}
+\gcd( 2k^2+2k+1, 2k^2-2k+1) =\gcd (4k, 2k^2-2k+1)
+= \gcd(k, 2k^2-2k+1) = \gcd(k,1) = 1
+\end{align*}
+So it suffices to prove that both factors them self divide $n!$, as $a\div x, b\div x, (a,b)=1 \Rightarrow ab\div x$.
+
+As $2k^2-2k+1 < 2k^2 = n$, it surely divides $n!$. Now lastly we want $2k^2+2k+1$ to divide $n!$. 
+\begin{lem} 
+If $2k^2+2k+1$ isn't a prime then $2k^2+2k+1 \div n!$.
+\end{lem}
+\begin{proof}
+Assume $2k^2+2k+1 = pq$, with $p\le q$. It's quite easy to see that $p,q<n$.\\
+If $p<q$, then we have
+$$2k^2+2k+1 = pq  \div 1\cdots (p-1)\cdot p \cdots (q-1)\cdot q \cdots n = n!$$
+Else if $p=q$, then $p,q<\frac{n}{2}$
+$$2k^2+2k+1 = pq  \div p\cdot 2p \div n!$$
+\end{proof}
+We now note that if $k \equiv 1\pmod 5$, then $2k^2 + 2k+ 1 \equiv 0 \pmod 5$. So choosing $k = 5r+1$, for $r \in \N$ gives $5 \div 2k^2+2k+1$, which makes it a non-prime. We done. Hooray.
+
+\textbf{Solution 2 (Yanta'ish, Ema, Elia):}
+Let's pick two distinct primes $p>q$, with  $p,q \equiv 1 \pmod 4$. There now exist natural numbers $k,l$, with $k^2 \equiv -1 \pmod p$ and $l^2 \equiv -1 \pmod q$. By CRT we can find an $n^2 \equiv -1 \pmod{pq}$, where $0<n< pq$. The edge cases are exlcuded, as obviously $0^2 \not\equiv -1$. As $n^2 \equiv (pq-n)^2$, we can choose $n = \max(n,pq-n)$,w hilst still having the property $n^2 \equiv -1 \pmod pq$ and $0<n<pq$. From this we gained the further inequality $n \ge \frac{pq}{2}$. Using $n <pq$, we get $\frac{n^2+1}{pq} < n$, which gives us $\frac{n^2+1}{pq} \div n!$. Now to prove the wanted $n^2+1 \div n!$, it suffices to prove $\frac{n^2+1}{pq} \div \frac{n!}{pq}$.\\
+We have $n \ge \frac{pq}{2} > 2p > 2q,p > q$, where $p,q$ are big enough. So we have $$\frac{n^2+1}{pq} \div \frac{\frac{n^2+1}{pq} \cdot 2p \cdot 2q}{pq} \div \frac{n!}{pq}$$
+Summing up we have now constructed a number $n$, fulfilling the condition in the problem statement. Now to construct another $n'$, we just pick the primes $p,q$ bigger than any other $n$ constructed. As $n' > p>q$ by the above inequality, the new $n'$ will be different from all the other n constructed so far.
+
+\newpage
+
+\textbf{Marking scheme (Solution 1)}
+
+\begin{enumerate}
+    \item 1P: The idea of applying Sophie Germain
+    \item 2P: Actually using Sophie Germain
+    \item 1P: Showing $\gcd(2k^2+2k+1, 2k^2-2k+1) = 1$
+    \item 1P: Producing infinitely many $k$ such that $2k^2+2k+1$ is not prime
+    \item 2P: Proving that if $2k^2+2k+1$ is not prime, then $n^2+1\div n!$
+\end{enumerate}
+
+A minor mistake, like not mentioning that $2k^2-2k+1<n$, is penalised by a deduction of one point on a complete solution.
+
+\textbf{Marking scheme (Solution 2)}
+\begin{enumerate}
+    \item 1P: Constructing a number $n$ such that $n^2+1$ has at least two different prime factors
+    \item 1P: Show that we may choose $p,q < n$
+    \item 1P: Find a useful upper bound on $n$
+    \item 1P: Show that we may choose $\frac{n^2+1}{pq} < n$
+    \item 2P: Deal with the cases $\frac{n^2+1}{pq} \in \{p,q\}$
+    \item 1P: Show that there are infinitely many $n$ satisfying the restrictions of the construction and conclude
+\end{enumerate}
+
+
+
+
+
+
+}
+\iffalse
+We will now count the number of permutations in two distinct cases.
+\begin{itemize}
+    \item $a_n = n$. In this case, we are faced with the same problem for $n-1$. The number of permutations here is thus equal to $f(n-1)$.
+    \item $a_n = n-1$. Suppose that $a_{n-1} \neq n$. Then there exists $j<n-1$ such that $a_j = n$. But then there must exist $k > j$ such that $a_k \leq j$. We obtain $ka_k \leq kj < nj = ja_j$ which is a contradiction. So, in this case, we must have $a_{n-1} = n$ and then the number of possible permutations is $f(n-2)$.
+    
+By a symmetrical reasoning, we can argue that it is not possible that $a_n \leq n-2$. This allows us to conclude that we have looked at every possible situation, and thus $f(n) = f(n-1) + f(n-2)$.
+
+\textbf{Marking scheme}\\
+(a) +1P: Conjecture that it is the Fibonacci sequence.\\
+(b) +3P: Prove that if $a_n = n-1$, then $a_{n-1} = n$.\\
+(c) +1P: See that $a_n$ cannot be smaller than $n-1$.\\
+(d) +1P: Establish the relation $f(n) = f(n-1) + f(n-2)$.\\
+(e) +1P: Conclude using the recurrence relation that it is the Fibonacci sequence.\\
+(f) -1P: Forget to verify the base case $f(1) = 1$ and $f(2) = 2$.\\
+\end{itemize}
+\fi

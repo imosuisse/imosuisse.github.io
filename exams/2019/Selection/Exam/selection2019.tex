@@ -1,0 +1,57 @@
+\documentclass[language={english},day={1,2,3,4},style=exam]{smo}
+
+\input{TimeDateTitle}
+
+\begin{document}
+
+\vfill{}
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+\IfStrEq*{\day}{1}{ %%%%%%%%%%%%%%%%% Day 1 %%%%%%%%%%%%%%%%%
+\item \input{Problems/s1.tex}
+\bigskip\bigskip
+\item \input{Problems/s2.tex}
+\bigskip\bigskip
+\item \input{Problems/s3.tex}
+
+}{}
+
+\IfStrEq*{\day}{2}{ %%%%%%%%%%%%%%%%% Day 2 %%%%%%%%%%%%%%%%%
+\setcounter{enumi}{3}
+
+\item \input{Problems/s4.tex}
+\bigskip\bigskip
+\item \input{Problems/s5.tex}
+\bigskip\bigskip
+\item \input{Problems/s6.tex}
+}{}
+
+\IfStrEq*{\day}{3}{ %%%%%%%%%%%%%%%%% Day 3 %%%%%%%%%%%%%%%%%
+\setcounter{enumi}{6}
+
+\item \input{Problems/s7.tex}
+\bigskip\bigskip
+\item \input{Problems/s8.tex}
+\bigskip\bigskip
+\item \input{Problems/s9.tex}
+}{}
+
+\IfStrEq*{\day}{4}{ %%%%%%%%%%%%%%%%% Day 4 %%%%%%%%%%%%%%%%%
+\setcounter{enumi}{9}
+
+\item \input{Problems/s10.tex}
+\bigskip\bigskip
+\item \input{Problems/s11.tex}
+\bigskip\bigskip
+\item \input{Problems/s12.tex}
+}{}
+
+\end{enumerate}
+
+\bigskip
+
+\vfill\vfill\vfill
+
+{\begin{center}{\de{Viel Glück!}\fr{Bonne chance!}\ita{Buona fortuna!}\en{Good Luck!}}\end{center}}
+
+\end{document}

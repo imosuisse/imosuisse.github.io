@@ -1,0 +1,757 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\oddsidemargin=0cm \headheight=-2.1cm
+\textwidth=16.4cm \textheight=25.7cm
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+
+
+
+
+
+% Schriftabkürzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\gaussk}[1]{\lfloor #1 \rfloor}
+\newcommand{\frack}[1]{\{ #1 \}}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+\newcommand{\dreieck}{\bigtriangleup}
+
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge IMO Selektion 2006 Lösungen} \\
+\end{center}
+
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{1.}] Im Dreieck $ABC$ sei $D$ der Mittelpunkt der Seite $BC$ und $E$ die Projektion von $C$ auf $AD$.
+Angenommen es gelte $\angle ACE = \angle ABC$. Zeige, dass das Dreieck $ABC$ gleichschenklig oder rechtwinklig
+ist.\\
+
+\textbf{1. Lösung}
+
+Wir zeigen, dass entweder $AB = AC$ oder $\angle CAB = 90^\circ$ gilt. Es sei $F$ der Schnittpunkt von $AD$ mit der Rechtwinkligen zu $AC$ durch $C$. Nun gilt nach Voraussetzung
+$$ \angle AFC = 90^\circ - \angle FAC = \angle ACE = \angle ABC. $$
+Somit liegen die Punkte $A,B,F,C$ auf einem Kreis, dem Thaleskreis über $AF$. Damit der Durchmesser $AF$ die Sehne $BC$ halbiert, muss diese entweder rechtwinklig auf $AF$ stehen oder ebenfalls durch den Mittelpunkt des Thaleskreises gehen. Im ersten Fall fallen die Mittelsenkrechte von $BC$ und die Höhe durch $A$ zusammen und somit gilt $AB = AC$. Im zweiten Fall ist $BC$ ein Durchmesser des Kreises und somit $\angle BAC = 90^\circ$. \\
+
+\textbf{2. Lösung}
+
+Sei $S$ die Spiegelung von $C$ an $E$. Nach Voraussetzung gilt
+$$ \angle ASC = \angle ACE = \angle ABC. $$
+Somit liegen die Punkte $A,S,B,C$ auf einem Kreis, dessen Mittelpunkt $O$ auf der Gerade $AD$ liegt ($AD$ ist die Mittelsenkrechte von $CS$). Den Beweis kann man nun mit demselben Argument wie in der ersten Lösung beenden. \\
+
+\textbf{3. Lösung}
+
+Wie üblich seien $\angle ABC = \beta$ und $\angle BCA = \gamma$. Wir betrachten zuerst den Fall $\beta \geq
+\gamma$. Die Spiegelung von $A$ an der Mittelsenkrechten von $BC$ sei $A'$ und $CA$ schneide $BA'$ in $S$. Aus
+der Voraussetzung folgt sofort $\angle ACA' = \angle DCE = \beta - \gamma$. Verschwindet dieser Winkel, gilt
+$\beta = \gamma$ und $\triangle ABC$ ist somit gleichschenklig. Andernfalls ist $CDE$ ein rechtwinkliges Dreieck
+und wir wollen zeigen, dass es ähnlich zu $\triangle CSA'$ ist. Daraus folgt der rechte Winkel bei $A'$ und
+somit auch bei $A$. Wegen $\angle SCA' = \angle DCE$ genügt es die folgende Gleichung beweisen.
+$$ \frac{CD}{CE} = \frac{CS}{CA'} \quad \Leftrightarrow \quad \frac{CD}{CS} = \frac{CE}{CA'} $$
+Sei $P$ die Projektion von $B$ auf $AD$. Weil $D$ der Seitenmittelpunkt ist, gilt $BP = CE$ und $\angle PBD =
+\angle ECD = \beta - \gamma$. Wegen Symmetrie gilt ausserdem $CA' = BA$. Es genügt somit zu zeigen
+$$ \frac{CD}{CS} = \frac{BP}{BA}. $$
+Dies folgt tatsächlich aus der Ähnlichkeit der beiden rechtwinkligen Dreiecke $CDS$ und $BPA$
+($\angle ABP = \angle DCS = \gamma$). \\
+Der Beweis für den Fall $\beta < \gamma$ funktioniert völlig analog.\\
+
+\textbf{4. Lösung}
+
+Sei $\beta = \angle ACE = \angle ABC$ und sei $\phi = \angle CAD$. Nach Definition von $E$ gilt
+$\phi+\beta=90^\circ$. Sei $F$ die Projektion von $C$ auf $AB$, wegen $\beta<90^\circ$ liegen $A$ und $F$ auf
+derselben Seite von $B$. Wir betrachten den Fall, dass $F$ auf der Strecke $AB$ liegt (der Fall, wo $F$ auf der anderen Seite von $A$ liegt, geht  völlig analog). Wegen $\angle BFC = 90^\circ$ liegt $F$ auf dem Thaleskreis über der Strecke $BC$, und
+dieser hat den Mittelpunkt $D$. Also gilt $DF=DB$ und somit $\angle DFB=\beta$. Andererseits gilt $\angle CEA =
+\angle CFA = 90^\circ$, also ist $ACEF$ ein Sehnenviereck und daher $\angle CFE = \phi$. Insgesamt folgt
+\[90^\circ = \angle CFE + \angle EFD + \angle DFB = \phi + \beta + \angle EFD = 90^\circ+ \angle EFD,\]
+also $\angle EFD=0^\circ$ und $D,E,F$ sind kollinear. Dies ist nur dann der Fall, wenn $A=F$ oder $D=E$ gilt. Im
+ersten Fall ist $\alpha=90^\circ$ nach Definition von $F$, im zweiten Fall steht $AD$ senkrecht auf $BC$ und
+somit gilt $AB=AC$.\\
+
+\bigskip
+
+\item[\textbf{2.}] Sei $n\geq 5$ eine ganze Zahl. Bestimme die grösste ganze Zahl $k$, sodass ein Polygon mit $n$
+Ecken und genau $k$ inneren $90^\circ$-Winkeln existiert? (Das Polygon muss nicht konvex sein, der Rand darf
+sich aber nicht selbst überschneiden.)\\
+
+\textbf{Lösung}
+
+Wir werden zeigen, dass $k=3$ gilt für $n=5$ und $k=\lfloor 2n/3\rfloor+1$ für $n \geq 6$.\\
+
+Ein $n$-Eck hat bekanntlich die Innenwinkelsumme $(n-2)\cdot 180^\circ$. Nehmean,  ein $n$-Eck besitzt genau $k$
+innere rechte Winkel. Da alle anderen $n-k$ Innenwinkel kleiner als $360^\circ$ sind, gilt somit
+\[k\cdot 90^\circ+(n-k)\cdot 360^\circ > (n-2)\cdot 180^\circ,\]
+also $k<(2n+4)/3$. Da $n$ und $k$ ganz sind, gilt daher $k\leq \lfloor 2n/3\rfloor+1$.\\
+
+Für $n=5$ ist $\lfloor 2n/3\rfloor+1=4$. Besitzt ein Fünfeck aber vier rechte Innenwinkel, dann muss der fünfte
+Innenwinkel gleich $180^\circ$ sein, was nicht erlaubt ist. Somit gilt $k \leq 3$ und man überlegt sich leicht,
+dass dies auch erreicht werden kann.\\
+
+Wir konstruieren nun ein $n$-Eck mit genau $\lfloor 2n/3\rfloor+1$ inneren rechten Winkeln für alle $n\geq 6$.
+Die folgende Abbildung zeigt je ein Beispiel für die Fälle $n=6,7,8$.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=10cm]{bild1.pdf}
+\end{figure}
+
+Für $n\geq 9$ konstruieren wir induktiv Beispiele. Da in unserer Konstruktion alle inneren, nicht rechten Winkel
+grösser als $180^\circ$ sind, können wir ein 'Dreieck ohne Eckpunkt' um einen solchen Eckpunkt herum
+ausschneiden. Dieser Schritt produziert jedesmal drei neue Eckpunkte und zwei neue rechte Winkel (siehe
+Abbildung unten). Ausserdem sind weiterhin alle Inneren Winkel, die nicht rechte sind, grösser als $180^\circ$
+Damit ist alles gezeigt.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=10cm]{bild2.pdf}
+\end{figure}
+
+\bigskip
+
+\item[\textbf{3.}] Sei $n$ eine natürliche Zahl. Jede der Zahlen $\{1,2,\ldots,n\}$ ist weiss oder schwarz gefärbt.
+Man kann nun wiederholt eine Zahl auswählen und diese, sowie alle zu ihr nicht teilerfremden Zahlen umfärben.
+Anfangs sind alle Zahlen weiss. Für welche $n$ kann man erreichen, dass irgendwann alle Zahlen schwarz sind?\\
+
+\textbf{1. Lösung}
+
+Dies ist immer möglich. Wir verwenden Induktion nach $n$, der Fall $n=1$ ist klar. Nehme an, dies sei richtig
+für $n$ und betrachte die Zahlen $1,\ldots,n+1$. Durch umfärben von gewissen Zahlen können wir annehmen, dass
+die Zahlen $1,\ldots,n$ alle schwarz sind. Wir unterscheiden nun zwei Fälle für $n+1$. Beachte dabei, dass zwei
+Zahlen, welche dieselben Primteiler haben, stets gleich gefärbt sind, unabhängig von den Exponenten in der
+Primfaktorzerlegung.
+\begin{enumerate}
+\item[(i)] Nehme an, $n+1$ sei durch ein Quadrat $>1$ teilbar, also $n+1=m^2r$ mit $m>1$. Da $n+1$ dieselbe
+Farbe hat wie die Zahl $mr$ und da letztere kleiner als $n$ ist, muss $n+1$ bereits schwarz sein, und wir sind
+fertig.
+\item[(ii)] Nehme an, $n+1=p_1\cdots p_k$ sei ein Produkt von $k \geq 1$ verschiedenen Primzahlen. Wir behaupten
+nun, dass das Umfärben aller Teiler $a>1$ von $n+1$ den Effekt hat, dass $n+1$ seine Farbe ändert, während alle
+Zahlen $1,\ldots,n$ ihre Farbe behalten. Sollte also $n+1$ als einzige Zahl noch weiss sein, können wir das
+durch diese Umfärbung beheben und sind ebenfalls fertig.\\
+
+Zum Beweis der Behauptung betrachten wir eine beliebige natürliche Zahl $x \leq n+1$ und nehmen an, dass $x$
+durch genau $l$ der Primzahlen $p_i$ teilbar ist. Die Anzahl Teiler $a=p_{i_1}p_{i_2}\cdots p_{i_j}$ von $n+1$,
+welche zu $x$ nicht teilerfremd sind, ist gleich $\binom{k}{j}-\binom{k-l}{j}$. Damit ändert $x$ seine Farbe
+genau
+\begin{eqnarray*}
+\sum_{j=1}^k \binom{k}{j}-\binom{k-l}{j} &=& \left(\sum_{j=0}^k \binom{k}{j} -1\right) -\left(\sum_{j=0}^{k-l}
+\binom{k-l}{j} -1\right)\\
+&=& (2^k-1)-(2^{k-l}-1)=2^k-2^{k-l}
+\end{eqnarray*}
+mal. Für $x \leq n$ ist $l<k$ und $2^k-2^{k-l}$ gerade, also behält $x$ seine Farbe. Jedoch gilt $l=k$ für
+$x=n+1$ und hier ist $2^k-2^{k-l}=2^k-1$ ungerade, das heisst $n+1$ ändert seine Farbe, wie behauptet.
+\end{enumerate}
+
+\textbf{2. Lösung}
+
+Eine Menge $S$ natürlicher Zahlen heisse \textit{vollständig}, falls für jede Zahl $x \in S$ auch alle Teiler
+$y>1$ von $x$ in $S$ liegen. Wir werden allgemeiner zeigen, dass jede endliche, vollständige Menge $S$ umgefärbt
+werden kann, der Fall $S=\{1,2,\ldots,n\}$ ergibt die Lösung der Aufgabe.
+
+\begin{lem} \label{T in S}
+Sei $S$ eine endliche Menge natürlicher Zahlen. Es existiert eine Teilmenge $T \subset S$, sodass jedes Element
+von $S$ eine ungerade Anzahl Elemente von $T$ teilt.
+\end{lem}
+
+\begin{proof}[Beweis]
+Wir verwenden Induktion nach $n=|S|$, für $n=1$ kann man $T=S$ wählen. Sei also $S$ gegeben und sei $x$ die
+kleinste Zahl in $S$. Nach Induktionsvoraussetzung existiert eine Teilmenge $T' \subset S \setminus \{x\}$,
+sodass jede Zahl $y \in S\setminus \{x\}$ eine ungerade Anzahl Elemente in $T'$ teilt. Gilt dies auch für $x$,
+dann können wir $T=T'$ setzen, sonst wählen wir $T=T' \cup \{x\}$. Letzteres, da wegen der Minimalität von $x$
+kein anderes Element $y \in S$ ein Teiler von $x$ sein kann.
+\end{proof}
+
+Der entscheidende Punkt ist nun folgendes Resultat.
+
+\begin{lem}
+Sei $S$ eine endliche, vollständige Menge und sei $T \subset S$ wie in Lemma \ref{T in S}. Dann ist jedes
+Element $x>1$ aus $S$ zu einer ungeraden Anzahl Elementen von $T$ nicht teilerfremd.
+\end{lem}
+
+\begin{proof}[Beweis]
+Für $u \in S$ sei $m(u)$ die Menge der Elemente von $T$, die durch $u$ teilbar sind. Nach Konstruktion ist
+$|m(u)|$ ungerade für alle $u$. Sei $x \in S$ beliebig und grösser als $1$. Wir werden nun wiederholt verwenden,
+dass $S$ alle Teiler $\neq 1$ von $x$ enthält. Seien $p_1,\ldots,p_k$ die Primteiler von $x$ und sei $t \in T$.
+Genau dann ist $x$ nicht teilerfremd zu $t$, wenn $t$ durch einen der Primfaktoren $p_i$ teilbar ist. Die Anzahl
+Elemente von $T$, die nicht teilerfremd zu $x$ sind, ist demnach gleich $|m(p_1) \cup m(p_2) \cup \ldots \cup
+m(p_k)|$. Nach der Ein-/Ausschaltformel gilt (mod $2$)
+\begin{eqnarray*}
+|m(p_1) \cup \ldots \cup m(p_k)| &=& \sum_{j=1}^k (-1)^{j+1} \sum_{i_1< \ldots <i_j} |m(p_{i_1})
+\cap \ldots \cap m(p_{i_j})|\\
+&=& \sum_{j=1}^k (-1)^{j+1} \sum_{i_1< \ldots <i_j} |m(p_{i_1}\cdots p_{i_j})| \\
+&\equiv&  \sum_{j=1}^k (-1)^{j+1} \binom{k}{j} = 1.
+\end{eqnarray*}
+Folglich ist $x$ zu einer ungeraden Anzahl Elementen von $T$ nicht teilerfremd, wie behauptet.
+\end{proof}
+
+Sei nun $S$ vollständig. Falls $1 \in S$, können wir 1 umfärben und danach annehmen, dass $1 \not \in S$. Färbt
+man nun alle Elemente der oben konstruierten Menge $T$ um, ändert sich die Farbe aller Elemente in $S$, dies war
+zu zeigen.\\
+
+\textbf{3. Lösung}
+
+Wir werden zeigen, dass man jede vollständige Menge umfärben kann, falls die Elemente dieser Menge nur endlich
+viele verschiedene Primfaktoren haben.
+
+\begin{lem}
+Sei $P=\{p_1,p_2,\ldots,p_m\}$ eine endliche Menge verschiedener Primzahlen, und sei $S$ eine vollständige Menge
+von Zahlen, die nur Primteiler aus $P$ besitzen. Es existiert eine endliche Teilmenge $T(S) \subset S$, sodass
+das Umfärben der Zahlen in $T(S)$ die Farbe aller Elemente in $S$ umkehrt.
+\end{lem}
+
+\begin{proof}[Beweis]
+Wir verwenden Induktion nach $m$. Für $m=1$ können wir $T(S)=\{p_1\}$ respektive $=\{1,p_1\}$ wählen. Wir nehmen
+im Folgenden $m>1$ an. Wir setzen
+\begin{eqnarray*}
+U &=& \{x \in S \;|\; p_m \notdiv x\},\\
+V &=& \{x \;|\; p_m \notdiv x, \;p_m x \in S\}.
+\end{eqnarray*}
+Da $S$ vollständig ist, gilt dies auch für $U$ und $V$ und es ist offenbar $V \subset U \subset S$. Ausserdem
+gibt es nach Induktionsvoraussetzung endliche Mengen $T(U) \subset U$ und $T(V) \subset V$, sodass das Umfärben
+der Elemente in diesen Mengen die Farbe aller Zahlen in $U$ respektive $V$ ändert. Nach Konstruktion gilt auch
+$p_m V = \{p_mv \;|\; v \in V\} \subset S$. Wir färben nun alle Elemente von $T(U), T(V)$ und $p_mT(V)$ um,
+Elemente, die in mehreren dieser Mengen liegen, werden dabei auch mehrfach umgefärbt. Sei $x \in S$ beliebig,
+wir untersuchen die Farbe von $x$ nach dieser Umfärbung.
+\begin{itemize}
+\item \textit{$x$ ist kein Vielfaches von $p_m$}. Umfärben der Zahlen in $T(U)$ ändert die Farbe von $x$. Falls das
+Umfärben eines $v \in T(V)$ die Farbe von $x$ ändert, dann ändert sie das Umfärben von $p_m v$ wieder zurück.
+Folglich ändert sich insgesamt die Farbe von $x$.
+\item \textit{$x$ ist eine Potenz von $p_m$}. Umfärben der Zahlen in $T(U)$ und $T(V)$ hat keinen Einfluss
+auf $x$. Aber jede der $|T(V)|$ Zahlen in $p_mT(V)$ ändert die Farbe von $x$.
+\item \textit{$x$ ist durch $p_m$ teilbar, ist aber keine Potenz von $p_n$}. Sei $x=p_m^r y$ mit $y\neq 1$.
+Wegen $y \in V$, $y \in U$ ändert sich die Farbe von $x$ sowohl beim Umfärben der Zahlen in $T(U)$, als auch
+beim Umfärben der Zahlen in $T(V)$. Schliesslich ändert jede der $|T(V)|$ Zahlen in $p_mT(V)$ die Farbe von $x$.
+\end{itemize}
+Nach der Umfärbung haben also alle Vielfachen von $p_m$ dieselbe Farbe (nämlich dieselbe wie zu Beginn resp. die
+andere, je nachdem ob $|T(V)|$ gerade oder ungerade ist). Alle anderen Zahlen in $S$ haben ihre Farbe geändert.
+Durch eventuelles Umfärben von $p_m$ können wir somit erreichen, dass alle Zahlen in $S$ ihre Farbe ändern. Das
+bedeutet, wir können für $T(S)$ alle Zahlen wählen, die in genau einer der Mengen $T(U)$ und $T(V)$ sind, sowie
+alle Zahlen in $p_mT(V)$ ausser eventuell $p_m$. Damit ist alles gezeigt.\\
+\end{proof}
+
+\bigskip
+
+\item[\textbf{4.}] Die positiven Teiler der natürlichen Zahl $n$ seien $1=d_1<d_2< \ldots <d_k=n$. Bestimme alle
+$n$, für die gilt
+\[2n=d_5^2+d_6^2-1.\]
+
+\textbf{Lösung}
+
+Für jedes $1\leq i \leq k$ ist $n/d_i$ ebenfalls ein positiver Teiler von $n$ und ein einfaches Abzählargument
+zeigt, dass dieser gleich $d_{k+1-i}$ sein muss. Folglich gilt $n=d_id_{k+1-i}$ für alle $i$. Aus der gegebenen
+Gleichung folgen die beiden Abschätzungen
+\[2n=d_5^2+d_6^2-1<2d_6^2,\]
+\[2n=d_5^2+d_6^2-1\geq d_5^2+(d_5+1)^2-1=2d_5^2+2d_5>2d_5^2.\]
+Dies ergibt $d_5^2<n<d_6^2$, nach obiger Bemerkung muss also $n=d_5d_6$ gelten, insbesondere ist $k=10$. Setzt
+man dies in die Gleichung ein und formt um, dann folgt $1=(d_6-d_5)^2$, also $d_6=d_5+1$.
+
+Eine natürliche Zahl mit der Primfaktorzerlegung $p_1^{\alpha_1}\cdots p_r^{\alpha_r}$ besitzt genau
+$(\alpha_1+1)\cdots (\alpha_r+1)$ verschiedene positive Teiler. Da $n$ genau $10=2\cdot 5$ positive Teiler
+besitzt, muss die Primfaktorzerlegung von $n$ von der Form $n=p^9$ oder $n=p^4q$ mit verschiedenen Primzahlen
+$p,q$ sein. Wir benützen nun, dass $d_6=d_5+1$ gilt. Daraus folgt erstens, dass $d_5$ und $d_6$ teilerfremd
+sind, also ist $n$ von der Form $n=p^4q$. Zweitens ist genau einer dieser Teiler gerade, daher ist $q=2$ oder
+$p=2$. Im ersten Fall folgt wegen der Teilerfremdheit, dass $d_5=2$ oder $d_6=2$ gilt. Beides ist aber offenbar
+nicht möglich, da sicher $d_2=2$. Im zweiten Fall folgt analog $d_5=q$ oder $d_6=q$. Wegen $q \geq 3$ zeigt eine
+kurze Inspektion der kleinen Teiler, dass dann $d_6=2^4$ bzw. $d_5=2^4$ sein muss. Nur die zweite Alternative
+führt zur Primzahl $d_6=17$ und zu $n=2^4\cdot 17= 272$. Man rechnet leicht nach, dass dies in der Tat eine
+Lösung des Problems
+ist.\\
+
+\bigskip
+
+\item[\textbf{5.}] Sei $ABC$ ein Dreieck und $D$ ein Punkt in dessen Inneren. Sei $E$ ein von $D$ verschiedener Punkt auf der Geraden $AD$. Seien $\omega_1$ und $\omega_2$ die Umkreise der Dreiecke $BDE$ bzw. $CDE$. $\omega_1$ und $\omega_2$
+schneiden die Seite $BC$ in den inneren Punkten $F$ bzw. $G$. Der Schnittpunkt von $DG$ und $AB$ sei $X$ und der Schnittpunkt von
+$DF$ und $AC$ sei $Y$. Zeige, dass $XY$ parallel zu $BC$ ist.\\
+
+\textbf{1. Lösung}
+
+Die Schnittpunkte von $\omega_1$ und $\omega_2$ mit den Seiten $AB$ bzw. $AC$ seien $P$ bzw. $Q$. Weil $A$ auf der Potenzlinie der
+beiden Kreise liegt, gilt
+$$ AP \cdot AB = AE \cdot AD = AQ \cdot AC. $$
+Somit ist $BCQP$ ein Sehnenviereck und es gilt $\angle ABC = \angle AQP$. Um zu zeigen, dass $XY$ parallel zu
+$BC$ ist, genügt es also zu zeigen, dass $\angle AXY = \angle AQP$ gilt, d.h. dass die Punkte $P,Q,X,Y$ auf
+einem Kreis liegen. \\
+Weil $BFDP$ ein Sehnenviereck ist, gilt $\angle PDY = \angle PBF = \angle ABC$ und somit $\angle AQP = \angle
+PDY$. Dies bedeutet, dass $P,Q,Y,D$ auf einem Kreis liegen. Analog zeigen wir, dass $P,Q,X,D$ auf einem Kreis
+liegen. Insbesondere liegen die Punkte $P,Q,X,Y$ alle auf dem Umkreis von $\triangle PQD$. \\
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=11.1cm]{aufg05.pdf}
+\end{figure}
+
+\textbf{2. Lösung}
+
+Wir verwenden im folgenden gerichtete Streckenverhältnisse. Nach Strahlensatz genügt es zu zeigen, dass
+\[\frac{FY}{YD} = \frac{GX}{XD}.\]
+Sei $S$ der Schnittpunkt von $AD$ und $BC$. Nach Menelaos im Dreieck $FDS$ mit den kollinearen Punkten $Y,A,C$
+gilt
+\[\frac{FY}{YD} \cdot \frac{DA}{AS} \cdot \frac{SC}{CF} = -1.\]
+Analog liefert Menelaos in $\triangle GDS$ mit den Punkten $X,A,B$
+\[\frac{GX}{XD} \cdot \frac{DA}{AS} \cdot \frac{SB}{BG} = -1.\]
+Nach dem Vergleich der beiden Gleichungen bleibt zu zeigen
+\[\frac{SC}{CF} = \frac{SB}{BG} \quad \Leftrightarrow \quad 1 - \frac{CF}{SC} =
+1 - \frac{BG}{SB} \quad \Leftrightarrow \quad \frac{SF}{SC} = \frac{SG}{SB} \quad \Leftrightarrow \quad SF \cdot
+SB = SG \cdot SC\] Die letzte Gleichung stimmt, weil $S$ nach Konstruktion auf der Potenzlinie der beiden Kreise
+liegt.\\
+
+\bigskip
+
+\item[\textbf{6.}] Finde alle Funktionen $f: \BR \rightarrow \BR$, sodass für alle $x,y \in \BR$ die folgende
+Gleichung gilt
+\[f(f(x)-y^2)=f(x)^2-2f(x)y^2+f(f(y)).\]
+
+\textbf{Lösung}
+
+Offenbar ist $f=0$ eine Lösung der Gleichung. Wir nehmen im Folgenden daher an, dass $f$ nicht identisch
+verschwindet und zeigen, dass $f(z)=z^2$ gilt für alle $z \in \BR$. Dass dies wirklich eine Lösung der Gleichung
+ist, rechnet man leicht nach. Mit $x=y=0$ folgt nun $f(f(0))=f(0)^2+f(f(0))$, also $f(0)=0$. Setze $y=0$, dann
+folgt damit
+\begin{equation}
+f(f(x))=f(x)^2.
+\end{equation}
+Setzt man dies in die ursprüngliche Gleichung ein, erhält man
+\begin{equation}
+f(f(x)-y^2)=f(x)^2-2f(x)y^2+f(y)^2
+\end{equation}
+Ersetzt man hier $y$ durch $f(y)$ und verwendet wieder (1), dann folgt
+\[f(f(x)-f(y)^2) = (f(x)-f(y)^2)^2.\]
+Mit anderen Worten, es gilt
+\begin{eqnarray}
+f(z)=z^2 && \mbox{für alle $z \in S=\{f(u)-f(v)^2 \; |\; u,v \in \BR\}$.}
+\end{eqnarray}
+Wir zeigen zuerst, dass jede nichtpositive reelle Zahl in $S$ liegt. Dazu wählen eine reelle Zahl $a$ mit $f(a)
+\neq 0$. Indem wir $a$ gegebenenfalls durch $f(a)$ ersetzen, können wir wegen (1) sogar $f(a)>0$ annehmen. Aus
+(2) folgt mit $x=a$ nun
+\[f(f(a)-y^2)-f(y)^2 = f(a)(f(a)-2y^2).\]
+Die rechte Seite nimmt wegen $f(a)>0$ nun alle nichtpositiven reellen Werte an, also auch die linke. Dies
+beweist $\BR_{\leq 0} \subset R$ und somit gilt $f(z)=z^2$ für alle $z\leq 0$ nach (3). Dies wiederum impliziert
+aber, dass alle nichtnegativen reellen Zahlen als Werte von $f$ vorkommen. Wegen $f(0)=0$ ergibt dies nun auch
+$\BR_{\geq 0} \subset S$, somit also auch $f(z)=z^2$ für alle $z \in \BR$, wie behauptet.\\
+
+\newpage
+
+\item[\textbf{7.}] Das Polynom $P(x)=x^3-2x^2-x+1$ besitze die drei reellen Nullstellen $a>b>c$.
+Finde den Wert des Ausdrucks
+\[a^2b+b^2c+c^2a.\]
+
+\textbf{Lösung}
+
+
+Wir setzen $A=a^2b+b^2c+c^2a$ und $B=a^2c+c^2b+b^2a$. Wegen $a>b>c$ gilt
+\[A-B=(a-c)(c-b)(b-a) >0,\]
+also ist $A$ grösser als $B$. Wir verwenden im Folgenden die Bezeichnungen
+\begin{eqnarray*}
+u &=& a+b+c,\\
+v &=& ab+bc+ca,\\
+w &=& abc,
+\end{eqnarray*}
+nach dem Satz von Vieta gilt $u=2$, $v=-1$, $w=-1$. Nun gilt
+\begin{eqnarray*}
+A+B &=& a(ab+ac)+b(bc+ba)+c(cb+ca)\\
+&=& (a+b+c)(ab+bc+ca)-3abc =uv-3w = 1.
+\end{eqnarray*}
+Mit Hilfe der Identität $x^3+y^3+z^3-3xyz=(x+y+z)(x^2+y^2+z^2-xy-yz-zx)$ folgt weiter
+\begin{eqnarray*}
+A\cdot B &=& (a^3+b^3+c^3-3abc)abc+(a^3b^3+b^3c^3+c^3a^3-3a^2b^2c^2) +9a^2b^2c^2\\
+&=& u(u^2-3v)w+v(v^2-3uw)+9w^2 = -12.
+\end{eqnarray*}
+Wiederum nach Vieta sind $A$ und $B$ daher die beiden Nullstellen des Polynoms $Q(x)=x^2-x-12=(x+3)(x-4)$. Wegen
+$A>B$ ergibt dies den gesuchten Wert $A=4$.\\
+
+\bigskip
+
+\item[\textbf{8.}] Längs eines Kreises stehen die Zahlen $1,2,\ldots,2006$ in beliebiger Reihenfolge. Es können nun
+wiederholt zwei auf dem Kreis benachbarte Zahlen miteinander vertauscht werden. Nach einer Folge solcher
+Vertauschungen steht jede der Zahlen diametral gegenüber ihrer Anfangsposition. Beweise, dass mindestens einmal
+zwei Zahlen mit Summe 2007 vertauscht wurden.\\
+
+\textbf{Lösung}
+
+Für $1\leq k \leq 2006$ sei $a_k$ wie folgt definiert: Am Anfang ist $a_k=0$ und jedes Mal, wenn die Zahl $k$
+eine Position im (gegen den) Uhrzeigersinn wandert, erhöht (erniedrigt) sich $a_k$ um 1. Die Grösse
+$a_1+\ldots+a_{2006}$ ist am Anfang gleich 0 und ändert sich bei einer Vertauschung nicht, verschwindet also
+immer. Wenn die Zahl $k$ auf die gegenüberliegende Position gewandert ist, muss gelten $a_k=1003+ n \cdot 2006$
+mit einer ganzen Zahl $n$, insbesondere ist $a_k$ ungerade. Wenn nun nie zwei Zahlen mit Summe 2007 vertauscht
+werden, dann gilt $a_k=a_{2007-k}$ alle $k$. Zum Beweis nehmen wir an, es sei $a_k=a_{2007-k}+n\cdot 2006$ mit
+$n\geq 1$. Sei $0<m<2006$ der Abstand der Zahl $k$ zu der Zahl $2007-k$ im Uhrzeigersinn gemessen vor der ersten
+Vertauschung. Die Differenz $a_k-a_{2007-k}$ ist anfangs gleich 0, am Schluss mindestens 2006, und ändert sich
+in jedem Schritt um höchstens 1, wenn wir annehmen, dass $k$ und $2007-k$ nie vertauscht werden. Dann muss diese
+Differenz aber irgendwann gleich $m$ sein, was bedeutet dass $k$ und $2007-k$ auf derselben Position stehen,
+dies ist ein Widerspruch. Daraus folgt nun $0=a_1+\ldots+a_{2006}=2(a_1+\ldots+a_{1003})$, also verschwindet die
+letzte Klammer. Das ist aber nicht möglich, da die Summe einer ungeraden Anzahl ungerader Zahlen nie 0 sein
+kann, Widerspruch.\\
+
+
+\bigskip
+
+\item[\textbf{9.}] Sei $ABC$ ein spitzwinkliges Dreieck mit $AB \neq AC$ und Höhenschnittpunkt $H$. Der Mittelpunkt
+der Seite $BC$ sei $M$. Die Punkte $D$ auf $AB$ und $E$ auf $AC$ seien so, dass $AE = AD$ ist und $D,H,E$ auf
+einer Geraden liegen. Zeige, dass $HM$ und die gemeinsame Sehne der Umkreise der beiden Dreiecke $ABC$ und $ADE$
+rechtwinklig zueinander liegen.\\
+
+\textbf{Lösung}
+
+Sei $k$ der Umkreis von $\triangle ABC$ und sei $O$ Mittelpunkt von $k$. Der zweite Schnittpunkt von $AO$ mit
+$k$ sei $P$. Wir zeigen als erstes, dass die Punkte $H,M,P$ auf einer Geraden liegen. Die Höhenfusspunkte der
+Höhen von $\triangle ABC$ durch $B$ bzw. $C$ seien $B_1$ bzw. $C_1$. Da $AP$ ein Durchmesser von $k$ ist, gilt
+$\angle ABP = 90^\circ = \angle AC_1C$ und ebenfalls $\angle ACP = 90^\circ = \angle AB_1B$. Damit ist $BPCH$
+ein
+Parallelogramm und $HM$ schneidet $k$ in $P$. \\
+Sei $Q$ der zweite Schnittpunkt von $PH$ mit $k$. Es genügt zu zeigen, dass $Q$ auf dem Umkreis von $\triangle
+ADE$ liegt. Sei $S$ der Schnittpunkt von $PH$ mit der Winkelhalbierenden von $\angle BAC$. Offenbar liegt $Q$
+auf dem
+Thaleskreis über $AS$. Wir zeigen nun, dass auch $D$ auf diesem Thaleskreis liegt.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=10cm]{aufg09}
+\end{figure}
+
+Sei $\angle BAC = \alpha$. Einfache Winkeljagd zeigt $\angle BHC_1 = \alpha$ und $\angle DHC_1 = 90^\circ -
+\angle EDA = \alpha / 2$, d.h. $HD$ ist die Winkelhalbierende von $\angle BHC_1$ und es gilt somit
+$$ \frac{C_1D}{DB} = \frac{HC_1}{HB}. $$
+Sei $\angle ABC = \beta$. Es gilt nun $\angle BAH = \angle CAP = 90^\circ - \beta$. Damit ist $AS$ auch
+Winkelhalbierende von $\angle HAP$ und somit
+$$ \frac{HS}{SP} = \frac{AH}{AP} = \frac{HC_1}{CP}. $$
+Die zweite Gleichung gilt, weil $\triangle AHC_1 \sim \triangle APC$. Weil $BPCH$ ein Parallelogramm ist, können
+wir mit $CP = HB$ zusammenfassend schliessen
+$$ \frac{C_1D}{DB} = \frac{HS}{SP}. $$
+Daraus folgt $DS \enspace || \enspace C_1C$ und somit $\angle ADS = 90^\circ$, was bedeutet, dass die Punkte
+$A,Q,D,S$ auf einem Kreis liegen. Analog zeigt man, dass auch $E$ auf diesem Kreis liegt. Damit ist gezeigt,
+dass $Q$ auf dem Umkreis von $\triangle ADE$ liegt und weil $AP$ ein Durchmesser von $k$, gilt $\angle PQA =
+90^\circ$.\\
+
+\bigskip
+
+\item[\textbf{10.}] Seien $a,b,c$ positive reelle Zahlen mit $\frac{1}{a}+\frac{1}{b}+\frac{1}{c}=1$. Beweise
+die Ungleichung
+\[\sqrt{ab+c}+\sqrt{bc+a}+\sqrt{ca+b} \geq \sqrt{abc}+\sqrt{a}+\sqrt{b}+\sqrt{c}.\]
+
+\textbf{1. Lösung}
+
+Die Nebenbedingung ist äquivalent zu $abc=ab+bc+ca$. Mit C.S. folgt
+\begin{eqnarray*}
+\sqrt{ab+c} &=& \sqrt{\frac{abc+c^2}{c}}=\sqrt{\frac{ab+bc+ca+c^2}{c}}=\frac{\sqrt{(a+c)(b+c)}}{\sqrt{c}} \\
+&\geq& \frac{\sqrt{ab}+c}{\sqrt{c}}=\frac{1}{c} \sqrt{abc}+\sqrt{c}.
+\end{eqnarray*}
+Addiert man diese und die beiden analogen Ungleichungen und verwendet nochmals die Nebenbedingung
+$\frac{1}{a}+\frac{1}{b}+\frac{1}{c}=1$, dann folgt das Gewünschte.\\
+
+\textbf{2. Lösung}
+
+Setze $x=\frac{1}{a}$, $y=\frac{1}{b}$ und $z=\frac{1}{c}$, dann gilt $x+y+z=1$ und nach Multiplikation mit
+$\sqrt{xyz}$ lautet die Ungleichung
+\[\sqrt{xy+z}+\sqrt{yz+x}+\sqrt{zx+y} \geq 1+\sqrt{xy}+\sqrt{yz}+\sqrt{zx}.\]
+Wegen $x+y+z=1$ genügt es also zu zeigen, dass $\sqrt{xy+z} \geq \sqrt{xy}+z$ gilt, denn addiert man diese
+Abschätzung zusammen mit den beiden analogen, dann folgt die Behauptung. Dies folgt aber einfach aus C.S.
+\[\sqrt{xy+z}=\sqrt{xy+z(x+y+z)}=\sqrt{(x+z)(y+z)} \geq \sqrt{xy}+z.\]
+
+\textbf{3. Lösung}
+
+Es gilt
+\[\sqrt{abc}=\left(\frac{1}{a}+\frac{1}{b}+\frac{1}{c} \right)\sqrt{abc}=
+\sqrt{\frac{ab}{c}}+\sqrt{\frac{bc}{a}}+\sqrt{\frac{ca}{b}}.\] Folglich genügt es zu zeigen, dass $\sqrt{ab+c}
+\geq \sqrt{\frac{ab}{c}}+\sqrt{c}$ gilt. Quadrieren und Vereinfachen liefert die äquivalente Ungleichung
+\[ab \geq \frac{ab}{c}+2\sqrt{ab}.\]
+Verwendet man nun $\frac{1}{c}=1-\frac{1}{a}-\frac{1}{b}$ und vereinfacht, dann bleibt $a+b \geq 2\sqrt{ab}$ zu
+zeigen, dies folgt aber direkt aus AM-GM.\\
+
+\textbf{4. Lösung}
+
+Die Nebenbedingung ist äquivalent zu $abc=ab+bc+ca$. Nach Quadrieren lautet die linke Seite der Ungleichung
+\[a+b+c+ab+bc+ca+2\sqrt{ab+c}\sqrt{bc+a}+2\sqrt{bc+a}\sqrt{ca+b}+2\sqrt{ca+b}\sqrt{ab+c}.\]
+Die rechte Seite hingegen ist gleich
+\[a+b+c+abc+2\sqrt{ab}+2\sqrt{bc}+2\sqrt{ca}+2a\sqrt{bc}+2b\sqrt{ca}+2c\sqrt{ab}.\]
+Verwendet man hier $abc=ab+bc+ca$, dann erhält man die äquivalente Form
+\begin{eqnarray*}
+\sqrt{ab+c}\sqrt{bc+a}+\sqrt{bc+a}\sqrt{ca+b} + \sqrt{ca+b}\sqrt{ab+c} \\
+\geq (1+a)\sqrt{bc} + (1+b)\sqrt{ca}+(1+c)\sqrt{ab}.
+\end{eqnarray*}
+Es genügt zu zeigen, dass $\sqrt{ab+c}\sqrt{bc+a} \geq (1+b)\sqrt{ca}$, denn addiert man diese und die beiden
+analogen Ungleichungen, ergibt sich das Gewünschte. Zum Beweis kann man C.S. verwenden:
+\[\sqrt{ab+c}\sqrt{bc+a} \geq \sqrt{ab}\cdot \sqrt{bc}+\sqrt{c}\cdot \sqrt{a} =(b+1)\sqrt{ac}.\]
+Alternativ kann man die Ungleichung auch Quadrieren, es bleibt dann noch $a^2+c^2 \geq 2ac$ zu zeigen, dies ist
+aber AM-GM.\\
+
+
+\bigskip
+
+\item[\textbf{11.}] Finde alle natürlichen Zahlen $k$, sodass $3^k+5^k$ eine Potenz einer natürlichen Zahl mit
+Exponent $\geq 2$ ist.\\
+
+\textbf{1. Lösung}
+
+Nehme an, es sei $3^k+5^k=n^t$ mit $t \geq 2$. Ist $k$ gerade, dann gilt $3^k+5^k \equiv 1+1=2$ (mod 4), also
+ist die linke Seite gerade aber nicht durch 4 teilbar, ein Widerspruch zu $t \geq 2$. Ist $k$ ungerade, dann
+gilt
+\[3^k+5^k = (3+5)(3^{k-1}-3^{k-2} \cdot 5 + \ldots -3\cdot 5^{k-2}+5^{k-1}).\]
+Der zweite Faktor rechts ist ungerade, denn er besteht aus einer ungeraden Anzahl Summanden, welche alle
+ungerade sind. Folglich ist $3^k+5^k$ durch 8 aber nicht durch 16 teilbar, also gilt $t=3$:
+\[3^k+5^k=n^3.\]
+Offenbar ist $k=1$ eine Lösung, wir zeigen, dass es die einzige ist. Für $k\geq 2$ betrachten wir die Gleichung
+modulo 9. Da $k$ ungerade ist, ergibt eine kurze Rechnung
+\[3^k+5^k \equiv 5^k \equiv \left\{
+\begin{tabular}{lll}
+5,& $\quad k \equiv 1$ & (mod 6)  \\
+8,& $\quad k \equiv 3$ & (mod 6)  \\
+2,& $\quad k \equiv 5$ & (mod 6)  \\
+\end{tabular}
+\right. \qquad \mbox{(mod 9).}\] Für die rechte Seite gilt jedoch $n^3 \equiv 0,1,8$ (mod 9). Folglich muss $k
+\equiv 3$ (mod 6) gelten. Wir betrachten die Gleichung nun modulo 7. Da $k$ ungerade ist, zeigt eine kurze
+Rechnung
+\[3^k+5^k \equiv \left\{
+\begin{tabular}{lll}
+1,& $\quad k \equiv 1,5$ & (mod 6)  \\
+5,& $\quad k \equiv 3$ & (mod 6)  \\
+\end{tabular}
+\right. \qquad \mbox{(mod 7).}\] Für die rechte Seite gilt aber $n^3 \equiv 0,1,6$ (mod 7). Daher muss $k \equiv
+1,5$ (mod 6) gelten, im Widerspruch zu $k \equiv 3$ (mod 6).\\
+
+
+\textbf{2. Lösung}
+
+Man kann den Beweis auch wie folgt beenden: Die Rechnung modulo 9 zeigt, dass $k$ durch 3 teilbar ist, $k=3l$.
+Damit folgt nun die Gleichung
+\[(3^l)^3+(5^l)^3=n^3,\]
+welche nach dem Satz von Fermat aber keine Lösung besitzt, Widerspruch.\\
+
+
+\bigskip
+
+\item[\textbf{12.}] Eine Raumstation besteht aus 25 Kammern, und je zwei Kammern sind mit einem Tunnel
+verbunden. Es gibt insgesamt 50 Haupttunnel, die in beide Richtungen benutzt werden können, die restlichen sind
+alle Einbahntunnel. Eine Gruppe von vier Kammern heisst \textit{verbunden}, falls man von jeder dieser Kammern
+in jede andere gelangen kann, indem man nur die sechs Tunnel verwendet, welche diese Kammern untereinander
+verbinden. Bestimme die grösstmögliche Anzahl verbundener Vierergruppen.\\
+
+\textbf{Lösung}
+
+Gibt es in einer Vierergruppe eine Kammer, von der drei Einwegtunnel wegführen, so ist diese Gruppe sicher nicht
+verbunden. Wir nennen eine solche Kammer \textit{isoliert} in der Gruppe. Nummeriere die Kammern und nehme an,
+von der $k$-ten Kammer führen $a_k$ Einwegtunnel weg. Insgesamt gibt es $\binom{25}{2}-50=250$ Einwegtunnel. Es
+gilt daher $a_1+\ldots+a_{25}=250$, denn jeder Einwegtunnel führt aus genau einer Kammer heraus. Die $k$-te
+Kammer ist in genau $\binom{a_k}{3}$ Vierergruppen isoliert, es gibt also mindestens
+\[X=\binom{a_1}{3}+\binom{a_2}{3}+\ldots+\binom{a_{25}}{3}\]
+nicht verbundene Vierergruppen. Wir behaupten nun, dass $X$ den kleinstmöglichen Wert annimmt, wenn alle $a_k$
+gleich gross sind. Gilt nämlich $r-2 \geq s \geq 0$, dann zeigt eine kurze Rechnung
+\[\binom{r}{3}+\binom{s}{3} > \binom{r-1}{3}+\binom{s+1}{3} \Longleftrightarrow (r-1)(r-2) > s(s-1),\]
+und letzteres stimmt nach Annahme. Wenn $X$ also sein Minimum annimmt, dann dürfen sich je zwei der $a_k$ um
+höchstens 1 unterscheiden. Da deren Summe 250 aber durch 25 teilbar ist, müssen sogar alle gleich gross sein,
+wie behauptet. Es gilt also $X \geq 25 \cdot \binom{10}{3}=3000$. Folglich gibt es höchstens
+$\binom{25}{4}-3000=9650$ verbundene Vierergruppen.\\
+
+Wir zeigen nun, dass dieser Wert auch erreicht werden kann. Dazu konstruieren wir eine Anordnung der Tunnels wie
+folgt: Ordne die Kammern auf einem Kreis an, und nummeriere sie $K_1,\ldots,K_{25}$ im Uhrzeigersinn. Im
+Folgenden sind alle Indizes modulo 25 zu betrachten. Von der Kammer $K_n$ führen Einwegtunnel zu den Kammern
+$K_{n+1},\ldots,K_{n+10}$, die Kammern $K_{n+11},\ldots,K_{n+14}$ sind durch einen Haupttunnel mit $K_n$
+verbunden, und schliesslich führen Einwegtunnel von den Kammern $K_{n+15},\ldots K_{n+24}$ nach $K_n$. Man
+überlegt sich leicht, dass dies eine wohldefinierte Konfiguration ergibt.\\
+
+Nach Konstruktion und dem schon Gezeigten enthält diese Konfiguration genau 3000 Vierergruppen mit einer
+isolierten Kammer. Es genügt also zu zeigen, dass alle Vierergruppen ohne isolierte Kammer verbunden sind. Nehme
+oBdA an, $\{K_1,K_r,K_s,K_t\}$ mit $1<r<s<t \leq 25$ sei eine Vierergruppe ohne isolierte Kammer. Wir behaupten,
+dass die Abstände $r-1$, $s-r$, $t-s$ und $26-t$ (also die Abstände aufeinanderfolgender Kammern im
+Uhrzeigersinn) alle kleiner als 15 sind. Haben nämlich zwei aufeinanderfolgende Kammern einen grösseren Abstand,
+dann ist die zweite der beiden nach Konstruktion isoliert. Wieder nach Konstruktion kann man also die Kammern in
+der Reihenfolge $K_1 \rightarrow K_r \rightarrow K_s \rightarrow K_t \rightarrow K_1$ durchwandern, die
+Vierergruppe ist also in der Tat verbunden. Damit ist alles gezeigt.\\
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,102 @@
+\documentclass[a4paper,12pt]{article}
+%\usepackage[utf8]{inputenc}
+
+\usepackage[ansinew]{inputenc}
+\usepackage[german]{babel}
+\usepackage{fullpage}
+
+%
+%	Paquets
+%
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{forloop}
+\usepackage[abs]{overpic}
+\usepackage{pifont}
+\usepackage{mdframed}
+
+
+
+
+%
+% Définitions de symboles
+%
+
+\newcommand{\esp}{\vskip15mm} % espace vertical 
+
+\newcommand{\CP}{\mathcal{P}}
+
+\newcommand{\NN}{\ensuremath{\mathbb{N}}}
+\newcommand{\QQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\RR}{\ensuremath{\mathbb{R}}}
+\newcommand{\ZZ}{\ensuremath{\mathbb{Z}}}
+
+\newcommand{\BN}{\ensuremath{\mathbb{N}}}
+\newcommand{\BQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\BR}{\ensuremath{\mathbb{R}}}
+\newcommand{\BZ}{\ensuremath{\mathbb{Z}}}
+
+\newcommand{\ggT}{\text{ggT}}
+\newcommand{\kgV}{\text{kgV}}
+\newcommand{\pgdc}{\text{PGDC}}
+\newcommand{\pgcd}{\text{PGDC}}
+\newcommand{\ppmc}{\text{PPCM}}
+
+\newcommand{\wi}{\ensuremath{\angle}}
+
+%
+%
+\begin{document}
+%
+%
+\pagestyle{empty}
+
+\newcounter{aufgabe}
+\newcounter{team}
+
+
+\forloop{team}{1}{\value{team} < 12}%
+{
+\forloop{aufgabe}{1}{\value{aufgabe} <41}
+{
+\parindent=-5mm
+\begin{overpic}[scale=1.28,unit=1mm]%
+		{logo.png}
+	\put(5,5){\large Aufgabe : \bf\arabic{aufgabe}}
+	\put(55,5){\large Team : \bf\Alph{team} }
+\end{overpic}
+
+%%
+\parindent=5mm
+\input{./Problems/\arabic{aufgabe}} 
+%%
+
+
+\bigskip
+\begin{tabular}{|p{.9\textwidth}|}
+	\hline
+  		{\ding{192}} \\[3cm]
+	\hline \hline
+		{\ding{193}} \\[3cm]
+	\hline \hline
+		{\ding{194}} \\[3cm]
+	\hline
+\end{tabular}
+\vfill
+
+
+\newpage
+}
+}
+
+
+
+\end{document}
+%%%
+%%%
+
+
+
+			

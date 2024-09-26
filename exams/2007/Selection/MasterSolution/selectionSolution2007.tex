@@ -1,0 +1,580 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\oddsidemargin=0cm \headheight=-2.1cm
+\textwidth=16.4cm \textheight=25.7cm
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+
+
+
+
+
+% Schriftabkürzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\gaussk}[1]{\lfloor #1 \rfloor}
+\newcommand{\frack}[1]{\{ #1 \}}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+\newcommand{\dreieck}{\bigtriangleup}
+
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge IMO Selektion 2007 Lösungen} \\
+\end{center}
+
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{1.}] Sei $ABCD$ ein Trapez mit $AB \parallel CD$ und $AB > CD$. Die Punkte $K$ und $L$ liegen auf den Seiten $AB$ bzw. $CD$ mit $AK/KB = DL/LC$. Die Punkte $P$ und $Q$ liegen so auf der Strecke $KL$, dass gilt
+\[\angle APB = \angle BCD \qquad \mbox{und} \qquad \angle CQD = \angle ABC.\]
+Zeige, dass die Punkte $P,Q,B$ und $C$ auf einem Kreis liegen.
+
+\begin{figure}[h!]
+\centering
+\begin{minipage}[t]{7cm}
+\centering
+\includegraphics[width=9cm]{imoselektion_1}
+\end{minipage}
+\end{figure}
+
+\textbf{1. Lösung}
+
+Wir bezeichnen die beiden gegebenen Winkelgrössen mit $\alpha = \angle ABC = \angle CQD$ und $\beta = \angle BCD = \angle APB$. Weil $AB \parallel CD$ gilt $\alpha + \beta = 180^\circ$. Ebenfalls weil $AB \parallel CD$ folgt aus $AK/KB = DL/LC$, dass sich die Geraden $AD,BC$ und $KL$ in einem gemeinsamen Punkt $S$ schneiden. Wir betrachten die zentrische Streckung an $S$, welche den Punkt $D$ auf $A$ abbildet (dabei wird $L$ auf $K$ und $C$ auf $B$ abgebildet). Der Bildpunkt von $Q$ bei dieser Abbildung sei $Z$. Das Viereck $AZBP$ ist ein Sehnenviereck, denn
+$$ \angle AZB + \angle APB = \angle DQC + \angle APB = \alpha + \beta = 180^\circ.$$
+Sei $x = \angle SQC = \angle SZB$. Aus dem Peripheriewinkelsatz im Sehnenviereck $AZBP$ folgt $\angle PAB = x$. Mit der Winkelsumme im Dreieck $ABP$ erhalten wir $\angle ABP = \alpha - x$ und damit
+$$ \angle PBC = \alpha - \angle ABP = \alpha - (\alpha - x) = x.$$
+Es gilt also $\angle SQC = \angle PBC$ und daraus folgt - gleichgültig in welcher Reihenfolge $P$ und $Q$ auf der Strecke $KL$ liegen - dass die Punkte $P,Q,B$ und $C$ auf einem Kreis liegen.\\
+
+\textbf{2. Lösung}
+
+Seien $\alpha,\beta$ und $S$ gleich definiert wie vorhin. Sei $E$ der Schnittpunkt von $AP$ und $DQ$ und sei $F$ der Schnittpunkt von $BP$ und $CQ$. Da der Fall $P = Q$ trivial ist, können wir annehmen $P \neq Q$ und somit $E \neq F$. Wir zeigen nun, dass die Gerade $EF$ parallel zu $AB$ ist. Dazu wenden wir den Satz von Menelaos zuerst in Dreieck $ASP$ mit der Geraden $DQ$ und dann in Dreick $BSP$ mit der Geraden $CQ$ an. Wir erhalten die beiden Gleichungen
+$$ \frac{AD}{DS} \cdot \frac{SQ}{QP} \cdot \frac{PE}{EA} = -1 \quad \text{und} \quad \frac{BC}{CS} \cdot \frac{SQ}{QP} \cdot \frac{PF}{FB} = -1. $$
+Die beiden ersten Faktoren der Gleichungen sind gleich, weil $AB \parallel CD$. Somit sind auch die beiden letzten Faktoren gleich, woraus folgt, dass $EF$ parallel zu $AB$ ist.\\
+Wegen $\angle EPF + \angle EQF = \beta + \alpha = 180^\circ$ ist $PEQF$ ein Sehnenviereck. Sei wie bei der ersten Lösung $x = \angle SQC$. Mit dem Peripheriewinkelsatz im Sehnenviereck $PEQF$ folgt $\angle PEF = x$ und weil $EF \parallel AB$ auch $\angle PAB = x$. Man beende den Beweis nun gleich wie bei der ersten Lösung.\\
+
+\bigskip
+
+\item[\textbf{2.}] Bestimme die beiden kleinsten natürlichen Zahlen, die sich in der Form $7m^2-11n^2$ mit natürlichen Zahlen $m$ und $n$ schreiben lassen.\\
+
+\textbf{1. Lösung}
+
+Nehme an, es gelte $7m^2-11n^2=c$ mit einer natürlichen Zahl $c$. \\
+
+Wir betrachten die Gleichung modulo 7. Es muss also gelten $c \equiv -11n^2 \equiv 3n^2$ (mod 7). Wegen $n^2\equiv 0,1,2,4$ ist daher $c \equiv 0,3,5,6$ (mod 7). Analog erhält man modulo 11 die Gleichung $c \equiv 7m^2$ und wegen $m^2 \equiv 0,1,3,4,5,9$ also $c \equiv 0,2,6,7,8,10$ (mod 11). Modulo 4 gilt schliesslich $c \equiv 3(m^2-n^2) \equiv 0,1,3$. Diese Kongruenzen schliessen viele Werte für $c$ aus. Die beiden kleinsten verbleibenden Möglichkeiten sind $c=7,13$.\\
+
+Wir zeigen nun umgekehrt, dass $c=7$ und $c=13$ angenommen werden.
+\begin{itemize}
+\item Für jede Lösung $(m,n)$ der Gleichung $7m^2-11n^2=7$ muss $n$ durch 7 teilbar sein. Setze $n=7k$, dann ist $(m,k)$ eine Lösung von
+\begin{equation} \label{Pell}
+m^2-77k^2=1,
+\end{equation}
+und umgekehrt liefert jede Lösung von (\ref{Pell}) eine der ursprünglichen Gleichung. Nun ist (\ref{Pell}) aber eine \emph{Pell-Gleichung} und besitzt daher bekanntlich unendlich viele Lösungen.
+\item Durch Probieren findet man leicht  
+\[7\cdot 4^2-11\cdot 3^2 = 13.\]
+\end{itemize}
+
+\emph{Bemerkung:} Die minimale Lösung der Pell-Gleichung (\ref{Pell}) lautet $(m,k)=(351,40)$ und somit erhält man für $c=7$ die kleinstmögliche Lösung $7\cdot 351^2-11\cdot 280^2=7$.\\
+
+\textbf{2. Lösung}
+
+Um die Werte $c=6$ und $c=10$ auszuschliessen, kann man auch wie folgt argumentieren: 
+\begin{itemize}
+\item Nehme an, $c$ sei durch 3 teilbar. Dann folgt $0 \equiv 7m^2-11n^2 \equiv m^2+n^2$ (mod 3). Dies kann nur der Fall sein, wenn $m$ und $n$ beide durch 3 teilbar sind. Dann ist $c$ aber sogar durch 9 teilbar, also ist $c=6$ nicht möglich. 
+\item Ähnlich schliesst man, wenn $c$ durch 5 teilbar ist. Dann gilt nämlich $0 \equiv 7m^2-11n^2 \equiv 2(m^2+2n^2)$ (mod 5), also muss die Klammer durch 5 teilbar sein. Ein kurzer Check zeigt wieder, dass dies nur dann der Fall ist, wenn $m$ und $n$ beide durch 5 teilbar sind. Dann ist $c$ aber durch 25 teilbar, also gilt $c\neq 10$.
+\end{itemize}
+
+\bigskip
+
+\item[\textbf{3.}] Wir nennen zwei Personen ein \emph{befreundetes Paar}, wenn sie sich kennen, und wir nennen sie ein \emph{nichtbefreundetes Paar}, wenn sie sich nicht kennen (befreundet sein oder nicht befreundet sein ist dabei immer gegenseitig). Seien $m,n$ natürliche Zahlen. Finde die kleinste natürliche Zahl $k$, sodass Folgendes gilt: In jeder Gruppe von $k$ Leuten gibt es stets $2m$ Leute, die $m$ disjunkte befreundete Paare bilden, oder es gibt $2n$ Leute, die $n$ disjunkte nichtbefreundete Paare bilden.\\
+
+\textbf{Lösung}
+
+Der kleinste Wert ist $k=\max\{m,n\}+m+n-1$. Wegen der Symmetrie des Problems können wir $m \geq n$ annehmen.\\
+
+Wir beweisen zuerst, dass $k \geq 2m+n-1$ gilt, indem wir eine Konfiguration mit $2m+n-2$ Leuten angeben, die die Bedingungen der Aufgabe nicht erfüllt. Betrachte eine Gruppe $X$ aus $2m-1$ Leuten, die sich alle gegenseitig kennen, und eine Gruppe $Y$ aus $n-1$ Leuten, die niemanden der anderen $2m+n-3$ Leute kennen. Jedes befreundete Paar liegt ganz in $X$, also gibt es höchstens $\lfloor |X|/2 \rfloor = m-1$ disjunkte solche Paare. In jedem nichtbefreundeten Paar ist mindestens eine der Personen in $Y$, also gibt es auch höchstens $|Y|=n-1$ disjunkte solche Paare.\\
+
+Wir zeigen nun induktiv $k \leq 2m+n-1$.
+\begin{itemize}
+\item Die Verankerung $n=1$ ist trivial: Entweder gibt es ein nichtbefreundetes Paar oder alle $2m$ Leute kennen sich gegenseitig.
+\item Induktionsschritt $(m,n) \rightarrow (m+1,n+1)$. Wir nehmen also an, dass die Behauptung für $(m,n)$ gilt und betrachten eine belliebige Gruppe von $2(m+1)+(n+1)-1=(2m+n-1)+3$ Leuten. Wenn sich alle gegenseitig kennen, dann gibt es sicher $m+1$ disjunkte befreundete Paare. Wenn sich alle gegenseitig nicht kennen, dann gibt es sicher $n+1$ nichtbefreundete Paare. Wir können also annehmen, dass drei Personen $A,B,C$ existieren, sodass $A$ und $B$ sich kennen, $B$ und $C$ sich aber nicht kennen. Unter den verbleibenden $2m+n-1$ Leuten gibt es nun nach Induktionsannahme $m$ disjunkte befreundete Paare oder $n$ disjunkte nichtbefreundete Paare. Im ersten Fall ist $(A,B)$ ein weiteres dazu disjunktes befreundetes Paar, im zweiten Fall ist $(B,C)$ ein weiteres dazu disjunktes nichtbefreundetes Paar. Damit ist die Induktion komplett.
+\end{itemize}
+
+\bigskip
+
+\item[\textbf{4.}] Ein Paar $(r,s)$ natürlicher Zahlen heisst \emph{gut}, falls ein Polynom $P$ mit ganzen Koeffizienten und paarweise verschiedene ganze Zahlen $a_1,\ldots,a_r$ und $b_1,\ldots,b_s$ existieren, sodass gilt
+\[P(a_1)=P(a_2)=\ldots =P(a_r)=2 \qquad \mbox{und} \qquad P(b_1)=P(b_2)=\ldots =P(b_s)=5.\]
+\begin{enumerate}
+\item[(a)] Zeige, dass für jedes gute Paar $(r,s)$ natürlicher Zahlen $r,s \leq 3$ gilt.
+\item[(b)] Bestimme alle guten Paare.\\
+\end{enumerate}
+
+\textbf{1. Lösung}
+
+Ein Paar $(r,s)$ ist genau dann gut, wenn auch $(s,r)$ gut ist. Dazu ersetze man $P(x)$ einfach durch $7-P(x)$. Ausserdem ist mit $(r,s)$ auch jedes Paar $(u,v)$ mit $u\leq r$, $v \leq s$ gut. Sei nun $(r,s)$ ein gutes Paar und $P$ wie in der Aufgabenstellung. Das Polynom $P(x)-2$ besitzt dann die Nullstellen $a_1,\ldots,a_r$ und somit gilt
+\[P(x)-2=(x-a_1)(x-a_2)\cdots (x-a_r)Q(x)\]
+mit einem Polynom $Q$ mit ganzen Koeffizienten. Nach Voraussetzung gilt nun die Gleichung
+\[3=P(b_1)-2=(b_1-a_1)(b_1-a_2)\cdots (b_1-a_r)Q(b_1).\] 
+Jeder Faktor auf der rechten Seite ist eine ganze Zahl $\neq 0$ und ausserdem sind die Faktoren $(b_1-a_i)$ paarweise verschieden. Da die linke Seite eine Primzahl ist, können auf der rechten Seite höchstens drei solche Faktoren auftreten, und falls es tatsächlich drei sind, dann müssen sie gleich $1,-1$ und $\pm 3$ sein. Dies zeigt also insbesondere $r \leq 3$ und im Fall $r=3$ muss nach Umnummerierung der $a_i$ zwangsläufig 
+\begin{equation} \label{a-b}
+a_1=b_1-1, \quad a_2=b_1+1 \quad \mbox{und} \quad a_3=b_1 \pm 3
+\end{equation}
+gelten. Sei im Folgenden $r=3$. Wiederholen wir dasselbe Argument für $b_2,\ldots,b_s$ dann folgt aus (\ref{a-b}) und der analogen Aussage für $b_i$ $(i \geq 2)$, dass $b_i=b_1$ oder $b_i=b_1\pm 2$ gelten muss, je nach Vorzeichen in (\ref{a-b}). Da die $b_i$ aber paarweise verschieden sind, folgt daraus $s\leq 2$. Wegen der anfangs erwähnten Symmetrie kommen also nur noch
+\[(1,1),\; (1,2),\; (1,3),\; (2,1),\; (2,2),\; (2,3),\; (3,1),\; (3,2)\]
+als gute Paare in Frage. Sie sind aber in der Tat alle gut, denn für das Polynom $P(x)=-x^2(x-2)(x+2)+2$ gilt $P(-2)=P(0)=P(2)=2$ und $P(-1)=P(1)=5$, also ist $(3,2)$ ein gutes Paar und damit auch alle anderen.\\
+
+\textbf{2. Lösung}
+
+Wir nehmen an (a) sei schon bewiesen und geben ein zweites Argument dafür, dass $(3,3)$ kein gutes Paar ist. Da $P$ ganze Koeffizienten hat gilt für alle ganzen Zahlen $x \neq y$ 
+\[x-y \div P(x)-P(y).\]
+Nehme an, $(3,3)$ sei ein gutes Paar. Dann gilt für $1\leq i,j \leq 3$
+\[b_i-a_j \div P(b_i)-P(a_j) = 3 \qquad \Longrightarrow \qquad b_i-a_j \in \{-3,-1,1,3\}.\]
+Für festes $i$ müssen wegen $r=3$ drei verschiedene Zahlen der Menge rechts auch wirklich angenommen werden, insbesondere zwei mit unterschiedlichem Vorzeichen. Das bedeutet aber, dass mindestens ein $a_j$ grösser und mindestens ein $a_j$ kleiner ist als $b_i$. Genau dasselbe Argument zeigt umgekehrt, dass für jedes $j$ mindestens ein $b_i$ grösser und mindestens ein $b_i$ kleiner ist als $a_j$. Das ist aber sicher nicht möglich, da unter den sechs Zahlen $a_1,a_2,a_3,b_1,b_2,b_3$ eine kleinste und eine grösste existiert.\\
+
+\emph{Bemerkung:} Mit dem Argument in der zweiten Lösung kann man auch leicht zeigen, dass für jedes gute Paar $(r,s)$ immer $r,s \leq 4$ gilt. Mehr noch: es lassen sich alle nicht guten Paare ausser $(4,1)$ und $(1,4)$ ausschliessen. Für diese scheint aber eine Faktorisierung wie in der ersten Lösung unumgänglich zu sein. \\
+Das Polynom zum guten Paar $(3,2)$ fällt natürlich nicht vom Himmel. Die Argumente in beiden Lösungen geben sehr starke Einschränkungen an die Form eines solchen Polynoms. Insbesondere muss es bis auf einen Shift $x \mapsto x+k$ von der Form $x(x+2)(x-2)Q(x)+2$ sein mit einem Polynom $Q$ mit ganzen Koeffizienten. Die notwendige Bedingung $P(\pm 1)=5$ liefert dann $Q(-1)=1$ und $Q(1)=-1$ und die einfachste Möglichkeit ist offenbar $Q(x)=-x$. Es gibt aber unendlich viele solche Polynome, man kann zum Beispiel $Q(x)=-x^{2n-1}$ mit einer natürlichen Zahl $n$ wählen.\\ 
+
+\bigskip
+
+\item[\textbf{5.}] Seien $n>1$ und $m$ natürliche Zahlen. Ein Parlament besteht aus $mn$ Abgeordneten, die $2n$ Kommissionen gebildet haben, sodass gilt:
+\begin{enumerate}
+\item[(i)] Jede Kommission besteht aus $m$ Abgeordneten.
+\item[(ii)] Jeder Abgeordnete ist Mitglied in genau 2 Kommissionen.
+\item[(iii)] Je zwei Kommissionen haben höchstens ein gemeinsames Mitglied.
+\end{enumerate}
+Bestimme in Abhängigkeit von $n$ den grösstmöglichen Wert von $m$, sodass dies möglich ist.\\ 
+
+\textbf{1. Lösung}
+
+Sei $K$ eine beliebige Komission. Jedes der $m$ Mitglieder von $K$ ist nach (ii) noch in einer anderen Komission, und diese sind nach (iii) alle verschieden. Insgesamt gibt es also mindestens $m+1$ Komissionen, also gilt $m \leq 2n-1$.\\
+Wir zeigen nun, dass $m=2n-1$ möglich ist, indem wir rekursiv ein Beispiel konstruieren. Für $n=2$, $m=3$ und sechs Parlamentarier $1,2,3,4,5,6$ erfüllen die vier Kommissionen
+\[K_1=\{1,2,3\},\; K_2=\{3,4,5\},\; K_3=\{5,6,1\},\; K_4=\{2,4,6\}\]
+alle Bedingungen der Aufgabe. Wir nehmen nun an, wir hätten für $n$, $m=2n-1$ bereits geeignete Kommissionen $K_1,\ldots,K_{2n}$ konstruiert, und betrachten den Fall $n+1$, $m=2n+1$. Es kommen also $4n+1$ Parlamentarier $P_1,\ldots, P_{4n+1}$ dazu. Konstruiere nun die neuen Kommissionen $K'_1,\ldots, K'_{2n+2}$ wie folgt:
+\begin{eqnarray*}
+K'_1 &=& K_1 \cup \{P_1, P_2\},\\
+K'_2 &=& K_2 \cup \{P_3, P_4\},\\
+&\vdots& \\
+K'_{2n} &=& K_{2n} \cup \{P_{4n-1}, P_{4n}\},\\[2mm]
+K'_{2n+1} &=& \{P_1, P_3, \ldots, P_{4n-1}, P_{4n+1}\},\\
+K'_{2n+2} &=& \{P_2, P_4, \ldots, P_{4n}, P_{4n+1}\}.\\
+\end{eqnarray*}
+
+\textbf{2. Lösung}
+
+Wir bestimmen zuerst eine obere Schranke für $m$ und zählen dazu die Anzahl Paare $(\{K_1,K_2\},A)$ aus zwei Kommissionen $K_1,K_2$ und einem Abgeordneten $A \in K_1 \cap K_2$ auf zwei Arten.
+\begin{enumerate}
+\item[(i)] Es gibt $\binom{2n}{2}$ Möglichkeiten für die beiden Kommissionen und danach nach (iii) höchstens eine Wahl für $A$. 
+\item[(ii)] Es gibt $mn$ Möglichkeiten für $A$ und nach (ii) genau eine Möglichkeit, die beiden Kommissionen zu wählen.
+\end{enumerate} 
+Daraus folgt $\binom{2n}{2} \geq mn$, also $m \leq 2n-1$.\\
+Ein Beispiel für $m=2n-1$ lässt sich wie folgt konstruieren. Wir nummerieren die $mn=(2n-1)n=\binom{2n}{2}$ Abgeordneten mit den Paaren $(i,j)$, $1 \leq i<j \leq 2n$. Für $1 \leq k \leq 2n$ bestehe die $k$-te Kommission aus allen Abgeordneten, in deren Paar die Zahl $k$ auftaucht. Man überlegt sich leicht, dass dies alle Bedingungen der Aufgabe erfüllt.\\
+
+\bigskip
+
+\item[\textbf{6.}] Seien $a,b,c$ positive reelle Zahlen mit $a+b+c \geq abc$. Beweise, dass
+von den folgenden drei Ungleichungen mindestens zwei richtig sind:
+\[\frac{2}{a}+\frac{3}{b}+\frac{6}{c} \geq 6, \qquad \frac{2}{b}+\frac{3}{c}+\frac{6}{a} \geq 6,
+\qquad \frac{2}{c}+\frac{3}{a}+\frac{6}{b} \geq 6.\]
+
+\textbf{1. Lösung}
+
+Setze $x=\frac{1}{a}$, $y=\frac{1}{b}$ und $z=\frac{1}{c}$. Die Nebenbedingung lautet dann $xy+yz+zx \geq 1$ und die drei Ungleichungen werden zu
+\begin{eqnarray*}
+2x+3y+6z &\geq& 6,\\
+2y+3z+6x &\geq& 6,\\
+2z+3x+6y &\geq& 6.
+\end{eqnarray*}
+Es genügt nun zu zeigen, dass die Summe von je zwei der drei Terme auf der linken Seite dieses Systems mindestens gleich 12 ist, denn dann können sicher nicht zwei der drei Ungleichungem gleichzeitig falsch sein. Wegen der zyklischen Symmetrie genügt dieser Nachweis für die Summe der beiden ersten Terme. Nach Quadrieren müssen wir also zeigen, dass gilt
+\[(2x+3y+6z+2y+3z+6x)^2 \geq 144.\]
+Wegen der Nebenbedingung genügt es zu zeigen, dass die linke Seite mindestens gleich $144(xy+yz+zx)$ ist. Ausmultiplizieren und Vereinfachen ergibt nun die Ungleichung
+\[64x^2+25y^2+81z^2-64xy-54yz \geq 0.\]
+Die linke Seite ist aber eine Summe von zwei Quadraten und damit ist alles gezeigt:
+\[(8x-4y)^2+(3y-9z)^2 \geq 0.\]
+
+\textbf{2. Lösung}
+
+Analog zur ersten Lösung genügt es auch zu zeigen, dass die Summe der Quadrate von je zwei der drei Terme links mindestens gleich $2 \cdot 6^2=72$ ist. Wegen der zyklischen Symmetrie und der Nebenbedingung $xy+yz+zx \geq 1$ genügt es also zu zeigen, dass
+\[(2x+3y+6z)^2+(2y+3z+6x)^2 \geq 72(xy+yz+zx).\]
+Nach Vereinfachen ist dies äquivalent zu
+\[40x^2+13y^2+45z^2-36xy-24yz-12zx \geq 0.\]
+Die linke Seite lässt sich nun wieder als Summe von Quadraten schreiben und damit ist alles gezeigt:
+\[(6x-3y)^2+(2y-6z)^2+(3z-2x)^2 \geq 0.\]
+
+\textbf{3. Lösung}
+
+Wir setzen wieder $x=\frac{1}{a}$, $y=\frac{1}{b}$, $z=\frac{1}{c}$ und schreiben zur Abkürzung
+\[u=2x+3y+6z,\qquad v=2y+3z+6x,\qquad w=2z+3x+6y.\]
+Ausserdem dürfen wir $xy+yz+zx=1$ annehmen, denn gegebenenfalls können wir $x,y,z$ mit einem gemeinsamen Faktor $\lambda\geq 1$ multiplizieren, dadurch werden $u,v$ und $w$ höchstens kleiner. Eine kurze Rechnung zeigt nun
+\[uv+vw+wu = 36(x^2+y^2+z^2)+85(xy+yz+zx) = 36(x+y+z)^2+13(xy+yz+zx),\]
+und zusammen mit $u+v+w=11(x+y+z)$ und der Nebenbedingung ergibt dies
+\begin{equation} \label{uvw}
+121(uv+vw+wu)=36(u+v+w)^2+1573.
+\end{equation}
+Wir zeigen nun, dass für jedes Tripel $(u,v,w)$ positiver reeller Zahlen, das (\ref{uvw}) erfüllt, mindestens zwei der Zahlen $\geq 6$ sind. Dazu fassen wir (\ref{uvw}) als quadratische Gleichung in jeder der drei Variablen auf und berechnen die Diskriminante. Bezüglich $u$ ist die Diskriminante gleich
+\begin{eqnarray*}
+D &=& (49(v+w))^2-4\cdot 36(36v^2+36w^2-49vw+1573)\\
+&=& 52(vw-36)-23(v-w)^2.
+\end{eqnarray*}
+Da die quadratische Gleichung ja die reelle Lösung $u$ besitzt, muss $D \geq 0$ sein, also gilt $52(vw-36) \geq 23(v-w)^2 \geq 0$ und somit $vw \geq 36$. Genauso zeigt man $uv \geq 36$ und $wu \geq 36$, woraus folgt, dass mindestens zwei der drei Zahlen $\geq 6$ sind.\\
+
+\bigskip
+
+\item[\textbf{7.}] Sei $a_1,a_2,\ldots, a_{2007}$ eine Folge, die jede der Zahlen $1,2,\ldots,2007$ genau einmal enthält. Es wird nun wiederholt folgender Operation ausgeführt: Ist das erste Folgeglied gleich $n$, dann wird die Reihenfolge der ersten $n$ Folgeglieder umgekehrt. Zeige, dass die Folge nach endlich vielen solchen Operation mit der Zahl $1$ beginnt.\\
+
+\textbf{1. Lösung} 
+
+Jede der Folgen ist eine Permutation von $1,2,\ldots,2007$. Da nur endlich viele solche Permutationen existieren und da jede Folge ihren Nachfolger bestimmt, müssen sich die Folgen ab einem bestimmten Zeitpunkt periodisch wiederholen. Nehme an, dass keine der Folgen mit einer $1$ beginnt und sei $N>1$ die grösste Zahl, die während einer Periode als erstes Folgeglied vorkommt. Dann enthält die Periode sicher zwei aufeinanderfolgende Folgen der Form
+\[N,a_2,a_3,\ldots,a_N,a_{N+1},\ldots,a_{2007}\qquad \mbox{und} \qquad  a_N,a_{N-1},\ldots,a_2,N,a_{N+1},\ldots,a_{2007}\]
+Nun bleibt aber die Zahl $N$ für immer an ihrer jetzigen Position, denn falls nicht, dann müsste eine der nächsten Folgen mit einer Zahl $>N$ beginnen, was nach Definition von $N$ aber absurd ist. Dies widerspricht aber der Periodizität der Operationen und die Annahme $N>1$ war demnach falsch.\\
+
+\textbf{2. Lösung} 
+
+Wir nehmen an, dass nie eine 1 am Anfang der Folge steht. Dann existiert eine Zahl $n_1 \geq 2$, mit der die Folge unendlich oft beginnt. Jedesmal wenn $n_1$ am Anfang der Folge steht, ist sie eine Operation später an der $n_1$-ten Stelle und kann nur dadurch wieder an den Anfang zurückkehren, indem vorher eine grössere Zahl als $n_1$ am Anfang der Folge stand. Da nur endlich viele solche Zahlen $\leq 2007$ existieren, muss es ein $n_2>n_1$ geben, das ebenfalls unendlich oft am Anfang der Folge steht. So weiterfahrend erhält man Zahlen $n_1<n_2<\ldots \leq 2007$, was offensichtlich absurd ist.\\
+
+
+\textbf{Bemerkung:} Ein direkter induktiver Zugang scheint hier nicht zu funktionieren. Man ist ja versucht, die grösste Zahl in der Folge einfach 'wegzulassen' und dann zu schauen was der Rest macht. Das Verhalten unter den Operationen kann sich dadurch aber entscheidend verändern. Man betrachte dazu die beiden Folgen $2,5,1,6,3,4$ und $2,5,1,3,4$ (hier ist einfach die $6$ entfernt). Die zweite Folge stabilisiert sich erst \emph{nach} der ersten!\\
+
+\bigskip
+
+\item[\textbf{8.}] Sei $ABCDE$ ein konvexes Fünfeck mit
+\[\angle BAC = \angle CAD = \angle DAE \qquad \mbox{und} \qquad \angle ABC = \angle ACD = \angle ADE.\]
+Die Diagonalen $BD$ und $CE$ treffen sich in $P$. Zeige, dass die Gerade $AP$ die Seite $CD$ in deren Mittelpunkt schneidet.
+
+\begin{figure}[h!]
+\centering
+\begin{minipage}[t]{11cm}
+\centering
+\includegraphics[width=9cm]{imoselektion_8}
+\end{minipage}
+\end{figure}
+
+\textbf{Lösung}
+
+Die Diagonalen $AC$ und $BD$ schneiden sich in $X$, die Diagonalen $AD$ und $CE$ schneiden sich in $Y$ und die Gerade $AP$ schneide $CD$ in $M$. Wir wollen $CM = MD$ beweisen. Die Idee ist als erstes zu zeigen, dass $XY$ und $CD$ parallel sind.\\
+Aus den gegebenen Winkelbeziehungen folgt, dass die Dreiecke $ABC$, $ACD$ und $ADE$ ähnlich sind. Daraus folgt
+$$ \frac{AB}{AC} = \frac{AC}{AD} = \frac{AD}{AE}. $$
+Wegen $\angle BAC = \angle CAE$ gilt auch $\angle BAD = \angle CAE$, woraus zusammen mit $AB/AC = AD/AE$ folgt, dass die Dreiecke $ABD$ und $ACE$ ebenfalls ähnlich sind. Die Winkelhalbierenden (als Strecken) dieser beiden Dreiecke sind $AX$ bzw. $AY$, woraus folgt
+$$ \frac{AB}{AX} = \frac{AC}{AY} \quad \Rightarrow \quad \frac{AX}{AY} = \frac{AB}{AC} = \frac{AC}{AD}. $$
+Es gilt also nach Strahlensatz $XY \parallel CD$. Wir wenden nun den Satz von Ceva im Dreieck $ACD$ an und erhalten
+$$ \frac{AX}{XC} \cdot \frac{CM}{MD} \cdot \frac{DY}{YA} = 1.$$
+Wegen $XY \parallel CD$ reduziert sich diese Gleichung auf $CM = MD$.
+
+\bigskip
+
+\item[\textbf{9.}] Bestimme alle natürlichen Zahlen $n$, für die genau eine ganze Zahl $a$ mit $0<a<n!$ existiert, sodass gilt
+\[n! \div a^n+1.\]
+
+\textbf{1. Lösung}
+
+Offensichtlich ist $n=2$ eine Lösung. Für $n \geq 4$ ist $n!$ durch 4 teilbar, und aus $n! \div a^n+1$ folgt daher $a^n \equiv 3$ (mod 4). Wegen $a^2 \not \equiv 3$ (mod 4) ist $n$ also ungerade.\\
+
+Für jede ungerade natürliche Zahl $n$ ist $a=n!-1$ eine Lösung, denn es gilt $a^n+1 \equiv (-1)^n+1 = -1+1=0$ (mod $n!$). Wir nehmen nun an, dass $n$ nicht prim ist und zeigen, dass $a=(n-1)!-1$ eine weitere Lösung ist. Es gilt dann nämlich $n \div (n-1)!$ und somit $n! \div ((n-1)!)^2$. Wir erhalten also
+\begin{eqnarray*}
+((n-1)!-1)^n+1 &=& \Big(\sum_{k=0}^n \binom{n}{k} (-1)^{n-k} ((n-1)!)^k\Big) +1\\
+&\equiv& (-1)^{n-1} \binom{n}{1}(n-1)! = n \cdot (n-1)! \equiv 0 \qquad (\mod n!),
+\end{eqnarray*}
+wie behauptet. Folglich können unter den ungeraden natürlichen Zahlen nur die Primzahlen die Bedingung der Aufgabe erfüllen.\\
+
+Wir zeigen nun umgekehrt, dass für $n$ prim nur die oben konstruierte Lösung $a=n!-1$ existiert. Nehme dazu an, für $a$ gelte $n! \div a^n+1$ und bezeichne mit $d$ die Ordnung von $a$ modulo $n!$ (beachte, dass $a$ teilerfremd zu $n$ ist). Nach Voraussetzung gilt $a^n \equiv -1$ und daher $a^{2n} \equiv 1$ (mod $n!$). Daraus folgt $d \notdiv n$ und $d \div 2n$. Ausserdem gilt sowieso $d \div \phi(n!)$ nach dem Satz von Euler-Fermat. Da $n$ prim ist, besitzt $\phi(n!)=\phi(n)\cdot \phi((n-1)!) = (n-1)\phi((n-1)!)$ nur Primteiler $<n$ und ist daher teilerfremd zu $n$. Damit folgt sogar
+\[d \div \ggT(2n,\phi(n!)) =2\]
+und wegen $d \notdiv n$ also $d=2$. Schliesslich erhalten wir mit $n=2k+1$ die Kongruenz
+\[-1 \equiv a^n =(a^2)^k \cdot a \equiv a \qquad (\mod n!),\]
+also ist $0<a<n!$ eindeutig bestimmt und jede ungerade Primzahl erfüllt die Bedingungen der Aufgabe.\\
+
+\bigskip
+
+\item[\textbf{10.}] Für eine natürliche Zahl $n$ sei
+\[f(n)=\frac{1}{n} \sum_{k=1}^n \left\lfloor \frac{n}{k} \right\rfloor.\]
+Beweise, dass es unendlich viele natürliche Zahlen $m$ gibt, für die die Ungleichung $f(m)<f(m+1)$ gilt, und dass es unendlich viele natürlichen Zahlen $m$ gibt, für die die Ungleichung $f(m)>f(m+1)$ gilt.\\
+
+\textbf{1. Lösung}
+
+Wir geben einen kombinatorischen Beweis. Dazu müssen wir zuerst eine geeignete Interpretation der Funktion $f$ finden. Für natürliche Zahlen $n,k$ ist $\big\lfloor \frac{n}{k} \big\rfloor$ gleich der Anzahl natürlicher Zahlen $\leq n$, die durch $k$ teilbar sind. Oder anders formuliert, gleich der Anzahl natürlicher Zahlen $\leq n$, die $k$ als Teiler besitzen. Bezeichnet $\tau(k)$ die Anzahl positiver Teiler von $k$, dann gilt demnach
+\begin{equation} \label{Teilersumme}
+\sum_{k=1}^n \left\lfloor \frac{n}{k} \right\rfloor = \sum_{k=1}^n \tau(k)
+\end{equation}
+und $f(n)$ ist daher die \emph{durchschnittliche Anzahl Teiler} aller natürlichen Zahlen $\leq n$. Mit Hilfe von (\ref{Teilersumme}) rechnet man leicht nach, was intuitiv klar ist, nämlich dass
+\[f(n)>f(n+1) \qquad \Longleftrightarrow \qquad f(n)>\tau(n+1),\]
+und analog für das umgekehrte Ungleichungszeichen.\\
+
+Nach dieses Vorbereitungen ist der Rest nun einfach. Einerseits gilt $\tau(n) \geq 2$ für alle $n \geq 2$ mit Gleichheit genau dann, wenn $n$ eine Primzahl ist. Ausserdem ist $f(6)>2$ und daher $f(n)>2$ für alle $n \geq 6$. Die Ungleichung $f(m)>\tau(m+1)$ ist also sicher für jede Primzahl $m+1\geq 7$ erfüllt, und von dieses gibt es unendlich viele.\\
+Andererseits ist die Ungleichung $f(m)<\tau(m+1)$ sicher immer dann erfüllt, wenn die Zahl $m+1$ mehr Teiler besitzt als alle natürlichen Zahlen $\leq m$. Davon gibt es aber auch unendlich viele, denn die Funktion $\tau$ ist nicht nach oben beschränkt, zum Beispiel ist $\tau(2^r)=r+1$.\\
+
+\textbf{2. Lösung}
+
+Diesmal mit algebraischen Methoden. Wir zeigen zuerst, dass die Funktion $f$ nicht nach oben beschränkt ist. Es gilt nämlich $\big\lfloor \frac{n}{k} \big\rfloor > \frac{n}{k}-1$ und somit
+\[f(n)= \frac{1}{n} \sum_{k=1}^n \left\lfloor \frac{n}{k} \right\rfloor > \frac{1}{n} \sum_{k=1}^n \Big(\frac{n}{k}-1\Big) = \Big(\sum_{k=1}^n \frac{1}{k}\Big) -1 = \frac{1}{2}+\frac{1}{3}+\ldots+\frac{1}{n}. \]
+Auf der rechten Seite steht nun die harmonische Reihe, die bekanntlich divergiert. Genauer gilt für $n=2^m$ die Abschätzung
+\begin{eqnarray*}
+\frac{1}{2}+\frac{1}{3}+\ldots+\frac{1}{2^m} &>& \frac{1}{2} + \Big(\frac{1}{4}+\frac{1}{4}\Big) + \Big(\frac{1}{8}+\frac{1}{8}+\frac{1}{8}+\frac{1}{8}\Big) + \ldots + \Big(\frac{1}{2^m}+\ldots +\frac{1}{2^m}\Big)\\
+&=& \frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\ldots +\frac{1}{2}= \frac{m}{2}.
+\end{eqnarray*}
+Somit ist $f$ also wirklich nicht nach oben beschränkt und insbesondere existieren unendlich viele natürlichen Zahlen $n$ mit $f(n)<f(n+1)$.\\
+Wir zeigen nun, dass auch die umgekehrte Ungleichung unendlich oft gilt. Zuerst bemerken wir, dass genau dann $\big\lfloor \frac{n+1}{k} \big\rfloor = \big\lfloor \frac{n}{k} \big\rfloor$ gilt, wenn $n+1$ nicht durch $k$ teilbar ist. Ausserdem zeigt obige Abschätzung, dass $f(n)>2$ ist für alle $n\geq 16$. Sei nun $n+1\geq 17$ eine Primzahl, dann gilt
+\begin{eqnarray*}
+n(n+1)f(n) &=& (n+1)\sum_{k=1}^n \left\lfloor \frac{n}{k} \right\rfloor \stackrel{(*)}{>} n\sum_{k=1}^n \left\lfloor \frac{n}{k} \right\rfloor +2n\\
+&=& n\Big(\sum_{k=1}^n \left\lfloor \frac{n}{k} \right\rfloor+2\Big) = n\sum_{k=1}^{n+1} \left\lfloor \frac{n}{k} \right\rfloor =n(n+1)f(n+1),
+\end{eqnarray*}
+wobei wir bei (*) $f(n)>2$ verwendet haben. Weil es unendlich viele Primzahlen $\geq 17$ gibt, ist damit alles bewiesen.\\
+
+\bigskip
+
+
+\item[\textbf{11.}] Finde alle Funktionen $f:\BR^+ \rightarrow \BR^+$, sodass für alle $x,y>0$ gilt
+\[f(x^y)=f(x)^{f(y)}.\]
+
+\textbf{1. Lösung}
+
+Die konstante Funktion $f(x)=1$ für alle $x>0$ ist offensichtlich eine Lösung der Gleichung. Wir nehmen nun an, dass $f$ nicht konstant gleich 1 ist und wählen ein $a>0$ mit $f(a) \neq 1$. Nach den Potenzgesetzen gilt für alle $x,y>0$
+\[f(a)^{f(xy)}=f(a^{xy})=f((a^x)^y)=f(a^x)^{f(y)}=(f(a)^{f(x)})^{f(y)}=f(a)^{f(x)f(y)},\]
+wegen $f(a) \neq 1$ also $f(xy)=f(x)f(y)$. Unter Verwendung dieser Gleichung bei (*) folgt wiederum nach den Potenzgesetzen für alle $x,y>0$
+\[f(a)^{f(x+y)}=f(a^{x+y})=f(a^x\cdot a^y) \stackrel{(*)}{=} f(a^x)\cdot f(a^y)=f(a)^{f(x)}\cdot f(a)^{f(y)}=f(a)^{f(x)+f(y)},\]
+also wegen $f(a)\neq 1$ die Gleichung $f(x+y)=f(x)+f(y)$. Wir zeigen nun, dass die einzigen additiven Funktionen $f: \BR^+ \rightarrow \BR^+$ die linearen $f(x)=cx$ sind (wobei natürlich $c>0$ gilt).   
+
+Zuerst folgt aus der Additivität mit Induktion die Gleichung $f(nx)=nf(x)$ für alle natürlichen Zahlen $n$ und alle reellen $x>0$. Daraus ergibt sich wiederum $f(r)=ar$ für alle rationalen Zahlen $r>0$ und $c=f(1)>0$. Da $f$ nun nur positive Werte annimmt, ist $f$ streng monoton steigend, denn für $0<u<v$ gilt $f(v)=f(u)+f(v-u)>f(u)$. Sei nun $x>0$ und $x>\eps>0$ beliebig. Wähle rationale Zahlen $r,s$ mit $x-\eps<r<x<b<s+\eps$, dann folgt aus dem schon Bewiesenen 
+\[c(x-\eps)<cr=f(r)<f(x)<f(s)=cs<c(x+\eps).\]
+Da dies für beliebig kleine $\eps>0$ gilt, folgt $f(x)=cx$ wie behauptet.
+
+Schliesslich ist eine lineare Funktion $f(x)=cx$ genau dann multiplikativ, wenn $c=1$ ist. Wir erhalten also die beiden Lösungen $f(x)=1$ und $f(x)=x$.\\
+
+\textbf{2. Lösung}
+
+Wir nehmen wieder $f\neq 1$ an und wählen ein $a>0$ mit $f(a)\neq 1$. Wegen $f(1)=f(1)^{f(1)}$ gilt $f(1)=1$ und somit $a \neq 1$. Wie in der ersten Lösung zeigt man, dass $f$ multiplikativ ist. Wir zeigen nun, dass der Graph von $f$ \textit{nicht dicht} liegt in $\BR^+ \times \BR^+$. Dazu nehmen wir zuerst an, es sei $f(a)>1$. Für alle $y>0$ gilt dann $f(a^y)=f(a)^{f(y)}>1$. Da $a^y$ für $y>0$ alle Zahlen im Intervall $]0,1[$ beziehungsweise $]1,\infty[$ durchläuft, je nachdem ob $a<1$ oder $a>1$ ist, enthält der Graph von $f$ entweder keinen Punkt aus dem Rechteck $]0,1[ \times ]0,1]$ oder keinen Punkt aus dem Rechteck $]1,\infty[ \times ]0,1]$. In beiden Fällen liegt er nicht dicht. Völlig analog behandelt man den Fall $f(a)<1$. Jetzt können wir das folgende wohlbekannte Resultat anwenden:
+
+\begin{lem}
+Sei $f:\BR^+ \rightarrow \BR^+$ eine Funktion mit $f(xy)=f(x)f(y)$ für alle $x,y>0$, dann gilt genau einer der folgenden Fälle:
+\begin{enumerate}
+\item[\emph{(a)}] Es existiert eine reelle Konstante $c$ mit $f(x)=x^c$ für alle $x>0$.
+\item[\emph{(b)}] Der Graph von $f$ liegt dicht in $\BR^+ \times \BR^+$.
+\end{enumerate}
+\end{lem} 
+
+Folglich ist also $f(x)=x^c$ mit einer reellen Konstante $c\neq 0$ (wir haben $f \neq 1$ angenommen). Einsetzen ergibt die Gleichung $x^{cy}=x^{cy^c}$ für alle $x,y>0$. Mit $x=y=2$ folgt daraus $c=1$ und die einzige Lösung dieser Form ist die Identität $f(x)=x$.\\
+
+\bigskip
+
+\item[\textbf{12.}] Im Dreieck $ABC$ sei $J$ der Mittelpunkt des Ankreises, welcher die Seite $BC$ in $A_1$ und die Verlängerungen der Seiten $AC$ und $AB$ in $B_1$ bzw. $C_1$ berührt. Die Gerade $A_1B_1$ schneide die Gerade $AB$ rechtwinklig in $D$. Sei $E$ die Projektion von $C_1$ auf die Gerade $DJ$. Bestimme die Grösse der Winkel $\angle BEA_1$ und $\angle AEB_1$.\\
+
+\textbf{1. Lösung}
+
+Wir zeigen zuerst, dass die Punkte $C_1,E,C$ auf einer Geraden liegen, indem wir $C_1C \bot DJ$ zeigen. Sei $K$ der Schnittpunkt von $JC$ und $A_1B_1$. Weil $CB_1$ und $CA_1$ tangential zum Ankreis liegen, gilt $JC \bot A_1B_1$ und wegen $\angle KDC_1 = \angle DC_1J = 90^\circ$ ist $DC_1JK$ ein Rechteck. Weil $CJB_1$ ein rechtwinkliges Dreieck ist, erhalten wir 
+$$JC_1^2 = JB_1^2 = JC \cdot JK = JC \cdot C_1D \quad \Rightarrow \quad \frac{JC_1}{JC} = \frac{C_1D}{C_1J}.$$
+Also sind die beiden rechtwinkligen Dreiecke $CC_1J$ und $JDC_1$ ähnlich und wir erhalten $\angle C_1DJ = \angle JC_1C$, woraus $C_1C \bot DJ$ folgt. Somit liegen die Punkte $C_1,E,C$ auf einer Geraden.\\
+Wegen $\angle CA_1J = \angle CB_1J = \angle CEJ = 90^\circ$ liegen die Punkte $A_1,B_1$ und $E$ auf dem Thaleskreis über $CJ$. Wir haben nun
+$$ \angle DBA_1 = 90^\circ - \angle KA_1C = \angle A_1CJ = 180^\circ - \angle A_1EJ = \angle DEA_1. $$
+Daraus folgt, dass $BEA_1D$ ein Sehnenviereck ist und wir finden $\angle BEA_1 = 90^\circ$.\\
+Das Viereck $ADEB_1$ ist ebenfalls ein Sehnenviereck, denn $\angle EB_1A = \angle EJC = \angle EDC_1$. Somit erhalten wir $\angle AEB_1 = \angle ADB_1 = 90^\circ$.
+
+\begin{figure}[h!]
+\centering
+\begin{minipage}[t]{9cm}
+\centering
+\includegraphics[width=9cm]{imoselektion_12}
+\end{minipage}
+\end{figure}
+
+\textbf{2. Lösung}
+
+Seien $k_1,k_2$ und $k_3$ die Kreise mit Durchmesser $C_1D, A_1B$ bzw. $AB_1$. Die Geraden $JC_1, JA_1$ und $JB_1$ liegen tangential an $k_1,k_2$ bzw. $k_3$. Wegen des rechten Winkels bei $D$ schneiden sich $k_2$ und $k_3$ in $D$. Da $\angle C_1ED = 90^\circ$ ist, liegt $E$ auf $k_1$ und es gilt nach Potenzsatz
+$$ JC_1^2 = JD \cdot JE. $$
+Weil $JA_1 = JB_1 = JC_1$ gleich dem Radius des Ankreises sind, gilt ebenfalls
+$$ JA_1^2 = JD \cdot JE \quad \text{und} \quad JB_1^2 = JD \cdot JE. $$
+Aus diesen Gleichungen folgt, dass der Punkt $E$ auch auf den Kreisen $k_2$ und $k_3$ liegt und somit erhalten wir $\angle BEA_1 = \angle AEB_1 = 90^\circ$.
+
+
+\end{enumerate}
+\end{document}

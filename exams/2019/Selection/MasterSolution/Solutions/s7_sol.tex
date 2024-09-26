@@ -1,0 +1,68 @@
+Prove that for all positive integers $n$, there exist two integers $a$ and $b$ such that
+\[
+n\div 4a^2+9b^2-1.
+\]
+
+\textbf{Première solution:} (Arnaud)
+
+On va essayer de construire $a$ et $b$ étant donné $n$. Soit donc $n\geq 1$ un entier. Si $\gcd(n,2)=1$, alors il suffit de prendre $a\equiv 2^{-1}\pmod n$ et $b=0$. Si $\gcd(n,3)=1$, alors de même on prend $a=0$ et $b\equiv 3^{-1}\pmod n$. On comprend à présent comment la solution générale fonctionne.
+
+Écrivons $n=2^\alpha 3^\beta k$ avec $\gcd(k,6)=1$. On choisit $a$ et $b$ comme solutions aux systèmes de congruences suivants (qui existent par le théorème des restes chinois):
+\[
+\left\{\begin{array}{ll}
+a\equiv 0 &\pmod{k},\\
+a\equiv 0 &\pmod{2^\alpha},\\
+a\equiv 2^{-1} &\pmod{3^\beta},\end{array}\right.\quad
+\left\{\begin{array}{ll}
+b\equiv 3^{-1}&\pmod{k},\\
+b\equiv 3^{-1}&\pmod{2^\alpha},\\
+b\equiv 0&\pmod{3^\beta}.\end{array}\right.
+\]
+
+\textbf{Zweite Lösung:} (Paul)
+
+Wir bemerken, dass $4a^2 + 9b^2 - 1 = (2a + 3b)^2 - 12ab - 1$ gilt. Mit dem Satz von Bézout könnten wir nun, da $2$ und $3$ teilerfremd sind, ganze Zahlen $a,b$ finden mit $2a + 3b = 1$. Dann müsste nur noch der Term $12ab$ durch $n$ teilbar sein, was aber nicht immer gilt. Die Idee lässt sich aber retten: Wir schreiben $n = 2^k m$ mit $m$ ungerade und setzen $a = 2^k x$ und $b = my$. Dann brauchen wir $x,y$ mit
+\[
+n \mid (2^{k+1}x + 3my)^2 - 12\cdot 2^k mxy - 1 \iff n\mid (2^{k+1}x + 3my)^2 - 1.
+\]
+Wegen $\ggT(2^{k+1}, 3m) = 1$ ist dies aber dank dem Satz von Bézout möglich.
+
+
+\textbf{Dritte Lösung:} (Linus, geschrieben von Paul)
+Fixiere $n$, nach dem Satz von Dirichlet gibt es eine Primzahl $p>n$ sodass $p\equiv5\pmod {12}$. Dann ist auch $p\equiv 1\pmod 4$, also gibt es nach dem Zwei-Quadrate-Satz $x,y$ mit $p=x^2+y^2$. Zudem gilt $p\equiv 2\pmod 3$, daher können $x$ und $y$ nicht durch $3$ teilbar sein, denn Quadrate sind modulo $3$ immer kongruent zu $0$ oder $1$. Setzen wir nun 
+\[
+\alpha=xy \text{ und } \beta=\frac{x^2-y^2}{3},
+\]
+dann gilt $4\alpha^2+9\beta^2=p^2$. Wähle nun $c$ sodass $pc\equiv 1\mod n$, welches wegen $p>n$, also $\ggT(p,n)=1$, existiert. Dann setzen wir $a=\alpha c,\ b=\beta c$. Es folgt 
+\[
+4a^2+9b^2-1=p^2c^2-1=(pc-1)(pc+1)
+\]
+und somit $n|4a^2+9b^2-1$.
+
+\newpage
+\textbf{Marking Scheme:}
+
+\begin{itemize}
+    \item Première solution:
+    \begin{itemize}
+    \item +2P: un des cas $\gcd(2,n)=1$ ou $\gcd(3,n)=1$
+    \item +1P: tentative concrète d'appliquer le théorème des restes chinois
+    \item +4P: conclure
+    \end{itemize}
+    
+    \item Deuxième solution:
+    \begin{itemize}
+    \item +1P: obtenir une identité du type $4a^2+9b^2=(2a\pm 3b)^2\mp 12ab$
+    \item +1P: tentative concrète d'appliquer ensuite Bézout
+    \item +5P: conclure
+    \end{itemize}
+    
+    \item Troisième solution:
+    \begin{itemize}
+    \item +2P: résoudre un cas $\gcd(n,p)=1$ avec $p>3$ (eg. $p=5$ en posant $a=2b$)
+    \item +1P: tentative concrète d'écrire $4a^2+9b^2$ comme un carré
+    \item +4P: conclure
+    \end{itemize}
+    
+
+\end{itemize}

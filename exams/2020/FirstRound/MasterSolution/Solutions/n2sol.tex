@@ -1,0 +1,97 @@
+\de{
+Sei $p$ eine Primzahl und $a,b,c$ und $n$ positive ganze Zahlen mit $a,b,c<p$, sodass die drei folgenden Aussagen gelten:
+\[
+p^2 \mid a + (n-1)\cdot b, \qquad p^2 \mid b + (n-1)\cdot c, \qquad p^2 \mid c + (n-1)\cdot a.
+\]
+Zeige, dass $n$ keine Primzahl ist.
+
+\textbf{1. Lösung (Louis):}
+Der wichtigste Schritt ist, die drei Bedingungen zu addieren. Wir erhalten:
+\[
+    p^2 \mid \big{(}a + (n-1)\cdot b \big{)} + \big{(}b + (n-1)\cdot c\big{)} +  \big{(}c + (n-1)\cdot a\big{)} = n\cdot (a+b+c).
+\]
+Da $a, b, c < p$, haben wir $a+b+c \leq 3p-3 < 3p$ und falls $p \geq 3$, folgt $a+b+c < p^2$. Nun teilt $p^2$ nicht $a+b+c$ und somit $p\mid n$. Wir schreiben nun $n = k\cdot p$ (somit ist $n$ eine Primzahl nur falls $k = 1$). Aus der ersten Bedingung folgt, dass $p^2 \mid a + (kp-1)\cdot b = a - b + kpb$. Wir müssen also $p\mid a-b$ haben und weil $a, b$ beide strikt zwischen $0$ und $p$ liegen, ist die einzige Möglichkeit $a = b$. Abermals aus der ersten Bedingung folgt nun $p^2 \mid a + nb - b = nb$ und da $b$ teilerfremd zu $p$ ist (weil $b < p$), gilt $p^2 \mid n$, also ist $n$ keine Primzahl.
+
+Da wir am Anfang angenommen haben, dass $p\geq 3$, müssen wir nun noch den Fall $p=2$ betrachten. Hier müssen wir $a=b=c=1$ nehmen und somit gilt abermals $a=b$ und wir beenden den Beweis wie zuvor.
+
+\textbf{2. Lösung (David):}
+Wie in der ersten Lösung zeigen wir zuerst $p\mid n$. Daraus folgt, dass $n$ nur eine Primzahl sein kann, falls $n=p$ gilt. Nehme also an, es gelte $n=p$. Aus der ersten Teilbarkeitsbedingung erhalten wir $p^2 \leq a + (n-1)\cdot b$. Andererseits gilt wegen $a, b < p$ auch $a +  (n-1) \cdot b = a + (p-1)\cdot b < p + (p-1)\cdot p = p^2$. Wir erhalten also insgesamt $p^2 < p^2$ und damit einen Widerspruch.
+
+Wie in der vorigen Lösung müssen wir noch $p=2$ separat betrachten. Dies funktioniert aber genau gleich wie in der ersten Lösung..
+
+\textbf{Marking Scheme:}
+\begin{itemize}
+    \item 2P: Beweis, dass $p^2 \mid n\cdot (a+b+c)$.
+    \item +2P : Beweis, dass $p \mid n$.
+    \item +2P : Beweis, dass $a = b$ \textbf{oder} dass $a+(n-1)b < p^2$ gilt (oder eine andere Beobachtung, die den Beweis einfach vervollständigt).
+    \item +1P : Den Beweis beenden.
+\end{itemize}
+
+Es wird $1$ Punkt subtrahiert, falls der Beweis eine endliche Anzahl $p$ nicht berücksichtigt.
+}
+
+\fr{Soit $p$ un nombre premier et soient $a$, $b$, $c$ et $n$ des entiers strictement positifs tels que $a, b, c < p$ et tels que les trois relations suivantes soient satisfaites:
+\[
+p^2 \mid a + (n-1)\cdot b, \qquad p^2 \mid b + (n-1)\cdot c, \qquad p^2 \mid c + (n-1)\cdot a.
+\]
+Montrer que $n$ n'est pas un nombre premier.
+
+
+\textbf{Solution 1 (Louis):}
+L'idée importante ici est d'additionner les trois relations de divisibilité. On obtient alors
+\[
+    p^2 \mid \big{(}a + (n-1)\cdot b \big{)} + \big{(}b + (n-1)\cdot c\big{)} +  \big{(}c + (n-1)\cdot a\big{)} = n\cdot (a+b+c).
+\]
+De plus, puisque $a, b, c < p$ on a $a+b+c \leq 3p-3 < 3p$ et donc si $p \geq 3$ on obtient $a+b+c < p^2$. On en déduit en particulier que $p^2$ ne divise pas $a+b+c$ et donc il faut que $p\mid n$. On écrit donc $n = k\cdot p$ (et alors $n$ est un nombre premier si et seulement si $k = 1$). En utilisant la première relation on obtient $p^2 \mid a + (kp-1)\cdot b = a - b + kpb$. En particulier il faut donc que $p\mid a-b$, et puisque $a, b$ sont tous les deux strictement inclus entre $0$ et $p$ la seule possibilité est $a = b$. En utilisant une dernière fois la première relation on obtient désormais $p^2 \mid a + nb - b = nb$ et puisque $b$ est premier avec $p$ (car $b < p$), il s'ensuit que $p^2 \mid n$, autrement dit $n$ n'est pas un nombre premier.
+
+À ce moment il est important de relire la solution et de constater que pour le moment on a seulement une solution pour $p\geq 3$ et qu'il manque encore le cas $p=2$. Dans ce cas on a automatiquement $a=b=c=1$, et donc en remplaçant dans la première relation de divisibilité on obtient directement $p^2 \mid n$ et donc $n$ n'est pas un nombre premier.
+
+\textbf{Solution 2 (David):}
+Comme dans la solution précédente on commence par prouver que $p\mid n$. À partir de là $n$ peut être un nombre premier uniquement si $n=p$. On suppose donc par l'absurde que $n=p$. Si on regarde la première relation de divisibilité, on a nécessairement $p^2 \leq a + (n-1)\cdot b$. Or, puisque $a, b < p$ on a d'autre part $a +  (n-1) \cdot b = a + (p-1)\cdot b < p + (p-1)\cdot p = p^2$. Autrement dit, on obtient donc $p^2 < p^2$, ce qui donne la contradiction désirée.
+
+Comme dans la précédente solution il faut encore considérer le cas $p=2$. La même preuve que précédemment permet de finir l'exercice.
+
+\textbf{Marking Scheme:}
+\begin{itemize}
+    \item 2P: Prouver que $p^2 \mid n\cdot (a+b+c)$.
+    \item +2P : Prouver que $p \mid n$.
+    \item +2P : Prouver que $a = b$ \textbf{ou} que $a+(n-1)b < p^2$ (ou toute autre observation qui permet de facilement terminer la preuve)
+    \item +1P : Conclure.
+\end{itemize}
+
+Une pénalité de 1 point sera appliquée aux solutions qui fonctionnent pour tous les nombres premiers sauf un nombre fini d'entre eux.
+}
+
+\ita{}
+
+\en{
+Let $p$ be a prime number and $a$, $b$, $c$ and $n$ positive integers with $a, b, c<p$ such that the three assertions
+\[
+p^2 \mid a + (n-1)\cdot b, \qquad p^2 \mid b + (n-1)\cdot c, \qquad p^2 \mid c + (n-1)\cdot a.
+\]
+hold. Show that $n$ is not a prime number.
+
+\textbf{Solution 1 (Louis):}
+The key idea here is to sum the three divisibility statements. We obtain:
+\[
+    p^2 \mid \big{(}a + (n-1)\cdot b \big{)} + \big{(}b + (n-1)\cdot c\big{)} +  \big{(}c + (n-1)\cdot a\big{)} = n\cdot (a+b+c).
+\]
+As $a, b, c < p$ we have that $a+b+c \leq 3p-3 < 3p$ and so if $p \geq 3$ we obtain $a+b+c < p^2$. In particular, $p^2$ does not divide $a+b+c$ and so forcibly $p\mid n$. Consequently, we write $n = k\cdot p$ (and so $n$ is a prime number if and only if $k = 1$). Using the first statment, we have that $p^2 \mid a + (kp-1)\cdot b = a - b + kpb$. Notably, we must have that $p\mid a-b$, and as $a, b$ are both strictly between $0$ and $p$ the only possibility is $a = b$. Using the first statement again we see that $p^2 \mid a + nb - b = nb$ and since $b$ is coprime with $p$ (as $b < p$), it follows that $p^2 \mid n$, implying $n$ is not a prime number.
+
+At this stage it is important to note that we stated at the start $p\geq 3$ and so we should also treat the case $p=2$. Here, we have no choice but to take $a=b=c=1$, and so substituting in the first divisibility relation yields directly $p^2 \mid n$, implying that $n$ is not a prime number.
+
+\textbf{Solution 2 (David):}
+As in the previous solution we first prove that $p\mid n$. From this it follows that $n$ can be a prime number only if $n=p$. We therefore assume by contradiction that $n=p$. If we look at the first divisibility relation we necessarily have $p^2 \leq a + (n-1)\cdot b$. On the other hand, as $a, b < p$ it follows that $a +  (n-1) \cdot b = a + (p-1)\cdot b < p + (p-1)\cdot p = p^2$. Therefore, $p^2 < p^2$, yielding the desired contradiction.
+
+As in the previous solution we still need to treat the case $p=2$. The same proof as before concludes the exercise.
+
+\textbf{Marking Scheme:}
+\begin{itemize}
+    \item 2P: Proving that $p^2 \mid n\cdot (a+b+c)$.
+    \item +2P : Proving that $p \mid n$.
+    \item +2P : Proving that $a = b$ \textbf{or} that $a+(n-1)b < p^2$ (or any other observation after which the proof is easily finished).
+    \item +1P : Finish the proof.
+\end{itemize}
+
+1 point will be deducted if the solution is correct notwithstanding a finite amount of prime numbers $p$ not being covered.
+}

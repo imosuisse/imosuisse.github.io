@@ -1,0 +1,155 @@
+%& -job-name=finalrunde_2016_de-2
+
+% ^^^^^^^ change the last bit to e.g. de-2 for second day, german ^^^^^^^^ 
+
+\documentclass[language=german,style=exam]{smo} %language is irrelevant in this case
+
+\StrRight{\jobname}{4}[\mystring]
+\IfSubStr*{\mystring}{fr}{\germanfalse \frenchtrue \italianfalse}{}
+\IfSubStr*{\mystring}{de}{\germantrue \frenchfalse \italianfalse}{}
+\IfSubStr*{\mystring}{it}{\germanfalse \frenchfalse \italiantrue}{}
+
+\StrRight{\jobname}{1}[\day]
+
+\examtime{\translation{4 Stunden}{4 heures}{???}}
+\examdate{
+\translation{
+    \IfStrEq*{\day}{1}{11. März 2016}{}
+    \IfStrEq*{\day}{2}{12. März 2016}{}}
+{
+    \IfStrEq*{\day}{1}{11 mars 2016}{}
+    \IfStrEq*{\day}{2}{12 mars 2016}{}}
+{}
+}
+
+\title{\translation
+    {SMO - Finalrunde}
+    {OSM - Tour final}
+    {???}
+}
+\examplace{\translation
+    {\day. Prüfung }
+    {\IfStrEq*{\day}{1}{Premier}{Deuxième} examen}
+    {}
+}
+
+\begin{document}
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+
+\begin{problemday}
+
+%1
+\item\translation
+{Sei $ABC$ ein Dreieck mit $\angle BAC=60^\circ$. Sei $E$ der Punkt auf der Seite $BC$, sodass $2 \angle BAE=\angle ACB$ gilt. Sei $D$ der zweite Schnittpunkt von $AB$ und dem Umkreis des Dreiecks $AEC$ und sei $P$ der zweite Schnittpunkt von $CD$ und dem Umkreis des Dreiecks $DBE$.
+Berechne den Winkel $\angle BAP$.}
+{Soit $ABC$ un triangle avec $\angle BAC=60^\circ$. Soit $E$ le point sur le côté $BC$ tel que $2 \angle BAE=\angle ACB$. Soit $D$ la deuxième intersection de $AB$ avec le cercle circonscrit au triangle $AEC$ et soit $P$ la deuxième intersection de $CD$ avec le cercle circonscrit au triangle $DBE$.
+Calculer la mesure de l'angle $\angle BAP$.}
+{}
+
+\bigskip\bigskip
+
+\item\translation
+{Seien $a,b$ und $c$ die Seiten eines Dreiecks, das heisst: $a+b > c,\, b+c > a$ und $c+a > b$.\\
+Zeige, dass gilt: 
+\[
+\frac{ab+1}{a^2+ca+1}+\frac{bc+1}{b^2+ab+1}+\frac{ca+1}{c^2+bc+1}>\frac{3}{2}.
+\]}
+{Soient $a,b$ et $c$ les côtés d'un triangle, ce qui signifie: $a+b > c,\, b+c > a$ et $c+a > b$.\\
+Montrer que 
+\[
+\frac{ab+1}{a^2+ca+1}+\frac{bc+1}{b^2+ab+1}+\frac{ca+1}{c^2+bc+1}>\frac{3}{2}.
+\]}
+{}
+
+\bigskip\bigskip
+
+\item\translation
+{Finde alle natürlichen Zahlen $n$, für welche Primzahlen $p,q$ existieren, sodass gilt:
+\[
+p(p + 1) + q(q +1) = n(n + 1).
+\]}
+{Déterminer tous les nombres naturels $n$ pour lesquels il existe des nombres premiers $p,q$ tels que l'équation suivante est vérifiée
+\[
+p(p + 1) + q(q +1) = n(n + 1).
+\]}
+{}
+
+\bigskip\bigskip
+
+\item\translation
+{In der Ebene liegen 2016 verschiedene Punkte. Zeige, dass zwischen diesen Punkten mindestens $45$ verschiedene Distanzen auftreten.}
+{On considère 2016 points distincts dans le plan. Montrer qu'il existe au moins $45$ distances différentes entre ces points.}
+{}
+
+\bigskip\bigskip
+
+\item\translation
+{Sei $ABC$ ein rechtwinkliges Dreieck mit $\angle ACB = 90^\circ$ und $M$ der Mittelpunkt von $AB$. Sei $G$ ein beliebiger Punkt auf der Strecke $MC$ und $P$ ein Punkt auf der Geraden $AG$, sodass $\angle CPA = \angle BAC$ gilt. Weiter sei $Q$ ein Punkt auf der Geraden $BG$, sodass $\angle BQC = \angle CBA$ gilt. Zeige, dass sich die Umkreise der Dreiecke $AQG$ und $BPG$ auf der Strecke $AB$ schneiden.}
+{Soit $ABC$ un triangle rectangle en $C$ et $M$ le milieu de $AB$. Soit $G$ un point situé sur le segment $MC$ et $P$ un point sur la droite $AG$ tel que $\angle CPA = \angle BAC$. De plus, soit $Q$ un point sur la droite $BG$ tel que $\angle BQC = \angle CBA$. Montrer que les cercles circonscrits aux triangles $AQG$ et $BPG$ se coupent sur le segment $AB$.}
+{Let G be the centroid of a right-angled triangle ABC with $\angle BCA = 90^\circ$. Let P be the point on ray AG such that $\angle CPA = \angle CAB$, and let Q be the point on ray BG such that $\angle CQB = \angle ABC$. Prove that the circumcircles of triangles AQG and BPG meet at a point on side AB.}
+
+\end{problemday}
+
+\begin{problemday}
+
+\item\translation
+{Sei $a_n$ eine Folge natürlicher Zahlen definiert durch $a_1 = m$ und $a_n = a^2_{n-1}+1$ für $n>1$. Ein Paar $(a_k, a_l)$ nennen wir \emph{interessant}, falls
+\begin{itemize}
+\item[(i)] $0<l-k<2016$,
+\item[(ii)] $a_k$ teilt $a_l$.
+\end{itemize}
+Zeige, dass ein $m$ existiert, sodass die Folge $a_n$ kein interessantes Paar enthält.}
+{Soit $a_n$ une suite de nombres naturels définie par $a_1 =m$ et $a_n=a^2_{n-1}+1$ pour $n>1$. Une paire $(a_k,a_l)$ est appelée \emph{intéressante} si
+\begin{itemize}
+\item[(i)] $0<l-k<2016$
+\item[(ii)] $a_k$ divise $a_l$.
+\end{itemize}
+Montrer qu'il existe un $m$ tel qu'il n'existe pas de paires intéressantes pour la suite $a_n$.}
+{}
+
+\bigskip\bigskip
+
+\item\translation
+{Auf einem Kreis liegen $2n$ verschiedene Punkte. Die Zahlen $1$ bis $2n$ werden zufällig auf diese Punkte verteilt. Jeder Punkt wird mit genau einem anderen Punkt verbunden, sodass sich keine der entstehenden Verbindungsstrecken schneiden. Verbindet eine Strecke die Zahlen $a$ und $b$, so weisen wir der Strecke den Wert $\abs{a-b}$ zu. Zeige, dass wir die Strecken so wählen können, dass die Summe dieser Werte $n^2$ ergibt.}
+{On considère $2n$ points différents sur un cercle. Les nombres $1$ à $2n$ sont répartis au hasard sur ces points. Chaque point est relié à exactement un autre point, de telle manière que les segments concernés ne se coupent pas. Le segment reliant les nombres $a$ et $b$ se voit assigner la valeur $\abs{a-b}$. Montrer que l'on peut relier les points sans croisement de telle manière que la somme des valeurs soit $n^2$.}
+{}
+
+\bigskip\bigskip
+
+\item\translation
+{Sei $ABC$ ein spitzwinkliges Dreieck mit Höhenschnittpunkt $H$. Sei $G$ der Schnittpunkt der Parallelen von $AB$ durch $H$ und der Parallelen von $AH$ durch $B$. Sei $I$ der Punkt auf der Geraden $GH$, sodass $AC$ die Strecke $HI$ halbiert. Sei $J$ der zweite Schnittpunkt von $AC$ und dem Umkreis des Dreiecks $CGI$. Zeige, dass $IJ=AH$ gilt.}
+{Soit $ABC$ un triangle aigu et soit $H$ son orthocentre. Soit $G$ l'intersection de la parallèle à $AB$ passant par $H$ avec la parallèle à $AH$ passant par $B$. Soit $I$ le point sur la droite $GH$ tel que $AC$ coupe le segment $HI$ en son milieu. Soit $J$ la deuxième intersection de $AC$ avec le cercle circonscrit au triangle $CGI$. Montrer que $IJ=AH$.}
+{}
+
+\bigskip\bigskip
+
+\item\translation
+{Sei $n \geq 2$ eine natürliche Zahl. Für eine $n$-elementige Teilmenge $F$ von $\{1, \ldots, 2n\}$ definieren wir $m(F)$ als das Minimum aller $\kgV{(x,y)}$, wobei $x$ und $y$ zwei verschiedene Elemente von $F$ sind. Bestimme den maximalen Wert von $m(F)$.}
+{Soit $n \geq 2$ un nombre naturel. Pour un sous-ensemble $F$ à $n$ éléments de $\{1, \ldots, 2n\}$, on définit $m(F)$ comme le minimum de tous les $\kgV{(x,y)}$, où $x$ et $y$ sont deux éléments distincts de $F$. Trouver la valeur maximale que peut prendre $m(F)$.}
+{}
+
+\bigskip\bigskip
+
+\item\translation
+{Finde alle Funktionen $f\colon\R\to\R$, sodass für alle $x,y\in\R$ gilt:
+\[
+f(x+yf(x+y))=y^2+f(xf(y+1)).
+\]}
+{Trouver toutes les fonctions $f\colon\R\to\R$ telles que pour tous $x,y\in\R$ on ait
+\[
+f(x+yf(x+y))=y^2+f(xf(y+1)).
+\]}
+{}
+
+\end{problemday}
+
+\end{enumerate}
+
+\bigskip
+
+\vspace{1cm}
+
+\center{\translation{Viel Glück!}{Bonne chance!}{Buona fortuna!}}
+
+\end{document}

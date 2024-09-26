@@ -1,0 +1,35 @@
+On définit la suite $(a_n)_{n\geq 0}$ de nombres entiers par $a_n:=2^n+2^{\floor{n/2}}$. Montrer qu'il existe une infinité de termes de la suite pouvant être exprimés comme la somme d'au moins deux termes distincts de la suite, de même qu'il existe une infinité de termes de la suite ne pouvant pas s'écrire de la sorte.
+
+\textbf{Solution:} (Louis)
+
+On appelle un nombre entier $n$ \emph{exprimable} s'il peut être écrit comme une somme de au moins deux $a_k$.
+
+On calcule tout d'abord la somme de tous les termes $a_i$ jusqu'à un certain indice $n$:
+\[
+    S_n = \sum_{i=0}^n{a_i} = 2^{n+1} + 2^{\lceil\frac{n+1}{2}\rceil} + 2^{\floor{\frac{n+1}{2}}} -3 < a_{n+2}
+\]
+donc si $a_n$ est exprimable le terme $a_{n-1}$ doit apparaître dans sa somme.\\
+Une observation apparemment triviale mais qui va beaucoup nous aider pour la suite est que un nombre $b < S_n$ est exprimable si et seulement si $S_n - b$ est exprimable.
+
+On observe que pour tout nombre entier $n$,
+\[
+    a_{2n} = 2 a_{2n-1}.
+\]
+Ainsi en particulier si $a_{2n-1}$ est exprimable, alors on peut rajouter $a_{2n-1}$ à cette somme pour exprimer $a_2n$. Inversement par la remarque précédente pour exprimer $a_{2n}$ il faut utiliser $a_{2n-1}$, donc $a_{2n}$ est exprimable si et seulement si $a_{2n-1}$ l'est. Cette relation ne nous sera pas directement utile pour résoudre l'exercice, mais elle permet de commencer à aborder le problème.
+
+On remarque que pour tout $n$, $a_{2n+1} - a_{2n} = 2^{2n}$ et comme d'autre part il faut nécessairement utiliser $a_{2n}$ pour exprimer $a_{2n+1}$, il s'ensuit que $a_{2n+1}$ est exprimable si et seulement si $2^{2n}$ est exprimable.
+
+On remarque de plus que $2^{n+1}$ est exprimable si et seulement $2^{2n}-3$ est exprimable, et ce dernier nombre est exprimable si et seulement si $2^{4n-2}$ est exprimable. Autrement dit, $2^n$ est exprimable si et seulement si $2^{4n-6}$ est exprimable.
+
+On vérifie facilement que $2^3 = 8$ est exprimable, et avec un peu plus de recherche on trouve que $2^12 = 4096$ n'est pas exprimable. On obtient donc une suite infinie de puissances de 2 exprimables et de puissances de 2 non exprimables et le problème est terminé.
+
+\textbf{Marking Scheme:}
+\begin{itemize}
+    \item 2P: $b$ exprimable si et seulement si $S_n - b$ exprimable.
+    \item 1P: $a_{2n+1}$ exprimable si et seulement si $2^{2n}$ exprimable.
+    \item 2P: $2^n$ exprimable si et seulement si $2^{4n-6}$ exprimable.
+    \item +1P: Cas de base pour l'induction: $2^3$ exprimable.
+    \item +1P: Cas de base pour l'induction: $2^{12}$ pas exprimable.
+\end{itemize}
+
+Si aucun des points ci-dessus n'est obtenu, l'observation que $a_{2n}$ est exprimable si et seulement si $a_{2n-1}$ l'est est créditée de 1P.

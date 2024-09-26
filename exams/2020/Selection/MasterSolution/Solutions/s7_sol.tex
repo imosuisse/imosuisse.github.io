@@ -1,0 +1,98 @@
+Find all functions $f\colon \R\to \R$ such that $0\leq f(x)\leq 2x$ for all $x\geq 0$ and such that for all $x,y\in \R$
+$$f(x+y)=f(x+f(y)).$$
+
+\textbf{Answer:}
+The only solutions are $f(x) \equiv x,\ f(x) \equiv 0$ and the sawtooth function given by
+$$f(x) = x \text{ on } [0,p) \text{ with period } p$$
+or alternatively
+$$f(x) = p\cdot \{x/p\} \text{ for all } x\in\R$$
+for any positive real number $p$. Here, $\{x\}$ denotes the fractional part of $x$
+
+\textbf{Solution 1} (Valentin)
+If we let $u = x + y$ we find that
+$$f(u)=f(u-y+f(y)) \text{ for all } x,y\in\R$$
+and excluding the solution $f(y) \equiv y$, we find that $f$ must have some period $p > 0$. This together with the first condition now implies that $f(x)\geq 0$ for all $x\in\R$. Also excluding the solution $f\equiv 0$, there must exist some $a\in\R$ with $f(a) > 0$.
+
+Let $P$ be the set of all periods of $f$ which are $\leq p$. If $P$ is infinite then by pigeonhole there must be two periods $p_1 < p_2$ satisfying $p_2-p_1 < f(a)/2$. But since the difference of two periods is also a period, $f$ must also have period $p_3 = p_2-p_1 < f(a)/2$. But now choose $k\in\Z$ such that
+$$0 < x_0 = a+k\cdot p_3 < f(a)/2 \text{ and } f(x_0) = f(a) = 2\cdot(f(a)/2) > 2x_0$$
+contradicting the first condition. We conclude that $P$ is finite and in particular, that $f$ has a smallest period $p_0$. Also, every period of $f$ must be a multiple of the smallest period $p_0$ since otherwise we could find two periods with difference $< p_0$, contradicting the minimality of $p_0$.
+
+Now since $|f(y)-y|$ is a period of $f$, it follows that for all $y\in\R$ there is some $k_y\in\Z$ such that
+$$f(y)-y = k_y\cdot p_0$$
+
+and for $0\leq y < p_0$ since we must also have
+$$0\leq f(y) = y+k_y\cdot p_0 \leq 2y$$
+
+we find that $k_y = 0$ for all $y$ in this interval and conclude that $f(x) = p_0\cdot\{x/p_0\}$ for all $x\in\R$.
+It is easy to see that all the claimed functions are indeed solutions by observing that if $f(x)-x$ is a period of $f$ then $f$ must satisfy the original equation.
+
+\textbf{Comments}
+
+Alternatively, one can also lead the assumption that $f$ does not have a smallest period to a contradiction by constructing a decreasing sequence $\{p_k\}$ of periods where $p_{k+1} < p_k/2$ and therefore similarly obtaining a period $p<f(a)/2$.
+
+\bigskip
+
+Also note that it is very easy to make the mistake of only proving that the periods of $f$ are bounded below by a positive constant (which implies that the infimum over all periods is positive). This however is \textbf{not} enough to show that $f$ has a minimal period. One also has to use the fact that periods are closed under (distinct) subtraction.
+
+\newpage
+
+\textbf{Solution 2} (Tanish)
+
+As above, we shall endeavour to prove that the only solutions are the sawtooth and identity function and $f(x) = 0$.
+For the rest of the solution, we suppose $f(x) \neq 0$ somewhere, and $f(x) \neq x$ somewhere. It remains to prove the only possible solutions are the sawtooth function.
+\begin{lem} 
+$f(x)$ is periodic.
+\end{lem}
+\begin{proof}
+See proof in previous solution.
+\end{proof}
+\begin{lem}
+There exists some $p > 0$ such that $f(x)$ is the identity on $[0,p[$.
+\end{lem}
+\begin{proof}
+Suppose no such $p$ exists. As a result, it follows for every $\delta > 0$ there exists $\varepsilon \in [0,\delta]$ such that $f(\varepsilon) \neq \varepsilon$. Now consider the existence of some $z$ such that $f(z) \neq z$, and consider $\varepsilon \in [0, \frac{f(z)}{2}[$. We have from lemma 1 that $|f(\varepsilon) - \varepsilon| < \varepsilon < \frac{f(z)}{2}$ (the first inequality comes from condition 2 in the problem) and as $|f(\varepsilon) - \varepsilon|$ is a period of our function (as noted in Lemma 1) we can find (a la Euclidean division algorithm) some number $\zeta$ in the interval $[0, |f(\varepsilon) - \varepsilon|[$ such that $f(\zeta) = f(z)$, but since $\zeta < \frac{f(z)}{2}$, this contradicts the second condition.
+\end{proof}
+So now we know there is some $p$ such that $f(x) = x$ for $x \in [0,p[$. We can also assume henceforth that this $p$ is maximal (simply take the supremum of the set of possible $p$).
+\begin{lem}
+$f(p) = 0$.
+\end{lem}
+\begin{proof}
+Suppose otherwise. Firstly, consider the case where $f(p) \neq p$. If $f(p)$ = $2p$ then as $2p - p = p$ is now a period of the function, $f(0) = 2p$, contradiction. So now, $|f(p)-p| < p$. But as $|f(p)-p|$ is a period of the function, then $f(|f((p)-p|) = f(0) = 0$ which contradicts the fact that $f$ is the identity on $[0,p[$. \\
+We are now left with the case $f(p) = p$. By the aforementioned maximality of $p$, we have that for all $\delta > 0$, there exists $q$ in $]p,p+\delta[$ such that $f(q) \neq q$. \\
+Consider some such $x_i$ in $]p, p+\frac{1}{i}[$ and similarly $y_i$ in $]p, p+x_i[$ that are not fixed points. Furthermore let $x'_i$ = $|f(x_i)-x_i|$ and $y'_i$ = $|f(y_i)-y_i|$. We have that $p < x'_i, y'_i < p+\frac{1}{i}$, as they are periods of $f$ and so must be greater than $p$ (otherwise $f$ cannot be the identity on $[0, p]$ and less than $x_i$ and $y_i$ respectively (from the second original condition). However, $|x'_i - y'_i| < \frac{1}{i}$ is  also a period of f. It suffices to choose $i$ such that $\frac{1}{i} < p$ to find a contradiction. 
+\end{proof}
+We now know $f$ is $p$-periodic and also that it is the identity on $[0,p[$, which easily allows us to conclude that $f$ is the sawtooth function (modulo p). 
+
+\textbf{Comments}
+
+This solution almost exclusively uses ideas from Real Analysis you will see in your first year of university and not what we teach you. This is one of the few olympiad problems that would be difficult for a high-schooler but easier for someone with no olympiad experience at university (provided they are not studying geology). As such, you are not expected to have the ideas that are used in the construction of this solution (in particular, supposing the minimality or maximality of certain variables and using this for a proof by contradiction) but it is useful to employ methods like these, more often seen in combinatorics.\\
+
+\newpage
+
+\textbf{Marking Scheme}
+
+Solution 1 (Valentin):
+\begin{itemize}
+\item 1P: Finding three different functions that satisfy the conditions.
+\item 1P: Proving that if $f(x)\neq x$ then $f$ is periodic.
+\item 2P: Proving that if $f\neq 0$ and $f$ is periodic then it has a minimal period.
+\item 1P: Observing that every period of $f$ must be an integer multiple of the minimal period.
+\item 1P: Proving that $f$ is linear in the period starting at $0$.
+\item 1P: Finishing the problem and checking that all found functions are indeed solutions.
+\end{itemize}
+
+Solution 2 (Tanish):
+\begin{itemize}
+\item 1P: Finding three different functions that satisfy the conditions.
+\item 2P: Proving that if $f(x)\neq0$, $f(x)\neq x$ then there exists $p > 0$ with $f(x) = x$ on $[0,p)$ (1P can be given if they just prove periodicity but nothing more)
+\item 1P: Proving that there exists a maximal such $p$.
+\item 2P: Proving that for the maximal such $p$ we have $f(p) = 0$
+\item 1P: Finishing the problem and checking that all found functions are indeed solutions.
+\end{itemize}
+
+Both Solutions:
+\begin{itemize}
+\item -1P: Using that the infimum of all periods is also a period without justification or similar logical gaps in analytic arguments.
+\end{itemize}
+
+\textbf{Remark:} The description of any solution must clearly define what happens at critical points.

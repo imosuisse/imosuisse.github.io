@@ -1,0 +1,216 @@
+\de{Wir betrachten ein weisses $5\times 5$-Quadrat bestehend aus $25$ Einheitsquadraten. Wie viele verschiedene Möglichkeiten gibt es, eines oder mehrere der Einheitsquadrate schwarz anzumalen, sodass die resultierende schwarze Fläche ein Rechteck bildet?
+
+\textbf{Lösung 1 (Tanish), Gegenüberliegende Ecken zählen}: Wir betrachten die Ecken eines beliebigen Rechtecks. Diese liegen in einem Raster bestehend aus $36$ Punkten in einem $6\times 6$ Quadrat. Wir wählen einen dieser Punkte als den ersten Eckpunkt. Wenn wir nun den gegenüberliegenden Eckpunkt wählen, haben wir ein Rechteck definiert. Gegenüberliegende Ecken können nicht in der selben Zeile oder Spalte liegen, wir wählen also einen von $25$ anderen Punkten. Total haben wir also $36$ mal $25$ Rechtecke. Aber wir haben jedes Rechteck $4$ mal gezählt - es gibt zwei Paare von gegenüberliegenden Ecken, die wir jeweils doppelt gezählt haben - wir teilen also unser Resultat durch $4$ und erhalten $9 \times 25 = 225$.
+\newline
+\textbf{Anmerkung (Jana)}: Es  ist auch möglich die möglichen Paare von gegenüberliegenden Eckpunkten folgendermassen zu zählen: Zuerst wählen wir zwei unterschidliche Punkte aus dem $6\times6$ Quadrat. Dafür gibt es $\binom{36}{2} = 18 \cdot 35$ Möglichkeiten. Jetzt müssen wir die Paare subtrahieren, welche sich in der gleichen Zeile oder Spalte befinden. Da es insgesamt $6$ Zeilen und $6$ Spalten gibt und wir in jeder dieser Spalten oder Zeilen $\binom{6}{2}$ Möglichkeiten haben ein Paar auszuwählen, müssen wir $12 \cdot \binom{6}{2} = 12 \cdot 15$ subtrahieren. In diesem Fall haben wir jedes Rechteck doppelt gezählt, wir erhalten also das Resultat $\frac{1}{2} \cdot (18 \cdot 35 - 12 \cdot 15) = 225$.
+
+
+\textbf{Lösung 2 (Tanish), Zählen nach Höhe und Breite}: Wir betrachten die möglichen Rechtecke mit Höhe $a$ und Breite $b$. Das Einheitsquadrat oben links in unserem Rechteck liegt im \newline $(6-a) \times (6-b)$ Rechteck in der Ecke oben links in unserem grossen Quadrat, da unser Rechteck sonst keinen Platz hat. Die totale Anzahl Möglichkeiten ist also
+\begin{align*}
+    \sum_{a=1}^5 (6-a) \sum_{b=1}^5 (6-b) = \sum_{a=1}^5 (6-a)\cdot15 = 15\cdot15 = 225
+\end{align*}
+Analog hätten wir auch jeden anderen Eckpunkt unseres Rechtecks betrachten können.
+
+\textbf{Lösung 3 (Tanish), Zählen nach Seiten}: Unser Rechteck ist eindeutig definiert durch ein Zeilen- und ein Spaltenpaar unseres Rasters (die zwei Zeilen und Spalten repräsentieren jeweils die obere und untere, respektive linke und rechte Seite unseres Rechtecks). Da wir aus $6$ Zeilen und $6$ Spalten wählen, haben wir total $\binom{6}{2}\cdot\binom{6}{2}=15^2=225$
+Möglichkeiten.
+
+\textbf{Lösung 4 (Tanish), Zählen nach beliebigem Eckpunkt}: Wir nummerieren unsere Einheitsquadrate mit $(x, y)$, wobei $(1,1)$ das Quadrat links unten und $(5,5)$ das Quadrat oben rechts ist. Wir betrachten nun alle Rechtecke, deren Eckfeld oben rechts $(a, b)$ ist. Das Rechteck ist einmalig definiert durch zwei gegenüberliegende Ecken, also müssen wir nur den gegenüberliegenden Eckpunkt $(<a, <b)$ wählen. Für dies gibt es $a \cdot b$ Möglichkeiten. Wenn wir über alle möglichen $(a, b)$ summieren, erhalten wir
+\begin{align*}
+    \sum_{a=1}^5 a \sum_{b=1}^5 b = \sum_{a=1}^5 a \cdot 15 = 15\cdot15 = 225
+\end{align*}
+Analog kann man auch jeden anderen Eckpunkt betrachten.
+
+\textbf{Lösung 5 (Tanish), Zählen nach kürzester Seite}: Wir zählen alle Rechtecke mit kürzester Seite $x$. Nach der Ein-Ausschaltformel ist dies die Anzahl Rechtecke mit Höhe $x$ und Breite $\geq x$ plus die Anzahl Rechtecke mit Breite $x$ und Höhe $\geq x$ minus die Anzahl Rechtecke mit Breite \emph{und} Höhe $x$. Das Resultat in \emph{Lösung 2} zeigt, dass die Anzahl Rechtecke mit Dimensionen $a \times b$ durch $(6-a) \cdot (6-b)$ gegeben ist. Somit erhalten wir
+\begin{align*}
+    \sum_{x=1}^5 \bigg{(}( 2\cdot\sum_{y=x}^5 \bigg{(}(6-y)\cdot(6-x)\bigg{)} - (6-x)(6-x) \bigg{)} &= \sum_{x=1}^5 (6-x)(1 + 2 + \hdots (6-x) \hdots ... + 2 + 1) 
+    \\ &= \sum_{x=1}^5 (6-x)(6-x)^2 
+    \\ &= \sum_{x=1}^5 (6-x)^3 
+    \\ &= 125 + 64 + 27 + 8 + 1 = 225
+\end{align*}
+
+Alle oben genannten Lösungen kann man für ein $n \times n$-Quadrat verallgemeinern.
+
+\newpage
+
+%\textbf{Marking Scheme}
+
+%\begin{itemize}
+  %  \item 1P: 225 als Antwort gegeben.
+%\end{itemize}
+
+  %  Wertvolle Bemerkungen (nicht additiv): 
+  
+%\begin{itemize}
+
+    %\item +1P: Jegliche Versuche die Quadrate zu nummerieren (z.B. Koordinaten).
+    
+    %\item +2P: Jeglicher Versuch induktiv zu beweisen, dass die Anzahl Rechtecke um $n^3$ steigt, wenn man vom Fall $n-1$ zum Fall $n$ geht. +4P Ansonsten falls gezeigt wird, dass die Anzahl vom Fall $4 \times 4$ zu $5 \times 5$ um 125 ansteigt.
+
+    %\item +3P: Behauptung, dass die Anzahl Rechtecke mit Dimensionen $a \times b$ durch $(6-a) \cdot (6-b)$ gegeben ist. +4P Ansonsten falls bemerkt wird, dass die Summe dieser Terme über $a, b$ das selbe ist wie die Summe von $ab$ über $a, b$.
+    
+   % \item +4P: Behauptung, dass ein Rechteck einmalig durch die Eckpunkte oben rechts und unten links oder durch die Eckpunkte oben links und unten rechts definiert ist. +5P falls ausserdem bemerkt wird, dass die Anzahl Möglichkeiten für den ersten Eckpunkt $ab$ ist. 
+    
+    %\item +4P: Behauptung, dass ein Rechteck einmalig durch ein geordnetes Paar von gegenüberliegenden Eckpunkten definiert ist \emph{und} das dies jedes Rechteck $4$ mal zählt (+2P falls dies vergessen wird). +5P Ansonsten falls ausserdem bemerkt wird, dass die Anzahl Möglichkeiten für die gegenüberliegende Ecke $25$ ist.
+    
+    %\item +5P: Behauptung, dass jedes Rechteck durch ein Paar von Zeilen und ein Paar von Spalten definiert ist (+4P falls anstatt $6$ Zeilen/Spalten $5$ gezählt werden)
+    
+    %\item +4P: Jegliche andere Summen, die nicht berechnet wurde, jedoch die korrekte Lösung $225$ ergibt.
+    
+    %\item +2P: Jegliche Summen, welche nicht $225$ ergeben, da sie gewisse Spezialfälle vergessen. (z.B. falls eine Methode nicht alle Rechtecke doppelt oder vierfach zählt, jedoch als solche betrachtet wird)
+    
+    %\item +6P: Jegliche korrekt berechnete \emph{und} begründete Summe.
+    
+%\end{itemize}
+
+%Um die volle Punktzahl zu erreichen wird erwartet, dass nicht triviale Summen begründet werden.
+
+\textbf{Marking scheme}%(Jana's Version)
+\begin{itemize}
+    \item 1P: Richtige Lösung $225$ (wird zu den restlichen Punkten addiert)
+\end{itemize}
+Die folgenden Punkte sind nicht additiv.
+\begin{itemize}
+    \item 1P: Quadrate irgendwie nummerieren oder die Rechtecke in disjunkte Gruppen aufteilen.
+    \item 3P: Beobachtung, wie die Rechtecke gegeben sein können. (z.B. Auswahl gegenüberliegender Eckpunkte, ein Paar von Zeilen und ein Paar von Spalten)
+    \item 4P: Begründete Summe, welche jedes Rechteck gleich oft zählt.
+    \item 4P: Die Rechtecke in disjunkte Gruppen aufteilen und die Anzahl Rechtecke in jeder Gruppe berechnen.
+    \item 5P: Begründete Formel, welche die Anzahl Rechtecke zählt
+    %\item -2P: Fälle vergessen, sodass die Formel nicht alle Rechtecke gleich oft zählt
+\end{itemize}
+
+Ohne korrekte Formel sind maximum 4 Punkte möglich. Um die volle Punktzahl zu erreichen wird erwartet, dass nicht triviale Summen begründet werden.
+}
+
+\fr{On considère un carré blanc $5 \times 5$ composé de $25$ carrés unité. De combien de manières différentes peut-on colorier un ou plusieurs carrés unité en noir de telle manière que la surface noire obtenue soit un rectangle?
+
+\textbf{Solution 1 (Tanish), Compter les sommets opposés}: On considère les sommets d'un rectangle quelconque. Ils sont situés sur une grille, qui est un groupe de 36 points dans un carré $6\times 6$. On choisit un de ces points comme premier sommet de notre rectangle. Si maintenant on choisit le sommet opposé, alors la paire formée par ces deux points suffit à définir le rectangle. Le sommet opposé ne peut pas être dans la même ligne ni dans la même colonne, donc est choisi parmi les 25 points restants. En répétant le calcul pour tous les 36 points, on a $36\times 25$ paires de points. Cependant on a compté chaque rectangle 4 fois - il y a deux paires différentes de sommets opposés, qui ont chacune été comptées deux fois (ce sont des paires ordonnées) - il faut donc diviser notre produit par 4 pour obtenir $9\times 25 = 225$.
+\newline
+\textbf{Remarque (Jana)}: Il est également possible de compter les choix possibles pour les sommets opposés de la manière suivante: on choisit d'abord deux points distincts dans la grille $6\times 6$. Il y a $\binom{36}{2} = 18 \cdot 35$ possibilités différentes. Ensuite il faut soustraire celles où les deux points sont situés sur la même ligne ou la même colonne. Puisqu'il y a $6$ lignes et $6$ colonnes et que dans les deux cas on a $\binom{6}{2}$ choix possibles, le nombre qu'il faut soustraire est $12 \cdot \binom{6}{2} = 12 \cdot 15$. On remarque encore qu'en procédant ainsi chaque rectangle est compté deux fois, donc le résultat final est $\frac{1}{2} \cdot (18 \cdot 35 - 12 \cdot 15) = 225$.
+
+\textbf{Solution 2 (Tanish), Compter par hauteur et largeur}: On considère le nombre de rectangles possibles de dimension $a  \times b$, où $a$ est la hauteur et $b$ la largeur. Le carré en haut à gauche peut être n'importe quel carré du rectangle $(6-a) \times (6-b)$ placé en haut à gauche de la grille, car autrement le rectangle ne sera pas entièrement contenu dans le carré. Ainsi le nombre total de possibilités est
+\begin{align*}
+    \sum_{a=1}^5 (6-a) \sum_{b=1}^5 (6-b) = \sum_{a=1}^5 (6-a)\cdot15 = 15\cdot15 = 225
+\end{align*}
+De manière symétrique, on peut aussi considérer les positions possibles du carré en haut à droite, en bas à gauche ou en bas à droite en fonction des dimensions du rectangle.
+
+\textbf{Solution 3 (Tanish), Compter par lignes/colonnes des côtés}: Notre rectangle est déterminé par le choix de deux lignes et deux colonnes sur la grille (les lignes représentent les côtés horizontaux et les colonnes représentent les côtés verticaux). On peut choisir parmi $6$ lignes et $6$ colonnes, donc le nombre total de possibilités est $\binom{6}{2}\cdot\binom{6}{2}=15^2=225.$
+
+\textbf{Solution 4 (Tanish), Compter par le carré en haut à droite}: On numérote nos carrés avec les coordonnées $(x, y)$, avec $(1,1)$ désignant le carré en bas à gauche et $(5, 5)$ le carré en haut à droite. Maintenant regardons tous les rectangles dont le coin en haut à droite est $(a, b)$. Le rectangle est défini par le choix de son carré en haut à droite et de son carré en bas à gauche, donc il suffit de choisir un autre carré $(\leq a, \leq b)$, ce qui donne $a \cdot b$ possibilités. Par conséquent, en additionnant le nombre de possibilités pour tous les $(a, b)$ possibles, on obtient
+\begin{align*}
+    \sum_{a=1}^5 a \sum_{b=1}^5 b = \sum_{a=1}^5 a \cdot 15 = 15\cdot15 = 225
+\end{align*}
+De manière symétrique, cette preuve fonctionne aussi en considérant le carré en haut à gauche, en bas à droite ou en bas à gauche.
+
+\textbf{Solution 5 (Tanish), Compter par le petit côté}: On compte tous les rectangles dont le petit côté a pour longueur $x$. Le principe d'inclusion-exclusion nous dit qu'il faut compter le nombres de rectangles de hauteur $x$ et de largeur $\geq x$ plus le nombre de rectangles de largeur $x$ et de hauteur $\geq x$ moins le nombre de rectangles de largeur \emph{et} de hauteur $x$. Par le résultat de la deuxième solution on sait déjà que le nombre de rectangles de dimension $a\times b$ est $(6-a)\cdot (6-b)$, donc on a
+\begin{align*}
+    \sum_{x=1}^5 \bigg{(}( 2\cdot\sum_{y=x}^5 \bigg{(}(6-y)\cdot(6-x)\bigg{)} - (6-x)(6-x) \bigg{)} &= \sum_{x=1}^5 (6-x)(1 + 2 + \hdots (6-x) \hdots ... + 2 + 1) 
+    \\ &= \sum_{x=1}^5 (6-x)(6-x)^2 
+    \\ &= \sum_{x=1}^5 (6-x)^3 
+    \\ &= 125 + 64 + 27 + 8 + 1 = 225
+\end{align*}
+
+Les 5 solutions ci-dessus peuvent être généralisées au cas d'un carré $n\times n$.
+
+\newpage
+
+\textbf{Marking scheme}%(Jana's Version)
+\begin{itemize}
+    \item 1P: Affirmer que la réponse est $225$ (ce point peut être additionné aux autres points ci-dessous)
+\end{itemize}
+Les points ci-dessous sont non-additifs.
+\begin{itemize}
+    \item 1P: énumérer les carrés (p. ex. mettre des coordonnés) ou séparer les rectangles en ensembles disjoints.
+    \item 3P: Trouver une manière de décrire chaque rectangle de manière unique (p. ex. en choisissant des sommets opposés, en choisissant lignes et colonnes, en choisissant la position du coin en haut à droite et les longueurs des côtés etc.)
+    \item 4P: Formule qui compte chaque rectangle le même nombre de fois, avec justification. 
+    \item 4P: Séparer les rectangles en ensembles disjoints et compter le nombre de rectangles dans chaque ensemble.
+    \item 5P: Formule qui compte le nombre exact de rectangles, avec justification.
+\end{itemize} 
+
+Sans formule correct, au plus 4 points pourront être obtenus. Si des sommes non-triviales ne sont pas calculées explicitement il ne sera pas possible d'obtenir les 7 points.}
+
+\en{Consider a white $5 \times 5$ square composed of $25$ unit squares. How many different ways are there to colour one or more unit squares black such that the resulting black area is a rectangle?
+
+\textbf{Solution 1 (Tanish), Counting by opposite vertices}: Let us consider the possible vertices of any rectangle we create in the grid, which is the group of 36 points in a $6 \times 6$ square. Choose one of these as the first vertex of our rectangle. If we now choose the opposite corner, then the pair of these two points sufficiently define the rectangle. The opposite corner cannot be in the same column or line, so is one of 25 other points. Counting over all 36 points, we have $36 \times 25$ pairs of points. But we have counted each rectangle 4 times - there are two different pairs of opposite vertices which we each counted twice (they are ordered pairs) - so we divide our product by 4 to obtain $9 \times 25 = 225$.
+\newline
+\textbf{Remark (Jana)}: It's also possible to count the possible choices of opposite vertices in the following way: First we choose two distinct points in the $6\times6$-grid. There are $\binom{36}{2} = 18 \cdot 35$ possibilities to do that. Next we have to subtract those where both points lie in the same row or column. Since there are $6$ rows and $6$ columns and for each one we have $\binom{6}{2}$ possible choices, the number we subtract is $12 \cdot \binom{6}{2} = 12 \cdot 15$. Noticing that this way, each proper rectangle is counted twice, we obtain our final result $\frac{1}{2} \cdot (18 \cdot 35 - 12 \cdot 15) = 225$.
+
+\textbf{Solution 2 (Tanish), Counting by height and width}: Let us consider the number of possible rectangles of dimension $a \times b$, where $a$ is the height and $b$ is the width. The top-left square can be any of the squares in a $(6-a) \times (6-b)$ rectangle in the top left, as otherwise the rectangle will not be fully contained in the square. Therefore the number of possibilities is
+\begin{align*}
+    \sum_{a=1}^5 (6-a) \sum_{b=1}^5 (6-b) = \sum_{a=1}^5 (6-a)\cdot15 = 15\cdot15 = 225
+\end{align*}
+Symmetrically, you could also have considered the possible locations of the top-right, bottom-left or bottom-right square in terms of the dimensions of the rectangle.
+
+\textbf{Solution 3 (Tanish), Counting by rows/columns of sides}: Our rectangle is well defined by the choice of two rows and two columns of the grid (the rows representing the top and bottom side and the columns representing the left and right side). We have 6 rows and 6 columns to choose from, so the total number of possibilities is $\binom{6}{2}\cdot\binom{6}{2}=15^2=225.$
+
+\textbf{Solution 4 (Tanish), Counting by top-right square}: Let us number our squares with coordinates $(x, y)$, with $(1,1)$ being the bottom-left square and $(5,5)$ the top-right square. Now let us look at all the rectangles whose top right corner is $(a, b)$. The rectangle is well-defined by the choice of a top-right and bottom-left square, so all we have to do is choose another square  $(<a, <b)$, of which there are $a \cdot b$ possibilities. Therefore, summing over all possible $(a, b)$ we have
+\begin{align*}
+    \sum_{a=1}^5 a \sum_{b=1}^5 b = \sum_{a=1}^5 a \cdot 15 = 15\cdot15 = 225
+\end{align*}
+Symmetrically, this proof also works when considering the top-left, bottom-right or bottom-left square.
+
+\textbf{Solution 5 (Tanish), Counting by smallest side}: Let us count all the rectangles whose smaller side is of length $x$. Inclusion-Exclusion tells us that we should count the number of rectangles of height $x$ and width $\geq x$ plus the number of width $x$ and height $\geq x$ minus the number of width \emph{and} height $x$. By the result in proof 2 we already know the number of rectangles of dimension $a \times b$ is $(6-a) \cdot (6-b)$ so we have
+\begin{align*}
+    \sum_{x=1}^5 \bigg{(}( 2\cdot\sum_{y=x}^5 \bigg{(}(6-y)\cdot(6-x)\bigg{)} - (6-x)(6-x) \bigg{)} &= \sum_{x=1}^5 (6-x)(1 + 2 + \hdots (6-x) \hdots ... + 2 + 1) 
+    \\ &= \sum_{x=1}^5 (6-x)(6-x)^2 
+    \\ &= \sum_{x=1}^5 (6-x)^3 
+    \\ &= 125 + 64 + 27 + 8 + 1 = 225
+\end{align*}
+
+All 5 of the proofs above can be generalised to an $n \times n$ square. 
+
+\newpage
+
+\textbf{Marking scheme}%(Jana's Version)
+\begin{itemize}
+    \item 1P: State the right answer $225$ (this can be added to the other marks)
+\end{itemize}
+The following are non-additive.
+\begin{itemize}
+    \item 1P: Any sensible attempt to enumerate the squares (e.g coordinates) or seperating the rectangles into disjoint sets.
+    \item 3P: Finding a way of uniquely describing a rectangle (e.g by choosing opposite vertices, rows and columns, position of top right square and side lengths etc.)
+    \item 4P: Justified expression that counts each rectangle the same number of times.
+    \item 4P: Separating the rectangles into disjoint sets and counting the number of rectangles in each set.
+    \item 5P: Justified formula for the exact number of rectangles
+\end{itemize} 
+
+Without a correct formula, at most 4 points can be awarded. To obtain full mark, non-trivial sums must be explicitely computed.
+
+%\textbf{Marking Scheme}
+
+%\begin{itemize}
+   % \item 1P: State the answer 225.
+%\end{itemize}
+
+ %   Observations worth points (non-additive between themselves): 
+  
+%\begin{itemize}
+
+    %\item +1P: Any attempt to enumerate the squares (e.g. coordinates).
+    
+    %\item +2P: Any attempt to inductively prove that the number of rectangles increases by $n^3$ when passing from the case $n-1$ to $n$. +4P instead if they also manage to prove that the increase from the case $4 \times 4$ to $5 \times 5$ is 125.
+
+    %\item +3P: State that there are the number of rectangles of dimension $a \times b$ is $(6-a) \cdot (6-b)$. +4P instead if they remark that summing this product over all possible $a, b$ is the same thing as summing $ab$ over all possible $a, b$.
+    
+    %\item +4P: State that the rectangle is well-defined by the choice of a square in the top-right corner and a square in the bottom left corner. +5P instead if they also see that the number of possibilities for a given top corner is $ab$. 
+    
+    %\item +4P: State that the rectangle is well-defined by the choice of (ordered) opposite vertices \emph{and} that this counts every rectangle four times over (+2P instead if they forget to divide by four). Stating that using unordered pairs and dividing by 2 is also worth 4 points. +5P instead if they also see that the number of possible opposite corners for a given point is always 25. 
+    
+    %\item +5P: State that the rectangle is well-defined by the choice of two lines and two columns (+4P instead if they count 5 columns instead of 6)
+    
+    %\item +4P: Any other summation that they did not manage to compute, correctly justified, which when computed gives 225. 
+    
+    %\item +2P: Any summation which does not give 225 because it does not work for edge cases (for example, saying the rectangle is defined by the choice of a two opposite-corner squares, calculating the number of such pairs ($25 \cdot 24$), and dividing by 4 to give
+    %150. This is incorrect because if the rectangle has a side of length 1 it is not counted 4 times over but just 2 times or once.)
+    
+    %\item +6P: Any correctly computed \emph{and} correctly justified summation.
+    
+%\end{itemize}
+%Note that if the summation is too complicated then the contestant should justify why it is equal to 225 to get full marks (for instance, the summation in the fifth solution).
+}
+
+\newpage
+
+\textbf{Alternative solutions}
+
+\textbf{Solution 6 (Tanish), General proof by induction using bijections}: Let us prove the general result that the number of rectangles in a $n \times n$ square is $\sum_{i=1}^n i^3$. For the base case, there is clearly only 1 possible rectangle in a $1 \times 1$ square. Now suppose the proposition holds true for the case $n$. Now expand the grid to an $(n+1)\times(n+1)$ grid by adding a column on the right and a row on top. For every rectangle possible in the case $n$ we now modify it by moving its top-right corner one column up and to the right. This application represents a bijection between the rectangles in the case $n$ and the rectangles in the case $n+1$ without a side of length 1 (this can be verified by seeing that both the application and its inverse are surjective). It remains to count the "new" rectangles, or those with at least one side of length 1. These are well-defined by the choice of a square and then a square in the same row or column to represent the "ends" of the rectangle (the second square can be the same as the first one!), and this method counts every rectangle twice. We have $n^2$ choices for the first square and $2n$ choices for the second square after that ($n$ in the same row, $n$ in the same column) giving a total of $2n^3$ new rectangles, which we divide by 2, to give $n^3$. \\
+\emph{Note:} It is possible to use this same method for solution 5 to count the number of rectangles of smaller side $x$, as these rectangles are well defined by the choice of two $x \times x$ squares in the same columns or rows (again, counting each rectangle twice).

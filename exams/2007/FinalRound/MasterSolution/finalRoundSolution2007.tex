@@ -1,0 +1,546 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{floatflt}
+\usepackage{subfigure}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+
+\newcommand{\wi}{\mathop{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}} %Schönes Winkel-Zeichen
+
+\renewcommand{\arraystretch}{1.5}
+\parindent0mm
+
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge Lösungen zur SMO Finalrunde 2006} 
+\end{center}
+
+\vspace{15mm}
+
+
+\begin{enumerate}
+\item[\textbf{1.}] Bestimme alle positiven reellen Lösungen des folgenden Gleichungssystems:
+\vspace{-0.2cm}
+\begin{center}
+\begin{tabular}{cp{1cm}cp{1cm}c}
+$a=\max\{\frac{1}{b},\frac{1}{c}\}$ & & $b=\max\{\frac{1}{c},\frac{1}{d}\}$ & & $c=\max\{\frac{1}{d},\frac{1}{e}\}$\\
+$d=\max\{\frac{1}{e},\frac{1}{f}\}$ & & $e=\max\{\frac{1}{f},\frac{1}{a}\}$ & & $f=\max\{\frac{1}{a},\frac{1}{b}\}$\\
+\end{tabular}
+\end{center}
+
+\textbf{1. Lösung}
+
+Wegen der zyklischen Symmetrie des Systems können wir annehmen, dass $a$ maximal ist unter allen sechs Zahlen. Daraus folgt direkt
+\[f={\textstyle \max\{\frac{1}{a},\frac{1}{b}\}}= {\textstyle \frac{1}{b}},\quad e={\textstyle \max\{\frac{1}{f},\frac{1}{a}\}}= {\textstyle \frac{1}{f}}=b,\quad d={\textstyle \max\{\frac{1}{e},\frac{1}{f}\}}={\textstyle \max\{b,\frac{1}{b}\}}.\]
+Wir unterscheiden nun zwei Fälle:
+\begin{enumerate}
+\item[(1)] Sei $b \geq 1$. Dann gilt $d=b$ und man erhält
+\[c={\textstyle \max\{\frac{1}{d},\frac{1}{e}\}}={\textstyle\frac{1}{b}},\qquad a={\textstyle \max\{\frac{1}{b},\frac{1}{c}\}}={\textstyle \max\{b,\frac{1}{b}\}}=b.\]
+\item[(2)] Sei $b \leq 1$. Dann gilt $d=\frac{1}{b}$ und man erhält
+\[c={\textstyle \max\{\frac{1}{d},\frac{1}{e}\}}={\textstyle \max\{b,\frac{1}{b}\}}={\textstyle\frac{1}{b}},\qquad a={\textstyle \max\{\frac{1}{b},\frac{1}{c}\}}={\textstyle\frac{1}{b}}.\]
+\end{enumerate}
+Ein Vergleich der Resultate zeigt, dass beide Fälle dieselben Lösungen ergeben, bis auf einen zyklischen Shift. Es sind die zyklischen Vertauschungen von
+\[(a,b,c,d,e,f)=(x,x,\textstyle{\frac{1}{x}},x,x,\textstyle{\frac{1}{x}}),\quad x \geq 1.\]
+Um zu zeigen, dass dies tatsächlich alles Lösungen sind, genügt es wiederum wegen der Symmetrie die Gleichungen für $a$ und $c$ zu bestätigen. Tatsächlich ist wegen $x\geq	1$
+\[x=a={\textstyle\max\{\frac{1}{b},\frac{1}{c}\}}=\max\{{\textstyle\frac{1}{x}},x\}=x,\qquad {\textstyle \frac{1}{x}}=c={\textstyle\max\{\frac{1}{d},\frac{1}{e}\}}=\max\{{\textstyle\frac{1}{x}},{\textstyle\frac{1}{x}}\}={\textstyle\frac{1}{x}}.\]
+
+\textbf{2. Lösung}
+
+Wegen der zyklischen Symmetrie können wir annehmen, dass $a$ minimal ist unter allen sechs Zahlen. Dann folgt
+\[f={\textstyle \max\{\frac{1}{a},\frac{1}{b}\}}= {\textstyle \frac{1}{a}},\quad e={\textstyle \max\{\frac{1}{f},\frac{1}{a}\}}= {\textstyle \frac{1}{a}},\quad d={\textstyle \max\{\frac{1}{e},\frac{1}{f}\}}=a.\]
+Insbesondere ist auch $d$ minimal und wegen $a \leq f=\frac{1}{a}$ ist $a \leq 1$, daher gilt weiter
+\[c={\textstyle \max\{\frac{1}{d},\frac{1}{e}\}}= {\textstyle \frac{1}{a}},\quad b={\textstyle \max\{\frac{1}{c},\frac{1}{d}\}}={\textstyle \max\{a,\frac{1}{a}\}}= {\textstyle \frac{1}{a}}.\]
+Die Lösungen sind also wie in der ersten Lösung die zyklischen Vertauschungen von
+\[(a,b,c,d,e,f) = (x,\textstyle{\frac{1}{x}},\textstyle{\frac{1}{x}},x,\textstyle{\frac{1}{x}},\textstyle{\frac{1}{x}}),\quad x \leq 1.\]
+
+\bigskip
+
+\item[\textbf{2.}] Seien $a,b,c$ drei ganze Zahlen, sodass $a+b+c$ durch 13 teilbar ist. Zeige, dass auch 
+\[a^{2007}+b^{2007}+c^{2007}+2\cdot 2007 abc\]
+durch 13 teilbar ist.\\
+
+\textbf{1. Lösung}
+
+Ist $x$ nicht durch 13 teilbar, dann gilt $x^{12} \equiv 1$ (mod 13) nach dem kleinen Satz von Fermat. Daraus folgt unmittelbar, dass für \emph{alle} ganzen $x$ gilt $x^{13} \equiv x$ (mod 13). Wiederholte Anwendung dieser Gleichung liefert $x^{2007} \equiv x^3$ (mod 13) wegen $2007=167\cdot 12+3$. Ausserdem gilt $2007 \equiv 10 \equiv -3$, der Ausdruck ist modulo 13 also gleich
+\[a^3+b^3+c^3-3abc=(a+b+c)(a^2+b^2+c^2-ab-bc-ca) \equiv 0.\]
+
+\textbf{2. Lösung}
+
+Der Beweis kann auch wie folgt beendet werden. Es gilt $c \equiv -(a+b)$ (mod 13) und daher ist
+\[a^3+b^3+c^3-3abc \equiv a^3+b^3-(a+b)^3+3ab(a+b)=0.\]
+
+\bigskip
+
+\item[\textbf{3.}] Die Ebene wird in Einheitsquadrate unterteilt. Jedes Feld soll mit einer von $n$ Farben gefärbt werden, sodass gilt: Können vier Felder mit einem L-Tetromino bedeckt werden, dann haben diese Felder vier verschiedene Farben (das L-Tetromino darf gedreht und gespiegelt werden). Bestimme den kleinsten Wert von $n$, für den das möglich ist.\\
+
+\textbf{Lösung}
+
+Je zwei der sieben Felder innerhalb der Figur links in Abbildung 1 können gleichzeitig mit einem L-Tetromino bedeckt werden. Diese Felder haben also verschiedene Farben, insbesondere ist $n \geq 7$. Nehme an, $n=7$ sei möglich und färbe die Felder im Gebiet wie in Abbildung 1. Die beiden Felder rechts und links unterhalb des Gebiets müssen nun die Farben 1 und 3 haben, denn sonst liessen sich wieder zwei gleichfarbige Felder mit einem L-Tetromino überdecken. Genauso bestimmt man die Farbe der beiden anderen Felder rechts in Abbildung 1. Nun bleibt für das Feld mit der Markierung keine Farbe mehr übrig, Widerspruch. Ein Beispiel für $n=8$ findet sich in Abbildung 2.
+
+\begin{figure}[h!]
+\centering
+\begin{minipage}{6cm}
+\center
+\includegraphics[height=2.5cm]{Aufgabe3_1}\\[5mm]
+\includegraphics[height=2.5cm]{Aufgabe3_2}
+\caption{Es gilt $n\geq 8$.}
+\end{minipage}
+\qquad
+\begin{minipage}{6cm}
+\includegraphics[width=5cm]{Aufgabe3_3}
+\caption{$n=8$ genügt.}
+\end{minipage}
+\end{figure}
+
+
+
+\item[\textbf{4.}] Sei $ABC$ ein spitzwinkliges Dreieck mit $AB>AC$ und Höhenschnittpunkt $H$. Sei $D$ der Höhenfusspunkt von $A$ auf $BC$. Sei $E$ die Spiegelung von $C$ an $D$. Die Geraden $AE$ und $BH$ schneiden sich im Punkt $S$. Sei $N$ der Mittelpunkt von $AE$ und sei $M$ der Mittelpunkt von $BH$. Beweise, dass $MN$ senkrecht auf $DS$ steht.\\
+
+\begin{figure}[h!]
+\centering
+\begin{minipage}[t]{9cm}
+\centering
+\includegraphics[width=9cm]{abb04}
+\caption{Figur zur Lösung von Aufgabe 4}
+\end{minipage}
+\end{figure}
+
+\textbf{1. Lösung}
+
+Nach Konstruktion ist das Dreieck $AEC$ gleichschenklig und wegen $AB>AC$ liegt $D$ auf der Strecke $BD$ (siehe Abbildung 3). Sei $k_1$ der Kreis mit Mittelpunkt $M$ und Durchmesser $BH$ und sei $k_2$ der Kreis mit Mittelpunkt $N$ und Durchmesser $AE$. Wegen $\angle BDH = \angle EDA = 90^\circ$ liegt $D$ sowohl auf $k_1$ als auch auf $k_2$. Insbesondere liegt $D$ auf der Potenzlinie der beiden Kreise. Weil allgemein die Potenzlinie von zwei Kreisen die Gerade durch deren Mittelpunkte rechtwinklig schneidet, genügt es zu zeigen, dass $S$ auf der Potenzlinie von $k_1$ und $k_2$ liegt. \\
+Sei $\angle EBH = \varphi$ und sei $F$ der Höhenfusspunkt von $B$ auf $CA$. Wegen $\angle BFC = 90^\circ$ gilt $\angle BCA = 90^\circ - \varphi$ und wegen $\angle CDA = 90^\circ$ gilt $\angle DAC = \varphi$. Das Dreieck $AEC$ ist gleichschenklig und deshalb $\angle EAH = \varphi = \angle EBH$. Damit ist gezeigt, dass $ABEH$ ein Sehnenviereck ist und die Potenz von $S$ zu dessen Umkreis ist
+$$ SB \cdot SH = SE \cdot SA.$$
+Damit ist gezeigt, dass $S$ die gleiche Potenz zu $k_1$ und $k_2$ hat und somit auf deren Potenzlinie liegt.\\
+
+\textbf{2. Lösung}
+
+Wir zeigen, dass $BH$ rechtwinklig auf $DN$ und $AE$ rechtwinklig auf $DM$ stehen. Daraus folgt, dass $S$ der Höhenschnittpunkt von Dreieck $NMD$ ist und deshalb $DS$ rechtwinklig auf $MN$ steht. \\
+Sei $\angle ACB = \gamma$ und sei $F$ der Höhenfusspunkt von $B$ auf $CA$. Weil Dreieck $AEC$ gleichschenklig ist, gilt $\angle AED = \gamma$. Wegen $\angle BFC = 90^\circ$ gilt $\angle CBF = 90^\circ - \gamma$. Der Thaleskreis über $BH$ geht durch $D$ und hat den Mittelpunkt $M$. Deshalb ist Dreieck $MBD$ gleichschenklig und $\angle MDB = 90^\circ - \gamma$. Aus $\angle MDB + \angle AED = 90^\circ$ folgt, dass $AE$ rechtwinklig auf $DM$ steht. \\
+Der Thaleskreis über $AE$ geht durch $D$ und hat den Mittelpunkt $N$. Somit ist das Dreieck $NED$ gleichschenklig und $\angle NDE = \gamma = \angle ACB$. Die Gerade $ND$ ist also parallel zu $AC$ und wegen $\angle BFC = 90^\circ$ steht $BH$ rechtwinklig auf $AE$.\\
+
+\textbf{3. Lösung}
+
+Wir führen Koordinaaten ein und beweisen die Behauptung durch Rechnung. Wir wählen den Ursprung bei $D$. Die x-Achse liege auf $BC$, so dass $B$ auf der positiven x-Achse und $C$ auf der negativen x-Achse liegt. Zur Vereinfachung setzen wir: $DB=u$, $CD=v$ und $DA=w$. Analog wie in der 1. Lösung zeigen wir, dass $EBAW$ ein Sehnenvierreck ist. Mittels Potenzsatz folgt nun, dass $DH \cdot DA = DE \cdot DB$. Formt man diese Gleichung um und verwendet, dass $CD=DE$ so erhält man $DH = \frac{uv}{w}$. Um die Behauptung zu beweisen, genügt es zu zeigen, dass das Produkt der Steigungen der Geraden $DS$ und $MN$ $-1$ ergibt. Wir berechnen zuerst die Steigung von $DS$. Die Geradengleichungen von $AE$ und $HB$ lauten:
+\begin{eqnarray*}
+AE &:& y = -\frac{w}{v}x+w,\\
+HB &:& y = -\frac{\frac{uv}{w}}{u}x+\frac{uv}{w}.
+\end{eqnarray*}
+Um die Steigung von $DS$ zu bestimmen, müssen wir das Verhältnis $\frac{y}{x}$ berechnen. Dazu multiplizieren wir die erste Gleichung mit $uv$ und die zweite mit $-w^2$ und addieren sie:
+\begin{eqnarray*}
+(uv-w^2)y &=& (v-u)wx\\
+\Longleftrightarrow \qquad \qquad \qquad \frac{y}{x} &=& \frac{(v-u)w}{uv-w^2}
+\end{eqnarray*}
+Als nächstes berechnen wir die Steigung von $NM$:
+\[\frac{\frac{uv}{2w}-\frac{w}{2}}{\frac{u}{2}-\frac{v}{2}}=\frac{uv-w^{2}}{w(u-v)}\]
+Wie gewünscht ergibt das Produkt der beiden Steigungen $-1$. Damit ist alles gezeigt.
+
+\bigskip
+
+\item[\textbf{5.}] Bestimme alle Funktionen $f:\BR_{\geq 0} \rightarrow \BR_{\geq 0}$ mit folgenden Eigenschaften:
+\begin{enumerate}
+\item[(a)] $f(1)=0$,
+\item[(b)] $f(x)>0$ für alle $x>1$,
+\item[(c)] Für alle $x,y \geq 0$ mit $x+y>0$ gilt
+\[f(xf(y))f(y)=f\left(\frac{xy}{x+y}\right).\]
+\end{enumerate}
+
+\textbf{Lösung}
+
+Mit $y=1$ folgt aus (a) und (c) für alle $x \geq 0$
+\[0=f(xf(1))f(1)=f\left(\frac{x}{x+1}\right).\]
+Der Ausdruck $\frac{x}{x+1}$ nimmt alle Werte im Intervall $[0,1[$ an, wenn $x$ alle nichtnegativen reellen Zahlen durchläuft. Somit gilt zusammen mit (a)
+\begin{equation}\label{Gleichung1}
+f(x)=0, \qquad 0 \leq x \leq 1.
+\end{equation}
+Für das Folgende nehmen wir stets $y \geq 1$ an. Wegen $f(y) \neq 0$ gilt $f(xf(y))=0$ genau dann, wenn $f\big(\frac{xy}{x+y}\big)=0$. Wegen (\ref{Gleichung1}) gilt also auch 
+\[xf(y) \leq 1 \quad \Longleftrightarrow \quad \frac{xy}{x+y}\leq 1 \quad \Longleftrightarrow \quad x \leq \frac{y}{y-1}.\]
+Mit anderen Worten, es gilt
+\[f(y) \left\{ \parbox{4mm}{$\leq$\\$>$}\right\} z \qquad \mbox{für alle $z$ mit} \quad z \left\{ \parbox{4mm}{$\geq$\\$<$}\right\} 1-\frac{1}{y}.\]
+Daraus folgt unmittelbar $f(y)=1-\frac{1}{y}$ für alle $y>1$. Die einzige Funktion, welche die Gleichung erfüllen kann, ist denmach
+\[f(x)=\begin{cases} 0 & \text{für }0 \leq x \leq 1,\\  1-\frac{1}{x} & \text{für }x>1. \end{cases}\]
+Wir zeigen nun, dass dies wirklich eine Lösung ist und unterscheiden dazu zwei Fälle.
+\begin{enumerate}
+\item[(1)] Sei zunächst $\frac{1}{x}+\frac{1}{y} \geq 1$, dann gilt $\frac{xy}{x+y} \leq 1$ und somit ist $f\big(\frac{xy}{x+y}\big)=0$. Ist $y \leq 1$, dann verschindet auch $f(y)$ und die linke Seite der Gleichung ist ebenfalls 0. Ist $y>1$, dann folgt $xf(y)=x\big(1-\frac{1}{y}\big)\leq x \cdot\frac{1}{x}=1$, also ist diesmal $f(xf(y))=0$ und die linke Seite der Gleichung verschwindet wieder. 
+\item[(2)]Sei nun $\frac{1}{x}+\frac{1}{y}<1$. Dann ist notwendigerweise $y>1$ und dieselben Rechnungen wie im ersten Fall zeigt, dass auch $xf(y)>1$ ist. Folglich gilt
+\begin{eqnarray*}
+f(xf(y))f(y) &=& \frac{xf(y)-1}{xf(y)}\cdot\frac{y-1}{y} = \frac{x \frac{y-1}{y}-1}{x \frac{y-1}{y}} \cdot \frac{y-1}{y} =\frac{xy-x-y}{xy},\\
+f\left(\frac{xy}{x+y}\right) &=& \frac{xy-x-y}{xy},
+\end{eqnarray*}
+wie gewünscht. Damit ist alles gezeigt.\\
+\end{enumerate}
+
+\bigskip
+
+\item[\textbf{6.}] Drei gleich grosse Kreise $k_1,k_2,k_3$ schneiden sich nichttangential in einem Punkt $P$. Seien $A$ und $B$ die Mittelpunkte der Kreise $k_1$ und $k_2$. Sei $D$ bzw. $C$ der von $P$ verschiedene Schnittpunkt von $k_3$ mit $k_1$ bzw. $k_2$. Zeige, dass $ABCD$ ein Parallelogramm ist.\\
+
+\begin{figure}[h!]
+\centering
+\begin{minipage}[t]{9cm}
+\centering
+\includegraphics[width=9cm]{abb06}
+\caption{Figur zur Lösung von Aufgabe 6}
+\end{minipage}
+\end{figure}
+
+\textbf{1. Lösung}
+
+Sei $M$ der Mittelpunkt von $k_3$. Man betrachte das Viereck $PBCM$. Alle vier Seiten dieses Vierecks sind nach Voraussetzung gleich lang. Folglich ist $PBCM$ ein Rhombus und $BC$ ist parallel zu $PM$. Analog kann gezeigt werden, dass $AD$ parallel ist zu $PM$. Daraus folgt direkt, dass $AD$ parallel ist zu $BD$. Nach Voraussetzung sind auch beide Strecken gleich lang, womit alles gezeigt ist.\\
+
+\newpage
+
+\textbf{2. Lösung}
+
+Wir zeigen $AD \parallel BC$ mit Winkeljagd. Dies und die Tatsache, dass $AD$ und $BC$ nach Voraussetzung gleich lang sind, beendet den Beweis. \\
+Sei $\alpha = \angle DCP$ der Peripheriewinkel in $k_3$ über der Sehne $DP$. Weil $k_1$ und $k_3$ gleich gross sind, ist der Peripheriewinkel in $k_1$ über $DP$ ebenfalls $\alpha$ und der entsprechende Zentriwinkel $\angle DAP = 2 \alpha$. Das Dreieck $APD$ ist gleichschenklig und deshalb $\angle ADP = 90^\circ - \alpha$. Analog erhalten wir $\angle BCP = 90^\circ - \beta$, wenn wir $\beta$ als Peripheriewinkel in $k_3$ über $CP$ definieren. Mit
+$$ \angle ADC + \angle BCD = (\beta + 90^\circ - \alpha) + (\alpha + 90^\circ - \beta) = 180^\circ $$
+ist $AD \parallel BC$ gezeigt.
+
+\bigskip
+
+\item[\textbf{7.}] Seien $a,b,c$ nichtnegative reelle Zahlen mit arithmetischem Mittel $m=\frac{a+b+c}{3}$. Beweise, dass gilt
+\[\sqrt{a+\sqrt{b+\sqrt{c}}}+\sqrt{b+\sqrt{c+\sqrt{a}}}+\sqrt{c+\sqrt{a+\sqrt{b}}}\leq 3\;\sqrt{m+\sqrt{m+\sqrt{m}}}.\]
+
+\newpage
+
+\textbf{Lösung}
+
+Sei $A$ die linke Seite der Ungleichung. Nach AM-QM gilt
+\[A \leq 3 \;\sqrt{\frac{1}{3}\left(a+\sqrt{b+\sqrt{c}}+b+\sqrt{c+\sqrt{a}}+c+\sqrt{a+\sqrt{b}}\right)}
+= 3\;\sqrt{m+{\textstyle \frac{1}{3}}B}.\]
+Wiederum nach AM-QM erhält man für $B$
+\[B \leq 3 \;\sqrt{\frac{1}{3}\left(b+\sqrt{c}+c+\sqrt{a}+a+\sqrt{b}\right)}
+= 3\;\sqrt{m+{\textstyle \frac{1}{3}}C}.\]
+Schliesslich erhält man nochmal
+\[C \leq 3\; \sqrt{\frac{1}{3}(a+b+c)}= 3 \sqrt{m}.\]
+Rückwärts Einsetzen liefert wie gewünscht 
+\[A \leq 3\;\sqrt{m+\sqrt{m+\sqrt{m}}}.\]
+
+\bigskip
+
+\item[\textbf{8.}] Sei $M \subset \{1,2,3,\ldots,2007\}$ eine Menge mit folgender Eigenschaft: Unter je drei Zahlen aus $M$ kann man stets zwei auswählen, sodass die eine durch die andere teilbar ist. Wieviele Zahlen kann $M$ höchstens enthalten?\\
+
+\textbf{1. Lösung}
+
+Zerlege die Menge $\{1,2,3,\ldots,2007\}$ wie folgt in 11 Teilmengen:
+\[\{1\} \cup \{2,3\} \cup \{4,5,6,7\} \cup \ldots \cup \{256,\ldots,511\} \cup \{512,\ldots,1023\} \cup \{1024,\ldots,2007\}\]
+Aus jeder dieser Teilmengen kann $M$ höchstens zwei Zahlen enthalten, denn der Quotient je zwei solcher Zahlen liegt zwischen $\frac{1}{2}$ und 2, ist also sicher nicht ganz. Somit kann $M$ höchstens $1+10\cdot 2=21$ Elemente enthalten. Andererseits erfüllt die 21-elementige Menge 
+\[M=\{1,2,4,8,\ldots,2^{10}\} \cup \{3,6,12,24,\ldots,3\cdot 2^9\}=A \cup B\]
+die Bedingung der Aufgabe, denn von je drei Elementen liegen zwei in derselben Teilmenge $A$ oder $B$, die kleinere der beiden teilt dann die grössere.\\
+
+\textbf{2. Lösung}
+
+Für $n \geq 1$ sei $A_n$ die Menge aller natürlichen Zahlen $\leq 2007$, die ein Produkt von genau $n$ Primzahlen sind. Wegen $2^{11}>2007$ sind die $A_n$ leer für $n \geq 11$. Nun kann $M$ höchstens zwei Zahlen aus jeder der Mengen $A_1,\ldots,A_{10}$ enthalten, denn sind zwei verschiedene natürliche Zahlen das Produkt von gleich vielen Primzahlen, dann kann keine durch die andere teilbar sein. Zusammen mit der Zahl 1 enthält $M$ also höchstens $1+10\cdot 2=21$ Elemente.\\
+
+\bigskip
+
+\item[\textbf{9.}] Finde alle Paare $(a,b)$ natürlicher Zahlen, sodass 
+\[\frac{a^3+1}{2ab^2+1}\]
+eine ganze Zahl ist.\\
+
+\textbf{1. Lösung}
+
+Nach Voraussetzung ist $2ab^2+1$ ein Teiler von $a^3+1$, also auch von $a^2(2ab^2+1)-2b^2(a^3+1)=a^2-2b^2$. Weiter gilt sicher $2b^2 \leq a^2$, denn sonst wäre der Nenner grösser als der Zähler. Der Fall $2b^2=a^2$ ist nicht möglich, denn sonst wäre 2 eine Quadratzahl. Folglich ist $a^2-2b^2>0$ und es muss gelten
+\[2ab^2+1 \leq a^2-2b^2 \quad \Longleftrightarrow \quad 2b^2(a+1)\leq (a-1)(a+1) \quad \Longleftrightarrow \quad 2b^2\leq a-1.\]
+Weiter ist $2ab^2+1$ auch ein Teiler von $a(2ab^2+1)-2b^2(a^2-2b^2)=a+4b^4$. Folglich gilt auch
+\[2ab^2+1 \leq a+4b^4 \quad \Longleftrightarrow \quad a(2b^2-1)\leq (2b^2+1)(2b^2-1) \quad \Longleftrightarrow \quad a\leq 2b^2+1.\]
+Beide Abschätzungen zusammen ergeben die Gleichung $a=2b^2+1$, also sind die gesuchten Paare alle von der Form $(a,b)=(2n^2+1,n)$ mit $n \in \BN$. Einsetzen zeigt, dass es auch wirklich Lösungen sind:
+\[\frac{a^3+1}{2ab^2+1}=\frac{a^3+1}{a(a-1)+1}=a+1=2n^2+1.\]
+
+\textbf{2. Lösung}
+
+Wie in der ersten Lösung folgt, dass $2ab^2+1$ ein Teiler ist von $a^2-2b^2>0$. Folglich gibt es eine natürliche Zahl $k$ mit $k(2ab^2+1)=a^2-2b^2$. Dies ist eine quadratische Gleichung in $a$:
+\[a^2-2kb^2a-(2b^2+k)=0.\]
+Die Diskriminante $D=4(k^2b^4+2b^2+k)$ muss daher eine Quadratzahl sein. Für $k \geq 2$ gilt aber
+\[(kb^2)^2<k^2b^4+2b^2+k<(kb^2+1)^2,\]
+folglich liegt der mittlere Term zwischen zwei aufeinanderfolgenden Quadraten und kann nicht selbst eines sein. Es muss daher $k=1$ sein und wie in der ersten Lösung folgt $a=2b^2+1$.\\
+
+\bigskip
+
+\item[\textbf{10.}] Die Ebene wird in gleichseitige Dreiecke der Seitenlänge 1 unterteilt. Betrachte ein gleichseitiges Dreieck der Seitenlänge $n$, dessen Seiten auf den Gitterlinien liegen. Auf jedem Gitterpunkt auf dem Rand und im Innern dieses Dreiecks liegt ein Stein. In einem Spielzug wird ein Einheitsdreieck ausgewählt, welches auf genau 2 Ecken mit einem Stein belegt ist. Die beiden Steine werden entfernt, und auf die dritte Ecke wird ein neuer Stein gelegt. Für welche $n$ ist es möglich, dass nach endlich vielen Spielzügen nur noch ein Stein übrig bleibt?\\
+
+\textbf{Lösung}
+
+Wir zeigen zuerst, dass $n$ durch 3 teilbar sein muss. Färbe dazu jeden Gitterpunkt rot, blau oder grün, sodass jedes Einheitsdreieck drei verschieden farbige Ecken hat. Seien $R$, $B$ und $G$ die Anzahl belegter roter, blauer und grüner Gitterpunkte. Wir behaupten, dass die drei Grössen
+\[R+B, \quad B+G, \quad G+R \quad (\text{mod 2})\]
+sich während eines Spielzugs nicht ändern. Dazu können wir oBdA annehmen, dass auf der roten und der blauen Ecke des Einheitsdreiecks je ein Stein liegt. Nach dem Spielzug liegt nur auf der grünen Ecke ein Stein. Offenbar ändert sich dabei $R+B$ um $-2 \equiv 0$, während $B+G$ und $G+R$ unverändert bleiben. 
+
+Falls nun am Schluss nur noch ein Stein übrig bleibt, müssen genau zwei dieser drei Invarianten ungerade sein. Wir nehmen nun an, dass dies bereits am Anfang der Fall ist. Betrachte ein gleichseitiges Dreieck der Seitenlänge $n$ aus Gitterpunkten (auf jeder Seite liegen also $n+1$ Punkte) und nehme an, einer der drei Eckpunkte sei rot. Betrachte die Winkelhalbierende des Dreiecks durch diesen Eckpunkt. Da die Menge der blauen Gitterpunkte dieses Dreiecks bezüglich der Winkelhalbierenden spiegelsymmetrisch zur Menge der grünen Gitterpunkte liegt, gibt es gleichviele blaue wie grüne Gitterpunkte. Ist nun einer der beiden anderen Eckpunkte nicht rot, dann zeigt eine Wiederholung desselben Arguments, dass das Dreieck gleichviele Gitterpunkte von jeder Farbe enthält, was nicht sein darf. Folglich müssen alle drei Eckpunkte rot sein, also ist $n$ durch 3 teilbar.
+
+Als nächstes zeigen wir, dass es für ein gleichseitiges Dreieck mit durch 3 teilbarer Seitenlänge $n$ möglich ist, alle Steine bis auf einen zu entfernen. Abbildung 5 zeigt drei grundlegende Abfolgen von Spielzügen (Move A,B,C), die wir wiederholt verwenden werden.
+
+\begin{figure}[!h]
+\centering
+\begin{minipage}{2cm}
+\center
+Move A:
+\end{minipage}
+\begin{minipage}{3cm}
+\center
+\includegraphics[height=3cm]{move1_1}
+\end{minipage}
+\begin{minipage}{3cm}
+\center
+\includegraphics[height=3cm]{move1_2}
+\end{minipage}
+\begin{minipage}{3cm}
+\center
+\includegraphics[height=3cm]{move1_3}
+\end{minipage}
+\begin{minipage}{3cm}
+\center
+\includegraphics[height=3cm]{move1_4}
+\end{minipage}
+
+\begin{minipage}{2cm}
+\center
+Move B:
+\end{minipage}
+\begin{minipage}{3cm}
+\center
+\includegraphics[height=3cm]{move2_1}
+\end{minipage}
+\begin{minipage}{3cm}
+\center
+\includegraphics[height=3cm]{move2_2}
+\end{minipage}
+\begin{minipage}{3cm}
+\center
+\includegraphics[height=3cm]{move2_3}
+\end{minipage}
+\begin{minipage}{3cm}
+\center
+\includegraphics[height=3cm]{move2_4}
+\end{minipage}
+
+\begin{minipage}{2cm}
+\center
+Move C:
+\end{minipage}
+\begin{minipage}{3cm}
+\center
+\includegraphics[height=3cm]{move3_1}
+\end{minipage}
+\begin{minipage}{3cm}
+\center
+\includegraphics[height=3cm]{move3_2}
+\end{minipage}
+\begin{minipage}{3cm}
+\center
+\includegraphics[height=3cm]{move3_3}
+\end{minipage}
+\begin{minipage}{3cm}
+$\mbox{}$
+\end{minipage}
+\caption{}
+\end{figure}
+
+
+Der Fall $n=0$ ist trivial. Für $n=3$ lässt sich das Dreieck durch zweimaliges Anwenden von Move A für zwei Eckdreicke auf einen Rhombus der Seitenlänge 1 reduzieren. Ein Move B erledigt dann den Rest. Für $n \geq 6$ zeigt Abbildung 6 eine Reduktion des Dreiecks auf ein Dreieck der Seitenlänge $n-6$ mittels der drei Moves (im Bild das Beispiel $n=9$). Damit ist alles gezeigt.\\
+
+\begin{figure}[!h]
+\centering
+\includegraphics[height=6cm]{Reduktion}
+\caption{Der Reduktionsschritt $n \rightarrow (n-6)$.}
+\end{figure}
+
+\end{enumerate}
+
+\end{document}

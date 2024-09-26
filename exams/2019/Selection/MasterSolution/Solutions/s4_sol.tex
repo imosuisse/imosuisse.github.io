@@ -1,0 +1,113 @@
+Let $p$ be a prime. Determine all polynomials $P$ with integer coefficients satisfying the following two conditions:
+\begin{enumerate}[(i)]
+    \item $P(x)>x$ for all positive integers $x$.
+    \item If the sequence $(p_n)_{n\geq 0}$ is defined by $p_0:=p$ and $p_{n+1}:=P(p_n)$ for every $n\geq 0$, then for every positive integer $m$, there exists $l\geq 0$ such that $m$ divides $p_l$. 
+\end{enumerate}
+
+\textbf{Réponse:} Il y a deux polynômes $P\in \Z[x]$ qui satisfont les conditions (i) et (ii), à savoir $P(x)=x+1$ et $P(x) = x + p$.
+
+\textbf{Première solution:} (Arnaud) Tout d'abord, on montre que le polynôme $P(x)=x+1$ satisfait les conditions (i) et (ii). La condition (i) est trivialement satisfaite. Par induction, on trouve que $p_n=p+n$. Ainsi, étant donné $m$, on choisit un entier $k$ tel que $km>p$ et on vérifie que $m\div p_{km-p}$.
+
+Quant au polynôme $P(x)=x+p$, on obtient $p_n=p+np=p(n+1)$ et ainsi $m\div p_{m-1}$ pour tout $m>1$.
+
+Soit maintenant un polynôme $P\in\Z[x]$ qui satisfait les conditions (i) et (ii). On va montrer que $P(x)\equiv x+1$ ou $P(x)\equiv x+p$. La condition (i) implique que $p_{n+1}=P(p_n)>p_n$ et donc la suite $(p_n)_{n\geq 0}$ est strictement croissante.
+
+Le trick est évidement d'appliquer la fameuse relation $a-b\div P(a)-P(b)$. Si l'on considère la différence $m=p_n-p_{n-1}$, alors il existe $l$ tel que $p_n-p_{n-1}\div p_l$. On distingue à présent plusieurs cas.
+\begin{enumerate}
+    \item Si $l\leq n-1$, alors $p_n-p_{n-1}\leq p_l\leq p_{n-1}$ et donc $p_n\leq 2p_{n-1}$.
+    \item Si $l=n$, alors $p_n-p_{n-1}\div p_n$ implique $p_n-p_{n-1}\div p_{n-1}$ et on obtient la même relation.
+    \item Si $l>n$, alors, en appliquant $a-b\div P(a)-P(b)$, on obtient
+    \[
+    p_n-p_{n-1}\div P(p_n)-P(p_{n-1})=p_{n+1}-p_n\div \ldots \div p_l-p_{l-1}.
+    \]
+    Comme $p_n-p_{n-1}\div p_l$, il s'en suit que $p_n-p_{n-1}\div p_{l-1}$. En répétant le processus $(l-n)$ fois, on obtient finalement $p_n-p_{n-1}\div p_n$ et on se retrouve au cas (b).
+\end{enumerate}
+En conclusion, on a montré que 
+\[
+p_n\leq 2p_{n-1}, \forall n\geq 0.
+\]
+Autrement dit, le polynôme $P$ satisfait la relation $P(x)\leq 2x$ pour les valeurs de la suite $(p_n)_{n\geq 0}$. Donc $x<P(x)\leq 2x$ pour ces mêmes valeurs, or la suite $(p_n)_{n\geq 0}$ est une suite strictement croissante d'entiers et donc divergente. Le polynôme $P$ est donc de degré 1, car borné par les droites $y=x$ et $y=2x$ pour une infinité de valeurs arbitrairement grandes. Le graphe de $P$ est donc une droite qui se situent au-dessus des points $(n;n)$ pour $n\geq 1$ et en-dessous des points $(p_n;2p_n)$ pour $n\geq 0$. Il s'en suit que le coefficient dominant de $P$ est soit $1$, soit $2$, autrement dit $P(x)=ax+b$ avec $a\in\{1,2\}$. 
+
+Si $a=2$, alors $b\leq 0$, car $P(p_n)\leq 2p_n$ et $b>-1$, car $P(1)>1$. Donc $b=0$ et $P(x)=2x$. Ainsi $p_n=2^np$ et la condition (ii) n'est pas satisfaite.
+
+On doit donc avoir $a=1$ et ainsi $b\geq 1$, car $P(1)>1$. Si $b=1$, alors $P(x)=x+1$ est une solution. Supposons $b\geq 2$. On a $p_n=p+bn$ et donc en appliquant la condition (ii) pour $m=b$, on en déduit $b\div p$ et donc $b=p$. Le polynôme $P(x)=x+p$ est aussi solution et on a terminé.
+
+\newpage
+\textbf{Deuxième solution:} (Louis)
+Après quelques essais on remarque que $P(x) = x+1$ et $P(x) = x+p$ sont tous les deux des solutions. En particulier, il semble que $P(x) - x$ soit constant. On va donc essayer de prouver cette propriété.
+Comme dans la première solution on constate facilement que la suite $(p_k)_{k\geq 0}$ est strictement croissante et on va également utiliser la relation $a-b | P(a) - P(b)$.
+
+En utilisant la relation citée précédemment on obtient que $p_k - p_{k-1} \div P(p_k) - P(p_{k-1} = p_{k+1}- p_k$. Il existe deux manières de généraliser cette relation de divisibilité: d'une part on obtient par induction que $p_k - p_{k-1}$ divise $p_l - p_{l-1}$ pour tout $l > k$, et d'autre part que $p_k - p_{k-1}$ divise $p_l - p_{k-1}$ pour tout $l \geq k$ (car $p_k - p_{k-1}$ divise $p_l - p_{l-1}$ et $p_{l-1}- p_{k-1}$). On aura également besoin de la relation
+\[
+    p_k-p_0 \div p_{mk+i}- p_i.
+\]
+pour tout $m \geq 1$ et $i\leq k$. Cette relation se démontre de la même manière que la précédente.
+
+On aimerait pouvoir prouver que le polynôme $P(x) - x$ est constant. Supposons donc par l'absurde qu'il ne le soit pas. Il s'ensuit alors que l'expression $m_k = p_k - p_{k-1}$ prend une infinité de valeurs différentes. Or, il existe un nombre $n$ tel que $nm_k$ ne divise aucun des $p_i$ avec $i < k$. Il doit alors exister un $l \geq k$ tel que $nm_k \div p_l$, et alors puisque $m_k \div p_l - p_{k-1}$ il s'ensuit que $m_k \div p_{k-1}$ et donc également $m_k \div p_k = P(p_{k-1})$. Or, de ces deux relations on déduit que $m_k \div a_0 = P(0)$. Ainsi, puisque $m_k$ prend une infinité de valeurs, il s'ensuit que $P(0) = 0$. À partir de là on prouve par induction que tous les $p_i$ sont divisibles par $p$. On sait donc que $p_1$ est divisible par $p$ et $p_1 > p$. Si $p_1 > 2p$, alors il existe un $k > 1$ tel que $p_1 - p = kp$. Comme fait précédemment on en déduit que $kp \div p$, une contradiction. On a donc $p_1 = 2p$, et puisqu'on suppose que $p_{i+1}-p_i$ il existe un $k$ minimal tel que $p_{k+1}-p_k \neq p$. Par les résultats prouvés précédemment on obtient que $p_{k+1} - p > p_k > p_{k-1} > ...$. Or, puisque $p_{k+1} - p \div p_{m(k+1) + i} - p_i$ pour tout $m \geq 1, 0 \leq i \leq k$, on prouve comme précédemment qu'il doit exister un $i$ tel que $p_{k+1}-p \div p_i$, ce qui contredit $p_{k+1}-p < p_i$.
+
+On conclut de tout ce paragraphe que l'hypothèse que $P(x)- x$ est non constant amène une contradiction, autrement dit le polynôme $P(x) - x$ est forcément le polynôme constant et donc on peut écrire $P(x) = x + b$ et il ne reste plus qu'à trouver les valeurs possibles pour $b$. On fait une dernière fois le même raisonnement que précédemment pour trouver que $b = P(p) - p = p_1 -p \div p_l - p$ pour tout $l \in \N$ et donc que $b \div p$, autrement dit $b = 1$ ou $b = p$. On a déjà trouvé que ces deux polynômes sont effectivement des solutions et donc ce sont les seules.
+
+%\textbf{Dritte Lösung:} (Frieder)  
+%Wie bei den vorherigen Lösungen zeigt man
+%\[
+%    p_{n+1}-p_n\div p_k-p_n 
+%\]
+%für alle $k>n$. Fixiere eine natürliche Zahl $n$ und wähle ein Vielfaches $m$ von $p_{n+1}-p_n$ das grösser ist als $p_n$. Dann ex. ein $k$ mit
+%\[
+%    p_{n+1}-p_n\div m \div p_k.
+%\]  
+%Nach der Wahl von $m$ ist $p_n< m\leq p_k$ und folglich $k>n$. Diese beiden Teilbarkeitsaussagen liefern
+%\[
+%    p_{n+1}-p_n\div p_n.
+%\]
+%Also 
+%\[
+%    p_{n+1}-p_n\leq p_n \Leftrightarrow P(p_n)\leq 2p_n.
+%\]  
+%Da die Folge $(p_n)_{n \in \mathbf{N}}$ streng monoton wachsend ist folgt daraus, dass $P$ von der Form $P(x)=2x$ für alle $x \in \R$ oder $P(x)=x+b$ für alle $x\in \R$ ist. Im ersten Fall gilt $p_n=2^np$ und die zweite Bedingung ist offensichtlich nicht erfüllt. Im zweiten Fall gilt $p_n=p+nb$. Nach der zweiten Bedingung ex. ein $k$ mit 
+%\[
+%    b\div p_k=p+kb \Leftrightarrow b\div p.
+%\]
+%Wegen der ersten Bedingung ist $b$ nicht negativ und es folgt, dass $b$ entweder 1 oder $p$ ist. Also $P(x)=x+1$ für alle $x\in \R$ oder $P(x)=x+p$ für alle $x\in \R$. Man kann leicht überprüfen, dass dies tätsächlich Lösungen sind.
+
+\newpage
+\textbf{Marking scheme:}
+
+\textbf{Remark}: A complete solution is worth 7P. A complete solution where a verification that either $P(x)=x+1$ or $P(x)=x+p$ is indeed a solution is worth 6P.
+
+\begin{enumerate}
+
+\item Première Solution:
+\begin{itemize}
+
+    \item 1P (not additive with any other points): Finding the two solutions and verifying that they are solutions.
+    \item 1P: A relation of the type $p_{k+1}-p_k\div p_{k+2}-p_k$ or $p_1-p_0\div p_n-p_0$.
+    \item 1P: $p_{k+1}-p_k\div p_n-p_k$ for all $n>k$.
+    \item 1P: $p_{i+1}-p_i\div p_i$ (or similar) for all $i\geq 0$.
+    \item 2P: Concluding $P(x)=ax+b$ with $a\in\{1,2\}$.
+    \item 1P: $P$ is of the form $P(x)=x+b$ for all $x\in \R$.
+    \item 1P: Finishing the proof assuming $P$ has the above form.
+
+\end{itemize}
+
+\item Deuxième Solution:
+\begin{itemize}
+    \item 1P (not additive with any other points): Finding the two solutions and verifying that they are solutions.
+    \item 1P: A relation of the type $p_{k+1}-p_k\div p_{k+2}-p_k$ or $p_1-p_0\div p_n-p_0$.
+    \item 1P: $p_{k+1}-p_k\div p_n-p_k$ for all $n>k$.
+    \item 1P: $p_{i+1}-p_i\div p_i$ (or similar) for all $i\geq 0$.
+    \item 1P: Showing $P(0)=0$ if one assumes that $P(x)-x$ is not constant.
+    \item 2P: Deriving a contradiction so that $P(x)-x$ is constant.
+    \item 1P: Finishing by finding the value of $P(x)-x=P(0)$.
+\end{itemize}
+
+%\item Dritte Lösung:
+%\begin{itemize}
+%    \item 1P: A relation of the type $p_{k+1}-p_k\div p_{k+2}-p_k$ or $p_1-p_0\div p_n-p_0$.
+%    \item 1P: $p_{k+1}-p_k\div p_n-p_k$ for all $n>k$
+%    \item 1P: $p_{i+1}-p_i\div p_i$ (or similar) for infinitely many $i\geq 0$.
+%    \item 2P: $P$ ist linear oder $P(x)\leq 2x$ for all $x \in \R$.
+%    \item 1P: $P$ ist von der Form $P(x)=x+b$ for all $x\in \R$.
+%    \item 1P: Finishing the proof.
+%\end{itemize}
+\end{enumerate}

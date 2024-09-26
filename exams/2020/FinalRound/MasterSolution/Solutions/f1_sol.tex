@@ -1,0 +1,66 @@
+Let $\N$ be the set of positive integers. Find all functions $f\colon\N\to\N$ such that for every $m,n\in \N$
+\[
+f(m)+f(n)\div m+n.
+\]
+
+\textbf{Réponse:} La seule solution est la fonction identité.
+
+\textbf{Solution 1(Arnaud):}
+Soit $f$ une solution. Avec $m=n=1$, on obtient $f(1)\div 1$ et donc $f(1)=1$. Posons à présent $n=1$. On obtient 
+\[
+f(m)+1\div m+1.
+\]
+Il serait intéressant de rendre le côté droit premier. Posons donc $m=p-1$ pour $p$ un nombre premier. On a donc $f(p-1)+1\div p$ et comme $f(p-1)+1>1$, forcément $f(p-1)+1=p$ et donc $f(p-1)=p-1$ pour tous les nombres premiers $p$.
+
+Posons à présent $n=p-1$, on a $f(m)+p-1\div m+p-1$ et donc
+\[
+f(m)+p-1\div m-f(m).
+\]
+Dans cette dernière relation, on fixe $m$ et on laisse $p$ tendre vers l'infini. On obtient ainsi des diviseurs arbitrairement grands pour $m-f(m)$. Forcément $f(m)=m$.
+
+On vérifie facilement que l'identité est une solution.
+
+\textbf{Solution 2(Ivan):}
+Comme dans la première solution, on montre que $f(1)=1$. On procède à présent par induction. Supposons que $f(m)=m$ pour tout $m\geq m_0$. On va montrer que $f(m_0+1)=m_0+1$.
+
+Soit $m=m_0+1$ et $n=m_0$. On a 
+\[
+f(m_0+1)+m_0\div 2m_0+1.
+\]
+On observe que $f(m_0+1)+m_0\geq 1+m_0> (2m_0+1)/2$. Donc $f(m_0+1)+m_0$ est un diviseur de $2m_0+1$ et il est strictement plus grand que la moitié de $2m_0+1$ (qui est potentiellement le plus grand diviseur de $2m_0+1$ différent de $2m_0+1$). Forcément $f(m_0+1)+m_0=2m_0+1$ et ainsi $f(m_0+1)=m_0+1$.
+
+Comme avant, on vérifie que l'identité est bien une solution.
+
+\textbf{Solution 3(Viviane):}
+On procède également par induction. Avec $m=n$, on obtient $f(m)\div m$ et donc $f(m)\leq m$. Supposons que $f(m)=m$ pour tout $m\leq m_0-1$. Supposons par l'absurde que $f(m_0)<m_0$, donc on peut poser $n=m_0-f(m_0)\geq 1$ dans la relation de départ. Comme $m_0-f(m_0)\leq m_0-1$, par hypothèse on a $f(m_0-f(m_0))=m_0-f(m_0)$. Avec $m=m_0$ et $n=m_0-f(m_0)$, on a
+\[
+f(m_0)+m_0-f(m_0)\div 2m_0-f(m_0)
+\]
+et donc $m_0\div f(m_0)$. Contradiction. Ainsi $f(m_0)=m_0$ et on vérifie que l'identité est bien une solution.
+
+\newpage
+
+\textbf{Marking scheme}
+
+1P: $f(1)=1$
+
+\begin{enumerate}
+    \item Solution 1
+    \begin{itemize}
+        \item 3P: $f(n)=n$ for infinitely many $n$
+        \item 3P: conclude
+    \end{itemize}
+    \item Solution 2 (or general inductive solutions)
+    \begin{itemize}
+        \item 3P: get a relation that allows you to conclude $f(m_0+1)=m_0+1$ (eg. $f(m_0+1)+m_0\div 2m_0+1$)
+        \item 3P: conclude
+    \end{itemize}
+    \item Solution 3
+    \begin{itemize}
+        \item 1P: $n\geq f(n)$
+        \item 2P: plug in $n=m_0-f(m_0)$ when $m_0>f(m_0)$ in an inductive scheme
+        \item 3P: conclude
+    \end{itemize}
+\end{enumerate}
+
+-1P: not mentioning that one has to check that the identity is indeed a solution

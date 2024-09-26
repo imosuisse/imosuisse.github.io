@@ -1,0 +1,83 @@
+\de{Déterminer toutes les suites périodiques $x_1, x_2, x_3, \ldots$ de nombres réels strictement positifs telles que pour tout $n\geq 1$
+\[
+    x_{n+2}=\frac{1}{2}\left(\frac{1}{x_{n+1}}+x_{n}\right).
+\]
+
+\textbf{Réponse:} Les seules solutions sont les suites de période au plus 2. Plus précisément ce sont toutes les suites avec $x_1 = a$ et $x_2 = \frac{1}{a}$, où $a$ désigne n'importe quel nombre réel positif.
+
+\textbf{Première solution:} (Arnaud, by David) Comme proposé en cours, on commence par malaxer l'expression qui définit la suite. Si l'on supprime la fraction, on obtient
+\[
+2x_{n+2}x_{n+1}=x_{n+1}x_n+1.
+\]
+Il paraît à présent naturel d'introduire la nouvelle suite $y_n:=x_{n+1}x_n$ pour $n\geq 1$. Si la suite $\{x_n\}$ est périodique, alors la suite $\{y_n\}$ l'est aussi. On a la relation $2y_{n+1}=y_n+1$. Au feeling, il semble qu'une telle suite ne puisse pas vraiment être périodique en général.\newline
+Une obstruction classique à la périodicité est la \textbf{monotonie}. Que peut-on dire de la monotonie de la suite $\{y_n\}$ ? On remarque que
+\[
+y_{n+1}<y_n\Longleftrightarrow y_n>1.
+\] 
+De plus, si $y_n>1$, alors clairement $y_{n+1}=1/2(y_n+1)>1$. Autrement dit, la monotonie de la suite $\{y_n\}$ dépend uniquement du signe de $y_1-1$. En effet, on a
+\begin{itemize}
+    \item si $y_1>1$, alors $y_n>1,\, \forall n$ et $\{y_n\}$ est une suite strictement décroissante,
+    \item si $y_1<1$, alors $y_n<1,\, \forall n$ et $\{y_n\}$ est une suite strictement croissante,
+    \item $y_1=1$, alors $y_n= 1,\, \forall n$ est une suite constante.
+\end{itemize}
+Dans les deux premiers cas, la périodicité contredit la monotonie stricte. On conclut ainsi que $y_n=1$ pour tout $n$. En revenant à la suite $\{x_n\}$, on a alors $x_{n+1}x_n=1$ pour tout $n$. Autrement dit, $x_{n+1}=1/x_n$ ou encore 
+\[
+x_n=\left\{\begin{array}{cc}
+    x_2 & \mbox{si $n$ est pair,} \\
+    x_1 & \mbox{si $n$ est impair}
+\end{array}
+\right.
+,\quad x_1x_2=1.
+\]
+On vérifie à présent que toutes ces suites satisfont les hypothèses de départ. Une telle suite est périodique avec période 2 et on a bien $2=1+1$.
+
+\textbf{Deuxième solution:} (Arnaud) Plutôt qu'introduire la nouvelle suite $y_n=x_{n+1}x_n$, on introduit $z_n:=x_{n+1}x_n-1=y_n-1$ pour $n\geq 1$. Si la suite $\{x_n\}$ est périodique, alors la nouvelle suite $\{z_n\}$ est évidement périodique. La relation devient alors,
+\[
+z_{n+1}=\frac{1}{2}z_n.
+\]
+Autrement dit, la suite $\{z_n\}$ est une suite géométrique de raison $1/2$. Si $z_1\neq 0$, alors $\{z_n\}$ est une suite strictement monotone (et convergente) et donc ne peur pas être périodique. On doit donc avoir $z_1=0$ et ainsi $z_n=0$ pour tout $n$. On conclut de la même manière que précédemment.
+
+
+\textbf{Dritte Lösung (Sketch):} (Paul) Es geht auch ganz ohne Substitution, aber mit vielen Fallunterscheidungen. Um Platz zu sparen, schreiben wir symmetrische Fälle nicht auf.
+
+\begin{enumerate}
+\item \textbf{Lemma:} $x_0<1<x_1\Rightarrow x_{2n}<1<x_{2n+1}$ für alle $n$. 
+\item $x_0=1, x_1 > 1$: Dann ist $x_2<1$, dank (a) kann die Folge danach die Zahl $x_0=1$ nie wieder erreichen.
+\item $x_0, x_1 > 1$: Wegen (a) und (b) muss dann $x_i>1$ für alle $i$ gelten. Dann kann man für alle $n\in\N$ zeigen, dass $x_{n+2} < x_n$ gilt, ein Widerspruch zur Periodizität.
+\item $\tfrac{1}{x_1} < x_0 < 1 < x_1$: Dann kann man $x_{2n} <x_0 < 1 < x_1 < x_{2n+1}$ zeigen, wieder ein Widerspruch zur Periodizität.
+\item $\tfrac{1}{x_1} = x_0 \leq 1 \leq x_1$: Dann erhält man alle Lösungen.
+\end{enumerate}
+
+\textbf{Marking scheme:}
+
+\begin{enumerate}
+    \item 1P: explicitely proving that all sequences of the form $x_1x_2=1$, $x_{2n+1}=x_1$ and $x_{2n}=x_2$ satisfy the conditions of the problem
+    \item 6P: proving that any sequence satisfying the conditions of the problem indeed is of this form.
+    \begin{itemize}
+        \item First solution ($y_n=x_{n+1}x_n$):
+    \begin{itemize}
+        \item substituition $y_n=x_{n+1}x_n$ and rewriting the inductive relation: 2P.
+        \item $\{x_n\}$ periodic $\Rightarrow$ $\{y_n\}$ periodic: 1P.
+        \item prove that if $y_1\neq 1$, then the sequence is strictly monotone (or any other property that contradicts periodicity) : 2P. 
+        
+        Note: only one of the cases ($y_1>1$ or $y_1<1$) gives one point.
+        \item conclusion: 1P.
+    \end{itemize}
+    \item Second solution ($z_n=x_{n+1}x_n-1$):
+    \begin{itemize}
+        \item substituition $z_n=x_{n+1}x_n-1$ and rewriting the inductive relation: 3P.
+        \item $\{x_n\}$ periodic $\Rightarrow$ $\{z_n\}$ periodic: 1P.
+        \item prove that if $z_1\neq 0$, then the sequence is strictly monotone (or any other property that contradicts periodicity) : 1P. 
+        \item conclusion: 1P.
+    \end{itemize}
+    \item Third solution (blind cases distinction):
+    \begin{itemize}
+        \item part (a) of the solution, i.e. Lemma: 1P.
+        \item part (b) of the solution, i.e. case $x_1=1,x_2\neq 1$ and $x_1\neq 1,x_2=1$: 1P.
+        \item part (c) of the solution, i.e. case $x_1,x_2>1$ and $x_1,x_2<1$: 2P.
+        \item part (d) of the solution, i.e. case $x_1<1<x_2$ and $x_2<1<x_1$ with $x_1x_2\neq 1$: 2P.
+        \item Note: the point (e) in the solution is basically checking solutions and thus is marked according to the first part of the marking scheme (i.e. part (a) of the marking scheme)
+    \end{itemize}
+    \end{itemize}
+\end{enumerate}
+}

@@ -1,0 +1,73 @@
+\en{
+Let $n$ be a positive integer. Some of the squares of a $3n \times 3n$ board are marked. For any marked square $T$, we denote by $\ell(T)$ the number of marked squares in the same row to the left of $T$ and by $d(T)$ the number of marked squares in the same column below $T$. Determine the maximal number of marked squares given that $\ell(T)+d(T)$ is even for every marked square $T$.
+
+\bigskip
+
+\textbf{Answer:} The maximal number of marked squares is $6n^2$.
+
+\bigskip
+
+\textbf{Solution (Valentin):} Suppose that $l(T) + d(T)$ is even for all marked squares $T$. We first proof an essential lemma.
+
+\bigskip
+
+\textbf{Lemma.}
+
+There are at most $k$ rows with an odd number of marked squares within the left-most $k$ columns.
+
+\begin{proof}
+We proceed by induction. For $k = 1$, assume that there is more than $1$ marked squares in the left-most column and denote the second lowest one by $T$. We have $l(T)+d(T) = 1$ is odd, a contradiction. It follows that the lemma holds for $k = 1$.
+
+For $k > 1$ assume the lemma holds for $k-1$, which implies that there are at most $k-1$ rows that have an odd number of marked squares in the first $k-1$ columns. Denote by $a$ the number of these rows that also have a marked square in column $k$. Since the parity of $l(T)$ alternates among the marked squares in each column, it follows that there are at most $a+1$ marked squares in the $k$-th column with $l(T)$ even. The number of rows that have an odd number of marked squares in the first $k$ columns is therefore bounded above by $(k-1-a) + (a+1) = k$. This concludes the inductive step.
+\end{proof}
+
+\bigskip
+
+From the lemma, and the fact that the parity of $l(T)$ alternates among the marked squares in a given column, it follows immediately that there are at most $2k-1$ marked squares in the $k$-th column from the left. Similarly there are at most $2k-1$ marked squares in the $k$-th row from the bottom by symmetry of the argument.
+
+Applying these bounds to the left-most $n$ columns and the bottom-most $n$ rows, we find that the total number of marked squares is bounded from above by
+$$2\cdot\Big(1+3+5+\cdots+(2n-1)\Big) + (2n)^2 = 6n^2.$$
+
+\newpage
+
+This is indeed the maximal number of marked squared and can be obtained via the following construction illustrated here for $n = 3$:
+
+\bigskip
+
+\renewcommand{\mark}{$\bigstar$}
+
+\begin{center}
+\begin{tikzpicture}
+\draw[step=1.0,black,thin] (0,0) grid (9,9);
+\draw[very thick] (3,0) -- (3,9);
+\draw[very thick] (0,3) -- (9,3);
+
+\foreach \x in {0,...,2} {
+    \foreach \y in {-\x,...,\x} {
+        \node at (0.5 + \x, 6.5 + \y) {\mark};
+        \node at (6.5 + \y, 0.5 + \x) {\mark};
+    }
+}
+
+\foreach \x in {0,...,5} {
+    \foreach \y in {0,...,5} {
+        \node at (3.5 + \x, 3.5 + \y) {\mark};
+    }
+}
+\end{tikzpicture}
+\end{center}
+
+\bigskip
+
+\textbf{Marking Scheme (additive):}
+
+\begin{enumerate}
+\item 1P: Claiming that in the $k$-th column/row there are at most $2k-1$ marked squares
+\item 3P: Proving that in the $k$-th column/row there are at most $2k-1$ marked squares
+\begin{enumerate}
+\item[(b1)] 1P: Using or stating that the parities of $l(T)$ and $d(T)$ alternate among the marked squares in a given line
+\end{enumerate}
+\item 2P: Giving a general construction with $6n^2$ marked squares
+\item 1P: Finishing assuming (b)
+\end{enumerate}
+}

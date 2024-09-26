@@ -1,0 +1,95 @@
+%& -job-name=testpruefung_2016_fr
+
+\documentclass[language=german,style=exam]{smo}
+
+\StrRight{\jobname}{4}[\mystring]
+\IfSubStr*{\mystring}{fr}{\germanfalse \frenchtrue \italianfalse}{}
+\IfSubStr*{\mystring}{de}{\germantrue \frenchfalse \italianfalse}{}
+\IfSubStr*{\mystring}{it}{\germanfalse \frenchfalse \italiantrue}{}
+
+\examtime{\translation{4 Stunden}{4 heures}{???}}
+\examdate{\translation{10. März 2016}{10 mars 2016}{}}
+
+\title{\translation{SMO - Weisse Prüfung}{OSM - Test blanc}{???}}
+\examplace{Wila}
+
+\begin{document}
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+
+\item\translation%1
+{Jede nichtnegative ganze Zahl ist entweder rot oder weiss gefärbt, sodass gilt:
+\begin{itemize}
+\item Es gibt mindestens eine rote und eine weisse Zahl.
+\item Die Summe einer roten und einer weissen Zahl ist weiss.
+\item Das Produkt einer roten und einer weissen Zahl ist rot.
+\end{itemize}
+Zeige, dass das Produkt und die Summe zweier roter Zahlen immer rot ist.}
+{Les nombres entiers positifs ou nuls sont coloriés en rouge ou en blanc, de telle manière que:
+\begin{itemize}
+\item Il y a au moins un nombre rouge et un nombre blanc.
+\item La somme d'un nombre rouge et un nombre blanc est blanche.
+\item Le produit d'un nombre rouge et un nombre blanc est blanche.
+\end{itemize}
+Montrer que le produit et la somme de deux nombres rouges est toujours rouge.}
+{}
+
+\bigskip\bigskip
+
+\item\translation%2
+{Soit $ABC$ un triangle non-rectangle en $A$ et $M$ le milieu de $BC$. Les tangentes en $B$ et $C$ au cercle circonscrit du triangle $ABC$ se coupent en $D$. De plus, la droite symétrique à $BC$ par rapport à $AB$ coupe la droite $AM$ en $T$. Montrer que les triangles $ABT$ et $ACD$ sont semblables.}%Sei $ABC$ mit $\angle BAC \neq 90^\circ$ und $M$ der Mittelpunkt der Strecke $BC$. Die Tangenten in $B$ und $C$ an den Umkreis des Dreiecks $ABC$ schneiden sich im Punkt $D$. Weiter }
+{Soit $ABC$ un triangle non-rectangle en $A$ et $M$ le milieu de $BC$. Les tangentes en $B$ et $C$ au cercle circonscrit du triangle $ABC$ se coupent en $D$. De plus, la droite symétrique à $BC$ par rapport à $AB$ coupe la droite $AM$ en $T$. Montrer que les triangles $ABT$ et $ACD$ sont semblables.}
+{}
+
+\bigskip\bigskip
+
+\item\translation%3
+{Seien $x,y$ und $z$ reelle Zahlen mit $x<y<z<6$. Finde alle Tripel $(x,y,z)$, sodass gilt:
+\[
+\frac{1}{6-z} + \frac{1}{z-y} + \frac{1}{y-x} \leq x.
+\]}
+{Soient $x,y$ et $z$ des nombres réels vérifiant $x<y<z<6$. Trouver tous les tels triplets $(x,y,z)$ qui satisfont:
+\[
+\frac{1}{6-z} + \frac{1}{z-y} + \frac{1}{y-x} \leq x.
+\]}
+{}
+
+\bigskip\bigskip
+
+\item\translation%4
+{Sei $n$ eine natürliche Zahl. Annalena und Romina spielen das folgende Spiel:\\
+Am Anfang sind $s$ Smarties auf dem Tisch. Die beiden machen abwechslungsweise ihren Zug, wobei Annalena beginnt. Ein Zug besteht aus einer der folgenden Aktionen:
+\begin{enumerate}
+\item[(i)] Esse ein Smarties.
+\item[(ii)] Esse eine prime Anzahl Smarties.
+\item[(iii)] Esse eine durch $n$ teilbare Anzahl Smarties.
+\end{enumerate}
+Diejenige, die das letzte Smarties isst, gewinnt. Für welche $s$ kann Romina einen Sieg erzwingen?}
+{Soit $n$ un nombre naturel. Annalena et Romina jouent au jeu suivant:\\
+Au début il y a $s$ smarties sur la table. Annalena commence à jouer, puis chacune effectue tour à tour son coup. Un coup consiste en l'une des actions suivantes:
+\begin{enumerate}
+\item[(i)] Manger un smarties.
+\item[(ii)] Manger un nombre pair de smarties.
+\item[(iii)] Manger un nombre de smarties divisible par $n$.
+\end{enumerate}
+La gagnante est celle qui mange le dernier smarties. Pour quels $s$ Romina peut-elle forcer la victoire?}
+{}
+
+\bigskip\bigskip
+
+\item\translation%5
+{Soit $n$ un nombre naturel ayant un nombre pair de chiffres. Écrivons $n=\overline{ab}$, où $\overline{ab}$ est le nombre décimal obtenu en accolant $a$ et $b$, avec $a$ et $b$ ayant le même nombre de chiffres.On définit $d(n)=a+b$, pour autant que $b$ ne commence pas par un zéro. Par exemple, pour $n=1729$, $a=17, b=29,d(n)=17+29=46$.
+Trouver tous les entiers $n\geq 1000$ tels que le nombre de diviseurs de $n$ vaut $d(n)$.}
+{Soit $n$ un nombre naturel ayant un nombre pair de chiffres. Écrivons $n=\overline{ab}$, où $\overline{ab}$ est le nombre décimal obtenu en accolant $a$ et $b$, avec $a$ et $b$ ayant le même nombre de chiffres.On définit $d(n)=a+b$, pour autant que $b$ ne commence pas par un zéro. Par exemple, pour $n=1729$, $a=17, b=29,d(n)=17+29=46$.
+Trouver tous les entiers $n\geq 1000$ tels que le nombre de diviseurs de $n$ vaut $d(n)$.}
+{}
+
+\end{enumerate}
+
+\bigskip
+
+\vspace{1cm}
+
+\center{\translation{Viel Glück!}{Bonne chance!}{Buona fortuna!}}
+
+\end{document}

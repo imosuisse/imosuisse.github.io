@@ -1,0 +1,355 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+%\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+
+
+
+
+
+% Schriftabkürzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\gaussk}[1]{\lfloor #1 \rfloor}
+\newcommand{\frack}[1]{\{ #1 \}}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+\newcommand{\dreieck}{\bigtriangleup}
+
+\parindent0mm
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge IMO Selektion 2010} \\
+\medskip erste Prüfung - 8. Mai 2010
+\end{center}
+\vspace{8mm}
+Zeit: 4.5 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{1.}] Sei $\pi=(a_1,a_2,\ldots,a_n)$ eine Permutation der Zahlen $1,2,\ldots,n$. Die \emph{Verwuselung} von $\pi$ ist die Anzahl Paare $(i,j)$ natürlicher Zahlen mit $1 \leq i < j \leq n$ und $a_j<a_i$. Beweise, dass für jede natürliche Zahl $k$ mit $0 \leq k \leq \binom{n}{2}$ eine Permutation der Zahlen $1,2,\ldots,n$ mit Verwuselung $k$ existiert.\\
+
+\bigskip
+\bigskip
+
+\item[\textbf{2.}] Sei $AB$ ein Durchmesser des Kreises $k$. Sei $t$ die Tangente an $k$ im Punkt $B$ und seien $C,D$ zwei Punkte auf $t$, sodass $B$ zwischen $C$ und $D$ liegt. Die Geraden $AC$ bzw. $AD$ schneiden $k$ nochmals in den Punkten $E$ bzw. $F$. Die Geraden $DE$ bzw. $CF$ schneiden $k$ nochmals in den Punkten $G$ bzw. $H$. Beweise, dass die Strecken $AG$ und $AH$ dieselbe Länge haben.\\  
+
+\bigskip
+\bigskip
+
+\item[\textbf{3.}] Eine natürliche Zahl $x$ heisst \emph{gut}, falls $x$ das Produkt einer geraden Anzahl (nicht notwendig verschiedener) Primzahlen ist. Seien $a,b$ natürliche Zahlen und definiere $m(x)=(x+a)(x+b)$.
+\begin{enumerate}
+\item[(a)] Beweise, dass zwei verschiedene natürliche Zahlen $a,b$ existieren, sodass 
+\[m(1),m(2), \ldots, m(2010)\] 
+alles gute Zahlen sind.
+\item[(b)] Ist $m(x)$ gut für jede natürliche Zahl $x$, dann gilt $a=b$.
+\end{enumerate}
+
+
+\end{enumerate}
+
+\pagebreak
+
+
+\begin{center}
+{\huge IMO Selektion 2010} \\
+\medskip zweite Prüfung - 9. Mai 2010
+\end{center}
+\vspace{8mm}
+Zeit: 4.5 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{4.}] Die Punkte $X,Y,Z$  liegen in dieser Reihenfolge auf einer Geraden mit $|XY| \neq |YZ|$. Sei $k_1$ bzw. $k_2$ der Kreis mit Durchmesser $XY$ bzw. $YZ$. Die Punkte $A_1$ und $B_1$ bzw. $A_2$ und $B_2$ liegen auf $k_1$ bzw. $k_2$, sodass
+\[\angle A_1YA_2 = \angle B_1YB_2 = 90^\circ\]
+gilt. Zeige, dass sich die beiden Geraden $A_1A_2$ und $B_1B_2$ auf $XY$ schneiden.\\
+
+
+\bigskip
+\bigskip
+
+\item[\textbf{5.}] Sei $P$ eine endliche Menge von Primzahlen und sei $\ell(P)$ die grösstmögliche Anzahl aufeinanderfolgender natürlicher Zahlen, sodass jede dieser Zahlen durch mindestens eine Primzahl aus $P$ teilbar ist. Beweise die Ungleichung $\ell(P) \geq |P|$ und zeige, dass genau dann Gleichheit gilt, wenn das kleinste Element von $P$ grösser ist als $|P|$.\\
+
+\bigskip
+\bigskip
+
+\item[\textbf{6.}] Finde alle positiven reellen Lösungen $(a,b,c,d)$ der Gleichung
+\[\frac{a^2-bd}{b+2c+d}+\frac{b^2-ca}{c+2d+a}+\frac{c^2-db}{d+2a+b}+\frac{d^2-ac}{a+2b+c} = 0.\]
+
+
+ 
+\end{enumerate}
+
+
+\pagebreak
+
+
+\begin{center}
+{\huge IMO Selektion 2010} \\
+\medskip dritte Prüfung - 23. Mai 2010
+\end{center}
+\vspace{8mm}
+Zeit: 4.5 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{7.}] In einem Land gibt es endlich viele Städte und endlich viele Strassen. Jede Strasse verbindet zwei verschiedene Städte und je zwei Städte sind durch höchstens eine Strasse verbunden. Alle Strassen können in beide Richtungen befahren werden und das Strassennetz ist so eingerichtet, dass man jede Stadt von jeder anderen Stadt aus (möglicherweise über Umwege) erreichen kann. Für jede Stadt gibt es zudem eine gerade Anzahl Strassen, die von dieser Stadt wegführen.
+
+Die Regierung beschliesst nun, sämtliche Strassen zu Einbahnstrassen umzubauen. Dies soll so geschehen, dass für jede Stadt die Anzahl herausführender Strassen gleich gross ist wie die Anzahl hineinführender Strassen.
+
+\begin{enumerate}
+\item[(a)] Zeige, dass dies stets möglich ist.
+\item[(b)] Zeige, dass man immer noch jede Stadt von jeder anderen aus erreichen kann, egal wie die Regierung ihren Plan umsetzt.\\
+\end{enumerate}
+
+\bigskip
+\bigskip
+
+\item[\textbf{8.}]  Finde alle Funktionen $f:\BR \to \BR$, die für alle reellen $x,y$ die folgende Gleichung erfüllen:
+\[f(x^4+y^4)=xf(x^3)+y^2f(y^2).\]
+
+
+\bigskip
+\bigskip
+
+\item[\textbf{9.}] Sei $ABC$ ein spitzwinkliges Dreieck mit Höhenschnittpunkt $H$. Eine Gerade durch $H$ schneide $AB$ bzw. $AC$ in den Punkten $D$ bzw. $E$, so dass $|AD|=|AE|$ gilt. Die Winkelhalbierende von $\angle BAC$ schneide den Umkreis von $ADE$ im Punkt $K \neq A$. Zeige, dass $HK$ die Strecke $BC$ halbiert.
+
+\end{enumerate}
+
+
+\pagebreak
+
+
+\begin{center}
+{\huge IMO Selektion 2010} \\
+\medskip vierte Prüfung - 24. Mai 2010
+\end{center}
+\vspace{8mm}
+Zeit: 4.5 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{10.}] Sei $P$ ein relles Polynom, sodass für alle reellen $x$ die Gleichung $P(x)=P(1-x)$ gilt. Beweise, dass ein reelles Polynom $Q$ existiert mit
+\[P(x)=Q\big(x(1-x)\big).\]
+
+\bigskip
+\bigskip
+
+
+\item[\textbf{11.}] Finde alle ganzen Zahlen $n$, sodass $2^n+3^n+6^n$ das Quadrat einer rationalen Zahl ist.\\
+
+\bigskip
+\bigskip
+
+\item[\textbf{12.}] Bananen, Äpfel und Orangen sind irgendwie auf 100 Kisten verteilt. Beweise, dass man 51 Kisten auswählen kann, die zusammen mindestens die Hälfte der Früchte von jeder Sorte enthalten.
+
+
+\end{enumerate}
+
+
+\end{document}

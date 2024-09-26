@@ -1,0 +1,16 @@
+\de{ Sei $n$ eine natürliche Zahl. In einer Reihe stehen $n+1$ Schüsseln, die von links nach rechts mit den Zahlen $0,1,\ldots,n$ nummeriert sind. Am Anfang liegen $n$ Steine in der Schüssel $0$ und kein Stein in den anderen Schüsseln. Sisyphus will diese $n$ Steine in die Schüssel $n$ bewegen. Dafür bewegt Sisyphus in jedem Zug genau einen Stein von einer Schüssel $i$ mit $k$ Steinen um höchstens $k$ Schüsseln nach rechts, also in eine Schüssel mit Nummer kleiner oder gleich $k+i$. Sei $T$ die minimale Anzahl Züge, die Sisyphus benötigt, um alle Steine in die Schüssel $n$ zu bewegen. Zeige, dass gilt:
+\[
+T\geq \left\lceil \frac{n}{1} \right\rceil + \left\lceil \frac{n}{2} \right\rceil + \ldots + \left\lceil \frac{n}{n} \right\rceil.
+\]
+
+\textbf{Lösung:} (David) Wir ordnen jedem Stein eine eindeutige Zahl $k \in \{1,2,\ldots,n\}$ zu und nennen diese Zahl seine \textit{Priorität}. Wenn Sisyphus einen Zug macht, wählt er ein Feld aus und bewegt von diesem Feld oBdA den Stein mit der grösstmöglichen Priorität (dies ist erlaubt, weil die Steine ununterscheidbar sind). Mit dieser zusätlichen Regel kommen wir zu folgender Beobachtung: \\ \\
+Der Stein mit Priorität $k$ kann erst dann bewegt werden, wenn auf seinem Feld kein Stein mit höherer Priorität liegt. Wenn wir Stein $k$ also bewegen, dürfen zu diesem Zeitpunkt nicht mehr als $k$ Steine auf seinem Feld liegen. Ergo darf Stein $k$ in jedem Zug höchstens um $k$ bewegt werden. Um ihn von Schüssel $0$ in die Schüssel $n$ zu bewegen, sind also insgesamt mindestens $\lceil \frac{n}{k} \rceil $ Züge notwendig. Da Sisyphus in jedem Zug nur einen Stein bewegen kann, dürfen wir die benötigten Züge für alle Steine aufsummieren und erhalten den gewünschten Ausdruck.
+
+\textbf{Marking scheme:}
+\begin{enumerate}
+\item 1P: Some kind of idea to fix the order in which the stones are moved
+\item 3P: Argue that each stone can be assigned a priority as above.
+\item 2P: The $k$-th stone is moved at least $\left\lceil \frac{n}{k} \right\rceil$ times.
+\item 1P: Conclude.
+\end{enumerate}
+}

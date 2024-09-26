@@ -1,0 +1,48 @@
+Sei $n\geq 5$ eine ganze Zahl. Ein Laden verkauft Jonglierbälle in $n$ verschiedenen Farben. Jedes von $n+1$ Kindern kauft drei Jonglierbälle, welche drei unterschiedliche Farben haben, aber keine zwei Kinder kaufen genau die gleiche Farbkombination. Zeige, dass es mindestens zwei Kinder gibt, welche genau einen Ball der selben Farbe gekauft haben.
+
+\textbf{Lösung (Cyril):}
+Wir versuchen, dass möglichst viele Kinder Bälle kaufen, sodass nie zwei Kinder genau eine Farbe gemeinsam haben. Wir zeigen dann, dass höchstens $n$ Kinder Bälle kaufen können.
+
+\begin{lem}
+Seien $K_1, K_2, K_3$ Kinder die Bälle kaufen, sodass $K_1$ und $K_2$ zwei Farben gemeinsam haben und $K_2$ und $K_3$ zwei Farben gemeinsam haben. Dann haben auch $K_1$ und $K_3$ genau zwei Farben gemeinsam
+\end{lem}
+\begin{proof}
+Sowohl $K_1$ als auch $K_3$ haben zwei Farben mit $K_2$ gemeinsam. Also müssen sie mindestens eine Farbe gemeinsam haben. Da wir dies jedoch nicht erlauben, müssen sie zwei Farben gemeinsam haben.
+\end{proof}
+
+Dieses Lemma sagt uns nun, dass die Kinder in Gruppen zusammen sind, die untereinander immer paarweise zwei Farben gemeinsam haben. Jede Gruppe von Kindern hat dann ihre eigenen Farben zur Verfügung.
+
+Wir müssen unsere Behauptung (mit $n$ Farben können höchstens $n$ Kinder Bälle kaufen) also nur noch für eine Gruppe von Kindern beweisen, die paarweise immer zwei Farben gemeinsam haben.
+
+Wir versuchen nun eine möglichst grosse Gruppe mit möglichst wenig Farben zu konstruieren, wobei wir dabei zwei Fälle antreffen.
+\begin{itemize}
+    \item Anna kauft die Farben $g$, $h$ und $a$
+    \item Beat kauft die Farben $g$, $h$ und $b$, da er zwei gleiche Farben wir Anna haben muss
+    \begin{enumerate}
+        \item Charlie kauft die Farben $g$, $h$ und $c$
+        \item Charlie kauft die Farben $g$, $a$ und $b$
+    \end{enumerate}
+\end{itemize}
+
+Wir zeigen nun, wieviele weiter Kinder im Fall (a) und (b) Bälle kaufen können:
+\begin{enumerate}[(a)]
+\item Wie können nun beliebig viele weitere Kinder hinzufügen, indem ein neues Kind Xenia die Farben $g$, $h$ und $x$ kauft, wobei $x$ immer eine neue Farbe sein muss. Denn wenn sie nicht $a$ und $b$ kaufen würde, müsste sie die Farben $a$, $b$ und $c$ kaufen und eine von $g$ und $h$. 
+
+Das heisst, mit $n$ Farben können dann höchstens $n-2$ Kinder Bälle kaufen.
+
+\item Hier kann noch Daniel kommen und die Farben $h$, $a$ und $b$ kaufen, was man nach kurzer Fallunterscheidung die wir hier weglassen, sieht.
+
+Das heisst, mit $4$ Farben können $4$ Kinder Bälle kaufen
+\end{enumerate}
+
+Somit haben wir für alle Fälle, dass bei $n$ Farben maximal $n$ Kinder Bälle kaufen können, sodass sie nicht genau eine Farbe gemeinsam haben. Also gibt es mit $n+1$ Kindern sicher einen solchen Fall.
+
+(Wir haben auch bewiesen, dass es mit $n$ Kindern nur geht, falls $ 4 \div n$ gilt)
+
+\textbf{Marking Scheme:}
+\begin{itemize}
+    \item 1P: Anna und Beat haben eine gemeinsame Farbe und Beat und Charlie haben eine Farbe gemeinsam $\implies$ Anna und Charlie haben eine Farbe gemeinsam
+    \item 1P: Auf Gruppen reduzieren, die untereinander keine Farben teilen
+    \item 2P: Fall (a)
+    \item 2P: Fall (b)
+\end{itemize}

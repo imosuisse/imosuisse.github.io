@@ -1,0 +1,300 @@
+
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+
+
+
+
+
+% Schriftabkürzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge SMO Finalrunde 2005} \\
+\medskip erste Prüfung - 24. März 2005
+\end{center}
+\vspace{8mm}
+Zeit: 4 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{1.}] Sei $ABC$ ein Dreieck und seien $D, E, F$ die Seitenmitten von $BC, CA, AB$. Die Schwerlinien $AD$, $BE$ und $CF$ schneiden sich im
+Schwerpunkt $S$. Mindestens zwei der Vierecke
+\[AFSE,\quad BDSF,\quad CESD\]
+seien Sehnenvierecke. Zeige, dass das Dreieck $ABC$ gleichseitig ist.
+
+\bigskip
+
+\item[\textbf{2.}] Von $4n$ Punkten in einer Reihe sind $2n$ weiss und $2n$ schwarz gefärbt. Zeige, dass es $2n$
+aufeinanderfolgende Punkte gibt, von denen genau $n$ weiss und $n$ schwarz sind.
+
+\bigskip
+
+\item[\textbf{3.}] Beweise für alle $a_1,\ldots,a_n>0$ die folgende Ungleichung und bestimme alle Fälle, in
+denen das Gleichheitszeichen steht:
+\[\sum_{k=1}^n ka_k \leq \binom{n}{2} + \sum_{k=1}^n a_k^k.\]
+
+\bigskip
+
+\item[\textbf{4.}] Bestimme alle Mengen $M$ natürlicher Zahlen, sodass für je zwei (nicht notwendigweise verschiedene) Elemente $a,b$ aus $M$ auch
+\[\frac{a+b}{\ggT(a,b)}\]
+in $M$ liegt.
+
+\bigskip
+
+\item[\textbf{5.}] Ein konvexes $n$-Eck zu \textit{zwacken} bedeutet Folgendes: Man wählt zwei benachbarte Seiten $AB$ und $BC$ aus und ersetzt diese durch den Streckenzug $AM, MN, NC$, wobei $M \in AB$ und $N \in BC$ beliebige Punkte im Innern dieser Strecken sind. Mit anderen Worten, man schneidet eine Ecke ab und erhält ein $(n\!+\!1)$-Eck.\\
+Ausgehend von einem regulären Sechseck $\CP_6$ mit Flächeninhalt 1 wird durch fortlaufendes Zwacken eine Folge $\CP_6, \CP_7, \CP_8,\ldots$ konvexer Polygone erzeugt. Zeige, dass der Flächeninhalt von $\CP_n$ für alle $n\geq 6$ grösser als $\frac{1}{2}$ ist, unabhängig davon wie gezwackt wird.
+
+\end{enumerate}
+
+\pagebreak
+
+
+\begin{center}
+{\huge SMO Finalrunde 2005} \\
+\medskip zweite Prüfung - 25. März 2005
+\end{center}
+\vspace{8mm}
+Zeit: 4 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{6.}] Seien $a,b,c$ positive reelle Zahlen mit $abc=1$. Bestimme alle möglichen Werte, die der
+Ausdruck
+\[\frac{1+a}{1+a+ab}+\frac{1+b}{1+b+bc}+\frac{1+c}{1+c+ca}\]
+annehmen kann.
+
+\bigskip
+
+\item[\textbf{7.}] Sei $n \geq 1$ eine natürliche Zahl. Bestimme alle positiven ganzzahligen Lösungen der
+Gleichung
+\[7 \cdot 4^n=a^2+b^2+c^2+d^2.\]
+
+\bigskip
+
+\item[\textbf{8.}] Sei $ABC$ ein spitzwinkliges Dreieck. $M$ und $N$ seien zwei beliebige Punkte auf den
+Seiten $AB$ respektive $AC$. Die Kreise mit den Durchmessern $BN$ und $CM$ schneiden sich in den Punkten $P$ und $Q$.
+Zeige, dass die Punkte $P$, $Q$ und der Höhenschnittpunkt des Dreiecks $ABC$ auf einer Geraden liegen.
+
+\bigskip
+
+\item[\textbf{9.}] Finde alle Funktionen $f:\BR^+ \rightarrow \BR^+$, sodass für alle $x,y>0$ gilt
+\[f(yf(x))(x+y)=x^2(f(x)+f(y)).\]
+
+\bigskip
+
+\item[\textbf{10.}] An einem Fussballturnier nehmen $n>10$ Mannschaften teil. Dabei spielt jede Mannschaft
+genau einmal gegen jede andere. Ein Sieg gibt zwei Punkte, ein Unentschieden einen Punkt, und eine Niederlage
+keinen Punkt. Nach dem Turnier stellt sich heraus, dass jede Mannschaft genau die Hälfte ihrer Punkte in den
+Spielen gegen die 10 schlechtesten Mannschaften gewonnen hat (insbesondere hat jede dieser 10 Mannschaften die
+Hälfte ihrer Punke gegen die 9 übrigen gemacht). Bestimme alle möglichen Werte von $n$, und gib
+für diese Werte ein Beispiel eines solchen Turniers an.
+
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,675 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+
+
+
+
+
+% Schriftabkürzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\gaussk}[1]{\lfloor #1 \rfloor}
+\newcommand{\frack}[1]{\{ #1 \}}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+\newcommand{\dreieck}{\bigtriangleup}
+
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge IMO Selektion 2004 Lösungen} \\
+\end{center}
+
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{1.}] Sei $S$ die Menge aller $n$-Tupel $(X_1,\ldots,X_n)$, wobei $X_1,\ldots,X_n$ Teilmengen von\\
+$\{1,2,\ldots,1000\}$ sind, die nicht alle verschieden sein müssen, und die auch leer sein können. Für
+$a=(X_1,\ldots,X_n) \in S$ bezeichne
+\[E(a)= \mbox{Anzahl Elemente von } X_1 \cup \ldots \cup X_n.\]
+Finde einen expliziten Ausdruck für die Summe
+\[\sum_{a \in S} E(a).\]
+
+
+\textbf{1. Lösung}
+
+Wir zählen die Anzahl Paare $(a,x)$ auf zwei Arten, wobei $a=(X_1,\ldots,X_n)\in S$ ein $n$-Tupel ist und $x \in
+X_1 \cup \ldots \cup X_n$.
+\begin{enumerate}
+\item Für ein festes $a \in S$ gibt es per Definition genau $E(a)$ solche Elemente $x$. Daher ist die gesuchte
+Anzahl gerade
+\[\sum_{a \in S} E(a).\]
+
+\item Es gibt $1000$ Möglichkeiten, ein Element $x \in \{1,2,\ldots,1000\}$ auszuwählen. Wieviele $n$-Tupel
+$(X_1,\ldots, X_n)$ gibt es mit $x \in X_1 \cup \ldots \cup X_n$? Jede der Teilmengen $X_k$ kann $x$ enthalten
+oder nicht, aber $x$ muss in mindestens einer dieser Teilmengen liegen. Für jedes andere Element $y \in
+\{1,2,\ldots,1000\}$ und jedes $k$ kann man frei entscheiden, ob $y$ in $X_k$ liegt, oder nicht. Insgesamt gibt
+es also $(2^n-1)\cdot (2^{n})^{999}$ verschiedene solche $n$-Tupel. Die gesuchte Anzahl ist daher
+\[1000(2^n-1)2^{999n}.\]
+\end{enumerate}
+
+\textbf{2. Lösung}
+
+Sei $0 \leq r \leq 1000$ fest. Wir zählen die Anzahl $n$-Tupel $a=(X_1,\ldots,X_n)$ mit $E(a)=r$. Es gibt
+$\binom{1000}{r}$ $k$-elementige Teilmengen $M$ von $\{1,2,\ldots,1000\}$. Wieviele verschiedene $n$-Tupel
+$(X_1,\ldots,X_n)$ gibt es mit $M=X_1 \cup \ldots \cup X_n$? Nun, jedes der $r$ Elemente von $M$ kann in jeder
+der Mengen $X_k$ enthalten sein, oder nicht, es muss aber in mindestens einer der Mengen $X_k$ liegen. daher
+gibt es genau $(2^n-1)^r$ verschiedene solche $n$-Tupel. Zusammengefasst gibt es also genau
+$\binom{1000}{r}(2^n-1)^r$ verschiedene $n$-Tupel $a\in S$ mit $E(a)=r$. Folglich gilt
+\begin{eqnarray*}
+\sum_{a \in S} E(a) &=& \sum_{r=0}^{1000} r \cdot \binom{1000}{r}(2^n-1)^r\\
+&=& \sum_{r=1}^{1000} 1000 \binom{999}{r-1}(2^n-1)^r = 1000(2^n-1) \sum_{r=1}^{1000} \binom{999}{r-1}(2^n-1)^{r-1}\\
+&=& 1000(2^n-1) \sum_{r=0}^{999} \binom{999}{r}(2^n-1)^{r}= 1000(2^n-1)((2^n-1)+1)^{999}\\
+&=& 1000 (2^n-1)2^{999n}.
+\end{eqnarray*}
+
+\bigskip
+
+\item[\textbf{2.}] Bestimme die grösste natürliche Zahl $n$, sodass
+\[4^{995}+4^{1500}+4^n\]
+eine Quadratzahl ist.\\
+
+\textbf{1. Lösung}
+
+Antwort: $n=2004$\\
+Wir zeigen allgemeiner: Sind $a<b$ zwei natürliche Zahlen, dann ist $n=2b-a-1$ der grösste Wert, für den
+$4^a+4^b+4^n$ eine Quadratzahl ist.\\[2mm]
+Sei zunächst $n=2b-a-1$. Wir erhalten
+\begin{eqnarray*}
+4^a+4^b+4^n &=& 4^a(1+4^{b-a}+4^{2(b-a)-1})\\
+&=& (2^a)^2\cdot (1+2^{2(b-a)-1})^2,
+\end{eqnarray*}
+also eine Quadratzahl. Wir nehmen nun an, es gelte $n \geq 2b-a$. Wegen $4^a+4^b+4^n = (2^a)^2 \cdot (1+4^{b-a}+
+4^{n-a})$ genügt es zu zeigen, dass $A= 1+4^{b-a}+ 4^{n-a}$ kein Quadrat ist. Einerseits gilt $A>(2^{n-a})^2$,
+andererseits wegen $2b-2a <n-a+1$ aber auch
+\begin{eqnarray*}
+A &=& 1+2^{2b-2a}+ (2^{n-a})^2\\
+&<& 1+2\cdot 2^{n-a}+ (2^{n-a})^2=(2^{n-a}+1)^2.
+\end{eqnarray*}
+Damit liegt $A$ zwischen zwei aufeinanderfolgenden Quadratzahlen, kann also nicht selbst eine sein.\\
+
+\textbf{2. Lösung}
+
+Wir geben einen zweiten Beweis dafür, dass $A$ für $n\geq 2b-a$ keine Quadratzahl ist.\\[2mm]
+$A=4^a(1+4^{b-a}+4^{n-a})$ ist genau dann eine Quadratzahl, wenn der zweite Faktor eine ist. Nehme also an,
+$1+4^{b-a}+4^{n-a}=s^2$, dann ist $s$ ungerade und wegen $n>b$ ist $4^{b-4}=2^{2b-2a}$ die grösste Zweierpotenz,
+die $s^2-1=(s-1)(s+1)$ teilt. Nun sind $s-1$ und $s+1$ zwei aufeinanderfolgende gerade Zahlen, also ist eine
+davon durch $2$ und die andere durch $2^{2b-2a-1}$ teilbar. Schreibe $s=2^{2b-2a-1}r \pm 1$, mit $r$ ungerade.
+Dann gilt
+\[1+4^{b-a}+4^{n-a}=s^2=4^{2b-2a-1}r^2 \pm 2^{2b-2a}r+1.\]
+Umformen und Faktorisieren liefert
+\[(\pm r-1)=4^{b-a-1}(2^{n-(2b-a-1)}-r)(2^{n-(2b-a-1)}+r).\]
+Nach Voraussetzung an $n$, und weil $r$ ungerade ist, verschwindet die rechte Seite nicht und daher gilt
+\[2^{n-(2b-a-1)}+r \leq |\pm r-1|.\]
+Daraus folgt wiederum $2^{n-(2b-a-1)}\leq 1$, im Widerspruch zu $n \geq 2b-a$.\\
+
+\textbf{3. Lösung}
+
+Wir nehmen an, $4^a+4^b+4^n$ sei ein Quadrat. Wir machen den Ansatz
+\[(2^n+2^k r)^2=4^a+4^b+4^n,\]
+wobei $k\geq 0$ und $r$ ungerade ist. Ausmultiplizieren ergibt
+\[2^k r(2^{n+1}+2^k r)=4^a+4^b.\]
+Die rechte Seite ist konstant. Wenn man $r$ festhält, und $n$ grösser macht, wird $k$ kleiner und umgekehrt. Da
+wir den grösstmöglichen Wert von $n$ suchen, können wir annehmen, dass $n > k-1$ ist (genauer: Falls es ein $n$
+mit dieser Nebenbedingung gibt, dann kann für das grösste $n$ sicher nicht $n \leq k-1$ gelten). Umformen
+liefert
+\[4^kr(2^{n-k+1}+1)=4^a(4^{b-a}+1).\]
+Nach Konstruktion sind die beiden Klammern ungerade, und daher ist $4^k$ die grösste Zweierpotenz, die die linke
+Seite teilt, und $4^a$ ist die grösste solche, die die rechte Seite teilt. Dies liefert $k=a$. Nun lassen wir
+$r$ variieren und sehen, dass $n$ grösser wird, wenn $r$ kleiner wird und umgekehrt. Das heisst, falls ein $n$
+existiert mit $r=1$, dann muss es das grösste sein. Also probieren wir das aus: Mit $r=1$ und $k=a$ folgt aus
+obiger Gleichung
+\[2^{n-a+1}+1=4^{b-a}+1,\]
+Also $n=2b-a-1$. Dies muss das maximale $n$ sein.\\
+
+
+\bigskip
+
+\item[\textbf{3.}] Sei $ABC$ ein gleichschenkliges Dreieck mit $|AC|=|BC|$ und
+Inkreismittelpunkt $I$. Sei $P$ ein Punkt auf dem Umkreis des Dreiecks $AIB$, der Im Dreieck $ABC$ liegt. Die
+Geraden durch $P$, parallel zu $CA$ und $CB$, schneiden $AB$ in $D$ und $E$. Die zu $AB$ parallele Gerade durch
+$P$ schneidet $CA$ und $CB$ in $F$ und $G$. Zeige, dass sich die beiden Geraden $DF$ und $EG$ auf dem Umkreis
+des Dreiecks $ABC$ schneiden.\\
+
+\textbf{Lösung}
+
+Die entsprechenden Seiten der Dreiecke $PDE$ und $CFG$ sind parallel. Falls $DF$ und $EG$ nicht parallel sind,
+gehen diese beiden Dreiecke durch eine Streckung auseinander hervor und $DF$, $EG$ und $CP$ schneiden sich im
+Streckzentrum. Dies führt zu folgendem
+
+\begin{Satz}
+Sei $Q$ der Schnittpunkt von $CP$ mit dem Umkreis von $ABC$. Dann schneiden sich $DF$ und $EG$ in $Q$.
+\end{Satz}
+
+\begin{proof}
+Aus $\wi AQP=\wi ABC=\wi BAC=\wi PFC$ folgt, dass $AQPF$ ein Sehnenviereck ist. Daher gilt $\wi FQP=\wi PAF$.
+Wegen $\wi IBA=\wi CBA/2=\wi CAB/2=\wi IAC$ berührt der Umkreis des Dreiecks $AIB$ die Gerade $CA$ in $A$.
+Daraus folgt $\wi PAF=\wi DBP$. Wegen $\wi QBD=\wi QCA = \wi QPD$ ist auch $DQBP$ ein Sehnenviereck, also gilt
+$\wi DBP= \wi DQP$. \\
+Setzt man alles zusammen, dann folgt $\wi FQP=\wi PAF=\wi DBP=\wi DQP$, also sind $F,D,Q$ kollinear. Analog
+folgt, dass $G,E,Q$ kollinear sind.
+\end{proof}
+
+Also schneiden sich die Geraden $DF$, $EG$ und $CP$ auf dem Umkreis des Dreiecks $ABC$.\\
+
+\bigskip
+
+\item[\textbf{4.}] Für die positiven reellen Zahlen $a,b,c$ gelte $abc=1$. Beweise die folgende Ungleichung:
+\[\frac{ab}{a^5+ab+b^5}+\frac{bc}{b^5+bc+c^5}+\frac{ca}{c^5+ca+a^5} \leq 1.\]
+
+\textbf{1. Lösung}
+
+Es gilt $a^5+b^5 \geq a^2b^2(a+b)$, z.B. nach AM-GM oder Bunching. Daraus folgt mit $abc=1$
+\[\frac{ab}{a^5+ab+b^5} \leq \frac{ab}{a^2b^2(a+b)+ab}=\frac{abc^2}{a^2b^2c^2(a+b)+abc^2}=\frac{c}{a+b+c}.\]
+Nach dieser und den analogen Abschätzungen ist die linke Seite höchstens gleich
+\[\frac{c}{a+b+c}+\frac{a}{a+b+c}+\frac{b}{a+b+c}=1.\]
+
+\pagebreak
+
+\textbf{2. Lösung}
+
+Mit der Nebenbedingung $abc=1$ lässt sich die Ungleichung homogenisieren:
+\[\frac{ab}{a^5+a^2b^2c+b^5}+\frac{bc}{b^5+ab^2c^2+c^5}+\frac{ca}{c^5+a^2bc^2+a^5} \leq \frac{1}{abc}.\]
+Multipliziert man beide Seiten mit dem Hauptnenner und multipliziert aus, wird die linke Seite zu
+\[\frac{1}{2} \sum_{\mbox{sym}} a^{11}b^2c^2+4a^8b^4c^3+a^7b^7c+2a^7b^6c^2+a^5b^5c^5.\]
+Die rechte Seite ist gleich
+\[\frac{1}{2} \sum_{\mbox{sym}} a^{11}b^2c^2+2a^{10}b^5+2a^8b^4c^3+a^7b^7c+2a^7b^6c^2+a^5b^5c^5.\]
+Nach Vereinfachen ist die ursprüngliche Ungleichung also äquivalent zu
+\[\sum_{\mbox{sym}} a^{10}b^5-a^8b^4c^3 \geq 0,\]
+was nach Bunching richtig ist.
+
+\bigskip
+
+\item[\textbf{5.}] Ein \textit{Bauklotz}, bestehend aus $7$ Einheitswürfeln, hat die Form eines $2 \times 2 \times 2$
+Würfels mit einem fehlenden Eckeinheitswürfel. Aus einem Würfel der Kantenlänge $2^n$, $n \geq 2$, wird ein
+beliebiger Einheitswürfel entfernt. Zeige, dass sich der verbleibende Körper stets aus Bauklötzen aufbauen
+lässt.\\
+
+\textbf{Lösung}
+
+Man überlegt sich leicht, dass man aus 8 Bauklötzen einen doppelt so grossen Bauklotz herstellen kann. Induktiv
+folgt daraus, dass man für jedes $n \geq 1$ einen Bauklotz der Kantenlänge $2^n$ herstellen kann. Wir nennen
+dies einen $n$-Klotz. Betrachte nun einen Würfel der Kantenlänge $2^n$ mit einem fehlenden Einheitswürfel. Um
+ihn nachzubauen, betrachten wir einen leeren Würfel der gleichen Grösse, in dem der entsprechende Einheitswürfel
+markiert ist. Man platziere nun einen $n$-Klotz in diesem leeren Würfel, sodass der markierte Einheitswürfel
+nicht überdeckt ist (dies geht auf genau eine Art). Es bleibt ein Würfel der Kantenlänge $2^{n-1}$ mit einem
+markierten Einheitswürfel übrig. Nun kann man wieder einen $n-1$-Klotz so platzieren, dass der markierte
+Einheitswürfel nicht bedeckt wird. So fortfahrend, lässt sich der gesamte Würfel nachbauen, sodass nur der
+markierte Einheitswürfel nicht bedeckt ist. Dies war zu zeigen.
+
+
+
+
+\bigskip
+
+\item[\textbf{6.}] Bestimme alle endlichen Folgen $(x_0,x_1,\ldots,x_n)$ reeller Zahlen, sodass die
+Zahl $k$ in der Folge genau $x_k$ mal auftritt.\\
+
+\textbf{Lösung}
+
+Beachte zuerst, dass alle Folgeglieder nichtnegative ganze Zahlen $\leq n+1$ sind, da $x_k$ das Auftreten von
+$k$ in der Folge zählt und die Länge der Folge $n+1$ ist. Ausserdem ist $x_k=n+1$ unmöglich, denn sonst wären
+alle Folgeglieder gleich $k$, also auch $x_k$, Widerspruch. Daher gilt $x_k \leq n$ für alle $k$. Die Summe
+aller Folgeglieder ist gleich $0\cdot x_0+1 \cdot x_1+\ldots +n\cdot x_n$, da genau $x_k$ davon gleich $k$ sind.
+Dies liefert
+\begin{equation}
+\sum_{k=0}^{n} k x_k = \sum_{k=0}^n x_k.
+\end{equation}
+Für das Folgende halte man sich stets vor Augen, dass aus $x_l=k>0$ folgt, dass $x_k >0$ gilt. Ausserdem ist
+$x_0>0$, denn $x_0=0$ kann nicht sein. Sei nun $m$ die grösste Zahl, sodass gilt $x_m \neq 0$. Dann folgt
+insbesondere $x_k \leq m$ für alle $k$. Wegen $x_0\neq 0$ ist $m \geq 1$. Nehme an, es gelte $m=1$, dann muss
+$x_0=x_1=1$ sein, was nicht möglich ist. Daher ist $m \geq 2$. Aus (1) folgt nun die Gleichung
+\[x_0=x_2+2x_3+\ldots +(m-1)x_m.\]
+Die rechte Seite ist mindestens gleich $(m-1)x_m$. Zusammen mit $x_0 \leq m$ ergeben sich
+ vier mögliche Fälle:
+(a) $m=2$, $x_0=x_2=2$, (b) $m=2$, $x_0=x_2=1$, (c) $m\geq 3$, $x_0=m-1$, $x_m=1$, $x_k=0$ für $k \neq 0,1,m$
+und (d) $m\geq 3$, $x_0=m$, $x_2=1$, $x_m=1$, $x_k=0$ für $k \neq 0,1,2,m$. Wir betrachten diese nun einzeln.
+\begin{enumerate}
+\item[(a)] Es muss $x_1 \leq 1$ gelten. $x_1=0$ liefert die Folge $(2,0,2,0)$ und $x_1=1$ die Folge $(2,1,2,0,0)$.
+\item[(b)] Aus $x_2=1$ folgt $x_1=2$. Dies ergibt die Folge $(1,2,1,0)$.
+\item[(c)] Wegen $x_m >0$ muss $m$ in der Folge vorkommen, daher ist $x_1=m$. Damit müssten aber $m \geq 3$ Einsen in
+der Folge zu finden sein, was nicht der Fall ist, Widerspruch.
+\item[(d)] Es gilt $x_1=2$, was zur Folge $(m,2,1,\underbrace{0,0,\ldots,0}_{m-3},1,0,0,0)$ führt.
+\end{enumerate}
+Als Lösungen erhalten wir also die drei speziellen Folgen
+\[(1,2,1,0),\quad (2,0,2,0),\quad (2,1,2,0,0),\]
+sowie die unendliche Familie
+\[(m,2,1,\underbrace{0,0,\ldots,0}_{m-3},1,0,0,0),\qquad m \geq 3.\]
+
+
+
+
+\bigskip
+
+\item[\textbf{7.}] Für die rellen Zahlen $a,b,c,d$ gelten die Gleichungen
+\begin{eqnarray*}
+a=\sqrt{45-\sqrt{21-a}} &,& \qquad b=\sqrt{45+\sqrt{21-b}},\\
+c=\sqrt{45-\sqrt{21+c}} &,& \qquad d=\sqrt{45+\sqrt{21+d}}.
+\end{eqnarray*}
+Zeige, dass gilt $abcd=2004$.\\
+
+\textbf{Lösung}
+
+durch zweimaliges Quadrieren folgt für $a$ die Gleichung $(a^2-45)^2+a-21=0$, daher ist $a$ eine Nullstelle des
+Polynoms
+\[P(x)=x^4-90x^2+x+2004.\]
+Dasselbe gilt für $b$. Analog findet man, dass $c$ und $d$ Nullstellen des Polynoms $x^4-90x^2-x+2004$ sind,
+folglich sind $-c$ und $-d$ ebenfalls Nullstellen von $P$. Ausserdem sind die 4 Zahlen $a,b,-c,-d$ paarweise
+verschieden, denn $a$ und $b$ sind positiv, $-c$ und $-d$ negativ. Wäre $a=b$, dann folgt aus der Gleichung für
+$a$ die Identität $a^2-45= -\sqrt{21-a}$, aus jener für $b$ jedoch $a^2-45= \sqrt{21-a}$. Es wäre also
+gleichzeitig $a^2=45$ und $a=21$, was unmöglich ist. Analog zeigt man, dass $c=d$ auf einen Widerspruch führt.
+Folglich ist $abcd=ab(-c)(-d)$ das Produkt der vier Nullstellen von $P$, dieses ist nach Vieta gleich dem
+konstanten Koeffizienten, also gleich 2004.\\
+
+\bigskip
+
+\item[\textbf{8.}] Sei $m$ eine natürliche Zahl grösser als 1. Die Folge $x_0, x_1, x_2,\ldots$ ist definiert
+durch
+\[x_i= \left\{
+\begin{tabular}{lll}
+$2^i$,& für & $0 \leq i \leq m-1$;\\
+$\sum_{j=1}^{m}x_{i-j}$ & für & $i \geq m$.
+\end{tabular}
+\right.\] Finde das grösste $k$, sodass es $k$ aufeinanderfolgende Folgeglieder gibt, die alle durch $m$ teilbar
+sind.\\
+
+\textbf{Lösung}
+
+Sei $r_i$ der Rest von $x_i$ bei Division durch $m$. Wir betrachten statt der Folge $(x_i)$ die Folge $(r_i)$.
+Mit Hilfe der Rekursionsformel lassen sich aus $m$ aufeinanderfolgenden Folgegliedern das nächste, aber auch das
+vorhergehende ausrechnen. Solche $m$ aufeinanderfolgende Glieder bestimmen daher die ganze Folge. Wegen $0 \leq
+r_i \leq m-1$ gibt es höchstens $m^m$ verschiedene $m$-Tupel $(r_i,r_{i+1},\ldots ,r_{i+m-1})$
+aufeinanderfolgender Folgeglieder. Nach dem Schubfachprinzip kommt eines dieser $m$-Tupel mehrfach in der Folge
+vor. Daraus folgt, dass die Folge periodisch ist ohne Vorperiode (man kann die Glieder rückwärts berechnen).\\
+Nehme an, dass $m$ aufeinanderfolgende $x_i$ durch $m$ teilbar sind. Dann enthält die Folge $(r_i)$ $m$
+aufeinanderfolgende Nullen und aus der Rekursionsformel folgt, dass alle Folgeglieder gleich Null sind, im
+Widerspruch zu $x_0=r_0=1$.\\
+Andererseits lässt sich die Folge $x_i$ rückwärts über $x_0$ hinaus fortsetzen. Die Formel
+$x_i=x_{i+m}-\sum_{j=1}^{m-1}x_{i+j}$ liefert nun leicht  $x_{-1}=1$ und weiter $x_{-2}=x_{-3}=\ldots
+=x_{-m}=0$. Wegen der Periodizität von $(r_i)$ gibt es daher $m-1$ aufeinanderfolgende Glieder in $(x_i)_{i \geq
+0}$, die durch $m$ teilbar sind.\\
+
+
+\bigskip
+
+\item[\textbf{9.}]  Sei $X$ eine Menge mit $n$ Elementen und seien $A_1, A_2, \ldots A_n$ verschiedene Teilmengen
+von $X$. Zeige: Es gibt ein $x \in X$, sodass die Mengen
+\[A_1 \setminus \{x\}, A_2 \setminus \{x\}, \ldots , A_n \setminus \{x\}\]
+alle verschieden sind.\\
+
+\textbf{1. Lösung}
+
+Nehme an, dies sei nicht der Fall. Dann gibt es für jedes Element $x \in X$ zwei Teilmengen $A_i$ und $A_j$,
+sodass $A_i\setminus \{x\}=A_j\setminus \{x\}$ (eventuell gibt es mehrere solche Paare, wir wählen ein
+beliebiges aus und halten es im Folgenden fest). Da $A_i$ und $A_j$ verschieden sind, folgt daraus, dass beide
+Mengen dieselben Elemente enthalten, ausser dass $x$ in genau einer der beiden Mengen liegt. Wir betrachten nun
+einen Graphen, dessen Ecken die Mengen $A_k$ sind. Für jedes $x \in X$ wählen wir wie oben beschrieben zwei
+Teilmengen, von denen die eine $x$ enthält und die andere nicht, die aber ansonsten dieselben Elemente
+enthalten, und verbinden sie mit einer Kante. Man überlegt sich leicht, dass keine zwei Teilmengen mit mehr als
+einer Kante verbunden sein können, da verschiedene Kanten zu verschiedenen Elementen $x \in X$ gehören. Da
+dieser Graph $n$ Ecken und $n$ Kanten hat, besitzt er einen Zyklus (dies folgt leicht mit vollständiger
+Induktion). OBdA sei dieser Zyklus $A_1,A_2,...,A_k,A_1$ und die Kante zwischen $A_1$ und $A_2$ gehöre zu $x$.
+Einerseits enthält nun genau eine der Mengen $A_1$ und $A_2$ das Element $x$, da sie ja durch diese Kante
+verbunden sind. Andererseits sind sie aber auch durch den Kantenzug über $A_3,\ldots,A_k$ verbunden. Keine
+dieser Kanten gehört zu $x$, also ändert sich der Zustand von $x$ auf diesem Kantenzug nicht, und daher gehört
+$x$ entweder zu beiden oder zu keiner der Mengen $A_1,A_2$, Widerspruch.\\
+
+\textbf{2. Lösung}
+
+Wir verwenden Induktion nach $n$, die Behauptung ist klar für $n=2$. Sind die Mengen $A_1 \setminus \{x_n\},
+\ldots , A_n \setminus \{x_n\}$ alle verschieden, sind wir fertig. Wir nehmen im Folgenden an, dies sei nicht
+der Fall. Gilt $A_i\setminus \{x_n\}=A_j\setminus \{x_n\}$, dann unterscheiden sich $A_i$ und $A_j$ nur um das
+Element $x_n$. Daraus folgt, dass nicht drei oder mehr Mengen nach Entfernung von $x_n$ gleich werden können.
+Wir fassen nun die Teilmengen $A_i$ einzeln oder paarweise in Gruppen zusammen, sodass die Mengen in einer
+Gruppe nach dem Entfernen von $x_n$ gleich werden. Nummeriere die verschiedenen auftretenden Mengen
+$A_i\setminus \{x_n\}$ in irgend einer Reihenfolge $B_1,\ldots,B_m$ mit $m \leq n-1$. Die $B_i$ entsprechen
+genau den Gruppen der $A_j$. Nach Induktionsvoraussetzung gibt es ein $x_k$ mit $1 \leq k \leq n-1$, sodass
+$B_1\setminus \{x_k\},\ldots,B_m\setminus \{x_k\}$ alle verschieden sind (ergänze die Liste $B_1,\ldots,B_m$
+gegebenenfalls durch weitere Mengen $B_{m+1},\ldots,B_{n-1}$, falls $m<n-1$, sodass die $B_i$ alle verschieden
+sind). Die Mengen $A_1\setminus \{x_k\},\ldots,A_n\setminus \{x_k\}$ sind nun paarweise verschieden: liegen
+$A_i$ und $A_j$ in verschiedenen Gruppen, dann sind nach Konstruktion ja sogar die Mengen $A_i\setminus
+\{x_k,x_n\}$ und $A_j\setminus \{x_k,x_n\}$ verschieden, liegen sie in derselben Gruppe, dann unterscheiden sich
+$A_i\setminus \{x_k\}$ und $A_j\setminus \{x_k\}$ um das Element $x_n$, sind also auch verschieden. Dies beendet
+den Beweis.\\
+
+\bigskip
+
+\item[\textbf{10.}] Gegeben sei ein spitzwinkliges Dreieck $\dreieck ABC$ mit Höhen $\overline{AU}$,
+$\overline{BV}$, $\overline{CW}$ und Höhenschnittpunkt $H$. $X$ liege auf $\overline{AU}$, $Y$ auf
+$\overline{BV}$ und $Z$ auf $\overline{CW}$. $X,Y$ und $Z$ sind alle von $H$ verschieden. Zeige
+\begin{enumerate}
+\item Wenn $X,Y,Z$ und $H$ auf einem Kreis liegen, gilt
+\[ [ABC] = [ABZ] + [AYC] + [XBC],\]
+wobei $[PQR]$ die Fläche des Dreiecks $\dreieck PQR$ bezeichnet.
+\item Es gilt auch die Umkehrung von (a).\\
+\end{enumerate}
+
+\textbf{Lösung}
+
+\begin{enumerate}
+\item Da das Sehnenviereck $XYZH$ insbesondere konvex ist, können wir oBdA annehmen, dass $Z$ auf $\overline{CH}$
+und $X$ auf $\overline{HU}$ liegt. Wir betrachten zuerst den Fall, dass $Y$ auf $\overline{BH}$ liegt. Eine
+kurze Winkeljagd zeigt, dass $\wi XYZ = \beta$ und $\wi YZX = \gamma$ gilt. Es folgt, dass die Dreiecke
+$\dreieck ABC$ und $\dreieck XYZ$ ähnlich sind und daraus folgt
+\[ XY = YZ \cdot \frac{AB}{BC} \enspace \enspace \enspace ZX = YZ \cdot \frac{CA}{BC}\]
+Nach dem Satz von Ptolemäus für Sehnenvierecke gilt
+\[HX \cdot YZ = HY \cdot ZX + HZ \cdot XY.\]
+Einsetzen, kürzen und umformen gibt
+\begin{eqnarray*}
+HX \cdot BC &=& HY \cdot CA + HZ \cdot AB \\
+\Leftrightarrow \enspace (UH - UX) \cdot BC &=& (VY - VH) \cdot CA + (WZ - WH) \cdot AB \\
+\Leftrightarrow \enspace AB \cdot WH + BC \cdot UH + CA \cdot VH &=& AB \cdot WZ + BC \cdot UX + CA \cdot VY \\
+\Leftrightarrow \enspace [ABC] &=& [ABZ] + [AYC] + [XBC].
+\end{eqnarray*}
+
+Für den Fall, dass $Y$ auf $\overline{VH}$ liegt, liefert Winkeljagd erneut dieselbe Ähnlichkeit. Ptolemäus hat
+dann die Form
+\[HZ \cdot XY = HY \cdot ZX + HX \cdot YZ.\]
+und liefert durch analoge Berechnung die gesuchte Gleichung.\\
+
+\item Wir nehmen an $X,Y,Z$ und $H$ liegen nicht auf einem Kreis. Betrachte den Umkreis $k$ des Dreiecks
+$\dreieck XYH$. Wir unterscheiden drei Fälle:
+\begin{enumerate}
+\item[(i)] $k$ schneidet die Strecke $\overline{CW}$ in den Punkten $H$ und $S$. Für das Sehnenviereck $XYSH$ gilt,
+wie in (a) gezeigt wurde, die Gleichung. Liegt nun $Z$ näher bei $W$ als $S$, ist die Fläche $[ABZ]$ kleiner als
+$[ABS]$ und somit
+\[[ABZ] + [AYC] + [XBC] < [ABC],\]
+Widerspruch. Analog, wenn $Z$ näher bei $C$ liegt als $S$.
+
+\item[(ii)] $k$ liegt tangetial an $CW$. Winkeljagd zeigt, dass das Dreieck $\dreieck XYH$ ähnlich zu
+$\dreieck ABC$ ist. Es gilt darum in allen Fällen
+\begin{eqnarray*}
+\frac{HX}{YH} &=& \frac{CA}{BC} \\
+\Leftrightarrow \enspace [ABC] &=& [ABH] + [AYC] + [XBC].
+\end{eqnarray*}
+Die gleiche Argumentation, wie in Fall (i) führt zum gewünschten Widerspruch.
+
+\item[(iii)] $k$ schneidet $CW$ ausserhalb $\overline{CW}$ in $S$. Wir setzen $[ABS]$ negativ (gleicher Betrag),
+falls $S$ näher bei $W$ liegt als bei $C$. Man prüft leicht nach, dass dann die Gleichung aus (a) auch für
+Punkte ausserhalb von $\dreieck ABC$ gilt. Das gleiche Argument, wie in Fall (i) ergibt den Widerspruch.
+\end{enumerate}
+\end{enumerate}
+
+
+\bigskip
+
+\item[\textbf{11.}] Finde alle injektiven Funktionen $f: \BR \rightarrow \BR$, sodass für alle reellen Zahlen $x
+\neq y$ gilt
+\[f\left(\frac{x+y}{x-y}\right)=\frac{f(x)+f(y)}{f(x)-f(y)}.\]
+
+\textbf{Lösung}
+
+Einsetzen von $y=0$ liefert für $x\neq 0$ die Gleichung $f(1)=(f(x)+f(0))/(f(x)-f(0))$, also
+\[f(x)(f(1)-1)=f(0)(f(1)+1).\]
+Daraus folgt $f(1)=1$ und damit auch $f(0)=0$, denn sonst wäre $f$ konstant auf $\BR \setminus \{0\}$, also
+nicht injektiv. Setze $y=-x \neq 0$, dann folgt
+\begin{equation}
+f(-x)=-f(x) \qquad \forall x \neq 0.
+\end{equation}
+Setze $y=xz$ mit $z \neq 1$ und $x\neq 0$, dann gilt einerseits
+\begin{equation}
+f\left(\frac{x+xz}{x-xz}\right)=\frac{f(x)+f(xz)}{f(x)-f(xz)},
+\end{equation}
+andererseits ist aber auch
+\begin{equation}
+f\left(\frac{x+xz}{x-xz}\right)=f\left(\frac{1+z}{1-z}\right)=\frac{1+f(z)}{1-f(z)}.
+\end{equation}
+Ein Vergleich von (3) und (4) ergibt nun für alle $z \neq 1$ und $x\neq 0$ die Gleichung
+\begin{equation}
+f(xz)=f(x)f(z).
+\end{equation}
+Wir wissen aber bereits, dass $f(0)=0$ und $f(1)=1$ gilt, also stimmt (5) für alle reellen $x,z$. Mit $x=z$
+folgt aus (5) weiter, dass $f(x)\geq 0$ für alle $x \geq 0$. Da $f$ injektiv ist und $f(0)=0$, gilt sogar $f(x)>
+0$ für alle $x > 0$. Ist nun $x>y\geq 0$, dann gilt $(x+y)/(x-y)>0$ und damit ist die linke Seite der
+ursprünglichen Gleichung positiv, also auch die rechte. Dies gilt auch für den Zähler rechts, also auch für den
+Nenner, das heisst $f(x)>f(y)$, und daher ist $f$ streng monoton steigend auf $\BR_{\geq 0}$. Zusammen mit (5)
+impliziert das bekanntlich, dass für $x \geq 0$ gilt $f(x)=x^c$ mit einer positiven Konstanten $c$. Einsetzen in
+die ursprüngliche Gleichung (wobei $x>y \geq 0$) zeigt, dass $c=1$ sein muss. Zusammen mit (2) ergibt sich nun
+die einzige Lösung
+\[f(x)=x.\]
+
+
+\bigskip
+
+\item[\textbf{12.}] Finde alle natürlichen Zahlen, die sich in der Form
+\[\frac{(a+b+c)^2}{abc}\]
+darstellen lassen, wobei $a,b$ und $c$ natürliche Zahlen sind.\\
+
+\textbf{Lösung}
+
+Nehme an, die natürliche Zahl $n$ lasse sich in dieser Form darstellen, also
+\[\frac{(a+b+c)^2}{abc}=n.\]
+Halte $n$ fest und wähle $a,b,c$ mit $a \geq b \geq c$ und $a+b+c$ minimal. Die obige Gleichung lässt sich
+umschreiben zu
+\[a^2+a(2b+2c-nbc)+(b+c)^2=0.\]
+Dies ist eine quadratische Gleichung in $a$, die eine weitere Lösung $a'$ besitzt. Nach Vieta gilt
+\begin{eqnarray*}
+a+a' &=& nbc-2b-2c,\\
+a \cdot a' &=& (b+c)^2.
+\end{eqnarray*}
+Aus der ersten Gleichung folgt, dass $a'$ ganz ist, aus der zweiten, dass $a'>0$. Wegen der Minimalität von
+$a+b+c$ muss $a' \geq a$ sein und daher gilt $a^2 \leq aa'=(b+c)^2$, also $b+c \geq a \geq b \geq c>0$. Wir
+unterscheiden nun zwei Fälle.
+\begin{enumerate}
+\item[(a)] Sei $c=1$. Dann ist $a=b$ oder $a=b+1$. Im ersten Fall folgt $a^2 \div (1+2a)^2$, also $a^2 \div
+1+4a$. Dies gilt nur für $a=1$, was zu $n=9$ führt. Im zweiten Fall gilt $a(a-1) \div (2a)^2$, also ist
+$a=2,3,5$ und $n=8,6,5$.
+\item [(b)] Sei nun $c>1$. Dann gilt die Abschätzung
+\begin{eqnarray*}
+n=\frac{(a+b+c)^2}{abc} &=& \frac{a}{bc}+\frac{b}{ca}+\frac{c}{ab}+2 \left(\frac{1}{a}+\frac{1}{b}+\frac{1}{c}
+\right) \leq \frac{b+c}{bc}+\frac{1}{c}+\frac{1}{a}+2 \cdot \frac{3}{2}\\
+&\leq& 1+\frac{1}{2}+\frac{1}{2}+3=5.
+\end{eqnarray*}
+Dabei haben wir verwendet, dass für $b,c \geq 2$ gilt $b+c \leq bc$.
+\end{enumerate}
+Es kommen also nur $n=1,2,3,4,5,6,8,9$ in Frage. Die folgende Auflistung zeigt, dass alle diese Zahlen in der
+gewünschten Form dargestellt werden können:
+\begin{center}
+\begin{tabular}{cc}
+$1=(9+9+9)^2/(9\cdot 9\cdot 9)\qquad$ & $5=(5+4+1)^2/(5 \cdot 4 \cdot 1)$\\[2mm]
+$2=(8+4+4)^2/(8\cdot 8\cdot 4)\qquad$ & $6=(3+2+1)^2/(3 \cdot 2 \cdot 1)$\\[2mm]
+$3=(3+3+3)^2/(3\cdot 3\cdot 3)\qquad$ & $8=(2+1+1)^2/(2 \cdot 1 \cdot 1)$\\[2mm]
+$4=(4+2+2)^2/(4\cdot 2\cdot 2)\qquad$ & $9=(1+1+1)^2/(1 \cdot 1 \cdot 1)$\\
+\end{tabular}
+\end{center}
+
+
+\end{enumerate}
+
+\end{document}

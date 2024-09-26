@@ -1,0 +1,554 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+
+
+
+
+
+% Schriftabkürzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+
+\newcommand{\wi}{\mathop{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}} %Schönes Winkel-Zeichen
+
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge Lösungen zur SMO Finalrunde 2004} \\
+\medskip erste Prüfung - 2. April 2004
+\end{center}
+
+\vspace{15mm}
+
+
+\begin{enumerate}
+\item[\textbf{1.}] Sei $\Gamma$ ein Kreis und $P$ ein Punkt ausserhalb von $\Gamma$. Eine Tangente von $P$ an
+den Kreis berühre ihn in $A$. Eine weitere Gerade durch $P$ schneide $\Gamma$ in den verschiedenen Punkten $B$
+und $C$. Die Winkelhalbierende von $\wi APB$ schneide $AB$ in $D$ und $AC$ in $E$. Beweise, dass das Dreieck
+$ADE$ gleichschenklig ist.\\
+
+\textbf{Lösung}
+
+Wir nehmen an, $B$ liege näher bei $P$ als $C$. Da $PA$ eine Tangente an $\Gamma$ ist, gilt $\wi PAB=\wi ACB$.
+Ausserdem ist $\wi APD=\wi CPE$, also sind die Dreiecke $PAD$ und $PEC$ ähnlich. Daraus folgt $\wi PDA=\wi PEC$
+und somit auch $\wi ADE=\wi AED$, also ist das Dreieck $ADE$ gleichschenklig.\\
+
+\bigskip
+
+
+\item[\textbf{2.}] Sei $M$ eine endliche  Menge reeller Zahlen mit
+folgender Eigenschaft: Aus je drei verschiedenen Elementen von $M$
+lassen sich stets zwei auswählen, deren Summe in $M$ liegt.
+Wieviele Elemente kann $M$ höchstens haben?\\
+
+\textbf{Lösung}
+
+Antwort: 7.\\
+Nehme an, $M$ enthalte mehr als drei positive Elemente und
+bezeichne die vier grössten mit $a>b>c>d>0$. Nach Voraussetzung
+kann man aus den drei Elementen $a,b,c$ zwei auswählen, deren
+Summe in $M$ liegt. Wegen $a+b>a$ und $a+c>a$ und der Maximalität
+von $a$ liegen diese beiden Summen nicht in $M$. Folglich muss
+$b+c \in M$ sein und wegen $b+c>b$ gilt $a=b+c$. Dieselbe
+Argumentation mit den drei Elementen $a,b,d$ zeigt, dass auch
+$a=b+d$ gilt. Dies impliziert aber $c=d$, Widerspruch. Folglich
+enthält $M$ höchstens drei positive Elemente. Analog zeigt man,
+dass $M$ auch nur höchstens drei negative Elemente enthält. Daher
+gilt $|M| \leq 7$ (die Null kann
+auch noch in $M$ liegen).\\
+Andererseits hat für $a>0$ die folgende 7-elementige Menge die
+geforderte Eigenschaft:
+\[M=\{-3a,-2a,-a,0,a,2a,3a\}.\]
+Die einzigen Summen von zwei verschiedenen Elementen, die nicht in
+$M$ liegen, sind $3a+a$, $3a+2a$, $(-3a)+(-a)$ und $(-3a)+(-2a)$.
+Die einzigen problematischen dreielementige Teilmenge von $M$ sind
+daher $\{3a,b,-3a\}$, wobei $b=\pm a$ oder $\pm 2a$. Im Fall $b >
+0$ gilt aber $(-3a)+b\in M$, in Fall $b < 0$ analog $3a+b \in M$.
+Damit ist alles gezeigt.\\
+
+
+\bigskip
+
+
+\item[\textbf{3.}] Sei $p$ eine ungerade Primzahl. Finde alle
+natürlichen Zahlen $k$, sodass
+\[\sqrt{k^2-pk}\]
+eine positive ganze Zahl ist.\\
+
+
+\textbf{Lösung}
+
+Sei $\sqrt{k^2-pk}=m$ mit $m>0$ ganz. Dann gilt $k(k-p)=m^2$. Wir
+unterscheiden nun zwei Fälle.
+\begin{enumerate}
+\item[$p \div k$] Dann ist auch $m$ durch $p$ teilbar. Schreibe
+$k=p \cdot l$ und $m=p \cdot n$, dann folgt $l(l-1)=n^2$. Wegen
+$l\geq 2$ und
+\[(l-1)^2 < l^2-l < l^2\]
+liegt $l(l-1)$ aber zwischen zwei aufeinanderfolgenden
+Quadratzahlen, kann also nicht selbst eine sein, Widerspruch.
+\item[$p \notdiv k$] In diesem Fall sind $k$ und $k-p$
+teilerfremd. Da ihr Produkt ein Quadrat ist, müssen beide Zahlen
+Quadrate sein: $k=b^2$, $k-p=a^2$. Nun gilt
+\[p=b^2-a^2=(b-a)(b+a).\]
+Da $p$ prim ist, folgt $1=b-a$ und $p=a+b$. Daraus ergibt sich der
+einzige mögliche Wert $k=((p+1)/2)^2$. In der Tat ist für dieses
+$k$
+\[\sqrt{k^2-pk}=\frac{p^2-1}{4}\]
+eine positive ganze Zahl, denn es gilt $p^2 \equiv 1$ (mod 4).
+\end{enumerate}
+
+
+\bigskip
+
+\item[\textbf{4.}] Bestimme alle Funktionen $f: \BR \rightarrow \BR$, sodass für alle $x,y \in \BR$ gilt
+\[f(xf(x)+f(y))=y+f(x)^2.\]
+
+\textbf{Lösung}
+
+Setze $x=0$, dann folgt
+\begin{equation}
+f(f(y))=y+f(0)^2,
+\end{equation}
+insbesondere ist $f$ surjektiv. Wähle $a\in \BR$ mit $f(a)=0$ und setze $x=a$:
+\begin{equation}
+f(f(y))=y.
+\end{equation}
+Ein Vergleich mit (1) zeigt ausserdem $f(0)=0$. Einsetzen von $y=0$ liefert nun
+\begin{equation}
+f(xf(x))=f(x)^2.
+\end{equation}
+Substituiere $x=f(z)$ in (3), dann folgt mit (2)
+\begin{equation}
+f(zf(z))=z^2.
+\end{equation}
+Aus (3) und (4) schliesslich erhält man $f(x)^2=x^2$, also $f(x)=\pm x$ für alle $x\in \BR$. Nehme an, es gäbe
+zwei relle Zahlen $x,y \neq 0$ mit $f(x)=x$ und $f(y)=-y$. Einsetzen in die ursprüngliche Gleichung liefert
+\[\pm (x^2-y)=f(xf(x)+f(y))=y+f(x)^2=y+x^2.\]
+Gilt das Pluszeichen, dann folgt $y=0$, im Widerspruch zur Annahme, gilt das Minuszeichen, dann folgt $x=0$, was
+ebenfalls nicht sein darf. Daher können nur die Funktionen $f(x)=x$ und $f(x)=-x$ Lösungen sein. Durch Einsetzen
+bestätigt man leicht, dass beide die Funktionalgleichung erfüllen.\\
+
+
+\bigskip
+
+
+\item[\textbf{5.}] Seien $a$ und $b$ feste positive Zahlen. Finde in Abhängigkeit von $a$ und $b$ den
+kleinstmöglichen Wert der Summe
+\[\frac{x^2}{(ay+bz)(az+by)}+\frac{y^2}{(az+bx)(ax+bz)}+\frac{z^2}{(ax+by)(ay+bx)},\] wobei $x,y,z$ positive
+reelle Zahlen sind.\\
+
+\textbf{Lösung}
+
+Sei im Folgenden
+\[A=\frac{x^2}{(ay+bz)(az+by)}+\frac{y^2}{(az+bx)(ax+bz)}+\frac{z^2}{(ax+by)(ay+bx)}.\]
+Die Vermutung, dass das Minimum von $A$ für $x=y=z$ angenommen
+wird, ist recht naheliegend. Einsetzen von $x=y=z$ liefert den
+Wert $3/(a+b)^2$. Wir geben nun drei Beweise für die Ungleichung
+\[A \geq \frac{3}{(a+b)^2}.\]
+
+\textit{1. Beweis}
+
+Es gilt mit Hilfe von AM-GM
+\begin{eqnarray*}
+(ax+by)(ay+bx) &=& xy(a^2+b^2)+(x^2+y^2)ab\\
+&\leq& {\textstyle
+\frac{1}{2}}(x^2+y^2)(a^2+b^2)+(x^2+y^2)ab=\frac{(a+b)^2}{2}(x^2+y^2).
+\end{eqnarray*}
+Diese und die analogen Abschätzungen liefern
+\[A \geq \frac{2}{(a+b)^2}\left(\frac{x^2}{y^2+z^2}+\frac{y^2}{z^2+x^2}+\frac{z^2}{x^2+y^2}\right).\]
+Die grosse Klammer ist nun immer $\geq 3/2$, was den Beweis
+abschliesst (Ungleichung von Nesbit). Um dies einzusehen, kann man
+zum Beispiel C.S. verwenden. Es gilt einerseits
+\[\left(\frac{u}{v+w}+\frac{v}{w+u}+\frac{w}{u+v}\right)(u(v+w)+v(w+u)+w(u+v))\geq (u+v+w)^2,\]
+andererseits aber auch
+\[u(v+w)+v(w+u)+w(u+v) \leq \frac{2}{3}(u^2+v^2+w^2+2uv+2vw+2wu)=\frac{2}{3}(u+v+w)^2,\]
+Kombination der beiden Ungleichungen ergibt das Gewünschte.\\
+
+\textit{2. Beweis}
+
+Wir können oBdA $x\geq y\geq z$ annehmen. Dann gilt $x^2\geq
+y^2\geq z^2$ und
+\[(ax+by)(ay+bx)\geq (az+bx)(ax+bz)\geq (ay+bz)(az+by).\]
+Mit Hilfe von Tchebychef und AM-HM folgt nun
+\begin{eqnarray*}
+A &\geq& \frac{(x^2+y^2+z^2)}{3}\left(\frac{1}{(ay+bz)(az+by)}+\frac{1}{(az+bx)(ax+bz)}+\frac{1}{(ax+by)(ay+bx)}\right)\\
+&\geq&
+3(x^2+y^2+z^2)\frac{1}{(ay+bz)(az+by)+(az+bx)(ax+bz)+(ax+by)(ay+bx)}.
+\end{eqnarray*}
+Ausserdem gilt
+\begin{eqnarray*}
+&& (ay+bz)(az+by)+(az+bx)(ax+bz)+(ax+by)(ay+bx)\\
+&=& (a^2+b^2)(xy+yz+zx)+2ab(x^2+y^2+z^2)\\
+&\leq& (a^2+b^2)(x^2+y^2+z^2)+2ab(x^2+y^2+z^2) =
+(a+b)^2(x^2+y^2+z^2).
+\end{eqnarray*}
+Insgesamt also wie gewünscht
+\[A \geq 3\,\frac{x^2+y^2+z^2}{(a+b)^2(x^2+y^2+z^2)}=\frac{3}{(a+b)^2}.\]
+
+\textit{3. Beweis}
+
+Nach C.S. gilt
+\[\left(x^2(ay+bz)(az+by)+y^2(az+bx)(ax+bz)+z^2(ax+by)(ay+bx)\right) \times
+A\]
+\[\geq (x^2+y^2+z^2)^2\]
+Man vervollständigt die Lösung nun ähnlich wie im 2. Beweis.
+
+\end{enumerate}
+
+
+\pagebreak
+
+
+\begin{center}
+{\huge Lösungen zur SMO Finalrunde 2004} \\
+\medskip zweite Prüfung - 3. April 2004
+\end{center}
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{6.}] Bestimme alle $k$, für die eine natürliche Zahl $n$ existiert,
+sodass $1^n+2^n+3^n+4^n$ mit genau $k$ Nullen endet.\\
+
+\textbf{Lösung}
+
+Sei $A(n)=1^n+2^n+3^n+4^n$. Die Beispiele $A(1)=10$, $A(3)=100$
+und $A(4)=354$ zeigen, dass $k=0,1,2$ möglich ist. Nehme nun an,
+dass $A(n)$ mit mindestens drei Nullen endet, dann gilt $8 \div
+A(n)$. Für $n\geq 3$ ist aber $A(n) \equiv 1+0+3^n+0=4$ oder $2$
+(mod 8), Widerspruch.\\
+
+\bigskip
+
+\item[\textbf{7.}] Gegeben sind $m\geq 3$ Punkte in der Ebene. Beweise, dass man stets drei dieser Punkte $A,B,C$
+auswählen kann, sodass gilt
+\[\wi  ABC \leq \frac{180^{\circ}}{m}.\]
+
+\textit{Lösung}
+
+Die konvexe Hülle der $m$ Punkte sei ein $k$-Eck. Die Innenwinkelsumme in diesem $k$-Eck beträgt $(k-2)\cdot
+180^{\circ}$. Für den kleinsten Innenwinkel $\alpha$ gilt daher die Abschätzung
+\[\alpha \leq \frac{k-2}{k}\cdot 180^{\circ} \leq \frac{m-2}{m}\cdot 180^{\circ}.\]
+Sei $P$ der Eckpunkt bei $\alpha$. Von $P$ aus gesehen liegen die übrigen $m-1$ Punkte in einem Sektor mit
+Öffnungswinkel $\alpha$. Zwei dieser Punkte bilden mit $P$ daher einen Winkel von höchstens
+\[\frac{\alpha}{m-2} \leq \frac{180^{\circ}}{m}.\]
+
+
+\bigskip
+
+\item[\textbf{8.}] An einer Wandtafel steht eine Liste natürlicher Zahlen.
+Es wird nun wiederholt die folgende Operation ausgeführt: Wähle
+zwei beliebige Zahlen $a,b$ aus, wische sie aus und schreibe an
+deren Stelle $\ggT(a,b)$ und $\kgV(a,b)$. Zeige, dass sich der
+Inhalt der Liste ab einem bestimmten Zeitpunkt nicht mehr
+verändert.\\
+
+\textbf{1. Lösung}
+
+Für beliebige natürliche Zahlen $a$ und $b$ gilt bekanntlich
+$\ggT(a,b)\cdot \kgV(a,b)=ab$. Folglich ist das Produkt $P$ aller
+Zahlen an der Tafel eine Invariante. Bei einer Operation ändern
+sich die beiden Zahlen genau dann, wenn keine ein Teiler der
+anderen ist. In diesem Fall sei $d=\ggT(a,b)$ und $a=xd$, $b=yd$
+mit teilerfremden Zahlen $x$ und $y$, die beide grösser als 1
+sind. Nun gilt $xyd+d>xd+yd$, denn dies ist äquivalent zu
+$(x-1)(y-1)>0$, was nach Voraussetzung stimmt. Folglich ist
+$\ggT(a,b)+ \kgV(a,b)>a+b$, die Summe der Zahlen vergrössert sich
+also bei der Operation. Diese Summe ist nun aber stets eine ganze
+Zahl und ausserdem nach oben beschränkt, zum Beispiel durch $n
+\cdot P$, wobei $n$ die Anzahl Zahlen an der Wandtafel ist. Daher
+kann sich
+nur bei endlich vielen Operationen etwas an den Zahlen auf der Tafel ändern.\\
+
+\textbf{2. Lösung}
+
+Wir benützen Induktion nach $n$, der Anzahl Zahlen an der Tafel.
+Die Behauptung ist klar für $n=2$, denn nach einer Operation ist
+die eine Zahl durch die andere teilbar, die beiden Zahlen ändern
+sich danach nicht mehr. Nehme an, dies gelte für je $n$ Zahlen und
+nehme an, wir hätten $n+1$ Zahlen an der Tafel und eine Folge von
+Operationen, sodass sich diese Zahlen beliebig oft ändern. Unter
+allen Zahlen, die irgendwann mal an der Tafel stehen, gibt es eine
+kleinste, diese sei $a$. Sobald $a$ das erste Mal an der Tafel
+steht, bleibt sie für immer dort. Die einzige Möglichkeit, wie $a$
+von der Tafel verschwinden könnte ist nämlich die, dass $a$ und
+eine weitere Zahl ausgewählt und durch zwei neue ersetzt werden.
+Wird nun aber $a$ und eine andere Zahl ausgewählt und durch den
+ggT und das kgV ersetzt, dann ändern sich die beiden Zahlen nicht,
+denn sonst wäre der ggT kleiner als $a$, was nicht möglich ist.
+Daraus folgt ausserdem, dass es unendlich viele Operationen geben
+muss, in denen $a$ keine der beiden Zahlen ist. Entferne nun $a$
+von der Tafel und betrachte nur die Folge dieser eben
+beschriebenen Prozesse. Diese ändern die verbleibenden $n$ Zahlen
+unendlich oft, im Widerspruch zur
+Induktionsannahme.\\
+
+\textbf{3. Lösung}
+
+Wir nennen ein Paar $(a,b)$ von zwei Zahlen an der Tafel
+\textit{gut}, wenn $a$ ein Teiler von $b$ ist. Wir zeigen nun,
+dass sich die Anzahl guter Paare um mindestens 1 erhöht, wenn sich
+zwei Zahlen bei einer Operation ändern. Da die Anzahl guter Paare
+höchstens gleich $\binom{n}{2}$ ist, also insbesondere beschränkt,
+ändern sich
+die Zahlen an der Tafel irgendwann nicht mehr.\\
+Um dies nun zu zeigen, nehmen wir an, dass $a$ und $b$ bei einer
+Operation ersetzt werden durch die neuen Zahlen $\ggT(a,b)=c$ und
+$\kgV(a,b)=d$ und unterscheiden verschiedene Fälle. Seien im
+Folgenden $x$ und $y$ von $a$ und $b$ verschieden.
+\begin{itemize}
+\item Ist $(x,y)$ vor der Operation ein gutes Paar, dann bleibt es auch gut.
+\item Sind $(a,x)$ und $(b,x)$ vor der Operation beides gute Paare, dann ist $x$ durch $a$ und $b$
+teilbar, also auch durch $c$ und $d$. Damit sind nach der
+Operation die Paare $(c,x)$ und $(d,x)$ beide gut.
+\item Sei $(a,x)$ vor der Operation ein gutes Paar, $(b,x)$ aber nicht. Dann ist $(c,x)$ sicher ein gutes Paar.
+\item Ist keines der Paare $(a,x)$ und $(b,x)$ gut, dann kann es ja nicht schlimmer werden.
+\end{itemize}
+Diese und die analogen Fälle für Paare der Form $(x,a)$ und
+$(x,b)$ zeigen, dass sich die Zahl der guten Paare $\neq
+(a,b),(b,a)$ nicht verringert. Nun ist aber keines der Paare
+$(a,b)$ und $(b,a)$ gut, denn sonst würden sich die beiden Zahlen
+während der Operation nicht ändern. Nach der Operation ist aber
+$(c,d)$ ein neues gutes
+Paar. Dies schliesst den Beweis ab.\\
+
+\bigskip
+
+\item[\textbf{9.}] Sei $ABCD$ ein Sehnenviereck, sodass gilt
+$|AB|+|CD|=|BC|$. Zeige, dass der Schnittpunkt der Winkelhalbierenden von $\wi DAB$ und $\wi CDA$ auf der Seite
+$BC$ zu liegen kommt.\\
+
+\textbf{Lösung}
+
+Sei $P$ der Punkt auf $\overline{BC}$ mit $|BP| = |BA|$. Nach Voraussetzung gilt dann auch $|CP| = |CD|$. Wir definieren $\wi APB = \alpha$ und $\wi CPD = \beta$. Mit Winkeljagd finden wir $\wi DCP = 180^o - 2 \beta$ und darum $\wi BAD = 2 \beta$. Analog zeigen wir $\wi ADC = 2 \alpha$. \\
+Sei nun $W$ der Schnittpunkt von $BC$ mit der Winkelhalbierenden von $\wi BAD$. Nach Konstruktion gilt $\wi BAW = \beta$. Daraus können wir schliessen, dass $W$ nicht ausserhalb von $C$ liegen kann, denn in diesem Fall würde gelten
+$$ \beta = \wi BAW > \wi BAC = \wi BDC > \wi PDC = \beta. $$
+
+Widerspruch. OBdA können wir auch annehmen, dass $W$ auf $\overline{BP}$ liegt (andernfalls umbenennen). Da $\wi WAD = \beta$ und $\wi DPW = 180^o - \beta$, ist $AWPD$ ein Sehnenviereck und darum $\wi ADW = \wi APW = \alpha$. $DW$ ist also die Winkelhalbierende von $\wi ADC$. $W$ ist also der Schnittpunkt der beiden Winkelhalbierenden und liegt nach Konstruktion auf $BC$.
+
+\bigskip
+
+\item[\textbf{10.}] Sei $n > 1$ eine ungerade natürliche Zahl. Die Felder eines $n \times n$ Schachbretts sind
+abwechselnd weiss und schwarz gefärbt, sodass die vier Eckfelder schwarz sind. Ein L-triomino ist eine L-förmige
+Figur, die genau drei Felder des Brettes bedeckt. Für welche Werte von $n$ ist es möglich, alle schwarzen Felder
+mit L-triominos zu bedecken, sodass keine zwei L-triominos sich überlappen? Bestimme für diese Werte von $n$ die
+kleinstmögliche Zahl von L-triominos die dazu nötig sind.\\
+
+\textbf{Lösung}
+
+Setze $n=2m+1$ mit $m \geq 1$. Nummeriere die Zeilen und Spalten von 1 bis $n$ und markiere alle Felder, die in
+einer ungeraden Zeile und einer ungeraden Spalte liegen. Diese $(m+1)^2$ markierten Felder sind alle schwarz.
+Ein L-triomino kann höchstens ein markiertes Feld bedecken, also ist die benötigte Zahl von L-triominos
+mindestens $(m+1)^2$. Andererseits bedeckt ein L-triomino genau drei Felder des Brettes. da sich keine zwei
+überlappen dürfen, ist ihre Zahl höchstens gleich $(2m+1)^2/3$. Daraus folgt $m \geq 3$, also $n \geq 7$.\\
+Wir zeigen nun induktiv, dass man für $n \geq 7$ alle schwarzen Felder mit genau $(m+1)^2$ L-triominos bedecken
+kann.\\
+Ein $2 \times 3$ Rechteck lässt sich mit zwei, ein $4 \times 3$ Rechteck mit vier L-triominos bedecken. Bedecke
+das $7 \times 7$ Brett mit vier $4\times 3$ Rechtecken, sodass das zentrale (schwarze) Feld unbedeckt bleibt. Es
+ist leicht zu sehen, dass man nun zwei L-triominos kippen kann, sodass das zentrale Feld bedeckt ist, dafür ein
+weisses frei bleibt. Dies zeigt die Behauptung für $n=7$.\\
+Für den Induktionsschritt $m \rightarrow m+1$ bedecken wir die schwarzen Felder des linken unteren $2m+1 \times
+2m+1$ Teilbrett mit genau $(m+1)^2$ L-triominos (Induktionsvoraussetzung) und müssen zeigen, dass sich die
+schwarzen Felder des verbleibenden L-förmigen Randgebiets mit $(m+2)^2-(m+1)^2=2m+3$ L-triominos bedecken
+lassen. Dies sieht man unmittelbar ein, wenn man sich die Situation skizziert.
+
+\end{enumerate}
+
+\end{document}

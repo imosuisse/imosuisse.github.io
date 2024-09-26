@@ -1,0 +1,386 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[latin1]{inputenc}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+
+
+
+
+
+% Schriftabkürzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\gaussk}[1]{\lfloor #1 \rfloor}
+\newcommand{\frack}[1]{\{ #1 \}}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+\newcommand{\dreieck}{\bigtriangleup}
+
+\parindent0mm
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge Sélection OIM 2007} \\
+\medskip Premier examen - le 5 mai 2007
+\end{center}
+\vspace{8mm}
+Durée : 4.5 heures\\
+Chaque exercice vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{1.}] Soit $ABCD$ un trapèze avec $AB \parallel CD$ et $AB > CD$.
+Les points $K$ et $L$ se trouvent sur le côté $AB$, respectivement
+$CD$ tels que $AK/KB = DL/LC$. Les points $P$ et $Q$ se trouvent sur
+le segment $KL$ tels que
+\[\angle APB = \angle BCD \qquad \mbox{et} \qquad \angle CQD = \angle ABC.\]
+Montrer que les points $P,Q,B$ et $C$ sont sur le même cercle.\\
+
+\bigskip
+\bigskip
+
+\item[\textbf{2.}] Déterminer les deux plus petits nombres naturels
+que l'on peut écrire sous la forme $7m^2-11n^2$ avec $m$ et $n$ des
+nombres naturels.\\
+
+\bigskip
+\bigskip
+
+\item[\textbf{3.}] On appelle deux personnes \emph{un couple d'amis}
+si elles se connaissent entre elles et on les appelle \emph{un
+couple d'inconnus} si elles ne se connaissent pas (se connaître ou
+ne pas se connaître ne peut être que mutuel). Soient $m,n$ des
+nombres naturels. Trouver le plus petit nombre naturel $k$
+satisfaisant la propriété suivante : dans chaque groupe de $k$
+personnes il existe toujours $2m$ personnes formant $m$ couples
+disjoints d'amis, ou il existe $2n$ personnes formant $n$ couples
+disjoints d'inconnus.
+
+\end{enumerate}
+
+\pagebreak
+
+\begin{center}
+{\huge Sélection OIM 2007} \\
+\medskip Deuxième examen - le 6 mai 2007
+\end{center}
+\vspace{8mm}
+Durée : 4.5 heures\\
+Chaque exercice vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{4.}] Un couple $(r,s)$ de nombres naturels est appelé
+\emph{bon} s'il existe un polynôme $P$ avec des coefficients entiers
+et des nombres entiers deux à deux distincts $a_1,\ldots,a_r$ et
+$b_1,\ldots,b_s$ tels que
+\[P(a_1)=P(a_2)=\ldots =P(a_r)=2 \qquad \mbox{et} \qquad P(b_1)=P(b_2)=\ldots =P(b_s)=5.\]
+\begin{enumerate}
+\item[(a)] Montrer que pour tout bon couple $(r,s)$ on a $r,s \leq
+3$.
+\item[(b)] Déterminer tous les bons couples.
+\end{enumerate}
+
+
+\bigskip
+\bigskip
+
+\item[\textbf{5.}] Soient $n>1$ et $m$ des nombres naturels. Un
+parlement est composé de $mn$ députés qui ont formé $2n$ commissions
+selon les règles suivantes :
+\begin{enumerate}
+\item[(i)] Chaque commission est composée de $m$ députés.
+\item[(ii)] Chaque député fait partie d'exactement deux commissions.
+\item[(iii)] Deux commissions ont toujours au plus un membre commun.
+\end{enumerate}
+Déterminer en fonction de $n$ la plus grande valeur possible de $m$
+qui rend la construction possible.\\
+
+
+\bigskip
+\bigskip
+
+\item[\textbf{6.}] Soient $a,b,c$ des nombres réels positifs tels
+que $a+b+c \geq abc$. Montrer qu'au moins deux des trois inégalités
+suivantes sont justes :
+\[\frac{2}{a}+\frac{3}{b}+\frac{6}{c} \geq 6, \qquad \frac{2}{b}+\frac{3}{c}+\frac{6}{a} \geq 6,
+\qquad \frac{2}{c}+\frac{3}{a}+\frac{6}{b} \geq 6.\]
+
+\end{enumerate}
+
+
+\pagebreak
+
+
+\begin{center}
+{\huge Sélection OIM 2007} \\
+\medskip Troisième examen - le 19 mai 2007
+\end{center}
+\vspace{8mm}
+Durée : 4.5 heures\\
+Chaque exercice vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{7.}]
+Soit $a_1,a_2,\ldots, a_{2007}$ une suite qui contient chaque nombre
+naturel de $1$ à $2007$ exactement une fois. On répète plusieurs
+fois de suite l'opération suivante : Si le premier terme de la suite
+est $n$, alors on inverse l'ordre des $n$ premiers termes. Montrer
+que la suite commence par $1$ après avoir effectué cette opération
+un nombre fini de fois.\\
+
+\bigskip
+\bigskip
+
+\item[\textbf{8.}]
+Soit $ABCDE$ un pentagone convexe tel que
+\[\angle BAC = \angle CAD = \angle DAE \qquad \mbox{et} \qquad \angle ABC = \angle ACD = \angle ADE.\]
+Les diagonales $BD$ et $CE$ se coupent en $P$. Montrer que la droite
+$AP$ coupe le côté $CD$ en deux parties égales.\\
+
+\bigskip
+\bigskip
+
+\item[\textbf{9.}] Déterminer tous les nombres naturels $n$ pour
+lesquels il existe exactement un entier $a$ avec $0<a<n!$ tel que
+\[n! \div a^n+1.\]
+
+\end{enumerate}
+
+
+
+\pagebreak
+
+
+\begin{center}
+{\huge Sélection OIM 2007} \\
+\medskip Quatrième examen - le 20 mai 2007
+\end{center}
+\vspace{8mm}
+Durée : 4.5 heures\\
+Chaque exercice vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{10.}] Soient $n$ un nombre naturel et $f$ la fonction définie par
+\[f(n)=\frac{1}{n} \sum_{k=1}^n \left\lfloor \frac{n}{k} \right\rfloor.\]
+Montrer qu'il existe une infinité de nombres naturels $m$ tels que $f(m)<f(m+1)$ et une
+infinité de $m$ tels que $f(m)>f(m+1)$.
+\\
+
+\bigskip
+\bigskip
+
+\item[\textbf{11.}] Trouver toutes les fonctions $f:\BR^+ \rightarrow \BR^+$ telles que pour tout $x,y>0$ on ait
+\[f(x^y)=f(x)^{f(y)}.\]
+
+\bigskip
+\bigskip
+
+\item[\textbf{12.}] Dans le triangle $ABC$, soit $J$ le centre du cercle exinscrit qui est tangent au côté $BC$ en $A_1$ et aux prolongements des côtés $AC$ et $AB$ en $B_1$, respectivement $C_1$. La droite $A_1B_1$ coupe la droite $AB$ perpendiculairement en $D$. Soit $E$ la projection de $C_1$ sur la droite $DJ$. Déterminer la valeur des angles $\angle BEA_1$ et $\angle AEB_1$.
+
+
+\end{enumerate}
+
+
+\end{document}

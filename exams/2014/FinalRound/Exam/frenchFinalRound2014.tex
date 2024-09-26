@@ -1,0 +1,159 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}%ngerman, french, italian
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{mathtools}%DeclarePairedDelimiter
+\usepackage{enumerate}
+
+\usepackage{graphicx}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{satz}[thm]{Satz}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Korollar}
+\newtheorem{alg}[thm]{Algorithmus}
+\newtheorem{bsp}{Beispiel}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\renewcommand{\phi}{\varphi} %kleines Phi
+\newcommand{\nequiv}{\not \equiv}
+
+\DeclareMathOperator{\ggT}{ggT}
+\DeclareMathOperator{\ppmc}{ppcm}
+\DeclareMathOperator{\ord}{ord}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\DeclarePairedDelimiter\frack{\{}{\}}
+
+\renewcommand{\div}{\, | \,}
+\newcommand{\ndiv}{\mathopen{\mathchoice{\not{|}\,}{\not{|}\,}{\!\not{\:|}}{\not{|}}}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge OSM Tour final 2014} \\
+\medskip premier examen - 14 mars 2014
+\end{center}
+\vspace{8mm}
+Durée: 4 heures\\
+Chaque exercice vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+\item[\textbf{1.}]
+Les points $A, B, C$ et $D$ se trouvent dans cet ordre sur un cercle $k$. Soit $t$ la tangente à $k$ par $C$ et $s$ la réflexion de $AB$ par rapport à la droite $AC$. Soit $G$ l'intersection des droites $AC$ et $BD$, et $H$ l'intersection des droites $s$ et $CD$. Montrer que $GH$ est parallèle à $t$.
+
+
+\bigskip
+
+\item[\textbf{2.}]
+Soient $a,b$ des nombres naturels tels que:
+\[ab(a-b)\div a^3+b^3+ab\]
+Montrer que $\ppmc(a,b)$ est un carré parfait.
+
+
+\bigskip
+
+\item[\textbf{3.}] 
+Trouver toutes les fonctions $f:\R \rightarrow \R$, telles que pour tout $x,y \in \R$ l'équation suivante est satisafaite:
+\[
+f(x^2) + f(xy)=f(x)f(y)+yf(x)+xf(x+y)
+\]
+
+\bigskip
+
+\item[\textbf{4.}]
+On considère le plan quadrillé (feuille quadrillée infinie). Pour quelles paires d'entiers $(a,b)$ peut-on colorier chaque case avec une couleur parmi $a \cdot b$ couleurs, de sorte que chaque rectangle de taille $a \times b$ ou de taille $b \times a$, aligné sur le quadrillage, contienne une case de chaque couleur~?
+
+
+\bigskip
+
+\item[\textbf{5.}]
+Soit $a_1, a_2, \ldots$ une suite de nombres entiers telle que pour tout $n\in\N$~:
+ \[
+\sum_{d\div n}a_d = 2^n
+\]
+Montrer que $n$ divise $a_n$ pour tout $n\in\N$.
+
+\emph{Remarque: Par exemple pour $n=6$ la condition est $a_1+a_2+a_3+a_6=2^6$.}
+\end{enumerate}
+\bigskip
+\begin{center}
+Bonne chance !
+\end{center}
+
+\newpage
+
+\begin{center}
+{\huge OSM Tour Final 2014} \\
+\medskip Deuxième Examen - 15 Mars 2014
+\end{center}
+\vspace{8mm}
+Durée: 4 heures\\
+Chaque exercice vaut 7 points.
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{6.}]
+Soient $a,b,c \in \R_{\geq 0}$ avec $a+b+c=1$. Monter que:
+\[
+\frac{3-b}{a+1}+\frac{a+1}{b+1}+\frac{b+1}{c+1}\geq 4
+\]
+
+\bigskip
+
+\item[\textbf{7.}]
+Autour d'un lac rond se trouvent $n\geq 4$ villes reliées par $n-4$ lignes de bateaux à vapeur et par une ligne de bateau à voiles. Chaque bateau assure la liaison entre deux villes non voisines et pour éviter les collisions, deux lignes ne se croisent jamais.\\
+Pour mieux adapter les lignes au besoin des passagers, le changement suivant peut être effectué~: une ligne d'un bateau quelconque peut être déplacée de telle sorte qu'elle ne croise toujours aucune des autres lignes. Ce changement modifie une seule ligne à la fois.\\
+Soient Santa Marta et Le Cap deux villes qui ne sont pas voisines. Montrer qu'un nombre fini de changements permet de relier Santa Marta et Le Cap par la ligne de bateau à voiles. 
+
+\emph{Remarque: Il y a toujours au plus un bateau qui relie les mêmes deux villes et à aucun moment, un  bateau ne relie deux villes voisines.}
+
+\bigskip
+
+\item[\textbf{8.}]
+
+Soit $ABC$ un triangle aigu et soit $M$ le milieu de la hauteur $h_b$ issue de $B$ et soit $N$ le milieu de la hauteur $h_c$ issue de $C$. Soit ensuite $P$ le point d'intersection de $AM $ avec $h_c$ et soit $Q$ le point d'intersection de $AN$ avec $h_b$. Montrer que $M, N, P$ et $Q$ se trouvent sur un cercle.
+
+\bigskip
+
+\item[\textbf{9.}]
+Soit $a_1, a_2, \ldots $ une suite de nombres définie de la manière suivante:
+\[
+a_n = 
+\begin{cases}
+0 \text{\,,\, si $n$ possède un nombre pair de diviseurs strictement supérieurs à 2014}\\
+1 \text{\,,\, si $n$ possède un nombre impair de diviseurs strictement supérieurs à 2014}
+\end{cases}
+\] 
+Montrer que la suite $a_n$ ne devient jamais périodique.
+
+\bigskip
+
+\item[\textbf{10.}] 
+Soit $k$ un cercle de diamètre $AB$. Soit $C$ un point sur la droite $AB$ tel que $B$ est entre $A$ et $C$. Soit $T$ un point sur $k$ tel que la droite $CT$ est tangente à $k$. Soit $l$ la parallèle à $CT$ passant par $A$. Soit $D$ le point d'intersection de $l$ avec la perpendiculaire à $AB$ qui passe par $T$.\\
+Montrer que la droite $DB$ coupe le segment $CT$ en son milieu.
+
+\end{enumerate}
+\bigskip
+\begin{center}
+Bonne Chance !
+\end{center}
+\end{document}

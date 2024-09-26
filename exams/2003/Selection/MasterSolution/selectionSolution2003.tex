@@ -1,0 +1,487 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsfonts}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+\renewcommand{\phi}{\varphi}
+\newcommand{\eps}{\varepsilon}
+
+\newcommand{\pfeil}{\quad \Longrightarrow \quad}
+
+\newcommand{\wi}{\mathop{\hspace{1pt}<\hspace{-6pt})\hspace{2pt}}\nolimits}
+
+
+\newcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\nequiv}{\not \equiv}
+\newcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\Mod}[1]{(\mod\;#1)}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\newcommand{\sgn}{\mathop{\rm sign}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+
+\begin{document}
+
+\begin{center}
+{\huge Lösungen 1. Prüfung} \\
+\end{center}
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{1.}] Für die rellen Zahlen $x,y,a$ gelten die folgenden Gleichungen:
+\begin{eqnarray*}
+x+y &=& a\\
+x^3+y^3 &=& a\\
+x^5+y^5 &=& a.
+\end{eqnarray*}
+Bestimme alle möglichen Werte von $a$.\\
+
+\textit{1. Lösung:}
+
+Die Polynome auf der linken Seite der drei Gleichungen sind symmetrisch in $x$ und $y$, wir können sie daher
+durch die elementarsymmetrischen Polynome $u=x+y$ und $v=xy$ ausdrücken und erhalten
+\begin{eqnarray*}
+u &=& a\\
+u^3-3uv &=& a\\
+u^5-5u^3v+5uv^2 &=& a.
+\end{eqnarray*}
+Setzt man $x=y=0$ in die Gleichungen ein, dann sieht man, dass $a$ den Wert 0 annehmen kann. Wir nehmen deshalb
+im folgenden $a \neq 0$ an. Einsetzen von $u=a$ in die zweite Gleichung ergibt $a^3-3av=a$, wegen $a \neq 0$
+können wir durch $a$ teilen und erhalten $v=(a^2-1)/3$. Setzt man dies und $u=a$ in die dritte Gleichung ein,
+dann folgt $a^5-5a^3(a^2-1)/3+5a(a^2-1)^2/9=a$, nach Multiplikation mit $-9/a$ und Vereinfachen also
+\[a^4-5a^2+4=0 \quad \Longleftrightarrow \quad (a^2-1)(a^2-4)=0. \]
+Wir erhalten die möglichen Werte $a^2=1$ oder $a^2=4$, also für $a$ die möglichen Werte $-2,-1,1,2$. Wir zeigen
+noch, dass diese vier Werte wirklich vorkommen können. Dazu setzt man in die drei Gleichungen der Reihe nach die
+folgenden Werte für $x$ und $y$ ein: $x=y=-1$, $x=0,y=-1$, $x=0,y=1$ und $x=y=1$. Insgesamt kann $a$ also genau
+die fünf Werte $-2,-1,0,1,2$ annehmen.\\
+
+\textit{2. Lösung:}
+
+Sind alle drei Gleichungen erfüllt, dann gilt
+\[(x+y)(x^5+y^5)=a^2=(x^3+y^3)^2.\]
+Ausmultiplizieren und Vereinfachen ergibt
+\begin{equation}
+xy(x^4+y^4)=2x^3y^3.
+\end{equation}
+Wir betrachten zuerst den Fall, wo $x$ und $y$ nicht beide von 0 verschieden sind. OBbA sei $y=0$. Die drei
+Gleichungen werden dann zu $x=x^3=x^5=a$. Aus $x=x^3$ folgt $x=-1,$ 0 oder 1. In diesen Fällen ist dann
+tatsächlich $a=x=x^3=x^5=-1$, 0 oder 1, also kann $a$ in diesem Fall nur genau diese drei Werte annehmen.\\
+Im Folgenden nehmen wir an, dass $x \neq 0 \neq y$. Wir können in (1) durch $xy$ dividieren und erhalten
+\[x^4+y^4=2x^2y^2 \quad \Longleftrightarrow \quad (x^2-y^2)^2=0 \quad \Longleftrightarrow \quad (x+y)(x-y)=0,\]
+also ist $x=y$ oder $x=-y$. Im Fall $x=y$ lesen sich die drei Gleichungen als $2x=2x^3=2x^5=a$, wie oben sieht
+man, dass dann $x=-1$ oder $x=1$ ist ($x \neq 0$) und $a$ genau die beiden Werte -2 und 2 annehmen kann. Im Fall
+$x=-y$ folgt aus der ersten der drei Gleichungen $a=0$.\\
+Insgesamt kann $a$ also genau die fünf Werte $-2,-1,0,1,2$ annehmen.\\
+
+\textit{3. Lösung:}
+
+Wir benützen die binomischen Formeln $x^3+y^3=(x+y)(x^2-xy+y^2)$ und $x^5+y^5=(x+y)(x^4-x^3y+x^2y^2-xy^3+y^4)$.
+Setzt man $x=y=0$ in die Gleichungen ein, dann sieht man, dass $a$ den Wert 0 annehmen kann. Sei nun im
+Folgenden $x+y=a \neq 0$. Dividiere die zweite und dritte Gleichung durch die erste, dann folgt
+\begin{eqnarray}
+x^2-xy+y^2 &=& 1\\
+x^4-x^3y+x^2y^2-xy^3+y^4 &=& 1
+\end{eqnarray}
+Quadriere nun Gleichung (2) und subtrahiere dies von Gleichung (3), dann folgt weiter
+\[0=1-1^2=(x^4-x^3y+x^2y^2-xy^3+y^4)-(x^2-xy+y^2)^2=x^3y-2x^2y^2+xy^3=xy(x-y)^2,\]
+also ist $x=0$ oder $y=0$ oder $x=y$. Man kann diese Fälle nun genau wie in der zweiten Lösung behandeln.
+
+\bigskip
+
+\item[\textbf{2.}] Sei $ABC$ ein beliebiges spitzwinkliges Dreieck. $E$ und
+$F$ seien die Fusspunkte der Höhen durch $B$ und $C$. $G$ ist die Projektion von $B$ auf die Gerade $EF$ und $H$
+die entsprechende Projektion von $C$. Zeige, dass gilt
+\[|HE|=|FG|.\]
+
+\textit{1. Lösung:}
+
+Wir bezeichnen den Winkel $\wi ABC$ mit $\alpha$ und den Winkel $\wi BCA$ mit $\gamma$. Weil die Höhen
+rechtwinklig auf den Seiten stehen, ergeben sich für die Winkel $\wi EBC = 90^o - \gamma$ und
+$\wi FCB = 90^o - \beta$.\\
+Da $\wi CEB$ und $\wi CFB$ beides rechte Winkel sind, ist das Viereck $BCEF$ ein Sehenviereck. D.h. $\wi EFC =
+\wi EBC = 90^o - \gamma$. Da $\wi CFB$ ein rechter Winkel ist, gilt $\wi BFG =
+\gamma$. Analog ist $\wi CEH = \beta$.\\
+Mit Hilfe der Trigonometrie finden wir, dass $|FB| = |BC| \cdot \cos(\beta)$ und $|EC| = |BC| \cdot
+\cos(\gamma)$ ist. Weiter ist sowohl $|HE|$ als auch $|FG| = |BC| \cdot \cos(\beta) \cdot
+\cos(\gamma)$. Sie sind also gleich lang.\\
+
+\textit{2. Lösung:}
+
+Die Winkel werden wie in der ersten Lösung hergeleitet. Die Dreiecke $FGB$ und $BCE$ sind ähnlich. Daraus folgt
+$\frac{|FG|}{|FB|} = \frac{|CE|}{|BC|}$, also $|FG| = \frac{|CE| \cdot |FB|}{|BC|}$. Ebenfalls sind die Dreiecke
+$HCE$ und $BCF$ ähnlich. Daraus folgt $\frac{|HE|}{|CE|} = \frac{|FB|}{|BC|}$,
+also $|HE| = \frac{|CE| \cdot |FB|}{|BC|} = |FG|$.\\
+
+\textit{3. Lösung:}
+
+Der Thaleskreis $k$ über $|BC|$ geht durch $E$ und $F$ und schneidet $|BG|$ ein zweites Mal in $X$. Im Falle,
+dass $k$ $|BG|$ kein zweites Mal schneidet, ist $B \equiv X$. Weil $X$ auf dem Thaleskreis liegt, ist $\wi BXC =
+90^o$ und darum $XCHG$ ein
+Rechteck.\\
+Die Mittelsenkrechten von $|CX|$ und $|EF|$ gehen beide durch den Mittelpunkt von $k$ und sind parallel. Darum
+liegen sie aufeinander und wir nennen sie $m$. Bei der Spiegelung an $m$ kommt $C$ auf $X$ und $E$ auf $F$ zu
+liegen. Weil $XCHG$ ein Rechteck ist, wird auch $H$ auf $G$ abgebildet. Daraus folgt $|HE| = |FG|$.
+
+\bigskip
+
+\item[\textbf{3.}] Finde die grösste reelle Zahl $C_{1}$ und die kleinste reelle Zahl $C_{2}$, sodass für alle positiven
+Zahlen $a,b,c,d,e$ gilt
+\[C_{1}<\frac{a}{a+b}+\frac{b}{b+c}+\frac{c}{c+d}+\frac{d}{d+e}+\frac{e}{e+a}<C_{2}.\]\\
+
+\textit{Lösung:}
+
+Schreibe $f(a,b,c,d,e)$ für den abzuschätzenden Ausdruck.\\ \\
+\textbf{Linke Ungleichung.} Wir zeigen zuerst, dass $f(a,b,c,d,e)>1$ gilt, und geben drei Argumente:\\
+\textit{1. Argument} Es gilt
+\[f(a,b,c,d,e)>\frac{a}{a+b+c+d+e}+\ldots+\frac{e}{a+b+c+d+e}=\frac{a+b+c+d+e}{a+b+c+d+e}=1.\]
+\textit{2. Argument} Sei oBdA $a$ die grösste der fünf Zahlen. Dann gilt
+\[f(a,b,c,d,e)>\frac{a}{a+b}+\frac{b}{b+c}>\frac{a}{a+b}+\frac{b}{b+a}=1.\]
+\textit{3. Argument} Es geht auch kompliziert: Nach Cauchy-Schwarz gilt
+\[(a(a+b)+b(b+c)+c(c+d)+d(d+e)+e(e+a))f(a,b,c,d,e)\geq (a+b+c+d+e)^{2},\]
+und ausserdem ist
+\[a(a+b)+b(b+c)+c(c+d)+d(d+e)+e(e+a)\]
+\[=a^{2}+b^{2}+c^{2}+d^{2}+e^{2}+ab+bc+cd+de+ea\]
+\[<(a+b+c+d+e)^{2}.\]
+Kombiniert man diese zwei Ungleichungen, ergibt sich das Gewünschte.\\ \\
+Als nächstes zeigen wir, dass 1 die grösste untere Schranke ist. Für $t>0$ gilt
+\[f(1,t,t^{2},t^{3},t^{4})=\frac{4}{1+t}+1-\frac{1}{t^{4}+1}<\frac{4}{1+t}+1,\]
+und dieser Wert kommt 1 beliebig nahe, wenn $t$ gross wird. Genauer: Sei $\varepsilon >0$ beliebig, dann wählen
+wir $t> 4/\varepsilon -1$ und erhalten
+\[1 < f(1,t,t^{2},t^{3},t^{4}) < 1+ \frac{4}{1+t} < 1+ \varepsilon.\]
+Daher ist $C_{1}=1$.\\ \\
+\textbf{Rechte Ungleichung.} Es gibt verschiedene Möglichkeiten, die Lösung zu vervollständigen.\\
+\textit{1. Argument} Wegen der zyklischen Symmetrie von $f$ gilt offenbar
+\[f(a,b,c,d,e)+f(e,d,c,b,a)=5,\]
+das heisst $f(a,b,c,d,e)=5-f(e,d,c,b,a)<5-1=4$ und da $f(e,d,c,b,a)$ Werte annehmen kann, die beliebig nahe bei
+1 liegen, ist 4 die kleinste obere Schranke. Also $C_{2}=4$.\\
+\textit{2. Argument} Wir nutzen folgende allgemeine Tatsache: Sind $u,v>0$ und $u/v<1$, dann gilt für jede
+positive Zahl x die Ungleichung $u/v<(u+x)/(v+x)<1$. In unserem Fall erhält man so
+\[f(a,b,c,d,e)<\frac{a+(c+d+e)}{a+b+(c+d+e)}+ \ldots +\frac{e+(b+c+d)}{e+a+(b+c+d)}=\frac{4(a+b+c+d+e)}{a+b+c+d+e}=4.\]
+Wie oben zeigt man ausserdem, dass $f(t^4,t^3,t^2,t,1)$ Werte beliebig nahe bei 4 annimmt, wenn $t$ gross wird.
+Also $C_{2}=4$.
+
+\bigskip
+
+\item[\textbf{4.}] Finde die grösste natürliche Zahl $n$, die
+für jede ganze Zahl $a$ ein Teiler ist von $a^{25}-a$.\\
+
+\textit{1. Lösung:}
+
+Für eine Primzahl $p$ ist $p^{25}-p$ nicht durch $p^2$ teilbar, daher kann $n$ nicht durch ein Quadrat $>1$
+teilbar sein. Sei nun $p$ eine Primzahl, die ein Teiler ist von $a^{25}-a$ für jede ganze Zahl $a$. Dann muss
+stets $a^{25}-a \equiv 0$ sein modulo $p$. Ist $a$ nicht durch $p$ teilbar, dann kann man diese Kongruenz mit
+$a$ kürzen und erhält $a^{24} \equiv 1$. Sei $d$ die Ordnung von $a$ modulo $p$, also die kleinste natürliche
+Zahl mit $a^{d} \equiv 1 \; (p)$. Dann ist einerseits $d \div \phi(p)=p-1$ und andererseits $d \div 24$. Wir
+wählen nun $a$ als primitive Wurzel modulo $p$, also so, dass $d=p-1$ ist. Nun folgt also $p-1 \div 24$, also
+$p=2,3,5,7$ oder 13. Mit Hilfe des kleinen Satzes von Fermat zeigt man leicht, dass $a^{25}-a$ stets durch diese
+fünf Primzahlen teilbar ist, also gilt $n=2 \cdot 3 \cdot 5 \cdot 7 \cdot 13 = 2730$.\\
+
+\textit{2. Lösung}
+
+Zuerst faktorisieren wir $a^{25}-a$ mit Hilfe der binomischen Formeln:
+\begin{eqnarray*}
+a^{25}-a &=& a(a^{12}-1)(a^{12}+1)\\
+&=& a(a^{6}-1)(a^{6}+1)(a^{4}+1)(a^{8}-a^{4}+1)\\
+&=&
+a(a-1)(a^2+a+1)(a+1)(a^2-a+1)(a^2+1)(a^4-a^2+1)\\
+&& \cdot(a^{4}+1)(a^{8}-a^{4}+1).
+\end{eqnarray*}
+Für $a=2$ erhält man damit die Primfaktorzerlegung $2^{25}-2=2 \cdot 3^2 \cdot 5 \cdot 7 \cdot 13 \cdot 17 \cdot
+241$. Für $a=3$ ergibt sich analog $3^{25}-3=2^5 \cdot 3 \cdot 5 \cdot 7 \cdot 13 \cdot 41 \cdot 73 \cdot 6481$.
+Nun ist $n$ ein Teiler von $2^{25}-2$ und $3^{25}-3$, also auch von $2 \cdot 3 \cdot 5 \cdot 7 \cdot 13 = 2730$.
+Nun zeigt man aber mit dem kleinen Satz von Fermat aber leicht, dass $a^{25}-a$ immer durch 2, 3, 5, 7 und 13
+teilbar ist, zum Beispiel gilt $a^{25}-a=a\cdot (a^{12})^2-a \equiv a-a =0 \; (13)$.
+
+\bigskip
+
+\item[\textbf{5.}] Auf einem Spielbrett mit $5 \times 9$ Feldern liegen $n$ Steine, wobei zu jedem Zeitpunkt auf
+jedem Feld höchstens ein Stein liegen darf. Ein Spielzug besteht darin, jeden Stein in eines der angrenzenden
+Felder oben, unten, links oder rechts zu verschieben. Dies geschieht für alle Steine gleichzeitig. Wird dabei
+ein Stein in einem Zug horizontal bewegt, dann muss er im nächsten Zug vertikal bewegt werden und umgekehrt.
+Bestimme den grössten Wert für $n$, sodass es eine Anfangsposition der $n$ Steine und eine Folge von Spielzügen
+gibt, sodass dieses Spiel beliebig lange fortgesetzt werden kann.\\
+
+\textit{Lösung:}
+
+Antwort: $n=32$\\
+Führe Koordinaten ein, sodass das Feld unten links (1,1) und jenes oben rechts (9,5) erhält. Färbe nun die
+Felder mit drei Farben:
+\begin{itemize}
+\item Die Felder (2,2), (4,2), (6,2), (8,2), (2,4), (4,4), (6,4), (8,4) rot
+\item Die Felder (1,1), (3,1), (5,1), (7,1), (9,1), (1,3), (3,3), (5,3), (7,3), (9,3), (1,5), (3,5), (5,5), (7,5),
+(9,5) blau
+\item Den Rest gelb
+\end{itemize}
+Auf den roten Feldern liegen zu jedem Zeitpunkt höchstens 8 Steine. Die Steine auf den blauen Feldern liegen
+zwei Züge später auf einem roten Feld, also können ebenfalls immer höchsten 8 Steine auf blauen Feldern liegen.
+Die Steine auf den gelben Feldern liegen einen Zug später entweder auf einem roten oder einem blauem Feld, es
+können also zu jedem Zeitpunkt höchstens $8+8=16$ Steine auf gelben Feldern liegen. Bei Spielbeginn können daher
+nicht mehr als $8+8+16=32$ Steine auf dem Brett liegen, das heisst $n\leq 32$.\\
+Andererseits ist $n=32$ möglich: Setze Steine auf alle Felder ausser jenen mit Koordinaten $(1,k)$ und $(l,1)$
+und bewege alle simultan nach links, unten, rechts, oben, links, unten, $\ldots$ Dies kann beliebig lange
+fortgesetzt werden.
+
+\end{enumerate}
+
+\pagebreak
+
+\begin{center}
+{\huge Lösungen 2. Prüfung} \\
+\end{center}
+\vspace{15mm}
+
+
+\begin{enumerate}
+
+\item[\textbf{6.}] Für die positiven reellen Zahlen $a,b,c$ gelte $a+b+c=2$. Zeige, dass die folgende
+Ungleichung erfüllt ist und bestimme alle Fälle, in denen das Gleichheitszeichen steht:
+\[\frac{1}{1+ab}+\frac{1}{1+bc}+\frac{1}{1+ca}\geq \frac{27}{13}\]
+
+\textit{1. Lösung:}
+
+Nach Cauchy-Schwarz gilt
+\[\left(\frac{1}{1+ab}+\frac{1}{1+bc}+\frac{1}{1+ca}\right)\left((1+ab)+(1+bc)+(1+ca)\right)\geq (1+1+1)^2=9.\]
+Andererseits folgt mit $ab+bc+ca\leq a^2+b^2+c^2$ (Hauptsatz, AM-GM, C.S.)
+\begin{eqnarray*}
+(1+ab)+(1+bc)+(1+ca) &=& 3+\frac{1}{3}(ab+bc+ca+2(ab+bc+ca))\\
+&\leq& 3+ \frac{1}{3}(a^2+b^2+c^2+2(ab+bc+ca))\\
+&=& 3+\frac{1}{3}(a+b+c)^2=\frac{13}{3}.
+\end{eqnarray*}
+Kombination dieser beiden Ungleichungen ergibt die Behauptung. Gleichheit gilt nur für $a=b=c=2/3$.\\
+
+\textit{2. Lösung:}
+
+Mit AM-HM folgt
+\[\frac{1}{1+ab}+\frac{1}{1+bc}+\frac{1}{1+ca} \geq \frac{9}{(1+ab)+(1+bc)+(1+ca)},\]
+es genügt daher zu zeigen, dass $(1+ab)+(1+bc)+(1+ca)\leq 13/3$. Nach Vereinfachen und Homogenisieren lautet
+dies
+\[ab+bc+ca \leq \frac{4}{3} = \frac{(a+b+c)^2}{3}.\]
+Ausmultiplizieren und Umordnen führt zu
+\[ab+bc+ca \leq a^2+b^2+c^2,\]
+was nach dem Hauptsatz richtig ist. In der ersten Ungleichung gilt genau dann Gleichheit, wenn
+$(1+ab)=(1+bc)=(1+ca)$, also wenn $a=b=c=2/3$.\\
+
+\textit{3. Lösung:}
+
+Nach Multiplikation mit $(1+ab)(1+bc)(1+ca)$ und Vereinfachung lautet die Ungleichung
+\[(ab+bc+ca)+14(a^2bc+ab^2c+abc^2)+27a^2b^2c^2 \leq 12.\]
+Wir drücken die linke Seite durch die Elementarsymmetrischen Polynome $u,v,w$ aus. Dabei verwenden wir noch die
+Nebenbedingung $u=2$ aus der Aufgabenstellung:
+\[v+28w+27w^2 \leq 12.\]
+Mit AM-GM erhält man die Abschätzungen
+\begin{eqnarray*}
+w &=& abc \leq \left(\frac{a+b+c}{3}\right)^3=\frac{8}{27},\\
+v &=& ab+bc+ca \leq \frac{1}{3}(a^2+b^2+c^2+2(ab+bc+ca))=\frac{1}{3}(a+b+c)^2= \frac{4}{3},
+\end{eqnarray*}
+mit Gleichheit genau dann, wenn $a=b=c$ (dies ist ein Spezialfall der McLaurin'schen Ungleichungen zwischen den
+Elementarsymmetrischen Polynomen). Damit ergibt sich nun leicht
+\[v+28w+27w^2 \leq \frac{4}{3}+28\cdot\frac{8}{27}+27\cdot\frac{8^2}{27^2}=12.\]
+
+\bigskip
+
+\item[\textbf{7.}]  Finde alle Polynome $Q(x)=ax^2+bx+c$ mit ganzzahligen Koeffizienten, sodass drei
+verschiedene Primzahlen $p_{1},p_{2},p_{3}$ existieren mit
+\[|Q(p_{1})|=|Q(p_{2})|=|Q(p_{3})|=11.\]
+
+\textit{Lösung:}
+
+Wir unterscheiden 2 Fälle, je nachdem, wieviele Vorzeichen von $Q(p_{k})$ negativ sind. Wir können annehmen,
+dass höchstens ein Vorzeichen negativ ist, ansonsten ersetzen wir $Q(x)$ durch $-Q(x)$.
+\begin{enumerate}
+\item $Q(p_{1})=Q(p_{2})=Q(p_{3})=11$\\
+Das Polynom $Q(x)-11$ hat Grad $\leq2$ und 3 verschiedene Nullstellen, es verschwindet also identisch, daher ist
+$Q(x)=11$ konstant.\\
+\item $Q(p_{1})=-11, Q(p_{2})=Q(p_{3})=11$\\
+Das Polynom $Q(x)-11$ hat die Nullstellen $p_{2},p_{3}$, wir können also schreiben $Q(x)-11 =
+a(x-p_{2})(x-p_{3})$. Einsetzen von $p_{1}$ liefert
+\[a(p_{1}-p_{2})(p_{1}-p_{3})=-2\cdot11.\]
+Sind $p_{1},p_{2},p_{3}$ alle ungerade, dann ist die linke Seite durch 4 teilbar, Widerspruch. Ist $p_{1}=2$,
+dann sind die beiden Klammern links ungerade und können nicht beide den Betrag 1 haben. Ein Vergleich mit der
+rechten Seite liefert $\{p_{2},p_{3}\}=\{3,13\}$. Setzt man diese Werte in $Q$ ein und löst die drei Gleichungen
+nach den Koeffizienten auf, dann ergibt sich $a=-2,b=32,c=-67$. Ist OBdA $p_{2}=2$, dann ist die erste Klammer
+links ungerade, die zweite gerade. Daraus folgt $p_{1}=3, p_{3}=5$ oder $p_{1}=13, p_{3}=11$. Analoge Rechnungen
+wie vorher führen im ersten Fall zu $a=11,b=-77,c=121$ und im zweiten Fall zu $a=-1,b=13,c=-11$.
+\end{enumerate}
+Insgesamt erhalten wir also für $\pm Q(x)$ die Möglichkeiten
+\begin{eqnarray*}
+11 &,& \{p_{1},p_{2},p_{3}\} \hbox{ \ \ beliebig},\\
+x^2-13x+11 &,& \{p_{1},p_{2},p_{3}\}=\{2,11,13\},\\
+2x^2-32x+67 &,& \{p_{1},p_{2},p_{3}\}=\{2,3,13\},\\
+11x^2-77x+121 &,& \{p_{1},p_{2},p_{3}\}=\{2,3,5\}.
+\end{eqnarray*}
+
+\bigskip
+
+\item[\textbf{8.}] Sei $A_{1}A_{2}A_{3}$ ein Dreieck und $\omega_1$ ein Kreis, der durch $A_1$ und $A_2$ geht.
+Nehme an, es existieren Kreise $\omega_2, \ldots, \omega_7$ mit den folgenden Eigenschaften:
+\begin{enumerate}
+\item $\omega_k$ geht durch die Punkte $A_k$ und $A_{k+1}$ für $k=2,3, \ldots, 7$, \hspace{8mm}($A_i=A_{i+3}$)
+\item $\omega_k$ und $\omega_{k+1}$ berühren sich äusserlich für $k=1,2, \ldots, 6$.
+\end{enumerate}
+Zeige: $\omega_1=\omega_7$.\\
+
+\textit{Lösung:}
+
+Seien $\alpha_{1},\alpha_{2},\alpha_{3}$ die Innenwinkel des Dreiecks. Seien $M_{1},M_{2}$ die Mittelpunkte von
+$\omega_{1},\omega_{2}$ sowie $m_{1}, m_{2}$ die Mittelsenkrechten auf die Seiten $A_{1}A_{2},A_{2}A_{3}$ und
+$P$ deren Schnittpunkt. Offenbar liegt $M_{1}$ auf $m_{1}$ und $M_{2}$ auf $m_{2}$, setze $\theta_{k}=\angle
+PM_{k}A_{2}$ für $k=1,2$. $M_{1}A_{2}$ und $M_{1}A_{2}$ sind Radien der jeweiligen Kreise und stehen daher beide
+senkrecht zur gemeinsamen Tangente an $\omega_{1}$ und $\omega_{2}$ im Punkt $A_{2}$, also sind $M_{1},A_{2}$
+und $M_{2}$ kollinear. Daher gilt $\theta_{1}+\theta_{2}+\angle M_{1}M_{2}P=180°$, also
+$\theta_{1}+\theta_{2}=\alpha_{2}$. Analoge Betrachtungen für die anderen Kreise liefern die sechs Gleichungen
+
+\begin{center}
+  \begin{tabular}{rl}
+    $\theta_{1}+\theta_{2}=\alpha_{2}$    &    $\theta_{2}+\theta_{3}=\alpha_{3}$ \\
+    $\theta_{3}+\theta_{4}=\alpha_{1}$    &    $\theta_{4}+\theta_{5}=\alpha_{2}$ \\
+    $\theta_{5}+\theta_{6}=\alpha_{3}$    &    $\theta_{6}+\theta_{7}=\alpha_{1}$ \\
+  \end{tabular}
+\end{center}
+
+Addiert man die linken drei Gleichungen und subtrahiert die drei rechten, dann folgt $\theta_{1}=\theta_{7}$.
+Nun liegen $M_{1}$ und $M_{7}$ beide auf $m_{1}$ und verschiedene Werte von $\theta_{1}$ gehören zu
+verschiedenen Positionen von $M_{1}$. Wegen $\theta_{1}=\theta_{7}$ ist daher $M_{1}=M_{7}$ und somit
+$\omega_{1}=\omega_{7}$.
+
+\bigskip
+
+\item[\textbf{9.}] Gegeben sind ganze Zahlen $0<a_{1}<a_{2}< \ldots <a_{101}<5050$, zeige, dass man daraus immer vier
+verschiedene $a_{k},a_{l},a_{m},a_{n}$ auswählen kann mit
+\[5050 | (a_{k}+a_{l}-a_{m}-a_{n}).\]
+
+\textit{Lösung:}
+
+Mit den 101 Zahlen lassen sich genau $\left( {101}\atop{2} \right)=5050$ ungeordnete Paare $\{a_{k},a_{l}\}$
+bilden. Betrachte nun die 5050 Summen $a_{k}+a_{l}$. Nehme zuerst an, zwei dieser Summen $a_{k}+a_{l}$ und
+$a_{m}+a_{n}$ seien kongruent (mod 5050). Dann ist deren Differenz $a_{k}+a_{l}-a_{m}-a_{n}$ durch 5050 teilbar.
+Ausserdem ist nach Konstruktion $a_{k} \neq a_{l}$ und $a_{m} \neq a_{n}$. Nehme an, es sei $a_{k}=a_{m}$, dann
+folgt $a_{l} \equiv a_{n}$ (mod 5050) und wegen $0 < a_{l},a_{n} < 5050$ daher $a_{l}=a_{n}$, im Widerspruch
+dazu, dass die beiden Paare verschieden
+sind. Daher sind $a_{k},a_{l},a_{m},a_{n}$ alle verschieden und die Behauptung folgt in diesem Fall.\\
+Wir nehmen nun an, dass es keine zwei kongruenten Summen gibt und führen dies zu einem Widerspruch. In diesem
+Fall liegt in jeder Restklasse modulo 5050 genau eine Summe. Wir berechnen nun die Summe $S$ der 5050 paarweisen
+Summen auf zwei Arten.
+\begin{itemize}
+\item Einerseits kommen nach Voraussetzung unter den 5050 paarweisen Summen die Werte $0,1,2,\ldots,5049$ (mod 5050)
+je genau einmal vor. Also ist
+\[S \equiv 0+1+2+\ldots+5049=5049 \cdot 5050/2=5049 \cdot2525 \qquad \hbox{(mod 5050)}\]
+und daher ist $S$ ungerade.
+\item Andererseits gilt
+\[S=\sum_{k<l} (a_{k}+a_{l})= 100 \sum_{k=1}^{101} a_{k},\]
+also ist $S$ gerade.
+\end{itemize}
+Dies ist der gesuchte Widerspruch.
+
+\bigskip
+
+\item[\textbf{10.}] Finde alle streng monotonen Funktionen $f: \mathbb{N}\rightarrow \mathbb{N}$, sodass für
+alle $n \in \mathbb{N}$ gilt
+\[f(f(n))=3n.\]
+
+\textit{1. Lösung:}
+
+Wir versuchen, die ersten paar Werte von $f$ zu berechnen und darin ein Muster zu erkennen. Wäre $f(1)=1$, dann
+auch $3=f(f(1))=1$, Widerspruch. Nehme an, $f(1)>2$, dann ist $1<2<f(1)$ und wegen der strengen Monotonie also
+auch $2<f(1)<f(2)<f(f(1))$ und damit $f(f(1))>3$, Widerspruch. Folglich ist $f(1)=2$. Setze $n=1$ in die
+Gleichung ein, dann folgt weiter $f(2)=f(f(1))=3$. Setze $n=2$, dann gilt analog $f(3)=f(f(2))=6$. Setze $n=3$:
+$f(6)=f(f(3))=9$. Da $f$ streng monoton ist, gilt ausserdem $6=f(3)<f(4)<f(5)<f(6)=9$, also muss zwingend
+$f(4)=7$ und $f(5)=8$ sein. Wir können so weiterfahren. Indem wir $n=4,5,6$ einsetzen, erhalten wir die Werte
+$f(7)=12,f(8)=15, f(9)=18$. Setze $n=7,8,9$, dann folgt $f(12)=21,f(15)=24,f(18)=27$. Jetzt können wir wieder
+einklammern, zum Beispiel erhält man aus $18=f(9)<f(10)<f(11)<f(12)=21$ die zwei Werte $f(10)=19$ und
+$f(11)=20$. Nach einiger Arbeit erhält man so die folgende Tabelle:\\[4mm]
+\begin{tabular}{r|*{18}{c}}
+$n$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18\\ \hline
+$f(n)$ & 2 & 3 & 6 & 7 & 8 & 9 & 12 & 15 & 18 & 19 & 20 & 21 & 22 & 23 & 24 & 25 & 26 & 27\\
+\end{tabular}\\[2mm]
+\begin{tabular}{r|*{12}{c}}
+$n$ & 19 & 20 & 21 & 22 & 23 & 24 & 25 & 26 & 27 & 28 & 29 & 30\\ \hline
+$f(n)$ & 30 & 33 & 36 & 39 & 42 & 45 & 48 & 51 & 54 & 55 & 56 & 57\\
+\end{tabular}\\[4mm]
+Offenbar ist $f$ eindeutig und für $k \geq 0$ und $0 \leq a < 3^k$ gegeben durch
+\begin{eqnarray*}
+f(3^k+a) &=& 2\cdot 3^k+a\\
+f(2\cdot 3^k+a) &=& 3^{k+1} + 3a,
+\end{eqnarray*}
+was wir im Folgenden beweisen werden. Zuerst zeigen wir mit vollständiger Induktion nach $k$, dass
+$f(3^k)=2\cdot 3^k$ und $f(2\cdot 3^k)=3^{k+1}$  gilt. Dies ist richtig für $k=0$ und gelte für $k-1$. Einsetzen
+von $n=2\cdot 3^{k-1}$  und $n=3^{k}$ in die Funktionalgleichung ergibt dann
+\begin{eqnarray*}
+f(3^k) &=& f(f(2\cdot 3^{k-1}))=2\cdot 3^{k},\\
+f(2\cdot 3^k) &=& f(f(3^{k}))=3^{k+1},
+\end{eqnarray*}
+und damit die Behauptung. Sei nun $k \geq 0$ beliebig. Da $f$ streng monoton steigend ist, folgt
+\[2\cdot 3^k=f(3^k)<f(3^k+1)<f(3^k+2)< \ldots <f(2\cdot 3^k-1)<f(2\cdot 3^k)=3^{k+1}.\]
+Die Differenz zwischen der rechten und der linken Seite beträgt $3^k$ und die Anzahl Terme in der
+Ungleichungskette ist $3^k+1$. Da sie alle verschieden sind, folgt sofort $f(3^k+a)=2\cdot 3^k+a$ für $0 \leq
+a<3^k$, also die erste der beiden Formeln (vergleiche die Argumentation am Anfang der Lösung für $f(4)$ und
+$f(5)$). Setze nun $n=3^k+a$ in der Funktionalgleichung, dann folgt mit dem eben Gezeigten
+\[f(2\cdot 3^k+a) = f(f(3^{k}+a))=3^{k+1} + 3a,\]
+also die zweite Formel, damit ist alles gezeigt.\\
+
+\textit{2. Lösung:}
+
+Wir gehen von der Tabelle in der ersten Lösung aus. Das häufige Auftreten von Dreierpotenzen legt nahe, alles in
+Basis 3 zu betrachten. $f$ ist offenbar gegben durch
+\begin{eqnarray*}
+f(1abc\ldots d_3) &=& 2abc\ldots d_3,\\
+f(2abc\ldots d_3) &=& 1abc\ldots d0_3.
+\end{eqnarray*}
+Wir beweisen diese Formel durch Induktion nach $n$. Sie ist richtig für $n=1$ und gelte für alle natürlichen
+Zahlen $<n$. Ist $n$ von der Form $f(m)$ für eine natürliche Zahl $m$, dann folgt mit der
+Induktionsvoraussetzung und der Funktionalgleichung
+\[f(2abc\ldots d_3) = f(f(1abc\ldots d_3)) = 1abc\ldots d0_3,\]
+beziehungsweise
+\[f(1abc\ldots d0_3) = f(f(2abc\ldots d_3)) = 2abc\ldots d0_3,\]
+also gilt die Formel für $n$. Ist $n$ nicht von der Form $f(m)$, dann muss $n=1abc\ldots d_3$ sein mit $d$
+gleich 1 oder 2. Wir unterscheiden nun zwei Fälle. Wenn alle Ziffern von $n$ ausser der ersten und letzten
+gleich 2 sind, dann folgt mit Hilfe der strengen Monotonie von $f$
+\begin{eqnarray*}
+222\ldots 20_3 &=& f(122\ldots 20_3) < f(122\ldots 21_3)\\
+&<& f(122\ldots 22_3) < f(200\ldots 00_3) = 1000\ldots 00_3.
+\end{eqnarray*}
+Die beiden Zahlen links und rechts haben Differenz 3 und alle vier Zahlen sind ganz. Daraus folgt mit einem
+Einschachtelungsargument, dass $f(n)$ den behaupteten Wert hat (vergleiche die Argumentation am Anfang der
+1. Lösung für $f(4)$ und $f(5)$).\\
+Wir betrachten nun noch den Fall, wo $n$ in Basis 3 noch eine weitere Ziffer $\neq 2$ besitzt. Ähnlich wie oben
+ergibt sich
+\begin{eqnarray*}
+2abc\ldots 0_3 &=& f(1abc\ldots 0_3) < f(1abc\ldots 1_3)\\
+&<& f(1abc\ldots 2_3) < f(1abc\ldots 0_3+10_3) = 2abc\ldots 0_3+10_3.
+\end{eqnarray*}
+Wieder ergibt ein Einschachtelungsargument die Behauptung. Damit ist alles gezeigt.
+
+
+
+
+
+
+
+\end{enumerate}
+
+\end{document}
+

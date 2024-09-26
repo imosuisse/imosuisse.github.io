@@ -1,0 +1,477 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[latin1]{inputenc}
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{enumerate}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+
+
+% Schriftabkürzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm pgcd}\nolimits}
+\newcommand{\kgV}{\mathop{\rm ppcm}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+%\renewcommand{\binom}[2]{\left(\genfrac{#1}{#2}\right)}
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\wi}{\angle}
+\newcommand{\dreieck}{\triangle}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+{\huge Solutions de l'examen du tour préliminaire 2006}
+\end{center}
+\vspace{15mm}
+
+Tout d'abord voici quelques remarques à propos de la distribution
+des points. Une solution complète et correcte vaut 7 points pour
+chaque exercice. Pour une solution complète avec quelques fautes ou
+imprécisions mineures qui n'influencent pas significativement la
+justesse de la solution proposée, nous donnons 6 points. Quand il
+s'agit d'une solution non complétée, on distribue des points
+partiels en fonction des résultats intermédiaires obtenus. Un
+exercice possède souvent plusieurs solutions. Si quelqu'un essaie
+par exemple de résoudre un exercice de deux façons différentes et
+obtient 3 points pour la première solution, 2 points pour la
+deuxième, alors le nombre de ses points sera 3 et non pas 5.
+Autrement dit, les points obtenus à travers différentes solutions
+d'un même exercice ne sont \emph{pas} cumulables. Les schémas de
+correction ne sont présentés ici qu'à titre indicatif. Si quelqu'un
+propose une solution différente, nous essaierons de lui donner les
+points qu'il aurait eus pour la même prestation en rendant une
+solution déjà présentée. Les schémas ci-dessous sont à interpréter
+de la manière suivante:\\
+Si quelqu'un arrive jusqu'à une étape donnée, il obtient les points
+correspondants.\\
+Les exceptions à cette règle sont toujours clairement mentionnées.
+
+\begin{enumerate}
+\item[\textbf{1.}] Trouver tous les triplets $(p,q,r)$ de nombres premiers tels que les trois différences
+\[|p-q|,\quad |q-r|,\quad |r-p|\]
+soient également toutes des nombres premiers.
+
+\textbf{Solution:}
+
+On peut supposer que $p<q<r$. Alors si $p>2$, alors $r-p$ est plus
+grand que 2 et pair, donc pas un nombre premier. Si $r>q+2$, alors
+le même argument montre que $r-q$ ne peut pas être premier. Par
+conséquent, $p=2, r=q+2$. Par hypothèse $q-p=q-2$ est également
+premier. Comme un des trois nombres $q-2, q, q+2$ est divisible par
+3 et premier à la fois, il s'ensuit que $q-2=3$ et donc
+\[(p,q,r)=(2,5,7).\]
+
+\textit{Remarques et schéma des points:}
+
+La reduction du problème à la question quand $q-2,q,q+2$ peuvent être tous premiers vaut 3 points. Des points partiels pour la preuve de $p=2$ et $r=q+1$. Une des deux vaut 2 points, les deux ensemble 3 points. Montrer uniquement qu'une des différences $|p-q|, |q-r|, |r-p|$ est égal à 2 a obtenu 1 point.\\
+Montrer qu'un de trois premiers de la forme $q-2,q,q+2$ est divisible par 3 a reçu 5 points, remarquer en plus qu'un des trois doit être 3 vaut 6 points.\\
+
+\bigskip
+
+\item[\textbf{2.}] Soit $n$ un nombre naturel. Déterminer le nombre
+de sous-ensembles $A \subset \{1,2,\ldots,2n\}$ tels qu'il n'existe
+pas deux éléments $x,y \in A$ avec $x+y = 2n+1$.
+
+\textbf{Solution:}
+
+Les seules solutions de l'équation $x+y=2n+1$ dans
+$\{1,2,\ldots,2n\}$ sont les paires $(x,y)=(k,2n+1-k)$, où $1 \leq k
+\leq 2n$. Considérons maintenant la décomposition disjointe
+\[\{1,2,\ldots,2n\} = \{1,2n\} \cup \{2,2n-1\} \cup \ldots \cup \{n-1,n+2\} \cup \{n,n+1\}.\]
+L'ensemble $A$ ne satisfait les conditions que s'il ne contient
+qu'au plus un élément de chacun de ces $n$ ensembles à deux
+éléments. Il y a exactement trois possibilités pour choisir au plus
+un élément d'un ensemble qui en contient deux. D'après la règle de
+multiplication, il y a donc $3^n$ tels ensembles $A$.\\
+
+\textit{Remarques et schéma des points:}
+
+Montrer que l'équation $x+y=2n+1$ a exactement les solutions $(k, 2n+1-k)$ donne 2 points.
+Realiser que ces paires de solutions forment une partition disjointe de l'ensemble $\{1,2,\ldots,2n\}$ vaut 4 poitns. Pour une solution complète il faut en plus observer:
+1. On peut appliquer le principe de multiplication, 2. de chaque paire on peut choisir de trois manières différentes. Remarquer l'un des deux donne un point supplémentaire.\\
+Différents gens n'ont pas pris en compte l'ensemble vide. On n'a pas enlevé de points pour ça.\\
+
+\bigskip
+
+\item[\textbf{3.}] Dans le triangle $ABC$ soit $D$ l'intersection de $BC$ avec la bissectrice de $\wi BAC$.
+Le centre du cercle circonscrit du triangle $\triangle ABC$ coïncide
+avec le centre du cercle inscrit de $\triangle ADC$. Trouver tous
+les angles de $\triangle ABC$.
+
+\textbf{Solution:} \\
+
+Comme d'habitude soient $\alpha = \angle BAC$, $\beta = \angle CBA$
+et $\gamma = \angle ACB$. Soit $O$ le centre commun des deux cercles
+mentionnés. On dessine de plus les segments reliant $O$ à $A$, $B$
+et $C$.\\
+Il s'ensuit alors dans l'ordre (explications entre parenthèses):
+
+\begin{enumerate}[($1$)]
+\item $\angle ACO = \angle OCB = \frac{\gamma}{2}$ ($O$ est le centre du cercle inscrit de $\triangle ADC$)
+
+\item $\angle OAC = \frac{\alpha}{4}$ (même argument, en plus du fait que $AD$ soit la bissectrice de $\angle BAC$)
+
+\item Les triangles $OAB$, $OBC$ et $OCA$ sont isocèles. ($O$ est le centre du cercle circonscrit de $\triangle ABC$, et donc $OA = OB = OC$.)
+
+\item $\wi CBO = \frac{\gamma}{2}$ (car $\triangle OBC$ est isocèle.)
+
+\item $\wi OBA = \frac{3 \alpha}{4}$ (car $\triangle OAB$ est isocèle.)
+
+\item $\frac{\alpha}{4} = \frac{\gamma}{2}$ (car $\triangle OCA$ est isocèle.)
+\end{enumerate}
+
+Par conséquent, en plus d'avoir $\gamma = \frac{\alpha}{2}$, on peut exprimer $\beta$ également en fonction de $\alpha$:
+
+$$ \beta = \wi CBO + \wi OBA = \frac{\gamma}{2} + \frac{3 \alpha}{4} = \alpha. $$
+
+Comme la somme des angles du triangle $\triangle ABC$ est fixe, $\alpha$ est uniquement déterminé:
+
+$$ 180^\circ = \alpha + \beta + \gamma = \alpha + \alpha + \frac{\alpha}{2} = \frac{5}{2} \alpha. $$
+
+On a donc $\alpha = \beta = 72^\circ$ et $\gamma = 36^\circ$. \\
+Le triangle est représenté dans la figure.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8cm]{abb01}
+\end{figure}
+
+\textit{Remarques et schéma des points:}
+
+L'observation que les triangles $OAB$, $OBC$ ou $OCA$ sont isocèle vaut déjà un point. $\frac{\alpha}{4} = \frac{\gamma}{2}$ vaut deux points. Montrer que $\alpha = \beta$ vaut 5 points.\\
+Montrer d'une manière différente que le triangle $ABC$ est isocèle vaut trois points.\\
+Remarque: Mentionner les angles correctes ne vaut pas de points si le raisonnement manque ou n'est pas correct.\\
+
+\bigskip
+
+\item[\textbf{4.}] Déterminer toutes les solutions positives entières
+de l'équation
+\[\kgV(a,b,c)=a+b+c.\]
+
+\textbf{1ère solution:}
+
+On peut supposer que  $a \leq b \leq c$. Alors $a<c$, car sinon les
+trois nombres seraient égaux à $a$ et on aurait $a=3a$ dans
+l'équation, contradiction.Nous avons donc $c<a+b+c<3c$ et comme le
+côté gauche de l'équation est un multiple entier de $c$, on a
+$\kgV(a,b,c)=2c$. Par conséquent il existe deux nombres entiers
+$x,y$ tels que $a=2c/x$ et $b=2c/y$. En simplifiant l'équation on
+trouve $c=a+b$, ce qui donne en substituant $x$ et $y$
+\[\frac{1}{x}+\frac{1}{y}=\frac{1}{2}.\]
+Comme $a \leq b$, on a $x \geq y$. Par ailleurs d'un côté on a
+$y>2$, car sinon le côté gauche serait plus grand que $1/2$ et de
+l'autre que $y \leq 4$, car sinon le côté gauche vaut au plus $2/5$.
+On obtient donc les solutions $x=6, y=3$ et $x=y=4$. Dans le premier
+cas, $(a,b,c)=(a,2a,3a)$, dans le deuxième $(a,b,c)=(a,a,2a)$. Ce
+dernier n'est toutefois pas possible, car sinon on aurait
+$\kgV(a,b,c)=c \neq 2c$.Dans l'autre cas il est facile de vérifier
+qu'on a effectivement $\kgV(a,b,c)=6a=a+b+c$. Les triplets cherchés
+sont donc exactement les permutations de
+\[(a,b,c)=(a,2a,3a),\qquad a \geq 1.\]
+
+\textbf{2e solution:}
+
+On utilise les inéquations suivantes:
+\[\ggT(ma,mb,mc)=m \cdot \ggT(a,b,c),\qquad \kgV(ma,mb,mc)=m \cdot \kgV(a,b,c).\]
+Soit $d = \ggT(a,b,c)$ et poser $a=xd$, $b=yd$ et $c=zd$. Alors $x,y,z$ sont premiers entre eux. On remplace dans l'équation et la formule ci-dessus donne
+\[\kgV(x,y,z)=x+y+z.\]
+Maintenant $x,y,z$ sont même \textit{deux à deux} premiers entre eux car chaque diviseur de deux nombres divise aussi le côté gauche de l'équation et donc le troisième nombre et vaut alors 1. Il s'ensuit que
+$\kgV(x,y,z)=xyz$
+et on doit trouver toutes les solutions de l'équation $xyz=x+y+z$. On suppose que $x<y<z$.
+Si on avait $x\geq 2$ alors $xyz \geq 2 \cdot 2 \cdot z > 3z > x+y+z$, contradiction. 
+Donc $x=1$ et l'équation se simplifie:
+\[yz=1+y+z \qquad \Longleftrightarrow \qquad (y-1)(z-1)=2.\]
+L'unique solution est donc $y=2,z=3$ et les triples $(a,b,c)$ sont exactement les permutations de $(d,2d,3d)$ avec $d\geq 1$.\\
+
+\textbf{3e solution:}
+
+On introduit d'abord quelques notations. Posons $d=\ggT(a,b,c)$ et
+$x=\ggT(b/d,c/d)$, $y=\ggT(c/d,a/d)$, $z=\ggT(a/d,b/d)$. Alors $x,y$
+et $z$ sont deux à deux premiers entre eux par la définition de $d$.
+De plus $a/d$ est divisible par $y$ et $z$ donc aussi par leur
+produit, et donc $A=a/(dyz)$ est un nombre entier. En définissant
+$B$ et $C$ de manière analogue, on obtient
+$\ggT(x,A)=\ggT(y,B)=\ggT(z,C)=1$ et on peut écrire  $a=dyzA$,
+$b=dzxB$ et $c=dxyC$. Par ailleurs $\kgV(a,b,c)=dxyzABC$. En
+substituant dans l'équation et en simplifiant on a
+\[xyzABC=yzA+zxB+xyC.\]
+Mais $x$ divise le côté gauche, donc aussi le côté droit, donc aussi
+$yzA$. Comme $x$ est premier avec tous les trois facteurs, il
+s'ensuit que $x=1$. De même, $y=z=1$ et en divisant par $ABC$
+l'équation devient
+\[\frac{1}{AB}+\frac{1}{BC}+\frac{1}{CA}=1.\]
+On peut supposer $A\leq B\leq C$. Si $A>1$. alors le côté gauche
+vaut au plus $3/4$, par conséquent $A=1$. Si $B=1$, alors le côté
+gauche est plus grand que 1, si $B \geq 3$, alors le côté gauche
+vaut au plus $1/3+1/3+1/9<1$. Il s'ensuit que $B=2$ et donc $C=3$.
+Les triplets cherchés sont donc à permutation près tous de la forme
+$(a,b,c)=(d,2d,3d)$, comme dans la première solution.\\
+
+\textit{Remarques et schéma des points:}
+
+Dans toutes les trois solutions le pas essentiel est la réduction du problème à une équation à deux ou trois variables qui peut être résolu avec des méthodes standard. Cette réduction vaut 4 points. Des points partiels ont été distribué comme suit:
+Dans la 2ème solution on donne deux points pour la réduction au cas où $x,y,z$ n'ont pas de diviseur commun. Un point en plus pour la preuve que $x,y,z$ sont deux à deux premiers entre eux.\\
+Résoudre l'équation obtenue correctement vaut 6 points. Seulement ceux qui ont testé que les triples obtenus sont effectivement des solutions de l'équation originale ont reçu tous les points. Pour beaucoup de gens ce n'était pas clair ce qui les ameneait à des fausses solutions et moins de points.\\
+Beaucoup de gens ont remarqué que pour toute solution $(a,b,c)$ tout multiple $(ma,mb,mc)$ est une solution. Si aucun autre résultat a été trouvé cela vaut 1 point. Pour une solution complète sans preuve que trois nombres premiers entre eux sont deux à deux premiers entre eux (ou sans remarquer qu'il y a une différence) deux points ont été enlevé.\\
+Aucun point vaut la liste de solutions $(d,2,3d)$.\\ 
+
+\bigskip
+
+\item[\textbf{5.}] Considérons un tableau de jeu $m \times n$ décomposé en carrés
+unitaires. Un L-triomino est composé de trois carrés unitaires, dont
+un carré central et deux carrés extérieurs. Dans le coin en haut à
+gauche se trouve un L-triomino tel que le carré central couvre la
+case du coin. Un coup du jeu consiste à faire une rotation d'un
+multiple de $90^\circ$ du L-triomino autour du centre d'un de ses
+carrés extérieurs. Pour quels $m$ et $n$ est-il possible d'amener le
+$L$-triomino dans le coin en bas à droite en un nombre fini de
+coups?
+
+\textbf{Solution:}
+
+\begin{figure}[h]
+\centering
+\begin{minipage}[t]{5cm}
+\centering
+\includegraphics[width=5cm]{versch1}
+\caption{Schritt 1}
+\end{minipage}
+\quad
+\begin{minipage}[t]{5cm}
+\centering
+\includegraphics[width=5cm]{versch2}
+\caption{Schritt 2}
+\end{minipage}
+\quad
+\begin{minipage}[t]{5cm}
+\centering
+\includegraphics[width=5cm]{versch3}
+\caption{Schritt 3}
+\end{minipage}
+\end{figure}
+
+Supposons d'abord que $m$ et $n$ sont les deux impairs. On voit facilement que une suite de mouvements pour $m=n=3$ existe. De plus les images ci-dessus montrent qu'on peut déplacer un L-Triomino avec deux rotations de deux cases à droite (resp. en bas). Un déplacement de $(n-1)/2$ fois deux cases vers le bas et $(m-1)/2$ fois deux cases à droite combiné avec les rotations pour le cas $m=n=3$ suffit pour placer le triomino comme on le désirait dans le coin en bas à droite.\\
+
+Réciproquement supposons maintenant qu'une telle suite de rotations existe pour certains $m,n$.
+Colorer les cases comme dans l'image. Puisqu'au début les carrés extérieurs du triomino sont sur des cases blanches et y restent après chaque rotation, le carré central est toujours sur une case noire ou grise. De plus la couleur du carré central change à chaque rotation de $90^\circ$. À la fin le triomino est tourné de $180^\circ$ par rapport à sa position de départ. Ceci implique que sa couleur change un nombre pair de fois et est donc égal à la couleur de départ. Le carré en bas à droite doit donc être noir. Ceci est uniquement possible si $m$ et $n$ sont les deux impairs.\\
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=14cm]{gitter}
+\end{figure}
+
+
+Cela ne fonctionne que si $n$ et $m$ sont les deux impairs.\\
+Coloriez les cases du tableau comme suit avec trois couleurs:
+\begin{tabular}{cccccc}
+1 & 0 & 1 & 0 & 1 & 0\\
+0 & 2 & 0 & 2 & 0 & 2\\
+1 & 0 & 1 & 0 & 1 & 0\\
+0 & 2 & 0 & 2 & 0 & 2\\
+1 & 0 & 1 & 0 & 1 & 0\\
+\end{tabular}
+Au début les deux carrés extérieurs se trouvent sur des cases de
+couleur 0 et cela ne change pas lors des rotations. Ils restent donc
+tout le long sur les cases de couleur 0. Il s'ensuit que le carré
+central se trouvent toujours sur les cases de couleur 1 ou 2. De
+plus il est facile de voir que la couleur change à chaque fois qu'un
+fait une rotation de $90^\circ$. Si on veut amener le L-triomino
+dans le coin en bas à droite, on doit faire en tout une rotation de
+$180^\circ$, autrement dit un nombre paire de rotations de
+$90^\circ$. Il s'ensuit que la case en bas à droite doit être de
+couleur 1. Ce n'est le cas que si $m$ et $n$ sont les deux impairs.\\
+Supposons maintenant que $m$ et $n$ sont impairs. Il est facile de
+voir que cela fonctionne pour $m=n=3$ et qu'en deux coups on peut
+déplacer le L-triomino de deux cases vers le bas, resp. vers la
+droite (sans dépasser les bords du tableau, même si c'est pas
+vraiment important). En combinant ces déplacements, on obtient une
+suite de rotations qui fonctionne dans tous les cas.
+
+\textit{Remarques et schéma des points:}
+
+Montrer que le cas $m,n$ impairs est une solution vaut 2 points si on a trouvé une suite de rotations valable. Le cas $m=n=3$ ou un autre cas particulier tout seul ne vaut aucun point. Pour l'observation que le triomino peut être déplacé de deux cases vers la droite ou vers le bas on donne 1 point.\\
+La preuve que $m$ et $n$ doivent être impairs vaut 5 points. Il y a les points partiels suivants:
+Toute coloration qui permet de résoudre l'exercice vaut 1 point. Travailler avec une telle coloration de manière intélligente sans trouver la preuve vaut 2 points. Indépendemment de ça on donne 1 point pour ceux qui ont prouvé avec une coloration que $m$ et $n$ sont les deux pairs ou les deux impairs.
+
+
+\end{enumerate}
+
+\end{document}

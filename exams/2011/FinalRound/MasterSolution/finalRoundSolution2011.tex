@@ -1,0 +1,444 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\usepackage[ansinew]{inputenc}
+\usepackage{graphicx}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+
+
+
+% Schriftabk¬¨‚àèrzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % sch√Ä√únes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{center}
+{\huge Lˆsungen zur Finalrundenpr¸fung 2011} \\
+\end{center}
+\vspace{8mm}
+
+
+
+\begin{enumerate}
+
+\item[\textbf{1.}]
+\textbf{1. Lˆsung:}\\
+
+Zuerst zeigen wir, dass mindestens $2011$ Zeitpunkte benˆtigt werden. Betrachte eine Person $A$ und deren Nachbarn $B,C$, die verschieden sind da $2011 \ge 3$. $A$ muss sicherlich mit jeder anderen Person anstossen, daher vergehen schon mindestens $2010$ Zeitpunkte. Betrachte nun jeden Zeitpunkt in dem $A$ anstosst. Entweder stosst $A$ mit $B$ oder $C$ oder einem der anderen $2008$ Personen an, in den ersten zwei F‰llen kˆnnen $B$ und $C$ nicht zum gleichen Zeitpunkt anstossen, denn dann w¸rde $B$ respektive $C$ zu einem Zeitpunkt mit zwei Personen anstossen, was nicht erlaubt ist. Im letzteren Fall stossen $A$ und eine Person $D$ ($D\neq B,C$) an, da zu einem Zeitpunkt nicht ¸bers Kreuz angestossen werden darf teilt die Verbindung $AD$ den Tisch in zwei Teile auf, wobei zwei Personen aus verschiedenen Teilen zu jenem Zeitpunkt nicht antossen kˆnnen. Es sind nun $B,C$ in verschiedenen Teilen des Tisches. Das heisst zusammengefasst zu jedem Zeipunkt, an dem $A$ anstosst kˆnnen $B$ und $C$ nicht anstossen, somit werden mindestens $2011$ Zeitpunkte benˆtigt.\\
+
+Nun zeigen wir, dass $2011$ Zeitpunkte ausreichen, dazu beschrifte die Personen der Reihe nach am Tisch entlang mit $0,1,2,\dots,2010$. Zu jedem Zeitpunkt $t=1,2,\dots,2011$ stossen nun alle Paare von verschiedenen Personen $a,b$ mit $a+b\equiv t \mod (2011)$ an. Nehme an eine Person $a$ stosse zu einem Zeitpunkt $t$ mit zwei verschiedenen Personen $b,c$ an. Dann gilt: $a+b\equiv t \mod (2011)$ und $a+c\equiv t \mod (2011)$ daher auch $b-c\equiv 0 \mod (2011)$ und da $0\le,b,c\le 2010$ sogar $b=c$ Widerspruch. Vier Personen $a<b<c<d$ stossen genau dann ¸bers Kreuz an, wenn zum gleichen Zeitpunkt $a$ mit $c$ und $b$ mit $d$ anstossen. Nehme an dies w¸rde passieren zum Zeitpunkt $t$, dann w¸rde gelten: $a+c\equiv t \equiv b+d \mod (2011) \Rightarrow c-b \equiv d-a \mod (2011)$, wobei $0 < c-b < d-a <2011$ Widerspruch. Es bleibt noch zu zeigen, dass jede Person mit allen anderen anstosst. Seien $a,b$ verschiedene Personen, dann stossen sie nach Konstruktion zum Zeitpunkt $t=a+b \mod (2011)$ an.\\
+
+\textbf{2. Lˆsung:}\\
+
+Zu jedem Zeitpunkt kann maximal $\left\lfloor \frac{2011}{2} \right\rfloor=1005$-mal angestossen werden. Insgesamt muss $\binom{2011}{2}$-mal angestossen werden, das heisst es werden mindestens $\left\lceil\binom{2011}{2}/1005\right\rceil=2011$ Zeitpunkte benˆtigt.\\
+
+Wir zeigen nun, dass $2011$ Zeipunkte ausreichen, dazu definieren wir Parallelklassen wie folgt: Jede Verbindung zum Anstossen zweier verschiedener Personen $a,b$ teilt alle Personen in folgende Mengen auf: Diejenigen die verbunden sind, und zwei weitere Mengen $C,D$ f¸r die gilt, falls $c$ eine Person in $C$ und $d$ eine Person in $D$ so kˆnnen diese nicht zum gleichen Zeitpunkt anstossen wie $a$ und $b$, je zwei Personen aus $C$ respektive $D$ hingegen schon. Eine der Mengen $C,D$ enth‰lt nun eine ungerade Anzahl Personen. Ordnet man jene dem Kreis entlang, so gibt es eine eindeutige Person $e$, die genau in der Mitte der geordeneten Personen ist. Wir sagen die Person $e$ ist der Vertreter der Anstossverbindung $ab$. Zu einem Zeitpunkt $t=1,2,\dots,2011$ stossen nun alle Paare von verschiedenen Personen an, deren Vertreter gerade die $t$-te Person ist. Es ist klar, dass jede Person mit jeder anderen Person anstosst, da jede Anstossverbindung einen Vertreter hat. Um zu zeigen, dass keine Anstossregel verletzt wird, f¸hren wir die Distanz zum Vertreter ein, die sich wie folgt definiert: Seien $a,b$ zwei verschiedene Personen und $e$ deren Vertreter, die Distanz von $a$ zu $e$ definiert sich als das Minimum der Anzahl Personen, die zwischen $a$ und $e$ sitzen, wobei man entlang dem Tisch in Uhr- und Gegenuhrzeigensinn z‰hlt. Da $e$ nun gerade in der Mitte zwischen $a,b$ ist die Distanz von $b$ und $e$ gerade dieselbe, es wird einfach in die andere Richtung gez‰hlt, denn sonst w‰re $a=b$. Nehme an eine Person $a$ w¸rde zu einem Zeitpunkt $t$ gleichzeitig mit zwei verschiedenen Personen $b$ und $c$ anstossen. Sei $e$ die $t$-te Person. Nun ist $e$ der Vertreter von $ab$ und $ac$ und es gilt die Distanz von $b$ zu $e$ ist gleich der Distanz von $a$ zu $e$ ist gleich der Distanz von $c$ zu $e$, nun wird aber bei $b$ und $c$ in die gleiche Richtung gez‰hlt, also gilt $b=c$ Widerspruch. Nehme an zu einem Zeitpunkt $t$ wird stossen $a$ mit $b$ und $c$ mit $d$ ¸bers Kreuz an. Sei nun $e$ die $t$-te Person. Ohne Beeinschr‰nkung der Allgemeinheit gilt, dass die Distanz von $a$ und $e$ grˆsser ist als die von $c$ und $e$. Die Verbidung $ab$ teilt den Tisch in zwei Teile in einer ist $e$ und nach der Distanz zu $e$ sin $c$ und $d$ auch in jenem Teil und stossen daher ohne zu ¸berkreuzen an. Widerspruch!
+
+\item[\textbf{2.}] \textbf{1. Lˆsung:}\\
+
+Wir f¸hren Winkelbezeichnungen ein:
+$$
+\angle AFE=\angle BFD=\gamma, \quad \angle BDF=\angle CDE=\alpha, \quad \angle CED=\angle AEF=\beta
+$$
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[scale=0.3]{Aufg2a}
+	\label{fig:Aufg2}
+	\caption{Skizze}
+\end{figure}
+
+Wir bilden die Innenwinkelsumme im Dreieck DEF:
+$$
+(180^\circ-2\alpha)+(180^\circ-2\beta)+(180^\circ-2\gamma)=180^\circ  \Longrightarrow \alpha +\beta +\gamma =180^\circ
+$$
+Mit den Innenwinkelsummen in den Dreiecken AFE, BDF und CED erhalten wir die Winkel des Dreiecks ABC:
+$$
+\angle CAB=\alpha,\quad\angle ABC=\beta,\quad\angle BCA=\gamma
+$$
+Nun gilt:
+$$
+\angle EAB+\angle EDB=\angle CAB+(180^\circ-\angle EDC)=\alpha+(180^\circ-\alpha)=180^\circ
+$$
+Somit ist ABDE ein Sehnenviereck. Analog erhalten wir, dass auch BCEF und CAFD Sehnenvierecke sind. Daraus folgt jetzt:
+\begin{eqnarray*}
+\angle ADF=\angle ACF \text{ (Sehnenviereck CAFD)}\\
+\angle ACF=\angle ECF=\angle EBF \text{ (Sehnenviereck BCEF)}\\
+\angle EBF=\angle EBA=\angle EDA \text{ (Sehnenviereck ABDE)}
+\end{eqnarray*}
+Es folgt also $\angle ADF=\angle EDA$ und somit auch:
+$$
+\angle CDA=\angle CDE+\angle EDA=\angle BDF+\angle ADF=\angle ADB
+$$
+Da $\angle CDA+\angle ADB=180^\circ$ und $\angle CDA=\angle ADB$ gilt, sind beide $90^\circ$ und somit steht AD senkrecht auf BC. Dann ist AD aber gerade die Hˆhe und D der Hˆhenfusspunkt.\\
+Analog erhalten wir, dass E und F die Fusspunkte der Hˆhen von B bzw. C sind.\\
+
+\textbf{2. Lˆsung:}\\
+
+Seien $\alpha, \beta$ und $\gamma$ wie in der 1. Lˆsung. Sei X ein Punkt auf der Verl‰ngerung der Seite DF auf der Seite von F und Y ein Punkt auf der Verl‰ngerung der Seite DE auf der Seite von E. Es gilt nun $\angle AFX=\angle DFB=\gamma$ und $\angle AEY=\angle DEC=\beta$. AF und AE sind dann aber gerade die Winkelhalbierenden der Winkel $\angle XFE$ und $\angle YEF$ und somit ist A der Ankreismittelpunkt des Dreiecks DEF auf der Seite von EF. A liegt dann aber auch auf der Winkelhalbierenden von $\angle EDF$ und somit gilt $\angle EDA=\angle ADF$. Hieraus folgt sofort, dass D Hˆhenfusspunkt ist. Analog erhalten wir, dass auch E und F Hˆhenfusspunkte sind.
+
+
+\item[\textbf{3.}]
+
+Sei $A = \left| 2011^m - 45^n \right| $. F¸r $m = 1$ und $n = 2$ erhalten wir $A = 14$, was minimal ist, wie wir nun zeigen werden.
+Betrachtet man $A$ mod $45$ erh‰lt man gerade die Vereinugung der Restklassen von $2011^m$  und $-2011^m$ mod $45$. Nach einer kurzen Rechnung findet man somit $A \equiv 1, -1, 14, -14, 16$ oder $-16$ mod $45$. Aber da $A$ sicher gerade ist gilt $A \geq 2$ also mindestens $14$.\\
+
+
+\item[\textbf{4.}]
+
+Aus $a=b=c=d=1$ folgt sofort, dass $f(1) = 1$ ist. F¸r $c=d=1$ gilt nun
+$$
+	f(a) + f(1/a) = a + 1/a.
+$$
+Andererseits ergibt $b=d=1$
+\begin{eqnarray}
+	(f(a) + 1)(f(1/a)+1) = 2 + a + 1/a \label{f1}
+\end{eqnarray}
+und aus diesen zwei Gleichungen folgt nun, dass
+$
+	f(a)f(1/a) =1 
+$
+gilt f¸r alle $a>0$. Multipliziert man Gleichung (\ref{f1}) mit $af(a)$ und faktorisiert erh‰lt man damit
+$$
+	(f(a) - a)(af(a) - 1) = 0
+$$
+oder ‰quivalent dazu $f(a) = a$ oder $f(a) = 1/a$ f¸r alle $a>0$.
+Nimmt man an, es g‰be $a,b\neq 1$ mit $f(a)= a$ und $f(b) = 1/b$ so folgt aus der ersten Gleichung
+(mit $c=1/a$ und $d=1/b$) dass
+$$
+	ab + \frac{1}{ab}  = \frac{a}{b} + \frac{b}{a}.
+$$
+Letzteres ist aber ‰quivalent zu 
+$$
+	(a^2 - 1)(b^2 -1) = 0,
+$$
+im Widerspruch zur Annahme $a,b \neq 1$. Es bleibt zu kontrollieren, dass die beiden Funktionen $f(a)=a$ und $f(b) = b$ tats‰chlich Lˆsungen sind.
+
+
+\item[\textbf{5.}]
+
+Sei $\angle BCA=\alpha$. Mit dem Sehnentangentenwinkelsatz erhalten wir $\angle TBA=\alpha=\angle TAB$. Wegen der Innenwinkelsumme im Dreieck ABT und dem Sehnenviereck BDAT gilt:
+$$\angle BDA=180^\circ-\angle BTA=2\alpha$$
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[scale=1]{aufg5}
+	\label{fig:aufg5}
+	\caption{Skizze}
+\end{figure}
+
+
+Anwendung des Aussenwinkelsatzes am Dreieck DCA bei D liefert:
+$$\angle DAC=\angle ADB-\angle DCA=\alpha=\angle DCA$$
+Das Dreieck DCA ist also gleichschenklig und somit gilt $DA=DC=DB$.  Dies bedeutet wiederum, dass D gerade der Mittelpunkt des Umkreises des Dreiecks ABC ist. Wegen der Konstruktion von T folgt nun $\angle BDT=\angle TDA=\alpha$ und somit $\angle BDT=\angle DCE$, also sind TD und EC parallel.\\
+Sei G ein Punkt auf der Verl‰ngerung der Seite ET auf der Seite von E (also EG<GT). Mit dem Sehnenviereck TBAE folgt:
+$$\angle GEA=180^\circ-\angle TEA=180^\circ-(180^\circ-\angle TBA)=\alpha=\angle DCA$$
+TE und CD sind somit ebenfalls parallel. DCET ist also ein Parallelogramm und es gilt $ET=DC$. Da BC und ET parallel sind, sind die Dreiecke BCF und FET ‰hnlich und es gilt:
+$$\frac{BF}{FE}=\frac{BC}{TE}=\frac{2\cdot DC}{DC}=2$$
+
+
+\item[\textbf{6.}] \textbf{1. Lˆsung:}\\
+
+Einsetzen der Nebenebdingung $a+b+c+d=1$ in die linke Seite der Ungleichung liefert: $$2\frac{a+b+c+d}{(a+b)(c+d)} \leq \frac{1}{\sqrt{ab}}+\frac{1}{\sqrt{cd}}$$
+Dann folgt aus AM-GM, angewandt auf den Nenner: $$2\frac{a+b+c+d}{(a+b)(c+d)} = \frac{2}{a+b}+\frac{2}{c+d} \leq \frac{1}{\sqrt{ab}} + \frac{1}{\sqrt{cd}}$$
+
+\textbf{2. Lˆsung:}\\
+
+$$\begin{aligned} (a+b)(c+d)\left(\frac{1}{\sqrt{ab}}+ \frac{1}{\sqrt{cd}}\right) &\quad=\quad \left(\sqrt{\frac{a}{b}}+ \sqrt{\frac{b}{a}}\right)(c+d)+\left(\sqrt{\frac{c}{d}}+ \sqrt{\frac{d}{c}}\right)(a+b) \\  &\overset{\text{AM-GM}}{\ge}  2(c+d)+2(a+b)=2 \end{aligned}$$
+
+
+\item[\textbf{7.}]
+O.B.d.A. $r\ge 0$ und sogar $r>0$, da die linke Seite positiv ist.\\
+Sei zuerst $z=0$, dann hat man $3=r^2$, was keine Lˆsung hat, da $\sqrt{3}$ irrational ist.\\
+Sei nun $z>0$ und schreibe $r=\frac{p}{q}$ mit $p,q \in \mathbb{N},\ \operatorname{ggT}(p,q)=1$. Dann ist die Gleichung ‰quivalent zu $2q^2(2^{z-1}+1)=p^2$. Die linke Seite ist durch $2$ teilbar, daher auch die rechte und somit $2|p$. Ist nun $z\ge 2$ so ist die rechte Seite durch $4$ teilbar, aber die linke nicht. Einsetzen von $z=1$ liefert $2^1+2=4=2^2$.\\
+Sei nun $z<0$, schreibe $n=-z$ und multipliziere die Gleichung mit $q^22^n$, dann erh‰lt man $q^2(2^{n+1}+1)=2^np^2$ es folgt nun $2^{n+1}+1|p^2$ da $\operatorname{ggT}(2^{n+1}+1,2^n)=1$, und $p^2|2^{n+1}+1$, da $\operatorname{ggT}(p^2,q^2)=1$. Damit erh‰lt man $2^{n+1}+1=\pm p^2$, es kann nicht $-$ sein, da dann die rechte Seite negativ aber die linke Seite positiv ist. Das heisst es gilt $2^{n+1}=p^2-1=(p-1)(p+1)$. Folglich sind $p-1$ und $p+1$ Zweierpotenzen und die einzigen Zweierpotenzen mit Differenz $2$ sind $2,4$ und somit $p=3$, daraus folgt $z=-n=-2$. Einsetzen liefert $2^{-2}+2=\frac{9}{4}=\left(\frac{3}{2}\right)^2$.\\
+Die einzigen Lˆsungen sind also $-2$ und $1$.\\
+
+\item[\textbf{8.}] \textbf{1. Lˆsung:}\\
+
+Seien $H_A$ und $H_C$ die Fusspunkte der Hˆhen von $A$ und $C$. $H_A$ und $H_C$ liegen auf dem Thaleskreis ¸ber $AC$ und somit kˆnnen wir den Potenzsatz anwenden:
+$$HH_A\cdot HA=HH_C\cdot HC$$
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[scale=0.8]{Aufg8}
+	\label{fig:aufg5}
+	\caption{Skizze}
+\end{figure}
+
+$AD$ und $BC$ sind parallel, also gilt $\angle HAD=\angle HH_AB=90^\circ$. Analog erhalten wir auch $\angle HCS=90^\circ$.\\
+Sei $\angle PHH_A=\alpha$. $\angle AHQ$ ist als Scheitelpunktswinkel ebenfalls $\alpha$. Mit der Innenwinkelsumme im Dreieck $PHH_A$ erhalten wir $HPH_A=90^\circ -\alpha$. Da $HPCS$ ein Parallelogramm ist, betr‰gt $\angle CSH$ ebenfalls $90^\circ -\alpha$. Mit der Innenwinkelsumme im Dreieck $HCS$ erhalten wir jetzt $\angle CHS=\alpha$. $\angle H_CHR$ ist als Scheitelpunktswinkel ebenfalls $\alpha$. Nun sehen wir, dass die Dreiecke $PH_AH, CSH, QAH$ und $H_CRH$ alle ‰hnlich sind. Unter Ausnutzung dieser ƒhnlichkeit erhalten wir jetzt:
+$$HP\cdot HQ=\frac{HR\cdot HH_A}{HH_C}\cdot \frac{HS\cdot HA}{HC}=HR\cdot HS\cdot \frac{HH_A\cdot HA}{HH_C\cdot HC}=HR\cdot HS,$$wobei wir im letzten Schritt die zu Beginn hergeleitete Gleichung benutzt haben. $P,Q,R$ und $S$ liegen nach der Umkehrung des Potenzsatzes also auf einem Kreis.\\
+
+\textbf{2. Lˆsung:}\\
+
+Seien $H_A$ und $H_C$ die Fusspunkte der Hˆhen von $A$ und $C$. Wegen parallelen Geraden gilt $\angle ARH=\angle HPC$. $H_A$ und $H_C$ liegen auf dem Thaleskreis ¸ber $AC$ und somit gilt $\angle H_CAH_A=\angle H_CCH_A$. Daraus folgt, dass die Dreiecke $RAH$ und $HCP$ ‰hnlich sind. Es gilt somit:
+$$\frac{HR}{HP}=\frac{RA}{PC}=\frac{HQ}{HS},$$
+wobei wir im letzten Schritt verwendet haben, dass aufgrund der Parallelen und Parallelogramme $RA=HQ$ und $PC=HS$ gilt. Die obige Gleichung ist ‰quivalent zu:
+$$HR\cdot HS=HQ\cdot HP,$$
+und mit der Umkehrung des Potenzsatzes folgt nun, dass $P,Q,R,S$ auf einem Kreis liegen.
+
+\item[\textbf{9.}] \textbf{1. Lˆsung:}\\
+
+Wir beginnen mit einer allgemeinen Bemerkung. Sei $A = \{ n \in \BN \ | \ n \equiv 1 \ \text{oder} \ 9 \ \text{mod} ( 10 ) \} $ die Menger der nat¸rlichen Zahlen, die auf $1$ oder $9$ enden und $B = \{n \in \BN \ | \ n \equiv 3 \ \text{oder} \ 7 \ \text{mod} ( 10 ) \}$. Man stellt nun fest, dass f¸r $a , a' \in A$ und $b,b' \in B$ gilt: $aa', bb' \in A$ und $ab \in B$. \\
+F¸r die Lˆsung der Aufgabe schreiben wir $n = p_{1}^{\alpha_{1}}p_{2}^{\alpha_{2}} \dots p_{r}^{\alpha_{r}}$, wobei $p_{1},p_{2}, \dots ,p_{r}$ paarweise verschiedene Primzahlen sind und $\alpha_{1},\alpha_{2}, \dots ,\alpha_{r} \in \BN$. Bekanntlich entspricht jeder Teiler von $n$ einem $r$-Tupel von ganzen Zahlen $(\beta_1,\beta_2, \dots \beta_r)$ mit $0 \leq \beta_i \leq \alpha_i$ f¸r $1 \leq i \leq r$. Da wir nur die Teiler von $n$ in $A$ bzw. $B$ z‰hlen wollen, kˆnnen wir o.B.d.A annehmen, dass $p_{i} \neq 2$ oder $5$ f¸r $1 \leq i \leq r$. Sei nun $0 \leq s \leq r$ so, dass $p_1,p_2 \dots ,p_{s} \in A$ und $p_{s + 1}, p_{s + 2}, \dots ,p_{r} \in B$. Wegen der Bemerkung am Anfang gilt nun f¸r einen Teilder $d$ von $n$:
+
+$$d \in A \Longleftrightarrow \beta_{s+1} + \beta_{s+2} + \dots + \beta_{r} \ \text{gerade}$$
+$$d \in B \Longleftrightarrow \beta_{s+1} + \beta_{s+2} + \dots + \beta_{r} \ \text{ungerade}$$
+
+Insbesondere kˆnnen wir also auch $s = 0$ annehmen. Es bleibt zu zeigen, dass es mehr gerade Summen der Form $\beta_1 + \beta_2 + \dots + \beta_r$ gibt, als ungerade. Dies zeigen wir mit einer Induktion nach $r$, wobei wir mit $G_r$ die Anzahl gerader Summen und mit $U_r$ die Anzahl ungerader Summen bezeichnen. F¸r $r = 1$ ist die klar, da $0 \leq \beta_1 \leq \alpha_1$ und die Zahl $0$ gerade ist. F¸r den Induktionsschritt verwenden wir die rekursiven Relationen $G_{r+1} = G_rG_1 + U_rU_1$ sowie $U_{r+1} = G_rU_1 + U_rG_1$. Den wenn wir nun die Differenz bilden, erhalten wir $G_{r+1} - U_{r+1} = (G_r - U_r)(G_1 - U_1) \geq 0$, womit der Induktionsschritt und die Aufgabe bewiesen ist.\\
+
+\textbf{2Ëme solution:}\\
+
+On commence avec la mÍme observation que dans la solution prÈcÈdente: Si $a,a'\equiv 1$ ou $9$ mod $10$ et $b,b'\equiv 3$ ou $7$ mod $10$ alors 
+$aa',bb'\equiv 1$ ou $9$ mod $10$ et $ab \equiv 3$ ou $7$ mod $10$.
+
+Montrons d'abord l'assertion pour les puissances de nombres premiers: Clairement $f(2^k) = f(5^k)$ et $g(2^k) = g(5^k)= 0$. Si $p\equiv 1,9$ mod $10$ alors $f(p^k)=g(p^k) = k+1$ et $g(p^k)= 0$. Si $p\equiv 3,7$ mod $10$ alors les puissances paires de $p$ sont congrues ‡ $1,9$ mod $10$ et les puissances impaires congrues ‡ $3,7$ mod $10$. Ainsi on a dans tous les cas $f(p^k) \geq g(p^k)$.
+
+Supposons maintenant que pour un certain $n$ l'assertion est verifiÈe. Soit $p$ un premier qui ne divise pas $n$. Si l'on arrive ‡ montrer que $f(p^kn) \geq g(p^kn)$ on a fini. Si $p=2,5$ les deux termes ne changent pas. Supposons que $p\neq 2,5$. Soit $A$ l'ensemble des diviseurs de $n$ avec le dernier chiffre $1$ ou $9$ et $B$ l'ensemble des diviseurs de $n$ avec le dernier chiffre $3$ ou $7$. Alors l'ensemble de tous les diviseurs de $p^kn$ qui se terminent par $1,3,7$ ou $9$ est l'union disjointe des ensembles 
+$$
+	A, B, pA, pB, \ldots, p^kA, p^kB.
+$$
+Si $p \equiv 1,9$ mod $10$ alors
+$$
+	f(p^kn) = |A| + |pA| + \ldots |p^kA| = (k+1) f(n) \geq (k+1) g(n) = |B| + |pB| + \ldots |p^kB|= g(p^kn).
+$$ 
+Si $p \equiv 3, 7$ mod $10$ alors si est $k=2k'+1$
+$$
+	f(p^kn) = |A| + |pB| + \ldots + |p^{k-1}A| + |p^kB| = k (g(n) +  f(n))
+$$
+et 
+$$
+	g(p^kn) = |B| + |pA| + \ldots + |p^{k-1}B| + |p^kA| = k (g(n) + f(n)).
+$$
+Si $k = 2k'$ alors
+$$
+	f(p^kn) = |A| + |pB| + \ldots + |p^{k-1}B| + |p^kA| = k g(n) + (k+1) f(n) 
+$$
+et 
+$$
+	g(p^kn) = |B| + |pA| + \ldots + |p^{k-1}A| + |p^kB| = (k+1) g(n) + k f(n).
+$$
+
+\textbf{3. Lˆsung:}\\
+
+Zuerst zeigen wir den Fall $n=p^k$, wobei $p$ prim ist. F¸r $p=2,5$ ist die Aussage trivial: $f(2^k)=1>0=g(2^k)$,$f(5^k)=1>0=g(5^k)$. Sei nun $p$ verschieden von $2,5$. Es gilt nun $p^2\equiv \pm 1 \mod (10)$ und daher: $f(p^k)\ge \left\lceil \frac{k+1}{2} \right \rceil \ge \left\lfloor \frac{k+1}{2} \right \rfloor = k+1-\left\lceil \frac{k+1}{2} \right \rceil \ge g(p^k)$. Sei nun $F(n)$ die Menge aller Teiler von $n$, die mit einer $1$ oder $9$ aufhˆren, und $G(n)$ die Menge aller Teiler von $n$, die mit einer $3$ oder $7$ aufhˆren. Seien nun $a,b$ teilerfremd f¸r die gilt $f(a)\ge g(a)$ und $f(b) \ge g(b)$. Eine kurze Rechnung zeigt:
+$$F(ab)=F(a)F(b)\dot{\cup}G(a)G(b)$$
+$$G(ab)=F(a)G(b)\dot{\cup}G(a)F(b)$$
+und somit
+$$f(ab)-g(ab)=|F(ab)|-|G(ab)|=(f(a)-g(a))(f(b)-g(b))\ge 0$$
+Eine kleine Induktion zeigt das Gew¸nschte.\\
+
+\item[\textbf{10.}]
+Wir f¸hren eine Schachbrettf‰rbung ein. Alle Kakerlaken die auf weissen Feldern sitzen, kriechen auf schwarze Felder und umgekehrt. Da alles symmetrisch in schwarz und weiss ist, ist die maximale Anzahl freiwerdender weisser Felder gleich der maximalen Anzahl freiwerdender schwarzer Felder.\\
+
+Abbildung 4 zeigt, dass die Kakerlaken so in benachbarte Felder kriechen kˆnnen, sodass danach 12 schwarze Felder frei werden. Alle Kakerlaken auf den weissen Feldern kriechen auf ein mit einer Kakerlake gekennzeichnetes Feld. Dies ist mˆglich, da jedes weisse Feld an zwei solchen Feldern grenzt. 
+
+\begin{figure}[h]
+	\centering
+	\begin{minipage}[t]{7.6cm}
+		\centering
+		\includegraphics[scale=0.5]{Schachbrettmitkakerlaken}
+		\caption{Lˆsung f¸r 12 freie Felder}
+	\end{minipage}
+	\begin{minipage}[t]{7.6cm}
+		\centering
+		\includegraphics[scale=0.5]{Schachbrettfaerbung}
+		\caption{F‰rbung}
+	\end{minipage}
+\end{figure}
+
+Abbildung 5 zeigt, dass maximal 12 schwarze Felder frei werden. Die Kreuze, T-Tetrominos und L-Triominos haben ihr Zentrum jeweils auf einem weissen Feld. Von diesen weissen Feldern kriechn 2 Kakerlaken weg. Somit bleiben bei den Kreuzen, T-Tetrominos bzw. L-Triomino maximal 2, 1 bzw. 0 schwarze Felder frei. Dies sind insgesamt maximal 12.\\
+
+Also werden maximal 12 weisse und 12 schwarze, also 24 Felder frei. Wie schon gezeigt kˆnnen auch 24 Felder frei werden.
+
+\end{enumerate}
+
+
+\end{document}

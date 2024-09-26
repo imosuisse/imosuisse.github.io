@@ -1,0 +1,351 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{german}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+\leftmargin=0pt \topmargin=0pt \headheight=0in \headsep=0in \oddsidemargin=0pt \textwidth=6.5in
+\textheight=8.5in
+
+\catcode`\ä = \active \catcode`\Ä = \active \catcode`\ö = \active \catcode`\Ö = \active \catcode`\ü = \active
+\catcode`\Ü = \active
+
+\defÄ{"A}
+\defä{"a}
+\defÖ{"O}
+\defö{"o}
+\defÜ{"U}
+\defü{"u}
+
+
+
+
+
+
+
+% Schriftabkürzungen
+
+\newcommand{\eps}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\Sl}{\ell}    % schönes l
+\newcommand{\ve}{\varepsilon}  %Epsilon
+
+\newcommand{\BA}{{\mathbb{A}}}
+\newcommand{\BB}{{\mathbb{B}}}
+\newcommand{\BC}{{\mathbb{C}}}
+\newcommand{\BD}{{\mathbb{D}}}
+\newcommand{\BE}{{\mathbb{E}}}
+\newcommand{\BF}{{\mathbb{F}}}
+\newcommand{\BG}{{\mathbb{G}}}
+\newcommand{\BH}{{\mathbb{H}}}
+\newcommand{\BI}{{\mathbb{I}}}
+\newcommand{\BJ}{{\mathbb{J}}}
+\newcommand{\BK}{{\mathbb{K}}}
+\newcommand{\BL}{{\mathbb{L}}}
+\newcommand{\BM}{{\mathbb{M}}}
+\newcommand{\BN}{{\mathbb{N}}}
+\newcommand{\BO}{{\mathbb{O}}}
+\newcommand{\BP}{{\mathbb{P}}}
+\newcommand{\BQ}{{\mathbb{Q}}}
+\newcommand{\BR}{{\mathbb{R}}}
+\newcommand{\BS}{{\mathbb{S}}}
+\newcommand{\BT}{{\mathbb{T}}}
+\newcommand{\BU}{{\mathbb{U}}}
+\newcommand{\BV}{{\mathbb{V}}}
+\newcommand{\BW}{{\mathbb{W}}}
+\newcommand{\BX}{{\mathbb{X}}}
+\newcommand{\BY}{{\mathbb{Y}}}
+\newcommand{\BZ}{{\mathbb{Z}}}
+
+\newcommand{\Fa}{{\mathfrak{a}}}
+\newcommand{\Fb}{{\mathfrak{b}}}
+\newcommand{\Fc}{{\mathfrak{c}}}
+\newcommand{\Fd}{{\mathfrak{d}}}
+\newcommand{\Fe}{{\mathfrak{e}}}
+\newcommand{\Ff}{{\mathfrak{f}}}
+\newcommand{\Fg}{{\mathfrak{g}}}
+\newcommand{\Fh}{{\mathfrak{h}}}
+\newcommand{\Fi}{{\mathfrak{i}}}
+\newcommand{\Fj}{{\mathfrak{j}}}
+\newcommand{\Fk}{{\mathfrak{k}}}
+\newcommand{\Fl}{{\mathfrak{l}}}
+\newcommand{\Fm}{{\mathfrak{m}}}
+\newcommand{\Fn}{{\mathfrak{n}}}
+\newcommand{\Fo}{{\mathfrak{o}}}
+\newcommand{\Fp}{{\mathfrak{p}}}
+\newcommand{\Fq}{{\mathfrak{q}}}
+\newcommand{\Fr}{{\mathfrak{r}}}
+\newcommand{\Fs}{{\mathfrak{s}}}
+\newcommand{\Ft}{{\mathfrak{t}}}
+\newcommand{\Fu}{{\mathfrak{u}}}
+\newcommand{\Fv}{{\mathfrak{v}}}
+\newcommand{\Fw}{{\mathfrak{w}}}
+\newcommand{\Fx}{{\mathfrak{x}}}
+\newcommand{\Fy}{{\mathfrak{y}}}
+\newcommand{\Fz}{{\mathfrak{z}}}
+
+\newcommand{\FA}{{\mathfrak{A}}}
+\newcommand{\FB}{{\mathfrak{B}}}
+\newcommand{\FC}{{\mathfrak{C}}}
+\newcommand{\FD}{{\mathfrak{D}}}
+\newcommand{\FE}{{\mathfrak{E}}}
+\newcommand{\FF}{{\mathfrak{F}}}
+\newcommand{\FG}{{\mathfrak{G}}}
+\newcommand{\FH}{{\mathfrak{H}}}
+\newcommand{\FI}{{\mathfrak{I}}}
+\newcommand{\FJ}{{\mathfrak{J}}}
+\newcommand{\FK}{{\mathfrak{K}}}
+\newcommand{\FL}{{\mathfrak{L}}}
+\newcommand{\FM}{{\mathfrak{M}}}
+\newcommand{\FN}{{\mathfrak{N}}}
+\newcommand{\FO}{{\mathfrak{O}}}
+\newcommand{\FP}{{\mathfrak{P}}}
+\newcommand{\FQ}{{\mathfrak{Q}}}
+\newcommand{\FR}{{\mathfrak{R}}}
+\newcommand{\FS}{{\mathfrak{S}}}
+\newcommand{\FT}{{\mathfrak{T}}}
+\newcommand{\FU}{{\mathfrak{U}}}
+\newcommand{\FV}{{\mathfrak{V}}}
+\newcommand{\FW}{{\mathfrak{W}}}
+\newcommand{\FX}{{\mathfrak{X}}}
+\newcommand{\FY}{{\mathfrak{Y}}}
+\newcommand{\FZ}{{\mathfrak{Z}}}
+
+\newcommand{\CA}{{\cal A}}
+\newcommand{\CB}{{\cal B}}
+\newcommand{\CC}{{\cal C}}
+\newcommand{\CD}{{\cal D}}
+\newcommand{\CE}{{\cal E}}
+\newcommand{\CF}{{\cal F}}
+\newcommand{\CG}{{\cal G}}
+\newcommand{\CH}{{\cal H}}
+\newcommand{\CI}{{\cal I}}
+\newcommand{\CJ}{{\cal J}}
+\newcommand{\CK}{{\cal K}}
+\newcommand{\CL}{{\cal L}}
+\newcommand{\CM}{{\cal M}}
+\newcommand{\CN}{{\cal N}}
+\newcommand{\CO}{{\cal O}}
+\newcommand{\CP}{{\cal P}}
+\newcommand{\CQ}{{\cal Q}}
+\newcommand{\CR}{{\cal R}}
+\newcommand{\CS}{{\cal S}}
+\newcommand{\CT}{{\cal T}}
+\newcommand{\CU}{{\cal U}}
+\newcommand{\CV}{{\cal V}}
+\newcommand{\CW}{{\cal W}}
+\newcommand{\CX}{{\cal X}}
+\newcommand{\CY}{{\cal Y}}
+\newcommand{\CZ}{{\cal Z}}
+
+% Theorem Stil
+
+\theoremstyle{plain}
+\newtheorem{lem}{Lemma}
+\newtheorem{Satz}[lem]{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem{bem}{Bemerkung}    %[section]
+
+
+
+\newcommand{\card}{\mathop{\rm card}\nolimits}
+\newcommand{\Sets}{((Sets))}
+\newcommand{\id}{{\rm id}}
+\newcommand{\supp}{\mathop{\rm Supp}\nolimits}
+
+\newcommand{\ord}{\mathop{\rm ord}\nolimits}
+\renewcommand{\mod}{\mathop{\rm mod}\nolimits}
+\newcommand{\sign}{\mathop{\rm sign}\nolimits}
+\newcommand{\ggT}{\mathop{\rm ggT}\nolimits}
+\newcommand{\kgV}{\mathop{\rm kgV}\nolimits}
+\renewcommand{\div}{\, | \,}
+\newcommand{\notdiv}{\mathopen{\mathchoice
+             {\not{|}\,}
+             {\not{|}\,}
+             {\!\not{\:|}}
+             {\not{|}}
+             }}
+
+\newcommand{\im}{\mathop{{\rm Im}}\nolimits}
+\newcommand{\coim}{\mathop{{\rm coim}}\nolimits}
+\newcommand{\coker}{\mathop{\rm Coker}\nolimits}
+\renewcommand{\ker}{\mathop{\rm Ker}\nolimits}
+
+\newcommand{\pRang}{\mathop{p{\rm -Rang}}\nolimits}
+\newcommand{\End}{\mathop{\rm End}\nolimits}
+\newcommand{\Hom}{\mathop{\rm Hom}\nolimits}
+\newcommand{\Isom}{\mathop{\rm Isom}\nolimits}
+\newcommand{\Tor}{\mathop{\rm Tor}\nolimits}
+\newcommand{\Aut}{\mathop{\rm Aut}\nolimits}
+
+\newcommand{\adj}{\mathop{\rm adj}\nolimits}
+
+\newcommand{\Norm}{\mathop{\rm Norm}\nolimits}
+\newcommand{\Gal}{\mathop{\rm Gal}\nolimits}
+\newcommand{\Frob}{{\rm Frob}}
+
+\newcommand{\disc}{\mathop{\rm disc}\nolimits}
+
+\renewcommand{\Re}{\mathop{\rm Re}\nolimits}
+\renewcommand{\Im}{\mathop{\rm Im}\nolimits}
+
+\newcommand{\Log}{\mathop{\rm Log}\nolimits}
+\newcommand{\Res}{\mathop{\rm Res}\nolimits}
+\newcommand{\Bild}{\mathop{\rm Bild}\nolimits}
+
+\renewcommand{\binom}[2]{\left({#1}\atop{#2}\right)}
+\newcommand{\eck}[1]{\langle #1 \rangle}
+\newcommand{\wi}{\hspace{1pt} < \hspace{-6pt} ) \hspace{2pt}}
+
+
+\begin{document}
+
+\pagestyle{empty}
+
+
+\begin{center}
+{\huge Schweizer IMO - Selektion 2000} \\
+\medskip erste Prüfung - 28. April 2000
+\end{center}
+\vspace{8mm}
+Zeit: 3 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{1.}] Einem Kreis ist ein konvexes Viereck $ABCD$ einbeschrieben. Zeige, dass die Sehne, welche die
+Mittelpunkte der beiden Bogen $\widehat{AB}$ und $\widehat{CD}$ verbindet, senkrecht steht auf der Sehne, welche
+die beiden Bogenmittelpunkte von $\widehat{BC}$ und $\widehat{DA}$ miteinander verbindet.
+
+\bigskip
+
+\item[\textbf{2.}] Die reellen Zahlen $a_1,a_2,\ldots,a_{16}$ erfüllen die beiden Bedingungen
+\[\sum_{i=1}^{16} a_i =100 \qquad \mbox{und} \qquad \sum_{i=1}^{16} a_i^2=1000.\]
+Was ist der grösstmögliche Wert, den $a_{16}$ annehmen kann?
+
+\bigskip
+
+\item[\textbf{3.}] Gegeben sind ein gleichseitiges Dreieck mit der Seitenlänge 1 und fünf gleich grosse,
+gleichseitige Dreiecke der Seitenlänge $s<1$. Zeige: Lässt sich das grosse Dreieck mit den fünf kleinen
+überdecken, so lässt es sich auch schon mit vier der kleinen überdecken.
+
+\bigskip
+
+\item[\textbf{4.}] Es sei $q(n)$ die Quersumme der natürlichen Zahl $n$. Bestimme den Wert von
+\[q(q(q(2000^{2000}))).\]
+
+\bigskip
+
+\item[\textbf{5.}] Mit Hilfe der drei Buchstaben \textsf{I, O, M} werden Wörter der Länge $n$ gebildet. Wieviele solche
+Wörter der Länge $n$ gibt es, in denen keine benachbarten \textsf{M}'s vorkommen?
+
+
+\end{enumerate}
+
+
+\pagebreak
+
+
+\begin{center}
+{\huge Schweizer IMO - Selektion 2000} \\
+\medskip Nachprüfung zum 28. April
+\end{center}
+\vspace{8mm}
+Zeit: 3 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{1.}] Die positiven reellen Zahlen $x,y$ und $z$ haben Summe 1. Zeige, dass gilt
+\[\sqrt{7x+3}+\sqrt{7y+3}+\sqrt{7z+3} \leq 7.\]
+Kann die Zahl $7$ auf der rechten Seite durch eine kleinere Zahl ersetzt werden?
+
+\bigskip
+
+\item[\textbf{2.}] Beweise, dass die Gleichung
+\[14x^2+15y^2=7^{2000}\]
+keine ganzzahlige Lösungen $(x,y)$ besitzt.
+
+\bigskip
+
+\item[\textbf{3.}] Für $x>0$ sei $f(x)=4^x/(4^x+2)$. Bestimme den Wert der Summe
+\[\sum_{k=1}^{1290} f\left(\frac{k}{1291}\right).\]
+
+\bigskip
+
+\item[\textbf{4.}] Gegeben sind zwei Kreise $k_1$ und $k_2$, die sich in den verschiedenen Punkten $P$ und $Q$
+schneiden. Konstruiere eine durch $P$ verlaufende Strecke $AB$ mit ihren Endpunkten auf $k_1$ und $k_2$, sodass
+das Produkt $|AP|\cdot|PB|$ maximal ist.
+
+\bigskip
+
+\item[\textbf{5.}] Auf einer kreisförmigen Rennbahn ist an $n$ verschiedenen Positionen je ein Auto startbereit.
+Jedes von ihnen fährt mit konstantem Tempo und braucht eine Stunde pro Runde. Sobald das Startsignal ertönt,
+fährt jedes Auto sofort los, egal in welche der beiden möglichen Richtungen. Falls sich zwei Autos begegnen,
+ändern beide ihre Richtung und fahren ohne Zeitverlust weiter. Zeige, dass es einen Zeitpunkt gibt, in dem sich
+alle Autos wieder in ihren ursprünglichen Startpositionen befinden.
+
+
+\end{enumerate}
+
+
+\pagebreak
+
+
+
+\begin{center}
+{\huge Schweizer IMO - Selektion 2000} \\
+\medskip zweite Prüfung - 20. Mai 2000
+\end{center}
+\vspace{8mm}
+Zeit: 3 Stunden\\
+Jede Aufgabe ist 7 Punkte wert.
+
+\vspace{15mm}
+
+\begin{enumerate}
+
+\item[\textbf{1.}] Jede Ecke eines regelmässigen $2n$-Ecks ($n \geq 3$) soll mit einer Zahl aus der Menge
+$\{1,2,\ldots,2n\}$ beschriftet werden, und zwar so, dass die Summe der Zahlen benachbarter Ecken stets gleich
+ist wie die Summe der Zahlen in den beiden diametral gegenüberliegenden Ecken. Zudem müssen die in den $2n$
+Ecken stehenden Zahlen alle verschieden sein. Zeige, dass dies genau dann möglich ist, wenn $n$ ungerade ist.
+
+\bigskip
+
+\item[\textbf{2.}] Bestimme alle Funktionen $f: \BR \rightarrow \BR$, sodass für alle reellen Zahlen $x$ und $y$
+gilt
+\[f(f(x)+y)=f(x^2-y)+4yf(x).\]
+
+\bigskip
+
+\item[\textbf{3.}] Der Inkreis des Dreiecks $ABC$ berührt die Seiten $AB$, $BC$ und $CA$ in den Punkten $D$, $E$
+und $F$. Sei $P$ ein Punkt im Innern von $ABC$, sodass der Inkreis von $ABP$ die Seite $AB$ ebenfalls in $D$
+berührt und die Seiten $AP$ und $BP$ in den Punkten $Q$ und $R$. Zeige, dass die vier Punkte $E, F, R$ und $Q$
+auf einem Kreis liegen.
+
+\bigskip
+
+\item[\textbf{4.}] Sei $P$ ein Polynom vom Grad $n$, sodass gilt
+\[P(k)=\frac{k}{k+1} \qquad \mbox{für} \qquad k=0,1,2, \ldots, n.\]
+Finde $P(n+1)$.
+
+\bigskip
+
+\item[\textbf{5.}] Es sei $S=\{P_1,P_2,\ldots,P_{2000}\}$ eine Menge von 2000 Punkten im Innern eines Kreises
+vom Radius 1, sodass einer der Punkte der Kreismittelpunkt ist. Für $i=1,2,\ldots,2000$ bezeichne $x_i$ den
+Abstand von $P_i$ zum nächstgelegenen Punkt $P_j \neq P_i$ aus $S$. Zeige, dass gilt
+\[x_1^2+x_2^2+\ldots+x_{2000}^2 < 9.\]
+
+
+\end{enumerate}
+\end{document}

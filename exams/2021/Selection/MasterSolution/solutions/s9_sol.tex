@@ -1,0 +1,91 @@
+\en{Find all polynomials $P$ with real coefficients having no repeated roots, such that for any complex number $z$, the equation $zP(z)=1$ holds if and only if $P(z-1)P(z+1)=0$.
+\bigskip
+
+\textbf{First solution (David, inspired by Arnaud):}
+Assume that we have a polynomial $P$ that satisfies the desired conditions. We begin by examining some easy cases:
+
+If $P$ is a constant polynomial, that is, $P(z) = c$ for some $c \in \mathbb{R}$, the condition becomes $cz = 1$ if and only if $c^2 = 0$. If $c=0$, then $c^2=0$ is always satisfied while $cz=1$ cannot hold, contradiction. If however $c \neq 0$, we can plug in $z = \frac{1}{c}$ to obtain a contradiction. Therefore, there are no solutions among constant polynomials.
+
+What about polynomials of the form $P(z) = mz + b$ where $m \neq 0$? The condition becomes $mz^2 + bz = 1$ if and only if $(m(z-1) + b)(m(z+1)+b) = 0$, so the two quadratic polynomials $mz^2+bz-1$ and $m^2z^2 + 2bmz + (b^2-m^2)$ have the same roots, and this means that they are multiples of each other. By comparing the leading coefficients we see that the multiplying factor is $m$, and by comparing the other coefficients we get that $bm = 2bm$ and $-m = b^2-m^2$. Since $m \neq 0$, the first of these two equations gives us $b=0$ and the second $m=1$. This shows that the only linear polynomial that can satisfy these conditions is $P(z)=z$, which is obviously a solution.
+
+
+Let's now assume that $\text{deg}(P) = n \geq 2$. 
+
+Consider the polynomial $Q(z) = (z+1)P(z+1) - (z-1)P(z-1)$. It's easy to see that $\text{deg}(Q) \leq \text{deg}(P)$ (since the highest degree terms of $(z+1)P(z+1)$ and $(z-1)P(z-1)$ cancel out). We show that $Q$ also has the same roots as $P$: 
+
+If $P(r) = 0$ for some complex number $r$, by plugging in $z = r \pm 1$ in the condition of the problem, we see that $(r-1)P(r-1) = 1 = (r+1)P(r+1)$ and therefore $Q(r)=0$. This shows that all roots $P$ are also roots of $Q$. Since $P$ has no repeated roots and the degree of $Q$ is not greater than the degree of $P$, we deduce that $Q$ is just a multiple of $P$. 
+
+Let $P(z) = \sum_{k=0}^{n} a_k z^k$. This gives us 
+\begin{equation}
+\label{eq}
+    Q(z) = \sum_{k=0}^{n} a_k \big( (z+1)^{k+1} - (z-1)^{k+1} \big). \tag{$\star$}
+\end{equation}
+In order to compare $Q$ to $P$, we would like to write it in the form $Q(z) = \sum_{k=0}^{n} b_k z^k$. To compute $b_n$, note that the only terms in \eqref{eq} that contain $z^n$ come from $k=n-1$ and $k=n$. we get 
+\[ b_n z^n = a_{n-1}(z^n - z^n) + a_n\big( (n+1)z^n - (-(n+1)z^n \big) = 2(n+1)a_n z^n, \]
+so we must have $Q = 2(n+1)P$. Now we compute $b_{n-1}$. Similarly to above, we see that the only relevant terms in \eqref{eq} come from $k=n-2$, $k=n-1$ or $k=n$. We get
+\begin{align*}
+b_{n-1} z^{n-1} &= a_{n-2}(z^{n-1}-z^{n-1}) + a_{n-1}\big(n z^{n-1} - (-n) z^{n-1} \big) + a_{n}\bigg( \binom{n+1}{2}z^{n-1} - \binom{n+1}{2}z^{n-1} \bigg) \\
+&= 2n a_{n-1} z^{n-1}.
+\end{align*}
+But if $Q=2(n+1)P$, we must have $b_{n-1} = 2(n+1) a_{n-1}$, contradiction! This shows that there cannot be any polynomial of degree $\geq 2$ satisfying the desired conditions.
+
+\newpage
+
+\textbf{Second solution using complex numbers (David):}
+
+We give a different argument for the case $n \geq 2$:
+
+Note that the problem statement is equivalent to the statement that the two polynomials $zP(z)-1$ and $P(z-1)P(z+1)$ have the same set of roots. However, the polynomial $zP(z)-1$ has degree $n+1$ and thus at most $n+1$ different roots. On the other hand, for each of the distinct roots $r_1, r_2, \dots , r_n$ of $P$, the numbers $r_1 + 1, \dots , r_n + 1$ are roots of $P(z-1)$ and the numbers $r_1 - 1, \dots, r_n-1$ are roots of $P(z+1)$. Write $r_k = x_k + y_k i$. For any fixed $y$ we note the following: 
+
+If there are $m$ roots of $P$ with imaginary part $y$, then there are at least $m+1$ distinct numbers among $\{r_1 - 1, \dots , r_n - 1, r_1+1, \dots, r_n+1\}$ with imaginary part $y$. This is because if WLOG $r_1, \dots r_m$ all have imaginary part $y$ and real parts $x_1 < \ldots < x_m$ (the strict inequality holds because we cannot have repeated roots), then the $m+1$ numbers $r_1 - 1, r_1 + 1, \dots , r_m + 1$ all have different real part and so they must be different.
+
+Since we cannot have more than $n+1$ roots, we conclude that $y_1 = \ldots = y_n$. In fact, they are all equal to zero because we know that if $x_k + y_ki$ is a root of a polynomial with real coefficients, then so is $x_k - y_ki$. But since all $y_k$ are equal, we must have $y_k = -y_k$.
+
+Since $y_1 = \ldots = y_n$, the $x_k = r_k$ are pairwise distinct and we can order them $x_1 < \dots < x_n$. Analogously to above, we have
+$x_1 - 1 < x_1 + 1 < \dots < x_n + 1$, so those have to be our $n+1$ roots. Clearly, $x_k-1$ is the $k$-th smallest root, and by comparing to our chain of inequalities above, we must have $x_k-1 = x_{k-1} + 1$, or $x_k = x_{k-1}+2$.
+
+All in all, we leared that all the roots of $P(z)$ are real and form an arithmetic progression of difference $2$. We can therefore write:
+\[
+P(z) = c \cdot (z-a+2) \cdot (z-a+4) \cdot \ldots \cdot (z-a+2n)
+\]
+for some constants $a, c \in \R$ where $c \neq 0$. Hence, we can also write:
+\[
+zP(z) - 1 = c \cdot z \cdot (z-a+2) \cdot \ldots \cdot (z-a+2n) - 1 
+\]
+The conditions in the problem statement now imply that the roots of the polynomial $zP(z)-1$ are $\{a-1, a-3, \dots a-(2n+1) \}$. Plugging in $z=a-1$ into the equation above, we get
+\begin{equation}
+\label{first}
+1 = c \cdot (a-1) \cdot 1 \cdot 3 \cdot \ldots  \cdot (2n-1). \tag{$\star$}
+\end{equation}
+On the other hand, plugging in $z= a-(2n+1)$ gives
+\begin{equation}
+\label{second}
+    1 = c \cdot (a - (2n+1)) \cdot (-(2n-1)) \cdot \ldots \cdot (-3) \cdot (-1). \tag{$\star \star$}
+\end{equation}
+By taking absolute values of \eqref{first} and \eqref{second} and using $c \neq 0$, we see that $ |a-1| = |a-(2n+1)|$, so $a = n+1$, which allows us to find $c>0$ using \eqref{first}. But now we can plug $z=a-3 = n-2$ into the equation for $zP(z)-1$ above to obtain
+\[
+1 = c \cdot (n-2) \cdot (-1) \cdot 1 \cdot \ldots \cdot (2n-3).
+\]
+Since $n \geq 2$, each factor on the RHS except for the $-1$ is non-negative, which means that this equation cannot hold! We conclude that there is no such $P$ for $n \geq 2$.
+
+\newpage
+
+\textbf{Marking Scheme (First solution)}
+\begin{enumerate}
+    \item 1P: Treating both cases $n=0$ and $n= 1$
+    \item 2P: Introducing $Q$
+    \item 1P: Arguing that $Q$ is a multiple of $P$
+    \item 1P: Computing the leading coefficient of $Q$
+    \item 2P: Computing the second coefficient of $Q$ and finishing
+\end{enumerate}
+
+\textbf{Marking Scheme (Second solution)}
+\begin{enumerate}
+    \item 1P: Treating both cases $n=0$ and $n=1$
+    \item 1P: Noting that $P(z-1)P(z+1)$ has at most $n+1$ different roots
+    \item 2P: Claiming that the roots of $P$ form an arithmetic progression of difference $2$
+    \item 1P: Proving the aforementioned claim rigorously
+    \item 2P: Finishing 
+\end{enumerate}
+
+}

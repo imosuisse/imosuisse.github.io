@@ -1,0 +1,68 @@
+
+\de{Das Dorf Roche hat $2020$ Einwohner. Eines Tages macht der berühmte Mathematiker Georges de Rham die folgenden Beobachtungen:
+\begin{itemize}
+    \item Jeder Dorfbewohner kennt einen weiteren mit dem gleichen Alter.
+    \item In jeder Gruppe von $192$ Personen aus dem Dorf gibt es mindestens drei mit demselben Alter.
+\end{itemize}{}
+Zeige, dass es eine Gruppe von $22$ Dorfbewohnern gibt, die alle dasselbe Alter haben.
+
+\textbf{Lösung:} Wir beweisen, dass höchstens $95$ verschiedene Alter vorkommen. Nehme an es treten $96$ oder mehr verschiedene Alter auf. Da jeder Dorfbewohner einen mit dem selben Alter kennt, können wir Paare mit $96$ verschiedenen Altern bilden, total gibt es also eine Gruppe von $192$ Dorfbewohnern, in welchen keine drei Personen das selbe Alter haben. Dies widerspricht de Rham's zweiter Bedingung. Da wir nun wissen, dass es höchstens $95$ verschiedene Alter gibt, können wir das Schubfachprinzip anwenden und sehen, dass mindestens eine Altersgruppe von mindestens $\lceil \frac{2020}{95} \rceil = 22$ Dorfbewohnern repräsentiert wird. Bemerke, dass $96$ verschiedene Alter zum selben Resultat führen, die stärkste Bedingung also $194$ anstatt $192$ ist.
+
+\textbf{Marking Scheme:}
+Die ersten beiden Punkte sind nicht additiv.
+\begin{itemize}
+    \item 2P: Beweis, dass die Aussage stimmt, falls es höchstens $k$ verschiedene Altersgruppen gibt für ein $k \in \{95,96 \}$ 
+    \item 1P: Beweis, dass die Aussage stimmt, falls es höchstens $k$ verschiedene Altersgruppen gibt für ein $k \in \{92,93,94 \}$
+    \item 5P: Beweis dafür, dass es höchstens $k$ Altersgruppen gibt für ein $k \in \{95,96 \}$
+
+\end{itemize}
+}
+
+\fr{Dans le village Roche vivent 2020 personnes. Un jour, le fameux mathématicien Georges de Rham fait les observations suivantes:
+\begin{itemize}
+    \item Chaque villageois connaît un autre villageois du même âge que lui.
+    \item Chaque groupe de 192 personnes dans le village contient toujours au moins trois personnes qui ont le même âge.
+\end{itemize}
+Montrer qu'il existe un groupe de 22 villageois qui ont tous le même âge.
+
+\textbf{Solution:} On prouve qu'il y a au plus 95 âges différents: on suppose qu'il y plus de 96 âges différents. Comme chaque villageois connaît quelqu'un qui a le même âge que lui, on peut former un groupe de 192 villageois dans lequel on ne peut pas trouver un groupe de trois personnes qui ont le même âge. Cela contredit la deuxième hypothèse. Donc il existe au plus 95 âges différents. On applique le principe des tiroirs. Il existe un groupe d'âge dans lequel il y a au moins $\lceil \frac{2020}{95} \rceil = 22$ personnes.
+Remarque: Ce résultat est aussi valable pour 96 âges différents, donc le cas maximal est un groupe de 194 personnes.
+
+\textbf{Marking Scheme:}
+Les deux premiers points ne sont pas additifs.
+\begin{itemize}
+    \item 2P: Montrer qu'il suffit de traiter le cas dans lequel il y a au plus $k$ âges différents, pour $k \in \{95,96 \}$ 
+    \item 1P: Montrer qu'il suffit de traiter le cas dans lequel il y a au plus $k$ âges différents, pour $k \in \{92,93,94 \}$
+    \item 5P: Montrer qu'il y a au plus $k$ âges différents, avec $k \in \{95,96 \}$
+
+\end{itemize}
+
+
+}
+
+\ita{}
+
+\en{The village of Roche has 2020 residents. One day, the famous mathematician Georges de Rham makes the following observations:
+\begin{itemize}
+  \item Every villager knows someone else with the same age as them.
+  \item For any group of 192 people in the village, there are always at least three of them that have the same age.
+\end{itemize}
+Prove that there must exist a group of 22 villagers that all have the same age.
+
+\textbf{Solution:} We prove there are at most 95 different possible ages. Suppose there are 96 or more different ages amongst them. Since each villager knows someone else with the same age as them, we can find two villagers for each of 96 different ages, forming a group of 192 villagers where no group of three with the same age exists, contradicting de Rham's second observation. Knowing that there are 95 different ages, we can now apply the pigeonhole principle to get that there is an age group represented at least $\lceil \frac{2020}{95} \rceil = 22$ times. Note that 96 different ages also yields this value, so the limiting case is groups of 194 people. 
+
+\textbf{Marking Scheme:}
+The first two are non-additive.
+\begin{itemize}
+    \item 2P: Show that it suffices to prove that there are at most $k$ different ages for some $k \in \{95,96 \}$ 
+    \item 1P: Show that it suffices to prove that there are at most $k$ different ages for some $k \in \{92,93,94 \}$
+    \item 5P: Prove that there are at most $k$ ages for some $k \in \{95,96 \}$
+
+\end{itemize}
+}
+
+
+
+
+
+ 

@@ -1,0 +1,93 @@
+Trouver le plus grand nombre premier $p$ tel qu'il existe des nombres entiers strictement positifs $a$ et $b$ tels que
+\[
+p=\frac{b}{2}\sqrt{\frac{a-b}{a+b}}.
+\]
+
+\textbf{Première solution:} (Louis) La forme du problème semble indiquer qu'il faudra jouer avec des histoires de divisibilité. Dans de tels cas il est généralement utile de définir $d = \pgcd(a, b)$ et d'écrire ainsi $a = da'$, $b = db'$ avec $a', b'$ premiers entre eux. Cela nous permet alors de réécrire la formule comme
+\[
+p=\frac{db'}{2}\sqrt{\frac{a'-b'}{a'+b'}}.
+\]
+
+Maintenant pour avoir une solution il faut que le terme sous la racine carrée soit un carré parfait. Autrement dit, si on divise $a'-b'$ et $a'+b'$ par leur pgcd on devrait obtenir des carrés parfaits. Il est donc intéressant de s'intéresser encore à ce pgcd:
+\[
+    \pgcd(a'-b', a'+b') = \pgcd(a'-b', 2b') = \pgcd(a'-b', 2).
+\]
+Où la dernière égalité découle du fait que $b'$ est premier avec $a'$ et donc également avec $a'-b'$. Autrement dit le pgcd entre ces deux termes vaut soit $1$, soit $2$. On va traiter ces deux cas séparément:
+
+Si le pgcd vaut $1$, on a alors $a'-b' = r^2$ et $a'+b' = s^2$, et à partir de ces relations on obtient $2b' = s^2-r^2$. De plus pour que le pgcd soit $1$, on doit avoir que $a'-b', a'+b'$ sont tous les deux impairs, donc $r, s$ sont impairs. On peut alors réécrire le problème sous la forme
+\[
+    ps = \frac{d(s^2-r^2)}{4}r = dr\frac{s-r}{2}\frac{s+r}{2}.
+\]
+Puisque $s$ est premier avec $r$, il est aussi premier avec $s-r$ et $s+r$ donc il doit diviser $d$. Cela signifie alors que $p$ est divisible par $r\frac{s-r}{2}\frac{s+r}{2}$, ce qui est possible uniquement si $r=1$, $s-r=2$ et donc $s+r = 4$. Dans ce cas on obtient donc $p=2$.
+
+Si le pgcd vaut $2$, on a dans ce cas $a'-b' = 2r^2$ et $a' + b' = 2s^2$, et on obtient $b' = s^2-r^2 = (s-r)(s+r)$. De nouveau on peut réécrire le problème sous la forme
+\[
+    2ps = d(s-r)(s+r)r.
+\]
+Comme précédemment on doit avoir que $s$ divise $d$, et donc $2p$ est divisible par $r(s-r)(s+r)$. Il y a trois cas à considérer:
+\begin{itemize}
+    \item Si $r = s-r = 1$, alors $s+r = 3$ et donc on doit avoir $p=3$.
+    \item Si $r=1$ et $s-r=2$, on a $s+r = 4$ mais alors il faudrait que $4$ divise $p$, ce qui est impossible.
+    \item Si $r=2$ et $s-r = 1$, on a alors $s+r = 5$ et donc $p=5$.
+\end{itemize}
+
+Parmi tous ces cas, on voit que $p$ ne peut pas dépasser $5$. Il reste encore à prouver qu'on peut atteindre $5$. Pour cela il suffit de rembobiner depuis les conditions qui ont amené à cette valeur de $5$ pour trouver qu'on peut atteindre $5$ avec la paire $(a, b) = (39, 15)$.
+
+\textbf{Zweite Lösung:} (David) Um das Problem besser angreifen zu können, quadrieren wir die Gleichung und formen um:
+\[
+4p^2a + 4p^2b = ab^2 - b^3 \; \Longleftrightarrow \; b^3 + 4p^2b = a(b^2 - 4p^2)
+\]
+Insbesondere gilt $b > 2p$. Zudem sehen wir anhand dieser Gleichung, dass $a$ eigentlich ziemlich unnütz ist; Wir können nämlich einfach nach $a$ auflösen und erhalten die folgende Teilbarkeitsaussage, in der nur noch $b$ und $p$ vorkommen:
+\[
+b^2-4p^2 \ | \ b^3 + 4p^2b \; \Longleftrightarrow \; b^2 - 4p^2 \ | \ 8p^2b \; \Longleftrightarrow \; (b-2p)(b+2p) \ | \ 8p^2b
+\]
+Wenn wir schreiben $k(b^2-4p^2) = 8p^2b \; \Longleftrightarrow \; kb^2 - 8p^2b - 4kp^2 = 0$, erhalten wir eine quadratische Gleichung in $b$ mit Lösungen
+\[
+b = \frac{8p^2 \pm \sqrt{64p^4 + 16kp^2k^2}}{2k} = \frac{4p^2 \pm 2p\sqrt{4p^2+k^2}}{k}
+\]
+Würde nun $k=mp$ gelten für eine natürliche Zahl $m$, so könnten wir die Gleichung schreiben als
+\[
+\frac{4p^2 \pm 2p^2\sqrt{4+m^2}}{mp}.
+\]
+Da $4+m^2$ aber für kein $m \in \mathbb{N}$ ein Quadrat ist, steht das im Widerspruch zu $b \in \mathbb{N}$. Somit ist $k$ nicht durch $p$ teilbar. Dann folgt aber aus unserer ursprünglichen Gleichung für $b$, dass $b$ durch $p$ teilbar sein muss! Wir schreiben $b=lp$ und gehen zurück zu unserer Teilbarkeitsaussage:
+\[
+(b-2p)(b+2p) \ | \ 8p^2b \; \Longleftrightarrow \; p^2(l-2)(l+2) \ | \ 8p^3l \; \Longleftrightarrow \; (l-2)(l+2) \ | \ 8pl
+\]
+Nun gilt $\text{ggT}(l-2,l+2) \ | \ 4$, also muss für $p>2$ mindestens eine der Zahlen $l-2$ und $l+2$ ein Teiler von $8l$ sein. Mit 
+\[
+l-2 \ | \ 8l \; \Longleftrightarrow \; l-2 \ | \ 16, \hspace{2cm} l+2 \ | \ 8l \; \Longleftrightarrow \; l+2 \ | \ 16
+\]
+und mit $l>2$ erhalten wir $l \in \{3,4,6,10,14,18 \}$. Eine sorgfältige Untersuchung dieser Fälle mithilfe der Primfaktoren von $(l-2)(l+2)$ liefert das grösstmögliche $p=5$ für $l=3$. Wir erhalten für $p=5$ tatsächlich eine Lösung der Gleichung, nämlich $(a,b,p) = (39,15,5)$. 
+
+\newpage
+\textbf{Marking scheme:}
+Dans chacune des trois solutions, une solution complète où on oublie de vérifier qu'on peut atteindre la valeur $p=5$ sera pénalisée d'un point.
+\begin{enumerate}
+    \item Première solution:
+\begin{itemize}
+    \item 1P: Exprimer $a-b = \lambda r^2$, $a+b = \lambda s^2$ pour un certain entier $\lambda$.
+    \item 1P: Déterminer que $\lambda$ vaut soit $d$, soit $2d$.
+    \item 1P: Déterminer que $s$ divise $d$.
+    \item 1P: Se ramener à un nombre fini de cas à étudier (par exemple en utilisant que $p$ ou $2p$ est un produit de trois termes.
+    \item $2\times 1$P: Terminer chacun des deux cas $\lambda = d$ et $\lambda = 2d$.
+\end{itemize}
+Si le deuxième point n'est pas obtenu, il est quand même possible d'obtenir des points pour les étapes suivantes si des résultats similaires sont obtenus.
+
+    \item Deuxième solution:
+\begin{itemize}
+    \item 2P: Find the relation $b^2-4p^2 \div 8p^2b$.
+    \begin{itemize}
+        \item 1P: Find the relation $b^2-4p^2 \div b^3 + 4p^2b$.
+    \end{itemize}
+    \item 3P: Deduce $p\div b$.
+    \begin{itemize}
+        \item 1P: Apply the formula for the roots of the quadratic equation in $b$.
+        \item 1P: Deduce that $4p^2 + k^2$ must be a square.
+    \end{itemize}
+    \item 2P: Conclude.
+    \begin{itemize}
+        \item 1P: Reduce the problem to finitely many cases to consider.
+    \end{itemize}
+\end{itemize}
+
+\end{enumerate}

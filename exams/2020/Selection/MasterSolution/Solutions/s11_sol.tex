@@ -1,0 +1,32 @@
+\en{Let $a_0,a_1,a_2,\ldots$ be an infinite sequence of non-negative integers satisfying $a_i \leq i$ for every $i \geq 0$ and such that for every positive integer $n$
+\[
+\binom{n}{a_0} + \binom{n}{a_1} + \dots + \binom{n}{a_n} = 2^n. 
+\]
+Prove that each non-negative integer appears in the sequence. 
+}
+
+\textbf{Solution} (Louis):
+We prove by induction on $k$ that for every $k$ either $a_i = i$ for all $i\leq k$, or there exists a number $l > 0$ with $2l \leq k+1$ such that after reordering, the sequence $a_0, \ldots, a_k$ forms the two sequences $0, 1, \ldots, l-1$ and $0, 1, \ldots k-l$, without repetition. This fact proves the statement, as it implies that every number $N > 0$ must belong to the sequence $a_0, a_1, \ldots a_{2N}$.
+
+Now in order to prove the aforementioned fact, we first notice that it is trivially true for $k = 0, 1$. For the inductive step towards $k+1$, we notice that 
+\begin{itemize}
+    \item In the first case ($l = 0$, only one sequence) we must have either $a_{k+1} = k+1$ or $a_{k+1} = 0$, as it is necessary that $\binom{k+1}{a_{k+1}} = 1.$
+    \item In the second case we must have either $a_{k+1} = l$ or $a_{k+1} = k-l+1$, as it is necessary that $\binom{k+1}{a_{k+1}} = \binom{k+1}{l}$
+\end{itemize}
+Both of these can be easily proven through three of the key properties of the binomial:\\ $\sum_{i=0}^n \binom{n}{i} = 2^n$, $\binom{x}{y} = \binom{x}{x-y+1}$, and if $1 \le y \neq z \le \frac{x}{2}$ then $\binom{x}{y} \neq \binom{x}{z}$. These together prove the existence and pseudo-uniqueness of the value that $a_{k+1}$ must take.
+
+We easily conclude that our induction hypothesis is correct.
+
+\textbf{Marking Scheme:} \\
+\begin{itemize}
+    \item 2P: Noting that after reordering, the sequence $a_0, \ldots, a_k$ forms the two sequences $0, 1, \ldots, l-1$ and $0, 1, \ldots k-l$, without repetition (or any equivalent phrasing of this idea).
+    \item +1P: Understanding but not proving that this is as $a_{k+1}$ must "go on the end" of either sequence.
+    \item +3P: Any proof of the aforementioned fact.
+    \item +1P: Conclude that every number appears in the sequence.
+\end{itemize}
+
+If the contestant proves that $a_i$ can be $k+1$ or $0$/$l$ or $k-l+1$ but does not prove it \emph{must} be one of these, 1 points should be deducted. 
+
+
+
+No points are to be given for simply stating \textbf{any} of the three properties of the binomial that are necessary for the proof.

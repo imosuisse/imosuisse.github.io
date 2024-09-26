@@ -1,0 +1,60 @@
+We are given $n$ distinct rectangles in the plane. Prove that between the $4n$ interior right angles formed by these rectangles at least $4\sqrt{n}$ are distinct.
+\newline
+\newline
+\textbf{Solution:} (David)
+First of all, let's make the whole picture easier to handle: We can split the rectangles into groups such that in each group, all sides of rectangles are parallel or perpendicular to each other. We also choose these groups to be maximal, in particular: For any two rectangles of different groups, they don't have parallel sides. We observe that this way, no two right angles of different groups can be the same, so we may count the right angles in each group and sum it up in the end. Say there are $k$ different groups and denote the number of rectangles in the $i$-th group by $n_i$. We can choose a coordinate system that has axes parallel to the rectangles in the $i$-th group and from now on only consider rectangles in this group. \newline
+\newline
+We can now introduce the following variables:
+\begin{itemize}
+\item $A_i$: number of distinct right angles that form a top left corner
+\item $B_i$: number of distinct right angles that form a top right corner
+\item $C_i$: number of distinct right angles that form a bottom left corner
+\item $D_i$: number of distinct right angles that form a bottom right corner
+\end{itemize}
+Since every rectangle in the $i$-th group is uniquely determined by one top left and one bottom right corner and for any two distinct rectangles, the combination of top left and bottom right corner must be different, we get the estimation \[
+A_i \cdot D_i \geq n_i
+\]
+The same argument for top right corners and bottom left corners yields
+\[
+B_i \cdot C_i \geq n_i
+\]
+Now, by applying AM-GM to both expressions on the left hand sides, we get
+\[
+\left( \frac{A_i+D_i}{2} \right)^2 \geq A_i \cdot D_i \geq n_i \; \Rightarrow \; A_i + D_i \geq 2\sqrt{n_i}
+\]
+\[
+\left( \frac{B_i+C_i}{2} \right) ^2 \geq C_i \cdot B_i \geq n_i \; \Rightarrow \; B_i + C_i \geq 2\sqrt{n_i}
+\]
+\[
+\Rightarrow \; A_i + B_i + C_i + D_i \geq 4\sqrt{n_i}
+\]
+In other words, the number of distinct right angles in the $i$-th group is greater or equal than $4\sqrt{n_i}$. Summing over all groups, we get the inequality:
+\[
+\sum_{i=1}^k (A_i+B_i+C_i+D_i) \geq \sum_{i=1}^k 4\sqrt{n_i}
+\]
+On the left hand side, we have the total number of distinct right angles. So it remains to show 
+$\sum_{i=1}^k 4\sqrt{n_i} \geq 4\sqrt{n}$, which is obvious by
+\[
+\left(\sum_{i=1}^k \sqrt{n_i}\right)^2 \geq \sum_{i=1}^k \sqrt{n_i}^2 = \sum_{i=1}^k n_i = n \qquad \qed
+\] 
+\newpage
+\textbf{Remark:} It is also possible to save some algebraic effort in the end by arguing at the beginning that we can rotate each group without increasing the number of distinct right angles. However, one must be aware that a rectangle could land on top of another congruent rectangle that way, so the argument gets a bit trickier than that. 
+\newline
+\newline
+\textbf{Marking scheme:}
+\begin{enumerate}
+    \item Dealing with the configuration
+\begin{itemize}
+    \item 1P: Splitting up rectangles into appropriate groups or stating that we might assume them to be axis-parallel.
+    \item 1P: A rigorous argument why it's enough to consider this case or, equivalently, the estimation of the sum in the end.
+\end{itemize}
+
+\item Case of parallel sides
+\begin{itemize}
+    \item 1P: distinguishing the four different types of right angles and stating that $A_i+B_i+C_i+D_i$ is the number we want to bound.
+    \item 1P: $A_i \cdot D_i \geq n_i$
+    \item 1P: $B_i \cdot C_i \geq n_i$
+    \item 1P: Using AM-GM on one inequality
+    \item 1P: Using AM-GM on the second inequality and conclude
+\end{itemize}
+\end{enumerate}

@@ -1,0 +1,40 @@
+Find all the positive integers $a,b,c$ such that
+$$a!\cdot b!=a!+b!+c!.$$
+
+\textbf{Answer:} The only solution to this equation is $(a,b,c) = (3,3,4)$.
+
+\textbf{Solution:} (Valentin and Tanish)
+Without loss of generality we assume $a\leq b$. We now divide the entire expression by $b!$ and get
+$$a!=\frac{a!}{b!}+\frac{c!}{b!}+1.$$
+If $a < b$ then also $c < b$ since the right hand side should be an integer. But then
+$$\frac{a!}{b!}+\frac{c!}{b!}+1 < 3$$
+and we get $a = 1$ or $2$, both leading to a contradiction. We conclude that $a=b$. The problem is therefore reduces to
+$$a!=\frac{c!}{a!}+2 > 2$$
+which implies $c\geq a\geq 3$. If $c\geq a+3$ then the the right side is not divisible by $3$ while the left side is. Otherwise if $a\leq c \leq a+2$ we either have $c = a$ which does not lead to a solution, $c = a+1 \Longrightarrow a!=a+3$ and leads to the solution $(3,3,4)$, or $c=a+2$ which leads to 
+$$a!=(a+1)(a+2)+2 = a^2+3a+4.$$
+Here, the left side is strictly bigger than the right side for $a\geq 5$ and smaller values do not lead to any solutions.
+
+\textbf{Solution:} (Louis)
+
+On regroupe tous les termes contenant $a$ ou $b$ au côté gauche de l'équation pour obtenir 
+$$a!b! - a! - b! = c!$$
+On suppose sans perte de généralité que $a\leq b$ et donc le côté gauche est divisible par $a!$. Il s'ensuit que le côté droit est également divisible par $a!$, donc $c \geq a$. Après division par $a!$ on obtient l'équation 
+$$b! - 1 - (a+1)\cdots b = (a+1)\cdots c.$$
+Si $b$ et $c$ sont tous les deux strictement plus grands que $a$ on devrait alors avoir que $a+1$ divise $1$ (car $a+1$ divise tous les autres termes), ce qui est impossible car $a$ est positif. Ainsi, on a soit $a=b$, soit $a=c$.
+\begin{itemize}
+    \item Si $a = c$, l'équation originale peut être réécrite $(a! - 1)\cdot b! = 2a!$. Ainsi $(a! - 1)$ divise $2a!$, mais $\pgcd(a! - 1, 2a!) = 2$, donc la seule solution est $a = 2$, qui implique alors $b! = 4$, et cette équation n'admet aucune solution. Ainsi l'équation originelle n'admet aucune solution si $a=c$.
+    \item Si $a = b$, on obtient $a! - 2 = (a+1)\cdots c$ et on termine comme dans la solution précédente. 
+\end{itemize}
+
+\newpage
+
+\textbf{Marking scheme}
+\begin{itemize}
+\item 1P: Assume \emph{WLOG} that $a\geq b$ or $b\geq a$.
+\item 1P: Use any technique to find a decent lower bound on $c$ in terms of $a$ and $b$.
+\item 1P: Use any technique to find a decent upper bound of one of the variables in term of the others. Therefore reduce to finitely many cases in two variables.
+\item 1P: Use any technique to again find a decent upper bound on one of the variables in terms of the other.
+\item 1P: Find the only solution $(3,3,4)$.
+\item 1P: Treat at least one of the cases that do not lead to a solution.
+\item 1P: Conclude the proof.
+\end{itemize}

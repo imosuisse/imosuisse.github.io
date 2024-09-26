@@ -1,0 +1,159 @@
+%& -job-name=vorrunde_2017_it-1
+
+% ^^^^^^^ change the last bit to e.g. de-2 for second day, german ^^^^^^^^ 
+
+\documentclass[language=german,style=exam]{smo} %language is irrelevant in this case
+
+\examtime{%
+    \de{3 Stunden}%
+    \fr{3 heures}%
+    \ita{3 ore}%
+    \en{3 hours}%
+}
+\examdate{\IfStrEq*{\day}{1}{%
+        \de{14. Januar 2017}%
+        \fr{14 janvier 2017}%
+        \ita{14 gennaio 2017}%
+        \en{14 January 2017}%
+    }{}
+}
+\title{%
+    \de{SMO - Vorrunde 2017}%
+    \fr{OSM - Tour préliminaire 2017}%
+    \ita{OSM - Turno preliminare 2017}%
+    \en{SMO - Preliminary round 2017}%
+}
+\examplace{%
+    \de{Lausanne, Lugano, Zürich}%
+    \fr{Lausanne, Lugano, Zürich}%
+    \ita{Lausanne, Lugano, Zürich}%
+    \en{Lausanne, Lugano, Zürich}%
+}
+
+\begin{document}
+
+\begin{problemday} % DAY 1
+
+\vspace{-3mm}
+\center{\section*{\de{Geometrie}\fr{Géométrie}\ita{Geometria}\en{Geometry}}} % GEOMETRY
+\vspace{-3mm}
+
+\begin{enumerate}
+\item[\textbf{G1)}]
+\de{Sei $ABC$ ein Dreieck mit $AB \neq AC$ und Umkreis $k$. Die Tangente an $k$ durch $A$ schneide $BC$ in $P$. Die Winkelhalbierende von $\angle APB$ schneide $AB$ in $D$ und $AC$ in $E$. Zeige, dass das Dreieck $ADE$ gleichschenklig ist.}
+
+\fr{Soit $ABC$ un triangle avec $AB \neq AC$ et soit $k$ son cercle circonscrit. La tangente à $k$ passant par $A$ coupe $BC$ en $P$. La bissectrice de l'angle $\angle APB$ coupe $AB$ en $D$ et $AC$ en $E$. Montrer que le triangle $ADE$ est isocèle.}
+
+\ita{Sia $ABC$ un triangolo con $AB \neq AC$ e cerchio circoscritto $k$. La tangente a $k$ passante per $A$ taglia $BC$ in $P$. La bisettrice dell'angolo $\angle APB$ taglia $AB$ in $D$. Mostrare che il triangolo $ADE$ è equilatero.}
+
+\en{Let $ABC$ be a triangle with $AB \neq AC$ and circumcircle $k$. The tangent of $k$ at $A$ intersects $BC$ at $P$. The angle bisector of $\angle APB$ intersects $AB$ at $D$ and $AC$ at $E$. Show that the triangle $ADE$ is isosceles.}
+
+\item[\textbf{G2)}]
+\de{Sei $ABC$ ein rechtwinkliges Dreieck mit Hypotenuse $AB$. Ein Kreis um $C$ schneide die Strecke $AB$ zweimal in den Punkten $P$ und $Q$, wobei $P$ zwischen $A$ und $Q$ liegt. Sei $R$ der Punkt auf der Strecke $BC$ mit $\angle RAC=\frac{1}{2}\angle PCQ$ und sei $S$ der Punkt auf der Strecke $AC$ mit $\angle CBS=\frac{1}{2}\angle PCQ$. Weiter sei $T$ der Schnittpunkt der Strecken $CP$ und $AR$, und $U$ der Schnittpunkt der Strecken $CQ$ und $BS$.
+Zeige, dass $RSTU$ ein Sehnenviereck ist.}
+
+\fr{Soit $ABC$ un triangle rectangle d'hypothènuse $AB$. Un cercle de centre $C$ coupe deux fois le côté $AB$ aux points $P$ et $Q$, avec $P$ situé entre $A$ et $Q$. Soit $R$ le point sur le côté $BC$ tel que $\angle RAC= \frac{1}{2}\angle PCQ$ et soit $S$ le point sur le côté $AC$ tel que $\angle CBS=\frac{1}{2}\angle PCQ$. Soient $T$ le point d'intersection des segments $CP$ et $AR$ et $U$ le point d'intersection des segments $CQ$ et $BS$.
+Montrer que $RSTU$ est un quadrilatère inscrit.}
+
+\ita{Sia $ABC$ un triangolo rettangolo di ipotenusa $AB$. Un cerchio passante per $C$ taglia due volte il lato $AB$ nei punti $P$ e $Q$, con $P$ situato tra $A$ e $Q$. Sia $R$ il punto sul lato $BC$ tale che l'angolo $\angle RAC=\frac{1}{2}\angle PCQS$. Siano $T$ il punto di intersezione dei segmenti $CP$ e $AR$ e $U$ il punto di intersezione dei segmenti $CQ$ e $BS$. Mostrare che $RSTU$ è un quadrilatero inscritto.}
+
+\en{Let $ABC$ be a right-angled triangle with hypotenuse $AB$. A circle with center $C$ intersects the segment $AB$ twice at the points $P$ and $Q$ such that $P$ lies between $A$ and $Q$. Let $R$ be the point on the segment $BC$ with $\angle RAC = \frac{1}{2}\angle PCQ$ and let $S$ be the point on the segment $AC$ with $\angle CBS = \frac{1}{2}\angle PCQ$. Further let $T$ be the intersection of the lines $CP$ and $AR$, and $U$ be the intersection of the lines $CQ$ and $BS$. Show that $RSTU$ is a cyclic quadrilateral.}
+
+\end{enumerate}
+
+\vspace{-3mm}
+\center{\section*{\de{Kombinatorik}\fr{Combinatoire}\ita{Calcolo combinatorio}\en{Combinatorics}}} % COMBINATORICS
+\vspace{-3mm}
+
+\begin{enumerate}
+\item[\textbf{K1)}] 
+\de{Was ist die maximale Anzahl an Skew-Tetrominos, die auf einem $8 \times 9$ Rechteck überlappungsfrei platziert werden können?}
+\fr{Quel est le nombre maximal de Skew-Tetrominos que l'on peut placer sur un rectangle $8 \times 9$ sans recouvrement?}
+\ita{Queal'è il numero massimo di skew-tetrominos che possiamo piazzare su una scacchiera (rettangolare) $8\times 9$?}
+\en{What is the maximal number of skew-tetrominos that can be placed on a $8 \times 9$ board without overlapping?}
+
+\vspace{-2mm}
+\begin{center}
+\begin{tikz}[scale=0.4,rotate=90]
+\draw (0,0) -- (0,2) -- (1,2) -- (1,3) -- (2,3) -- (2,1) -- (1,1) -- (1,0) -- (0,0) -- (0,1) -- (1,1) -- (1,2) -- (2,2);
+\end{tikz}
+\end{center}
+\de{\textit{Bemerkung: Die Tetrominos dürfen gedreht und gespiegelt werden.}}
+\fr{\textit{Remarque: Les tetrominos peuvent être tournés et réfléchis.}}
+\ita{\textit{Osservazione: possiamo ruotare e rifrettere specularmente i tetrominos}}
+\en{\textit{Remark: Tetrominos may be rotated and mirrored.}}
+
+\item[\textbf{K2)}]
+\de{Seien $m, n\geq 2$ natürliche Zahlen. Wir haben vier Farben und wollen jedes Feld eines $m\times n$ Rechtecks mit einer davon einfärben, sodass in jedem $2 \times 2$ Quadrat alle vier Farben vorkommen. Wie viele verschiedene Möglichkeiten gibt es dafür?
+
+\textit{Bemerkung: Wir zählen zwei Möglichkeiten als verschieden, wenn es mindestens ein Feld gibt, das unterschiedliche Farben erhalten hat.}}
+
+\fr{Soient $m,n\geq 2$ des nombres naturels. On dispose de quatre couleurs et on veut colorier chaque case d'un rectangle $m\times n$ avec une de ces couleurs de telle sorte que chaque carré $2\times 2$ contienne les quatre couleurs. De combien de manières différentes peut-on procéder?
+
+\textit{Remarque: Deux colorations sont différentes dès qu'il existe au moins une case qui est coloriée différemment.}}
+
+\ita{Siano $m,n \geq 2$ interi positivi. Abbiamo quattro colori e vogliamo colorare ogni quadrato unitario di un rettangolo $m\times n$ in modo che in ogni quadrato $2\times 2$ appaiano tutti e 4 i colori. Quante possibilità abbiamo?
+
+\textit{Osservezione: due colorazioni sono considerate differenti quando esiste almeno un quadratino colorato differentemente.}}
+
+\en{Let $m, n \geq 2$ be positive integers. We have four colours and want to colour each unit square of a $m \times n$ board with one of them such that in every $2 \times 2$ square all four colours occur. How many different possibilities are there?
+
+\textit{Remark: We count two possibilities as different if there is at least one square which received different colours.}}
+
+\end{enumerate}
+
+\vspace{-3mm}
+\center{\section*{\de{Zahlentheorie}\fr{Theorie des nombres}\ita{Teoria dei numeri}\en{Number Theory}}} % NUMBER THEORY
+\vspace{-3mm}
+
+\begin{enumerate}
+\item[\textbf{Z1)}]
+\de{Bestimme alle Paare $(m, n)$ natürlicher Zahlen, für die gilt:
+\[
+\kgV(m,n)-\ggT(m,n) = \frac{mn}{5}.
+\]}
+\fr{Trouver toutes les paires $(m, n)$ de nombres naturels vérifiant:
+\[
+\kgV(m,n)-\ggT(m,n) = \frac{mn}{5}.
+\]}
+\ita{Determinare tutte la paia $(m,n)$ di interi positivi tali che 
+\[
+\kgV(m,n) - \ggT(m,n) = \frac{mn}{5}.
+\]}
+\en{Determine all pairs $(m, n)$ of positive integers such that
+\[
+\kgV(m,n) - \ggT(m,n) = \frac{mn}{5}.
+\]}
+
+\item[\textbf{Z2)}]
+\de{Seien $a$ und $b$ natürliche Zahlen, sodass
+\[
+%\frac{a+3b^2}{b+3ab} ,\qquad \frac{3b^2 +a}{3ab+b},\qquad \frac{3b^2+a}{b+3ab}, \qquad \frac{a+3b^2}{3ab+b} \qquad
+\frac{3a^2+b}{3ab+a}
+%\qquad \frac{3\Gamma^2+\Theta}{3\Gamma\Theta+\Gamma} \qquad \frac{3\Box^2+\aleph}{3\Box\aleph+\Box} 
+\]
+eine ganze Zahl ist. Bestimme alle Werte, die obiger Ausdruck annehmen kann.}
+\fr{Soient $a$ et $b$ deux nombres naturels tels que
+\[
+\frac{3a^2+b}{3ab+a}
+\]
+est un nombre entier. Quelles sont toutes les valeurs que l'expression ci-dessus peut prendre?}
+\ita{Siano $a$ e $b$ due interi positivi tali che 
+\[
+\frac{3a^2+b}{3ab+a}
+\]
+sia un intero. Quali valori può assumere questa espressione?}
+\en{Let $a$ and $b$ be positive integers such that
+\[
+\frac{3a^2+b}{3ab+a}
+\]
+is an integer. Which values can be taken on by this expression?}
+\end{enumerate}
+
+\end{problemday} % END DAY 1
+
+%\vfill
+
+%\center{\de{Viel Glück!}\fr{Bonne chance!}\ita{Buona fortuna!}\en{Good luck!}}
+
+\end{document}
