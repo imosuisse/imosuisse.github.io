@@ -45,6 +45,22 @@ h2 {
 	}
 }
 
+table {
+	width: 90%;
+	margin: auto;
+	border-collapse: collapse;
+	td {
+		border-top: 1px solid lightgrey;
+		text-align: center;
+	}
+	th {
+		text-align: center;
+	}
+
+	td:nth-child(n+2):nth-child(-n+4), th:nth-child(n+2):nth-child(-n+4) {
+        text-align: left;
+    }
+}
 
 .intro {
 	display: flex;
