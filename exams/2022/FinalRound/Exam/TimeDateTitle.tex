@@ -1,0 +1,32 @@
+\examtime{%
+    \de{4 Stunden}%
+    \fr{4 heures}%
+    \ita{4 ore}%
+    \en{4 hours}%
+}
+\examdate{%
+    \IfStrEq*{\examday}{1}{%
+        \de{18. März 2022}%
+        \fr{18 mars 2022}%
+        \ita{18 gennaio 2022}%
+        \en{18 March 2022}%
+    }{}%
+   \IfStrEq*{\examday}{2}{%
+        \de{19. März 2022}%
+        \fr{19 mars 2022}%
+        \ita{19 gennaio 2022}%
+        \en{19 March 2022}%
+    }{}
+}
+\title{%
+    \de{Finalrunde 2022}%
+    \fr{Tour final 2022}%
+    \ita{Turno preliminare 2022}%
+    \en{Final round 2022}%
+}
+\examplace{%
+    \de{\examday. Prüfung}%
+    \fr{\IfStrEq*{\examday}{1}{Premier}{Second} examen}%
+    \ita{???}%
+    \en{\IfStrEq*{\examday}{1}{First}{Second} exam}%
+}

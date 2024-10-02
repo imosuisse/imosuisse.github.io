@@ -1,0 +1,175 @@
+\en{\input{../Exam/problems/f4.tex}
+
+\bigskip 
+
+\textbf{Answer: $(n-1)^2$}
+
+\textbf{Solution (David, Raphael and Tanish):}
+Firstly, note that this value is indeed possible: simply have the gymnasts of one nation all move out to occupy a $(n-1) \times (n-1)$ square, have the other nation's gymnasts walk around the edge into the now-empty house and then the first nation can do likewise. \\
+The proof that this value is optimal is less straightforward. Firstly, note that a justification along of the lines of "all the Swiss gymnasts should move out before the Liechtensteiner gymnasts can move in, and the latter group need at least $2n-3$ squares free (not including the two houses) to create a path for them" is critically flawed. The reason for this is illustrated in the below diagram: 
+\begin{center}
+\begin{tikzpicture}
+\draw [dashed, black] (0,0) -- (0,4);
+\draw [dashed, black] (1,0) -- (1,4);
+\draw [dashed, black] (2,0) -- (2,4);
+\draw [dashed, black] (3,0) -- (3,4);
+\draw [dashed, black] (4,0) -- (4,4);
+\draw [dashed, black] (0,0) -- (4,0);
+\draw [dashed, black] (0,1) -- (4,1);
+\draw [dashed, black] (0,2) -- (4,2);
+\draw [dashed, black] (0,3) -- (4,3);
+\draw [dashed, black] (0,4) -- (4,4);
+\node[shape=circle, fill=red, draw=black] (1) at (0.5,3.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (1.5,3.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (2.5,3.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (2.5,2.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at 
+(2.5,1.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at 
+(2.5,0.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (0.5,1.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (0.5,2.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (0.5,1.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (1.5,2.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (1.5,1.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (0.5,1.5) {};
+\node[shape=rectangle, fill=color1bg, draw=black, scale=2.5] (1) at (3.5,3.5) {};
+\node[scale=2] at (3.5,3.5) {\faHome};
+\node[shape=rectangle, fill=red, draw=black, scale=2.5] (1) at (0.5,0.5) {};
+\node[scale=2] at (0.5,0.5) {\faHome};
+
+
+\draw [dashed, black] (6,0) -- (6,4);
+\draw [dashed, black] (7,0) -- (7,4);
+\draw [dashed, black] (8,0) -- (8,4);
+\draw [dashed, black] (9,0) -- (9,4);
+\draw [dashed, black] (10,0) -- (10,4);
+\draw [dashed, black] (6,0) -- (10,0);
+\draw [dashed, black] (6,1) -- (10,1);
+\draw [dashed, black] (6,2) -- (10,2);
+\draw [dashed, black] (6,3) -- (10,3);
+\draw [dashed, black] (6,4) -- (10,4);
+\node[shape=circle, fill=red, draw=black] (1) at (6.5,3.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (7.5,3.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (8.5,3.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (8.5,2.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at 
+(8.5,1.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at 
+(8.5,0.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (6.5,1.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (6.5,2.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (6.5,1.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (7.5,2.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (7.5,1.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (6.5,1.5) {};
+\node[shape=circle, fill=color1bg, draw=black] (1) at (9.5,0.5) {};
+\node[shape=rectangle, fill=color1bg, draw=black, scale=2.5] (1) at (9.5,3.5) {};
+\node[scale=2] at (9.5,3.5) {\faHome};
+\node[shape=rectangle, fill=red, draw=black, scale=2.5] (1) at (6.5,0.5) {};
+\node[scale=2] at (6.5,0.5) {\faHome};
+
+
+\draw [dashed, black] (12,0) -- (12,4);
+\draw [dashed, black] (13,0) -- (13,4);
+\draw [dashed, black] (14,0) -- (14,4);
+\draw [dashed, black] (15,0) -- (15,4);
+\draw [dashed, black] (16,0) -- (16,4);
+\draw [dashed, black] (12,0) -- (16,0);
+\draw [dashed, black] (12,1) -- (16,1);
+\draw [dashed, black] (12,2) -- (16,2);
+\draw [dashed, black] (12,3) -- (16,3);
+\draw [dashed, black] (12,4) -- (16,4);
+\node[shape=circle, fill=red, draw=black] (1) at (12.5,3.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (13.5,3.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (14.5,3.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (14.5,2.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at 
+(14.5,1.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at 
+(15.5,1.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (12.5,1.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (12.5,2.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (12.5,1.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (13.5,2.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (13.5,1.5) {};
+\node[shape=circle, fill=red, draw=black] (1) at (12.5,1.5) {};
+\node[shape=circle, fill=color1bg, draw=black] (1) at (15.5,0.5) {};
+\node[shape=rectangle, fill=color1bg, draw=black, scale=2.5] (1) at (15.5,3.5) {};
+\node[scale=2] at (15.5,3.5) {\faHome};
+\node[shape=rectangle, fill=red, draw=black, scale=2.5] (1) at (12.5,0.5) {};
+\node[scale=2] at (12.5,0.5) {\faHome};
+
+
+\draw [->,black,thick] (4.2,2) to (5.8,2);
+\draw [->,black,thick] (10.2,2) to (11.8,2);
+
+\draw [->,black] (3.5,3) to (3.5,0.5);
+\draw [->,black] (15,0.5) to (13,0.5);
+
+\draw [->,black] (8.5,0.75) to (8.5,1.25);
+\draw [->,black] (8.75,1.5) to (9.25,1.5);
+
+\end{tikzpicture}
+\end{center}
+
+As shown, a continuous open path is not necessary for a gymnast to cross the field. It is therefore erroneous to argue that such a pathway being necessary is a complete proof and further justification is required - namely, that not having an open path will eventually lead to progress becoming impossible.
+
+Assume by absurdity that the exchange is possible for $k > (n-1)^2$ gymnasts. Assume WLOG that all the Swiss gymnasts leave their house before the blue house is empty. Consider now the state of the board at the moment that the last Swiss gymnasts exits the house. All the Swiss gymnasts must be on the field but cannot yet enter the blue house. The red house is now open for the first time; so at most $2n-4$ spaces on the board are not occupied by a red gymnast, call such spaces \emph{emblue}. We define the \emph{region} $D_j$ as being the set of squares from which one can access the blue house making at most $j$ moves up or to the right. 
+
+\begin{center}
+\begin{tikzpicture}
+\draw [dashed, black] (0,0) -- (0,4);
+\draw [dashed, black] (1,0) -- (1,4);
+\draw [dashed, black] (2,0) -- (2,4);
+\draw [dashed, black] (3,0) -- (3,4);
+\draw [dashed, black] (4,0) -- (4,4);
+\draw [dashed, black] (0,0) -- (4,0);
+\draw [dashed, black] (0,1) -- (4,1);
+\draw [dashed, black] (0,2) -- (4,2);
+\draw [dashed, black] (0,3) -- (4,3);
+\draw [dashed, black] (0,4) -- (4,4);
+\filldraw [color = orange, very thick, fill = orange, fill opacity = 0.5] (3.5, 3.5) -- (3.5,0.5) -- (1.5,0.5) -- (0.5,1.5) -- (0.5,3.5) -- cycle;
+\filldraw [color = purple, very thick, fill = purple, fill opacity = 0.5] (3.5, 3.5) -- (3.5,1.5) -- (1.5,3.5) -- cycle;
+\node[] at (2,2) {$D_5$};
+\node[] at (2.85,2.85) {$D_2$};
+\node[shape=rectangle, fill=color1bg, draw=black, scale=2.5] (1) at (3.5,3.5) {};
+\node[scale=2] at (3.5,3.5) {\faHome};
+\node[shape=rectangle, fill=red, draw=black, scale=2.5] (1) at (0.5,0.5) {};
+\node[scale=2] at (0.5,0.5) {\faHome};
+\end{tikzpicture}
+\end{center}
+
+If the region $D_j$ has $j-1$ or fewer emblues, we say it is \emph{active}. Clearly, $D_{2n-3}$ is initially active; furthermore, if a region becomes active it will stay active (as the number of Swiss gymnasts in a region cannot decrease, at least not until all the Liechtensteiner gymnasts have left their own house). 
+
+Consider the active region with smallest index $D_{\textbf{min}}$, and let the initial value of \textbf{min} (at the moment the last Swiss gymnast leaves their house) be $i_0$. We know that $D_{\textbf{min}}$ contains at most $\textbf{min}-1$ emblues by definition. Furthermore, if it contained $\le \textbf{min}-2$ emblues then it would follow that $D_{\textbf{min}-1}$ was also active, contradicting the minimality of $D_{\textbf{min}}$. So this region must contain exactly $\textbf{min}-1$ emblues. None of these emblues can lie on the diagonal $D_{\textbf{min}} \setminus D_{{\textbf{min}}-1}$ because as mentioned, this would lead to $D_{{\textbf{min}}-1}$ being active (by virtue of having $\le \textbf{min}-2$ emblues) as well. So this diagonal must contain no emblues and only Swiss gymnasts, and we will refer to it as the \emph{fence} - as long as the fence remains unbroken, no blue gymnast inside $D_{\textbf{min}}$ is leaving. We refer to any emblue that is on the side of the fence containing the red house (the complementary of $D_{\textbf{min}}$) as being \emph{free}. Clearly, freedom is a necessary trait to gain access to the red house. Initially, not all the blue gymnasts are free - those in the blue house must not be free. 
+
+Now, the fence must open at some point as otherwise the blue gymnasts who are not yet free cannot get to the red house. At this moment, a Swiss gymnast will cross from $D_{i_0} \setminus D_{{i_0}-1}$ into $D_{{i_0}-1}$. This means that the number of emblues in $D_{{i_0}-1}$ is now $\le i_0-2$ and so the value of \textbf{min} decreases - let us say the new value is $i_1$. As proven above, $D_{i_1}$ contains exactly $i_1-1$ emblues and the diagonal $D_{i_1} \setminus D_{i_1-1}$ is the new fence; now, the blue gymnasts in the complementary of $D_{i_1}$ are free. So all the gymnasts who were previously free are still free, and at most $i_0 - i_1$ new gymnasts are free - the number of emblues in $D_{i_0} \setminus D_{i_1}$ is exactly $i_0 - i_1$, and this is an upper bound on how many blue gymnasts can have been freed when the fence moved. Initially, if some $m$ gymnasts are free, we must have that $D_{i_0}$ is at most $2n-3-m$ as the number of emblue spaces that are not free is at most $2n-4-m$ (recalling that $D_{i_0}$ must contain exactly $i_0-1$ emblues that are not free). It follows that for $2n-4$ gymnasts to become free, the value of \textbf{min} must be reduced by at least $i_0-1$, and so $D_1$ will become active at this point - making exiting the blue house impossible.
+
+We therefore have $(n-1)^2 < k \le 2n-4$. This simplifies to $(n-2)^2 \le -1$, which is never true, contradiction.\\
+\bigskip
+\\
+\emph{Remark:} You might wonder why the fence is defined in this particular way, and not simply as the "closest full diagonal to the blue house" or something along those lines. The reason for this is that, for example, the closest full diagonal to the red house does not always move in one direction - breaking the closest full diagonal does not always create a full diagonal that is closer still. In order to avoid any side cases like this, we want to study some phenomenon that is a true monovariant and only moves in one direction.  \\
+\bigskip
+\\
+\textbf{Marking scheme:}
+
+\textbf{Partial solutions} \dotfill ($\leq 4$ points)
+
+The following additive partial points can be obtained, up to a maximum of 4 points.:
+\begin{itemize}
+\item Finding the correct value $(n-1)^2$ (an explanation is not necessary) \dotfill (1 point)
+\item Any attempt to construct a useful monovariant related to distance \dotfill (1 point)
+\item Showing that by pigeonhole, for $k > (n-1)^2$, that a diagonal is always full of the gymnasts of the first house to become empty \dotfill (1 point) 
+\item A proof that the aforementioned monovariant is indeed monotone that is nearly complete but suffers from a nontrivial flaw \dotfill (2 points)
+\end{itemize}
+
+\textbf{Complete solutions} \dotfill ($\geq 5$ points) 
+
+Typically, solutions will not work for small values of $n$, so the edge cases mentioned below refers to these small-value cases. At most 2 points may be deducted for the following reasons:
+\begin{itemize}
+\item Failing to verify less than 5 edge cases \dotfill ($-1$ point)
+\item Failing to verify finitely many edge cases \dotfill ($-2$ points)
+\item Failing to justify why $(n-1)^2$ can be acheived \dotfill ($-1$ points)
+\end{itemize}
+}

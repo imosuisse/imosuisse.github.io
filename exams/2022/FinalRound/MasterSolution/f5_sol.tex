@@ -1,0 +1,40 @@
+\en{\input{../Exam/problems/f5.tex}
+
+\bigskip
+
+\textbf{Solution:} Let $p_i=a_i/\delta (a_i)$ be the smallest divisor of $a_i$ not equal to $1$. We then have 
+\[
+a_{i+1} =a_i + \frac{a_i}{p_i}= (p_i+1)\frac{a_i}{p_i}.
+\]
+So, if $p_1$ is odd, then $a_{i+1}$ will be even. Note that the sequence $a_n$ fulfills the condition exactly when there exists a $k$, such that $v_3(a_k) \ge 2022$. 
+%If $a_i$ is odd, then $a_{i+1} = \frac{p_i+1}{p_i}a_i$ is even. If $a_i$ is even, then $a_{i+1} = \frac{3}{2}a_i$. It follows that $v_3(a_{i+1}) = v_3(a_i)+1$. In other words if $a_i$ is even, then $v_3$ increases and $v_2$ decreases. So at some point we get an odd number divisible by $3$. So when does $v_3(a_i)$ decrease? Well looking at the note above we see that it only decreases if $p_i = 3$ (since $p_i$ must be prime); So in other words if $a_i$ is odd and divisible by 3. In this case $a_{i+1} = \frac{4}{3} a_i$ is divisble by 4. We find that $a_{i+2} = \frac{3}{2}\frac{4}{3}a_i= 2a_i$ and $a_{i+3} = \frac{3}{2}a_{i+1} = 3a_i$. Now most importantly the number $a_{i+3} = 3a_i$ is also odd and divisble by 3. So by induction we have that $v_3(a_{i+3k}) = v_3(a_i) + k$. Also for $l\ge i+3k$ we have $v_3(a_{l}) \ge v_3(a_i)+k-1$.\\ Finally summarising together all our findings, we have that $v_3(a_i)$ always somewhat increases and if it goes down by 1 it actually goes up by 2 again directly after. So after the first $a_k$ with $v_3(a_k)\ge 2023$, all the $a_i, i\ge k$ are divisible by $3^{2022}$.
+
+We differentiate between the three cases:
+\begin{itemize}
+    \item \textbf{($a_i$ even)}: In this case we have that $a_{i+1} = \frac{3}{2}a_i$. So here $v_3(a_{i+1}) = v_3(a_i)+1$
+    \item \textbf{($a_i$ is odd and not divisible by 3)}: In this case $v_3(a_{i+1}) = v_3((p_i+1)\frac{a_i}{p_i}) \geq  v_3(a_i)$ and then by the above case $v_3(a_{i+2}) \ge v_3(a_i)+1$.
+    \item \textbf{($a_i$ is odd and divisble by 3)}: In this case we have $a_{i+1}=\frac{4}{3}a_i$ and so $a_{i+1}$ is even. Thus, $a_{i+2} = \frac{3}{2}a_{i+1} = 2a_i$ and $a_{i+3} = \frac{3}{2}a_{i+2} = 3a_i$. So, here we get $v_3(a_{i+3}) \geq  v_3(a_i)+1$.
+\end{itemize}
+So, if we start with the number $a_1$, we have a subsequence $(a_{i_l})_{l\geq 1}$, with $v_3(a_{i_{l+1}}) \geq v_3(a_{i_{l}})+1$. By that we have $$3^{2022} \div a_{i_{2022}}.$$ 
+
+\bigskip
+
+\textbf{Marking scheme:}
+
+The following additive partial points can be obtained:
+\begin{itemize}
+\item The idea of comparing $v_3(a_{i+1})$ with $v_3(a_i)$ \dotfill ($1$ points)
+\item Note that for the smallest prime divisor $p_i$ of $a_i$, we have $a_{i+1} = p_{i+1}\frac{a_i}{p_i}$. \dotfill ($1$ points)
+\item Look at the $a_i$ even case \dotfill ($1$ points)
+\item Look at case $a_i$ odd and not divisible by 3 \dotfill ($1$ points)
+\item Look at case $a_i$ odd and divisible by 3 \dotfill ($2$ points)
+\item Conclude \dotfill ($1$ points)
+\end{itemize}
+}
+
+
+\de{Für eine ganze Zahl $a\geq 2$, bezeichne mit $\delta(a)$ den zweitgrössten Teiler von $a$. Sei $(a_n)_{n\geq 1}$ eine Folge von positiven ganzen Zahlen, so dass $a_1\geq 2$ und 
+\begin{align*}
+a_{n+1} = a_n + \delta(a_n)
+\end{align*}
+für alle $n\geq 1$. Beweise, dass es eine positive ganze Zahl $k$ gibt, so dass $a_k$ durch $3^{2022}$ teilbar ist.}

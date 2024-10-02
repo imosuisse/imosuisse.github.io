@@ -1,0 +1,24 @@
+\en{\input{../Exam/problems/f7.tex}
+
+\bigskip
+\textbf{Solution:} Since $n$ is perfect, we can write
+$$2n = \sum_{1 \leq d\mid n}d = \sum_{0\leq b_i \leq a_i}p_1^{b_1}p_2^{b_2}\cdots p_k^{b_k} = \prod_{i=1}^k(1+p_i+\cdots+p_i^{a_i}).$$
+Now assuming $a_1$ is odd, we find that
+$$(1+p_1+\cdots+p_1^{a_1}) \equiv 1-1+\cdots-1 \equiv 0\pmod {p_1+1}$$
+and therefore $p_1+1\mid 2n$. 
+
+If $p_1 > 2$, then $p_1+1\mid n$, but since $p_1$ is the smallest prime divisor of $n$, no prime divisor of $p_1+1$ can divide $n$, leading to a contradiction. 
+
+We conclude that $p_1 = 2\mid n$. Since $p_1+1 = 3\mid 2n$, we also get $3\mid n$. But now note that since $n > 6$, the integers $1, n/2, n/3, n/6$ are distinct, proper divisors of $n$ which sum to $n+1 > n$, contradicting the fact that $n$ is perfect. We conclude that $a_1$ must be even.
+
+\textbf{Note:} The case where $2\mid n$ can also be solved as follows. The Euler-Euclid Theorem says that if $n$ is an even perfect number, then there exists a prime $p$ such that $n=2^{p-1}(2^p-1)$. Since $n>6$, then $p>2$ is odd and so $a_1=p-1$ is even.
+
+\textbf{Marking Scheme:}
+\begin{itemize}
+    \item Any attempt to sort the divisors of $n$ according to powers of $p_1$ or writing down the formula $2n=\prod_{i=1}^k (1+p_i+\cdots+p_i^{a_i})$ \dotfill (1 point)
+    \item Stating that $1+p_1+\ldots+p_1^{a_1}$ divides $2n$ \dotfill (1 point)
+    \item Proving that if $a_1$ is odd, then $p_1 +1\mid 2n$ \dotfill (2 points)
+    \item In the case that $n$ is even: proving that $a_1$ is even directly, or getting a contradiction assuming that $a_1$ is odd \dotfill (2 points)
+    \item In the case that $n$ is odd: proving that $a_1$ is even directly, or getting a contradiction assuming that $a_1$ is odd \dotfill (1 point)
+\end{itemize}
+}

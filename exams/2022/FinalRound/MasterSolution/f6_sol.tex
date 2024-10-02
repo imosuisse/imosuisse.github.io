@@ -1,0 +1,37 @@
+\en{\input{../Exam/problems/f6.tex}
+
+\textbf{Answer:} $n^2-n-1$. 
+
+\textbf{Solution:} Let us first give a construction which works for all numbers $m \geq n^2-n$:
+
+Write $m = kn + r$ for some integer $k \geq n-1$ and $r \in \{0,1,\ldots, n-1\}$. Note that $k-r \geq 0$. If we call the colours $1,2, \ldots, n$, we arrange them as follows:
+\[
+\underbrace{1,1,2,3, \ldots ,n, 1,1,2,3, \ldots ,n, \ldots 1,1,2,3, \ldots n}_{r \text{ times}}, \underbrace{1,2,3 \ldots,n,1,2,3,\ldots,n, \ldots , 1,2,3, \ldots, n}_{k-r \text{ times}}
+\]
+Note that $r(n+1) + (k-r)n = kn + r = m$. It is easy to see that this construction indeed works.
+
+We will now prove that it is not possible to accomplish the task for $m=n^2-n-1$. Observe that $n^2-n-1=n(n-1)-1$. By pigeonhole principle, one of the $n$ colours appears at most $n-2$ times, say blue. Pick an arbitrary cow with a blue bell. There exist now $n^2-n-2=(n+1)(n-2)$ other cows among which only at most $n-3$ wear a blue cowbell. If we partition the remaining cows into intervals of length $n+1$, we can see that in at least one of them, there is no cow with a blue cowbell.
+
+\textbf{Marking scheme:}
+
+The marking is split into two parts. Part A is the construction for all $m \geq n^2-n$ and part B is the proof that $m=n^2-n-1$ doesn't allow a valid construction. The points of part A are always additive with the points of part B.
+
+\textbf{Part A:} \dotfill ($3$ points)
+
+The following are non-additive.
+\begin{enumerate}[label=(a.\arabic*)]
+    \item Finding constructions for two or more coprime $m$ given a fixed value of $n$  \dotfill ($1$ point)
+    \item Proving that the task is impossible for only finitely many values of $m$ \dotfill ($2$ points)
+    \item Giving a construction for all $m \geq n^2-n$ \dotfill ($3$ points)
+\end{enumerate}
+
+\textbf{Part B:} \dotfill ($4$ points)
+
+The first point is non-additive with the other two.
+\begin{enumerate}[label=(b.\arabic*)]
+\item Claiming that the answer is $n^2-n-1$ \dotfill ($1$ point)
+\item Observing that for $m=n^2-n-1$, one colour appears at most $n-2$ times \dotfill ($2$ points)
+\item Proving that if there is a colour which appears less than $\frac{m}{n+1}$ times, there exists no valid construction \dotfill ($2$ points)
+\end{enumerate}
+
+}

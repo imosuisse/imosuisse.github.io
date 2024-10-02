@@ -1,0 +1,30 @@
+\en{\input{../Exam/problems/f2.tex}
+
+\textbf{Solution (Johann):}
+Let's prove the statement by induction. The base case $n=1$ is trivial. Let's prove the inductive step. Given that $1^1,\ 3^3,\ 5^5,\ \dots,\ (2^n-1)^{2^n-1}$ have different residues $\pmod 2^n$, we want to show that $1^1,\ 3^3,\ 5^5,\ \dots,\ (2^{n+1}-1)^{2^{n+1}-1}$ give different results mod $2^{n+1}$. Let's split the $2^n$ elements in two sets $A$ and $B$, where $A = \{ 1^1,\ 3^3,\ 5^5,\ \dots,\ (2^n-1)^{2^n-1}\}$ and $B = \{(2^n+1)^{2^n+1},\ (2^n+3)^{2^n+3},\ (2^n+5)^{2^n+5}, \ \dots,\ (2^n+(2^n-1))^{2^n+(2^n-1)}\} $. Let's closely examine the elements in $B$ mod $2^{n+1}$. By Euler-Fermat (we can use it in this case because $\gcd(2^n+k, 2^{n+1}) = 1$) and the binomial expansion, we have:
+$$(2^n+k)^{2^n+k} \equiv (2^n+k)^k \equiv \sum_{s=0}^{k}{k \choose s} \cdot 2^{ns} \cdot k^{k-s} \equiv 2^n \cdot k^{k}+  k^k \equiv 2^n +k^k \pmod {2^{n+1}}$$
+In other words, $B \equiv \{1^1+2^n,\ 3^3+2^n,\ 5^5+2^n,\ \dots,\ (2^n-1)^{2^n-1}+2^n\} \pmod {2^{n+1}}$. Now, by the inductive hypothesis, the elements in $A$ are distinct $\pmod {2^n}$ and so are the elements in $B$. Finally, since the elements in $B \pmod {2^{n+1}}$ are simply obtained by adding $2^n$ to the elements in $A$, the $2^n$ numbers give different remainders$\pmod {2^{n+1}}$, concluding the inductive step. 
+Hence, the initial statement is true for all $n \in \N$.
+
+\bigskip
+
+\textbf{Marking scheme:}
+
+\textbf{Partial solutions} \dotfill ($\leq 4$ points)
+
+The following additive partial points can be obtained:
+\begin{enumerate}
+\item Any attempt to use induction or to pair up the numbers (even in a way which might not work, eg. $\{k^k, (2^{n+1}-k)^{2^{n+1}-k}\}$ ) \dotfill (1 point)
+\item Any attempt of considering pairs of the form $\{k^k, (2^n+k)^{2^n+k}\}$ or splitting the numbers into the two sets $A$ and $B$ \dotfill ($1$ point)
+\item Observing $(2^n+k)^{2^n} \equiv 1 \pmod{2^{n+1}}$ \dotfill ($1$ point)
+\item Proving that $(2^n+k)^{2^n+k} \equiv 2^n + k^k \pmod {2^{n+1}}$ \dotfill ($1$ point)
+\end{enumerate}
+
+\textbf{Complete solutions} \dotfill ($\geq 6$ points)
+
+At most one point can be deducted if one has not explicitly stated one of the following elements:
+\begin{itemize}
+\item Forgetting the base case \dotfill ($-1$ point)
+\item Not mentioning $\gcd(2^n+k, 2^{n+1}) = 1$ for Euler-Fermat \dotfill ($-1$ point)
+\end{itemize}
+}

@@ -1,0 +1,74 @@
+\en{\input{../Exam/problems/f3.tex}
+
+\textbf{Solution (Arnaud):} Soit $f$ une solution du problème. On commence par poser $n=1$ dans la première équation et on obtient $f(f(n)f(1))=n$. On en déduit que $f$ est \textbf{bijective}. En utilisant la surjectivité, il existe $x$ tel que $f(x)=1$. Avec $m=n=x$ dans la première équation, on obtient $f(1)=x^2$. Poser $m=n=1$ donne $f(f(1)^2)=1=f(x)$, et donc, par injectivité, $x=f(1)^2$. On conclut que $f(1)=x^2=f(1)^4$ et ainsi
+\[
+f(1)=1.
+\]
+Avec $n=1$ on en déduit que
+\[
+f(f(m))=m.
+\]
+On peut à présent remplacer $m$ et $n$ par $f(m)$ et $f(n)$, respectivement, pour obtenir que
+\[
+f(mn)=f(m)f(n).
+\]
+Cette équation est l'équation mutliplicative de Cauchy sur les nombres entiers positifs. L'exemple du script nous apprend que $f$ est déterminée par les valeurs $f(p)$ où $p$ est un nombre premier. Il suffit donc de déterminer $f(p)$ pour chaque nombre premier $p$.
+
+\textbf{Claim 1:} $f(p)=p$ pour tout $p$ qui ne divise pas 2022, c'est-à-dire pour $p\notin \{2,3,337\}$.
+\begin{proof}
+Si $p$ ne divise pas 2022, alors $\gcd (p,2022)=1$ et donc $p$ a un inverse modulo 2022. Soit donc $y$ un nombre entier positif tel que $py\equiv 1\pmod{2022}$. La deuxième condition implique que $f(py)=py$. La propriété de Cauchy implique que $f(py)=f(p)f(y)$. Ainsi $f(p)f(y)=py$. De même, $f(p)f(y+2022)=p(y+2022)$. Observer que $\gcd (y+2022,y)=1$ , car $\gcd (y,2022)=1$. Donc $\gcd (py,p(y+2022))=p$. Mais on doit avoir $f(p)\div \gcd (py,p(y+2022))$, donc $f(p)=p$, car $f(p)\neq 1$ par injectivité.
+\end{proof}
+
+\textbf{Claim 2:} $f(p)$ est un nombre premier pour tous les nombres premiers $p$.
+\begin{proof}
+Supposons que $f(p)=xy$ avec $x,y\neq 1$. Alors $p=f(f(p))=f(xy)=f(x)f(y)$, mais $f(x),f(y)\neq 1$ par injectivité. Contradiction.
+\end{proof}
+
+Si $f(p)=q$, alors $f(q)=p$, car $f(f(p))=p$. Ainsi, tous les nombres premiers qui ne sont pas envoyés sur eux-même par $f$ vont par paires $(p,q)$ avec $f(p)=q$ et $f(q)=p$.
+
+On prétend qu'il existe ainsi quatre fonctions solutions déterminées par:
+\begin{enumerate}
+\item $f(p)=p$ pour tous nombres premiers $p$, i.e.\ $f$ est l'identité,
+\item $f(2)=3$, $f(3)=2$ et $f(p)=p$ pour tous nombre premiers $p\notin \{2,3\}$,
+\item $f(2)=337$, $f(337)=2$ et $f(p)=p$ pour tous nombre premiers $p\notin \{2,337\}$,
+\item $f(3)=337$, $f(337)=3$ et $f(p)=p$ pour tous nombre premiers $p\notin \{3,337\}$.
+\end{enumerate}
+
+Il s'agit maintenant de vérifier que ces fonctions sont bien solutions. L'identité est clairement une solution. On vérifie que la fonction (b) est bien solution. L'argument est identique pour les fonctions (c) et (d). La fonction (b) satisfait $f(f(p))=p$ pour tous les nombres premiers $p$ et $f(p)$ est un nombre premier pour tous les nombres premiers $p$. Comme la fonction est définie multiplicativement à partir des valeurs qu'elle prend sur les nombres premiers, elle satisfait $f(mn)=f(m)f(n)$ et donc $f(f(n))=n$ (en utilisant que $f(f(p))=p$). Elle satisfait donc la première condition. Soit maintenant un nombre $x$ tel que $x\equiv 1\pmod {2022}$. On doit montrer que $f(x)=x$. En effet, les facteurs premiers de $x$ sont premiers avec 2022 et donc sont envoyés sur eux-mêmes par $f$. Ainsi, $f(x)=x$. On en conclut que la fonction (b) satisfait bien les conditions du problème.
+
+\textbf{Remarque:} Le Claim 1 peut aussi être démontré de la manière suivante. Si $f(p)=x$, alors $f(p^k)=x^k$. Si $p$ est premier avec 2022, alors il existe $k$ tel que $p^k\equiv 1\pmod {2022}$. La deuxième condition implique $p^k=f(p^k)=x^k$ et donc $p=x=f(p)$.
+
+\textbf{Marking scheme:}
+
+\textbf{Solutions partielles} \dotfill ($\leq 6$ points)
+
+Les points partiels suivants peuvent être obtenus:
+\begin{enumerate}
+\item Obtenir $f(mn)=f(m)f(n)$ \dotfill (2 points)
+\item Montrer que $f(p)=p$ pour $p\notin \{2,3,337\}$ \dotfill (2 points)
+\item Montrer que $f(p)=q$, $f(q)=p$ et $f(r)=r$ pour $\{p,q,r\}=\{2,3,337\}$ \dotfill (2 points) 
+\end{enumerate}
+
+Si (a) n'a pas été obtenu, alors le point suivant peut-être accordé:
+\begin{itemize}
+\item Montrer que $f(1)=1$ ou $f(f(n))=n$\dotfill (1 point)
+\end{itemize}
+
+Si les points (b) et (c) n'ont pas été obtenus, alors le point suivant peut-être accordé:
+\begin{itemize}
+\item Montrer que $f(p)$ est premier pour tout premier $p$ \dotfill (1 point)
+\end{itemize}
+
+Si le point (c) n'a pas été obtenu, alors le point suivant peut-être accordé:
+\begin{itemize}
+\item Énoncer au moins une solution exotique \dotfill (1 point)
+\end{itemize}
+
+\textbf{Solutions complètes} \dotfill ($\geq 6$ points)
+
+Au plus un point peut être retiré:
+\begin{itemize}
+\item Manque de vérification d'au moins une solution exotique \dotfill ($-1$ point)
+\item Mauvaise factorisation de 2022 \dotfill ($-1$ point)
+\end{itemize}
+}
