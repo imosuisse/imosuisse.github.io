@@ -5,8 +5,11 @@ nav: 4
 ---
 
 <div class="tab-bar">
-  {% for csv in site.data.Final_Round %}
-  <button class="tab-link" onclick="selectYear(event, {{ csv[0] }})">{{ csv[0] }}</button>
+  {% for csv in site.data.Final_Round reversed %}
+    {% if forloop.first %}
+      {% assign year = csv[0] %}
+    {% endif %}
+    <button class="tab-link" onclick="selectYear(event, {{ csv[0] }})">{{ csv[0] }}</button>
   {% endfor %}
 </div>
 
@@ -24,7 +27,7 @@ nav: 4
 </script>
 
 {% for csv in site.data.Final_Round %}
-<div class = "results final {{ csv[0] }}">
+<div class = "results final {{ csv[0] }}" {% if csv[0] == year %} style = "display: block;" {% endif %}>
  <h2>Final Round {{ csv[0] }}</h2>
   <table>
     <thead>
@@ -74,7 +77,7 @@ nav: 4
 {% endfor %}
 
 {% for csv in site.data.Selection %}
-<div class = "results selection {{ csv[0] }}">
+<div class = "results selection {{ csv[0] }}" {% if csv[0] == year %}  style = "display: block;" {% endif %}>
  <h2>Selection {{ csv[0] }}</h2>
   <table>
     <thead>

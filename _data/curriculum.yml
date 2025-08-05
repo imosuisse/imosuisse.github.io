@@ -1,0 +1,117 @@
+First Round:
+  Algebra:
+    - Arithmetic
+    - Variables and Equations
+    - Real Numbers
+    - Rational Numbers
+    - Algebraic Manipulations
+    - Order of Operations
+  Combinatorics:
+    - Simple Counting
+    - Counterexamples
+    - Constructions
+    - Case Distinctions
+    - Tilings
+    - Dates and Times
+  Geometry:
+    - Points, Lines and Circles
+    - Polygons
+    - Simple 3D Objects
+    - Angles in Degrees
+    - Areas and Perimeters
+    - Distances
+    - Spacial Reasoning
+    - Reflection and Rotation
+  Number Theory:
+    - Integer Numbers
+    - Digits of an Integer
+    - Perfect Powers
+    - Simple Factoring
+    - Parity
+    - Divisors and Multiples
+    - Prime Numbers
+
+Second Round:
+  "":
+  Combinatorics:
+    - Divide and Conquer
+    - Fundamental Selction Processes
+    - Inclusion-Exclusion Principle
+    - Pigeonhole Principle
+  Geometry:
+    - Angles in Triangles
+    - Angles in Circles
+    - Cyclic Quadrilaterals
+  Number Theory:
+    - Divisibility
+    - GCD and LCM
+    - Estimations
+    - Induction
+
+Final Round:
+  Algebra:
+    Inequalities:
+      - QM-AM-GM-HM
+      - Cauchy Schwarz
+    Functional Equations:
+      - Variable Substitutions
+      - Injectivity and Surjectivity
+      - Equating Terms
+      - Discrete Domains
+    Sequences:
+      - Change of Variables
+      - Periodicity
+      - Telescoping Sums
+      - Recurrence Relations
+  Combinatorics:
+    - Double Counting
+    - Invariants and Monovariants
+    - Extremal Principle
+    - Colouring Arguments
+    - Combinatorial Games
+  Geometry:
+    - Similar Triangles
+    - Power of a Point
+    - Working Backwards
+    - Trigonometry
+    - Ceva and Menelaus
+  Number Theory:
+    - Modular Arithmetic
+    - Euler-Fermat
+    - Chinese Remainder Theorem
+    - Orders
+    - P-adic Valuations
+
+Selection:
+  Algebra:
+    Inequalities:
+      - Jensen
+      - General Mean
+      - Hölder
+      - Ordered Sequences
+      - Chebyshev
+    Functional Equations:
+      - Cauchy Equation
+      - Functional Substitution
+      - Fixed Points
+      - Monotonicity
+    Polynomials:
+      - Vieta
+      - Complex Numbers
+      - Irreducibility
+      - Symmetric Plynomials
+  Combinatorics:
+    - Graph Theory
+    - Combinatorial Geometry
+    - Probabilistic Method
+  Geometry:
+    - Pascal and Brianchon
+    - Symmedians
+    - Inversions
+    - Cross-Ratio
+  Number Theory:
+    - Generators
+    - Pell's Equation
+    - Pythagorean Triples
+    - Cyclotomic Polynomials
+    - Lifting the Exponent

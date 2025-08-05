@@ -1,0 +1,15 @@
+---
+layout: default
+title: Problem Catalogue
+nav: 3
+---
+
+{% for problem in site.problems %}
+    <h2>{{ problem.round
+            | capitalize 
+            | append: " Round "
+            | append: problem.year
+            | append : " – Problem "
+            | append: problem.number}}</h2>
+    {{ problem.content }}
+{% endfor %}
