@@ -21,7 +21,7 @@
 title: MO Archive
 email: info@mathematical.olympiad.ch
 description: >- # this means to ignore newlines until "baseurl:"
-  Archive of the Swiss Mathematical Olympiad
+  Archive of the Swiss Mathema ical Olympiad
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
@@ -53,5 +53,9 @@ exclude:
   - vendor/ruby/
 
 collections:
-  - problems
+  problems:
+    output: false
+  exams:
+    output: true
+    permalink: /:slug
   # - past-exams

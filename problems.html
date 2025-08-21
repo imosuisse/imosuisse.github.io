@@ -1,13 +1,14 @@
 ---
 layout: default
-title: Problem Catalogue
+title: Problems
 nav: 3
+rounds: ["?", "First Round", "Second Round", "Final Round", "Selection"]
 ---
 
 {% for problem in site.problems %}
-    <h2>{{ problem.round
-            | capitalize 
-            | append: " Round "
+    
+    <h2>{{ page.rounds[problem.round]
+            | append: " "
             | append: problem.year
             | append : " – Problem "
             | append: problem.number}}</h2>

@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Results
-nav: 4
 ---
 
 <div class="tab-bar">
