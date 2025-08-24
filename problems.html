@@ -6,11 +6,13 @@ rounds: ["?", "First Round", "Second Round", "Final Round", "Selection"]
 ---
 
 {% for problem in site.problems %}
-    
-    <h2>{{ page.rounds[problem.round]
+<div class = problem> 
+    <h4>{{ page.rounds[problem.round]
             | append: " "
             | append: problem.year
             | append : " – Problem "
-            | append: problem.number}}</h2>
+            | append: problem.number}}
+    </h4>
     {{ problem.content }}
+</div>
 {% endfor %}

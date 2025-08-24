@@ -1,0 +1,27 @@
+---
+year: 2022
+round: 4
+number: 4
+---
+<p>Given a (simple) graph <span class="math inline">\(G\)</span> with
+<span class="math inline">\(n\geq 2\)</span> vertices <span
+class="math inline">\(v_1, v_2, \dots, v_n\)</span> and <span
+class="math inline">\(m\geq 1\)</span> edges, Joël and Robert play the
+following game with <span class="math inline">\(m\)</span> coins:</p>
+<ol>
+<li><p>Joël first assigns to each vertex <span
+class="math inline">\(v_i\)</span> a non-negative integer <span
+class="math inline">\(w_i\)</span> such that <span
+class="math inline">\(w_1 + \dots + w_n = m\)</span>.</p></li>
+<li><p>Robert then chooses a (possibly empty) subset of edges, and for
+each edge chosen he places a coin on exactly one of its two endpoints,
+and then removes that edge from the graph. When he is done, the amount
+of coins on each vertex <span class="math inline">\(v_i\)</span> should
+not be greater than <span class="math inline">\(w_i\)</span>.</p></li>
+<li><p>Joël then does the same for all the remaining edges.</p></li>
+<li><p>Joël wins if the number of coins on each vertex <span
+class="math inline">\(v_i\)</span> is equal to <span
+class="math inline">\(w_i\)</span>.</p></li>
+</ol>
+<p>Determine all graphs <span class="math inline">\(G\)</span> for which
+Joël has a winning strategy.</p>

@@ -1,0 +1,12 @@
+Let $n \geq 2$ be an integer.
+Each of the squares of an $n \times n$ board contains a bit-coin with $0$ on one side, $1$ on the other.
+Initially, all bit-coins in the leftmost column show a $0$.
+A move consists of one of the following:
+\begin{itemize}
+    \item Within any row, look at the rightmost two neighbouring bit-coins that display different numbers
+    (if they exist) and flip both of these as well as all bit-coins to their right.
+    \item Within any column, look at the topmost two neighbouring bit-coins that display different numbers
+    (if they exist) and flip both of these as well as all bit-coins above them.
+\end{itemize}
+Find the minimal value of $k$ such that there always exists a sequence of moves resulting in
+at most $k$ bit-coins showing $1$.
