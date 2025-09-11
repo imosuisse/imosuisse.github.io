@@ -62,12 +62,14 @@ main {
   h4 {
     font-family: CMB;
     margin-bottom: 5px;
+    margin-top: 0px
   }
   p {
     margin-top: 5px;
   }
   width: 60%;
-  margin: 20px auto;
+  margin: 0px auto;
+  padding: 10px 0px;
   text-align: justify;
   em {
     font-family: CMO;
@@ -116,6 +118,12 @@ main {
   p {
     margin: 8px 0px;
   }
+}
+
+.problem-filter {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px;
 }
 
 //

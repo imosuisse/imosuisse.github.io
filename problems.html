@@ -5,14 +5,103 @@ nav: 3
 rounds: ["?", "First Round", "Second Round", "Final Round", "Selection"]
 ---
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.css">
+<script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.js"></script>
+
+<div class = "problem-filter">
+    <div> 
+        <input type="checkbox" id="algebra" disabled>
+        <label for="algebra">Algebra</label><br>
+        <input type="checkbox" id="combinatorics" disabled>
+        <label for="combinatorics">Combinatorics</label><br>
+        <input type="checkbox" id="geometry" disabled>
+        <label for="geometry">Geometry</label><br>
+        <input type="checkbox" id="number-theory" disabled>
+        <label for="number-theory">Number Theory</label>
+    </div>
+    <div>
+        <input type="checkbox" id="first-round" disabled>
+        <label for="first-round">First Round</label><br>
+        <input type="checkbox" id="second-round" checked>
+        <label for="second-round">Second Round</label><br>
+        <input type="checkbox" id="final-round" checked>
+        <label for="final-round">Final Round</label><br>
+        <input type="checkbox" id="selection" checked>
+        <label for="selection">Selection</label>
+    </div>
+    <div>
+        <label for="search">Text Search</label><br>
+        <input type="text" id="search" maxlength="20" size="25"></input><br>
+        {% assign count = site.problems | size %}
+        <p><strong>Displayed: <span id='count'>{{ count }}</span> / {{ count }}</strong></p>
+    </div>
+</div>
+
+<br>
+<div id="slider"></div>
+<br>
+
 {% for problem in site.problems %}
-<div class = problem> 
+<div class = "problem {{ page.rounds[problem.round] | downcase | replace: " ", "-"}} {{ problem.year }} p{{ problem.number }}">
     <h4>{{ page.rounds[problem.round]
             | append: " "
             | append: problem.year
             | append : " – Problem "
-            | append: problem.number}}
+            | append: problem.number }}
     </h4>
     {{ problem.content }}
 </div>
 {% endfor %}
+
+<script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const slider = document.getElementById('slider');
+    const problems = document.querySelectorAll('div.problem');
+    const tags = ['algebra', 'combinatorics', 'geometry', 'number-theory',
+        'first-round', 'second-round', 'final-round', 'selection'];
+    const search = document.getElementById('search');
+
+    function filter(div) {
+        for (const tag of tags) {
+            if (div.classList.contains(tag) && !document.getElementById(tag).checked) { return false; }
+        }
+        if (!div.textContent.toLowerCase().includes(search.value.toLowerCase())) { return false; }
+        yearRange = slider.noUiSlider.get();
+        const hasIntInRange = Array.from(div.classList).some(cls => {
+            const num = parseInt(cls, 10);
+            return !isNaN(num) && num >= yearRange[0] && num <= yearRange[1];
+        });
+        return hasIntInRange;
+    }
+
+    function update() {
+        var count = 0;
+        problems.forEach(div => {
+            var show = filter(div);
+            div.style.display = show ? '' : 'none';
+            if (show) { count += 1 };
+        });
+        document.getElementById('count').innerHTML = count;
+    }
+
+    checkboxes.forEach(checkbox => { checkbox.addEventListener('change', update); });
+    search.addEventListener('change', update);
+    
+    noUiSlider.create(slider, {
+        start: [2020, 2025],
+        connect: true,
+        step: 1,
+        range: {
+            min: 1997,
+            max: 2025
+        },
+        format: {
+            to: value => Math.round(value),
+            from: value => Number(value)
+        },
+        tooltips: true
+    });
+
+    slider.noUiSlider.on('update', update);
+    update();
+</script>

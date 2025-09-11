@@ -42,7 +42,7 @@ for filename in os.listdir(source_dir):
         )
 
         
-        front_matter = f"---\nyear: {x}\nround: {y}\nnumber: {z}\n---\n"
+        front_matter = f"---\nyear: {x}\nround: {y}\nnumber: '{z}'\n---\n"
         final_output = front_matter + html_content
 
         with open(html_path, "w", encoding="utf-8") as f:
