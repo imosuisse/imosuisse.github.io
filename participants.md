@@ -4,22 +4,29 @@ layout: default
 nav: 4
 ---
 
-{% assign all_names = "" | split: "" %}
+{% assign names = "" | split: "" %}
 
 {% for exam in site.exams %}
-  {% for participant in exam.participants %}
-    {% assign name = participant.last-name | append: " " | append: participant.first-name %}
-    {% unless all_names contains name %}
-      {% assign all_names = all_names | push: name %}
-    {% endunless %}
+    {% for participant in exam.participants %}
+        {% assign name = participant.last-name | append: " " | append: participant.first-name %}
+        {% unless names contains name %}
+            {% assign names = names | push: name %}
+        {% endunless %}
+    {% endfor %}
+{% endfor %}
+
+{% assign names = names | sort %}
+
+<h2>Index of Participants</h2>
+
+{% assign current = "" %}
+<ul class = "participants">
+  {% for name in names %}
+    {% assign letter = name | slice: 0,1 | upcase %}
+    {% if letter != current %}
+      {% assign current = letter %}
+      <li class = "subtitle">{{ letter }}</li>
+    {% endif %}
+    <li>{{ name }}</li>
   {% endfor %}
-{% endfor %}
-
-{% assign all_names = all_names | sort %}
-
-<h2>All Participants</h2>
-<ul>
-{% for name in all_names %}
-  <li>{{ name }}</li>
-{% endfor %}
 </ul>

@@ -2,47 +2,53 @@
 layout: default
 title: Exams
 nav: 2
-languages: [["english", "en"], ["german", "de"], ["french", "fr"], ["italian", "it"]]
-rounds: ["First Round", "Second Round", "Final Round", "Selection"]
+languages: ["english", "german", "french", "italian"]
 ---
-<!---->
-<!-- <div class = "exams"> -->
-<!-- {% assign pdfs = site.static_files | where: "extname", ".pdf" | where_exp: "file", "file.path contains '/Exam/'" %} -->
-<!---->
-<!-- <table> -->
-<!-- {% for year in (1997..2024) reversed %} -->
-<!-- 	{% assign year-list = pdfs | where_exp: "file", "file.path contains year" %} -->
-<!-- 	{% if year-list != empty %} -->
-<!-- 		<tr><th>{{ year }}</th> -->
-<!-- 		{% for round in page.rounds %} -->
-<!--             {% assign round-id = round | replace: ' ', '' %} -->
-<!-- 			{% assign round-list = year-list | where_exp: "file", "file.path contains round-id" %} -->
-<!--             <td class = "round-label">{{ round }}<br> -->
-<!--             {% for lang in page.languages %} -->
-<!--                 {% assign dir = '/exams/' | append: year | append: '/' | append: round-id | append: '/Exam/' %} -->
-<!--                 {% assign name = lang[0] | append: round-id | append: year | append: '.pdf' %} -->
-<!--                 {% assign path = dir | append: name %} -->
-<!--                 {% assign file = site.static_files | where: "path", path | first %} -->
-<!--                 {% if file %}<a href = "{{ dir | append: name }}">{{ lang[1] }}</a>{% endif %} -->
-<!--             {% endfor %} -->
-<!--             </td> -->
-<!-- 		{% endfor %} -->
-<!-- 		</tr> -->
-<!-- 	{% endif %} -->
-<!-- {% endfor %} -->
-<!-- </table> -->
-<!-- </div> -->
 
-{% assign exams = site.exams | group_by: "year" %}
+<h2>Past Exams</h2>
 
-<div class = "exams">
-    {% for year in exams %}
-        <h3>{{ year.name }}</h3>
-        {% for exam in year.items %}
-            <a href = "{{ exam.url }}">{{ exam.round }}</a>
-            {% for lang in page.languages %}
-                <a href = "">{{ lang[1] }}</a>
-            {% endfor %}
+<table class = "exams">
+    <tr>
+        <th>Exam</th>
+        <th># Prob.</th>
+        <th># Part.</th>
+        <th># Winner(s)</th>
+        {% for lang in page.languages %}
+            <th class = "center">{{ lang | capitalize }}</th>
         {% endfor %}
+    </tr>
+
+    {% assign exams = site.exams | sort: "year" | reverse %}
+    {% for exam in exams %}
+        {% assign round = exam.round | replace: " ", "" %}
+
+        {% assign winners = exam.participants | where: "rank", 1 %}
+
+        <tr>
+            <td><a href = "{{ exam.url }}">{{ exam.round }} {{ exam.year }}</a></td>
+            <td>{{ exam.problem-count }}</td>
+            <td>{{ exam.participant-count }}</td>
+
+            <td>
+                {% for winner in winners %}
+                    {% assign name = winner.first-name | append: " " | append: winner.last-name %}
+                    {% if forloop.last == false %}
+                        {% assign name = name | append: ", " %}
+                    {% endif %}
+                    {{ name }}
+                {% endfor %}
+            </td>
+            {% for lang in page.languages %}
+                {% assign name = lang | append: round | append: exam.year | append: ".pdf" %}
+                {% assign file = site.static_files | where: "name", name | first %}
+                <td class = "center">
+                    {% if file %}
+                        <a href = "{{ file.path }}">pdf</a></td>
+                    {% else %}
+                        -
+                    {% endif %}
+                </td>
+            {% endfor %}
+        </tr>
     {% endfor %}
-</div>
+</table>
