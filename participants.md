@@ -19,6 +19,9 @@ nav: 4
 
 <h2>Index of Participants</h2>
 
+Listed below are all participants of the Swiss Mathematical Olympiad that have reached at least the Final Round,
+sorted alphabetically by last name.
+
 {% assign current = "" %}
 <ul class = "participants">
   {% for name in names %}
