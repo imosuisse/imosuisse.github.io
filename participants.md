@@ -22,14 +22,20 @@ nav: 4
 Listed below are all participants of the Swiss Mathematical Olympiad that have reached at least the Final Round,
 sorted alphabetically by last name.
 
+There are currently <b>{{ names | size }}</b> participants listed.
+
 {% assign current = "" %}
 <ul class = "participants">
-  {% for name in names %}
-    {% assign letter = name | slice: 0,1 | upcase %}
-    {% if letter != current %}
-      {% assign current = letter %}
-      <li class = "subtitle">{{ letter }}</li>
-    {% endif %}
-    <li>{{ name }}</li>
-  {% endfor %}
+    <div class = "no-split">
+    {% for name in names %}
+        {% assign letter = name | slice: 0,1 %}
+        {% if letter != current %}
+            </div>
+            <div class = "no-split">
+            {% assign current = letter %}
+            <li class = "subtitle">{{ letter }}</li>
+        {% endif %}
+        <li>{{ name }}</li>
+    {% endfor %}
+    </div>
 </ul>

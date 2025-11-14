@@ -6,10 +6,17 @@ languages: ["english", "german", "french", "italian"]
 ---
 
 <h2>Past Exams</h2>
+Note that during the history of the Olympiad the number, naming, and format of the exam rounds
+has changed considerably. The listing below uses the modern-day naming convention.
+<br>
+A comprehensive history of the competition format can be found <a href = "/history.html">here</a>.
+
+<br><br>
 
 <table class = "exams">
     <tr>
-        <th>Exam</th>
+        <th>Year</th>
+        <th>Round</th>
         <th># Prob.</th>
         <th># Part.</th>
         <th>Winner(s)</th>
@@ -18,18 +25,21 @@ languages: ["english", "german", "french", "italian"]
         {% endfor %}
     </tr>
 
-    {% assign exams = site.exams | sort: "year" | reverse %}
+    {% assign exams = site.exams | sort: "path" | reverse %}
+
+
+    {% assign current = 0 %}
     {% for exam in exams %}
-        {% assign round = exam.round | replace: " ", "" %}
-
-        {% assign winners = exam.participants | where: "rank", 1 %}
-
         <tr>
-            <td><a href = "{{ exam.url }}">{{ exam.round }} {{ exam.year }}</a></td>
+            <td>{% unless current == exam.year %} {{ exam.year }} {% endunless %}</td>
+            {% assign current = exam.year %}
+
+            <td><a href = "{{ exam.url }}">{{ exam.round }}</a></td>
             <td>{{ exam.problem-count }}</td>
             <td>{{ exam.participant-count }}</td>
 
             <td>
+                {% assign winners = exam.participants | where: "rank", 1 %}
                 {% for winner in winners %}
                     {% assign name = winner.first-name | append: " " | append: winner.last-name %}
                     {% if forloop.last == false %}
@@ -38,14 +48,14 @@ languages: ["english", "german", "french", "italian"]
                     {{ name }}
                 {% endfor %}
             </td>
+
             {% for lang in page.languages %}
-                {% assign name = lang | append: round | append: exam.year | append: ".pdf" %}
+                {% assign round = exam.round | replace: " ", "-" | downcase %}
+                {% assign name = round | append: "-" | append: exam.year | append: "-" | append: lang | append: ".pdf" %}
                 {% assign file = site.static_files | where: "name", name | first %}
                 <td class = "center">
                     {% if file %}
                         <a href = "{{ file.path }}">pdf</a></td>
-                    {% else %}
-                        -
                     {% endif %}
                 </td>
             {% endfor %}

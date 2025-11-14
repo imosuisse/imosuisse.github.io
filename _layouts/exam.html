@@ -21,19 +21,21 @@ rounds: ["", "First Round", "Second Round", "Final Round", "Selection"]
                 <thead>
                     <tr>
                         <th>Rank</th>
-                        <th>Name</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
                         {% for i in (1..page.problem-count) %}
                         <th class = "center">P{{ i }}</td>
                         {% endfor %}
                         <th class = "center">Total</th>
-                        <th>Award</th>
+                        <th>{% if page.round == "Selection" %}Team{% else %}Award{% endif %}</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for participant in page.participants %}
                     <tr>
                         <td>{{ participant.rank }}</td>
-                        <td>{{ participant.first-name }} {{participant.last-name}}</td>
+                        <td>{{ participant.first-name }}</td>
+                        <td>{{ participant.last-name }}</td>
                         {% for i in (1..page.problem-count) %}
                         <td class = "center">{{ participant.scores[forloop.index0] }}</td>
                         {% endfor %}
