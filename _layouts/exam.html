@@ -27,7 +27,7 @@ rounds: ["", "First Round", "Second Round", "Final Round", "Selection"]
                         <th class = "center">P{{ i }}</td>
                         {% endfor %}
                         <th class = "center">Total</th>
-                        <th>{% if page.round == "Selection" %}Team{% else %}Award{% endif %}</th>
+                        <th class = "center">{% if page.round == "Selection" %}Team{% else %}Award{% endif %}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -40,7 +40,7 @@ rounds: ["", "First Round", "Second Round", "Final Round", "Selection"]
                         <td class = "center">{{ participant.scores[forloop.index0] }}</td>
                         {% endfor %}
                         <td class = "center">{{ participant.total }}</td>
-                        <td>{{ participant.award }}</td>
+                        <td class = "center">{{ participant.award }}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
