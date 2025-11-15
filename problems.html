@@ -7,10 +7,8 @@ rounds: ["?", "First Round", "Second Round", "Final Round", "Selection"]
 
 <h2>Problem Archive</h2>
 
-Many formulations have been slightly altered for the sake of coherent style and notation. Consult the
-PDF versions found on <a href = "/exams.html">here</a> for original formulations.
-
-<br><br>
+<p>Many formulations have been slightly altered for the sake of coherent style and notation. Consult the
+PDF versions found on <a href = "/exams.html">here</a> for original formulations.</p>
 
 <div class = "problem-filter">
     <div> 
@@ -52,16 +50,12 @@ PDF versions found on <a href = "/exams.html">here</a> for original formulations
 </div>
 
 {% assign problems = site.problems %}
-{% for problem in problems %}
-<div class = "problem {{ page.rounds[problem.round] | downcase | replace: " ", "-"}} {{ problem.year }} p{{ problem.number }}">
-    <h4>{{ page.rounds[problem.round]
-            | append: " "
-            | append: problem.year
-            | append : " – Problem "
-            | append: problem.number }}
-    </h4>
-    {{ problem.content }}
-</div>
+{% for p in problems %}
+<!-- <div class = "problem {{ page.rounds[problem.round] | downcase | replace: " ", "-"}} {{ problem.year }} p{{ problem.number }}"> -->
+<!--     <h4>{{ page.rounds[problem.round] }} {{ problem.year }} – Problem {{ problem.number }} ({{ problem.topic }})</h4> -->
+<!--     {{ problem.content }} -->
+<!-- </div> -->
+{% include problem.html problem=p %}
 {% endfor %}
 
 <script>

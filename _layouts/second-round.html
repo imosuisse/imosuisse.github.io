@@ -5,6 +5,12 @@ layout: default
 <!-- <p>{{ page.date | date: "%-d %B %Y" }}</p> -->
 <p>Number of participants: {{ page.participant-count }}</p>
 
+{% assign problems = site.problems | where: "year", page.year | where: "round", "Second Round" %}
+
+{% if problems.size != page.problem-count %}
+    ERROR: PROBLEM COUNT MISSMATCH
+{% endif %}
+
 <h3>Scores of the Top 50</h3>
 <table class = "scores">
     <thead>
@@ -12,21 +18,9 @@ layout: default
             <th>Rank</th>
             <th>First Name</th>
             <th>Last Name</th>
-            {% if page.problem-count == 6 %}
-                <th class = "center">C1</th>
-                <th class = "center">C2</th>
-                <th class = "center">G1</th>
-                <th class = "center">G2</th>
-                <th class = "center">N1</th>
-                <th class = "center">N2</th>
-            {% endif %}
-            {% if page.problem-count == 5 %}
-                <th class = "center">P1</th>
-                <th class = "center">P2</th>
-                <th class = "center">P3</th>
-                <th class = "center">P4</th>
-                <th class = "center">P5</th>
-            {% endif %}
+            {% for problem in problems %}
+                <th class = "center">{{ problem.number }}</th>
+            {% endfor %}
             <th class = "center">Total</th>
     </thead>
     <tbody>
@@ -35,8 +29,8 @@ layout: default
             <td>{{ participant.rank }}</td>
             <td>{{ participant.first-name }}</td>
             <td>{{ participant.last-name }}</td>
-            {% for i in (1..page.problem-count) %}
-            <td class = "center">{{ participant.scores[forloop.index0] }}</td>
+            {% for problem in problems %}
+                <td class = "center">{{ participant.scores[forloop.index0] }}</td>
             {% endfor %}
             <td class = "center">{{ participant.total }}</td>
         </tr>
@@ -46,13 +40,7 @@ layout: default
 
 <h3>Contest Problems</h3>
 
-{% assign problems = site.problems | where: "year", page.year %}
-{% assign problems = problems | where: "round", 2 %}
-
 {% for problem in problems %}
-    <div class = "problem">
-        <h4>Problem {{ problem.number }}</h4>
-        {{ problem.content }}
-    </div>
+    {% include problem.html problem = problem %}
 {% endfor %}
 

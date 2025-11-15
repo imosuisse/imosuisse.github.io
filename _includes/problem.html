@@ -1,0 +1,13 @@
+
+{% assign year = include.problem.year %}
+{% assign round = include.problem.round %}
+{% assign number = include.problem.number %}
+
+{% assign topic = include.problem.topic %}
+
+<div class = "problem {{ round | replace: " ", "-" | downcase }} {{ year }} p{{ number }}">
+    <h4>{{ round }} {{ year }} – Problem {{ number }}</h4>
+    <strong>Topic: {{ topic }}</strong>
+    {{ include.problem.content }}
+</div>
+

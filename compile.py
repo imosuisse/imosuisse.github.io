@@ -41,8 +41,23 @@ for filename in os.listdir(source_dir):
             extra_args=['--mathjax']
         )
 
+        # Check if output file exists and has frontmatter
+        existing_frontmatter = None
+        if os.path.exists(html_path):
+            with open(html_path, "r", encoding="utf-8") as f:
+                content = f.read()
+                if content.startswith("---\n"):
+                    # Extract existing frontmatter
+                    end_idx = content.find("\n---\n", 4)
+                    if end_idx != -1:
+                        existing_frontmatter = content[:end_idx + 5]  # Include the closing ---\n
         
-        front_matter = f"---\nyear: {x}\nround: {y}\nnumber: '{z}'\n---\n"
+        # Use existing frontmatter if available, otherwise create new one
+        if existing_frontmatter:
+            front_matter = existing_frontmatter
+        else:
+            front_matter = f"---\nyear: {x}\nround: {y}\nnumber: '{z}'\n---\n"
+        
         final_output = front_matter + html_content
 
         with open(html_path, "w", encoding="utf-8") as f:
