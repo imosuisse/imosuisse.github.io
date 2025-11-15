@@ -1,0 +1,27 @@
+---
+layout: participant
+first-name: Linus
+last-name: Jordan
+slug: linus-jordan
+order: Jordan-Linus
+years: [2014, 2015]
+scores:
+  - [1, 1, 2, 0, 1, 1, 0, 0, 4, 10]
+  - [0, 9, 0, 0, 0, 0, 0, 0, 1, 10]
+  - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  - [1, 10, 2, 0, 1, 1, 0, 0, 5, 20]
+awards: {}
+exams:
+  - slug: second-round-2014
+    scores: [7, 1, 3, 0, '-']
+    total: 11
+    rank: 33
+  - slug: second-round-2015
+    scores: [7, 7, 7, 4, 1]
+    total: 26
+    rank: 13
+  - slug: final-round-2015
+    scores: [7, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    total: 7
+    rank: 20
+---

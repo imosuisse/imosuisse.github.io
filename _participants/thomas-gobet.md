@@ -1,0 +1,23 @@
+---
+layout: participant
+first-name: Thomas
+last-name: Gobet
+slug: thomas-gobet
+order: Gobet-Thomas
+years: [2005]
+scores:
+  - [0, 2, 1, 0, 0, 0, 1, 0, 1, 5]
+  - [1, 5, 1, 0, 1, 0, 0, 0, 2, 10]
+  - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  - [1, 7, 2, 0, 1, 0, 1, 0, 3, 15]
+awards: {}
+exams:
+  - slug: second-round-2005
+    scores: [7, 5, 0, 1, 0]
+    total: 13
+    rank: 17
+  - slug: final-round-2005
+    scores: [1, 7, '-', 0, 0, 7, 3, 0, 0, 0]
+    total: 18
+    rank: 23
+---

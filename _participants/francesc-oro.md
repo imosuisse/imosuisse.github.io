@@ -1,0 +1,42 @@
+---
+layout: participant
+first-name: Francesc
+last-name: Oro
+slug: francesc-oro
+order: Oro-Francesc
+years: [2024, 2025]
+scores:
+  - [0, 3, 0, 0, 0, 0, 0, 1, 8, 12]
+  - [3, 2, 1, 0, 1, 2, 1, 3, 3, 16]
+  - [2, 7, 3, 1, 2, 0, 1, 0, 8, 24]
+  - [5, 12, 4, 1, 3, 2, 2, 4, 19, 52]
+awards: {silver: [2025], imo: [2025], memo: [2024]}
+exams:
+  - slug: second-round-2024
+    scores: [7, 0, 7, 0, 6, 7]
+    total: 27
+    rank: 11
+  - slug: final-round-2024
+    scores: [3, 0, 4, '-', 4, 5, '-', 0]
+    total: 16
+    rank: 14
+  - slug: selection-2024
+    scores: [7, 0, 0, 7, 7, 1, 7, 1, '-', 0, 1, '-']
+    total: 31
+    rank: 13
+    award: MEMO
+  - slug: second-round-2025
+    scores: [7, 7, 7, 0, 7, 7]
+    total: 35
+    rank: 4
+  - slug: final-round-2025
+    scores: [7, 7, 6, 1, 7, 6, 6, '-']
+    total: 40
+    rank: 3
+    award: Silver
+  - slug: selection-2025
+    scores: [3, 7, 0, 7, 2, 3, 7, 5, 0, 7, 0, 0]
+    total: 41
+    rank: 4
+    award: IMO
+---

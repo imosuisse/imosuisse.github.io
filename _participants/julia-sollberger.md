@@ -1,0 +1,46 @@
+---
+layout: participant
+first-name: Julia
+last-name: Sollberger
+slug: julia-sollberger
+order: Sollberger-Julia
+years: [2018, 2019, 2020]
+scores:
+  - [0, 1, 1, 1, 1, 0, 1, 5, 8, 18]
+  - [2, 2, 1, 3, 1, 1, 0, 0, 6, 16]
+  - [1, 12, 5, 3, 1, 0, 0, 0, 2, 24]
+  - [3, 15, 7, 7, 3, 1, 1, 5, 16, 58]
+awards: {silver: [2020], bronze: [2019], memo: [2019]}
+exams:
+  - slug: second-round-2018
+    scores: [7, 7, 7, 2, 5, 1]
+    total: 29
+    rank: 18
+  - slug: second-round-2019
+    scores: [6, 6, 7, 6, 0, 6]
+    total: 31
+    rank: 15
+  - slug: final-round-2019
+    scores: [7, 2, 0, '-', 7, 7, 2, '-']
+    total: 25
+    rank: 12
+    award: Bronze
+  - slug: selection-2019
+    scores: [7, 0, 0, 0, 0, 0, '-', 1, 0, 0, 0, 1]
+    total: 9
+    rank: 13
+    award: MEMO
+  - slug: second-round-2020
+    scores: [7, 7, 7, 7, 3, 6]
+    total: 37
+    rank: 9
+  - slug: final-round-2020
+    scores: [7, 7, 0, 1, 3, 4, 7, 2]
+    total: 31
+    rank: 4
+    award: Silver
+  - slug: selection-2020
+    scores: [2, 0, 2, 1, 0, 0, 1, 2, 0, 7, 3, 1]
+    total: 19
+    rank: 9
+---

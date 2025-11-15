@@ -1,0 +1,23 @@
+---
+layout: participant
+first-name: Yi
+last-name: Zheng
+slug: yi-zheng
+order: Zheng-Yi
+years: [2015]
+scores:
+  - [0, 0, 1, 0, 1, 0, 0, 1, 2, 5]
+  - [1, 6, 2, 1, 0, 0, 0, 0, 0, 10]
+  - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  - [1, 6, 3, 1, 1, 0, 0, 1, 2, 15]
+awards: {}
+exams:
+  - slug: second-round-2015
+    scores: [7, 6, 3, 7, 1]
+    total: 24
+    rank: 14
+  - slug: final-round-2015
+    scores: [1, 2, 1, 0, 0, 0, 0, 0, '-', 0]
+    total: 4
+    rank: 23
+---

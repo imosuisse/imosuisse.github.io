@@ -1,0 +1,28 @@
+---
+layout: participant
+first-name: Philipp
+last-name: Krähenbühl
+slug: philipp-krahenbuhl
+order: Krähenbühl-Philipp
+years: [2005]
+scores:
+  - [0, 2, 1, 0, 0, 0, 0, 1, 1, 5]
+  - [0, 1, 0, 0, 1, 0, 3, 1, 4, 10]
+  - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  - [0, 3, 1, 0, 1, 0, 3, 2, 5, 15]
+awards: {silver: [2005]}
+exams:
+  - slug: second-round-2005
+    scores: [7, 1, 0, 6, 0]
+    total: 14
+    rank: 14
+  - slug: final-round-2005
+    scores: [7, 5, 7, 3, 5, 7, 6, 0, 7, 5]
+    total: 52
+    rank: 4
+    award: Silver
+  - slug: selection-2005
+    scores: ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?']
+    total: '?'
+    rank: '?'
+---

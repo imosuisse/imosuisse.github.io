@@ -1,0 +1,24 @@
+---
+layout: participant
+first-name: Tim
+last-name: Stockwell
+slug: tim-stockwell
+order: Stockwell-Tim
+years: [2006]
+scores:
+  - [0, 2, 0, 3, 0, 0, 0, 0, 0, 5]
+  - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  - [0, 11, 1, 0, 0, 0, 0, 0, 0, 12]
+  - [0, 13, 1, 3, 0, 0, 0, 0, 0, 17]
+awards: {}
+exams:
+  - slug: second-round-2006
+    scores: [2, 0, 2, 0, 2]
+    total: 6
+    rank: 31
+  - slug: selection-2006
+    scores: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    total: 1
+    rank: 13
+    award: LIE
+---

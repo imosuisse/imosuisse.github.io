@@ -1,0 +1,23 @@
+---
+layout: participant
+first-name: Maël
+last-name: Cattin
+slug: mael-cattin
+order: Cattin-Maël
+years: [2013]
+scores:
+  - [0, 2, 0, 0, 0, 1, 1, 0, 1, 5]
+  - [4, 4, 0, 1, 1, 0, 0, 0, 0, 10]
+  - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  - [4, 6, 0, 1, 1, 1, 1, 0, 1, 15]
+awards: {}
+exams:
+  - slug: second-round-2013
+    scores: [7, 5, 4, 0, 0]
+    total: 16
+    rank: 15
+  - slug: final-round-2013
+    scores: [0, '-', 2, 0, '-', 3, 0, 0, '-', '-']
+    total: 5
+    rank: 27
+---

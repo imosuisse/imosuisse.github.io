@@ -1,0 +1,71 @@
+---
+layout: participant
+first-name: Vladimir
+last-name: Serbinenko
+slug: vladimir-serbinenko
+order: Serbinenko-Vladimir
+years: [2004, 2005, 2006, 2007]
+scores:
+  - [0, 2, 1, 0, 0, 1, 0, 0, 11, 15]
+  - [0, 5, 0, 1, 0, 4, 2, 0, 18, 30]
+  - [0, 5, 0, 1, 0, 0, 3, 1, 14, 24]
+  - [0, 12, 1, 2, 0, 5, 5, 1, 43, 69]
+awards: {gold: [2006, 2007], silver: [2004, 2005], imo: [2004, 2005, 2006, 2007]}
+exams:
+  - slug: second-round-2004
+    scores: ['?', '?', '?', '?', '?']
+    total: '?'
+    rank: '?'
+  - slug: final-round-2004
+    scores: ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?']
+    total: 34
+    rank: 3
+    award: Silver
+  - slug: selection-2004
+    scores: ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?']
+    total: 42
+    rank: 2
+    award: IMO
+  - slug: second-round-2005
+    scores: [7, 7, 7, 0, 7]
+    total: 28
+    rank: 1
+  - slug: final-round-2005
+    scores: [7, 7, 4, 7, 5, 7, 7, 0, 7, 4]
+    total: 55
+    rank: 3
+    award: Silver
+  - slug: selection-2005
+    scores: ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?']
+    total: 39
+    rank: 3
+    award: IMO
+  - slug: second-round-2006
+    scores: [7, 7, 4, 7, 7]
+    total: 32
+    rank: 3
+  - slug: final-round-2006
+    scores: [7, 0, 7, 5, 0, 7, 7, 7, 0, 7]
+    total: 47
+    rank: 2
+    award: Gold
+  - slug: selection-2006
+    scores: [7, 7, 5, 7, 0, 7, 6, 5, 0, 7, 7, 5]
+    total: 63
+    rank: 2
+    award: IMO
+  - slug: second-round-2007
+    scores: [7, 7, 1, 7, 0]
+    total: 22
+    rank: 5
+  - slug: final-round-2007
+    scores: [7, 7, 7, 0, 7, 7, 7, 4, 4, 2]
+    total: 52
+    rank: 1
+    award: Gold
+  - slug: selection-2007
+    scores: [0, 7, 7, 7, 7, 2, 7, 0, 7, 7, 7, 0]
+    total: 58
+    rank: 1
+    award: IMO
+---

@@ -1,0 +1,61 @@
+---
+layout: participant
+first-name: Joël
+last-name: Huber
+slug: joel-huber
+order: Huber-Joël
+years: [2018, 2019, 2020, 2021]
+scores:
+  - [0, 3, 1, 0, 0, 2, 0, 1, 17, 24]
+  - [2, 5, 2, 2, 1, 1, 0, 0, 11, 24]
+  - [2, 13, 6, 1, 1, 1, 0, 2, 10, 36]
+  - [4, 21, 9, 3, 2, 4, 0, 3, 38, 84]
+awards: {silver: [2021], bronze: [2019, 2020], imo: [2020, 2021], memo: [2019]}
+exams:
+  - slug: second-round-2018
+    scores: [0, 0, 7, 4, 4, 1]
+    total: 16
+    rank: 39
+  - slug: second-round-2019
+    scores: [7, 0, 7, 7, 6, 7]
+    total: 34
+    rank: 11
+  - slug: final-round-2019
+    scores: [7, 1, 0, 7, 3, 7, 0, 0]
+    total: 25
+    rank: 12
+    award: Bronze
+  - slug: selection-2019
+    scores: [1, 0, '-', 0, 0, 1, 0, 6, 0, 6, 0, 0]
+    total: 14
+    rank: 12
+    award: MEMO
+  - slug: second-round-2020
+    scores: [7, 7, 7, 7, 7, 7]
+    total: 42
+    rank: 1
+  - slug: final-round-2020
+    scores: [7, 7, 2, 1, 7, 4, 0, 0]
+    total: 28
+    rank: 7
+    award: Bronze
+  - slug: selection-2020
+    scores: [7, 7, 3, 1, 0, 7, 4, 1, 0, 7, 7, 0]
+    total: 44
+    rank: 2
+    award: IMO
+  - slug: second-round-2021
+    scores: [7, 7, 7, 7, 7, 7]
+    total: 42
+    rank: 1
+  - slug: final-round-2021
+    scores: [7, 7, 2, '-', 7, 7, 7, '-']
+    total: 37
+    rank: 3
+    award: Silver
+  - slug: selection-2021
+    scores: [7, 7, 1, 7, 2, '-', 7, 0, 0, 7, 1, 0]
+    total: 39
+    rank: 5
+    award: IMO
+---

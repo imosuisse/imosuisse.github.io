@@ -1,0 +1,28 @@
+---
+layout: participant
+first-name: Oliver
+last-name: Huggenberger
+slug: oliver-huggenberger
+order: Huggenberger-Oliver
+years: [2006]
+scores:
+  - [1, 1, 0, 0, 1, 0, 1, 1, 0, 5]
+  - [1, 4, 1, 0, 0, 0, 0, 1, 3, 10]
+  - [1, 9, 0, 0, 0, 2, 0, 0, 0, 12]
+  - [3, 14, 1, 0, 1, 2, 1, 2, 3, 27]
+awards: {bronze: [2006]}
+exams:
+  - slug: second-round-2006
+    scores: [3, '-', 6, 0, 5]
+    total: 14
+    rank: 14
+  - slug: final-round-2006
+    scores: [0, 0, 7, 1, '-', 7, 7, 6, 0, 0]
+    total: 28
+    rank: 7
+    award: Bronze
+  - slug: selection-2006
+    scores: [0, '-', 0, 4, 0, 0, 0, 4, 0, 0, 0, 0]
+    total: 8
+    rank: 10
+---

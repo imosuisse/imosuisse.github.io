@@ -1,0 +1,36 @@
+---
+layout: participant
+first-name: Rada
+last-name: Kamysheva
+slug: rada-kamysheva
+order: Kamysheva-Rada
+years: [2019, 2020]
+scores:
+  - [0, 0, 0, 0, 0, 1, 0, 2, 9, 12]
+  - [1, 4, 3, 2, 1, 0, 0, 2, 3, 16]
+  - [9, 2, 0, 0, 1, 0, 0, 0, 0, 12]
+  - [10, 6, 3, 2, 2, 1, 0, 4, 12, 40]
+awards: {bronze: [2020]}
+exams:
+  - slug: second-round-2019
+    scores: [7, 6, 7, 6, 7, 7]
+    total: 40
+    rank: 4
+  - slug: final-round-2019
+    scores: [7, 2, 1, 0, 0, 3, 6, '-']
+    total: 19
+    rank: 18
+  - slug: second-round-2020
+    scores: [7, 7, 7, 7, 4, 7]
+    total: 39
+    rank: 6
+  - slug: final-round-2020
+    scores: [6, 7, 0, 1, 7, 2, 0, 1]
+    total: 24
+    rank: 11
+    award: Bronze
+  - slug: selection-2020
+    scores: [3, 0, 0, '-', '-', '-', '-', '-', '-', '-', '-', '-']
+    total: 3
+    rank: 14
+---

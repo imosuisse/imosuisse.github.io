@@ -1,0 +1,31 @@
+---
+layout: participant
+first-name: Paolo
+last-name: Minelli
+slug: paolo-minelli
+order: Minelli-Paolo
+years: [2011, 2012]
+scores:
+  - [1, 3, 1, 1, 2, 0, 0, 0, 2, 10]
+  - [5, 6, 4, 2, 0, 2, 0, 0, 1, 20]
+  - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  - [6, 9, 5, 3, 2, 2, 0, 0, 3, 30]
+awards: {}
+exams:
+  - slug: second-round-2011
+    scores: [0, 3, 3, 2, '-']
+    total: 8
+    rank: 21
+  - slug: final-round-2011
+    scores: [1, 0, 1, '-', 0, 0, 4, 0, 1, 0]
+    total: 7
+    rank: 22
+  - slug: second-round-2012
+    scores: [1, 7, 0, 7, 0]
+    total: 15
+    rank: 13
+  - slug: final-round-2012
+    scores: [2, 1, '-', 2, '-', 4, 7, '-', 0, '-']
+    total: 16
+    rank: 18
+---

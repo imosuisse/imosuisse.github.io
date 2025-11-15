@@ -1,0 +1,81 @@
+---
+layout: default
+round-names: ["Second Round", "Final Round", "Selection", "Overall"]
+---
+<h2>{{ page.first-name }} {{ page.last-name }}</h2>
+
+{% assign received = 0 %}
+
+<p>
+<strong> First Name:</strong> {{ page.first-name }}<br>
+<strong> Last Name:</strong> {{ page.last-name }}<br>
+<strong> Participations:</strong> {{ page.years | join: ", " }}<br>
+</p>
+
+<h3>Exams</h3>
+<table>
+    <tr>
+        <th>Year</th>
+        <th>Round</th>
+        <th>Scores</th>
+        <th class = "center">Total</th>
+        <th class = "center">Abs. Rank</th>
+        <th class = "center">Rel. Rank</th>
+        <th class = "center">Award / Team</th>
+    </tr>
+    {% assign current = 0 %}
+    {% for result in page.exams %}
+        {% assign exam = site.exams | where: "slug", result.slug | first %}
+        <tr>
+            <td>{% unless current == exam.year %}{{ exam.year }}{% endunless %}</td>
+            {% assign current = exam.year %}
+            <td><a href = "/{{ exam.slug }}">{{ exam.round }}</a></td>
+            <td>{{ result.scores | join: ", " }}</td>
+            <td class = "center">{{ result.total }} / {{ exam.problem-count | times: 7 }}</td>
+            <td class = "center">{{ result.rank }} / {{ exam.participant-count }}</td>
+            <td class = "center">{{ exam.participant-count | minus: result.rank | plus: 1 | times: 100 | divided_by: exam.participant-count | round }} %</td>
+            <td class = "center">{{ result.award }}</td>
+        </tr>
+
+        {% assign received = received | plus: exam.problem-count %}
+    {% endfor %}
+</table>
+
+<h3>Score Distribution</h3>
+
+<table>
+    <tr>
+        <th>Round</th>
+        <th class = "center"># –</th>
+        {% for i in (0..7) %}
+            <th class = "center"># {{ i }}</th>
+        {% endfor %}
+        <th class = "center">Total</th>
+    </tr>
+    {% for r in (0..3) %}
+    <tr>
+        <th>{{ layout.round-names[r] }}</th>
+        {% for i in page.scores[r] %}
+            <td class = "center">{{ i }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+
+<h3>Awards / Qualifications</h3>
+<table>
+    <tr>
+        <th class = "center">Gold</th>
+        <th class = "center">Silver</th>
+        <th class = "center">Bronze</th>
+        <th class = "center">IMO</th>
+        <th class = "center">MEMO</th>
+    <tr>
+    <tr>
+        <td class = "center">{{ page.awards.gold | join: ", " }}</td>
+        <td class = "center">{{ page.awards.silver | join: ", " }}</td>
+        <td class = "center">{{ page.awards.bronze | join: ", " }}</td>
+        <td class = "center">{{ page.awards.imo | join: ", " }}</td>
+        <td class = "center">{{ page.awards.memo | join: ", " }}</td>
+    </tr>
+</table>

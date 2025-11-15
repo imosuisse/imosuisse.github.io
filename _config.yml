@@ -58,3 +58,6 @@ collections:
   exams:
     output: true
     permalink: /:slug
+  participants:
+    output: true
+    permalink: /:slug
