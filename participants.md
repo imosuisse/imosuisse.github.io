@@ -7,12 +7,16 @@ nav: 4
 {% assign names = "" | split: "" %}
 
 {% for exam in site.exams %}
-    {% for participant in exam.participants %}
-        {% assign name = participant.last-name | append: " " | append: participant.first-name %}
-        {% unless names contains name %}
-            {% assign names = names | push: name %}
-        {% endunless %}
-    {% endfor %}
+    {% if exam.round == "Final Round" or exam.round == "Selection" %}
+        {% for participant in exam.participants %}
+            {% assign name = participant.last-name | append: " " | append: participant.first-name %}
+            {% unless names contains name %}
+                {% unless participant.last-name == "?" %}
+                    {% assign names = names | push: name %}
+                {% endunless %}
+            {% endunless %}
+        {% endfor %}
+    {% endif %}
 {% endfor %}
 
 {% assign names = names | sort %}

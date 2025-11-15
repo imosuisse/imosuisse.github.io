@@ -1,0 +1,49 @@
+---
+layout: default
+---
+<h2>Selection {{ page.year }}</h2>
+<!-- <p>{{ page.date | date: "%-d %B %Y" }}</p> -->
+<p>Number of participants: {{ page.participant-count }}</p>
+
+<h3>Scores</h3>
+<table class = "scores">
+    <thead>
+        <tr>
+            <th>Rank</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            {% for i in (1..page.problem-count) %}
+                <th class = "center">P{{ i }}</td>
+            {% endfor %}
+            <th class = "center">Total</th>
+            <th class = "center">Team</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for participant in page.participants %}
+        <tr>
+            <td>{{ participant.rank }}</td>
+            <td>{{ participant.first-name }}</td>
+            <td>{{ participant.last-name }}</td>
+            {% for i in (1..page.problem-count) %}
+                <td class = "center">{{ participant.scores[forloop.index0] }}</td>
+            {% endfor %}
+            <td class = "center">{{ participant.total }}</td>
+            <td class = "center">{{ participant.award }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h3>Contest Problems</h3>
+
+{% assign problems = site.problems | where: "year", page.year %}
+{% assign problems = problems | where: "round", 4 %}
+
+{% for problem in problems %}
+    <div class = "problem">
+        <h4>Problem {{ problem.number }}</h4>
+        {{ problem.content }}
+    </div>
+{% endfor %}
+

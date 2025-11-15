@@ -18,11 +18,14 @@ $contrast: #4A249D;
 $highlight: #009FBD;
 
 $red: red;
+$pink: #FFEEEE;
 
 body {
   margin: 0px;
-  height: 2000px;
   overscroll-behavior: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
@@ -36,6 +39,7 @@ header {
   }
 
   nav {
+    background-color: $pink;
     padding: 10px;
     border-top: 2px solid $red;
     border-bottom: 2px solid $red;
@@ -62,6 +66,7 @@ a {
 
 main {
   margin: 50px 15%;
+  flex: 1;
 }
 
 .problem {
@@ -353,23 +358,24 @@ main {
 //   }
 // }
 //
-// footer {
-//   background-color: $base;
-//   border-top: 1px solid;
-//   height: 100px;
-//   display: flex;
-//   justify-content: space-around;
-//   align-items: center;
-//
-//   a {
-//     color: grey;
-//     text-decoration: none;
-//     &:hover {
-//       color: $highlight;
-//     }
-//   }
-// }
-//
+
+footer {
+  background-color: $pink;
+  border-top: 2px solid $red;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  a {
+    color: black;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 //
 // .exams {
 //   td {

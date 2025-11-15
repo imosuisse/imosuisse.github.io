@@ -2,6 +2,7 @@
 <html lang="en">
 	<head>
 		{% include head.html %}
+        <title>{{ page.title }}</title>
 	</head>
 	<body>
 		<header>
@@ -12,7 +13,7 @@
 			{{ content }}
 		</main>
 		<footer>
-			
+		    {% include footer.html %}	
 		</footer>
 	</body>
 </html>
