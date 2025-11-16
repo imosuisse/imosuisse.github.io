@@ -10,18 +10,22 @@ scores:
   - [0, 5, 1, 0, 0, 0, 2, 0, 2, 10]
   - [1, 4, 1, 2, 1, 0, 0, 2, 1, 12]
   - [1, 9, 2, 3, 1, 1, 2, 2, 6, 27]
+best-ranks: [11, 13, 9]
 awards: {bronze: [2015]}
 exams:
   - slug: second-round-2015
+    round: Second Round
     scores: [4, 7, 7, 7, 2]
     total: 27
     rank: 11
   - slug: final-round-2015
+    round: Final Round
     scores: [7, 7, 1, 5, 0, 0, 0, 5, 0, 0]
     total: 25
     rank: 13
     award: Bronze
   - slug: selection-2015
+    round: Selection
     scores: [1, 6, 6, 2, 0, 0, 7, 0, 0, 2, 3, '-']
     total: 27
     rank: 9

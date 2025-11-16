@@ -10,13 +10,16 @@ scores:
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+best-ranks: [null, null, null]
 awards: {}
 exams:
   - slug: second-round-2004
+    round: Second Round
     scores: ['?', '?', '?', '?', '?']
     total: '?'
     rank: '?'
   - slug: final-round-2004
+    round: Final Round
     scores: ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?']
     total: None
     rank: '?'

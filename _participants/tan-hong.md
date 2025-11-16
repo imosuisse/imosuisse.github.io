@@ -10,21 +10,26 @@ scores:
   - [4, 2, 3, 2, 1, 2, 0, 0, 2, 16]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   - [4, 5, 3, 2, 1, 2, 0, 2, 9, 28]
+best-ranks: [15, 22, null]
 awards: {}
 exams:
   - slug: second-round-2021
+    round: Second Round
     scores: [7, 7, 7, 0, 7, 0]
     total: 28
     rank: 15
   - slug: final-round-2021
+    round: Final Round
     scores: [7, '-', 3, '-', 4, 2, '-', 0]
     total: 16
     rank: 22
   - slug: second-round-2022
+    round: Second Round
     scores: [7, 6, 6, 0, 7, 7]
     total: 33
     rank: 15
   - slug: final-round-2022
+    round: Final Round
     scores: [2, '-', 1, 1, 7, 4, 0, 1]
     total: 16
     rank: 23

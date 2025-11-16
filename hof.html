@@ -1,0 +1,55 @@
+---
+layout: default
+title: Hall of Fame
+nav: 5
+---
+
+<h2>Hall of Fame</h2>
+
+<p>The table below displays all participants that have been awarded at least two medals.</p>
+
+<table class="sortable">
+    <tr>
+        <th rowspan = "2" class="center sort-4 sort-asc">Name</th>
+        <th colspan = "4" class="center sort-1 sort-desc">Medals</th>
+        <th colspan = "3" class="center sort-2 sort-asc">Best Rank</th>
+        <th colspan = "2" class="center sort-3 sort-desc">Teams</th>
+    </tr>
+    </tr>
+        <th class="center sort-desc">G</th>
+        <th class="center sort-desc">S</th>
+        <th class="center sort-desc">B</th>
+        <th class="center sort-desc">Σ</th>
+        
+        <th class="center sort-asc sort-2">2</th>
+        <th class="center sort-asc sort-1">F</th>
+        <th class="center sort-asc sort-3">S</th>
+
+        <th class="center sort-desc">I</th>
+        <th class="center sort-desc">M</th>
+    </tr>
+    
+    {% for participant in site.participants %}
+        {% assign g = participant.awards.gold.size %}
+        {% assign s = participant.awards.silver.size %}
+        {% assign b = participant.awards.bronze.size %}
+        {% assign medalCount = g | plus: s | plus: b %}
+
+        {% if medalCount >= 2 %}
+            <tr>
+                <td><a href = "/{{ participant.slug }}">{{ participant.first-name }} {{ participant.last-name }}</a></td>
+                <td class = "center">{{ g }}</td>
+                <td class = "center">{{ s }}</td>
+                <td class = "center">{{ b }}</td>
+                <td class = "center">{{ medalCount }}</td>
+
+                <td class = "center">{{ participant.best-ranks[0] }}</td>
+                <td class = "center">{{ participant.best-ranks[1] }}</td>
+                <td class = "center">{{ participant.best-ranks[2] }}</td>
+
+                <td class = "center">{{ participant.awards.imo.size }}</td>
+                <td class = "center">{{ participant.awards.memo.size }}</td>
+            </tr>
+        {% endif %}
+    {% endfor %}
+</table>

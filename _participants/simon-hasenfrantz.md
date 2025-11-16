@@ -10,9 +10,11 @@ scores:
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+best-ranks: [null, null, 3]
 awards: {imo: [2005]}
 exams:
   - slug: selection-2005
+    round: Selection
     scores: ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?']
     total: 39
     rank: 3

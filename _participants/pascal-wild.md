@@ -10,26 +10,32 @@ scores:
   - [4, 6, 3, 1, 2, 0, 1, 0, 3, 20]
   - [7, 3, 0, 0, 1, 1, 0, 0, 0, 12]
   - [13, 10, 4, 1, 4, 1, 1, 1, 7, 42]
+best-ranks: [16, 13, 15]
 awards: {bronze: [2008]}
 exams:
   - slug: second-round-2007
+    round: Second Round
     scores: [6, 3, 7, '-', 0]
     total: 16
     rank: 16
   - slug: final-round-2007
+    round: Final Round
     scores: [0, 0, 2, 0, '-', 7, 0, 0, '-', '-']
     total: 9
     rank: 26
   - slug: second-round-2008
+    round: Second Round
     scores: [7, 7, 7, 1, '-']
     total: 22
     rank: 17
   - slug: final-round-2008
+    round: Final Round
     scores: [7, 3, 1, 1, '-', 7, 5, 3, 1, 0]
     total: 28
     rank: 13
     award: Bronze
   - slug: selection-2008
+    round: Selection
     scores: [4, '-', 0, 3, 0, 0, '-', '-', '-', '-', '-', '-']
     total: 7
     rank: 15

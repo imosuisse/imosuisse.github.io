@@ -10,18 +10,22 @@ scores:
   - [1, 0, 2, 0, 0, 0, 1, 1, 3, 8]
   - [0, 5, 1, 2, 0, 1, 0, 1, 2, 12]
   - [1, 5, 3, 3, 0, 1, 2, 2, 9, 26]
+best-ranks: [11, 6, 9]
 awards: {silver: [2022], memo: [2022]}
 exams:
   - slug: second-round-2022
+    round: Second Round
     scores: [7, 2, 7, 7, 7, 5]
     total: 35
     rank: 11
   - slug: final-round-2022
+    round: Final Round
     scores: [7, 6, 5, '-', 7, 7, 1, 1]
     total: 34
     rank: 6
     award: Silver
   - slug: selection-2022
+    round: Selection
     scores: [7, 4, 0, 6, 0, 0, 2, 7, 0, 1, 0, 2]
     total: 29
     rank: 9

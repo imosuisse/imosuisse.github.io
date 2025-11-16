@@ -10,22 +10,27 @@ scores:
   - [0, 3, 1, 0, 0, 0, 0, 1, 3, 8]
   - [0, 6, 0, 0, 0, 1, 0, 0, 5, 12]
   - [0, 10, 2, 1, 2, 2, 0, 1, 14, 32]
+best-ranks: [12, 6, 5]
 awards: {silver: [2023], imo: [2023]}
 exams:
   - slug: second-round-2021
+    round: Second Round
     scores: [3, 1, 7, 0, 7, 2]
     total: 20
     rank: 32
   - slug: second-round-2023
+    round: Second Round
     scores: [7, 7, 7, 3, 7, 4]
     total: 35
     rank: 12
   - slug: final-round-2023
+    round: Final Round
     scores: [6, 7, 0, 1, 7, 7, 0, 0]
     total: 28
     rank: 6
     award: Silver
   - slug: selection-2023
+    round: Selection
     scores: [7, 7, 0, 7, 0, 0, 7, 4, 0, 7, 0, 0]
     total: 39
     rank: 5

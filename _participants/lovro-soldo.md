@@ -10,17 +10,21 @@ scores:
   - [1, 4, 2, 0, 1, 0, 1, 0, 1, 10]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   - [1, 10, 2, 1, 2, 0, 1, 0, 3, 20]
+best-ranks: [18, 15, null]
 awards: {}
 exams:
   - slug: second-round-2005
+    round: Second Round
     scores: [7, 0, 0, 0, 0]
     total: 7
     rank: 26
   - slug: second-round-2006
+    round: Second Round
     scores: [0, 7, 2, 0, 3]
     total: 12
     rank: 18
   - slug: final-round-2006
+    round: Final Round
     scores: [1, 0, 0, 7, '-', 3, 5, 1, 0, 0]
     total: 17
     rank: 15

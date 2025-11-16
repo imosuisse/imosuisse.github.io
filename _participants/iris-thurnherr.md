@@ -10,13 +10,16 @@ scores:
   - [1, 4, 3, 0, 0, 1, 0, 1, 0, 10]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   - [1, 6, 4, 0, 0, 1, 0, 2, 1, 15]
+best-ranks: [20, 22, null]
 awards: {}
 exams:
   - slug: second-round-2007
+    round: Second Round
     scores: [0, 1, 6, 0, 7]
     total: 14
     rank: 20
   - slug: final-round-2007
+    round: Final Round
     scores: [6, 1, 1, 0, 1, 4, 0, 0, '-', 0]
     total: 13
     rank: 22

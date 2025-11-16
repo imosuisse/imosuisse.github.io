@@ -10,17 +10,21 @@ scores:
   - [2, 1, 3, 0, 0, 0, 0, 0, 2, 8]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   - [2, 5, 3, 1, 1, 1, 0, 3, 4, 20]
+best-ranks: [24, 20, null]
 awards: {}
 exams:
   - slug: second-round-2018
+    round: Second Round
     scores: [0, 3, 0, 4, 2, 7]
     total: 16
     rank: 39
   - slug: second-round-2019
+    round: Second Round
     scores: [0, 6, 7, 6, 6, 0]
     total: 25
     rank: 24
   - slug: final-round-2019
+    round: Final Round
     scores: [7, 1, 1, '-', 1, 7, 0, '-']
     total: 17
     rank: 20

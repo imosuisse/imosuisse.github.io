@@ -10,25 +10,31 @@ scores:
   - [3, 11, 1, 0, 1, 0, 0, 0, 4, 20]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   - [3, 16, 3, 2, 1, 0, 0, 0, 11, 36]
+best-ranks: [10, 13, null]
 awards: {}
 exams:
   - slug: second-round-2015
+    round: Second Round
     scores: [7, 1, 2, 0, 0]
     total: 10
     rank: 37
   - slug: second-round-2016
+    round: Second Round
     scores: [7, 7, 2, 0, 1]
     total: 17
     rank: 22
   - slug: final-round-2016
+    round: Final Round
     scores: [7, 0, '-', 0, 0, 0, 1, 0, '-', 0]
     total: 8
     rank: 21
   - slug: second-round-2017
+    round: Second Round
     scores: [7, 7, 7, 0, 7, 0]
     total: 28
     rank: 10
   - slug: final-round-2017
+    round: Final Round
     scores: [7, 3, 0, 0, 0, 7, 0, 7, 0, '-']
     total: 24
     rank: 13

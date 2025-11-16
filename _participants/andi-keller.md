@@ -10,26 +10,32 @@ scores:
   - [1, 5, 0, 0, 0, 0, 0, 0, 4, 10]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   - [1, 7, 0, 0, 0, 0, 0, 1, 6, 15]
+best-ranks: [5, 7, null]
 awards: {bronze: [2004]}
 exams:
   - slug: second-round-2004
+    round: Second Round
     scores: ['?', '?', '?', '?', '?']
     total: '?'
     rank: '?'
   - slug: final-round-2004
+    round: Final Round
     scores: ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?']
     total: 24
     rank: 7
     award: Bronze
   - slug: selection-2004
+    round: Selection
     scores: ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?']
     total: '?'
     rank: '?'
   - slug: second-round-2005
+    round: Second Round
     scores: [7, 6, 0, 7, 0]
     total: 20
     rank: 5
   - slug: final-round-2005
+    round: Final Round
     scores: [7, 7, 0, 0, 0, 7, 0, 7, 0, '-']
     total: 28
     rank: 16

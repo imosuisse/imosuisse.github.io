@@ -10,13 +10,16 @@ scores:
   - [0, 8, 1, 0, 1, 0, 0, 0, 0, 10]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   - [0, 9, 1, 0, 3, 0, 0, 1, 1, 15]
+best-ranks: [20, 23, null]
 awards: {}
 exams:
   - slug: second-round-2015
+    round: Second Round
     scores: [3, 3, 6, 7, 0]
     total: 19
     rank: 20
   - slug: final-round-2015
+    round: Final Round
     scores: [3, 1, 0, 0, 0, 0, 0, 0, 0, 0]
     total: 4
     rank: 23
