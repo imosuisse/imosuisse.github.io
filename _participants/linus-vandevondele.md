@@ -1,9 +1,9 @@
 ---
 layout: participant
 first-name: Linus
-last-name: Vandevondele
+last-name: VandeVondele
 slug: linus-vandevondele
-order: Vandevondele-Linus
+order: VandeVondele-Linus
 years: [2024, 2025]
 scores:
   - [0, 4, 0, 0, 1, 0, 1, 0, 6, 12]

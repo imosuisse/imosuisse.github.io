@@ -1,9 +1,9 @@
 ---
 layout: participant
-first-name: Gaetan
+first-name: Gaëtan
 last-name: Bossy
 slug: gaetan-bossy
-order: Bossy-Gaetan
+order: Bossy-Gaëtan
 years: [2014, 2015]
 scores:
   - [0, 4, 3, 0, 0, 0, 0, 0, 3, 10]

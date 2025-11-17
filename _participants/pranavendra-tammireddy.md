@@ -4,15 +4,20 @@ first-name: Pranavendra
 last-name: Tammireddy
 slug: pranavendra-tammireddy
 order: Tammireddy-Pranavendra
-years: [2024, 2025]
+years: [2022, 2024, 2025]
 scores:
-  - [0, 1, 0, 0, 2, 0, 0, 2, 1, 6]
+  - [0, 3, 1, 1, 4, 0, 2, 2, 5, 18]
   - [0, 9, 2, 0, 1, 1, 0, 0, 3, 16]
   - [0, 5, 2, 2, 0, 1, 1, 1, 0, 12]
-  - [0, 15, 4, 2, 3, 2, 1, 3, 4, 34]
+  - [0, 17, 5, 3, 5, 2, 3, 3, 8, 46]
 best-ranks: [16, 18, 13]
 awards: {memo: [2025]}
 exams:
+  - slug: second-round-2022
+    round: Second Round
+    scores: [5, 3, 5, 2, 7, 1]
+    total: 23
+    rank: 38
   - slug: second-round-2024
     round: Second Round
     scores: [7, 3, 6, 0, 6, 3]
@@ -23,6 +28,11 @@ exams:
     scores: [7, 1, 0, 0, 0, 0, 0, 0]
     total: 8
     rank: 26
+  - slug: second-round-2025
+    round: Second Round
+    scores: [7, 0, 7, 0, 7, 3]
+    total: 24
+    rank: 18
   - slug: final-round-2025
     round: Final Round
     scores: [7, 3, 1, 0, 7, 4, 0, 0]

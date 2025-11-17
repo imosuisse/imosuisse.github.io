@@ -6,13 +6,18 @@ slug: ivan-voevodskiy
 order: Voevodskiy-Ivan
 years: [2023, 2024]
 scores:
-  - [1, 1, 0, 0, 0, 0, 1, 2, 1, 6]
+  - [1, 1, 0, 1, 1, 0, 1, 5, 2, 12]
   - [1, 3, 2, 1, 2, 2, 1, 1, 3, 16]
   - [2, 9, 3, 3, 0, 0, 0, 2, 5, 24]
-  - [4, 13, 5, 4, 2, 2, 2, 5, 9, 46]
+  - [4, 13, 5, 5, 3, 2, 2, 8, 10, 52]
 best-ranks: [18, 4, 8]
 awards: {silver: [2024], bronze: [2023], memo: [2023]}
 exams:
+  - slug: second-round-2023
+    round: Second Round
+    scores: [7, 6, 6, 6, 3, 2]
+    total: 30
+    rank: 19
   - slug: final-round-2023
     round: Final Round
     scores: [7, 7, 0, 0, '-', 6, 1, 3]

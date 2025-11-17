@@ -6,10 +6,10 @@ slug: cyril-frei
 order: Frei-Cyril
 years: [2010, 2011, 2012]
 scores:
-  - [0, 3, 2, 1, 0, 1, 0, 1, 2, 10]
+  - [0, 3, 4, 1, 0, 1, 0, 1, 5, 15]
   - [2, 2, 2, 1, 1, 1, 0, 1, 10, 20]
   - [0, 8, 5, 0, 0, 1, 1, 1, 8, 24]
-  - [2, 13, 9, 2, 1, 3, 1, 3, 20, 54]
+  - [2, 13, 11, 2, 1, 3, 1, 3, 23, 59]
 best-ranks: [5, 3, 2]
 awards: {silver: [2011, 2012], imo: [2011], memo: [2010]}
 exams:
@@ -47,6 +47,11 @@ exams:
     total: 46
     rank: 2
     award: IMO
+  - slug: second-round-2012
+    round: Second Round
+    scores: [1, 7, 7, 7, 1]
+    total: 23
+    rank: 5
   - slug: final-round-2012
     round: Final Round
     scores: [7, 7, 7, 7, 2, 7, 6, 1, 0, 1]

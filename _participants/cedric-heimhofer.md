@@ -1,9 +1,9 @@
 ---
 layout: participant
-first-name: Cedric
+first-name: Cédric
 last-name: Heimhofer
 slug: cedric-heimhofer
-order: Heimhofer-Cedric
+order: Heimhofer-Cédric
 years: [2010, 2011, 2012, 2013]
 scores:
   - [7, 1, 2, 0, 1, 1, 0, 2, 6, 20]

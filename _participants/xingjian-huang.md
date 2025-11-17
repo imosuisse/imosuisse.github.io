@@ -4,15 +4,20 @@ first-name: Xingjian
 last-name: Huang
 slug: xingjian-huang
 order: Huang-Xingjian
-years: [2014, 2015, 2016]
+years: [2013, 2014, 2015, 2016]
 scores:
-  - [0, 5, 1, 0, 1, 1, 1, 2, 4, 15]
+  - [1, 7, 1, 0, 1, 1, 2, 2, 5, 20]
   - [5, 10, 1, 1, 0, 0, 1, 0, 2, 20]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-  - [5, 15, 2, 1, 1, 1, 2, 2, 6, 35]
+  - [6, 17, 2, 1, 1, 1, 3, 2, 7, 40]
 best-ranks: [12, 15, null]
 awards: {}
 exams:
+  - slug: second-round-2013
+    round: Second Round
+    scores: [7, 5, 0, 0, '-']
+    total: 12
+    rank: 28
   - slug: second-round-2014
     round: Second Round
     scores: [7, 5, 4, 0, 1]

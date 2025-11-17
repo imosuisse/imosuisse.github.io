@@ -4,18 +4,28 @@ first-name: Samuel
 last-name: de Meyer
 slug: samuel-de-meyer
 order: Meyer-Samuel
-years: [2020]
+years: [2020, 2021]
 scores:
-  - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  - [2, 2, 0, 2, 0, 0, 1, 0, 5, 12]
   - [1, 4, 0, 0, 1, 1, 0, 1, 0, 8]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-  - [1, 4, 0, 0, 1, 1, 0, 1, 0, 8]
-best-ranks: [null, 19, null]
+  - [3, 6, 0, 2, 1, 1, 1, 1, 5, 20]
+best-ranks: [22, 19, null]
 awards: {}
 exams:
+  - slug: second-round-2020
+    round: Second Round
+    scores: [7, '-', 7, 7, 5, '-']
+    total: 26
+    rank: 22
   - slug: final-round-2020
     round: Final Round
     scores: [4, 0, 0, '-', 3, 6, 0, 0]
     total: 13
     rank: 19
+  - slug: second-round-2021
+    round: Second Round
+    scores: [7, 0, 2, 0, 7, 2]
+    total: 18
+    rank: 39
 ---

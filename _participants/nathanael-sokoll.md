@@ -4,7 +4,7 @@ first-name: Nathanael
 last-name: Sokoll
 slug: nathanael-sokoll
 order: Sokoll-Nathanael
-years: [2005]
+years: [2004, 2005]
 scores:
   - [0, 3, 0, 1, 0, 0, 0, 0, 1, 5]
   - [1, 3, 0, 2, 2, 1, 1, 0, 0, 10]
@@ -13,6 +13,11 @@ scores:
 best-ranks: [21, 22, null]
 awards: {}
 exams:
+  - slug: second-round-2004
+    round: Second Round
+    scores: ['?', '?', '?', '?', '?']
+    total: '?'
+    rank: '?'
   - slug: second-round-2005
     round: Second Round
     scores: [7, 0, 2, 0, 0]

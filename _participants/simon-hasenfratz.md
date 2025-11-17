@@ -10,8 +10,8 @@ scores:
   - [2, 1, 0, 1, 0, 2, 0, 1, 3, 10]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   - [2, 4, 1, 1, 0, 2, 0, 1, 4, 15]
-best-ranks: [24, 8, 6]
-awards: {bronze: [2004, 2005], imo: [2004]}
+best-ranks: [24, 8, 3]
+awards: {bronze: [2004, 2005], imo: [2004, 2005]}
 exams:
   - slug: second-round-2004
     round: Second Round
@@ -41,4 +41,10 @@ exams:
     total: 37
     rank: 11
     award: Bronze
+  - slug: selection-2005
+    round: Selection
+    scores: ['?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?', '?']
+    total: 39
+    rank: 3
+    award: IMO
 ---

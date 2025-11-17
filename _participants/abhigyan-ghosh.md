@@ -6,13 +6,18 @@ slug: abhigyan-ghosh
 order: Ghosh-Abhigyan
 years: [2012, 2013, 2014]
 scores:
-  - [0, 1, 2, 0, 1, 0, 2, 0, 4, 10]
+  - [1, 2, 4, 0, 1, 1, 2, 0, 4, 15]
   - [2, 15, 4, 1, 2, 0, 0, 1, 5, 30]
   - [3, 5, 2, 1, 0, 0, 0, 0, 1, 12]
-  - [5, 21, 8, 2, 3, 0, 2, 1, 10, 52]
+  - [6, 22, 10, 2, 3, 1, 2, 1, 10, 57]
 best-ranks: [5, 12, 12]
 awards: {bronze: [2012], memo: [2012]}
 exams:
+  - slug: second-round-2012
+    round: Second Round
+    scores: [1, 4, 0, '-', 1]
+    total: 6
+    rank: 27
   - slug: final-round-2012
     round: Final Round
     scores: [3, 6, 0, 0, 0, 1, 7, 7, 0, '-']

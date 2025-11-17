@@ -6,13 +6,18 @@ slug: justin-mazenauer
 order: Mazenauer-Justin
 years: [2016, 2017]
 scores:
-  - [0, 1, 1, 0, 0, 1, 0, 0, 3, 6]
+  - [0, 2, 1, 1, 0, 1, 1, 0, 5, 11]
   - [2, 15, 1, 1, 0, 0, 0, 0, 1, 20]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-  - [2, 16, 2, 1, 0, 1, 0, 0, 4, 26]
-best-ranks: [14, 26, null]
+  - [2, 17, 2, 2, 0, 1, 1, 0, 6, 31]
+best-ranks: [12, 26, null]
 awards: {}
 exams:
+  - slug: second-round-2016
+    round: Second Round
+    scores: [7, 7, 5, 2, 0]
+    total: 21
+    rank: 12
   - slug: final-round-2016
     round: Final Round
     scores: [2, 0, 0, 0, '-', 0, 1, 0, '-', 0]
