@@ -17,8 +17,7 @@ layout: default
     <thead>
         <tr>
             <th>Rank</th>
-            <th>First Name</th>
-            <th>Last Name</th>
+            <th>Name</th>
             {% for problem in problems %}
                 <th class = "center">P{{ problem.number }}</td>
             {% endfor %}
@@ -30,8 +29,14 @@ layout: default
         {% for participant in page.participants %}
         <tr>
             <td>{{ participant.rank }}</td>
-            <td>{{ participant.first-name }}</td>
-            <td>{{ participant.last-name }}</td>
+            {% assign pp = site.participants | where: "first-name", participant.first-name | where: "last-name", participant.last-name | first %}
+            <td>
+                {% if pp %}
+                    <a href="/{{ pp.slug }}">{{ participant.first-name }} {{ participant.last-name }}</a>
+                {% else %}
+                    {{ participant.first-name }} {{ participant.last-name }}
+                {% endif %}
+            </td>
             {% for problem in problems %}
                 <td class = "center">{{ participant.scores[forloop.index0] }}</td>
             {% endfor %}

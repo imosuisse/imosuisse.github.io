@@ -42,11 +42,11 @@ languages: ["english", "german", "french", "italian"]
             <td>
                 {% assign winners = exam.participants | where: "rank", 1 %}
                 {% for winner in winners %}
-                    {% assign name = winner.first-name | append: " " | append: winner.last-name %}
-                    {% if forloop.last == false %}
-                        {% assign name = name | append: ", " %}
-                    {% endif %}
-                    {{ name }}
+                    {% assign part = site.participants | where: "first-name", winner.first-name | where: "last-name", winner.last-name | first %}
+                    <a href="/{{ part.slug }}">{{ winner.first-name }} {{ winner.last-name }}</a>
+                    {% unless forloop.last %}
+                        {{ ", " }}
+                    {% endunless %}
                 {% endfor %}
             </td>
 

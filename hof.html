@@ -2,11 +2,11 @@
 layout: default
 title: Hall of Fame
 nav: 5
+topic-names: ["A", "G", "C", "N", "Σ"]
 ---
 
 <h2>Hall of Fame</h2>
-
-<p>The table below displays all participants that have been awarded at least two medals.</p>
+<p>Only participants that have been awarded at least 2 medals are shown.</p>
 
 <table class="sortable">
     <tr>
@@ -49,6 +49,83 @@ nav: 5
 
                 <td class = "center">{{ participant.awards.imo.size }}</td>
                 <td class = "center">{{ participant.awards.memo.size }}</td>
+            </tr>
+        {% endif %}
+    {% endfor %}
+</table>
+
+<h2>Other Statistics</h2>
+
+<h3>Largest Lead</h3>
+<p>Only leads with a ratio of at least 1.25 are shown.</p>
+
+<table class = "sortable">
+    <tr>
+        <th rowspan = "2" class = "center">Exam</th>
+        <th colspan = "2" class = "center">Rank 1</th>
+        <th colspan = "2" class = "center">Rank 2</th>
+        <th rowspan = "2" class = "center sort-1 sort-desc">Ratio</th>
+    </tr>
+    <tr>
+        <th class = "center">Name</th>
+        <th class = "center">Score</th>
+        <th class = "center">Name</th>
+        <th class = "center">Score</th>
+    </tr>
+    {% for exam in site.exams %}
+        {% assign rank1 = exam.participants[0] %}
+        {% assign rank2 = exam.participants[1] %}
+        {% assign denom = rank2.total | plus: 0 %}
+        {% unless denom > 0 %}
+            {% continue %}
+        {% endunless %}
+        {% assign ratio = rank1.total | times: 100.0 | divided_by: denom | round | divided_by: 100.0 %}
+        {% unless ratio >= 1.25 %}
+            {% continue %}
+        {% endunless %}
+        {% assign p1 = site.participants | where: "first-name", rank1.first-name | where: "last-name", rank1.last-name | first %}
+        {% assign p2 = site.participants | where: "first-name", rank2.first-name | where: "last-name", rank2.last-name | first %}
+        <tr>
+            <td><a href="/{{ exam.slug }}">{{ exam.title }}</a></td>
+            <td><a href="/{{ p1.slug }}">{{ rank1.first-name }} {{ rank1.last-name }}</a></td>
+            <td>{{ rank1.total }}</td>
+            <td><a href="/{{ p2.slug }}">{{ rank2.first-name }} {{ rank2.last-name }}</a></td>
+            <td>{{ rank2.total }}</td>
+            <td>{{ ratio }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+<h3>Total Point Leaders</h3>
+<p>Only participants with an overall total of at least 300 points are shown.</p>
+
+<table class = "sortable">
+    <tr>
+        <th rowspan = "2" class = "center sort-desc">Name</th>
+        <th colspan = "4" class = "center sort-desc">Second Round</th>
+        <th colspan = "5" class = "center sort-desc" >Final Round</th>
+        <th colspan = "5" class = "center sort-desc">Selection</th>
+        <th colspan = "5" class = "center sort-1 sort-desc">Overall</th>
+    </tr>
+    <tr>
+        {% for r in (0..3) %}
+            {% unless r == 0 %}
+                <th class = "center sort-2 sort-desc">A</th>
+            {% endunless %}
+            <th class = "center sort-3 sort-desc">G</th>
+            <th class = "center sort-4 sort-desc">C</th>
+            <th class = "center sort-5 sort-desc">N</th>
+            <th class = "center sort-1 sort-desc">Σ</th>
+        {% endfor %}
+    </tr>
+    {% for part in site.participants %}
+        {% if part.topics[3][4] >= 300 %}
+            <tr>
+                <td><a href="/{{ part.slug }}">{{ part.first-name }} {{ part.last-name }}</a></td>
+                {% for r in (0..3) %} {% for t in (0..4) %}
+                    {% if r == 0 and t == 0 %} {% continue %} {% endif %}
+                    <td>{{ part.topics[r][t] }}</td>
+                {% endfor %} {% endfor %}
             </tr>
         {% endif %}
     {% endfor %}

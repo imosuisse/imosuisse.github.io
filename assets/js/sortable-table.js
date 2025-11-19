@@ -130,7 +130,7 @@
             
             // Initial sort based on priority classes
             const priorityHeaders = sortableHeaders
-                .map(({ header, columnIndex, columnIndices }) => {
+                .map(({ header, columnIndex, columnIndices, subHeaderPriorities }) => {
                     const match = Array.from(header.classList).find(cls => /^sort-\d+$/.test(cls));
                     if (match) {
                         const priority = parseInt(match.replace('sort-', ''));
@@ -144,7 +144,12 @@
                             direction = 'asc';
                         }
                         
-                        return { columnIndices, priority, direction };
+                        // Use sub-header priorities if available, otherwise use column indices
+                        const sortColumns = subHeaderPriorities 
+                            ? subHeaderPriorities.map(sh => sh.columnIndex)
+                            : columnIndices;
+                        
+                        return { columnIndices: sortColumns, priority, direction };
                     }
                     return null;
                 })
