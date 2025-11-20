@@ -4,20 +4,25 @@ first-name: Lucas
 last-name: Fillet
 slug: lucas-fillet
 order: Fillet-Lucas
-years: [2025]
+years: [2024, 2025]
 scores:
-  - [1, 1, 0, 0, 0, 0, 0, 3, 1, 6]
+  - [1, 5, 0, 0, 1, 0, 0, 4, 1, 12]
   - [0, 3, 3, 0, 1, 0, 0, 0, 1, 8]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-  - [1, 4, 3, 0, 1, 0, 0, 3, 2, 14]
+  - [1, 8, 3, 0, 2, 0, 0, 4, 2, 20]
 topics:
-  - [0, 7, 6, 12, 25]
+  - [0, 7, 6, 21, 34]
   - [1, 7, 1, 4, 13]
   - [0, 0, 0, 0, 0]
-  - [1, 14, 7, 16, 38]
+  - [1, 14, 7, 25, 47]
 best-ranks: [15, 23, null]
 awards: {}
 exams:
+  - slug: second-round-2024
+    round: Second Round
+    scores: [0, 0, 0, 0, 6, 3]
+    total: 9
+    rank: 63
   - slug: second-round-2025
     round: Second Round
     scores: [7, 0, 6, '-', 6, 6]

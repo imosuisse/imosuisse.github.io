@@ -4,20 +4,30 @@ first-name: Myriam
 last-name: Faltin
 slug: myriam-faltin
 order: Faltin-Myriam
-years: [2025]
+years: [2023, 2024, 2025]
 scores:
-  - [0, 2, 0, 0, 0, 1, 0, 0, 3, 6]
+  - [3, 4, 1, 2, 1, 2, 1, 1, 3, 18]
   - [0, 3, 3, 0, 1, 1, 0, 0, 0, 8]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-  - [0, 5, 3, 0, 1, 2, 0, 0, 3, 14]
+  - [3, 7, 4, 2, 2, 3, 1, 1, 3, 26]
 topics:
-  - [0, 4, 14, 7, 25]
+  - [0, 16, 25, 7, 48]
   - [0, 5, 4, 1, 10]
   - [0, 0, 0, 0, 0]
-  - [0, 9, 18, 8, 35]
+  - [0, 21, 29, 8, 58]
 best-ranks: [15, 24, null]
 awards: {}
 exams:
+  - slug: second-round-2023
+    round: Second Round
+    scores: [6, 1, 5, 2, 0, '-']
+    total: 14
+    rank: 68
+  - slug: second-round-2024
+    round: Second Round
+    scores: [2, 3, 4, '-', 0, '-']
+    total: 9
+    rank: 63
   - slug: second-round-2025
     round: Second Round
     scores: [4, 0, 7, 7, 7, 0]

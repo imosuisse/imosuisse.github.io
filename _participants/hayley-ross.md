@@ -4,20 +4,25 @@ first-name: Hayley
 last-name: Ross
 slug: hayley-ross
 order: Ross-Hayley
-years: [2009, 2010, 2011]
+years: [2008, 2009, 2010, 2011]
 scores:
-  - [0, 7, 2, 0, 1, 1, 0, 1, 3, 15]
+  - [1, 10, 3, 0, 1, 1, 0, 1, 3, 20]
   - [0, 11, 2, 1, 1, 0, 0, 1, 4, 20]
   - [0, 15, 5, 1, 1, 0, 0, 0, 2, 24]
-  - [0, 33, 9, 2, 3, 1, 0, 2, 9, 59]
+  - [1, 36, 10, 2, 3, 1, 0, 2, 9, 64]
 topics:
-  - [0, 20, 10, 6, 36]
+  - [0, 19, 17, 1, 37]
   - [8, 11, 6, 16, 41]
   - [9, 5, 8, 2, 24]
-  - [17, 36, 24, 24, 101]
+  - [17, 35, 31, 19, 102]
 best-ranks: [12, 5, 10]
 awards: {silver: [2011], memo: [2010, 2011]}
 exams:
+  - slug: second-round-2008
+    round: Second Round
+    scores: [1, 0, 0, '-', 0]
+    total: 1
+    rank: 54
   - slug: second-round-2009
     round: Second Round
     scores: [0, 7, 4, 0, 0]

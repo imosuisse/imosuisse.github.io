@@ -4,20 +4,25 @@ first-name: Maximilian
 last-name: Mordig
 slug: maximilian-mordig
 order: Mordig-Maximilian
-years: [2012]
+years: [2011, 2012]
 scores:
-  - [0, 1, 0, 1, 0, 0, 3, 0, 0, 5]
+  - [0, 5, 1, 1, 0, 0, 3, 0, 0, 10]
   - [0, 6, 1, 1, 0, 1, 0, 0, 1, 10]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-  - [0, 7, 1, 2, 0, 1, 3, 0, 1, 15]
+  - [0, 11, 2, 2, 0, 1, 3, 0, 1, 20]
 topics:
-  - [5, 2, 5, 5, 17]
+  - [0, 2, 6, 10, 18]
   - [2, 1, 4, 7, 14]
   - [0, 0, 0, 0, 0]
-  - [7, 3, 9, 12, 31]
+  - [2, 3, 10, 17, 32]
 best-ranks: [9, 19, null]
 awards: {}
 exams:
+  - slug: second-round-2011
+    round: Second Round
+    scores: [0, 0, 0, 1, 0]
+    total: 1
+    rank: 57
   - slug: second-round-2012
     round: Second Round
     scores: [5, 5, 2, 5, 0]

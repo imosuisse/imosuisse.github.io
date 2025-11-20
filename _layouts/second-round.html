@@ -24,6 +24,8 @@ layout: default
     </thead>
     <tbody>
         {% for participant in page.participants %}
+        {% assign rank = participant.rank | plus: 0 %}
+        {% if rank > 50 %} {% break %} {% endif %}
         <tr>
             <td>{{ participant.rank }}</td>
             {% assign pp = site.participants | where: "first-name", participant.first-name | where: "last-name", participant.last-name | first %}

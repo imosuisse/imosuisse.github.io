@@ -135,9 +135,21 @@ def main():
         exams_metadata[exam_info['slug']] = exam_info
         
         # Process each participant in this exam
+        if exam_data.get('participants') is None:
+            print(f"Warning: No participants field in {exam_file}")
+            continue
+            
         for participant in exam_data['participants']:
-            first_name = participant.get('first-name', '').strip()
-            last_name = participant.get('last-name', '').strip()
+            if participant is None:
+                print(f"Warning: None participant found in {exam_file}")
+                continue
+            try:
+                first_name = (participant.get('first-name') or '').strip()
+                last_name = (participant.get('last-name') or '').strip()
+            except AttributeError as e:
+                print(f"Error in {exam_file}: {e}")
+                print(f"Participant: {participant}")
+                raise
             
             if not first_name or not last_name:
                 continue
@@ -222,6 +234,10 @@ def main():
         }
         
         for exam in data['exams']:
+            # Skip exams where rank is '-'
+            if str(exam.get('rank')) == '-':
+                continue
+                
             round_name = exam.get('_round', '')
             round_key = None
             if 'Second' in round_name:
@@ -305,6 +321,10 @@ def main():
         }
         
         for exam in data['exams']:
+            # Skip exams where rank is '-'
+            if str(exam.get('rank')) == '-':
+                continue
+                
             # Lookup exam metadata from cache
             exam_meta = exams_metadata.get(exam['slug'])
             if not exam_meta:
@@ -437,8 +457,15 @@ def main():
             
             # Write metadata (using kebab-case)
             f.write(f"layout: {participant_yaml['layout']}\n")
-            f.write(f"first-name: {participant_yaml['first-name']}\n")
-            f.write(f"last-name: {participant_yaml['last-name']}\n")
+            # Quote special values in names
+            first_name = participant_yaml['first-name']
+            last_name = participant_yaml['last-name']
+            if str(first_name) in ['?', '-']:
+                first_name = f"'{first_name}'"
+            if str(last_name) in ['?', '-']:
+                last_name = f"'{last_name}'"
+            f.write(f"first-name: {first_name}\n")
+            f.write(f"last-name: {last_name}\n")
             f.write(f"slug: {participant_yaml['slug']}\n")
             f.write(f"order: {participant_yaml['order']}\n")
             
@@ -505,9 +532,9 @@ def main():
                     return s_str
                 scores_str = '[' + ', '.join(format_score(s) for s in exam['scores']) + ']'
                 f.write(f"    scores: {scores_str}\n")
-                # Quote ? in total and rank as well
-                total_val = f"'{exam['total']}'" if str(exam['total']) == '?' else exam['total']
-                rank_val = f"'{exam['rank']}'" if str(exam['rank']) == '?' else exam['rank']
+                # Quote ? and - in total and rank as well
+                total_val = f"'{exam['total']}'" if str(exam['total']) in ['?', '-'] else exam['total']
+                rank_val = f"'{exam['rank']}'" if str(exam['rank']) in ['?', '-'] else exam['rank']
                 f.write(f"    total: {total_val}\n")
                 f.write(f"    rank: {rank_val}\n")
                 if 'award' in exam:

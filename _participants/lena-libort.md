@@ -4,20 +4,25 @@ first-name: Lena
 last-name: Libort
 slug: lena-libort
 order: Libort-Lena
-years: [2021, 2022, 2023]
+years: [2020, 2021, 2022, 2023]
 scores:
-  - [0, 3, 3, 1, 1, 0, 0, 1, 9, 18]
+  - [0, 5, 5, 1, 1, 1, 0, 1, 10, 24]
   - [0, 8, 2, 1, 2, 2, 0, 0, 1, 16]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-  - [0, 11, 5, 2, 3, 2, 0, 1, 10, 34]
+  - [0, 13, 7, 2, 3, 3, 0, 1, 11, 40]
 topics:
-  - [0, 31, 27, 19, 77]
-  - [5, 10, 8, 2, 25]
+  - [0, 32, 38, 20, 90]
+  - [1, 13, 9, 2, 25]
   - [0, 0, 0, 0, 0]
-  - [5, 41, 35, 21, 102]
+  - [1, 45, 47, 22, 115]
 best-ranks: [17, 19, null]
 awards: {}
 exams:
+  - slug: second-round-2020
+    round: Second Round
+    scores: [1, 0, 4, 7, 1, 0]
+    total: 13
+    rank: 67
   - slug: second-round-2021
     round: Second Round
     scores: [7, 1, 0, 0, 7, 1]

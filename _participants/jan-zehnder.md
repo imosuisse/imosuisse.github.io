@@ -4,20 +4,25 @@ first-name: Jan
 last-name: Zehnder
 slug: jan-zehnder
 order: Zehnder-Jan
-years: [2014]
+years: [2013, 2014]
 scores:
-  - [0, 1, 1, 0, 0, 1, 1, 0, 1, 5]
+  - [0, 4, 2, 0, 1, 1, 1, 0, 1, 10]
   - [2, 3, 3, 0, 0, 0, 0, 0, 2, 10]
   - [1, 8, 1, 0, 0, 0, 0, 0, 2, 12]
-  - [3, 12, 5, 0, 0, 1, 1, 0, 5, 27]
+  - [3, 15, 6, 0, 1, 1, 1, 0, 5, 32]
 topics:
-  - [0, 5, 0, 12, 17]
+  - [0, 5, 7, 9, 21]
   - [7, 9, 0, 1, 17]
   - [0, 8, 7, 0, 15]
-  - [7, 22, 7, 13, 49]
+  - [7, 22, 14, 10, 53]
 best-ranks: [12, 18, 14]
 awards: {}
 exams:
+  - slug: second-round-2013
+    round: Second Round
+    scores: [0, 0, 3, 0, 1]
+    total: 4
+    rank: 61
   - slug: second-round-2014
     round: Second Round
     scores: [7, 5, 4, 0, 1]

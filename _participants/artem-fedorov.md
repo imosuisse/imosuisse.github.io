@@ -4,20 +4,30 @@ first-name: Artem
 last-name: Fedorov
 slug: artem-fedorov
 order: Fedorov-Artem
-years: [2025]
+years: [2023, 2024, 2025]
 scores:
-  - [1, 1, 0, 1, 1, 0, 0, 1, 1, 6]
+  - [4, 9, 0, 1, 1, 0, 0, 2, 1, 18]
   - [3, 2, 0, 0, 1, 0, 0, 0, 2, 8]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-  - [4, 3, 0, 1, 2, 0, 0, 1, 3, 14]
+  - [7, 11, 0, 1, 2, 0, 0, 2, 3, 26]
 topics:
-  - [0, 7, 6, 5, 18]
+  - [0, 7, 6, 11, 24]
   - [3, 7, 0, 7, 17]
   - [0, 0, 0, 0, 0]
-  - [3, 14, 6, 12, 35]
+  - [3, 14, 6, 18, 41]
 best-ranks: [32, 20, null]
 awards: {}
 exams:
+  - slug: second-round-2023
+    round: Second Round
+    scores: [0, 0, '-', '-', 0, 0]
+    total: 0
+    rank: 155
+  - slug: second-round-2024
+    round: Second Round
+    scores: [0, 0, 0, 0, 6, '-']
+    total: 6
+    rank: 90
   - slug: second-round-2025
     round: Second Round
     scores: [7, 0, 6, '-', 2, 3]

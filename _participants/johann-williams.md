@@ -4,20 +4,25 @@ first-name: Johann
 last-name: Williams
 slug: johann-williams
 order: Williams-Johann
-years: [2017, 2018, 2019, 2020, 2021]
+years: [2016, 2017, 2018, 2019, 2020, 2021]
 scores:
-  - [1, 2, 1, 2, 0, 1, 2, 1, 20, 30]
+  - [1, 7, 1, 2, 0, 1, 2, 1, 20, 35]
   - [4, 17, 1, 5, 2, 0, 2, 0, 13, 44]
   - [5, 16, 5, 4, 1, 1, 2, 3, 8, 45]
-  - [10, 35, 7, 11, 3, 2, 6, 4, 41, 119]
+  - [10, 40, 7, 11, 3, 2, 6, 4, 41, 124]
 topics:
   - [0, 61, 43, 61, 165]
-  - [23, 32, 19, 44, 118]
+  - [30, 32, 19, 37, 118]
   - [31, 30, 23, 20, 104]
-  - [54, 123, 85, 125, 387]
+  - [61, 123, 85, 118, 387]
 best-ranks: [1, 3, 3]
 awards: {silver: [2020, 2021], bronze: [2019], imo: [2020, 2021], memo: [2018, 2019]}
 exams:
+  - slug: second-round-2016
+    round: Second Round
+    scores: [0, 0, 0, 0, 0]
+    total: 0
+    rank: 81
   - slug: second-round-2017
     round: Second Round
     scores: [7, 0, 7, 0, 1, 5]

@@ -4,17 +4,17 @@ first-name: Maël
 last-name: Cattin
 slug: mael-cattin
 order: Cattin-Maël
-years: [2013]
+years: [2013, 2014]
 scores:
-  - [0, 2, 0, 0, 0, 1, 1, 0, 1, 5]
+  - [2, 4, 0, 0, 0, 1, 2, 0, 1, 10]
   - [4, 4, 0, 1, 1, 0, 0, 0, 0, 10]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-  - [4, 6, 0, 1, 1, 1, 1, 0, 1, 15]
+  - [6, 8, 0, 1, 1, 1, 2, 0, 1, 20]
 topics:
-  - [0, 5, 7, 4, 16]
+  - [0, 10, 11, 0, 21]
   - [0, 2, 3, 0, 5]
   - [0, 0, 0, 0, 0]
-  - [0, 7, 10, 4, 21]
+  - [0, 12, 14, 0, 26]
 best-ranks: [15, 27, null]
 awards: {}
 exams:
@@ -28,4 +28,9 @@ exams:
     scores: [0, '-', 2, 0, '-', 3, 0, 0, '-', '-']
     total: 5
     rank: 27
+  - slug: second-round-2014
+    round: Second Round
+    scores: [0, 5, '-', 0, '-']
+    total: 5
+    rank: 51
 ---

@@ -11,12 +11,12 @@ scores:
   - [0, 13, 7, 2, 2, 1, 1, 4, 6, 36]
   - [2, 29, 18, 6, 3, 3, 3, 11, 26, 101]
 topics:
-  - [14, 36, 24, 32, 106]
+  - [0, 21, 44, 41, 106]
   - [23, 12, 41, 40, 116]
   - [15, 13, 34, 30, 92]
-  - [52, 61, 99, 102, 314]
+  - [38, 46, 119, 111, 314]
 best-ranks: [2, 3, 3]
-awards: {silver: [2011, 2012], imo: [2011, 2012], memo: [2010]}
+awards: {silver: [2011, 2012], imo: [2011, 2012], memo: [2009, 2010]}
 exams:
   - slug: second-round-2008
     round: Second Round
@@ -38,6 +38,12 @@ exams:
     scores: [0, 1, 0, 0, 0, 6, 0, 4, 0, 2]
     total: 13
     rank: 18
+  - slug: selection-2009
+    round: Selection
+    scores: ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-']
+    total: '-'
+    rank: '-'
+    award: MEMO
   - slug: second-round-2010
     round: Second Round
     scores: [7, 7, 6, 0, '-']

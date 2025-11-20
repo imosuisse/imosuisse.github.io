@@ -4,12 +4,12 @@ first-name: Quirin
 last-name: Reding
 slug: quirin-reding
 order: Reding-Quirin
-years: [2014, 2015, 2016]
+years: [2013, 2014, 2015, 2016]
 scores:
-  - [1, 4, 2, 0, 0, 0, 1, 0, 2, 10]
+  - [1, 9, 2, 0, 0, 0, 1, 0, 2, 15]
   - [0, 15, 2, 0, 0, 0, 1, 0, 2, 20]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-  - [1, 19, 4, 0, 0, 0, 2, 0, 4, 30]
+  - [1, 24, 4, 0, 0, 0, 2, 0, 4, 35]
 topics:
   - [0, 5, 8, 8, 21]
   - [1, 14, 6, 0, 21]
@@ -18,6 +18,11 @@ topics:
 best-ranks: [27, 16, null]
 awards: {}
 exams:
+  - slug: second-round-2013
+    round: Second Round
+    scores: [0, 0, 0, 0, 0]
+    total: 0
+    rank: 80
   - slug: second-round-2014
     round: Second Round
     scores: [7, 5, 0, 0, '-']

@@ -11,12 +11,12 @@ scores:
   - [11, 21, 4, 1, 0, 2, 0, 0, 9, 48]
   - [23, 42, 10, 5, 2, 3, 2, 4, 34, 125]
 topics:
-  - [0, 35, 38, 42, 115]
+  - [0, 35, 39, 41, 115]
   - [32, 30, 36, 20, 118]
   - [24, 20, 8, 25, 77]
-  - [56, 85, 82, 87, 310]
+  - [56, 85, 83, 86, 310]
 best-ranks: [3, 3, 5]
-awards: {silver: [2017, 2018], imo: [2018], memo: [2014, 2016, 2017]}
+awards: {silver: [2017, 2018], imo: [2018], memo: [2014, 2015, 2016, 2017]}
 exams:
   - slug: second-round-2014
     round: Second Round
@@ -44,6 +44,12 @@ exams:
     scores: [3, 1, 1, 0, 0, 7, 0, 0, 0, '-']
     total: 12
     rank: 17
+  - slug: selection-2015
+    round: Selection
+    scores: ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-']
+    total: '-'
+    rank: '-'
+    award: MEMO
   - slug: second-round-2016
     round: Second Round
     scores: [7, 7, 7, 0, 0]

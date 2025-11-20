@@ -4,20 +4,25 @@ first-name: Jürg
 last-name: Bachmann
 slug: jurg-bachmann
 order: Bachmann-Jürg
-years: [2008, 2009, 2010]
+years: [2007, 2008, 2009, 2010]
 scores:
-  - [0, 1, 2, 1, 2, 0, 2, 1, 6, 15]
+  - [2, 3, 2, 2, 2, 0, 2, 1, 6, 20]
   - [2, 4, 4, 2, 0, 3, 0, 2, 3, 20]
   - [4, 7, 5, 1, 1, 0, 3, 0, 3, 24]
-  - [6, 12, 11, 4, 3, 3, 5, 3, 12, 59]
+  - [8, 14, 11, 5, 3, 3, 5, 3, 12, 64]
 topics:
-  - [7, 32, 7, 22, 68]
+  - [0, 11, 27, 32, 70]
   - [9, 14, 16, 14, 53]
   - [3, 12, 19, 12, 46]
-  - [19, 58, 42, 48, 167]
+  - [12, 37, 62, 58, 169]
 best-ranks: [4, 7, 5]
 awards: {silver: [2009], imo: [2009, 2010], memo: [2008]}
 exams:
+  - slug: second-round-2007
+    round: Second Round
+    scores: [0, 2, 0, '-', '-']
+    total: 2
+    rank: 78
   - slug: second-round-2008
     round: Second Round
     scores: [7, 7, 1, 1, 5]

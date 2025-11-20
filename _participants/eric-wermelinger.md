@@ -4,20 +4,30 @@ first-name: Eric
 last-name: Wermelinger
 slug: eric-wermelinger
 order: Wermelinger-Eric
-years: [2020, 2021, 2022, 2023]
+years: [2018, 2019, 2020, 2021, 2022, 2023]
 scores:
-  - [0, 2, 2, 0, 1, 3, 0, 3, 13, 24]
+  - [4, 6, 2, 1, 1, 4, 0, 4, 14, 36]
   - [1, 7, 8, 2, 4, 2, 1, 0, 7, 32]
   - [2, 11, 4, 1, 0, 0, 0, 0, 6, 24]
-  - [3, 20, 14, 3, 5, 5, 1, 3, 26, 80]
+  - [7, 24, 14, 4, 5, 6, 1, 4, 27, 92]
 topics:
-  - [0, 41, 48, 37, 126]
-  - [17, 24, 27, 18, 86]
+  - [0, 41, 61, 43, 145]
+  - [17, 21, 30, 18, 86]
   - [16, 2, 14, 16, 48]
-  - [33, 67, 89, 71, 260]
+  - [33, 64, 105, 77, 279]
 best-ranks: [11, 9, 11]
 awards: {bronze: [2022, 2023], memo: [2021]}
 exams:
+  - slug: second-round-2018
+    round: Second Round
+    scores: ['-', 0, 4, 2, 0, '-']
+    total: 6
+    rank: 72
+  - slug: second-round-2019
+    round: Second Round
+    scores: [0, '-', 0, 7, 6, '-']
+    total: 13
+    rank: 56
   - slug: second-round-2020
     round: Second Round
     scores: [7, 1, 7, 7, 3, 4]

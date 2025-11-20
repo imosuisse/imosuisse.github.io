@@ -4,20 +4,25 @@ first-name: Irina
 last-name: Tikhonovskaia
 slug: irina-tikhonovskaia
 order: Tikhonovskaia-Irina
-years: [2023, 2024, 2025]
+years: [2022, 2023, 2024, 2025]
 scores:
-  - [0, 3, 2, 4, 2, 1, 2, 2, 2, 18]
+  - [1, 5, 2, 7, 2, 1, 2, 2, 2, 24]
   - [0, 4, 4, 2, 2, 0, 1, 1, 2, 16]
   - [1, 5, 3, 1, 0, 0, 0, 0, 2, 12]
-  - [1, 12, 9, 7, 4, 1, 3, 3, 6, 46]
+  - [2, 14, 9, 10, 4, 1, 3, 3, 6, 52]
 topics:
-  - [0, 18, 17, 21, 56]
+  - [0, 22, 19, 21, 62]
   - [4, 13, 13, 9, 39]
   - [0, 8, 8, 3, 19]
-  - [4, 39, 38, 33, 114]
+  - [4, 43, 40, 33, 120]
 best-ranks: [15, 15, 18]
 awards: {}
 exams:
+  - slug: second-round-2022
+    round: Second Round
+    scores: [2, 2, 0, 2, 0, '-']
+    total: 6
+    rank: 104
   - slug: second-round-2023
     round: Second Round
     scores: [6, 2, 6, 1, 3, 0]

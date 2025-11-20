@@ -1,0 +1,32 @@
+---
+layout: participant
+first-name: Elia
+last-name: Fonti
+slug: elia-fonti
+order: Fonti-Elia
+years: [2010]
+scores:
+  - [1, 2, 1, 0, 0, 1, 0, 0, 0, 5]
+  - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  - [1, 2, 1, 0, 0, 1, 0, 0, 0, 5]
+topics:
+  - [0, 0, 5, 0, 5]
+  - [0, 0, 0, 0, 0]
+  - [0, 0, 0, 0, 0]
+  - [0, 0, 5, 0, 5]
+best-ranks: [31, null, null]
+awards: {memo: [2010]}
+exams:
+  - slug: second-round-2010
+    round: Second Round
+    scores: ['-', 0, 4, 0, 1]
+    total: 5
+    rank: 31
+  - slug: selection-2010
+    round: Selection
+    scores: ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-']
+    total: '-'
+    rank: '-'
+    award: MEMO
+---

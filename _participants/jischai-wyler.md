@@ -4,20 +4,25 @@ first-name: Jischai
 last-name: Wyler
 slug: jischai-wyler
 order: Wyler-Jischai
-years: [2015, 2016, 2017, 2018]
+years: [2014, 2015, 2016, 2017, 2018]
 scores:
-  - [0, 4, 0, 1, 0, 0, 1, 1, 15, 22]
+  - [0, 7, 2, 1, 0, 0, 1, 1, 15, 27]
   - [0, 17, 4, 1, 1, 0, 0, 5, 12, 40]
   - [1, 15, 3, 3, 2, 1, 2, 2, 7, 36]
-  - [1, 36, 7, 5, 3, 1, 3, 8, 34, 98]
+  - [1, 39, 9, 5, 3, 1, 3, 8, 34, 103]
 topics:
-  - [0, 34, 49, 35, 118]
+  - [0, 35, 49, 36, 120]
   - [28, 39, 36, 20, 123]
   - [26, 21, 17, 26, 90]
-  - [54, 94, 102, 81, 331]
+  - [54, 95, 102, 82, 333]
 best-ranks: [2, 2, 1]
 awards: {gold: [2018], silver: [2017], bronze: [2016], imo: [2017, 2018], memo: [2016]}
 exams:
+  - slug: second-round-2014
+    round: Second Round
+    scores: [0, 1, 0, 0, 1]
+    total: 2
+    rank: 68
   - slug: second-round-2015
     round: Second Round
     scores: [7, 7, 2, 0, 0]

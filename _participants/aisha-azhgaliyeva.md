@@ -4,20 +4,30 @@ first-name: Aisha
 last-name: Azhgaliyeva
 slug: aisha-azhgaliyeva
 order: Azhgaliyeva-Aisha
-years: [2020, 2021, 2022, 2023]
+years: [2018, 2019, 2020, 2021, 2022, 2023]
 scores:
-  - [0, 2, 3, 2, 1, 3, 3, 1, 9, 24]
+  - [2, 10, 5, 2, 1, 3, 3, 1, 9, 36]
   - [0, 11, 6, 2, 0, 2, 1, 0, 2, 24]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-  - [0, 13, 9, 4, 1, 5, 4, 1, 11, 48]
+  - [2, 21, 11, 4, 1, 5, 4, 1, 11, 60]
 topics:
-  - [0, 47, 30, 29, 106]
+  - [0, 48, 31, 29, 108]
   - [3, 14, 16, 4, 37]
   - [0, 0, 0, 0, 0]
-  - [3, 61, 46, 33, 143]
+  - [3, 62, 47, 33, 145]
 best-ranks: [19, 19, null]
 awards: {}
 exams:
+  - slug: second-round-2018
+    round: Second Round
+    scores: [0, 0, 0, '-', 0, '-']
+    total: 0
+    rank: 104
+  - slug: second-round-2019
+    round: Second Round
+    scores: [1, 0, 1, 0, 0, 0]
+    total: 2
+    rank: 104
   - slug: second-round-2020
     round: Second Round
     scores: [7, 7, 5, 4, 0, 2]

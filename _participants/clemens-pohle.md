@@ -4,20 +4,25 @@ first-name: Clemens
 last-name: Pohle
 slug: clemens-pohle
 order: Pohle-Clemens
-years: [2008, 2009, 2010]
+years: [2007, 2008, 2009, 2010]
 scores:
-  - [0, 0, 1, 1, 0, 1, 1, 0, 11, 15]
+  - [0, 4, 1, 1, 0, 1, 1, 0, 12, 20]
   - [1, 4, 2, 2, 2, 1, 0, 2, 6, 20]
   - [0, 7, 5, 2, 1, 1, 0, 2, 6, 24]
-  - [1, 11, 8, 5, 3, 3, 1, 4, 23, 59]
+  - [1, 15, 8, 5, 3, 3, 1, 4, 24, 64]
 topics:
-  - [7, 42, 7, 33, 89]
+  - [0, 21, 26, 49, 96]
   - [12, 24, 17, 17, 70]
   - [10, 16, 16, 28, 70]
-  - [29, 82, 40, 78, 229]
+  - [22, 61, 59, 94, 236]
 best-ranks: [1, 1, 1]
 awards: {gold: [2010], silver: [2008, 2009], imo: [2009, 2010], memo: [2008]}
 exams:
+  - slug: second-round-2007
+    round: Second Round
+    scores: [0, 7, 0, 0, 0]
+    total: 7
+    rank: 58
   - slug: second-round-2008
     round: Second Round
     scores: [7, 7, 7, 7, 4]

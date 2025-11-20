@@ -4,20 +4,25 @@ first-name: Emil
 last-name: Spiess
 slug: emil-spiess
 order: Spiess-Emil
-years: [2023, 2024, 2025]
+years: [2022, 2023, 2024, 2025]
 scores:
-  - [0, 3, 0, 0, 2, 0, 1, 4, 8, 18]
+  - [0, 7, 1, 1, 2, 0, 1, 4, 8, 24]
   - [2, 7, 4, 1, 2, 2, 1, 0, 5, 24]
   - [0, 4, 6, 4, 2, 2, 0, 0, 6, 24]
-  - [2, 14, 10, 5, 6, 4, 2, 4, 19, 66]
+  - [2, 18, 11, 6, 6, 4, 2, 4, 19, 72]
 topics:
-  - [0, 34, 21, 36, 91]
-  - [6, 32, 10, 12, 60]
+  - [0, 35, 21, 38, 94]
+  - [6, 37, 5, 12, 60]
   - [10, 27, 6, 27, 70]
-  - [16, 93, 37, 75, 221]
+  - [16, 99, 32, 77, 224]
 best-ranks: [2, 7, 7]
 awards: {silver: [2025], bronze: [2024], imo: [2025], memo: [2024]}
 exams:
+  - slug: second-round-2022
+    round: Second Round
+    scores: [1, 0, 0, 0, 2, 0]
+    total: 3
+    rank: 126
   - slug: second-round-2023
     round: Second Round
     scores: [7, 6, 0, 5, 6, 3]

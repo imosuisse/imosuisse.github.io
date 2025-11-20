@@ -31,7 +31,11 @@ round-names: ["Second Round", "Final Round", "Selection", "Overall"]
             <td>{{ result.scores | join: ", " }}</td>
             <td class = "center">{{ result.total }} / {{ exam.problem-count | times: 7 }}</td>
             <td class = "center">{{ result.rank }} / {{ exam.participant-count }}</td>
-            <td class = "center">{{ exam.participant-count | minus: result.rank | plus: 1 | times: 100 | divided_by: exam.participant-count | round }} %</td>
+            {% if result.rank == "-" %}
+                <td class = "center">-</td>
+            {% else %}
+                <td class = "center">{{ exam.participant-count | minus: result.rank | plus: 1 | times: 100 | divided_by: exam.participant-count | round }} %</td>
+            {% endif %}
             <td class = "center">{{ result.award }}</td>
         </tr>
     {% endfor %}

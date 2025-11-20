@@ -4,20 +4,30 @@ first-name: Tan
 last-name: Hong
 slug: tan-hong
 order: Hong-Tan
-years: [2021, 2022]
+years: [2019, 2020, 2021, 2022]
 scores:
-  - [0, 3, 0, 0, 0, 0, 0, 2, 7, 12]
+  - [1, 8, 1, 3, 0, 0, 1, 3, 7, 24]
   - [4, 2, 3, 2, 1, 2, 0, 0, 2, 16]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-  - [4, 5, 3, 2, 1, 2, 0, 2, 9, 28]
+  - [5, 10, 4, 5, 1, 2, 1, 3, 9, 40]
 topics:
-  - [0, 27, 13, 21, 61]
-  - [7, 3, 15, 7, 32]
+  - [0, 29, 26, 24, 79]
+  - [10, 3, 12, 7, 32]
   - [0, 0, 0, 0, 0]
-  - [7, 30, 28, 28, 93]
+  - [10, 32, 38, 31, 111]
 best-ranks: [15, 22, null]
 awards: {}
 exams:
+  - slug: second-round-2019
+    round: Second Round
+    scores: [0, 0, 2, 6, 1, 0]
+    total: 9
+    rank: 63
+  - slug: second-round-2020
+    round: Second Round
+    scores: [2, 0, 5, '-', 2, 0]
+    total: 9
+    rank: 87
   - slug: second-round-2021
     round: Second Round
     scores: [7, 7, 7, 0, 7, 0]

@@ -4,20 +4,25 @@ first-name: Svenja
 last-name: Felber
 slug: svenja-felber
 order: Felber-Svenja
-years: [2023, 2024, 2025]
+years: [2022, 2023, 2024, 2025]
 scores:
-  - [2, 3, 0, 1, 1, 1, 0, 2, 8, 18]
+  - [4, 5, 1, 2, 1, 1, 0, 2, 8, 24]
   - [0, 6, 2, 2, 1, 0, 3, 1, 1, 16]
   - [2, 6, 7, 2, 2, 2, 0, 0, 3, 24]
-  - [4, 15, 9, 5, 4, 3, 3, 3, 12, 58]
+  - [6, 17, 10, 6, 4, 3, 3, 3, 12, 64]
 topics:
-  - [0, 34, 21, 22, 77]
+  - [0, 36, 22, 22, 80]
   - [5, 15, 8, 9, 37]
   - [9, 18, 12, 7, 46]
-  - [14, 67, 41, 38, 160]
+  - [14, 69, 42, 38, 163]
 best-ranks: [7, 10, 9]
 awards: {bronze: [2025], memo: [2024, 2025]}
 exams:
+  - slug: second-round-2022
+    round: Second Round
+    scores: [0, 2, 0, 1, '-', '-']
+    total: 3
+    rank: 126
   - slug: second-round-2023
     round: Second Round
     scores: [7, 3, 7, '-', 6, '-']

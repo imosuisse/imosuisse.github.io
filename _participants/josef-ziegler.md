@@ -11,12 +11,12 @@ scores:
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   - [2, 12, 0, 1, 0, 1, 2, 0, 2, 20]
 topics:
-  - [0, 13, 7, 5, 25]
+  - [0, 4, 9, 12, 25]
   - [0, 0, 0, 5, 5]
   - [0, 0, 0, 0, 0]
-  - [0, 13, 7, 10, 30]
+  - [0, 4, 9, 17, 30]
 best-ranks: [17, 25, null]
-awards: {}
+awards: {memo: [2009]}
 exams:
   - slug: second-round-2008
     round: Second Round
@@ -33,4 +33,10 @@ exams:
     scores: [0, 5, 0, 0, 0, 0, 0, '-', 0, 0]
     total: 5
     rank: 25
+  - slug: selection-2009
+    round: Selection
+    scores: ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-']
+    total: '-'
+    rank: '-'
+    award: MEMO
 ---

@@ -4,17 +4,17 @@ first-name: Therese
 last-name: Moerschell
 slug: therese-moerschell
 order: Moerschell-Therese
-years: [2015, 2017]
+years: [2015, 2016, 2017]
 scores:
-  - [0, 6, 1, 0, 1, 0, 0, 0, 3, 11]
+  - [0, 10, 1, 0, 1, 0, 1, 0, 3, 16]
   - [1, 8, 0, 0, 0, 0, 0, 0, 1, 10]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-  - [1, 14, 1, 0, 1, 0, 0, 0, 4, 21]
+  - [1, 18, 1, 0, 1, 0, 1, 0, 4, 26]
 topics:
-  - [0, 7, 18, 0, 25]
+  - [0, 7, 18, 5, 30]
   - [0, 0, 7, 0, 7]
   - [0, 0, 0, 0, 0]
-  - [0, 7, 25, 0, 32]
+  - [0, 7, 25, 5, 37]
 best-ranks: [32, 20, null]
 awards: {}
 exams:
@@ -28,6 +28,11 @@ exams:
     scores: [0, 0, 0, 0, 0, 7, 0, 0, 0, '-']
     total: 7
     rank: 20
+  - slug: second-round-2016
+    round: Second Round
+    scores: [0, 0, 5, 0, 0]
+    total: 5
+    rank: 59
   - slug: second-round-2017
     round: Second Round
     scores: [7, 0, 7, 0, 0, 0]

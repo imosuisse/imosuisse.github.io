@@ -4,20 +4,25 @@ first-name: Emily
 last-name: Dikhoff
 slug: emily-dikhoff
 order: Dikhoff-Emily
-years: [2018, 2019, 2020, 2021, 2022]
+years: [2017, 2018, 2019, 2020, 2021, 2022]
 scores:
-  - [3, 4, 1, 1, 1, 1, 0, 2, 17, 30]
+  - [6, 6, 1, 2, 1, 1, 0, 2, 17, 36]
   - [7, 11, 5, 2, 1, 3, 1, 1, 3, 34]
   - [1, 5, 2, 1, 0, 0, 0, 0, 3, 12]
-  - [11, 20, 8, 4, 2, 4, 1, 3, 23, 76]
+  - [14, 22, 8, 5, 2, 4, 1, 3, 23, 82]
 topics:
-  - [0, 68, 49, 24, 141]
-  - [5, 16, 20, 15, 56]
+  - [0, 68, 51, 24, 143]
+  - [8, 16, 17, 15, 56]
   - [3, 14, 7, 1, 25]
-  - [8, 98, 76, 40, 222]
+  - [11, 98, 75, 40, 224]
 best-ranks: [9, 11, 10]
 awards: {bronze: [2021], memo: [2021]}
 exams:
+  - slug: second-round-2017
+    round: Second Round
+    scores: [0, '-', 2, 0, '-', '-']
+    total: 2
+    rank: 76
   - slug: second-round-2018
     round: Second Round
     scores: [7, 7, 7, '-', 1, '-']

@@ -6,15 +6,15 @@ slug: leonhard-hasler
 order: Hasler-Leonhard
 years: [2022, 2023, 2024, 2025]
 scores:
-  - [1, 0, 1, 2, 1, 1, 0, 2, 4, 12]
+  - [2, 1, 1, 3, 2, 1, 0, 4, 4, 18]
   - [5, 9, 6, 3, 0, 0, 0, 1, 8, 32]
   - [2, 12, 6, 3, 3, 0, 0, 1, 9, 36]
-  - [8, 21, 13, 8, 4, 1, 0, 4, 21, 80]
+  - [9, 22, 13, 9, 5, 1, 0, 6, 21, 86]
 topics:
-  - [0, 13, 23, 16, 52]
-  - [7, 29, 28, 10, 74]
+  - [0, 19, 31, 19, 69]
+  - [6, 30, 28, 10, 74]
   - [14, 31, 27, 18, 90]
-  - [21, 73, 78, 44, 216]
+  - [20, 80, 86, 47, 233]
 best-ranks: [4, 7, 5]
 lie: true
 awards: {}
@@ -25,6 +25,11 @@ exams:
     total: 2
     rank: 27
     award: LIE
+  - slug: second-round-2023
+    round: Second Round
+    scores: [6, '-', 6, 2, 3, 0]
+    total: 17
+    rank: 52
   - slug: final-round-2023
     round: Final Round
     scores: [7, 7, 0, 1, 2, 0, 1, '-']

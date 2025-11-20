@@ -4,20 +4,25 @@ first-name: Eric
 last-name: Lüscher
 slug: eric-luscher
 order: Lüscher-Eric
-years: [2024, 2025]
+years: [2021, 2024, 2025]
 scores:
-  - [0, 3, 0, 1, 0, 0, 0, 0, 8, 12]
+  - [3, 4, 0, 2, 1, 0, 0, 0, 8, 18]
   - [0, 4, 3, 2, 3, 0, 1, 0, 3, 16]
   - [0, 6, 4, 2, 1, 0, 1, 3, 7, 24]
-  - [0, 13, 7, 5, 4, 0, 2, 3, 18, 52]
+  - [3, 14, 7, 6, 5, 0, 2, 3, 18, 58]
 topics:
-  - [0, 16, 14, 28, 58]
+  - [0, 16, 17, 30, 63]
   - [5, 12, 15, 10, 42]
   - [19, 24, 20, 20, 83]
-  - [24, 52, 49, 58, 183]
+  - [24, 52, 52, 60, 188]
 best-ranks: [7, 9, 4]
 awards: {bronze: [2025], imo: [2024, 2025]}
 exams:
+  - slug: second-round-2021
+    round: Second Round
+    scores: ['-', '-', 3, 0, 2, '-']
+    total: 5
+    rank: 96
   - slug: second-round-2024
     round: Second Round
     scores: [0, 7, 7, 0, 7, 7]

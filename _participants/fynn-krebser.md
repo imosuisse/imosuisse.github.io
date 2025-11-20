@@ -4,20 +4,25 @@ first-name: Fynn
 last-name: Krebser
 slug: fynn-krebser
 order: Krebser-Fynn
-years: [2023, 2024, 2025]
+years: [2022, 2023, 2024, 2025]
 scores:
-  - [0, 4, 2, 1, 0, 0, 1, 2, 8, 18]
+  - [0, 5, 4, 1, 1, 1, 1, 2, 9, 24]
   - [0, 8, 4, 0, 0, 1, 1, 1, 1, 16]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-  - [0, 12, 6, 1, 0, 1, 2, 3, 9, 34]
+  - [0, 13, 8, 1, 1, 2, 2, 3, 10, 40]
 topics:
-  - [0, 29, 28, 20, 77]
+  - [0, 34, 36, 23, 93]
   - [5, 8, 11, 2, 26]
   - [0, 0, 0, 0, 0]
-  - [5, 37, 39, 22, 103]
+  - [5, 42, 47, 25, 119]
 best-ranks: [12, 21, null]
 awards: {}
 exams:
+  - slug: second-round-2022
+    round: Second Round
+    scores: [4, 1, 7, 1, 3, 0]
+    total: 16
+    rank: 54
   - slug: second-round-2023
     round: Second Round
     scores: [7, 7, 7, 7, 6, 1]

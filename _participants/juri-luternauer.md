@@ -4,12 +4,12 @@ first-name: Juri
 last-name: Luternauer
 slug: juri-luternauer
 order: Luternauer-Juri
-years: [2024]
+years: [2022, 2024]
 scores:
-  - [1, 2, 0, 0, 0, 0, 0, 0, 3, 6]
+  - [7, 2, 0, 0, 0, 0, 0, 0, 3, 12]
   - [0, 4, 3, 1, 0, 0, 0, 0, 0, 8]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-  - [1, 6, 3, 1, 0, 0, 0, 0, 3, 14]
+  - [7, 6, 3, 1, 0, 0, 0, 0, 3, 20]
 topics:
   - [0, 0, 7, 14, 21]
   - [0, 1, 1, 3, 5]
@@ -18,6 +18,11 @@ topics:
 best-ranks: [22, 27, null]
 awards: {}
 exams:
+  - slug: second-round-2022
+    round: Second Round
+    scores: ['-', '-', '-', '-', '-', '-']
+    total: 0
+    rank: 146
   - slug: second-round-2024
     round: Second Round
     scores: ['-', 0, 7, 0, 7, 7]

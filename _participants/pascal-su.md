@@ -4,20 +4,25 @@ first-name: Pascal
 last-name: Su
 slug: pascal-su
 order: Su-Pascal
-years: [2008, 2009, 2010]
+years: [2007, 2008, 2009, 2010]
 scores:
-  - [0, 3, 1, 1, 2, 1, 2, 0, 5, 15]
+  - [0, 7, 1, 1, 2, 1, 2, 0, 6, 20]
   - [1, 6, 3, 3, 0, 1, 0, 1, 5, 20]
   - [0, 8, 2, 4, 0, 0, 0, 4, 6, 24]
-  - [1, 17, 6, 8, 2, 2, 2, 5, 16, 59]
+  - [1, 21, 6, 8, 2, 2, 2, 5, 17, 64]
 topics:
-  - [7, 35, 7, 9, 58]
+  - [0, 15, 23, 27, 65]
   - [8, 15, 21, 10, 54]
   - [18, 12, 30, 16, 76]
-  - [33, 62, 58, 35, 188]
+  - [26, 42, 74, 53, 195]
 best-ranks: [9, 9, 2]
 awards: {bronze: [2009], imo: [2009, 2010], memo: [2008]}
 exams:
+  - slug: second-round-2007
+    round: Second Round
+    scores: [0, 7, 0, 0, 0]
+    total: 7
+    rank: 58
   - slug: second-round-2008
     round: Second Round
     scores: [7, 7, 5, 1, 2]

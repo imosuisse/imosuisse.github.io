@@ -4,20 +4,30 @@ first-name: Nathalie
 last-name: Bäbler
 slug: nathalie-babler
 order: Bäbler-Nathalie
-years: [2017]
+years: [2015, 2016, 2017]
 scores:
-  - [0, 1, 2, 0, 0, 0, 1, 1, 1, 6]
+  - [0, 7, 3, 2, 0, 1, 1, 1, 1, 16]
   - [2, 7, 0, 0, 0, 0, 0, 0, 1, 10]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-  - [2, 8, 2, 0, 0, 0, 1, 1, 2, 16]
+  - [2, 14, 3, 2, 0, 1, 1, 1, 2, 26]
 topics:
-  - [0, 8, 5, 7, 20]
+  - [0, 8, 10, 11, 29]
   - [0, 0, 7, 0, 7]
   - [0, 0, 0, 0, 0]
-  - [0, 8, 12, 7, 27]
+  - [0, 8, 17, 11, 36]
 best-ranks: [29, 27, null]
 awards: {}
 exams:
+  - slug: second-round-2015
+    round: Second Round
+    scores: [4, 1, 2, 0, 0]
+    total: 7
+    rank: 54
+  - slug: second-round-2016
+    round: Second Round
+    scores: [0, 0, 2, 0, 0]
+    total: 2
+    rank: 65
   - slug: second-round-2017
     round: Second Round
     scores: [7, 1, 5, 0, 6, 1]

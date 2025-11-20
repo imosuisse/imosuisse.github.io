@@ -4,20 +4,25 @@ first-name: Lev
 last-name: Myropolskyy
 slug: lev-myropolskyy
 order: Myropolskyy-Lev
-years: [2024, 2025]
+years: [2023, 2024, 2025]
 scores:
-  - [1, 3, 0, 2, 1, 0, 1, 1, 3, 12]
+  - [1, 5, 2, 2, 1, 0, 1, 2, 4, 18]
   - [1, 2, 3, 1, 0, 1, 0, 0, 0, 8]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-  - [2, 5, 3, 3, 1, 1, 1, 1, 3, 20]
+  - [2, 7, 5, 3, 1, 1, 1, 2, 4, 26]
 topics:
-  - [0, 9, 10, 20, 39]
+  - [0, 10, 18, 26, 54]
   - [1, 2, 1, 5, 9]
   - [0, 0, 0, 0, 0]
-  - [1, 11, 11, 25, 48]
+  - [1, 12, 19, 31, 63]
 best-ranks: [20, 25, null]
 awards: {}
 exams:
+  - slug: second-round-2023
+    round: Second Round
+    scores: [0, 1, 7, 1, 6, 0]
+    total: 15
+    rank: 61
   - slug: second-round-2024
     round: Second Round
     scores: [2, 0, 3, '-', 7, 5]

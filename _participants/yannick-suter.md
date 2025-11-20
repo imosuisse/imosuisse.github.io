@@ -1,23 +1,28 @@
 ---
 layout: participant
-first-name: Yannick
-last-name: Suter
+first-name: yannick
+last-name: suter
 slug: yannick-suter
-order: Suter-Yannick
-years: [2009, 2010]
+order: suter-yannick
+years: [2007, 2009, 2010]
 scores:
-  - [0, 2, 2, 0, 2, 1, 0, 0, 3, 10]
+  - [0, 6, 2, 0, 2, 2, 0, 0, 3, 15]
   - [2, 3, 1, 1, 0, 0, 2, 0, 1, 10]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-  - [2, 5, 3, 1, 2, 1, 2, 0, 4, 20]
+  - [2, 9, 3, 1, 2, 2, 2, 0, 4, 25]
 topics:
-  - [3, 12, 7, 11, 33]
+  - [0, 11, 15, 11, 37]
   - [1, 12, 5, 2, 20]
   - [0, 0, 0, 0, 0]
-  - [4, 24, 12, 13, 53]
+  - [1, 23, 20, 13, 57]
 best-ranks: [7, 12, null]
 awards: {bronze: [2009], memo: [2009]}
 exams:
+  - slug: second-round-2007
+    round: Second Round
+    scores: [0, 4, 0, 0, 0]
+    total: 4
+    rank: 69
   - slug: second-round-2009
     round: Second Round
     scores: [1, 7, 4, 3, 0]

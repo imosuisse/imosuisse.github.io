@@ -1,23 +1,28 @@
 ---
 layout: participant
-first-name: Zheng
-last-name: Chen Man
+first-name: Zheng Chen
+last-name: Man
 slug: zheng-chen-man
-order: Chen Man-Zheng
-years: [2015]
+order: Man-Zheng Chen
+years: [2013, 2015]
 scores:
-  - [0, 1, 0, 0, 2, 0, 0, 1, 1, 5]
+  - [0, 4, 1, 1, 2, 0, 0, 1, 1, 10]
   - [0, 8, 1, 0, 1, 0, 0, 0, 0, 10]
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-  - [0, 9, 1, 0, 3, 0, 0, 1, 1, 15]
+  - [0, 12, 2, 1, 3, 0, 0, 1, 1, 20]
 topics:
-  - [0, 7, 6, 6, 19]
+  - [0, 7, 8, 7, 22]
   - [0, 3, 0, 1, 4]
   - [0, 0, 0, 0, 0]
-  - [0, 10, 6, 7, 23]
+  - [0, 10, 8, 8, 26]
 best-ranks: [20, 23, null]
 awards: {}
 exams:
+  - slug: second-round-2013
+    round: Second Round
+    scores: [0, 0, 2, 0, 1]
+    total: 3
+    rank: 63
   - slug: second-round-2015
     round: Second Round
     scores: [3, 3, 6, 7, 0]

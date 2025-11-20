@@ -4,20 +4,25 @@ first-name: Patrick
 last-name: Stalder
 slug: patrick-stalder
 order: Stalder-Patrick
-years: [2015, 2016, 2017]
+years: [2014, 2015, 2016, 2017]
 scores:
-  - [0, 4, 1, 0, 0, 0, 1, 3, 7, 16]
+  - [0, 8, 2, 0, 0, 0, 1, 3, 7, 21]
   - [3, 14, 1, 2, 0, 0, 2, 1, 7, 30]
   - [0, 10, 5, 0, 1, 3, 3, 0, 2, 24]
-  - [3, 28, 7, 2, 1, 3, 6, 4, 16, 70]
+  - [3, 32, 8, 2, 1, 3, 6, 4, 16, 75]
 topics:
-  - [0, 19, 28, 26, 73]
+  - [0, 19, 28, 27, 74]
   - [26, 21, 18, 5, 70]
   - [1, 21, 10, 17, 49]
-  - [27, 61, 56, 48, 192]
+  - [27, 61, 56, 49, 193]
 best-ranks: [4, 4, 6]
-awards: {silver: [2017], bronze: [2016], imo: [2017], memo: [2016]}
+awards: {silver: [2017], bronze: [2016], imo: [2017], memo: [2015, 2016]}
 exams:
+  - slug: second-round-2014
+    round: Second Round
+    scores: [1, 0, 0, 0, 0]
+    total: 1
+    rank: 77
   - slug: second-round-2015
     round: Second Round
     scores: [7, 7, 7, 0, 0]
@@ -28,6 +33,12 @@ exams:
     scores: [0, 1, 0, 0, '-', 0, 7, 0, 0, 0]
     total: 8
     rank: 18
+  - slug: selection-2015
+    round: Selection
+    scores: ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-']
+    total: '-'
+    rank: '-'
+    award: MEMO
   - slug: second-round-2016
     round: Second Round
     scores: [0, 6, 6, 1, 5]
