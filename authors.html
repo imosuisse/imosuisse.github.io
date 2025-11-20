@@ -1,0 +1,36 @@
+---
+title: Problem Authors
+layout: default
+---
+
+<h2>Problem Counts per Author</h2>
+
+<p>Note that our author data before 2019 is incomplete and this list is probably missing many deserving entries.</p>
+
+{% assign problems_by_author = site.problems | group_by: "author" %}
+<table class = "sortable">
+    <tr>
+        <th class = "sort-2 sort-asc">Name</th>
+        <th class = "center">Algebra</th>
+        <th class = "center">Geometry</th>
+        <th class = "center">Combinatorics</th>
+        <th class = "center">Number Theory</th>
+        <th class = "sort-1 sort-desc">Total</th>
+    </tr>
+    {% for author in problems_by_author %}
+        {% if author.name == "" %} {% continue %} {% endif %}
+
+        {% assign alg = author.items | where: "topic", "Algebra" %}
+        {% assign geo = author.items | where: "topic", "Geometry" %}
+        {% assign combi = author.items | where: "topic", "Combinatorics" %}
+        {% assign nt = author.items | where: "topic", "Number Theory" %}
+        <tr>
+            <td>{{ author.name }}</td>
+            <td class = "center">{{ alg | size }}</td>
+            <td class = "center">{{ geo | size }}</td>
+            <td class = "center">{{ combi | size }}</td>
+            <td class = "center">{{ nt | size }}</td>
+            <td class = "center">{{ author.items | size }}</td>
+        </tr>
+    {% endfor %}
+</table>

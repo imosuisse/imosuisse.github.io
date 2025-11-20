@@ -248,17 +248,35 @@ def main():
                 round_key = 'selection'
             
             if round_key:
-                for score in exam.get('scores', []):
-                    score_str = str(score)
-                    if score_str == '-':
-                        scores_by_round[round_key][0] += 1  # Index 0 for not attempted
-                    elif score_str != '?':
-                        try:
-                            score_val = int(score_str)
-                            if 0 <= score_val <= 7:
-                                scores_by_round[round_key][score_val + 1] += 1  # Shift by 1
-                        except (ValueError, TypeError):
-                            pass
+                scores_list = exam.get('scores', [])
+                # Check if all scores are '?'
+                all_unknown = all(str(s) == '?' for s in scores_list)
+                
+                if all_unknown:
+                    # Use exam total if available - count the number of problems
+                    total_val = exam.get('total')
+                    if total_val and str(total_val) not in ['?', '-']:
+                        # Count these problems as existing (increment total count by number of problems)
+                        # but we don't know the distribution, so don't increment individual buckets
+                        num_problems = len(scores_list)
+                        # Just track that these problems existed in the total count
+                        # The total count gets added at the end, so we need another approach
+                        # Actually, let's count each unknown score as a '?' entry (skip it)
+                        pass
+                    # If all scores are '?' and total is also '?' or '-', skip this exam
+                else:
+                    # Process individual scores normally
+                    for score in scores_list:
+                        score_str = str(score)
+                        if score_str == '-':
+                            scores_by_round[round_key][0] += 1  # Index 0 for not attempted
+                        elif score_str != '?':
+                            try:
+                                score_val = int(score_str)
+                                if 0 <= score_val <= 7:
+                                    scores_by_round[round_key][score_val + 1] += 1  # Shift by 1
+                            except (ValueError, TypeError):
+                                pass
         
         # Calculate totals for each round (sum of all scores including not attempted)
         for round_key in scores_by_round:
@@ -352,14 +370,19 @@ def main():
                 continue
             
             # Map scores to problems and accumulate by topic
-            for idx, score in enumerate(exam.get('scores', [])):
+            scores_list = exam.get('scores', [])
+            exam_total = exam.get('total')
+            
+            # Try to process individual scores first
+            topic_sum = 0
+            for idx, score in enumerate(scores_list):
                 if idx >= len(problems):
                     break
                 
                 problem = problems[idx]
                 topic = problem['topic']
                 
-                # Skip non-numeric scores
+                # Try to use individual score
                 try:
                     score_val = int(score)
                 except (ValueError, TypeError):
@@ -378,7 +401,19 @@ def main():
                 
                 if topic_idx is not None:
                     topics_by_round[round_key][topic_idx] += score_val
-                    topics_by_round[round_key][4] += score_val  # total
+                    topic_sum += score_val
+            
+            # For total: use exam total if available and individual scores weren't all numeric
+            # Otherwise use the sum of topic scores we just calculated
+            if topic_sum > 0:
+                # We have individual scores, use their sum
+                topics_by_round[round_key][4] += topic_sum
+            elif exam_total and str(exam_total) not in ['?', '-']:
+                # Individual scores are unknown but we have exam total
+                try:
+                    topics_by_round[round_key][4] += int(exam_total)
+                except (ValueError, TypeError):
+                    pass
         
         # Calculate overall topic totals
         total_topics = [0, 0, 0, 0, 0]
