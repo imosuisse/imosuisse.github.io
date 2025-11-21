@@ -32,7 +32,7 @@ layout: default
             {% assign pp = site.participants | where: "first-name", participant.first-name | where: "last-name", participant.last-name | first %}
             <td>
                 {% if pp %}
-                    <a href="/{{ pp.slug }}">{{ participant.first-name }} {{ participant.last-name }}</a>
+                    <a href="{{ pp.url }}">{{ participant.first-name }} {{ participant.last-name }}</a>
                 {% else %}
                     {{ participant.first-name }} {{ participant.last-name }}
                 {% endif %}

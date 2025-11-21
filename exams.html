@@ -2,6 +2,7 @@
 layout: default
 title: Exams
 nav: 2
+description: Browse past exam papers from Swiss Mathematical Olympiad competitions, including Second Round, Final Round, and Selection exams with complete results and participant rankings from 1997 onwards.
 languages: ["english", "german", "french", "italian"]
 ---
 
@@ -11,7 +12,7 @@ languages: ["english", "german", "french", "italian"]
     Note that during the history of the Olympiad the number, naming, and format of the exam rounds
     has changed considerably. The listing below uses the modern-day naming convention.
     <br>
-    A comprehensive history of the competition format can be found <a href = "/history.html">here</a>.
+    A comprehensive history of the competition format can be found <a href = "/history/">here</a>.
 </p>
 
 <table class = "exams">
@@ -43,7 +44,7 @@ languages: ["english", "german", "french", "italian"]
                 {% assign winners = exam.participants | where: "rank", 1 %}
                 {% for winner in winners %}
                     {% assign part = site.participants | where: "first-name", winner.first-name | where: "last-name", winner.last-name | first %}
-                    <a href="/{{ part.slug }}">{{ winner.first-name }} {{ winner.last-name }}</a>
+                    <a href="{{ part.url }}">{{ winner.first-name }} {{ winner.last-name }}</a>
                     {% unless forloop.last %}
                         {{ ", " }}
                     {% endunless %}

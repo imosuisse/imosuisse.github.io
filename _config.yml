@@ -23,7 +23,8 @@ email: info@mathematical.olympiad.ch
 description: >- # this means to ignore newlines until "baseurl:"
   Archive of the Swiss Mathematical Olympiad
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://imosuisse.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+permalink: pretty
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
@@ -58,7 +59,7 @@ collections:
     output: false
   exams:
     output: true
-    permalink: /:slug
+    permalink: /exams/:slug/
   participants:
     output: true
-    permalink: /:slug
+    permalink: /participants/:slug/

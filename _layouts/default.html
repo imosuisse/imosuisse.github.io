@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		{% include head.html %}
-        <title>{{ page.title }}</title>
+        <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
 	</head>
 	<body>
 		<header>

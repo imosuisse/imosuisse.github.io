@@ -2,6 +2,7 @@
 layout: default
 title: Hall of Fame
 nav: 5
+description: Recognition of top performers in Swiss Mathematical Olympiad history, featuring medal winners, IMO and MEMO team members, record-breaking performances, and all-time point leaders.
 topic-names: ["A", "G", "C", "N", "Σ"]
 ---
 
@@ -37,7 +38,7 @@ topic-names: ["A", "G", "C", "N", "Σ"]
 
         {% if medalCount >= 2 %}
             <tr>
-                <td><a href = "/{{ participant.slug }}">{{ participant.first-name }} {{ participant.last-name }}</a></td>
+                <td><a href = "{{ participant.url }}">{{ participant.first-name }} {{ participant.last-name }}</a></td>
                 <td class = "center">{{ g }}</td>
                 <td class = "center">{{ s }}</td>
                 <td class = "center">{{ b }}</td>
@@ -86,10 +87,10 @@ topic-names: ["A", "G", "C", "N", "Σ"]
         {% assign p1 = site.participants | where: "first-name", rank1.first-name | where: "last-name", rank1.last-name | first %}
         {% assign p2 = site.participants | where: "first-name", rank2.first-name | where: "last-name", rank2.last-name | first %}
         <tr>
-            <td><a href="/{{ exam.slug }}">{{ exam.title }}</a></td>
-            <td><a href="/{{ p1.slug }}">{{ rank1.first-name }} {{ rank1.last-name }}</a></td>
+            <td><a href="{{ exam.url }}">{{ exam.title }}</a></td>
+            <td><a href="{{ p1.url }}">{{ rank1.first-name }} {{ rank1.last-name }}</a></td>
             <td>{{ rank1.total }}</td>
-            <td><a href="/{{ p2.slug }}">{{ rank2.first-name }} {{ rank2.last-name }}</a></td>
+            <td><a href="{{ p2.url }}">{{ rank2.first-name }} {{ rank2.last-name }}</a></td>
             <td>{{ rank2.total }}</td>
             <td>{{ ratio }}</td>
         </tr>
@@ -121,7 +122,7 @@ topic-names: ["A", "G", "C", "N", "Σ"]
     {% for part in site.participants %}
         {% if part.topics[3][4] >= 300 %}
             <tr>
-                <td><a href="/{{ part.slug }}">{{ part.first-name }} {{ part.last-name }}</a></td>
+                <td><a href="{{ part.url }}">{{ part.first-name }} {{ part.last-name }}</a></td>
                 {% for r in (0..3) %} {% for t in (0..4) %}
                     {% if r == 0 and t == 0 %} {% continue %} {% endif %}
                     <td>{{ part.topics[r][t] }}</td>

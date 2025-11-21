@@ -27,7 +27,7 @@ round-names: ["Second Round", "Final Round", "Selection", "Overall"]
         <tr>
             <td>{% unless current == exam.year %}{{ exam.year }}{% endunless %}</td>
             {% assign current = exam.year %}
-            <td><a href = "/{{ exam.slug }}">{{ exam.round }}</a></td>
+            <td><a href = "{{ exam.url }}">{{ exam.round }}</a></td>
             <td>{{ result.scores | join: ", " }}</td>
             <td class = "center">{{ result.total }} / {{ exam.problem-count | times: 7 }}</td>
             <td class = "center">{{ result.rank }} / {{ exam.participant-count }}</td>
