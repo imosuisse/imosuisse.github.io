@@ -1,9 +1,9 @@
 ---
 layout: participant
-first-name: yannick
-last-name: suter
+first-name: Yannick
+last-name: Suter
 slug: yannick-suter
-order: suter-yannick
+order: Suter-Yannick
 years: [2007, 2009, 2010]
 scores:
   - [0, 6, 2, 0, 2, 2, 0, 0, 3, 15]

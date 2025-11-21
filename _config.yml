@@ -51,6 +51,7 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - csv/
 
 collections:
   problems:
