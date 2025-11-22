@@ -1,7 +1,5 @@
-
 <nav>
-  {% assign sorted = site.pages | where_exp: "item", "item.nav >= 1" | sort: 'nav' %}
-  {% for nav in sorted %}
-    <a href = "{{ nav.url }}" {% if page.url == nav.url %} class = "current" {% endif %}>{{ nav.title }}</a>
+  {% for item in site.data.navigation %}
+    <a href="{{ item.url }}" {% if page.url == item.url or page.url contains item.url and item.url != "/" %}class="current"{% endif %}>{{ item.title }}</a>
   {% endfor %}
 </nav>

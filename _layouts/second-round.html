@@ -47,7 +47,19 @@ layout: default
 
 <h3>Contest Problems</h3>
 
-{% for problem in problems %}
-    {% include problem.html problem = problem %}
-{% endfor %}
+<div id="problems-container"></div>
+
+<script type="module">
+import { loadProblems } from '/assets/js/problem-loader.js';
+
+// Get problem IDs from Jekyll
+const problemIds = [
+    {% for problem in problems %}
+    "{{ problem.path | split: "/" | last | replace: ".html", "" }}"{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+];
+
+const container = document.getElementById('problems-container');
+await loadProblems(problemIds, container);
+</script>
 

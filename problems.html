@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Problems
-nav: 3
 description: Searchable archive of Swiss Mathematical Olympiad problems organized by topic (Algebra, Geometry, Combinatorics, Number Theory) and competition round, with complete problem statements and authorship information.
 rounds: ["?", "First Round", "Second Round", "Final Round", "Selection"]
 ---
@@ -52,43 +51,25 @@ PDF versions found on the <a href = "/exams/">exams</a> page for original formul
     </div>
 </div>
 
-{% assign problems = site.problems %}
-{% for p in problems %}
-    {% include problem.html problem=p %}
-{% endfor %}
-
+<!-- Problem metadata for filtering -->
 <script>
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    const yearFrom = document.getElementById('from');
-    const yearTo = document.getElementById('to');
-    const filterButton = document.getElementById('filter');
-    const problems = document.querySelectorAll('div.problem');
-    const tags = ['algebra', 'combinatorics', 'geometry', 'number-theory',
-        'first-round', 'second-round', 'final-round', 'selection'];
-    const search = document.getElementById('search');
+window.problemsData = [
+{% for p in site.problems %}
+    {
+        id: "{{ p.path | split: '/' | last | replace: '.html', '' }}",
+        topic: "{{ p.topic | slice: 0 }}",
+        year: {{ p.year }},
+        round: {% if p.round == "First Round" %}1{% elsif p.round == "Second Round" %}2{% elsif p.round == "Final Round" %}3{% elsif p.round == "Selection" %}4{% endif %}
+    }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+];
+</script>
 
-    function filter(div) {
-        for (const tag of tags) {
-            if (div.classList.contains(tag) && !document.getElementById(tag).checked) { return false; }
-        }
-        if (!div.textContent.toLowerCase().includes(search.value.toLowerCase())) { return false; }
-        const hasIntInRange = Array.from(div.classList).some(cls => {
-            const num = parseInt(cls, 10);
-            return !isNaN(num) && num >= yearFrom.value && num <= yearTo.value;
-        });
-        return hasIntInRange;
-    }
+<div id="problems-container"></div>
 
-    function update() {
-        var count = 0;
-        problems.forEach(div => {
-            var show = filter(div);
-            div.style.display = show ? '' : 'none';
-            if (show) { count += 1 };
-        });
-        document.getElementById('count').innerHTML = count;
-    }
+<script type="module">
+import { initProblemsFilter } from '/assets/js/problems-filter.js';
 
-    filterButton.addEventListener('click', update);
-    update();
+// Initialize filter with all problems data
+initProblemsFilter(window.problemsData);
 </script>

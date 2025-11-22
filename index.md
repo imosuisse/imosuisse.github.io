@@ -1,7 +1,6 @@
 ---
 title: Home
 layout: default
-nav: 1
 ---
 
 ## Swiss Mathematical Olympiad Archive

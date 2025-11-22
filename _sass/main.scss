@@ -30,8 +30,34 @@ header {
   background-color: $white;
   z-index: 1000;
 
-  h1 {
-    text-align: center;
+  .header-container {
+    position: relative;
+    
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+    }
+    
+    .auth-icon {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      color: $red;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      transition: opacity 0.2s;
+      
+      svg {
+        width: 28px;
+        height: 28px;
+      }
+      
+      &:hover {
+        opacity: 0.6;
+      }
+    }
   }
 
   nav {
@@ -67,21 +93,119 @@ main {
 
 .problem {
   font-family: CMR;
-  h4 {
-    font-family: CMB;
-    margin-bottom: 5px;
-    margin-top: 0px
-  }
-  p {
-    margin-top: 5px;
-  }
   width: 60%;
   margin: 0px auto;
   padding: 10px 0px;
   text-align: justify;
+  
+  .problem-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    
+    h4 {
+      font-family: CMB;
+      margin: 0;
+    }
+  }
+  
+  .problem-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .action-group {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .action-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+    
+    svg {
+      stroke: #999;
+      fill: none;
+      transition: all 0.2s;
+    }
+    
+    &:hover {
+      transform: scale(1.15);
+    }
+    
+    &:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+    
+    // Solved button (green circle with white checkmark)
+    &.action-solved {
+      .check-circle {
+        stroke: #999;
+        fill: none;
+        transition: all 0.2s;
+      }
+      
+      .check-mark {
+        stroke: #999;
+        transition: all 0.2s;
+      }
+    }
+    
+    &.action-solved.active {
+      .check-circle {
+        stroke: green;
+        fill: green;
+      }
+      
+      .check-mark {
+        stroke: white;
+      }
+    }
+    
+    // List button (blue)
+    &.action-list.active svg {
+      stroke: blue;
+      fill: blue;
+    }
+    
+    // Like button (red)
+    &.action-like.active svg {
+      stroke: $red;
+      fill: $red;
+    }
+  }
+  
+  .action-count {
+    font-size: 13px;
+    color: #999;
+    min-width: 15px;
+    text-align: left;
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+    
+    &.loaded {
+      opacity: 1;
+    }
+  }
+  
+  p {
+    margin-top: 5px;
+  }
+  
   em {
     font-family: CMO;
   }
+  
   .info {
     font-size: 15px;
   }

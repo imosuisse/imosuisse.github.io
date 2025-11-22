@@ -1,7 +1,6 @@
 ---
 title: Participants
 layout: default
-nav: 4
 description: Comprehensive register of all Swiss Mathematical Olympiad participants who reached the Final Round or beyond, with detailed performance statistics, awards, and competition history.
 permalink: /participants/
 ---
