@@ -36,12 +36,16 @@ export function initProblemList(userId) {
   }
 }
 
+let currentLoadOperation = 0;
+
 /**
  * Load user's problems by action type and render them
  */
 async function loadUserProblems(userId, actionType) {
   const listContent = document.getElementById('problem-list-content');
   if (!listContent) return;
+  
+  const operationId = ++currentLoadOperation;
   
   listContent.innerHTML = '<p style="color: #999; padding: 1rem 0;">Loading...</p>';
   
@@ -51,17 +55,20 @@ async function loadUserProblems(userId, actionType) {
     const q = query(problemsRef, where('userId', '==', userId));
     const snapshot = await getDocs(q);
     
+    // Check if still the current operation
+    if (operationId !== currentLoadOperation) return;
+    
     if (snapshot.empty) {
       const displayName = actionType === 'list' ? 'list' : actionType;
       listContent.innerHTML = `<p style="color: #999; padding: 1rem 0;">No ${displayName} problems yet.</p>`;
       return;
     }
     
-    // Get problem IDs and sort them
-    const problemIds = snapshot.docs.map(doc => doc.data().problemId).sort();
+    // Get problem IDs and sort them (descending)
+    const problemIds = snapshot.docs.map(doc => doc.data().problemId).sort((a, b) => b.localeCompare(a));
     
     // Load and render full problems
-    await renderProblemsWithContent(problemIds, listContent);
+    await renderProblemsWithContent(problemIds, listContent, operationId);
     
   } catch (error) {
     console.error('Error loading problems:', error);
@@ -72,7 +79,7 @@ async function loadUserProblems(userId, actionType) {
 /**
  * Render problems with full content using problem-loader
  */
-async function renderProblemsWithContent(problemIds, container) {
+async function renderProblemsWithContent(problemIds, container, operationId) {
   console.log('renderProblemsWithContent called with:', problemIds);
   
   try {
@@ -80,8 +87,8 @@ async function renderProblemsWithContent(problemIds, container) {
     const { loadProblems } = await import('/assets/js/problem-loader.js');
     console.log('Problem loader imported successfully');
     
-    // Load all problems
-    await loadProblems(problemIds, container);
+    // Load all problems with operation ID
+    await loadProblems(problemIds, container, operationId);
     console.log('Problems loaded successfully');
   } catch (error) {
     console.error('Error in renderProblemsWithContent:', error);

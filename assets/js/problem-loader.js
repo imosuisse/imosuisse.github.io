@@ -45,30 +45,43 @@ async function fetchProblemData(problemId) {
  * Load problems into a container
  * @param {string[]} problemIds - Array of problem IDs
  * @param {HTMLElement} container - Container element to render into
+ * @param {Function} progressCallback - Optional callback for progress updates
  */
-export async function loadProblems(problemIds, container) {
-  container.innerHTML = '<div class="problems-loading">Loading problems...</div>';
-  
-  const problems = [];
-  for (const problemId of problemIds) {
-    try {
-      const problemData = await fetchProblemData(problemId);
-      problems.push(problemData);
-    } catch (error) {
-      console.error(`Failed to load problem ${problemId}:`, error);
-    }
-  }
-  
-  // Clear loading message
+export async function loadProblems(problemIds, container, progressCallback = null) {
+  // Clear container immediately
   container.innerHTML = '';
   
-  // Append all problems
-  problems.forEach(problem => {
-    container.appendChild(problem.element);
-  });
+  // Batch size for parallel fetching
+  const BATCH_SIZE = 10;
+  const problems = [];
   
-  // Set up Intersection Observer for lazy MathJax rendering
-  setupLazyMathJax(container);
+  // Process in batches
+  for (let i = 0; i < problemIds.length; i += BATCH_SIZE) {
+    const batch = problemIds.slice(i, i + BATCH_SIZE);
+    
+    const batchPromises = batch.map(problemId => 
+      fetchProblemData(problemId).catch(error => {
+        console.error(`Failed to load problem ${problemId}:`, error);
+        return null;
+      })
+    );
+    
+    const batchResults = (await Promise.all(batchPromises)).filter(p => p !== null);
+    
+    // Append batch results immediately
+    batchResults.forEach(problem => {
+      container.appendChild(problem.element);
+      problems.push(problem);
+    });
+    
+    // Report progress
+    if (progressCallback) {
+      progressCallback(Math.min(i + BATCH_SIZE, problemIds.length), problemIds.length);
+    }
+    
+    // Set up MathJax for this batch
+    setupLazyMathJax(container);
+  }
   
   // Re-initialize action buttons
   await initializeButtons();

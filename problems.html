@@ -59,7 +59,8 @@ window.problemsData = [
         id: "{{ p.path | split: '/' | last | replace: '.html', '' }}",
         topic: "{{ p.topic | slice: 0 }}",
         year: {{ p.year }},
-        round: {% if p.round == "First Round" %}1{% elsif p.round == "Second Round" %}2{% elsif p.round == "Final Round" %}3{% elsif p.round == "Selection" %}4{% endif %}
+        round: {% if p.round == "First Round" %}1{% elsif p.round == "Second Round" %}2{% elsif p.round == "Final Round" %}3{% elsif p.round == "Selection" %}4{% endif %},
+        content: {{ p.content | strip_html | normalize_whitespace | jsonify }}
     }{% unless forloop.last %},{% endunless %}
 {% endfor %}
 ];
