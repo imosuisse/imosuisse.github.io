@@ -47,7 +47,7 @@ async function fetchProblemData(problemId) {
  * @param {HTMLElement} container - Container element to render into
  * @param {Function} progressCallback - Optional callback for progress updates
  */
-export async function loadProblems(problemIds, container, progressCallback = null) {
+window.loadProblems = async function(problemIds, container, progressCallback = null) {
   // Clear container immediately
   container.innerHTML = '';
   
@@ -74,17 +74,19 @@ export async function loadProblems(problemIds, container, progressCallback = nul
       problems.push(problem);
     });
     
+    // Re-initialize action buttons for this batch
+    if (window.problemActions && window.problemActions.reinitializeButtons) {
+      window.problemActions.reinitializeButtons(container);
+    }
+    
     // Report progress
-    if (progressCallback) {
+    if (progressCallback && typeof progressCallback === 'function') {
       progressCallback(Math.min(i + BATCH_SIZE, problemIds.length), problemIds.length);
     }
     
     // Set up MathJax for this batch
     setupLazyMathJax(container);
   }
-  
-  // Re-initialize action buttons
-  await initializeButtons();
   
   return problems;
 }
@@ -94,8 +96,9 @@ export async function loadProblems(problemIds, container, progressCallback = nul
  */
 async function initializeButtons() {
   try {
-    const { reinitializeActionButtons } = await import('/assets/js/problem-actions.js');
-    reinitializeActionButtons();
+    if (window.problemActions && window.problemActions.reinitializeButtons) {
+      window.problemActions.reinitializeButtons();
+    }
   } catch (error) {
     console.error('Failed to initialize action buttons:', error);
   }
@@ -146,10 +149,13 @@ function setupLazyMathJax(container) {
  * Useful for prefetching problems the user might view
  * @param {string} problemId - Problem ID
  */
-export async function preloadProblem(problemId) {
+window.preloadProblem = async function(problemId) {
   try {
     await fetchProblemData(problemId);
   } catch (error) {
     console.error(`Failed to preload problem ${problemId}:`, error);
   }
 }
+
+// Export loadProblems globally for use in other scripts
+window.loadProblems = loadProblems;

@@ -68,9 +68,9 @@ window.problemsData = [
 
 <div id="problems-container"></div>
 
-<script type="module">
-import { initProblemsFilter } from '/assets/js/problems-filter.js';
-
+<script src="/assets/js/problem-loader.js"></script>
+<script src="/assets/js/problems-filter.js"></script>
+<script>
 // Initialize filter with all problems data
-initProblemsFilter(window.problemsData);
+window.initProblemsFilter(window.problemsData);
 </script>

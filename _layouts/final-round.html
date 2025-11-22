@@ -51,8 +51,8 @@ layout: default
 
 <div id="problems-container"></div>
 
-<script type="module">
-import { loadProblems } from '/assets/js/problem-loader.js';
+<script src="/assets/js/problem-loader.js"></script>
+<script>
 
 // Get problem IDs from Jekyll
 const problemIds = [
@@ -62,6 +62,8 @@ const problemIds = [
 ];
 
 const container = document.getElementById('problems-container');
-await loadProblems(problemIds, container);
+window.addEventListener('DOMContentLoaded', () => {
+  loadProblems(problemIds, container);
+});
 </script>
 

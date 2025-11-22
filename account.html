@@ -1,66 +1,26 @@
 ---
 layout: default
-title: Account
-description: Login and manage your account
+title: Bookmarks
+description: View your saved, liked, and solved problems
 ---
 
-<link rel="stylesheet" href="/assets/css/account.css">
+<h2>Problem Bookmarks</h2>
 
-<h2>Account</h2>
+<p>View your saved, liked, and solved problems.<br>
+All data is stored locally in your browser (lost if cache is cleared).</p>
 
-<div class="auth-container">
-  
-  <!-- Login Section (shown when logged out) -->
-  <div id="login-section" class="auth-section">
-    <p>Enter your email to receive a login link:</p>
-    
-    <input 
-      type="email" 
-      id="email-input" 
-      class="auth-input" 
-      placeholder="your.email@example.com"
-      autocomplete="email"
-    >
-    
-    <button id="send-link-btn" class="auth-button">
-      Send Login Link
-    </button>
-    
-    <div id="login-message"></div>
-  </div>
-  
-  <!-- User Section (shown when logged in) -->
-  <div id="user-section" class="auth-section hidden">
-    <div class="auth-message success">
-      ✓ You are logged in
-    </div>
-    
-    <div class="user-info">
-      <strong>Email:</strong> <span id="user-email"></span>
-    </div>
-    
-    <button id="logout-btn" class="auth-button logout-button">
-      Logout
-    </button>
-  </div>
+<div class="problem-filter-container" style="margin: 2rem 0;">
+    <label for="problem-filter" style="margin-bottom: 5px; font-weight: bold;">
+        Show:
+    </label>
+    <select id="problem-filter" style="padding: 5px; font-size: 1rem;">
+        <option value="solve">Solved (0)</option>
+        <option value="list">List (0)</option>
+        <option value="like">Likes (0)</option>
+    </select>
 </div>
 
-<!-- Problem Filter (outside auth-container) -->
-<div id="problem-filter-section" class="hidden" style="margin: 2rem 0;">
-  <label for="problem-filter" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">
-    Your Problems:
-  </label>
-  <select id="problem-filter" class="auth-input" style="width: auto; min-width: 200px;">
-    <option value="solved">Solved</option>
-    <option value="list">List</option>
-    <option value="like">Liked</option>
-  </select>
-</div>
+<div id="problem-list"></div>
 
-<!-- Problem List (full width, outside auth-container) -->
-<div id="problem-list" class="hidden">
-  <div id="problem-list-content"></div>
-</div>
-
-<!-- Account Page Logic -->
-<script type="module" src="/assets/js/account.js"></script>
+<script src="/assets/js/problem-loader.js"></script>
+<script src="/assets/js/account-problems.js"></script>

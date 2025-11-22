@@ -148,7 +148,7 @@ main {
     }
     
     // Solved button (green circle with white checkmark)
-    &.action-solved {
+    &.action-solve {
       .check-circle {
         stroke: #999;
         fill: none;
@@ -161,7 +161,7 @@ main {
       }
     }
     
-    &.action-solved.active {
+    &.action-solve.active {
       .check-circle {
         stroke: green;
         fill: green;

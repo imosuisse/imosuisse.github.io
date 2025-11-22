@@ -3,11 +3,9 @@
  * Filters problems by topic, round, and year without loading HTML
  */
 
-import { loadProblems } from '/assets/js/problem-loader.js';
-
 let allProblemsData = [];
 
-export function initProblemsFilter(problemsData) {
+window.initProblemsFilter = function(problemsData) {
   allProblemsData = problemsData;
   
   const filterButton = document.getElementById('filter');
