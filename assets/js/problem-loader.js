@@ -12,7 +12,7 @@
  */
 async function fetchProblemData(problemId) {
   try {
-    const response = await fetch(`/problems/${problemId}/`);
+    const response = await fetch(`/problems/${problemId.toLowerCase()}/`);
     if (!response.ok) {
       throw new Error(`Problem not found: ${problemId}`);
     }

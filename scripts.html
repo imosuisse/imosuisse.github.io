@@ -1,0 +1,43 @@
+---
+title: Scripts
+layout: default
+languages: ["english", "german", "french", "italian"]
+tags: ["-", "-exercises-", "-hints-", "-solutions-"]
+tag-names: ["Script", "Exercises", "Hints", "Solutions"]
+---
+
+<h2>Scripts</h2>
+
+<table class = "sortable">
+    <tr>
+        <th class = "sort-3 sort-asc">Name</th>
+        <th class = "center sort-1 sort-asc">Topic</th>
+        <th class = "center sort-2 sort-asc">Round</th>
+        <th>English</th>
+        <th>German</th>
+        <th>French</th>
+        <th>Italian</th>
+    </tr>
+    {% for script in site.scripts %}
+        <tr>
+            <!-- <td><a href="{{ script.url }}">{{ script.title }}</a></td> -->
+            <td>{{ script.title }}</td>
+            <td class = "center">{{ script.topic | slice: 0 }}</td>
+            {% if script.round == "Second Round"%}<td class = "center">2</td>{% endif %}
+            {% if script.round == "Final Round"%}<td class = "center">F</td>{% endif %}
+            {% if script.round == "Selection"%}<td class = "center">S</td>{% endif %}
+
+            {% for lang in page.languages %}
+                <td>
+                    {% for i in (0..3) %}
+                        {% assign name = script.file | append: page.tags[i] | append: lang | append: ".pdf" %}
+                        {% assign file = site.static_files | where: "name", name | first %}
+                        {% if file %}
+                            {% unless forloop.first %}<br>{% endunless %}<a href = "{{ file.path }}">{{ page.tag-names[i] }}</a>
+                        {% endif %}
+                    {% endfor %}
+                </td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>

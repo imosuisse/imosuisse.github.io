@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+{% assign name = page.file | append: "-english.pdf" %}
+{% assign f = site.static_files | where: "name", name | first %}
+
+<div id="pdf-container"></div>
+
+<style>
+  canvas {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+    height: auto;
+  }
+</style>
+
+<script>
+    const url = '{{ f.path }}';
+
+    const container = document.getElementById('pdf-container');
+
+    pdfjsLib.getDocument(url).promise.then(pdf => {
+        const pageCount = pdf.numPages;
+
+        for (let pageNumber = 1; pageNumber <= pageCount; pageNumber++) {
+            pdf.getPage(pageNumber).then(page => {
+                const scale = 3;
+                const viewport = page.getViewport({ scale });
+
+                const canvas = document.createElement('canvas');
+                const context = canvas.getContext('2d');
+                canvas.width = viewport.width;
+                canvas.height = viewport.height;
+                container.appendChild(canvas);
+
+                const renderContext = { canvasContext: context, viewport: viewport };
+                page.render(renderContext);
+            });
+        }
+    }).catch(err => console.error(err));
+</script>

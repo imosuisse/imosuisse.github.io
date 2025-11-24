@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const currentValue = filterSelect.value;
     filterSelect.innerHTML = `
-      <option value="like">Liked (${counts.like})</option>
-      <option value="list">List (${counts.list})</option>
       <option value="solve">Solved (${counts.solve})</option>
+      <option value="list">List (${counts.list})</option>
+      <option value="like">Liked (${counts.like})</option>
     `;
     filterSelect.value = currentValue;
   }
