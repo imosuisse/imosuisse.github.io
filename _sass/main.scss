@@ -15,6 +15,13 @@
 $white: white;
 $red: red;
 $pink: #FFEEEE;
+$lightred: #FF6666;
+$lightblue: #6666FF;
+$gold: gold;
+$silver: silver;
+$bronze: #CD7F32;
+$purple: blueviolet;
+$orange: darkorange;
 
 body {
   margin: 0px;
@@ -223,6 +230,138 @@ table {
       text-align: center;
     }
   }
+}
+
+.overflow-wrapper {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.distribution-table {
+  table-layout: fixed;
+  width: max-content;
+  border-collapse: collapse;
+  td, th {
+    padding: 0 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #EEEEEE;
+    div {
+      height: 100%;
+      box-sizing: border-box;
+      border: 3px solid $lightred;
+      background-color: rgba($lightred, 0.2);
+    }
+    .gold {
+      border-color: $gold;
+      background-color: rgba($gold, 0.2);
+    }
+    .silver {
+      border-color: $silver;
+      background-color: rgba($silver, 0.2);
+    }
+    .bronze {
+      border-color: $bronze;
+      background-color: rgba($bronze, 0.2);
+    }
+    .lie {
+      border-color: $lightblue;
+      background-color: rgba($lightblue, 0.2);
+    }
+    .imo {
+      border-color: $orange;
+      background-color: rgba($orange, 0.2);
+    }
+    .memo {
+      border-color: $purple;
+      background-color: rgba($purple, 0.2);
+    }
+
+    div:hover, div.highlighted {
+      background-color: rgba($lightred, 0.5);
+    }
+    .gold:hover, .gold.highlighted {
+      background-color: rgba($gold, 0.5);
+    }
+    .silver:hover, .silver.highlighted {
+      background-color: rgba($silver, 0.5);
+    }
+    .bronze:hover, .bronze.highlighted {
+      background-color: rgba($bronze, 0.5);
+    }
+    .lie:hover, .lie.highlighted {
+      background-color: rgba($lightblue, 0.5);
+    }
+    .imo:hover, .imo.highlighted {
+      background-color: rgba($orange, 0.5);
+    }
+    .memo:hover, .memo.highlighted {
+      background-color: rgba($purple, 0.5);
+    }
+  }
+  .label-row {
+    border: 2px solid black;
+  }
+  .label {
+    border: none;
+    font-size: 10px;
+    font-style: italic;
+    text-align: center;
+    border: none;
+  }
+  .label:nth-child(2n) {
+    background-color: rgba(black,0.05);
+  }
+  .empty {
+    border: none;
+  }
+}
+.scroll-highlighted {
+  transition-property: background-color;
+  transition-duration: 0.2s;
+}
+
+thead {
+  background-color: rgba($lightred, 0.5);
+}
+.results-row-gold {
+  background-color: rgba($gold, 0.2);
+}
+.results-row-silver {
+  background-color: rgba($silver, 0.2);
+}
+.results-row-bronze {
+  background-color: rgba($bronze, 0.2);
+}
+.results-row-lie {
+  background-color: rgba($lightblue, 0.2);
+}
+.results-row-imo {
+  background-color: rgba($orange, 0.2);
+}
+.results-row-memo {
+  background-color: rgba($purple, 0.2);
+}
+.results-row-gold:hover, .results-row-gold.highlighted {
+  background-color: rgba($gold, 0.4);
+}
+.results-row-silver:hover, .results-row-silver.highlighted {
+  background-color: rgba($silver, 0.4);
+}
+.results-row-bronze:hover, .results-row-bronze.highlighted {
+  background-color: rgba($bronze, 0.4);
+}
+.results-row-lie:hover, .results-row-lie.highlighted {
+  background-color: rgba($lightblue, 0.4);
+}
+.results-row-imo:hover, .results-row-imo.highlighted {
+  background-color: rgba($orange, 0.4);
+}
+.results-row-memo:hover, .results-row-memo.highlighted {
+  background-color: rgba($purple, 0.4);
+}
+.results-row-:hover, .results-row-.highlighted {
+  background-color: rgba(black, 0.08);
 }
 
 .curriculum {

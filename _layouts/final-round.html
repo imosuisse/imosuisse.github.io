@@ -8,8 +8,12 @@ layout: default
 {% assign problems = site.problems | where: "year", page.year | where: "round", "Final Round" %}
 
 {% if problems.size != page.problem-count %}
-    ERROR: PROBLEM COUNT MISSMATCH
+ERROR: PROBLEM COUNT MISSMATCH
 {% endif %}
+
+<h3>Distribution</h3>
+
+<div class="overflow-wrapper" id="distribution-container"></div>
 
 <h3>Scores</h3>
 
@@ -27,7 +31,7 @@ layout: default
     </thead>
     <tbody>
         {% for participant in page.participants %}
-        <tr>
+        <tr id="results-row-{{participant.first-name}}-{{participant.last-name}}" class="results-row-{{ participant.award | downcase }}"">
             <td>{{ participant.rank }}</td>
             {% assign pp = site.participants | where: "first-name", participant.first-name | where: "last-name", participant.last-name | first %}
             <td>
@@ -46,6 +50,24 @@ layout: default
         {% endfor %}
     </tbody>
 </table>
+
+
+<script src="/assets/js/distribution-renderer.js"></script>
+<script>
+    const participants = [
+        {% for participant in page.participants %}
+            {
+                first_name:"{{ participant.first-name }}",
+                last_name:"{{ participant.last-name }}",
+                total:"{{ participant.total }}",
+                award:"{{ participant.award }}",
+            },
+        {% endfor %}
+    ];
+
+    const distContainer = document.getElementById("distribution-container");
+    renderDistribution(participants, {{ page.problem-count }}*7, distContainer);
+</script>
 
 <h3>Contest Problems</h3>
 
