@@ -30,7 +30,7 @@ layout: default
         {% for participant in page.participants %}
         {% assign rank = participant.rank | plus: 0 %}
         {% if rank > 50 %} {% break %} {% endif %}
-        <tr id="results-row-{{participant.first-name}}-{{participant.last-name}}" class="results-row-"">
+        <tr id="results-row-{{participant.first-name}}-{{participant.last-name}}" class="results-row">
             <td>{{ participant.rank }}</td>
             {% assign pp = site.participants | where: "first-name", participant.first-name | where: "last-name", participant.last-name | first %}
             <td>
@@ -49,22 +49,7 @@ layout: default
     </tbody>
 </table>
 
-<script src="/assets/js/distribution-renderer.js"></script>
-<script>
-    const participants = [
-        {% for participant in page.participants %}
-            {
-                first_name:"{{ participant.first-name }}",
-                last_name:"{{ participant.last-name }}",
-                total:"{{ participant.total }}",
-                award:"",
-            },
-        {% endfor %}
-    ];
-
-    const distContainer = document.getElementById("distribution-container");
-    renderDistribution(participants, {{ page.problem-count }}*7, distContainer);
-</script>
+{% include statistics.html %}
 
 <h3>Contest Problems</h3>
 

@@ -1,0 +1,75 @@
+<h3>Statistics</h3>
+
+<!-- <div id="statistics-container" class="flex-container"><div style="background-color:red;width:100px;height:50px"></div><div style="background-color:red;width:350px;height:50px"></div><div style="background-color:red;width:350px;height:50px"></div><div style="background-color:red;width:350px;height:50px"></div><div style="background-color:red;width:350px;height:50px"></div><div style="background-color:red;width:350px;height:50px"></div><div style="flex-basis:100%"></div><div style="background-color:red;width:350px;height:50px"></div></div> -->
+<div id="plots-container" class="flex-container" style="align-items: flex-end;"></div>
+
+<div class="flex-container">
+    <table id="problem-distribution-table" class="stats-table">
+        <thead>
+            <tr class="title"><th colspan="11">Per-problem score distribution</th></tr>
+            <tr>
+                <th></th>
+                <th>0p</th>
+                <th>1p</th>
+                <th>2p</th>
+                <th>3p</th>
+                <th>4p</th>
+                <th>5p</th>
+                <th>6p</th>
+                <th>7p</th>
+                <th>μ</th>
+                <th>σ</th>
+            </tr>
+        </thead>
+    </table>
+
+    <table id="correlation-table" class="stats-table">
+        <thead>
+            <tr class="title"><th colspan="{{ page.problem-count | plus: 2 }}">Correlation coefficients</th></tr>
+        </thead>
+    </table>
+</div>
+
+<script src="/assets/js/statistics-renderer.js"></script>
+<script>
+    const participants = [
+        {% for participant in page.participants %}
+            {
+                first_name:"{{ participant.first-name }}",
+                last_name:"{{ participant.last-name }}",
+                scores:"{{ participant.scores }}",
+                total:"{{ participant.total }}",
+                award:"{{ participant.award }}",
+            },
+        {% endfor %}
+    ];
+
+    for (p in participants) {
+        participants[p].scores = participants[p].scores.split('');
+        for (i in participants[p].scores) {
+            if (participants[p].scores[i] == '-')
+                participants[p].scores[i] = 0;
+            else 
+                participants[p].scores[i] = parseInt(participants[p].scores[i]);
+        }
+    }
+
+    const problemNames = [
+        {% for problem in problems %}
+        "{{ problem.number }}",
+        {% endfor %}
+    ]
+
+    for (i in problemNames) {
+        if (!/^[A-Z]$/.test(problemNames[i][0]))
+            problemNames[i] = "P" + problemNames[i];
+    }
+
+    const distContainer = document.getElementById("distribution-container");
+    renderDistribution(participants, {{ page.problem-count }}*7, distContainer);
+
+    const plotsContainer = document.getElementById("plots-container");
+    const distTable = document.getElementById("problem-distribution-table");
+    const corrTable = document.getElementById("correlation-table");
+    renderStatistics(participants, problemNames, "{{ page.title }}", plotsContainer, distTable, corrTable);
+</script>

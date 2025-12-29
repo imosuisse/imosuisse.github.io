@@ -36,7 +36,7 @@ round-names: ["Second Round", "Final Round", "Selection", "Overall"]
             {% else %}
                 <td class = "center">{{ exam.participant-count | minus: result.rank | plus: 1 | times: 100 | divided_by: exam.participant-count | round }} %</td>
             {% endif %}
-            <td class = "center">{{ result.award }}</td>
+            <td class = "center {{ result.award | downcase }}">{{ result.award }}</td>
         </tr>
     {% endfor %}
 </table>
@@ -51,11 +51,11 @@ round-names: ["Second Round", "Final Round", "Selection", "Overall"]
         <th class = "center">MEMO</th>
     <tr>
     <tr>
-        <td class = "center">{{ page.awards.gold | join: ", " }}</td>
-        <td class = "center">{{ page.awards.silver | join: ", " }}</td>
-        <td class = "center">{{ page.awards.bronze | join: ", " }}</td>
-        <td class = "center">{{ page.awards.imo | join: ", " }}</td>
-        <td class = "center">{{ page.awards.memo | join: ", " }}</td>
+        <td class = "center gold">{{ page.awards.gold | join: ", " }}</td>
+        <td class = "center silver">{{ page.awards.silver | join: ", " }}</td>
+        <td class = "center bronze">{{ page.awards.bronze | join: ", " }}</td>
+        <td class = "center imo">{{ page.awards.imo | join: ", " }}</td>
+        <td class = "center memo">{{ page.awards.memo | join: ", " }}</td>
     </tr>
 </table>
 

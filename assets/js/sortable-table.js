@@ -224,16 +224,13 @@
                     const indicator = document.createElement('span');
                     indicator.className = 'sort-indicator';
                     indicator.textContent = sortDir === 'asc' ? ' ▲' : ' ▼';
-                    indicator.style.fontSize = '0.8em';
-                    indicator.style.marginLeft = '0.3em';
                     
                     // Highlight the active (most recently clicked) header
                     if (header === activeHeader) {
                         header.classList.add('sorted-active');
-                        indicator.style.color = '#0066cc';
-                        indicator.style.fontWeight = 'bold';
+                        indicator.classList.add('sort-indicator-active')
                     } else {
-                        indicator.style.color = '#999';
+                        indicator.classList.remove('sort-indicator-active')
                     }
                     
                     header.appendChild(indicator);
