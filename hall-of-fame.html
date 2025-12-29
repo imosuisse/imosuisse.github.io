@@ -16,17 +16,17 @@ topic-names: ["A", "G", "C", "N", "Σ"]
         <th colspan = "2" class="center sort-3 sort-desc">Teams</th>
     </tr>
     </tr>
-        <th class="center sort-desc">G</th>
-        <th class="center sort-desc">S</th>
-        <th class="center sort-desc">B</th>
-        <th class="center sort-desc">Σ</th>
+        <th class="center sub sort-desc">G</th>
+        <th class="center sub sort-desc">S</th>
+        <th class="center sub sort-desc">B</th>
+        <th class="center sub sort-desc">Σ</th>
         
-        <th class="center sort-asc sort-2">2</th>
-        <th class="center sort-asc sort-1">F</th>
-        <th class="center sort-asc sort-3">S</th>
+        <th class="center sub sort-asc sort-2">2</th>
+        <th class="center sub sort-asc sort-1">F</th>
+        <th class="center sub sort-asc sort-3">S</th>
 
-        <th class="center sort-desc">I</th>
-        <th class="center sort-desc">M</th>
+        <th class="center sub sort-desc">I</th>
+        <th class="center sub sort-desc">M</th>
     </tr>
     
     {% for participant in site.participants %}
@@ -67,10 +67,10 @@ topic-names: ["A", "G", "C", "N", "Σ"]
         <th rowspan = "2" class = "center sort-1 sort-desc">Ratio</th>
     </tr>
     <tr>
-        <th class = "center">Name</th>
-        <th class = "center">Score</th>
-        <th class = "center">Name</th>
-        <th class = "center">Score</th>
+        <th class = "center sub">Name</th>
+        <th class = "center sub">Score</th>
+        <th class = "center sub">Name</th>
+        <th class = "center sub">Score</th>
     </tr>
     {% for exam in site.exams %}
         {% assign rank1 = exam.participants[0] %}
@@ -110,12 +110,12 @@ topic-names: ["A", "G", "C", "N", "Σ"]
     <tr>
         {% for r in (0..3) %}
             {% unless r == 0 %}
-                <th class = "center sort-2 sort-desc">A</th>
+                <th class = "center sort-2 sort-desc sub">A</th>
             {% endunless %}
-            <th class = "center sort-3 sort-desc">G</th>
-            <th class = "center sort-4 sort-desc">C</th>
-            <th class = "center sort-5 sort-desc">N</th>
-            <th class = "center sort-1 sort-desc">Σ</th>
+            <th class = "center sort-3 sort-desc sub">G</th>
+            <th class = "center sort-4 sort-desc sub">C</th>
+            <th class = "center sort-5 sort-desc sub">N</th>
+            <th class = "center sort-1 sort-desc sub">Σ</th>
         {% endfor %}
     </tr>
     {% for part in site.participants %}

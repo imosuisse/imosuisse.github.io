@@ -1,6 +1,7 @@
 ---
 layout: default
 round-names: ["Second Round", "Final Round", "Selection", "Overall"]
+topic-names: ["Algebra","Geometry","Combinatorics","Number Theory","Total"]
 ---
 <h2>{{ page.first-name }} {{ page.last-name }}</h2>
 
@@ -24,7 +25,8 @@ round-names: ["Second Round", "Final Round", "Selection", "Overall"]
     {% assign current = 0 %}
     {% for result in page.exams %}
         {% assign exam = site.exams | where: "slug", result.slug | first %}
-        <tr>
+        {% assign isodd = exam.year | modulo: 2 %}
+        <tr class="{% if isodd == 0 %}emphasis{% endif %}">
             <td>{% unless current == exam.year %}{{ exam.year }}{% endunless %}</td>
             {% assign current = exam.year %}
             <td><a href = "{{ exam.url }}">{{ exam.round }}</a></td>
@@ -34,9 +36,10 @@ round-names: ["Second Round", "Final Round", "Selection", "Overall"]
             {% if result.rank == "-" %}
                 <td class = "center">-</td>
             {% else %}
-                <td class = "center">{{ exam.participant-count | minus: result.rank | plus: 1 | times: 100 | divided_by: exam.participant-count | round }} %</td>
+                {% assign relrank = exam.participant-count | minus: result.rank | plus: 1 | times: 100 | divided_by: exam.participant-count | round %}
+                <td class = "center">{{ relrank }} %</td>
             {% endif %}
-            <td class = "center {{ result.award | downcase }}">{{ result.award }}</td>
+            <td class = "center award {{ result.award | downcase }}">{{ result.award }}</td>
         </tr>
     {% endfor %}
 </table>
@@ -59,8 +62,9 @@ round-names: ["Second Round", "Final Round", "Selection", "Overall"]
     </tr>
 </table>
 
-<h3>Point Distribution by Round</h3>
-<table>
+<h3 style="display:flex;">Point Distribution by Round <button id="topic-dist-toggle" class="toggle-button">Show per-topic distribution</button></h3>
+
+<table id="dist-table">
     <tr>
         <th>Round</th>
         <th class = "center"># –</th>
@@ -78,6 +82,50 @@ round-names: ["Second Round", "Final Round", "Selection", "Overall"]
     </tr>
     {% endfor %}
 </table>
+
+<table id="topic-dist-table" hidden>
+    <tr>
+        <th class="center">Round</th>
+        <th>Topic</th>
+        <th class = "center"># –</th>
+        {% for i in (0..7) %}
+            <th class = "center"># {{ i }}</th>
+        {% endfor %}
+        <th class = "center">Total</th>
+    </tr>
+    {% for r in (0..3) %}
+        {% for t in (0..4) %}
+        <tr {% if t == 4 %} class="emphasis" {% endif %}>
+            {% if t == 0 %}
+                <th rowspan="5" class="center">{{ layout.round-names[r] }}</th>
+            {% endif %}
+            <th class="sub">{{ layout.topic-names[t] }}</th>
+            {% for i in page.topic-scores[r][t] %}
+                <td class = "center">{{ i }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    {% endfor %}
+</table>
+
+<script>
+    const topicDistButton = document.getElementById("topic-dist-toggle");
+    const table1 = document.getElementById("dist-table");
+    const table2 =  document.getElementById("topic-dist-table");
+    let state = 1;
+    topicDistButton.addEventListener("click",() => {
+        if (state == 1) {
+            table1.hidden = true;
+            table2.hidden = false;
+            topicDistButton.textContent = "Hide per-topic distribution";
+        } else {
+            table1.hidden = false;
+            table2.hidden = true;
+            topicDistButton.textContent = "Show per-topic distribution";
+        }
+        state = 3-state;
+    })
+</script>
 
 <h3>Points per Topic by Round</h3>
 <table>
