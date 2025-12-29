@@ -3,7 +3,7 @@ layout: participant
 first-name: Sarina Franziska
 last-name: Müller
 slug: sarina-franziska-muller
-order: Müller-Sarina Franziska
+order: Muller-Sarina Franziska
 years: [2016, 2017, 2018]
 scores:
   - [0, 7, 1, 2, 0, 0, 1, 0, 6, 17]

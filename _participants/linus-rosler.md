@@ -3,7 +3,7 @@ layout: participant
 first-name: Linus
 last-name: Rösler
 slug: linus-rosler
-order: Rösler-Linus
+order: Rosler-Linus
 years: [2013, 2014, 2015]
 scores:
   - [2, 3, 1, 0, 1, 1, 1, 0, 6, 15]

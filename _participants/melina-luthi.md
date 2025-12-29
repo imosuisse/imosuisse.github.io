@@ -3,7 +3,7 @@ layout: participant
 first-name: Melina
 last-name: Lüthi
 slug: melina-luthi
-order: Lüthi-Melina
+order: Luthi-Melina
 years: [2014, 2015]
 scores:
   - [0, 7, 0, 0, 0, 1, 0, 0, 2, 10]

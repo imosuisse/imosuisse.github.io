@@ -3,7 +3,7 @@ layout: participant
 first-name: Eric
 last-name: Lüscher
 slug: eric-luscher
-order: Lüscher-Eric
+order: Luscher-Eric
 years: [2021, 2024, 2025]
 scores:
   - [3, 4, 0, 2, 1, 0, 0, 0, 8, 18]

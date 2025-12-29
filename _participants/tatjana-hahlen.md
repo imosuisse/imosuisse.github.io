@@ -3,7 +3,7 @@ layout: participant
 first-name: Tatjana
 last-name: Hählen
 slug: tatjana-hahlen
-order: Hählen-Tatjana
+order: Hahlen-Tatjana
 years: [2004]
 scores:
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

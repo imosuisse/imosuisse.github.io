@@ -3,7 +3,7 @@ layout: participant
 first-name: Philipp
 last-name: Krähenbühl
 slug: philipp-krahenbuhl
-order: Krähenbühl-Philipp
+order: Krahenbuhl-Philipp
 years: [2005]
 scores:
   - [0, 2, 1, 0, 0, 0, 0, 1, 1, 5]

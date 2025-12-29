@@ -3,7 +3,7 @@ layout: participant
 first-name: Levy
 last-name: Jäger
 slug: levy-jager
-order: Jäger-Levy
+order: Jager-Levy
 years: [2007, 2008]
 scores:
   - [0, 3, 0, 0, 1, 1, 0, 1, 4, 10]

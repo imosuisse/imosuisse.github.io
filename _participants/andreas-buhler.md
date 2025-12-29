@@ -3,7 +3,7 @@ layout: participant
 first-name: Andreas
 last-name: Bühler
 slug: andreas-buhler
-order: Bühler-Andreas
+order: Buhler-Andreas
 years: [2012]
 scores:
   - [0, 5, 0, 0, 0, 0, 0, 0, 0, 5]

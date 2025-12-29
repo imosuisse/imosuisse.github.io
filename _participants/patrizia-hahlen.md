@@ -3,7 +3,7 @@ layout: participant
 first-name: Patrizia
 last-name: Hählen
 slug: patrizia-hahlen
-order: Hählen-Patrizia
+order: Hahlen-Patrizia
 years: [2007, 2008, 2009]
 scores:
   - [0, 6, 1, 1, 2, 0, 2, 0, 3, 15]

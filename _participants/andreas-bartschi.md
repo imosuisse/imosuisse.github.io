@@ -3,7 +3,7 @@ layout: participant
 first-name: Andreas
 last-name: Bärtschi
 slug: andreas-bartschi
-order: Bärtschi-Andreas
+order: Bartschi-Andreas
 years: [2004, 2005, 2006]
 scores:
   - [0, 2, 1, 0, 0, 0, 1, 1, 5, 10]

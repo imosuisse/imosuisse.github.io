@@ -3,7 +3,7 @@ layout: participant
 first-name: Frieder
 last-name: Jäckel
 slug: frieder-jackel
-order: Jäckel-Frieder
+order: Jackel-Frieder
 years: [2015, 2016, 2017]
 scores:
   - [2, 4, 1, 0, 1, 0, 0, 0, 8, 16]

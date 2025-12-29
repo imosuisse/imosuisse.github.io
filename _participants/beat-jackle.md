@@ -3,7 +3,7 @@ layout: participant
 first-name: Beat
 last-name: Jäckle
 slug: beat-jackle
-order: Jäckle-Beat
+order: Jackle-Beat
 years: [2012, 2013, 2014]
 scores:
   - [1, 3, 2, 0, 0, 1, 1, 0, 7, 15]

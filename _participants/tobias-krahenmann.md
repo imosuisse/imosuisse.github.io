@@ -3,7 +3,7 @@ layout: participant
 first-name: Tobias
 last-name: Krähenmann
 slug: tobias-krahenmann
-order: Krähenmann-Tobias
+order: Krahenmann-Tobias
 years: [2006, 2007]
 scores:
   - [1, 3, 0, 1, 0, 0, 0, 3, 2, 10]

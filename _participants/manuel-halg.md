@@ -3,7 +3,7 @@ layout: participant
 first-name: Manuel
 last-name: Hälg
 slug: manuel-halg
-order: Hälg-Manuel
+order: Halg-Manuel
 years: [2006, 2007]
 scores:
   - [0, 3, 0, 0, 0, 0, 2, 0, 5, 10]

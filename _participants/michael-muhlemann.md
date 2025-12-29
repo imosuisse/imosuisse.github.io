@@ -3,7 +3,7 @@ layout: participant
 first-name: Michael
 last-name: Mühlemann
 slug: michael-muhlemann
-order: Mühlemann-Michael
+order: Muhlemann-Michael
 years: [2022, 2024, 2025]
 scores:
   - [2, 3, 2, 3, 1, 1, 2, 1, 3, 18]

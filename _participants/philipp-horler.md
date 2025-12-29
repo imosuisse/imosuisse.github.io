@@ -3,7 +3,7 @@ layout: participant
 first-name: Philipp
 last-name: Hörler
 slug: philipp-horler
-order: Hörler-Philipp
+order: Horler-Philipp
 years: [2004, 2005]
 scores:
   - [0, 2, 0, 0, 1, 0, 0, 0, 2, 5]

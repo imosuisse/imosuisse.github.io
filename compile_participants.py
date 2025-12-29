@@ -12,15 +12,18 @@ import unicodedata
 from pathlib import Path
 from collections import defaultdict
 
+def normalize_to_ascii(name):
+    # Normalize unicode characters to their ASCII equivalents
+    # NFD = decompose, then filter out combining marks, then recompose
+    res = unicodedata.normalize('NFD', name)
+    res = ''.join(char for char in res if unicodedata.category(char) != 'Mn')
+    return res
 
 def slugify_name(first_name, last_name):
     """Create a kebab-case slug from first and last name, replacing special characters."""
     name = f"{first_name}-{last_name}".lower()
     
-    # Normalize unicode characters to their ASCII equivalents
-    # NFD = decompose, then filter out combining marks, then recompose
-    name = unicodedata.normalize('NFD', name)
-    name = ''.join(char for char in name if unicodedata.category(char) != 'Mn')
+    name = normalize_to_ascii(name)
     
     # Replace spaces and underscores with hyphens
     name = re.sub(r'[\s_]+', '-', name)
@@ -461,6 +464,8 @@ def main():
         last_name_for_sort = data['last_name']
         if last_name_for_sort.lower().startswith('de '):
             last_name_for_sort = last_name_for_sort[3:]
+        # Also remove diacritics
+        last_name_for_sort = normalize_to_ascii(last_name_for_sort)
         order_value = f"{last_name_for_sort}-{data['first_name']}"
         
         # Create YAML content (using kebab-case for field names)
