@@ -95,13 +95,14 @@ a {
 }
 
 main {
-  margin: 50px 15%;
+  overflow-x: auto;
+  padding: 50px 15%;
   flex: 1;
 }
 
 .problem {
   font-family: CMR;
-  width: 60%;
+  width: min(100%,600px);
   margin: 0px auto;
   padding: 10px 0px;
   text-align: justify;
@@ -111,6 +112,7 @@ main {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 5px;
+    text-align: left;
     
     h4 {
       font-family: CMB;
@@ -224,6 +226,7 @@ table {
   border-spacing: 0;
   border-collapse: collapse;
   td, th {
+    height: 20px;
     border: 1px solid black;
     padding: 5px;
     text-align: left;
@@ -451,18 +454,12 @@ table {
   font-style: italic;
 }
 
-.stats-table {
-  width: max-content;
-  th,td {
-    text-align: center;
-    min-width: 30px;
-  }
-}
-
 .problem-filter {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   margin: 20px;
+  gap: 20px;
 }
 
 .curriculum {
@@ -479,8 +476,9 @@ table {
 }
 
 .participants {
-  columns: 4;
+  column-width: 200px;
   column-gap: 20px;
+  padding: 0;
   list-style: none;
   .subtitle {
     font-weight: bold;

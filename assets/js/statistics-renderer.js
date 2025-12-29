@@ -3,6 +3,7 @@ const labelIncrement = 7;
 function newTableHeader(content) {
     const h = document.createElement("th");
     h.textContent = content;
+    h.classList.add("center");
     return h;
 }
 
@@ -263,7 +264,7 @@ function renderStatistics(participants, problemNames, examName, container, distT
     }
     
     means.push(tot_mean);
-    renderProblemDistributionTable(problemNames,count,means,stdev,distTable);
+    if (distTable) renderProblemDistributionTable(problemNames,count,means,stdev,distTable);
     
     const corrMatrix = [...Array(problemCount+1)].map(() => Array(problemCount+1).fill(0));
     for (i in covMatrix) {
@@ -272,7 +273,7 @@ function renderStatistics(participants, problemNames, examName, container, distT
         }
     }
 
-    renderCorrelation(problemNames,corrMatrix,corrTable);
+    if (corrTable) renderCorrelation(problemNames,corrMatrix,corrTable);
 
     for (i in problemNames) {
         for (let j = 0; j <= 7; j++) {

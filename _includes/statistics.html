@@ -4,30 +4,30 @@
 <div id="plots-container" class="flex-container" style="align-items: flex-end;"></div>
 
 <div class="flex-container">
-    <table id="problem-distribution-table" class="stats-table">
+    <table id="problem-distribution-table">
         <thead>
-            <tr class="title"><th colspan="11">Per-problem score distribution</th></tr>
+            <!-- <tr class="title"><th class="center" colspan="11">Per-problem score distribution</th></tr> -->
             <tr>
                 <th></th>
-                <th>0p</th>
-                <th>1p</th>
-                <th>2p</th>
-                <th>3p</th>
-                <th>4p</th>
-                <th>5p</th>
-                <th>6p</th>
-                <th>7p</th>
-                <th>μ</th>
-                <th>σ</th>
+                <th class="center">0p</th>
+                <th class="center">1p</th>
+                <th class="center">2p</th>
+                <th class="center">3p</th>
+                <th class="center">4p</th>
+                <th class="center">5p</th>
+                <th class="center">6p</th>
+                <th class="center">7p</th>
+                <th class="center">μ</th>
+                <th class="center">σ</th>
             </tr>
         </thead>
     </table>
 
-    <table id="correlation-table" class="stats-table">
+    <!-- <table id="correlation-table" class="stats-table">
         <thead>
             <tr class="title"><th colspan="{{ page.problem-count | plus: 2 }}">Correlation coefficients</th></tr>
         </thead>
-    </table>
+    </table> -->
 </div>
 
 <script src="/assets/js/statistics-renderer.js"></script>
