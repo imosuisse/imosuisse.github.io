@@ -10,7 +10,7 @@ tag-names: ["Script", "Exercises", "Hints", "Solutions"]
 
 <table class = "sortable">
     <tr>
-        <th class = "sort-3 sort-asc">Name</th>
+        <th class = "center sort-3 sort-asc">Name</th>
         <th class = "center sort-1 sort-asc">Topic</th>
         <th class = "center sort-2 sort-asc">Round</th>
         <th>English</th>
@@ -21,7 +21,7 @@ tag-names: ["Script", "Exercises", "Hints", "Solutions"]
     {% for script in site.scripts %}
         <tr>
             <!-- <td><a href="{{ script.url }}">{{ script.title }}</a></td> -->
-            <td>{{ script.title }}</td>
+            <td class="center">{{ script.title }}</td>
             <td class = "center">{{ script.topic | slice: 0 }}</td>
             {% if script.round == "Second Round"%}<td class = "center">2</td>{% endif %}
             {% if script.round == "Final Round"%}<td class = "center">F</td>{% endif %}

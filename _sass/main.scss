@@ -12,6 +12,25 @@
     src: url(../fonts/cmuserif_oblique_macroman/cmunti-webfont.woff);
 }
 
+@font-face {
+  font-family: "Latin Modern";
+  font-weight: 400;
+  font-style: normal;
+  src: url(../fonts/latin_modern/lmroman9-regular.otf);
+}
+@font-face {
+  font-family: "Latin Modern";
+  font-weight: 700;
+  font-style: normal;
+  src: url(../fonts/latin_modern/lmroman9-bold.otf);
+}
+@font-face {
+  font-family: "Latin Modern";
+  font-weight: 400;
+  font-style: italic;
+  src: url(../fonts/latin_modern/lmroman9-italic.otf);
+}
+
 $white: white;
 $red: red;
 $pink: #FFF0F0;
@@ -32,6 +51,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  font-family: "Latin Modern", serif;
 }
 
 header {
@@ -146,7 +166,7 @@ a {
 }
 
 .toggle-button {
-  font-family: serif;
+  font-family: "Latin Modern", Serif;
   font-size: 12px;
   margin: 0 10px;
   background-color: transparent;
@@ -312,28 +332,28 @@ table {
     background-color: rgba($lighterred, 1);
   }
   .emphasis td {
-    background-color: rgba($lightred, 0.3);
+    background-color: rgba($lightred, 0.2);
   }
   td.award {
     background-color: rgba($lightred, 0.5);
   }
   td.gold {
-    background-color: rgba($gold, 0.2);
+    background-color: rgba($gold, 0.5);
   }
   td.silver {
-    background-color: rgba($silver, 0.2);
+    background-color: rgba($silver, 0.5);
   }
   td.bronze {
-    background-color: rgba($bronze, 0.2);
+    background-color: rgba($bronze, 0.5);
   }
   td.lie {
-    background-color: rgba($lightblue, 0.2);
+    background-color: rgba($lightblue, 0.5);
   }
   td.imo {
-    background-color: rgba($orange, 0.2);
+    background-color: rgba($orange, 0.5);
   }
   td.memo {
-    background-color: rgba($purple, 0.2);
+    background-color: rgba($purple, 0.5);
   }
 }
 
@@ -456,27 +476,27 @@ table {
 .value-gradient.negative {
   background-color: rgba($lightblue, calc(var(--value) * 1 + 0.0))
 }
+.results-row.gold {
+  background-color: rgba($gold, 0.2);
+}
+.results-row.silver {
+  background-color: rgba($silver, 0.2);
+}
+.results-row.bronze {
+  background-color: rgba($bronze, 0.2);
+}
+.results-row.lie {
+  background-color: rgba($lightblue, 0.2);
+}
+.results-row.imo {
+  background-color: rgba($orange, 0.2);
+}
+.results-row.memo {
+  background-color: rgba($purple, 0.2);
+}
 .results-row:hover, .results-row.highlighted {
   background-color: rgba($lightred, 0.5);
 }
-// .results-row.gold:hover, .results-row.gold.highlighted {
-//   background-color: rgba($gold, 0.5);
-// }
-// .results-row.silver:hover, .results-row.silver.highlighted {
-//   background-color: rgba($silver, 0.5);
-// }
-// .results-row.bronze:hover, .results-row.bronze.highlighted {
-//   background-color: rgba($bronze, 0.5);
-// }
-// .results-row.lie:hover, .results-row.lie.highlighted {
-//   background-color: rgba($lightblue, 0.5);
-// }
-// .results-row.imo:hover, .results-row.imo.highlighted {
-//   background-color: rgba($orange, 0.5);
-// }
-// .results-row.memo:hover, .results-row.memo.highlighted {
-//   background-color: rgba($purple, 0.5);
-// }
 
 .flex-container {
   display: flex;
