@@ -233,6 +233,9 @@ table {
     &.center {
       text-align: center;
     }
+    &.number {
+      text-align: right;
+    }
   }
   th {
     background-color: rgba($lightred, 1);

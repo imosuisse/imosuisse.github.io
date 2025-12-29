@@ -38,17 +38,17 @@ topic-names: ["A", "G", "C", "N", "Σ"]
         {% if medalCount >= 2 %}
             <tr>
                 <td><a href = "{{ participant.url }}">{{ participant.first-name }} {{ participant.last-name }}</a></td>
-                <td class = "center">{{ g }}</td>
-                <td class = "center">{{ s }}</td>
-                <td class = "center">{{ b }}</td>
-                <td class = "center">{{ medalCount }}</td>
+                <td class = "number">{{ g }}</td>
+                <td class = "number">{{ s }}</td>
+                <td class = "number">{{ b }}</td>
+                <td class = "number">{{ medalCount }}</td>
 
-                <td class = "center">{{ participant.best-ranks[0] }}</td>
-                <td class = "center">{{ participant.best-ranks[1] }}</td>
-                <td class = "center">{{ participant.best-ranks[2] }}</td>
+                <td class = "number">{{ participant.best-ranks[0] }}</td>
+                <td class = "number">{{ participant.best-ranks[1] }}</td>
+                <td class = "number">{{ participant.best-ranks[2] }}</td>
 
-                <td class = "center">{{ participant.awards.imo.size }}</td>
-                <td class = "center">{{ participant.awards.memo.size }}</td>
+                <td class = "number">{{ participant.awards.imo.size }}</td>
+                <td class = "number">{{ participant.awards.memo.size }}</td>
             </tr>
         {% endif %}
     {% endfor %}
@@ -88,10 +88,10 @@ topic-names: ["A", "G", "C", "N", "Σ"]
         <tr>
             <td><a href="{{ exam.url }}">{{ exam.title }}</a></td>
             <td><a href="{{ p1.url }}">{{ rank1.first-name }} {{ rank1.last-name }}</a></td>
-            <td>{{ rank1.total }}</td>
+            <td class="number">{{ rank1.total }}</td>
             <td><a href="{{ p2.url }}">{{ rank2.first-name }} {{ rank2.last-name }}</a></td>
-            <td>{{ rank2.total }}</td>
-            <td>{{ ratio }}</td>
+            <td class="number">{{ rank2.total }}</td>
+            <td class="number">{{ ratio }}</td>
         </tr>
     {% endfor %}
 </table>
@@ -124,7 +124,7 @@ topic-names: ["A", "G", "C", "N", "Σ"]
                 <td><a href="{{ part.url }}">{{ part.first-name }} {{ part.last-name }}</a></td>
                 {% for r in (0..3) %} {% for t in (0..4) %}
                     {% if r == 0 and t == 0 %} {% continue %} {% endif %}
-                    <td>{{ part.topics[r][t] }}</td>
+                    <td class="number">{{ part.topics[r][t] }}</td>
                 {% endfor %} {% endfor %}
             </tr>
         {% endif %}
