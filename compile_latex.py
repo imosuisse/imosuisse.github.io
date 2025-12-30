@@ -56,7 +56,8 @@ for filename in os.listdir(source_dir):
         if existing_frontmatter:
             front_matter = existing_frontmatter
         else:
-            front_matter = f"---\nyear: {x}\nround: {y}\nnumber: '{z}'\n---\n"
+            round_name = rounds[int(y)]
+            front_matter = f"---\nyear: {x}\nround: {round_name}\nnumber: '{z}'\n---\n"
         
         final_output = front_matter + html_content
 
