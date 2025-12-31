@@ -4,7 +4,7 @@ layout: default
 
 <div class="problem">
     <div class="problem-header">
-        <h4>{{ page.round }} {{ page.year }} – Problem {{ page.number }}</h4>
+        <h4><a href="/exams/{{ page.round | downcase | replace: ' ', '-' }}-{{ page.year }}">{{ page.round }} {{ page.year }}</a> – Problem {{ page.number }}</h4>
         <div class="problem-actions">
             <div class="action-group">
                 <button class="problem-action-btn action-button action-solve" data-problem-id="{{ page.path | split: '/' | last | replace: '.html', '' }}" data-action-type="solve" aria-label="Mark as solved">

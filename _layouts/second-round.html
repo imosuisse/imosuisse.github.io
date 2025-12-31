@@ -11,6 +11,10 @@ layout: default
     ERROR: PROBLEM COUNT MISSMATCH
 {% endif %}
 
+<h3>Distribution</h3>
+
+<div class="overflow-wrapper" id="distribution-container"></div>
+
 <h3>Scores of the Top 50</h3>
 <table class = "scores">
     <thead>
@@ -26,7 +30,7 @@ layout: default
         {% for participant in page.participants %}
         {% assign rank = participant.rank | plus: 0 %}
         {% if rank > 50 %} {% break %} {% endif %}
-        <tr>
+        <tr id="results-row-{{participant.first-name}}-{{participant.last-name}}" class="results-row">
             <td>{{ participant.rank }}</td>
             {% assign pp = site.participants | where: "first-name", participant.first-name | where: "last-name", participant.last-name | first %}
             <td>
@@ -44,6 +48,8 @@ layout: default
         {% endfor %}
     </tbody>
 </table>
+
+{% include statistics.html %}
 
 <h3>Contest Problems</h3>
 

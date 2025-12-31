@@ -1,5 +1,22 @@
-<nav>
+<nav class="collapsed">
   {% for item in site.data.navigation %}
-    <a href="{{ item.url }}" {% if page.url == item.url or page.url contains item.url and item.url != "/" %}class="current"{% endif %}>{{ item.title }}</a>
+    <a href="{{ item.url }}" class='{% if page.url == item.url or page.url contains item.url and item.url != "/" %}current{% endif %}'>{{ item.title }}</a>
   {% endfor %}
+  <button class="nav-toggle">▼</button>
 </nav>
+
+<script>
+  const navToggleButton = document.querySelector('.nav-toggle');
+  const nav = document.querySelector("nav");
+  navToggleButton.addEventListener("click", () => {
+    if (navToggleButton.textContent == "▼") {
+      navToggleButton.textContent = "▲";
+      nav.classList.remove("collapsed");
+      nav.classList.add("expanded");
+    } else {
+      navToggleButton.textContent = "▼";
+      nav.classList.remove("expanded");
+      nav.classList.add("collapsed");
+    }
+  })
+</script>

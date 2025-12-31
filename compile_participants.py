@@ -12,15 +12,18 @@ import unicodedata
 from pathlib import Path
 from collections import defaultdict
 
+def normalize_to_ascii(name):
+    # Normalize unicode characters to their ASCII equivalents
+    # NFD = decompose, then filter out combining marks, then recompose
+    res = unicodedata.normalize('NFD', name)
+    res = ''.join(char for char in res if unicodedata.category(char) != 'Mn')
+    return res
 
 def slugify_name(first_name, last_name):
     """Create a kebab-case slug from first and last name, replacing special characters."""
     name = f"{first_name}-{last_name}".lower()
     
-    # Normalize unicode characters to their ASCII equivalents
-    # NFD = decompose, then filter out combining marks, then recompose
-    name = unicodedata.normalize('NFD', name)
-    name = ''.join(char for char in name if unicodedata.category(char) != 'Mn')
+    name = normalize_to_ascii(name)
     
     # Replace spaces and underscores with hyphens
     name = re.sub(r'[\s_]+', '-', name)
@@ -337,6 +340,15 @@ def main():
             'final-round': [0, 0, 0, 0, 0],
             'selection': [0, 0, 0, 0, 0]
         }
+
+        # Score distribution by round type and topic 
+        # Stored as 2d arrays: [algebra, combinatorics, geometry, number_theory]
+        scores_by_round_by_topic = {
+            'second-round': [[0] * 10 for _ in range(4)],
+            'final-round': [[0] * 10 for _ in range(4)],
+            'selection': [[0] * 10 for _ in range(4)],
+            'overall': [[0] * 10 for _ in range(4)],
+        }
         
         for exam in data['exams']:
             # Skip exams where rank is '-'
@@ -381,13 +393,7 @@ def main():
                 
                 problem = problems[idx]
                 topic = problem['topic']
-                
-                # Try to use individual score
-                try:
-                    score_val = int(score)
-                except (ValueError, TypeError):
-                    continue
-                
+
                 # Map topic to index: 0=Algebra, 1=Geometry, 2=Combinatorics, 3=Number Theory
                 topic_idx = None
                 if topic == 'Algebra':
@@ -398,10 +404,31 @@ def main():
                     topic_idx = 2
                 elif topic == 'Number Theory':
                     topic_idx = 3
+
+                if topic_idx is None:
+                    continue
                 
-                if topic_idx is not None:
-                    topics_by_round[round_key][topic_idx] += score_val
-                    topic_sum += score_val
+                # Compile stats for distribution per topic
+                score_str = str(score)
+                if score_str == '-':
+                    scores_by_round_by_topic[round_key][topic_idx][0] += 1  # Index 0 for not attempted
+                elif score_str != '?':
+                    try:
+                        score_val = int(score_str)
+                        if 0 <= score_val <= 7:
+                            scores_by_round_by_topic[round_key][topic_idx][score_val + 1] += 1  # Shift by 1
+                    except (ValueError, TypeError):
+                        pass
+
+                # Try to use individual score
+                try:
+                    score_val = int(score)
+                except (ValueError, TypeError):
+                    continue
+                
+                topics_by_round[round_key][topic_idx] += score_val
+                topic_sum += score_val
+
             
             # For total: use exam total if available and individual scores weren't all numeric
             # Otherwise use the sum of topic scores we just calculated
@@ -420,6 +447,12 @@ def main():
         for round_key in ['second-round', 'final-round', 'selection']:
             for i in range(5):
                 total_topics[i] += topics_by_round[round_key][i]
+
+        for round_key in ['second-round', 'final-round', 'selection']:
+            for i in range(4):
+                scores_by_round_by_topic[round_key][i][9] = sum(scores_by_round_by_topic[round_key][i][:9])
+                for j in range(10):
+                    scores_by_round_by_topic['overall'][i][j] += scores_by_round_by_topic[round_key][i][j]
         
         # Calculate best ranks for each round type (second, final, selection)
         # best-ranks: [best_second_round_rank, best_final_round_rank, best_selection_rank]
@@ -461,6 +494,8 @@ def main():
         last_name_for_sort = data['last_name']
         if last_name_for_sort.lower().startswith('de '):
             last_name_for_sort = last_name_for_sort[3:]
+        # Also remove diacritics
+        last_name_for_sort = normalize_to_ascii(last_name_for_sort)
         order_value = f"{last_name_for_sort}-{data['first_name']}"
         
         # Create YAML content (using kebab-case for field names)
@@ -473,6 +508,7 @@ def main():
             'years': years,
             'scores': scores_by_round,
             'total-scores': total_scores,
+            'topic-scores': scores_by_round_by_topic,
             'topics': topics_by_round,
             'total-topics': total_topics,
             'best-ranks': best_ranks,
@@ -520,6 +556,28 @@ def main():
             total_scores = participant_yaml['total-scores']
             total_str = '[' + ', '.join(str(count) for count in total_scores) + ']'
             f.write(f"  - {total_str}\n")
+
+            # Write score distribution by topic as doubly nested array (4x5 rows x 10 values each)
+            f.write("topic-scores:\n")
+            topic_scores_data = participant_yaml['topic-scores']
+            for round_name in ['second-round', 'final-round', 'selection']:
+                f.write("  -\n")
+                for topic in range(4):
+                    score_array = topic_scores_data[round_name][topic]
+                    scores_str = '[' + ', '.join(str(count) for count in score_array) + ']'
+                    f.write(f"    - {scores_str}\n")
+                total_array = scores_data[round_name]
+                total_str = '[' + ', '.join(str(count) for count in total_array) + ']'
+                f.write(f"    - {total_str}\n")
+            # 4th group: overall
+            f.write("  -\n")
+            for topic in range(4):
+                score_array = topic_scores_data["overall"][topic]
+                scores_str = '[' + ', '.join(str(count) for count in score_array) + ']'
+                f.write(f"    - {scores_str}\n")
+            total_array = total_scores
+            total_str = '[' + ', '.join(str(count) for count in total_array) + ']'
+            f.write(f"    - {total_str}\n")
             
             # Write topic distribution as nested array (4 rows x 5 values each)
             # Order: second-round, final-round, selection, total

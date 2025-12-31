@@ -12,9 +12,38 @@
     src: url(../fonts/cmuserif_oblique_macroman/cmunti-webfont.woff);
 }
 
+@font-face {
+  font-family: "Latin Modern";
+  font-weight: 400;
+  font-style: normal;
+  src: url(../fonts/latin_modern/lmroman9-regular.otf);
+}
+@font-face {
+  font-family: "Latin Modern";
+  font-weight: 700;
+  font-style: normal;
+  src: url(../fonts/latin_modern/lmroman9-bold.otf);
+}
+@font-face {
+  font-family: "Latin Modern";
+  font-weight: 400;
+  font-style: italic;
+  src: url(../fonts/latin_modern/lmroman9-italic.otf);
+}
+
 $white: white;
 $red: red;
-$pink: #FFEEEE;
+$pink: #FFF0F0;
+$lightishred: #FF505050;
+$lightred: #FF6666;
+$lighterred: #FF7777;
+$darkred: #BB0000;
+$lightblue: #6666FF;
+$gold: gold;
+$silver: silver;
+$bronze: #CD7F32;
+$purple: blueviolet;
+$orange: darkorange;
 
 body {
   margin: 0px;
@@ -22,6 +51,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  font-family: "Latin Modern", serif;
 }
 
 header {
@@ -33,9 +63,22 @@ header {
   .header-container {
     position: relative;
     
-    h1 {
+    .desktop-title, .mobile-title {
       text-align: center;
-      margin: 20px 0;
+      margin: 15px 0;
+    }
+
+    .mobile-title {
+      display: none;
+    }
+
+    @media (max-width: 750px) {
+      .mobile-title {
+        display: block;
+      }
+      .desktop-title {
+        display: none;
+      }
     }
     
     .auth-icon {
@@ -62,13 +105,14 @@ header {
 
   nav {
     background-color: $pink;
-    padding: 10px;
+    padding: 5px;
     border-top: 2px solid $red;
     border-bottom: 2px solid $red;
 
     display: flex;
     justify-content: space-around;
-
+    position: relative;
+    
     a {
       text-decoration: none;
       color: black;
@@ -79,6 +123,41 @@ header {
         font-weight: bold;
       }
     }
+
+    .nav-toggle {
+      background-color: transparent;
+      border: none;
+      font-size: 18px;
+      display: none;
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: $red;
+    }
+
+    @media (max-width: 750px) {
+      flex-direction:column;
+      a {
+        margin: 5px 0;
+        text-align: center;
+      }
+      .nav-toggle {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .collapsed a {
+    display: none;
+  }
+  .expanded a {
+    display: block;
+  }
+  nav .current {
+    display: block;
   }
 }
 
@@ -86,14 +165,29 @@ a {
   text-decoration: none;
 }
 
+.toggle-button {
+  font-family: "Latin Modern", Serif;
+  font-size: 12px;
+  margin: 0 10px;
+  background-color: transparent;
+  border: none;
+  color: $darkred;
+  cursor: pointer;
+}
+
+.toggle-button:hover {
+  text-decoration: underline;
+}
+
 main {
-  margin: 50px 15%;
+  overflow-x: auto;
+  padding: 50px 15%;
   flex: 1;
 }
 
 .problem {
   font-family: CMR;
-  width: 60%;
+  width: min(100%,600px);
   margin: 0px auto;
   padding: 10px 0px;
   text-align: justify;
@@ -103,6 +197,7 @@ main {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 5px;
+    text-align: left;
     
     h4 {
       font-family: CMB;
@@ -216,13 +311,248 @@ table {
   border-spacing: 0;
   border-collapse: collapse;
   td, th {
+    height: 20px;
     border: 1px solid black;
     padding: 5px;
     text-align: left;
     &.center {
       text-align: center;
     }
+    &.number {
+      text-align: right;
+    }
   }
+  th {
+    background-color: rgba($lightishred, 1);
+  }
+  td {
+    background-color: rgba($lightred, 0.1);
+  }
+  .sub, .sub th {
+    background-color: rgba($lighterred, 1);
+  }
+  .emphasis td {
+    background-color: rgba($lightred, 0.2);
+  }
+  td.award {
+    background-color: rgba($lightred, 0.5);
+  }
+  td.gold {
+    background-color: rgba($gold, 0.5);
+  }
+  td.silver {
+    background-color: rgba($silver, 0.5);
+  }
+  td.bronze {
+    background-color: rgba($bronze, 0.5);
+  }
+  td.lie {
+    background-color: rgba($lightblue, 0.5);
+  }
+  td.imo {
+    background-color: rgba($orange, 0.5);
+  }
+  td.memo {
+    background-color: rgba($purple, 0.5);
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover, .clickable.highlighted {
+  background-color: rgba($lightred, 0.5);
+}
+
+.sort-indicator {
+  font-size: 0.8em;
+  margin-left: 0.3em;
+  color: $darkred;
+}
+
+.sort-indicator-active {
+  font-weight: bold;
+  color: $pink;
+}
+
+.overflow-wrapper {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.distribution-table {
+  table-layout: fixed;
+  width: max-content;
+  border-collapse: collapse;
+  td, th {
+    padding: 0 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #EEEEEE;
+    background-color: transparent;
+    div {
+      height: 100%;
+      box-sizing: border-box;
+      border: 3px solid $lightred;
+      background-color: rgba($lightred, 0.2);
+      cursor: pointer;
+    }
+    .gold {
+      border-color: $gold;
+      background-color: rgba($gold, 0.2);
+    }
+    .silver {
+      border-color: $silver;
+      background-color: rgba($silver, 0.2);
+    }
+    .bronze {
+      border-color: $bronze;
+      background-color: rgba($bronze, 0.2);
+    }
+    .lie {
+      border-color: $lightblue;
+      background-color: rgba($lightblue, 0.2);
+    }
+    .imo {
+      border-color: $orange;
+      background-color: rgba($orange, 0.2);
+    }
+    .memo {
+      border-color: $purple;
+      background-color: rgba($purple, 0.2);
+    }
+
+    div:hover, div.highlighted {
+      background-color: rgba($lightred, 0.5);
+    }
+    .gold:hover, .gold.highlighted {
+      background-color: rgba($gold, 0.5);
+    }
+    .silver:hover, .silver.highlighted {
+      background-color: rgba($silver, 0.5);
+    }
+    .bronze:hover, .bronze.highlighted {
+      background-color: rgba($bronze, 0.5);
+    }
+    .lie:hover, .lie.highlighted {
+      background-color: rgba($lightblue, 0.5);
+    }
+    .imo:hover, .imo.highlighted {
+      background-color: rgba($orange, 0.5);
+    }
+    .memo:hover, .memo.highlighted {
+      background-color: rgba($purple, 0.5);
+    }
+  }
+  .empty {
+    border: none;
+  }
+}
+// .scroll-highlighted {
+//   transition-property: background-color;
+//   transition-duration: 0.2s;
+// }
+.label-row {
+  border: 2px solid black;
+}
+.label {
+  border: none;
+  font-size: 11px;
+  padding: 0;
+  text-align: center;
+  border: none;
+}
+.label:nth-child(2n+1) {
+  background-color: transparent;
+}
+.label:nth-child(2n) {
+  background-color: rgba(black,0.05);
+}
+
+.value-gradient {
+  background-color: rgba($lightred, calc(var(--value) * 1 + 0.0))
+}
+.value-gradient.negative {
+  background-color: rgba($lightblue, calc(var(--value) * 1 + 0.0))
+}
+.results-row.gold {
+  background-color: rgba($gold, 0.2);
+}
+.results-row.silver {
+  background-color: rgba($silver, 0.2);
+}
+.results-row.bronze {
+  background-color: rgba($bronze, 0.2);
+}
+.results-row.lie {
+  background-color: rgba($lightblue, 0.2);
+}
+.results-row.imo {
+  background-color: rgba($orange, 0.2);
+}
+.results-row.memo {
+  background-color: rgba($purple, 0.2);
+}
+.results-row:hover, .results-row.highlighted {
+  background-color: rgba($lightred, 0.5);
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  column-gap: 30px;
+  align-items: flex-start;
+  margin: 30px 0;
+}
+
+.flex-break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.barplot-table {
+  table-layout: fixed;
+  width: max-content;
+  .label {
+    width: 20px;
+    height: 20px;
+  }
+  td {
+    padding: 0 2px;
+    border: none;
+    box-sizing: border-box;
+  }
+  .bar-container {
+    vertical-align: bottom;
+    background-color: transparent;
+  }
+}
+
+.plot-bar {
+  // --value: 0.5;
+  background-color: $lightred;
+  margin-bottom: auto;
+  height: calc(var(--value) * 150px);
+  cursor: pointer;
+}
+
+.plot-bar:hover, .plot-bar.highlighted {
+  background-color: $red;
+}
+
+.plot-label {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.problem-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 20px;
+  gap: 20px;
 }
 
 .curriculum {
@@ -238,15 +568,10 @@ table {
   }
 }
 
-.problem-filter {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 20px;
-}
-
 .participants {
-  columns: 4;
+  column-width: 200px;
   column-gap: 20px;
+  padding: 0;
   list-style: none;
   .subtitle {
     font-weight: bold;
@@ -261,7 +586,7 @@ table {
 footer {
   background-color: $pink;
   border-top: 2px solid $red;
-  height: 100px;
+  height: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;
