@@ -4,14 +4,17 @@
  */
 
 let allProblemsData = [];
+let parameters;
 
-window.initProblemsFilter = function(problemsData) {
+window.initProblemsFilter = function(problemsData, urlparams) {
   allProblemsData = problemsData;
   
   const filterButton = document.getElementById('filter');
   if (filterButton) {
     filterButton.addEventListener('click', applyFilters);
   }
+
+  parameters = urlparams;
   
   // Apply filters on page load
   applyFilters();
@@ -70,6 +73,7 @@ function getFilterValues() {
     selection: getChecked('selection'),
     yearFrom: parseInt(document.getElementById('from')?.value ?? 2020),
     yearTo: parseInt(document.getElementById('to')?.value ?? 2025),
+    author: parameters.get("author"),
     searchText: (document.getElementById('search')?.value ?? '').toLowerCase().trim()
   };
 }
@@ -91,10 +95,15 @@ function matchesFilters(problem, filters) {
   if (!topics[problem.topic]) {
     return false;
   }
+
+  if (filters.author && problem.author != filters.author) {
+    return false;
+  }
   
   // Text search filter
   if (filters.searchText) {
-    const searchIn = problem.id.toLowerCase() + ' ' + (problem.content || '').toLowerCase();
+    const searchIn = (problem.id + ' ' + (problem.author || '') + ' ' + (problem.content || '')).toLowerCase();
+    console.log(searchIn);
     if (!searchIn.includes(filters.searchText)) {
       return false;
     }
