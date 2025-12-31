@@ -46,6 +46,7 @@ $purple: blueviolet;
 $orange: darkorange;
 
 body {
+  font-size: 16px;
   margin: 0px;
   overscroll-behavior: none;
   display: flex;
@@ -323,37 +324,37 @@ table {
     }
   }
   th {
-    background-color: rgba($lightishred, 1);
+    background-color: rgba($lightishred, 0.7);
   }
   td {
-    background-color: rgba($lightred, 0.1);
+    background-color: rgba(black, 0);
   }
   .sub, .sub th {
-    background-color: rgba($lighterred, 1);
+    background-color: rgba($lighterred, 0.7);
   }
   .emphasis td {
-    background-color: rgba($lightred, 0.2);
+    background-color: rgba(black, 0.1);
   }
   td.award {
-    background-color: rgba($lightred, 0.5);
+    background-color: rgba($lightred, 0.3);
   }
   td.gold {
-    background-color: rgba($gold, 0.5);
+    background-color: rgba($gold, 0.3);
   }
   td.silver {
-    background-color: rgba($silver, 0.5);
+    background-color: rgba($silver, 0.3);
   }
   td.bronze {
-    background-color: rgba($bronze, 0.5);
+    background-color: rgba($bronze, 0.3);
   }
   td.lie {
-    background-color: rgba($lightblue, 0.5);
+    background-color: rgba($lightblue, 0.3);
   }
   td.imo {
-    background-color: rgba($orange, 0.5);
+    background-color: rgba($orange, 0.3);
   }
   td.memo {
-    background-color: rgba($purple, 0.5);
+    background-color: rgba($purple, 0.3);
   }
 }
 

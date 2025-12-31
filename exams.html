@@ -31,7 +31,8 @@ languages: ["english", "german", "french", "italian"]
 
     {% assign current = 0 %}
     {% for exam in exams %}
-        <tr>
+        {% assign isodd = exam.year | modulo: 2 %}
+        <tr class="{% if isodd == 0 %}emphasis{% endif %}">
             <td>{% unless current == exam.year %} {{ exam.year }} {% endunless %}</td>
             {% assign current = exam.year %}
 

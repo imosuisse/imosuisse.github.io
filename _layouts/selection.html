@@ -43,7 +43,7 @@ languages: ["english", "german", "french", "italian"]
     </thead>
     <tbody>
         {% for participant in page.participants %}
-        <tr id="results-row-{{participant.first-name}}-{{participant.last-name}}" class="results-row {{ participant.award | downcase }}">
+        <tr id="results-row-{{participant.first-name}}-{{participant.last-name}}" class="results-row">
             <td>{{ participant.rank }}</td>
             {% assign pp = site.participants | where: "first-name", participant.first-name | where: "last-name", participant.last-name | first %}
             <td>
@@ -57,7 +57,7 @@ languages: ["english", "german", "french", "italian"]
                 <td class = "center">{{ participant.scores[forloop.index0] }}</td>
             {% endfor %}
             <td class = "center">{{ participant.total }}</td>
-            <td class = "center">{{ participant.award }}</td>
+            <td class = "center award {{ participant.award | downcase }}">{{ participant.award }}</td>
         </tr>
         {% endfor %}
     </tbody>
