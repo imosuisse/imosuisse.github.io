@@ -1,6 +1,12 @@
 <nav class="collapsed">
+  {% assign current = "/" %}
   {% for item in site.data.navigation %}
-    <a href="{{ item.url }}" class='{% if page.url == item.url or page.url contains item.url and item.url != "/" %}current{% endif %}'>{{ item.title }}</a>
+    {% if page.url == item.url or page.url contains item.url and item.url != "/" %}
+      {% assign current = item.url %}
+    {% endif %}
+  {% endfor %}
+  {% for item in site.data.navigation %}
+    <a href="{{ item.url }}" class='{% if item.url == current %}current{% endif %}'>{{ item.title }}</a>
   {% endfor %}
   <button class="nav-toggle">▼</button>
 </nav>

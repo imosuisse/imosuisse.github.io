@@ -37,7 +37,7 @@ layout: default
     </div>
     <div class="info">
         Topic: {{ page.topic }}<br>
-        {% if page.author %}Author: {{ page.author }}{% endif %}
+        {% if page.author %}Author: <a href="/problems/?author={{ page.author }}">{{ page.author }}</a>{% endif %}
         {% if page.source %}Source: {{ page.source }}{% endif %}
     </div>
     {{ content }}

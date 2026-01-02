@@ -26,7 +26,7 @@ description: Statistics and recognition of Swiss Mathematical Olympiad problem a
         {% assign combi = author.items | where: "topic", "Combinatorics" %}
         {% assign nt = author.items | where: "topic", "Number Theory" %}
         <tr>
-            <td>{{ author.name }}</td>
+            <td><a href="/problems/?author={{ author.name }}">{{ author.name }}</a></td>
             <td class = "center">{{ alg | size }}</td>
             <td class = "center">{{ geo | size }}</td>
             <td class = "center">{{ combi | size }}</td>

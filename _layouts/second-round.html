@@ -1,10 +1,21 @@
 ---
 layout: default
+languages: ["english", "german", "french", "italian"]
 ---
 <h2>Second Round {{ page.year }}</h2>
 <!-- <p>{{ page.date | date: "%-d %B %Y" }}</p> -->
-<p>Number of participants: {{ page.participant-count }}</p>
-
+<p>
+    <strong>Number of participants:</strong> {{ page.participant-count }} <br>
+    <strong>Exam files:</strong> 
+    {% for lang in layout.languages %}
+        {% assign round = page.round | replace: " ", "-" | downcase %}
+        {% assign name = round | append: "-" | append: page.year | append: "-" | append: lang | append: ".pdf" %}
+        {% assign file = site.static_files | where: "name", name | first %}
+        {% if file %}
+            <a href="{{ file.path }}" style="margin: 0 3px">{{ lang | capitalize }}</a>
+        {% endif %}
+    {% endfor %}
+</p>
 {% assign problems = site.problems | where: "year", page.year | where: "round", "Second Round" %}
 
 {% if problems.size != page.problem-count %}

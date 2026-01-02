@@ -104,10 +104,13 @@ function renderDistribution(participants, maxScore, container) {
                     square.classList.add(scoreHist[x][i][0].toLowerCase());
                 }
 
+                
                 const row = document.getElementById("results-row-" + scoreHist[x][i][1]);
                 if (row) {
                     linkHover(row,[square]);
                     linkHover(square,[row]);
+                    square.title = "Click to show participant in results table"
+                    row.title = "Click to show participant in distribution"
                 }
 
                 el.appendChild(square);
@@ -285,11 +288,14 @@ function renderStatistics(participants, problemNames, examName, container, distT
             }
             const bar = document.getElementById("plot-" + problemNames[i] + "-" + j);
             const tablecell = document.getElementById("dist-table-" + problemNames[i] + "-" + j);
+            bar.title = "Click to show participants in results table who achieved this score"
+            tablecell.title = "Click to show participants in results table who achieved this score"
             targets2 = [...targets];
             targets.push(tablecell);
             linkHover(bar,targets,document.querySelector(".scores"));
             targets2.push(bar);
             linkHover(tablecell,targets2,document.querySelector(".scores"));
+
         }
     }
 }
