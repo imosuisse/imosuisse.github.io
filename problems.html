@@ -82,7 +82,8 @@ window.problemsData = [
 const urlparams = new URLSearchParams(window.location.search);
 const author = urlparams.get("author");
 if (author) {
-    document.querySelector("h2").textContent = "Problems authored by " + author
+    document.querySelector("h2").textContent = "Problems authored by " + author;
+    document.getElementById("from").value = 1997;
 }
 // Initialize filter with all problems data
 window.initProblemsFilter(window.problemsData, urlparams);
