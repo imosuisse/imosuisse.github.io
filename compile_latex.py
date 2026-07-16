@@ -9,6 +9,7 @@ args = parser.parse_args()
 
 source_dir = "_latex"
 output_dir = "_problems"
+output_dir2 = "_international-problems"
 pattern = re.compile(r"^(\d+)-(\d+)-(\w+)\.tex$")
 rounds = ["?", "First Round", "Second Round", "Final Round", "Selection"]
 

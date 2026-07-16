@@ -68,6 +68,9 @@ collections:
   participants:
     output: true
     permalink: /participants/:slug/
+  international-problems:
+    output: true
+    permalink: /international-problems/:name/
 
 defaults:
   - scope:

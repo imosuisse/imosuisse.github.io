@@ -1,10 +1,10 @@
 ---
 title: Problem Authors
 layout: default
-description: Statistics and recognition of Swiss Mathematical Olympiad problem authors, showing contribution counts by topic area for original problems created since 2019.
+description: Statistics and recognition of Swiss Mathematical Olympiad problem authors, showing contribution counts by topic area for original problems created.
 ---
 
-<h2>Problem Counts per Author</h2>
+<h2>Swiss Problem Counts per Author</h2>
 
 <p>Note that our author data before 2019 is incomplete and this list is probably missing many deserving entries.</p>
 
@@ -35,3 +35,17 @@ description: Statistics and recognition of Swiss Mathematical Olympiad problem a
         </tr>
     {% endfor %}
 </table>
+
+
+<h2>Problems at International Competitions</h2>
+
+{% assign int_problems = site.international-problems %}
+{% for problem in int_problems %}
+    <b>{{ problem.competition }} {{ problem.year}} – Problem {{ problem.number }}</b>
+    <div class="info">
+        Topic: {{ problem.topic }}<br>
+        Author: <a href="/problems/?author={{ problem.author }}">{{ problem.author }}</a>
+    </div>
+    {{ problem.content }}
+{% endfor %}
+
