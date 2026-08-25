@@ -1,0 +1,18 @@
+There is a row of $n \geq 3$ icebergs, labelled from left to right with the integers $1$ to $n$.
+Pingu starts dancing on one of the icebergs and then moves according to the following rules.
+
+If Pingu has just danced on iceberg $k$,
+he then makes a sequence of $k$ hops to an adjacent iceberg.
+The first of the $k$ hops is always to the right, unless Pingu is one iceberg $n$,
+in which case it is to the left.
+Each of the subsequent $k-1$ hops is in the same direction as the previous hop,
+unless Pingu is on iceberg $1$ or $n$ in which case he changes direction.
+Pingu dances on the iceberg he lands on after $k$ hops.
+
+Pingu continues hopping and dancing in this manner indefinitely.
+An iceberg is \emph{inevitable} if Pingu eventually dances on it,
+regardless of the iceberg he starts on.
+Determine all $n \ge 3$ for which there is exactly one inevitable iceberg.
+
+\emph{Example:} If $n = 8$, and Pingu first dances on iceberg $3$,
+then the next four icebergs he dances on are $6, 4, 8$ and $2$, in this order.

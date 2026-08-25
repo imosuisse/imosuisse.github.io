@@ -1,0 +1,11 @@
+There are $2026$ white balls and $2026$ black balls arranged in a row in some order.
+A \emph{balanced segment} is a non-empty segment of consecutive balls that
+contains the same number of white balls as black balls.
+A \emph{balanced removal} is the operation of selecting a balanced segment $S$,
+removing all the balls in $S$, and shifting left the balls that were to the right of $S$
+so that the remaining balls again form a contiguous row.
+    
+Determine the smallest positive integer $N$ satisfying the following property:
+for every starting configuration of balls and for every integer $k$ satisfying $0 \le k \le 2026$,
+there exists a sequence of at most $N$ balanced removals
+after which there are exactly $2k$ remaining balls.

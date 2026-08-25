@@ -1,0 +1,13 @@
+There are finitely many integers on a board, all of which are at least $2$.
+Pingu repeatedly carries out the following step:
+first, Pingu chooses an integer $n\geq 2$ that is coprime to every integer currently on the board.
+Pingu then replaces each integer $x$ on the board with the unique
+integer $y \in \{1,2,\dots,n-1\}$ such that $xy \equiv 1 \pmod{n}$.
+
+Pingu stops as soon as there is a $1$ anywhere on the board at the end of a step.
+If at this point, there is also a number different from $1$ on the board, Pingu loses.
+Otherwise, if all the numbers are $1$, Pingu wins.
+Prove that Pingu can always win, regardless of the starting integers.
+    
+\emph{Example:} In a step, if Pingu chooses $n = 11$,
+Pingu replaces $3, 8, 13, 8$ with $4, 7, 6, 7$.

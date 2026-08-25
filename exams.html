@@ -9,8 +9,7 @@ languages: ["english", "german", "french", "italian"]
 
 <p>
     Note that during the history of the Olympiad the number, naming, and format of the exam rounds
-    has changed considerably. The listing below uses the modern-day naming convention.
-    <br>
+    has changed considerably. The table below uses the modern-day naming convention.
     A comprehensive history of the competition format can be found <a href = "/history/">here</a>.
 </p>
 
@@ -36,7 +35,7 @@ languages: ["english", "german", "french", "italian"]
             <td>{% unless current == exam.year %} {{ exam.year }} {% endunless %}</td>
             {% assign current = exam.year %}
 
-            <td><a href = "{{ exam.url }}">{{ exam.round }}</a></td>
+            <td><a href = "{{ exam.url }}">{{ exam.round | split: ' ' | first }}</a></td>
             <td>{{ exam.problem-count }}</td>
             <td>{{ exam.participant-count }}</td>
 

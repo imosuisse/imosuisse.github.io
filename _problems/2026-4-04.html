@@ -1,0 +1,34 @@
+---
+year: 2026
+round: Selection
+number: 4
+topic: Combinatorics
+source: IMOSL 2025 C2
+---
+<p>There is a row of <span class="math inline">\(n \geq 3\)</span>
+icebergs, labelled from left to right with the integers <span
+class="math inline">\(1\)</span> to <span
+class="math inline">\(n\)</span>. Pingu starts dancing on one of the
+icebergs and then moves according to the following rules.</p>
+<p>If Pingu has just danced on iceberg <span
+class="math inline">\(k\)</span>, he then makes a sequence of <span
+class="math inline">\(k\)</span> hops to an adjacent iceberg. The first
+of the <span class="math inline">\(k\)</span> hops is always to the
+right, unless Pingu is one iceberg <span
+class="math inline">\(n\)</span>, in which case it is to the left. Each
+of the subsequent <span class="math inline">\(k-1\)</span> hops is in
+the same direction as the previous hop, unless Pingu is on iceberg <span
+class="math inline">\(1\)</span> or <span
+class="math inline">\(n\)</span> in which case he changes direction.
+Pingu dances on the iceberg he lands on after <span
+class="math inline">\(k\)</span> hops.</p>
+<p>Pingu continues hopping and dancing in this manner indefinitely. An
+iceberg is <em>inevitable</em> if Pingu eventually dances on it,
+regardless of the iceberg he starts on. Determine all <span
+class="math inline">\(n \ge 3\)</span> for which there is exactly one
+inevitable iceberg.</p>
+<p><em>Example:</em> If <span class="math inline">\(n = 8\)</span>, and
+Pingu first dances on iceberg <span class="math inline">\(3\)</span>,
+then the next four icebergs he dances on are <span
+class="math inline">\(6, 4, 8\)</span> and <span
+class="math inline">\(2\)</span>, in this order.</p>
