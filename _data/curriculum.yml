@@ -1,27 +1,27 @@
 First Round:
-  Algebra:
+  Basics:
     - Arithmetic
     - Variables and Equations
     - Real Numbers
     - Rational Numbers
     - Algebraic Manipulations
     - Order of Operations
+    - Radical Expressions
   Combinatorics:
     - Simple Counting
     - Counterexamples
     - Constructions
     - Case Distinctions
     - Tilings
-    - Dates and Times
   Geometry:
     - Points, Lines and Circles
     - Polygons
-    - Simple 3D Objects
+    - Simple 3D Bodies
     - Angles in Degrees
-    - Areas and Perimeters
+    - Areas and Perimeters of Simple Shapes
     - Distances
     - Spacial Reasoning
-    - Reflection and Rotation
+    - Reflections and Rotations
   Number Theory:
     - Integer Numbers
     - Digits of an Integer
@@ -32,12 +32,18 @@ First Round:
     - Prime Numbers
 
 Second Round:
-  "":
+  Basics:
+    - Sets and their Operations
+    - Factorials
+    - Proof Writing
+    - Induction
   Combinatorics:
     - Divide and Conquer
-    - Fundamental Selction Processes
+    - Binomial Coefficients
+    - 4 Fundamental Selection Processes
     - Inclusion-Exclusion Principle
     - Pigeonhole Principle
+    - Bijections
   Geometry:
     - Angles in Triangles
     - Angles in Circles
@@ -46,7 +52,6 @@ Second Round:
     - Divisibility
     - GCD and LCM
     - Estimations
-    - Induction
 
 Final Round:
   Algebra:

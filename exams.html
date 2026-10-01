@@ -10,7 +10,7 @@ languages: ["english", "german", "french", "italian"]
 <p>
     Note that during the history of the Olympiad the number, naming, and format of the exam rounds
     has changed considerably. The table below uses the modern-day naming convention.
-    A comprehensive history of the competition format can be found <a href = "/history/">here</a>.
+    <!-- A comprehensive history of the competition format can be found <a href = "/history/">here</a>. -->
 </p>
 
 <table class = "exams">
@@ -23,6 +23,7 @@ languages: ["english", "german", "french", "italian"]
         {% for lang in page.languages %}
             <th class = "center">{{ lang | capitalize }}</th>
         {% endfor %}
+        <th>Sol.</th>
     </tr>
 
     {% assign exams = site.exams | sort: "path" | reverse %}
@@ -47,8 +48,8 @@ languages: ["english", "german", "french", "italian"]
                 {% endfor %}
             </td>
 
+            {% assign round = exam.round | replace: " ", "-" | downcase %}
             {% for lang in page.languages %}
-                {% assign round = exam.round | replace: " ", "-" | downcase %}
                 {% assign name = round | append: "-" | append: exam.year | append: "-" | append: lang | append: ".pdf" %}
                 {% assign file = site.static_files | where: "name", name | first %}
                 <td class = "center">
@@ -57,6 +58,13 @@ languages: ["english", "german", "french", "italian"]
                     {% endif %}
                 </td>
             {% endfor %}
+            {% assign name = round | append: "-" | append: exam.year | append: "-" | append: "solution.pdf" %}
+            {% assign file = site.static_files | where: "name", name | first %}
+            <td class "center">
+                {% if file %}
+                    <a href = "{{ file.path }}">pdf</a></td>
+                {% endif %}
+            </td>
         </tr>
     {% endfor %}
 </table>
