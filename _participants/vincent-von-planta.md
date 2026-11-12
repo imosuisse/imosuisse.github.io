@@ -3,7 +3,7 @@ layout: participant
 first-name: Vincent
 last-name: von Planta
 slug: vincent-von-planta
-order: von Planta-Vincent
+order: Planta-Vincent
 years: [2022, 2023, 2024, 2025, 2026]
 scores:
   - [2, 12, 3, 6, 1, 1, 1, 2, 2, 30]

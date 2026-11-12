@@ -491,10 +491,12 @@ def main():
             exam.pop('_year', None)
             exam.pop('_round', None)
         
-        # Create order field: remove 'de' prefix from last name if present
+        # Create order field: remove 'de' and 'von' prefix from last name if present
         last_name_for_sort = data['last_name']
         if last_name_for_sort.lower().startswith('de '):
             last_name_for_sort = last_name_for_sort[3:]
+        if last_name_for_sort.lower().startswith('von '):
+            last_name_for_sort = last_name_for_sort[4:]
         # Also remove diacritics
         last_name_for_sort = normalize_to_ascii(last_name_for_sort)
         order_value = f"{last_name_for_sort}-{data['first_name']}"

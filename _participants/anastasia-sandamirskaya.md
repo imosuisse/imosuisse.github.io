@@ -41,7 +41,7 @@ topics:
   - [1, 9, 10, 7, 27]
   - [9, 40, 45, 31, 125]
 best-ranks: [12, 15, 9]
-awards: {memo: [2021]}
+awards: {}
 exams:
   - slug: second-round-2019
     round: Second Round
@@ -68,5 +68,4 @@ exams:
     scores: [7, 1, 0, 0, 5, 0, 5, 2, 0, 6, 1, 0]
     total: 27
     rank: 9
-    award: MEMO
 ---
