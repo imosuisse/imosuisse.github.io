@@ -58,7 +58,6 @@ exams:
     scores: [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
     total: 1
     rank: 17
-    award: LIE
   - slug: second-round-2009
     round: Second Round
     scores: [1, 1, 5, 1, 0]

@@ -53,13 +53,11 @@ exams:
     scores: [1, 6, 2, 4, '-', 0, 7, 3, 0, '-']
     total: 23
     rank: 16
-    award: LIE
   - slug: selection-2007
     round: Selection
     scores: [6, 3, 2, 0, 7, 0, '-', '-', '-', '-', '-', '-']
     total: 18
     rank: 11
-    award: LIE
   - slug: second-round-2008
     round: Second Round
     scores: [7, 7, 7, 6, 7]
@@ -70,13 +68,11 @@ exams:
     scores: [0, 2, 2, 1, '-', 7, 6, 5, 4, 2]
     total: 29
     rank: 11
-    award: LIE
   - slug: selection-2008
     round: Selection
     scores: [3, 1, 0, 3, 0, 1, 3, 0, 0, 0, 1, 1]
     total: 13
     rank: 14
-    award: LIE
   - slug: second-round-2009
     round: Second Round
     scores: [7, 7, 7, 4, 7]
@@ -87,5 +83,4 @@ exams:
     scores: [7, 4, 7, 7, 0, 7, 7, 7, 7, 4]
     total: 57
     rank: 1
-    award: LIE
 ---

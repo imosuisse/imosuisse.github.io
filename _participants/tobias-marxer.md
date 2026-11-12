@@ -48,7 +48,6 @@ exams:
     scores: [1, 1, 1, 1, 7, 2, 0, 1]
     total: 14
     rank: 24
-    award: LIE
   - slug: second-round-2023
     round: Second Round
     scores: [7, 7, 7, 7, 0, 0]
@@ -59,11 +58,9 @@ exams:
     scores: [7, 7, 0, 0, 2, 0, 0, 0]
     total: 16
     rank: 23
-    award: LIE
   - slug: selection-2023
     round: Selection
     scores: [7, 1, 0, 1, 0, 0, 0, 0, 0, 0, 2, '-']
     total: 11
     rank: 18
-    award: LIE
 ---

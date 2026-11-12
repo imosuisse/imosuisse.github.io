@@ -58,7 +58,6 @@ exams:
     scores: [7, 0, 0, '-', 0, 7, 0, 0, '-', '-']
     total: 14
     rank: 20
-    award: LIE
   - slug: second-round-2018
     round: Second Round
     scores: [7, 7, 7, 4, 1, '-']
@@ -69,5 +68,4 @@ exams:
     scores: [7, 1, 1, 0, '-', 7, 0, 0, 2, '-']
     total: 18
     rank: 14
-    award: LIE
 ---

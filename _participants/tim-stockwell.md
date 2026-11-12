@@ -53,5 +53,4 @@ exams:
     scores: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     total: 1
     rank: 13
-    award: LIE
 ---
