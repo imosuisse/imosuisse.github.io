@@ -41,13 +41,14 @@ topics:
   - [3, 8, 4, 0, 15]
   - [5, 43, 12, 3, 63]
 best-ranks: [32, 8, 12]
-awards: {bronze: [2017]}
+awards: {bronze: [2017], egmo: [2017]}
 exams:
   - slug: second-round-2017
     round: Second Round
     scores: [7, 7, 1, 0, 2, 1]
     total: 18
     rank: 32
+    award: EGMO
   - slug: final-round-2017
     round: Final Round
     scores: [7, 2, 0, 0, 7, 7, 0, 7, 0, 0]
