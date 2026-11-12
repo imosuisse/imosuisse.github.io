@@ -41,13 +41,14 @@ topics:
   - [0, 0, 0, 0, 0]
   - [1, 7, 9, 0, 17]
 best-ranks: [27, 21, null]
-awards: {}
+awards: {egmo: [2012]}
 exams:
   - slug: second-round-2012
     round: Second Round
     scores: [0, 6, 0, 0, 0]
     total: 6
     rank: 27
+    award: EGMO
   - slug: final-round-2012
     round: Final Round
     scores: [3, 1, 0, 0, '-', 7, '-', 0, '-', '-']

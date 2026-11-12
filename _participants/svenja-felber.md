@@ -41,7 +41,7 @@ topics:
   - [16, 22, 21, 15, 74]
   - [29, 101, 66, 71, 267]
 best-ranks: [7, 2, 9]
-awards: {gold: [2026], bronze: [2025], memo: [2024, 2025]}
+awards: {gold: [2026], bronze: [2025], memo: [2024, 2025], egmo: [2025, 2026]}
 exams:
   - slug: second-round-2022
     round: Second Round
@@ -74,6 +74,7 @@ exams:
     scores: [7, 7, 7, 0, 2, 7]
     total: 30
     rank: 7
+    award: EGMO
   - slug: final-round-2025
     round: Final Round
     scores: [7, 5, 2, 3, 5, 0, 0, 5]
@@ -91,6 +92,7 @@ exams:
     scores: [7, 7, 7, 1, 6, 6]
     total: 34
     rank: 7
+    award: EGMO
   - slug: final-round-2026
     round: Final Round
     scores: [7, 7, 7, 1, 7, 7, 6, 0]

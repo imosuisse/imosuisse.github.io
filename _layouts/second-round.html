@@ -36,6 +36,7 @@ languages: ["english", "german", "french", "italian"]
                 <th class = "center">{{ problem.number }}</th>
             {% endfor %}
             <th class = "center">Total</th>
+            <th class = "center">Award</th>
     </thead>
     <tbody>
         {% for participant in page.participants %}
@@ -55,6 +56,7 @@ languages: ["english", "german", "french", "italian"]
                 <td class = "center">{{ participant.scores[forloop.index0] }}</td>
             {% endfor %}
             <td class = "center">{{ participant.total }}</td>
+            <td class = "center award {{ participant.award | downcase }}">{{ participant.award }}</td>
         </tr>
         {% endfor %}
     </tbody>

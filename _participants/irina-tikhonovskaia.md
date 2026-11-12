@@ -41,7 +41,7 @@ topics:
   - [0, 8, 8, 3, 19]
   - [4, 43, 40, 33, 120]
 best-ranks: [15, 15, 18]
-awards: {}
+awards: {egmo: [2024]}
 exams:
   - slug: second-round-2022
     round: Second Round
@@ -58,6 +58,7 @@ exams:
     scores: [2, 2, 3, 0, 4, 2]
     total: 13
     rank: 42
+    award: EGMO
   - slug: final-round-2024
     round: Final Round
     scores: [1, 2, 0, 0, 5, 3, 0, 3]

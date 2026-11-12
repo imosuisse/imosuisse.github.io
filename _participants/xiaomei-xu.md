@@ -41,7 +41,7 @@ topics:
   - [0, 0, 0, 0, 0]
   - [2, 18, 16, 18, 54]
 best-ranks: [9, 23, null]
-awards: {}
+awards: {egmo: [2026]}
 exams:
   - slug: second-round-2025
     round: Second Round
@@ -53,6 +53,7 @@ exams:
     scores: [7, 7, 7, 1, 7, 1]
     total: 30
     rank: 9
+    award: EGMO
   - slug: final-round-2026
     round: Final Round
     scores: [3, 0, 2, 1, 1, 0, 1, 0]

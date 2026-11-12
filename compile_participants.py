@@ -313,7 +313,8 @@ def main():
             'silver': [],
             'bronze': [],
             'imo': [],
-            'memo': []
+            'memo': [],
+            'egmo': []
         }
         
         for exam in data['exams']:

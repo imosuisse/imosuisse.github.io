@@ -41,13 +41,14 @@ topics:
   - [20, 54, 45, 29, 148]
   - [47, 168, 145, 120, 480]
 best-ranks: [1, 2, 4]
-awards: {gold: [2020, 2021], silver: [2022], bronze: [2019], imo: [2019, 2020, 2021, 2022]}
+awards: {gold: [2020, 2021], silver: [2022], bronze: [2019], imo: [2019, 2020, 2021, 2022], egmo: [2018, 2019, 2020, 2021, 2022]}
 exams:
   - slug: second-round-2018
     round: Second Round
     scores: [7, 7, 0, 7, 3, 7]
     total: 31
     rank: 16
+    award: EGMO
   - slug: final-round-2018
     round: Final Round
     scores: [0, 1, 1, 0, 0, 2, 2, 0, 2, '-']
@@ -58,6 +59,7 @@ exams:
     scores: [7, 7, 6, 6, 3, 7]
     total: 36
     rank: 9
+    award: EGMO
   - slug: final-round-2019
     round: Final Round
     scores: [7, 1, 1, 1, 7, 4, 7, 0]
@@ -75,6 +77,7 @@ exams:
     scores: [7, 7, 7, 7, 5, 7]
     total: 40
     rank: 3
+    award: EGMO
   - slug: final-round-2020
     round: Final Round
     scores: [6, 7, 0, 0, 7, 6, 7, 0]
@@ -92,6 +95,7 @@ exams:
     scores: [7, 7, 7, 7, 7, 7]
     total: 42
     rank: 1
+    award: EGMO
   - slug: final-round-2021
     round: Final Round
     scores: [7, 7, 7, 0, 7, 5, 5, 0]
@@ -109,6 +113,7 @@ exams:
     scores: [7, 6, 7, 7, 7, 7]
     total: 41
     rank: 5
+    award: EGMO
   - slug: final-round-2022
     round: Final Round
     scores: [7, 6, 3, 4, 7, 7, 0, 1]

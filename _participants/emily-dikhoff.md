@@ -41,7 +41,7 @@ topics:
   - [3, 14, 7, 1, 25]
   - [11, 98, 75, 40, 224]
 best-ranks: [9, 11, 10]
-awards: {bronze: [2021], memo: [2021]}
+awards: {bronze: [2021], memo: [2021], egmo: [2019, 2021, 2022]}
 exams:
   - slug: second-round-2017
     round: Second Round
@@ -63,6 +63,7 @@ exams:
     scores: [7, 6, 7, 7, 0, '-']
     total: 27
     rank: 22
+    award: EGMO
   - slug: final-round-2019
     round: Final Round
     scores: [0, 1, 0, '-', 2, 0, 3, '-']
@@ -78,6 +79,7 @@ exams:
     scores: [7, 7, 7, 0, 7, 3]
     total: 31
     rank: 11
+    award: EGMO
   - slug: final-round-2021
     round: Final Round
     scores: [6, 7, 5, 0, 7, 1, 4, 1]
@@ -95,6 +97,7 @@ exams:
     scores: [7, 6, 7, 7, 7, 4]
     total: 38
     rank: 9
+    award: EGMO
   - slug: final-round-2022
     round: Final Round
     scores: [4, 0, 0, 1, 7, 4, 0, 1]

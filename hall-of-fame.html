@@ -13,7 +13,7 @@ topic-names: ["A", "G", "C", "N", "Σ"]
         <th rowspan = "2" class="center sort-4 sort-asc">Name</th>
         <th colspan = "4" class="center sort-1 sort-desc">Medals</th>
         <th colspan = "3" class="center sort-2 sort-asc">Best Rank</th>
-        <th colspan = "2" class="center sort-3 sort-desc">Teams</th>
+        <th colspan = "3" class="center sort-3 sort-desc">Teams</th>
     </tr>
     </tr>
         <th class="center sub sort-desc">G</th>
@@ -27,6 +27,7 @@ topic-names: ["A", "G", "C", "N", "Σ"]
 
         <th class="center sub sort-desc">I</th>
         <th class="center sub sort-desc">M</th>
+        <th class="center sub sort-desc">E</th>
     </tr>
     
     {% for participant in site.participants %}
@@ -49,6 +50,7 @@ topic-names: ["A", "G", "C", "N", "Σ"]
 
                 <td class = "number">{{ participant.awards.imo.size }}</td>
                 <td class = "number">{{ participant.awards.memo.size }}</td>
+                <td class = "number">{{ participant.awards.egmo.size }}</td>
             </tr>
         {% endif %}
     {% endfor %}

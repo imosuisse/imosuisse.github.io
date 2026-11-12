@@ -41,13 +41,14 @@ topics:
   - [23, 47, 40, 27, 137]
   - [42, 132, 115, 84, 373]
 best-ranks: [1, 2, 1]
-awards: {gold: [2016], silver: [2014], bronze: [2015], imo: [2014, 2015, 2016]}
+awards: {gold: [2016], silver: [2014], bronze: [2015], imo: [2014, 2015, 2016], egmo: [2013, 2014, 2015, 2016]}
 exams:
   - slug: second-round-2013
     round: Second Round
     scores: [7, 5, 3, 0, 0]
     total: 15
     rank: 19
+    award: EGMO
   - slug: final-round-2013
     round: Final Round
     scores: [7, 0, 0, 0, 0, 0, 7, 0, 0, '-']
@@ -58,6 +59,7 @@ exams:
     scores: [7, 5, 2, 7, 7]
     total: 28
     rank: 4
+    award: EGMO
   - slug: final-round-2014
     round: Final Round
     scores: [7, 5, 4, 0, 0, 7, 0, 7, 0, 7]
@@ -75,6 +77,7 @@ exams:
     scores: [7, 7, 7, 7, 7]
     total: 35
     rank: 1
+    award: EGMO
   - slug: final-round-2015
     round: Final Round
     scores: [7, 7, 4, 0, 0, 7, 0, 5, 0, 0]
@@ -92,6 +95,7 @@ exams:
     scores: [7, 7, 7, 7, 7]
     total: 35
     rank: 1
+    award: EGMO
   - slug: final-round-2016
     round: Final Round
     scores: [7, 0, 6, 7, 0, 4, 7, 7, 4, 0]

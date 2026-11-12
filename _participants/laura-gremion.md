@@ -41,7 +41,7 @@ topics:
   - [9, 30, 27, 18, 84]
   - [29, 94, 84, 78, 285]
 best-ranks: [1, 1, 3]
-awards: {gold: [2011], silver: [2012], imo: [2011], memo: [2009]}
+awards: {gold: [2011], silver: [2012], imo: [2011], memo: [2009], egmo: [2012]}
 exams:
   - slug: second-round-2009
     round: Second Round
@@ -97,6 +97,7 @@ exams:
     scores: [7, 7, 7, 7, 7]
     total: 35
     rank: 1
+    award: EGMO
   - slug: final-round-2012
     round: Final Round
     scores: [3, 7, 0, 7, 2, 7, 7, 7, 0, 1]

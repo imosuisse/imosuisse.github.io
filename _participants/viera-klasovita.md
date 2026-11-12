@@ -41,13 +41,14 @@ topics:
   - [0, 0, 0, 0, 0]
   - [0, 56, 34, 13, 103]
 best-ranks: [8, 14, null]
-awards: {memo: [2015]}
+awards: {memo: [2015], egmo: [2015, 2016, 2017]}
 exams:
   - slug: second-round-2015
     round: Second Round
     scores: [7, 1, 3, 6, 1]
     total: 18
     rank: 22
+    award: EGMO
   - slug: final-round-2015
     round: Final Round
     scores: [3, 0, 0, 0, 0, 0, 0, 5, 0, 0]
@@ -64,6 +65,7 @@ exams:
     scores: [7, 7, 2, 1, 0]
     total: 17
     rank: 22
+    award: EGMO
   - slug: final-round-2016
     round: Final Round
     scores: [7, 0, 0, 0, 0, 0, 3, 0, '-', '-']
@@ -74,6 +76,7 @@ exams:
     scores: [7, 7, 7, 0, 6, 2]
     total: 29
     rank: 8
+    award: EGMO
   - slug: final-round-2017
     round: Final Round
     scores: [7, 0, 0, 0, 0, 7, 0, 7, 0, 0]
