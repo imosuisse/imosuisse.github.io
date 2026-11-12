@@ -11,6 +11,10 @@ topic-names: ["Algebra","Geometry","Combinatorics","Number Theory","Total"]
 <strong> Participations:</strong> {{ page.years | join: ", " }}<br>
 </p>
 
+{% if site.data.lie.lie contains page.slug %}
+    <p>Guest Participant from Liechtenstein.<p>
+{% endif %}
+
 <h3>Exams</h3>
 <table>
     <tr>
