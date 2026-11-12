@@ -7,7 +7,7 @@
             // Build column mapping for sortable headers
             const sortableHeaders = Array.from(allHeaders).map((header, headerIndex) => {
                 const hasSortClass = Array.from(header.classList).some(cls => 
-                    /^sort-\d+$/.test(cls) || cls === 'sort-asc' || cls === 'sort-desc'
+                    /^sort-\d+$/.test(cls) || cls === 'sort-asc' || cls === 'sort-desc' || cls === 'sort-round'
                 );
                 if (!hasSortClass) return null;
                 
@@ -98,12 +98,17 @@
                         let aVal = a.children[columnIndex].textContent.trim();
                         let bVal = b.children[columnIndex].textContent.trim();
                         
+                        // handle costum sort
+                        aVal = a.children[columnIndex].getAttribute("data-sort") ?? aVal;
+                        bVal = b.children[columnIndex].getAttribute("data-sort") ?? bVal;
+
                         const aNum = parseFloat(aVal);
                         const bNum = parseFloat(bVal);
                         const aIsNum = !isNaN(aNum);
                         const bIsNum = !isNaN(bNum);
                         
                         let comparison;
+                        
                         if (aIsNum && bIsNum) {
                             // Both are numbers
                             comparison = direction === 'desc' ? bNum - aNum : aNum - bNum;
