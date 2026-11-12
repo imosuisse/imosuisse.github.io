@@ -30,7 +30,7 @@ There are currently <b>{{ participants.size }}</b> participants listed.
             <li class = "subtitle">{{ letter }}</li>
         {% endif %}
         <li><a href = "{{ participant.url }}">{{ participant.last-name }} {{ participant.first-name }}
-            {% if participant.lie %} (LIE){% endif %}
+            {% if site.data.lie.lie contains participant.slug %} (LIE){% endif %}
         </a></li>
     {% endfor %}
     </div>
