@@ -41,7 +41,6 @@ topics:
   - [14, 31, 27, 18, 90]
   - [20, 80, 86, 47, 233]
 best-ranks: [4, 7, 5]
-lie: true
 awards: {}
 exams:
   - slug: final-round-2022

@@ -41,7 +41,6 @@ topics:
   - [7, 16, 22, 10, 55]
   - [37, 84, 135, 79, 335]
 best-ranks: [1, 1, 6]
-lie: true
 awards: {}
 exams:
   - slug: second-round-2011

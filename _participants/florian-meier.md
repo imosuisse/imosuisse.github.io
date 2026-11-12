@@ -41,7 +41,6 @@ topics:
   - [1, 9, 14, 7, 31]
   - [33, 53, 79, 64, 229]
 best-ranks: [1, 1, 11]
-lie: true
 awards: {}
 exams:
   - slug: second-round-2007

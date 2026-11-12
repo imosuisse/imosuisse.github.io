@@ -41,7 +41,6 @@ topics:
   - [0, 0, 1, 0, 1]
   - [0, 2, 3, 2, 7]
 best-ranks: [31, null, 13]
-lie: true
 awards: {}
 exams:
   - slug: second-round-2006

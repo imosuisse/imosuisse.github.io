@@ -41,7 +41,6 @@ topics:
   - [0, 0, 1, 0, 1]
   - [3, 16, 16, 7, 42]
 best-ranks: [30, 20, 17]
-lie: true
 awards: {}
 exams:
   - slug: second-round-2008
@@ -54,7 +53,6 @@ exams:
     scores: [2, 2, 1, 1, '-', 2, 0, 0, 1, 0]
     total: 9
     rank: 26
-    award: LIE
   - slug: selection-2008
     round: Selection
     scores: [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
@@ -71,5 +69,4 @@ exams:
     scores: [0, 2, 0, 0, 1, 1, 1, 7, 0, 0]
     total: 12
     rank: 20
-    award: LIE
 ---

@@ -41,7 +41,6 @@ topics:
   - [0, 0, 0, 0, 0]
   - [1, 42, 31, 7, 81]
 best-ranks: [24, 14, null]
-lie: true
 awards: {}
 exams:
   - slug: second-round-2016

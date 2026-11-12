@@ -289,24 +289,6 @@ def main():
         # Years of participation (from temporary _year field)
         years = sorted(set(exam['_year'] for exam in data['exams'] if exam.get('_year')))
         
-        # Check for LIE award first
-        has_lie = False
-        for exam in data['exams']:
-            award = exam.get('award')
-            if award and str(award).lower() == 'lie':
-                has_lie = True
-                break
-        
-        # If participant has LIE, ensure all Final Round and Selection exams have LIE award
-        if has_lie:
-            for exam in data['exams']:
-                round_name = exam.get('_round', '')
-                if 'Final' in round_name or 'Selection' in round_name:
-                    # Set award to LIE if not already set or if it's a medal
-                    current_award = exam.get('award')
-                    if current_award in [None, '?'] or str(current_award).lower() in ['gold', 'silver', 'bronze']:
-                        exam['award'] = 'LIE'
-        
         # Awards (medals and qualifications) - lists of years when each award was received
         awards = {
             'gold': [],
@@ -322,10 +304,7 @@ def main():
             year = exam.get('_year')
             if award and award not in ['?', None] and year:
                 award_str = str(award).lower()
-                if award_str == 'lie':
-                    # Don't add LIE to awards lists
-                    continue
-                elif award_str in awards:
+                if award_str in awards:
                     awards[award_str].append(year)
         
         # Calculate total scores across all rounds
@@ -519,10 +498,6 @@ def main():
             'exams': data['exams']
         }
         
-        # Add LIE field if applicable
-        if has_lie:
-            participant_yaml['lie'] = True
-        
         # Generate markdown file with YAML front matter
         output_file = participants_dir / f"{slug}.md"
         
@@ -601,10 +576,6 @@ def main():
             # Format None as null in YAML
             ranks_str = '[' + ', '.join('null' if r is None else str(r) for r in best_ranks) + ']'
             f.write(f"best-ranks: {ranks_str}\n")
-            
-            # Write LIE field if present
-            if 'lie' in participant_yaml:
-                f.write(f"lie: {str(participant_yaml['lie']).lower()}\n")
             
             # Write awards (only non-empty lists)
             awards = participant_yaml['awards']
