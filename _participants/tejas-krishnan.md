@@ -4,6 +4,7 @@ first-name: Tejas
 last-name: Krishnan
 slug: tejas-krishnan
 order: Krishnan-Tejas
+lie: false
 years: [2020, 2021, 2022]
 scores:
   - [0, 2, 0, 2, 1, 1, 0, 2, 10, 18]

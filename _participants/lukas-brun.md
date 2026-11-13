@@ -4,6 +4,7 @@ first-name: Lukas
 last-name: Brun
 slug: lukas-brun
 order: Brun-Lukas
+lie: false
 years: [2005, 2008, 2009, 2010]
 scores:
   - [1, 7, 3, 2, 0, 0, 1, 1, 5, 20]

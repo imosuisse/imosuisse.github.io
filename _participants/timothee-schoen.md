@@ -4,6 +4,7 @@ first-name: Timothée
 last-name: Schoen
 slug: timothee-schoen
 order: Schoen-Timothée
+lie: false
 years: [2013, 2014]
 scores:
   - [0, 2, 1, 0, 0, 1, 2, 0, 4, 10]

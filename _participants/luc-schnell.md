@@ -4,6 +4,7 @@ first-name: Luc
 last-name: Schnell
 slug: luc-schnell
 order: Schnell-Luc
+lie: false
 years: [2014, 2015]
 scores:
   - [1, 2, 1, 1, 0, 1, 0, 0, 4, 10]

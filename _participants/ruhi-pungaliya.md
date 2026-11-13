@@ -4,6 +4,7 @@ first-name: Ruhi
 last-name: Pungaliya
 slug: ruhi-pungaliya
 order: Pungaliya-Ruhi
+lie: false
 years: [2022, 2023]
 scores:
   - [0, 1, 3, 2, 0, 2, 0, 0, 4, 12]

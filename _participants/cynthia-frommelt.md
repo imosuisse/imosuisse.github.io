@@ -4,6 +4,7 @@ first-name: Cynthia
 last-name: Frommelt
 slug: cynthia-frommelt
 order: Frommelt-Cynthia
+lie: false
 years: [2006, 2007]
 scores:
   - [3, 4, 0, 1, 0, 0, 0, 1, 1, 10]

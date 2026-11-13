@@ -4,6 +4,7 @@ first-name: David
 last-name: Barmaz
 slug: david-barmaz
 order: Barmaz-David
+lie: false
 years: [2004]
 scores:
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

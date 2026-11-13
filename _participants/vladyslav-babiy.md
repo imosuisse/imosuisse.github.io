@@ -4,6 +4,7 @@ first-name: Vladyslav
 last-name: Babiy
 slug: vladyslav-babiy
 order: Babiy-Vladyslav
+lie: false
 years: [2025, 2026]
 scores:
   - [2, 1, 0, 1, 0, 1, 1, 1, 5, 12]

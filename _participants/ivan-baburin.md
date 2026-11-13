@@ -4,6 +4,7 @@ first-name: Ivan
 last-name: Baburin
 slug: ivan-baburin
 order: Baburin-Ivan
+lie: false
 years: [2018, 2019]
 scores:
   - [0, 4, 0, 1, 1, 1, 0, 3, 2, 12]

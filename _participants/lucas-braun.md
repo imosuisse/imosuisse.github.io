@@ -4,6 +4,7 @@ first-name: Lucas
 last-name: Braun
 slug: lucas-braun
 order: Braun-Lucas
+lie: false
 years: [2006]
 scores:
   - [0, 2, 1, 0, 1, 0, 0, 0, 1, 5]

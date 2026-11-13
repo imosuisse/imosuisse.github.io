@@ -4,6 +4,7 @@ first-name: Sandra
 last-name: Rezzonico
 slug: sandra-rezzonico
 order: Rezzonico-Sandra
+lie: false
 years: [2004]
 scores:
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

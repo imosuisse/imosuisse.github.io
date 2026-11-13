@@ -4,6 +4,7 @@ first-name: Anna
 last-name: Kokorich
 slug: anna-kokorich
 order: Kokorich-Anna
+lie: false
 years: [2022, 2023]
 scores:
   - [0, 0, 1, 1, 0, 1, 0, 0, 9, 12]

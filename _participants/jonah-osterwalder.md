@@ -4,6 +4,7 @@ first-name: Jonah
 last-name: Osterwalder
 slug: jonah-osterwalder
 order: Osterwalder-Jonah
+lie: false
 years: [2021, 2022, 2023]
 scores:
   - [0, 1, 0, 1, 0, 1, 2, 2, 11, 18]

@@ -4,6 +4,7 @@ first-name: Christoph
 last-name: Schildknecht
 slug: christoph-schildknecht
 order: Schildknecht-Christoph
+lie: false
 years: [2010, 2011, 2012]
 scores:
   - [1, 7, 2, 1, 0, 1, 2, 1, 0, 15]

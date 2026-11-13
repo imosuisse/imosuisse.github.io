@@ -4,6 +4,7 @@ first-name: Anastasia
 last-name: Sandamirskaya
 slug: anastasia-sandamirskaya
 order: Sandamirskaya-Anastasia
+lie: false
 years: [2019, 2020, 2021]
 scores:
   - [0, 1, 2, 2, 4, 2, 0, 1, 6, 18]

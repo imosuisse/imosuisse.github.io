@@ -4,6 +4,7 @@ first-name: Nicola
 last-name: Nesa
 slug: nicola-nesa
 order: Nesa-Nicola
+lie: false
 years: [2012]
 scores:
   - [0, 2, 1, 0, 0, 0, 0, 0, 2, 5]

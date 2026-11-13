@@ -4,6 +4,7 @@ first-name: Noam
 last-name: Schmidhauser
 slug: noam-schmidhauser
 order: Schmidhauser-Noam
+lie: false
 years: [2018]
 scores:
   - [0, 1, 0, 0, 1, 0, 1, 0, 3, 6]

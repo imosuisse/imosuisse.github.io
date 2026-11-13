@@ -4,6 +4,7 @@ first-name: Andreas
 last-name: Bärtschi
 slug: andreas-bartschi
 order: Bartschi-Andreas
+lie: false
 years: [2004, 2005, 2006]
 scores:
   - [0, 2, 1, 0, 0, 0, 1, 1, 5, 10]

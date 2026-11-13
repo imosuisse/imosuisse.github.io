@@ -4,6 +4,7 @@ first-name: Louis
 last-name: Hainaut
 slug: louis-hainaut
 order: Hainaut-Louis
+lie: false
 years: [2011, 2012, 2013, 2014]
 scores:
   - [0, 4, 0, 1, 2, 0, 2, 0, 11, 20]

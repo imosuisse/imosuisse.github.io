@@ -4,6 +4,7 @@ first-name: Tan
 last-name: Hong
 slug: tan-hong
 order: Hong-Tan
+lie: false
 years: [2019, 2020, 2021, 2022]
 scores:
   - [1, 8, 1, 3, 0, 0, 1, 3, 7, 24]

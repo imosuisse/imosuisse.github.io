@@ -4,6 +4,7 @@ first-name: Jerome
 last-name: Wettstein
 slug: jerome-wettstein
 order: Wettstein-Jerome
+lie: false
 years: [2011, 2012, 2013]
 scores:
   - [0, 3, 3, 3, 0, 0, 3, 0, 3, 15]

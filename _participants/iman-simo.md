@@ -4,6 +4,7 @@ first-name: Iman
 last-name: Simo
 slug: iman-simo
 order: Simo-Iman
+lie: false
 years: [2019]
 scores:
   - [1, 1, 0, 0, 0, 0, 1, 0, 3, 6]

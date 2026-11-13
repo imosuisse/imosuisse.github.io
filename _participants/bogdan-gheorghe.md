@@ -4,6 +4,7 @@ first-name: Bogdan
 last-name: Gheorghe
 slug: bogdan-gheorghe
 order: Gheorghe-Bogdan
+lie: false
 years: [2006, 2007]
 scores:
   - [1, 4, 0, 0, 1, 0, 1, 1, 2, 10]

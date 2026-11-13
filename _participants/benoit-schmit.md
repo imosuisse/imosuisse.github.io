@@ -4,6 +4,7 @@ first-name: Benoît
 last-name: Schmit
 slug: benoit-schmit
 order: Schmit-Benoît
+lie: false
 years: [2023, 2024, 2025, 2026]
 scores:
   - [1, 6, 3, 2, 2, 1, 1, 2, 6, 24]

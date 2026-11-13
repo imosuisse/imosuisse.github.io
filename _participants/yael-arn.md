@@ -4,6 +4,7 @@ first-name: Yaël
 last-name: Arn
 slug: yael-arn
 order: Arn-Yaël
+lie: false
 years: [2022]
 scores:
   - [0, 0, 0, 1, 0, 0, 1, 0, 4, 6]

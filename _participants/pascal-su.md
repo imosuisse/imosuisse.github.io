@@ -4,6 +4,7 @@ first-name: Pascal
 last-name: Su
 slug: pascal-su
 order: Su-Pascal
+lie: false
 years: [2007, 2008, 2009, 2010]
 scores:
   - [0, 7, 1, 1, 2, 1, 2, 0, 6, 20]

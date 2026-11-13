@@ -4,6 +4,7 @@ first-name: Ivan
 last-name: Voevodskiy
 slug: ivan-voevodskiy
 order: Voevodskiy-Ivan
+lie: false
 years: [2023, 2024]
 scores:
   - [1, 1, 0, 1, 1, 0, 1, 5, 2, 12]

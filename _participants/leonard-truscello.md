@@ -4,6 +4,7 @@ first-name: Léonard
 last-name: Truscello
 slug: leonard-truscello
 order: Truscello-Léonard
+lie: false
 years: [2011]
 scores:
   - [1, 2, 0, 0, 0, 0, 0, 0, 2, 5]

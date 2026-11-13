@@ -4,6 +4,7 @@ first-name: Adrien
 last-name: de Gottrau
 slug: adrien-de-gottrau
 order: Gottrau-Adrien
+lie: false
 years: [2007, 2008]
 scores:
   - [0, 3, 0, 0, 0, 0, 0, 1, 6, 10]

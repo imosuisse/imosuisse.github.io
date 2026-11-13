@@ -4,6 +4,7 @@ first-name: Felizian
 last-name: Vocke
 slug: felizian-vocke
 order: Vocke-Felizian
+lie: false
 years: [2022, 2023, 2024]
 scores:
   - [0, 3, 0, 2, 1, 1, 1, 4, 6, 18]

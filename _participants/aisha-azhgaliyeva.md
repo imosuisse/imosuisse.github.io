@@ -4,6 +4,7 @@ first-name: Aisha
 last-name: Azhgaliyeva
 slug: aisha-azhgaliyeva
 order: Azhgaliyeva-Aisha
+lie: false
 years: [2018, 2019, 2020, 2021, 2022, 2023]
 scores:
   - [2, 10, 5, 2, 1, 3, 3, 1, 9, 36]

@@ -4,6 +4,7 @@ first-name: Andreas
 last-name: Bühler
 slug: andreas-buhler
 order: Buhler-Andreas
+lie: false
 years: [2012]
 scores:
   - [0, 5, 0, 0, 0, 0, 0, 0, 0, 5]

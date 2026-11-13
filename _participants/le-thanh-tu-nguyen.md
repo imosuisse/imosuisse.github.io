@@ -4,6 +4,7 @@ first-name: Le Thanh Tu
 last-name: Nguyen
 slug: le-thanh-tu-nguyen
 order: Nguyen-Le Thanh Tu
+lie: false
 years: [2005, 2006]
 scores:
   - [0, 0, 2, 0, 0, 0, 1, 3, 4, 10]

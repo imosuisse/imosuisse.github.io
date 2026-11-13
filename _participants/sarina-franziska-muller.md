@@ -4,6 +4,7 @@ first-name: Sarina Franziska
 last-name: Müller
 slug: sarina-franziska-muller
 order: Muller-Sarina Franziska
+lie: false
 years: [2016, 2017, 2018]
 scores:
   - [0, 7, 1, 2, 0, 0, 1, 0, 6, 17]

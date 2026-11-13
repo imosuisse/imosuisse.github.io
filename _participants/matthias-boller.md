@@ -4,6 +4,7 @@ first-name: Matthias
 last-name: Böller
 slug: matthias-boller
 order: Boller-Matthias
+lie: false
 years: [2004, 2005]
 scores:
   - [0, 2, 1, 0, 0, 0, 1, 0, 1, 5]

@@ -4,6 +4,7 @@ first-name: Lev
 last-name: Myropolskyy
 slug: lev-myropolskyy
 order: Myropolskyy-Lev
+lie: false
 years: [2023, 2024, 2025]
 scores:
   - [1, 5, 2, 2, 1, 0, 1, 2, 4, 18]

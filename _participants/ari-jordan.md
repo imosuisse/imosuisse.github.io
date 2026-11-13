@@ -4,6 +4,7 @@ first-name: Ari
 last-name: Jordan
 slug: ari-jordan
 order: Jordan-Ari
+lie: false
 years: [2015, 2016, 2017]
 scores:
   - [0, 3, 1, 0, 0, 1, 0, 0, 11, 16]

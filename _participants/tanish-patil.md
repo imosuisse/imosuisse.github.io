@@ -4,6 +4,7 @@ first-name: Tanish
 last-name: Patil
 slug: tanish-patil
 order: Patil-Tanish
+lie: false
 years: [2015, 2016, 2017, 2018, 2019]
 scores:
   - [0, 4, 1, 0, 0, 0, 0, 3, 20, 28]

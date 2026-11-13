@@ -4,6 +4,7 @@ first-name: Noah
 last-name: Talarico
 slug: noah-talarico
 order: Talarico-Noah
+lie: false
 years: [2019, 2020, 2021]
 scores:
   - [2, 5, 1, 2, 1, 0, 1, 0, 6, 18]

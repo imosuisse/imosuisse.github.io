@@ -4,6 +4,7 @@ first-name: Ludovic
 last-name: Scyboz
 slug: ludovic-scyboz
 order: Scyboz-Ludovic
+lie: false
 years: [2011]
 scores:
   - [0, 3, 0, 1, 0, 0, 0, 0, 1, 5]

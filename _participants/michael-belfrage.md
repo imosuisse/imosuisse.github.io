@@ -4,6 +4,7 @@ first-name: Michael
 last-name: Belfrage
 slug: michael-belfrage
 order: Belfrage-Michael
+lie: false
 years: [2004, 2005]
 scores:
   - [0, 3, 0, 0, 0, 1, 0, 0, 1, 5]

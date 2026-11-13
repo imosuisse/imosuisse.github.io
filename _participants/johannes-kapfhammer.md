@@ -4,6 +4,7 @@ first-name: Johannes
 last-name: Kapfhammer
 slug: johannes-kapfhammer
 order: Kapfhammer-Johannes
+lie: false
 years: [2011, 2012, 2013]
 scores:
   - [0, 3, 2, 0, 0, 1, 4, 1, 4, 15]

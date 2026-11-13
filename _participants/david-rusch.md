@@ -4,6 +4,7 @@ first-name: David
 last-name: Rusch
 slug: david-rusch
 order: Rusch-David
+lie: false
 years: [2013, 2014, 2015, 2016]
 scores:
   - [2, 1, 1, 0, 1, 1, 4, 0, 10, 20]

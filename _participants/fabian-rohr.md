@@ -4,6 +4,7 @@ first-name: Fabian
 last-name: Rohr
 slug: fabian-rohr
 order: Rohr-Fabian
+lie: false
 years: [2011]
 scores:
   - [0, 3, 0, 1, 0, 0, 0, 0, 1, 5]

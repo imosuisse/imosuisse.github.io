@@ -4,6 +4,7 @@ first-name: Abhigyan
 last-name: Ghosh
 slug: abhigyan-ghosh
 order: Ghosh-Abhigyan
+lie: false
 years: [2012, 2013, 2014]
 scores:
   - [1, 2, 4, 0, 1, 1, 2, 0, 4, 15]

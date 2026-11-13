@@ -4,6 +4,7 @@ first-name: Gregor
 last-name: Specher
 slug: gregor-specher
 order: Specher-Gregor
+lie: false
 years: [2004, 2005]
 scores:
   - [0, 4, 0, 0, 0, 0, 1, 0, 0, 5]

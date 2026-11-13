@@ -4,6 +4,7 @@ first-name: Hui
 last-name: Xu
 slug: hui-xu
 order: Xu-Hui
+lie: false
 years: [2025, 2026]
 scores:
   - [0, 1, 4, 1, 0, 1, 3, 0, 2, 12]

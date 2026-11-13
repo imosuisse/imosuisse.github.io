@@ -4,6 +4,7 @@ first-name: Jerry
 last-name: Schupp
 slug: jerry-schupp
 order: Schupp-Jerry
+lie: false
 years: [2022, 2023, 2024]
 scores:
   - [0, 0, 1, 0, 0, 0, 0, 1, 16, 18]

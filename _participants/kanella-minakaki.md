@@ -4,6 +4,7 @@ first-name: Kanella
 last-name: Minakaki
 slug: kanella-minakaki
 order: Minakaki-Kanella
+lie: false
 years: [2017]
 scores:
   - [0, 2, 0, 0, 1, 0, 1, 0, 2, 6]

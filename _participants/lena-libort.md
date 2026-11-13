@@ -4,6 +4,7 @@ first-name: Lena
 last-name: Libort
 slug: lena-libort
 order: Libort-Lena
+lie: false
 years: [2020, 2021, 2022, 2023]
 scores:
   - [0, 5, 5, 1, 1, 1, 0, 1, 10, 24]

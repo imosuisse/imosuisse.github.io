@@ -4,6 +4,7 @@ first-name: Justin
 last-name: Mazenauer
 slug: justin-mazenauer
 order: Mazenauer-Justin
+lie: false
 years: [2015, 2016, 2017]
 scores:
   - [0, 6, 1, 1, 0, 1, 1, 0, 6, 16]

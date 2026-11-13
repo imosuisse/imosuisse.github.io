@@ -4,6 +4,7 @@ first-name: Priska
 last-name: Wermelinger
 slug: priska-wermelinger
 order: Wermelinger-Priska
+lie: false
 years: [2006, 2007]
 scores:
   - [0, 4, 0, 2, 1, 0, 1, 0, 2, 10]

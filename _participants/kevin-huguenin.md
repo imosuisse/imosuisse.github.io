@@ -4,6 +4,7 @@ first-name: Kevin
 last-name: Huguenin
 slug: kevin-huguenin
 order: Huguenin-Kevin
+lie: false
 years: [2011]
 scores:
   - [0, 3, 0, 0, 0, 1, 0, 1, 0, 5]

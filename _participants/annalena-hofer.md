@@ -4,6 +4,7 @@ first-name: Annalena
 last-name: Hofer
 slug: annalena-hofer
 order: Hofer-Annalena
+lie: false
 years: [2013, 2014]
 scores:
   - [0, 3, 2, 1, 0, 1, 2, 0, 1, 10]

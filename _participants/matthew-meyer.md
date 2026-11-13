@@ -4,6 +4,7 @@ first-name: Matthew
 last-name: Meyer
 slug: matthew-meyer
 order: Meyer-Matthew
+lie: false
 years: [2017, 2018, 2019]
 scores:
   - [0, 1, 0, 0, 0, 2, 1, 1, 13, 18]

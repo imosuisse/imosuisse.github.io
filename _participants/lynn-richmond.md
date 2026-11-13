@@ -4,6 +4,7 @@ first-name: Lynn
 last-name: Richmond
 slug: lynn-richmond
 order: Richmond-Lynn
+lie: false
 years: [2006, 2007, 2008]
 scores:
   - [0, 6, 3, 0, 1, 1, 0, 1, 3, 15]

@@ -4,6 +4,7 @@ first-name: Ivana
 last-name: Klasovita
 slug: ivana-klasovita
 order: Klasovita-Ivana
+lie: false
 years: [2015, 2016, 2017]
 scores:
   - [0, 5, 2, 2, 0, 0, 0, 0, 7, 16]

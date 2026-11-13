@@ -4,6 +4,7 @@ first-name: Ricardo
 last-name: Olivo
 slug: ricardo-olivo
 order: Olivo-Ricardo
+lie: false
 years: [2018, 2019, 2020, 2021, 2022]
 scores:
   - [3, 1, 1, 3, 1, 0, 0, 5, 16, 30]

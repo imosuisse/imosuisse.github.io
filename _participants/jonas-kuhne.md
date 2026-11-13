@@ -4,6 +4,7 @@ first-name: Jonas
 last-name: Kühne
 slug: jonas-kuhne
 order: Kuhne-Jonas
+lie: false
 years: [2010, 2011, 2012]
 scores:
   - [0, 7, 3, 1, 0, 1, 1, 0, 2, 15]

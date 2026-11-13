@@ -4,6 +4,7 @@ first-name: Hayley
 last-name: Ross
 slug: hayley-ross
 order: Ross-Hayley
+lie: false
 years: [2008, 2009, 2010, 2011]
 scores:
   - [1, 10, 3, 0, 1, 1, 0, 1, 3, 20]

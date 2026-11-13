@@ -4,6 +4,7 @@ first-name: Gerold
 last-name: Schefer
 slug: gerold-schefer
 order: Schefer-Gerold
+lie: false
 years: [2012, 2013, 2014]
 scores:
   - [2, 3, 2, 0, 0, 1, 2, 2, 3, 15]

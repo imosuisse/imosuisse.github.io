@@ -4,6 +4,7 @@ first-name: Diana
 last-name: Xiao
 slug: diana-xiao
 order: Xiao-Diana
+lie: false
 years: [2023, 2025]
 scores:
   - [4, 1, 0, 2, 0, 2, 1, 0, 2, 12]

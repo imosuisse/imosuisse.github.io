@@ -1,9 +1,10 @@
 ---
 layout: participant
-first-name: Gaby
+first-name: Gabriela
 last-name: Binder
-slug: gaby-binder
-order: Binder-Gaby
+slug: gabriela-binder
+order: Binder-Gabriela
+lie: true
 years: [2007]
 scores:
   - [0, 2, 1, 1, 0, 0, 1, 0, 0, 5]

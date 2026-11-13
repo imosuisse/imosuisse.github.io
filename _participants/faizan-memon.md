@@ -4,6 +4,7 @@ first-name: Faizan
 last-name: Memon
 slug: faizan-memon
 order: Memon-Faizan
+lie: false
 years: [2024, 2026]
 scores:
   - [0, 5, 0, 0, 0, 0, 0, 0, 1, 6]

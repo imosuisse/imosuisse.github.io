@@ -4,6 +4,7 @@ first-name: Yanta
 last-name: Wang
 slug: yanta-wang
 order: Wang-Yanta
+lie: false
 years: [2018, 2019, 2020, 2021, 2022]
 scores:
   - [0, 1, 0, 0, 2, 0, 1, 3, 23, 30]

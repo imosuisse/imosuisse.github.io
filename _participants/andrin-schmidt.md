@@ -4,6 +4,7 @@ first-name: Andrin
 last-name: Schmidt
 slug: andrin-schmidt
 order: Schmidt-Andrin
+lie: false
 years: [2004]
 scores:
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

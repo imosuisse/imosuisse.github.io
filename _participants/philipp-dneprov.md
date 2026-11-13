@@ -4,6 +4,7 @@ first-name: Philipp
 last-name: Dneprov
 slug: philipp-dneprov
 order: Dneprov-Philipp
+lie: false
 years: [2022, 2024, 2025, 2026]
 scores:
   - [5, 9, 1, 2, 1, 2, 0, 0, 4, 24]

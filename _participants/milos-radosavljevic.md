@@ -4,6 +4,7 @@ first-name: Milos
 last-name: Radosavljevic
 slug: milos-radosavljevic
 order: Radosavljevic-Milos
+lie: false
 years: [2012, 2014, 2015]
 scores:
   - [3, 4, 1, 2, 0, 1, 1, 0, 3, 15]

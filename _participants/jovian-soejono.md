@@ -4,6 +4,7 @@ first-name: Jovian
 last-name: Soejono
 slug: jovian-soejono
 order: Soejono-Jovian
+lie: false
 years: [2022, 2023, 2024, 2025, 2026]
 scores:
   - [2, 3, 3, 1, 0, 0, 1, 2, 18, 30]

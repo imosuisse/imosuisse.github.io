@@ -4,6 +4,7 @@ first-name: Ricarda
 last-name: Gassner
 slug: ricarda-gassner
 order: Gassner-Ricarda
+lie: true
 years: [2008, 2009]
 scores:
   - [2, 1, 3, 1, 1, 0, 1, 0, 1, 10]
@@ -41,7 +42,7 @@ topics:
   - [0, 0, 1, 0, 1]
   - [3, 16, 16, 7, 42]
 best-ranks: [30, 20, 17]
-awards: {}
+awards: {imo: [2008]}
 exams:
   - slug: second-round-2008
     round: Second Round
@@ -58,6 +59,7 @@ exams:
     scores: [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]
     total: 1
     rank: 17
+    award: IMO
   - slug: second-round-2009
     round: Second Round
     scores: [1, 1, 5, 1, 0]

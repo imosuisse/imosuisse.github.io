@@ -4,6 +4,7 @@ first-name: Thomas
 last-name: Leu
 slug: thomas-leu
 order: Leu-Thomas
+lie: false
 years: [2011]
 scores:
   - [0, 2, 1, 1, 0, 0, 1, 0, 0, 5]

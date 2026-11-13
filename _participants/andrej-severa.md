@@ -4,6 +4,7 @@ first-name: Andrej
 last-name: Ševera
 slug: andrej-severa
 order: Severa-Andrej
+lie: false
 years: [2022, 2023, 2024, 2025, 2026]
 scores:
   - [0, 5, 2, 1, 0, 0, 0, 2, 20, 30]

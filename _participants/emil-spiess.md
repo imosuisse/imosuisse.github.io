@@ -4,6 +4,7 @@ first-name: Emil
 last-name: Spiess
 slug: emil-spiess
 order: Spiess-Emil
+lie: false
 years: [2022, 2023, 2024, 2025, 2026]
 scores:
   - [0, 7, 1, 1, 2, 1, 1, 6, 11, 30]

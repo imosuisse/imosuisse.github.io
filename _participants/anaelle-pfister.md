@@ -4,6 +4,7 @@ first-name: Anaëlle
 last-name: Pfister
 slug: anaelle-pfister
 order: Pfister-Anaëlle
+lie: false
 years: [2015, 2017, 2018]
 scores:
   - [1, 3, 2, 2, 0, 0, 1, 1, 7, 17]

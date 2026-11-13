@@ -4,6 +4,7 @@ first-name: Gilles
 last-name: Bärtschi
 slug: gilles-bartschi
 order: Bartschi-Gilles
+lie: false
 years: [2023, 2024, 2025, 2026]
 scores:
   - [0, 6, 3, 1, 3, 1, 1, 1, 7, 23]

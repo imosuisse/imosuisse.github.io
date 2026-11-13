@@ -4,6 +4,7 @@ first-name: Ingrid
 last-name: Lundgren
 slug: ingrid-lundgren
 order: Lundgren-Ingrid
+lie: false
 years: [2020, 2021, 2022]
 scores:
   - [0, 5, 2, 3, 0, 0, 0, 2, 6, 18]

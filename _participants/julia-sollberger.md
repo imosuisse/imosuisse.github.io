@@ -4,6 +4,7 @@ first-name: Julia
 last-name: Sollberger
 slug: julia-sollberger
 order: Sollberger-Julia
+lie: false
 years: [2018, 2019, 2020]
 scores:
   - [0, 1, 1, 1, 1, 0, 1, 5, 8, 18]

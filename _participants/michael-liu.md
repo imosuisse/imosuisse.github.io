@@ -4,6 +4,7 @@ first-name: Michael
 last-name: Liu
 slug: michael-liu
 order: Liu-Michael
+lie: false
 years: [2006, 2007, 2008]
 scores:
   - [1, 2, 1, 0, 1, 1, 1, 2, 6, 15]

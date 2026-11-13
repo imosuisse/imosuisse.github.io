@@ -4,6 +4,7 @@ first-name: Pepijn
 last-name: Cobben
 slug: pepijn-cobben
 order: Cobben-Pepijn
+lie: false
 years: [2018, 2019, 2020]
 scores:
   - [0, 2, 1, 2, 2, 0, 1, 1, 9, 18]

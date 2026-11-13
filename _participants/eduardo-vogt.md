@@ -4,6 +4,7 @@ first-name: Eduardo
 last-name: Vogt
 slug: eduardo-vogt
 order: Vogt-Eduardo
+lie: true
 years: [2025, 2026]
 scores:
   - [5, 4, 1, 0, 1, 0, 0, 0, 1, 12]

@@ -4,6 +4,7 @@ first-name: Paul
 last-name: Seidel
 slug: paul-seidel
 order: Seidel-Paul
+lie: false
 years: [2013, 2014, 2015]
 scores:
   - [1, 2, 1, 1, 0, 0, 2, 1, 7, 15]

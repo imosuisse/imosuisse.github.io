@@ -4,6 +4,7 @@ first-name: Alain
 last-name: Rossier
 slug: alain-rossier
 order: Rossier-Alain
+lie: false
 years: [2011, 2012, 2013]
 scores:
   - [0, 2, 0, 1, 0, 0, 1, 1, 10, 15]

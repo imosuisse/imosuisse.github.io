@@ -4,6 +4,7 @@ first-name: Sebastian
 last-name: Käser
 slug: sebastian-kaser
 order: Kaser-Sebastian
+lie: false
 years: [2010, 2011]
 scores:
   - [1, 3, 2, 2, 0, 0, 1, 0, 1, 10]

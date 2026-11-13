@@ -4,6 +4,7 @@ first-name: Paolo
 last-name: Minelli
 slug: paolo-minelli
 order: Minelli-Paolo
+lie: false
 years: [2011, 2012]
 scores:
   - [1, 3, 1, 1, 2, 0, 0, 0, 2, 10]

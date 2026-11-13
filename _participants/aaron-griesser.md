@@ -4,6 +4,7 @@ first-name: Aaron
 last-name: Griesser
 slug: aaron-griesser
 order: Griesser-Aaron
+lie: false
 years: [2018, 2019]
 scores:
   - [0, 4, 0, 2, 0, 0, 1, 0, 5, 12]

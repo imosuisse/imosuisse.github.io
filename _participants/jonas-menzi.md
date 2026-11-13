@@ -4,6 +4,7 @@ first-name: Jonas
 last-name: Menzi
 slug: jonas-menzi
 order: Menzi-Jonas
+lie: false
 years: [2019, 2021]
 scores:
   - [3, 1, 1, 0, 0, 1, 0, 1, 5, 12]

@@ -4,6 +4,7 @@ first-name: Michael
 last-name: Mühlemann
 slug: michael-muhlemann
 order: Muhlemann-Michael
+lie: false
 years: [2022, 2024, 2025, 2026]
 scores:
   - [3, 4, 2, 3, 1, 1, 2, 2, 6, 24]

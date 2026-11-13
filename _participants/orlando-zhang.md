@@ -4,6 +4,7 @@ first-name: Orlando
 last-name: Zhang
 slug: orlando-zhang
 order: Zhang-Orlando
+lie: false
 years: [2021, 2022]
 scores:
   - [0, 1, 1, 2, 0, 0, 1, 4, 3, 12]

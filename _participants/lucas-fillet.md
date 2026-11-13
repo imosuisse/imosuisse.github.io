@@ -4,6 +4,7 @@ first-name: Lucas
 last-name: Fillet
 slug: lucas-fillet
 order: Fillet-Lucas
+lie: false
 years: [2024, 2025, 2026]
 scores:
   - [2, 6, 0, 0, 1, 0, 0, 5, 4, 18]

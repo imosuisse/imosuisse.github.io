@@ -4,6 +4,7 @@ first-name: Philipp
 last-name: Arbenz
 slug: philipp-arbenz
 order: Arbenz-Philipp
+lie: false
 years: [2004]
 scores:
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

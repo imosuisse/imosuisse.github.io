@@ -4,6 +4,7 @@ first-name: Dimitri
 last-name: Wyss
 slug: dimitri-wyss
 order: Wyss-Dimitri
+lie: false
 years: [2005, 2006, 2007, 2008]
 scores:
   - [0, 2, 2, 2, 0, 1, 1, 1, 11, 20]

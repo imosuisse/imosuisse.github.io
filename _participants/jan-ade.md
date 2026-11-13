@@ -4,6 +4,7 @@ first-name: Jan
 last-name: Ade
 slug: jan-ade
 order: Ade-Jan
+lie: false
 years: [2016, 2017]
 scores:
   - [0, 2, 0, 0, 1, 0, 1, 0, 7, 11]

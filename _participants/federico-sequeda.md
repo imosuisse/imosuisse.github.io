@@ -4,6 +4,7 @@ first-name: Federico
 last-name: Sequeda
 slug: federico-sequeda
 order: Sequeda-Federico
+lie: false
 years: [2005]
 scores:
   - [0, 2, 0, 1, 0, 0, 0, 0, 2, 5]

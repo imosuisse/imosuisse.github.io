@@ -4,6 +4,7 @@ first-name: Nathalie
 last-name: Bäbler
 slug: nathalie-babler
 order: Babler-Nathalie
+lie: false
 years: [2015, 2016, 2017]
 scores:
   - [0, 7, 3, 2, 0, 1, 1, 1, 1, 16]

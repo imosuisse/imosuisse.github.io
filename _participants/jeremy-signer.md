@@ -4,6 +4,7 @@ first-name: Jeremy
 last-name: Signer
 slug: jeremy-signer
 order: Signer-Jeremy
+lie: false
 years: [2012]
 scores:
   - [2, 1, 0, 0, 0, 1, 0, 0, 1, 5]

@@ -4,6 +4,7 @@ first-name: Nathanael
 last-name: Sokoll
 slug: nathanael-sokoll
 order: Sokoll-Nathanael
+lie: false
 years: [2004, 2005]
 scores:
   - [0, 3, 0, 1, 0, 0, 0, 0, 1, 5]

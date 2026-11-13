@@ -4,6 +4,7 @@ first-name: Fadri
 last-name: Lardon
 slug: fadri-lardon
 order: Lardon-Fadri
+lie: false
 years: [2019, 2020, 2021]
 scores:
   - [0, 3, 1, 1, 1, 1, 1, 6, 4, 18]

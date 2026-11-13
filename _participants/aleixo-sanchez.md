@@ -4,6 +4,7 @@ first-name: Aleixo
 last-name: Sanchez
 slug: aleixo-sanchez
 order: Sanchez-Aleixo
+lie: false
 years: [2013]
 scores:
   - [0, 2, 1, 0, 0, 0, 1, 1, 0, 5]

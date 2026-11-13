@@ -4,6 +4,7 @@ first-name: Marina
 last-name: Ernst
 slug: marina-ernst
 order: Ernst-Marina
+lie: false
 years: [2007, 2008]
 scores:
   - [0, 4, 0, 1, 0, 2, 0, 1, 2, 10]

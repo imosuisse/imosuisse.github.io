@@ -4,6 +4,7 @@ first-name: Jiahe
 last-name: Shi
 slug: jiahe-shi
 order: Shi-Jiahe
+lie: false
 years: [2024]
 scores:
   - [2, 0, 0, 0, 0, 0, 0, 1, 3, 6]

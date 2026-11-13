@@ -4,6 +4,7 @@ first-name: Henning
 last-name: Zhang
 slug: henning-zhang
 order: Zhang-Henning
+lie: false
 years: [2013, 2014, 2015, 2016, 2017]
 scores:
   - [1, 1, 1, 2, 0, 2, 1, 1, 17, 26]

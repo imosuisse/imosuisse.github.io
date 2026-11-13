@@ -4,6 +4,7 @@ first-name: Gaëtan
 last-name: Bossy
 slug: gaetan-bossy
 order: Bossy-Gaëtan
+lie: false
 years: [2014, 2015]
 scores:
   - [0, 4, 3, 0, 0, 0, 0, 0, 3, 10]

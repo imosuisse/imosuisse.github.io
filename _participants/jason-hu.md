@@ -4,6 +4,7 @@ first-name: Jason
 last-name: Hu
 slug: jason-hu
 order: Hu-Jason
+lie: false
 years: [2022, 2023]
 scores:
   - [1, 0, 0, 2, 0, 1, 0, 0, 8, 12]

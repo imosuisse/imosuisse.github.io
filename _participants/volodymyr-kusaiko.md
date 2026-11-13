@@ -4,6 +4,7 @@ first-name: Volodymyr
 last-name: Kusaiko
 slug: volodymyr-kusaiko
 order: Kusaiko-Volodymyr
+lie: false
 years: [2023, 2024, 2025]
 scores:
   - [7, 3, 1, 1, 0, 0, 1, 2, 3, 18]

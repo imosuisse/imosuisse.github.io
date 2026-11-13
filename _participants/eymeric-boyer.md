@@ -4,6 +4,7 @@ first-name: Eymeric
 last-name: Boyer
 slug: eymeric-boyer
 order: Boyer-Eymeric
+lie: false
 years: [2016]
 scores:
   - [0, 1, 1, 0, 0, 0, 0, 1, 2, 5]

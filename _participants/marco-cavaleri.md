@@ -4,6 +4,7 @@ first-name: Marco
 last-name: Cavaleri
 slug: marco-cavaleri
 order: Cavaleri-Marco
+lie: false
 years: [2014, 2015, 2016, 2017, 2018]
 scores:
   - [2, 6, 2, 0, 0, 1, 0, 3, 13, 27]

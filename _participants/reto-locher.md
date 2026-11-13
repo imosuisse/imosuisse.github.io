@@ -4,6 +4,7 @@ first-name: Reto
 last-name: Locher
 slug: reto-locher
 order: Locher-Reto
+lie: false
 years: [2004]
 scores:
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

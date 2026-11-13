@@ -4,6 +4,7 @@ first-name: Philipp
 last-name: Wirth
 slug: philipp-wirth
 order: Wirth-Philipp
+lie: false
 years: [2007, 2008]
 scores:
   - [0, 3, 0, 0, 2, 1, 0, 0, 4, 10]

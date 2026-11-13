@@ -4,6 +4,7 @@ first-name: Artem
 last-name: Fedorov
 slug: artem-fedorov
 order: Fedorov-Artem
+lie: false
 years: [2023, 2024, 2025]
 scores:
   - [4, 9, 0, 1, 1, 0, 0, 2, 1, 18]

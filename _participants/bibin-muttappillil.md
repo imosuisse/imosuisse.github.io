@@ -4,6 +4,7 @@ first-name: Bibin
 last-name: Muttappillil
 slug: bibin-muttappillil
 order: Muttappillil-Bibin
+lie: false
 years: [2016, 2017, 2018]
 scores:
   - [0, 3, 1, 1, 0, 2, 2, 0, 8, 17]

@@ -4,6 +4,7 @@ first-name: Elia
 last-name: Steinfeld
 slug: elia-steinfeld
 order: Steinfeld-Elia
+lie: false
 years: [2018, 2019, 2020, 2021, 2022]
 scores:
   - [0, 3, 1, 2, 0, 3, 2, 3, 16, 30]

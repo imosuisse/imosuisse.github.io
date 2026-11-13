@@ -4,6 +4,7 @@ first-name: Noelia
 last-name: Cheridito
 slug: noelia-cheridito
 order: Cheridito-Noelia
+lie: false
 years: [2020, 2022, 2023, 2024]
 scores:
   - [1, 7, 0, 3, 1, 1, 0, 2, 9, 24]

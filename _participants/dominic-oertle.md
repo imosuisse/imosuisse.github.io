@@ -4,6 +4,7 @@ first-name: Dominic
 last-name: Oertle
 slug: dominic-oertle
 order: Oertle-Dominic
+lie: false
 years: [2016, 2017]
 scores:
   - [1, 2, 0, 3, 0, 0, 0, 1, 4, 11]

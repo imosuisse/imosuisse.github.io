@@ -4,6 +4,7 @@ first-name: Jan
 last-name: Zehnder
 slug: jan-zehnder
 order: Zehnder-Jan
+lie: false
 years: [2013, 2014]
 scores:
   - [0, 4, 2, 0, 1, 1, 1, 0, 1, 10]

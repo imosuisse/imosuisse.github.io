@@ -4,6 +4,7 @@ first-name: Elias
 last-name: Baumann
 slug: elias-baumann
 order: Baumann-Elias
+lie: false
 years: [2022, 2023, 2024]
 scores:
   - [0, 3, 0, 0, 3, 3, 2, 1, 6, 18]

@@ -4,6 +4,7 @@ first-name: Timothy
 last-name: Tempus
 slug: timothy-tempus
 order: Tempus-Timothy
+lie: false
 years: [2018]
 scores:
   - [0, 0, 0, 1, 0, 0, 2, 0, 3, 6]

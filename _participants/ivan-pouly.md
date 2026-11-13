@@ -4,6 +4,7 @@ first-name: Ivan
 last-name: Pouly
 slug: ivan-pouly
 order: Pouly-Ivan
+lie: false
 years: [2021, 2023]
 scores:
   - [0, 1, 1, 1, 2, 1, 0, 0, 6, 12]

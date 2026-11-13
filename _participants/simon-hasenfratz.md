@@ -4,6 +4,7 @@ first-name: Simon
 last-name: Hasenfratz
 slug: simon-hasenfratz
 order: Hasenfratz-Simon
+lie: false
 years: [2004, 2005]
 scores:
   - [0, 3, 1, 0, 0, 0, 0, 0, 1, 5]

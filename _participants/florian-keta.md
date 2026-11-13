@@ -4,6 +4,7 @@ first-name: Florian
 last-name: Keta
 slug: florian-keta
 order: Keta-Florian
+lie: false
 years: [2018, 2019, 2020]
 scores:
   - [0, 1, 0, 1, 1, 0, 3, 3, 9, 18]

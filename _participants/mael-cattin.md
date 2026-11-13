@@ -4,6 +4,7 @@ first-name: Maël
 last-name: Cattin
 slug: mael-cattin
 order: Cattin-Maël
+lie: false
 years: [2013, 2014]
 scores:
   - [2, 4, 0, 0, 0, 1, 2, 0, 1, 10]

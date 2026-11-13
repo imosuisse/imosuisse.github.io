@@ -4,6 +4,7 @@ first-name: Johann
 last-name: Williams
 slug: johann-williams
 order: Williams-Johann
+lie: false
 years: [2016, 2017, 2018, 2019, 2020, 2021]
 scores:
   - [1, 7, 1, 2, 0, 1, 2, 1, 20, 35]

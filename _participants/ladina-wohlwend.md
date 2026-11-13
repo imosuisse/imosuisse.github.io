@@ -4,6 +4,7 @@ first-name: Ladina
 last-name: Wohlwend
 slug: ladina-wohlwend
 order: Wohlwend-Ladina
+lie: true
 years: [2017]
 scores:
   - [2, 1, 1, 1, 0, 0, 0, 0, 1, 6]
@@ -41,13 +42,14 @@ topics:
   - [0, 0, 0, 0, 0]
   - [0, 8, 8, 2, 18]
 best-ranks: [49, 26, null]
-awards: {}
+awards: {egmo: [2017]}
 exams:
   - slug: second-round-2017
     round: Second Round
     scores: [7, 0, 1, '-', 2, '-']
     total: 10
     rank: 49
+    award: EGMO
   - slug: final-round-2017
     round: Final Round
     scores: [0, 0, 0, 0, '-', 7, 0, 1, '-', 0]

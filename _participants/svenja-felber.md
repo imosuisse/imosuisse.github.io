@@ -4,6 +4,7 @@ first-name: Svenja
 last-name: Felber
 slug: svenja-felber
 order: Felber-Svenja
+lie: false
 years: [2022, 2023, 2024, 2025, 2026]
 scores:
   - [4, 5, 2, 2, 1, 1, 0, 4, 11, 30]

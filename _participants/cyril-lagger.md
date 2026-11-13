@@ -4,6 +4,7 @@ first-name: Cyril
 last-name: Lagger
 slug: cyril-lagger
 order: Lagger-Cyril
+lie: false
 years: [2007, 2008, 2009]
 scores:
   - [0, 5, 0, 0, 1, 0, 0, 0, 9, 15]

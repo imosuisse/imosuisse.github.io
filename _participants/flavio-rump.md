@@ -4,6 +4,7 @@ first-name: Flavio
 last-name: Rump
 slug: flavio-rump
 order: Rump-Flavio
+lie: false
 years: [2005]
 scores:
   - [0, 2, 2, 0, 0, 0, 0, 0, 1, 5]

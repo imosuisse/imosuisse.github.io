@@ -4,6 +4,7 @@ first-name: Iris
 last-name: Thurnherr
 slug: iris-thurnherr
 order: Thurnherr-Iris
+lie: false
 years: [2007]
 scores:
   - [0, 2, 1, 0, 0, 0, 0, 1, 1, 5]

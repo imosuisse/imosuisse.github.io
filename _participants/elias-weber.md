@@ -4,6 +4,7 @@ first-name: Elias
 last-name: Weber
 slug: elias-weber
 order: Weber-Elias
+lie: false
 years: [2005, 2006]
 scores:
   - [0, 2, 1, 0, 0, 0, 3, 2, 2, 10]

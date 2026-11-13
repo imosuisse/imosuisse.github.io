@@ -4,6 +4,7 @@ first-name: Jana
 last-name: Cslovjecsek
 slug: jana-cslovjecsek
 order: Cslovjecsek-Jana
+lie: false
 years: [2010, 2011, 2012, 2013]
 scores:
   - [2, 6, 3, 0, 2, 3, 2, 0, 2, 20]

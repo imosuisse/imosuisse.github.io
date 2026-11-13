@@ -4,6 +4,7 @@ first-name: Fynn
 last-name: Krebser
 slug: fynn-krebser
 order: Krebser-Fynn
+lie: false
 years: [2022, 2023, 2024, 2025]
 scores:
   - [0, 5, 4, 1, 1, 1, 1, 2, 9, 24]

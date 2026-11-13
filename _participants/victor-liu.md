@@ -4,6 +4,7 @@ first-name: Victor
 last-name: Liu
 slug: victor-liu
 order: Liu-Victor
+lie: false
 years: [2021, 2022]
 scores:
   - [1, 0, 2, 1, 0, 1, 1, 1, 5, 12]

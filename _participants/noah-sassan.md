@@ -4,6 +4,7 @@ first-name: Noah
 last-name: Sassan
 slug: noah-sassan
 order: Sassan-Noah
+lie: false
 years: [2014, 2015, 2016, 2017, 2018]
 scores:
   - [0, 9, 2, 3, 0, 1, 1, 1, 10, 27]

@@ -4,6 +4,7 @@ first-name: Köbi
 last-name: Meier
 slug: kobi-meier
 order: Meier-Köbi
+lie: false
 years: [2012, 2013]
 scores:
   - [0, 4, 1, 0, 0, 2, 2, 0, 1, 10]

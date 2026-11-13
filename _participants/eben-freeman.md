@@ -4,6 +4,7 @@ first-name: Eben
 last-name: Freeman
 slug: eben-freeman
 order: Freeman-Eben
+lie: false
 years: [2007, 2008, 2009]
 scores:
   - [0, 2, 0, 0, 0, 1, 0, 0, 12, 15]

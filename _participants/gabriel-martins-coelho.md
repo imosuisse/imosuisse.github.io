@@ -4,6 +4,7 @@ first-name: Gabriel
 last-name: Martins Coelho
 slug: gabriel-martins-coelho
 order: Martins Coelho-Gabriel
+lie: false
 years: [2026]
 scores:
   - [0, 1, 1, 1, 0, 0, 1, 1, 1, 6]

@@ -4,6 +4,7 @@ first-name: Lorena
 last-name: Schwerzmann
 slug: lorena-schwerzmann
 order: Schwerzmann-Lorena
+lie: false
 years: [2019, 2020]
 scores:
   - [1, 2, 1, 2, 0, 0, 2, 0, 4, 12]

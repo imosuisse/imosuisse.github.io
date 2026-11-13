@@ -4,6 +4,7 @@ first-name: Maximilian
 last-name: Mordig
 slug: maximilian-mordig
 order: Mordig-Maximilian
+lie: false
 years: [2011, 2012]
 scores:
   - [0, 5, 1, 1, 0, 0, 3, 0, 0, 10]

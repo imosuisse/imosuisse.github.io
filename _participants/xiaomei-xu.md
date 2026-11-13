@@ -4,6 +4,7 @@ first-name: Xiaomei
 last-name: Xu
 slug: xiaomei-xu
 order: Xu-Xiaomei
+lie: false
 years: [2025, 2026]
 scores:
   - [1, 1, 2, 1, 0, 1, 2, 0, 4, 12]

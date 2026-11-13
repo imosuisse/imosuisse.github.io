@@ -4,6 +4,7 @@ first-name: Ulrich
 last-name: Brodowsky
 slug: ulrich-brodowsky
 order: Brodowsky-Ulrich
+lie: false
 years: [2008, 2009, 2010, 2011, 2012]
 scores:
   - [1, 5, 2, 0, 1, 1, 2, 4, 9, 25]

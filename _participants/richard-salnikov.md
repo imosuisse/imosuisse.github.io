@@ -4,6 +4,7 @@ first-name: Richard
 last-name: Salnikov
 slug: richard-salnikov
 order: Salnikov-Richard
+lie: false
 years: [2018, 2019, 2020, 2021]
 scores:
   - [3, 7, 1, 4, 0, 2, 0, 2, 5, 24]

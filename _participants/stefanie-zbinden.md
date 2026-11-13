@@ -4,6 +4,7 @@ first-name: Stefanie
 last-name: Zbinden
 slug: stefanie-zbinden
 order: Zbinden-Stefanie
+lie: false
 years: [2013, 2014, 2015, 2016]
 scores:
   - [0, 2, 0, 1, 1, 0, 2, 0, 14, 20]

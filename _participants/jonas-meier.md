@@ -4,6 +4,7 @@ first-name: Jonas
 last-name: Meier
 slug: jonas-meier
 order: Meier-Jonas
+lie: false
 years: [2019, 2020]
 scores:
   - [1, 2, 0, 1, 1, 1, 0, 1, 5, 12]

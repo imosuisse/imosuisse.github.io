@@ -4,6 +4,7 @@ first-name: Jürg
 last-name: Bachmann
 slug: jurg-bachmann
 order: Bachmann-Jürg
+lie: false
 years: [2007, 2008, 2009, 2010]
 scores:
   - [2, 3, 2, 2, 2, 0, 2, 1, 6, 20]

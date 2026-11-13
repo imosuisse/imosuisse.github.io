@@ -4,6 +4,7 @@ first-name: Fabian
 last-name: Jin
 slug: fabian-jin
 order: Jin-Fabian
+lie: false
 years: [2014, 2015, 2016, 2017]
 scores:
   - [0, 2, 2, 0, 1, 1, 1, 2, 12, 21]

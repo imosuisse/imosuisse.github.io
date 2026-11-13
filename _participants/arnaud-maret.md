@@ -4,6 +4,7 @@ first-name: Arnaud
 last-name: Maret
 slug: arnaud-maret
 order: Maret-Arnaud
+lie: false
 years: [2012, 2013]
 scores:
   - [1, 1, 2, 1, 0, 1, 0, 0, 4, 10]

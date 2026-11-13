@@ -4,6 +4,7 @@ first-name: Patrick
 last-name: Stalder
 slug: patrick-stalder
 order: Stalder-Patrick
+lie: false
 years: [2014, 2015, 2016, 2017]
 scores:
   - [0, 8, 2, 0, 0, 0, 1, 3, 7, 21]

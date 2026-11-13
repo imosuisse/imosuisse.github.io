@@ -4,6 +4,7 @@ first-name: Michael
 last-name: Blösch
 slug: michael-blosch
 order: Blosch-Michael
+lie: false
 years: [2004]
 scores:
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

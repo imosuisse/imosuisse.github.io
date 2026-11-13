@@ -4,6 +4,7 @@ first-name: Hélène
 last-name: Aschmann
 slug: helene-aschmann
 order: Aschmann-Hélène
+lie: false
 years: [2009]
 scores:
   - [0, 1, 0, 1, 0, 0, 1, 0, 2, 5]

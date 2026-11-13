@@ -9,13 +9,11 @@ permalink: /participants/
 
 <h2>Register of Participants</h2>
 
-<p>Listed below are all participants of the Swiss Mathematical Olympiad that have reached at least the Final Round,
+Listed below are all participants of the Swiss Mathematical Olympiad that have reached at least the Final Round,
 sorted alphabetically by last name.
-<br>
-Participants representing Liechtenstein are marked with <b>LIE</b>.
-<br>
-There are currently <b>{{ participants.size }}</b> participants listed.
-<p>
+There are currently **{{ participants.size }}** participants listed.
+
+Guest participants from Liechtenstein are marked with **LIE**.
 
 
 {% assign current = "" %}
@@ -30,7 +28,7 @@ There are currently <b>{{ participants.size }}</b> participants listed.
             <li class = "subtitle">{{ letter }}</li>
         {% endif %}
         <li><a href = "{{ participant.url }}">{{ participant.last-name }} {{ participant.first-name }}
-            {% if site.data.lie.lie contains participant.slug %} (LIE){% endif %}
+            {% if participant.lie %} (LIE){% endif %}
         </a></li>
     {% endfor %}
     </div>

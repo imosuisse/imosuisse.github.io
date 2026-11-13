@@ -4,6 +4,7 @@ first-name: Quirin
 last-name: Reding
 slug: quirin-reding
 order: Reding-Quirin
+lie: false
 years: [2013, 2014, 2015, 2016]
 scores:
   - [1, 9, 2, 0, 0, 0, 1, 0, 2, 15]

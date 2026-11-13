@@ -4,6 +4,7 @@ first-name: Georg
 last-name: Balmer
 slug: georg-balmer
 order: Balmer-Georg
+lie: false
 years: [2007, 2008]
 scores:
   - [0, 3, 0, 0, 0, 0, 2, 0, 5, 10]

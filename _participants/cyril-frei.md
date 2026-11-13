@@ -4,6 +4,7 @@ first-name: Cyril
 last-name: Frei
 slug: cyril-frei
 order: Frei-Cyril
+lie: false
 years: [2010, 2011, 2012]
 scores:
   - [0, 3, 4, 1, 0, 1, 0, 1, 5, 15]

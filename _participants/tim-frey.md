@@ -4,6 +4,7 @@ first-name: Tim
 last-name: Frey
 slug: tim-frey
 order: Frey-Tim
+lie: false
 years: [2017, 2018, 2019, 2020]
 scores:
   - [0, 1, 1, 3, 1, 1, 2, 2, 13, 24]

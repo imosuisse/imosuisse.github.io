@@ -4,6 +4,7 @@ first-name: Jischai
 last-name: Wyler
 slug: jischai-wyler
 order: Wyler-Jischai
+lie: false
 years: [2014, 2015, 2016, 2017, 2018]
 scores:
   - [0, 7, 2, 1, 0, 0, 1, 1, 15, 27]

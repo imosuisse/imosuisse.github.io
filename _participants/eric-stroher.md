@@ -4,6 +4,7 @@ first-name: Eric
 last-name: Ströher
 slug: eric-stroher
 order: Stroher-Eric
+lie: false
 years: [2019]
 scores:
   - [0, 1, 0, 0, 0, 1, 0, 3, 1, 6]

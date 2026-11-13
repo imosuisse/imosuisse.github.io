@@ -4,6 +4,7 @@ first-name: Daniel
 last-name: Pfister
 slug: daniel-pfister
 order: Pfister-Daniel
+lie: false
 years: [2018, 2019]
 scores:
   - [0, 1, 0, 0, 0, 2, 1, 1, 7, 12]

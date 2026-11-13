@@ -4,6 +4,7 @@ first-name: Shichao
 last-name: Zhang
 slug: shichao-zhang
 order: Zhang-Shichao
+lie: false
 years: [2019]
 scores:
   - [0, 1, 0, 0, 0, 1, 0, 1, 3, 6]

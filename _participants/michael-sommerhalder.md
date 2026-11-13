@@ -4,6 +4,7 @@ first-name: Michael
 last-name: Sommerhalder
 slug: michael-sommerhalder
 order: Sommerhalder-Michael
+lie: false
 years: [2011]
 scores:
   - [0, 1, 1, 0, 1, 1, 0, 0, 1, 5]

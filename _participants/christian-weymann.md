@@ -4,6 +4,7 @@ first-name: Christian
 last-name: Weymann
 slug: christian-weymann
 order: Weymann-Christian
+lie: false
 years: [2008, 2009]
 scores:
   - [0, 2, 2, 1, 1, 1, 0, 0, 3, 10]

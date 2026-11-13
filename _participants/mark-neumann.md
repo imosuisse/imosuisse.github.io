@@ -4,6 +4,7 @@ first-name: Mark
 last-name: Neumann
 slug: mark-neumann
 order: Neumann-Mark
+lie: false
 years: [2023, 2024]
 scores:
   - [0, 1, 1, 0, 2, 0, 1, 0, 7, 12]

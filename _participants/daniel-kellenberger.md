@@ -4,6 +4,7 @@ first-name: Daniel
 last-name: Kellenberger
 slug: daniel-kellenberger
 order: Kellenberger-Daniel
+lie: false
 years: [2005, 2006, 2007]
 scores:
   - [0, 7, 1, 0, 2, 2, 0, 0, 3, 15]

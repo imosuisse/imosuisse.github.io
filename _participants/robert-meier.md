@@ -4,6 +4,7 @@ first-name: Robert
 last-name: Meier
 slug: robert-meier
 order: Meier-Robert
+lie: true
 years: [2011, 2012, 2013, 2014, 2015]
 scores:
   - [0, 4, 3, 2, 1, 0, 3, 1, 11, 25]
@@ -41,7 +42,7 @@ topics:
   - [7, 16, 22, 10, 55]
   - [37, 84, 135, 79, 335]
 best-ranks: [1, 1, 6]
-awards: {}
+awards: {imo: [2011, 2012, 2013, 2015]}
 exams:
   - slug: second-round-2011
     round: Second Round
@@ -58,6 +59,7 @@ exams:
     scores: [0, 0, 0, 0, 0, 0, '-', 0, 0, 1, '-', '-']
     total: 1
     rank: 15
+    award: IMO
   - slug: second-round-2012
     round: Second Round
     scores: [1, 5, 3, 7, 0]
@@ -73,6 +75,7 @@ exams:
     scores: [7, 2, 0, '-', '-', '-', 1, 0, 1, 0, 1, 0]
     total: 12
     rank: 10
+    award: IMO
   - slug: second-round-2013
     round: Second Round
     scores: [7, 5, 5, 6, 0]
@@ -88,6 +91,7 @@ exams:
     scores: [0, 0, 0, 0, 7, '-', '-', '-', '-', '-', '-', '-']
     total: 7
     rank: 14
+    award: IMO
   - slug: second-round-2014
     round: Second Round
     scores: [7, 7, 7, 7, 1]
@@ -113,4 +117,5 @@ exams:
     scores: [6, 6, 7, 7, 0, 0, 1, 0, 0, 7, 1, '-']
     total: 35
     rank: 6
+    award: IMO
 ---

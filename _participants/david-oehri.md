@@ -4,6 +4,7 @@ first-name: David
 last-name: Oehri
 slug: david-oehri
 order: Oehri-David
+lie: false
 years: [2004, 2005]
 scores:
   - [0, 2, 0, 0, 0, 0, 0, 1, 2, 5]

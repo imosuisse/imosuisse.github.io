@@ -4,6 +4,7 @@ first-name: Yanis
 last-name: Bena
 slug: yanis-bena
 order: Bena-Yanis
+lie: false
 years: [2016, 2017, 2018, 2019, 2020]
 scores:
   - [3, 1, 1, 2, 1, 1, 1, 5, 14, 29]

@@ -4,6 +4,7 @@ first-name: Leonardo
 last-name: Maranon
 slug: leonardo-maranon
 order: Maranon-Leonardo
+lie: false
 years: [2021, 2022]
 scores:
   - [1, 2, 0, 2, 0, 0, 1, 0, 6, 12]

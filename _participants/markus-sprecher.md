@@ -4,6 +4,7 @@ first-name: Markus
 last-name: Sprecher
 slug: markus-sprecher
 order: Sprecher-Markus
+lie: false
 years: [2004, 2005, 2006]
 scores:
   - [0, 2, 1, 0, 0, 0, 0, 0, 7, 10]

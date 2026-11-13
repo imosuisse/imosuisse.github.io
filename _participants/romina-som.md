@@ -4,6 +4,7 @@ first-name: Romina
 last-name: Som
 slug: romina-som
 order: Som-Romina
+lie: false
 years: [2013, 2014]
 scores:
   - [0, 6, 2, 0, 0, 0, 1, 0, 1, 10]

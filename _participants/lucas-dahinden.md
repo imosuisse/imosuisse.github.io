@@ -4,6 +4,7 @@ first-name: Lucas
 last-name: Dahinden
 slug: lucas-dahinden
 order: Dahinden-Lucas
+lie: false
 years: [2006, 2007, 2008, 2009]
 scores:
   - [1, 5, 1, 2, 0, 0, 0, 0, 11, 20]

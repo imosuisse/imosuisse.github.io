@@ -4,6 +4,7 @@ first-name: Sijing
 last-name: Huang
 slug: sijing-huang
 order: Huang-Sijing
+lie: false
 years: [2012, 2013, 2014, 2015, 2016]
 scores:
   - [3, 6, 2, 0, 2, 0, 2, 3, 7, 25]

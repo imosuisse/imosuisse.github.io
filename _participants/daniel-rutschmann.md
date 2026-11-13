@@ -4,6 +4,7 @@ first-name: Daniel
 last-name: Rutschmann
 slug: daniel-rutschmann
 order: Rutschmann-Daniel
+lie: false
 years: [2013, 2014, 2015, 2016]
 scores:
   - [0, 2, 2, 0, 0, 2, 3, 2, 9, 20]

@@ -4,6 +4,7 @@ first-name: Xingjian
 last-name: Huang
 slug: xingjian-huang
 order: Huang-Xingjian
+lie: false
 years: [2013, 2014, 2015, 2016]
 scores:
   - [1, 7, 1, 0, 1, 1, 2, 2, 5, 20]

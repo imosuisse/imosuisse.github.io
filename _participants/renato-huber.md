@@ -4,6 +4,7 @@ first-name: Renato
 last-name: Huber
 slug: renato-huber
 order: Huber-Renato
+lie: false
 years: [2009]
 scores:
   - [0, 2, 1, 0, 0, 1, 0, 0, 1, 5]

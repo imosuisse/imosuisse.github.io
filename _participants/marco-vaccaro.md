@@ -4,6 +4,7 @@ first-name: Marco
 last-name: Vaccaro
 slug: marco-vaccaro
 order: Vaccaro-Marco
+lie: false
 years: [2023, 2024]
 scores:
   - [0, 0, 3, 1, 0, 0, 1, 2, 5, 12]

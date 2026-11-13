@@ -4,6 +4,7 @@ first-name: Michal
 last-name: Nieborek
 slug: michal-nieborek
 order: Nieborek-Michal
+lie: false
 years: [2021, 2022, 2023]
 scores:
   - [1, 3, 2, 2, 1, 1, 0, 1, 7, 18]

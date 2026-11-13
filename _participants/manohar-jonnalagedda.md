@@ -4,6 +4,7 @@ first-name: Manohar
 last-name: Jonnalagedda
 slug: manohar-jonnalagedda
 order: Jonnalagedda-Manohar
+lie: false
 years: [2005]
 scores:
   - [0, 3, 1, 0, 0, 1, 0, 0, 0, 5]

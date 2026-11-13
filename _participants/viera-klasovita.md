@@ -4,6 +4,7 @@ first-name: Viera
 last-name: Klasovita
 slug: viera-klasovita
 order: Klasovita-Viera
+lie: false
 years: [2015, 2016, 2017]
 scores:
   - [0, 2, 3, 2, 1, 0, 0, 2, 6, 16]

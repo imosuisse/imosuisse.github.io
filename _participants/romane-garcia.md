@@ -4,6 +4,7 @@ first-name: Romane
 last-name: Garcia
 slug: romane-garcia
 order: Garcia-Romane
+lie: false
 years: [2014]
 scores:
   - [0, 3, 0, 0, 1, 0, 1, 0, 0, 5]

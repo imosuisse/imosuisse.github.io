@@ -4,6 +4,7 @@ first-name: Valentin
 last-name: Imbach
 slug: valentin-imbach
 order: Imbach-Valentin
+lie: false
 years: [2016, 2017, 2018, 2019]
 scores:
   - [0, 4, 0, 1, 0, 1, 0, 1, 16, 23]

@@ -4,6 +4,7 @@ first-name: Barbara
 last-name: Roos
 slug: barbara-roos
 order: Roos-Barbara
+lie: false
 years: [2013, 2014]
 scores:
   - [0, 2, 2, 0, 1, 0, 4, 0, 1, 10]

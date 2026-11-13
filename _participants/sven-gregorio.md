@@ -4,6 +4,7 @@ first-name: Sven
 last-name: Gregorio
 slug: sven-gregorio
 order: Gregorio-Sven
+lie: false
 years: [2014]
 scores:
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

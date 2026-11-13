@@ -4,6 +4,7 @@ first-name: David
 last-name: Reichmuth
 slug: david-reichmuth
 order: Reichmuth-David
+lie: false
 years: [2023, 2024, 2025]
 scores:
   - [0, 1, 2, 1, 1, 1, 1, 1, 10, 18]

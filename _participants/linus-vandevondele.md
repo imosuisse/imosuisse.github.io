@@ -4,6 +4,7 @@ first-name: Linus
 last-name: VandeVondele
 slug: linus-vandevondele
 order: VandeVondele-Linus
+lie: false
 years: [2024, 2025, 2026]
 scores:
   - [0, 4, 1, 1, 1, 0, 1, 1, 9, 18]

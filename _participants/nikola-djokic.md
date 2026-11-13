@@ -4,6 +4,7 @@ first-name: Nikola
 last-name: Djokic
 slug: nikola-djokic
 order: Djokic-Nikola
+lie: false
 years: [2010, 2011]
 scores:
   - [1, 0, 1, 0, 1, 0, 0, 3, 4, 10]

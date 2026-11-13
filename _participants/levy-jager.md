@@ -4,6 +4,7 @@ first-name: Levy
 last-name: Jäger
 slug: levy-jager
 order: Jager-Levy
+lie: false
 years: [2007, 2008]
 scores:
   - [0, 3, 0, 0, 1, 1, 0, 1, 4, 10]

@@ -4,6 +4,7 @@ first-name: Tatjana
 last-name: Hählen
 slug: tatjana-hahlen
 order: Hahlen-Tatjana
+lie: false
 years: [2004]
 scores:
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

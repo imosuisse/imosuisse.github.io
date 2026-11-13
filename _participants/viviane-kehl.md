@@ -4,6 +4,7 @@ first-name: Viviane
 last-name: Kehl
 slug: viviane-kehl
 order: Kehl-Viviane
+lie: false
 years: [2011, 2012, 2013]
 scores:
   - [0, 4, 1, 1, 1, 1, 0, 1, 6, 15]

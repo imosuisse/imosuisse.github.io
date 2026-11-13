@@ -4,6 +4,7 @@ first-name: Elia
 last-name: Fonti
 slug: elia-fonti
 order: Fonti-Elia
+lie: false
 years: [2010]
 scores:
   - [1, 2, 1, 0, 0, 1, 0, 0, 0, 5]

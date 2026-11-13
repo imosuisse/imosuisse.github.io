@@ -4,6 +4,7 @@ first-name: Andreas
 last-name: Steiger
 slug: andreas-steiger
 order: Steiger-Andreas
+lie: false
 years: [2004]
 scores:
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

@@ -4,6 +4,7 @@ first-name: Marcel
 last-name: Burkhalter
 slug: marcel-burkhalter
 order: Burkhalter-Marcel
+lie: false
 years: [2009]
 scores:
   - [0, 2, 1, 0, 0, 1, 0, 1, 0, 5]

@@ -4,6 +4,7 @@ first-name: Raphael
 last-name: Steiner
 slug: raphael-steiner
 order: Steiner-Raphael
+lie: false
 years: [2007, 2008, 2009]
 scores:
   - [0, 2, 0, 1, 1, 1, 0, 2, 8, 15]

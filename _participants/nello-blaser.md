@@ -4,6 +4,7 @@ first-name: Nello
 last-name: Blaser
 slug: nello-blaser
 order: Blaser-Nello
+lie: false
 years: [2006]
 scores:
   - [0, 2, 0, 0, 0, 1, 0, 0, 2, 5]

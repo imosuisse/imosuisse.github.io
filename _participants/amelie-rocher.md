@@ -4,6 +4,7 @@ first-name: Amélie
 last-name: Rocher
 slug: amelie-rocher
 order: Rocher-Amélie
+lie: false
 years: [2023, 2024, 2025, 2026]
 scores:
   - [2, 12, 0, 2, 0, 1, 0, 1, 6, 24]

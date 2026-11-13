@@ -4,6 +4,7 @@ first-name: Mohamed
 last-name: Bouchouata
 slug: mohamed-bouchouata
 order: Bouchouata-Mohamed
+lie: false
 years: [2021, 2022, 2023, 2024]
 scores:
   - [2, 1, 0, 1, 0, 0, 1, 3, 16, 24]

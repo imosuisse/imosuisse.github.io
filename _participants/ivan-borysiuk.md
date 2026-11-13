@@ -4,6 +4,7 @@ first-name: Ivan
 last-name: Borysiuk
 slug: ivan-borysiuk
 order: Borysiuk-Ivan
+lie: false
 years: [2026]
 scores:
   - [2, 0, 0, 1, 0, 0, 1, 1, 1, 6]

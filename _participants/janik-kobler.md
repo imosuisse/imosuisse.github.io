@@ -4,6 +4,7 @@ first-name: Janik
 last-name: Kobler
 slug: janik-kobler
 order: Kobler-Janik
+lie: false
 years: [2022, 2023, 2024, 2025]
 scores:
   - [3, 2, 5, 1, 1, 1, 2, 1, 8, 24]

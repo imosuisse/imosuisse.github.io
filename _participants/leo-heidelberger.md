@@ -4,6 +4,7 @@ first-name: Leo
 last-name: Heidelberger
 slug: leo-heidelberger
 order: Heidelberger-Leo
+lie: false
 years: [2015]
 scores:
   - [0, 0, 0, 1, 0, 1, 0, 0, 3, 5]

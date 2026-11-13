@@ -4,6 +4,7 @@ first-name: Leonhard
 last-name: Hasler
 slug: leonhard-hasler
 order: Hasler-Leonhard
+lie: true
 years: [2022, 2023, 2024, 2025]
 scores:
   - [2, 1, 1, 3, 2, 1, 0, 4, 4, 18]
@@ -41,7 +42,7 @@ topics:
   - [14, 31, 27, 18, 90]
   - [20, 80, 86, 47, 233]
 best-ranks: [4, 7, 5]
-awards: {}
+awards: {imo: [2023, 2024, 2025]}
 exams:
   - slug: final-round-2022
     round: Final Round
@@ -63,6 +64,7 @@ exams:
     scores: [7, 0, 0, 7, 1, 0, 2, 0, '-', 3, 0, '-']
     total: 20
     rank: 15
+    award: IMO
   - slug: second-round-2024
     round: Second Round
     scores: [3, 2, 4, 6, 2, '-']
@@ -78,6 +80,7 @@ exams:
     scores: [7, 6, 0, 1, 1, 1, 7, 1, 2, 7, 0, 0]
     total: 33
     rank: 11
+    award: IMO
   - slug: second-round-2025
     round: Second Round
     scores: [7, 1, 7, 6, 7, 7]
@@ -93,4 +96,5 @@ exams:
     scores: [3, 3, 0, 2, 7, 0, 7, 0, 1, 7, 7, 0]
     total: 37
     rank: 5
+    award: IMO
 ---

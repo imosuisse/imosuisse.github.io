@@ -4,6 +4,7 @@ first-name: Benjamin
 last-name: Miesch
 slug: benjamin-miesch
 order: Miesch-Benjamin
+lie: false
 years: [2006]
 scores:
   - [0, 0, 0, 1, 0, 0, 1, 0, 3, 5]

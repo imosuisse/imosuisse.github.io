@@ -4,6 +4,7 @@ first-name: Therese
 last-name: Moerschell
 slug: therese-moerschell
 order: Moerschell-Therese
+lie: false
 years: [2015, 2016, 2017]
 scores:
   - [0, 10, 1, 0, 1, 0, 1, 0, 3, 16]

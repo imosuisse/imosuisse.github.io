@@ -4,6 +4,7 @@ first-name: Rada
 last-name: Kamysheva
 slug: rada-kamysheva
 order: Kamysheva-Rada
+lie: false
 years: [2019, 2020]
 scores:
   - [0, 0, 0, 0, 0, 1, 0, 2, 9, 12]

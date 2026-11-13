@@ -4,6 +4,7 @@ first-name: Hrvoje
 last-name: Dujmovic
 slug: hrvoje-dujmovic
 order: Dujmovic-Hrvoje
+lie: false
 years: [2007, 2008, 2009]
 scores:
   - [0, 3, 1, 1, 1, 0, 0, 1, 8, 15]

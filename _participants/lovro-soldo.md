@@ -4,6 +4,7 @@ first-name: Lovro
 last-name: Soldo
 slug: lovro-soldo
 order: Soldo-Lovro
+lie: false
 years: [2005, 2006]
 scores:
   - [0, 6, 0, 1, 1, 0, 0, 0, 2, 10]

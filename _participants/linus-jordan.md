@@ -4,6 +4,7 @@ first-name: Linus
 last-name: Jordan
 slug: linus-jordan
 order: Jordan-Linus
+lie: false
 years: [2014, 2015]
 scores:
   - [1, 1, 2, 0, 1, 1, 0, 0, 4, 10]

@@ -4,6 +4,7 @@ first-name: Manuel
 last-name: Hälg
 slug: manuel-halg
 order: Halg-Manuel
+lie: false
 years: [2006, 2007]
 scores:
   - [0, 3, 0, 0, 0, 0, 2, 0, 5, 10]

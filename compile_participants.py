@@ -5,6 +5,19 @@ Collects all unique participants from _exams/*.md files and creates individual
 participant files in _participants/ directory with their complete exam history.
 """
 
+lie_participants = [
+    "nicole-ospelt",
+    "leonhard-hasler",
+    "eduardo-vogt",
+    "ladina-wohlwend",
+    "ricarda-gassner",
+    "tobias-marxer",
+    "florian-meier",
+    "robert-meier",
+    "tim-stockwell",
+    "gabriela-binder",
+]
+
 import os
 import re
 import yaml
@@ -479,6 +492,8 @@ def main():
         # Also remove diacritics
         last_name_for_sort = normalize_to_ascii(last_name_for_sort)
         order_value = f"{last_name_for_sort}-{data['first_name']}"
+
+        lie = (slug in lie_participants)
         
         # Create YAML content (using kebab-case for field names)
         participant_yaml = {
@@ -487,6 +502,7 @@ def main():
             'last-name': data['last_name'],
             'slug': slug,
             'order': order_value,
+            'lie': lie,
             'years': years,
             'scores': scores_by_round,
             'total-scores': total_scores,
@@ -495,7 +511,7 @@ def main():
             'total-topics': total_topics,
             'best-ranks': best_ranks,
             'awards': awards,
-            'exams': data['exams']
+            'exams': data['exams'],
         }
         
         # Generate markdown file with YAML front matter
@@ -517,6 +533,7 @@ def main():
             f.write(f"last-name: {last_name}\n")
             f.write(f"slug: {participant_yaml['slug']}\n")
             f.write(f"order: {participant_yaml['order']}\n")
+            f.write(f"lie: {participant_yaml['lie']}\n".lower())
             
             # Write years
             years_str = '[' + ', '.join(str(y) for y in participant_yaml['years']) + ']'

@@ -4,6 +4,7 @@ first-name: Horace
 last-name: Chaix
 slug: horace-chaix
 order: Chaix-Horace
+lie: false
 years: [2013, 2014, 2015]
 scores:
   - [1, 2, 2, 0, 1, 1, 1, 0, 7, 15]

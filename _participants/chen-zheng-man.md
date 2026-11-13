@@ -4,6 +4,7 @@ first-name: Chen
 last-name: Zheng Man
 slug: chen-zheng-man
 order: Zheng Man-Chen
+lie: false
 years: [2014]
 scores:
   - [0, 1, 1, 1, 0, 0, 1, 0, 1, 5]

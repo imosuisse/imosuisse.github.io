@@ -4,6 +4,7 @@ first-name: Frédéric
 last-name: Sabatier
 slug: frederic-sabatier
 order: Sabatier-Frédéric
+lie: false
 years: [2008, 2009]
 scores:
   - [1, 3, 1, 0, 0, 0, 0, 1, 4, 10]

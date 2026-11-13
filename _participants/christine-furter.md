@@ -4,6 +4,7 @@ first-name: Christine
 last-name: Furter
 slug: christine-furter
 order: Furter-Christine
+lie: false
 years: [2005, 2006, 2007]
 scores:
   - [0, 10, 0, 1, 1, 1, 0, 1, 1, 15]

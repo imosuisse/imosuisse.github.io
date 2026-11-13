@@ -4,6 +4,7 @@ first-name: Joëlle
 last-name: Portmann
 slug: joelle-portmann
 order: Portmann-Joëlle
+lie: false
 years: [2004, 2005, 2006, 2007]
 scores:
   - [2, 6, 1, 0, 2, 0, 1, 0, 3, 15]

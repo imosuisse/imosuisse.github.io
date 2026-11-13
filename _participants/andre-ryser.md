@@ -4,6 +4,7 @@ first-name: André
 last-name: Ryser
 slug: andre-ryser
 order: Ryser-André
+lie: false
 years: [2012]
 scores:
   - [0, 2, 1, 0, 0, 2, 0, 0, 0, 5]

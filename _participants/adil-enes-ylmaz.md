@@ -4,6 +4,7 @@ first-name: Adil Enes
 last-name: Yılmaz
 slug: adil-enes-ylmaz
 order: Yılmaz-Adil Enes
+lie: false
 years: [2025]
 scores:
   - [0, 1, 0, 1, 0, 0, 1, 1, 2, 6]

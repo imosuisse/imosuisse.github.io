@@ -4,6 +4,7 @@ first-name: Jason
 last-name: Su
 slug: jason-su
 order: Su-Jason
+lie: false
 years: [2025, 2026]
 scores:
   - [0, 1, 1, 0, 0, 0, 0, 0, 10, 12]

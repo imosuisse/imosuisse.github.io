@@ -4,6 +4,7 @@ first-name: Evelyn
 last-name: Ebneter
 slug: evelyn-ebneter
 order: Ebneter-Evelyn
+lie: false
 years: [2019, 2020, 2021, 2022, 2023, 2024, 2025]
 scores:
   - [6, 3, 2, 3, 2, 1, 1, 2, 22, 42]

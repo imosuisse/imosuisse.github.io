@@ -4,6 +4,7 @@ first-name: Marc
 last-name: Stephan
 slug: marc-stephan
 order: Stephan-Marc
+lie: false
 years: [2004, 2005]
 scores:
   - [0, 1, 1, 0, 0, 0, 1, 0, 2, 5]

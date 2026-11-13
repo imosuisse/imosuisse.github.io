@@ -4,6 +4,7 @@ first-name: Nicolas
 last-name: Volet
 slug: nicolas-volet
 order: Volet-Nicolas
+lie: false
 years: [2004]
 scores:
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

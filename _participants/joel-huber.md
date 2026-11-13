@@ -4,6 +4,7 @@ first-name: Joël
 last-name: Huber
 slug: joel-huber
 order: Huber-Joël
+lie: false
 years: [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021]
 scores:
   - [3, 21, 4, 0, 1, 2, 0, 1, 18, 50]

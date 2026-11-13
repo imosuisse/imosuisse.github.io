@@ -4,6 +4,7 @@ first-name: Yunshu
 last-name: Ouyang
 slug: yunshu-ouyang
 order: Ouyang-Yunshu
+lie: false
 years: [2016, 2017, 2018]
 scores:
   - [4, 1, 2, 1, 0, 0, 0, 0, 9, 17]

@@ -4,6 +4,7 @@ first-name: Stephan
 last-name: Leuch
 slug: stephan-leuch
 order: Leuch-Stephan
+lie: false
 years: [2013]
 scores:
   - [0, 1, 1, 1, 0, 0, 1, 0, 1, 5]

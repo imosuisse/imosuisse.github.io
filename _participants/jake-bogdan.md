@@ -4,6 +4,7 @@ first-name: Jake
 last-name: Bogdan
 slug: jake-bogdan
 order: Bogdan-Jake
+lie: false
 years: [2018, 2019, 2020]
 scores:
   - [3, 4, 0, 0, 0, 0, 1, 2, 8, 18]

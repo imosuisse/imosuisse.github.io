@@ -4,6 +4,7 @@ first-name: David
 last-name: Pittet
 slug: david-pittet
 order: Pittet-David
+lie: false
 years: [2013, 2014]
 scores:
   - [0, 3, 2, 0, 0, 1, 3, 0, 1, 10]

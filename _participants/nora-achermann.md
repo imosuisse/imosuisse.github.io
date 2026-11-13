@@ -4,6 +4,7 @@ first-name: Nora
 last-name: Achermann
 slug: nora-achermann
 order: Achermann-Nora
+lie: false
 years: [2024, 2025, 2026]
 scores:
   - [3, 5, 3, 3, 1, 1, 0, 0, 2, 18]

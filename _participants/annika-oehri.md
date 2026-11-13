@@ -4,6 +4,7 @@ first-name: Annika
 last-name: Oehri
 slug: annika-oehri
 order: Oehri-Annika
+lie: false
 years: [2017]
 scores:
   - [3, 1, 0, 0, 0, 0, 0, 0, 2, 6]
@@ -41,13 +42,14 @@ topics:
   - [0, 0, 0, 0, 0]
   - [2, 14, 7, 0, 23]
 best-ranks: [38, 25, null]
-awards: {}
+awards: {egmo: [2017]}
 exams:
   - slug: second-round-2017
     round: Second Round
     scores: [7, 0, 7, '-', '-', '-']
     total: 14
     rank: 38
+    award: EGMO
   - slug: final-round-2017
     round: Final Round
     scores: [7, 2, '-', 0, '-', 0, 0, 0, '-', '-']

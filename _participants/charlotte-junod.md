@@ -4,6 +4,7 @@ first-name: Charlotte
 last-name: Junod
 slug: charlotte-junod
 order: Junod-Charlotte
+lie: false
 years: [2012]
 scores:
   - [0, 4, 0, 0, 0, 0, 0, 1, 0, 5]

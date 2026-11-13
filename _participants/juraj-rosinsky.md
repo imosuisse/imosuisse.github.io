@@ -4,6 +4,7 @@ first-name: Juraj
 last-name: Rosinsky
 slug: juraj-rosinsky
 order: Rosinsky-Juraj
+lie: false
 years: [2016, 2017, 2018]
 scores:
   - [0, 1, 3, 2, 0, 0, 2, 2, 7, 17]

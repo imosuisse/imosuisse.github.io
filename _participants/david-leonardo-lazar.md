@@ -4,6 +4,7 @@ first-name: David Leonardo
 last-name: Lazar
 slug: david-leonardo-lazar
 order: Lazar-David Leonardo
+lie: false
 years: [2018]
 scores:
   - [0, 1, 0, 1, 0, 0, 0, 0, 4, 6]

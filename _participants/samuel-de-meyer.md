@@ -4,6 +4,7 @@ first-name: Samuel
 last-name: de Meyer
 slug: samuel-de-meyer
 order: Meyer-Samuel
+lie: false
 years: [2020, 2021]
 scores:
   - [2, 2, 0, 2, 0, 0, 1, 0, 5, 12]

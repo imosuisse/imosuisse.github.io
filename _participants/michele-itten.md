@@ -4,6 +4,7 @@ first-name: Michèle
 last-name: Itten
 slug: michele-itten
 order: Itten-Michèle
+lie: false
 years: [2004, 2005]
 scores:
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

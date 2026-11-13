@@ -4,6 +4,7 @@ first-name: Bernhard
 last-name: Brodowsky
 slug: bernhard-brodowsky
 order: Brodowsky-Bernhard
+lie: false
 years: [2007, 2008]
 scores:
   - [0, 2, 2, 0, 0, 0, 0, 2, 4, 10]

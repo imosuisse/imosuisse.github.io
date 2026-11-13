@@ -4,6 +4,7 @@ first-name: Florian
 last-name: Meier
 slug: florian-meier
 order: Meier-Florian
+lie: true
 years: [2007, 2008, 2009]
 scores:
   - [0, 1, 0, 1, 0, 1, 0, 1, 11, 15]
@@ -41,7 +42,7 @@ topics:
   - [1, 9, 14, 7, 31]
   - [33, 53, 79, 64, 229]
 best-ranks: [1, 1, 11]
-awards: {}
+awards: {imo: [2007, 2008]}
 exams:
   - slug: second-round-2007
     round: Second Round
@@ -58,6 +59,7 @@ exams:
     scores: [6, 3, 2, 0, 7, 0, '-', '-', '-', '-', '-', '-']
     total: 18
     rank: 11
+    award: IMO
   - slug: second-round-2008
     round: Second Round
     scores: [7, 7, 7, 6, 7]
@@ -73,6 +75,7 @@ exams:
     scores: [3, 1, 0, 3, 0, 1, 3, 0, 0, 0, 1, 1]
     total: 13
     rank: 14
+    award: IMO
   - slug: second-round-2009
     round: Second Round
     scores: [7, 7, 7, 4, 7]

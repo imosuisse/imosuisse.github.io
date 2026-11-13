@@ -4,6 +4,7 @@ first-name: Patrizia
 last-name: Hählen
 slug: patrizia-hahlen
 order: Hahlen-Patrizia
+lie: false
 years: [2007, 2008, 2009]
 scores:
   - [0, 6, 1, 1, 2, 0, 2, 0, 3, 15]

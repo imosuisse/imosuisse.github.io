@@ -4,6 +4,7 @@ first-name: Manuel
 last-name: Wiedmer
 slug: manuel-wiedmer
 order: Wiedmer-Manuel
+lie: false
 years: [2016, 2017]
 scores:
   - [0, 1, 1, 1, 0, 0, 0, 1, 7, 11]

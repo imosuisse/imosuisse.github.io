@@ -4,6 +4,7 @@ first-name: Adrian
 last-name: Roos
 slug: adrian-roos
 order: Roos-Adrian
+lie: false
 years: [2009]
 scores:
   - [0, 1, 1, 0, 0, 1, 0, 0, 2, 5]

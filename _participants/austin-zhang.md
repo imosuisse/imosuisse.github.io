@@ -4,6 +4,7 @@ first-name: Austin
 last-name: Zhang
 slug: austin-zhang
 order: Zhang-Austin
+lie: false
 years: [2022, 2023, 2024, 2025, 2026]
 scores:
   - [0, 4, 4, 3, 3, 3, 3, 4, 6, 30]

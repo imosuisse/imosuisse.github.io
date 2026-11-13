@@ -4,6 +4,7 @@ first-name: Juri
 last-name: Luternauer
 slug: juri-luternauer
 order: Luternauer-Juri
+lie: false
 years: [2022, 2024]
 scores:
   - [7, 2, 0, 0, 0, 0, 0, 0, 3, 12]

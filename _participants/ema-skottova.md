@@ -4,6 +4,7 @@ first-name: Ema
 last-name: Skottova
 slug: ema-skottova
 order: Skottova-Ema
+lie: false
 years: [2018, 2019, 2020, 2021]
 scores:
   - [0, 3, 1, 0, 1, 1, 2, 2, 14, 24]

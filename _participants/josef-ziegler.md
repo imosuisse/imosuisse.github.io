@@ -4,6 +4,7 @@ first-name: Josef
 last-name: Ziegler
 slug: josef-ziegler
 order: Ziegler-Josef
+lie: false
 years: [2008, 2009]
 scores:
   - [1, 4, 0, 1, 0, 1, 1, 0, 2, 10]

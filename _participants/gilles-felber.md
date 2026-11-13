@@ -4,6 +4,7 @@ first-name: Gilles
 last-name: Felber
 slug: gilles-felber
 order: Felber-Gilles
+lie: false
 years: [2013, 2014]
 scores:
   - [0, 5, 1, 0, 0, 1, 1, 0, 2, 10]

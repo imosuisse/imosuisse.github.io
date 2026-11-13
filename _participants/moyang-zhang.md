@@ -4,6 +4,7 @@ first-name: Moyang
 last-name: Zhang
 slug: moyang-zhang
 order: Zhang-Moyang
+lie: false
 years: [2018, 2019, 2020, 2021, 2022]
 scores:
   - [8, 5, 3, 2, 1, 1, 0, 2, 8, 30]

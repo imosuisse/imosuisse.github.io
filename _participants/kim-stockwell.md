@@ -4,6 +4,7 @@ first-name: Kim
 last-name: Stockwell
 slug: kim-stockwell
 order: Stockwell-Kim
+lie: false
 years: [2007]
 scores:
   - [0, 4, 0, 0, 1, 0, 0, 0, 0, 5]

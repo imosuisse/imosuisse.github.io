@@ -4,6 +4,7 @@ first-name: Bora
 last-name: Olmez
 slug: bora-olmez
 order: Olmez-Bora
+lie: false
 years: [2018, 2019, 2020, 2021, 2022, 2023]
 scores:
   - [7, 1, 1, 3, 1, 0, 1, 1, 21, 36]

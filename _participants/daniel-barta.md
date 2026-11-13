@@ -4,6 +4,7 @@ first-name: Daniel
 last-name: Barta
 slug: daniel-barta
 order: Barta-Daniel
+lie: false
 years: [2020, 2021]
 scores:
   - [1, 2, 1, 2, 1, 0, 0, 5, 0, 12]

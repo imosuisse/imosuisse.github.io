@@ -4,6 +4,7 @@ first-name: Myriam
 last-name: Faltin
 slug: myriam-faltin
 order: Faltin-Myriam
+lie: false
 years: [2023, 2024, 2025, 2026]
 scores:
   - [3, 4, 2, 3, 2, 2, 1, 1, 6, 24]

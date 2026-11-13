@@ -4,6 +4,7 @@ first-name: Thomas
 last-name: Kiser
 slug: thomas-kiser
 order: Kiser-Thomas
+lie: false
 years: [2004]
 scores:
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]

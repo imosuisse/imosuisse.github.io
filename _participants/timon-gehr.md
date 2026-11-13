@@ -4,6 +4,7 @@ first-name: Timon
 last-name: Gehr
 slug: timon-gehr
 order: Gehr-Timon
+lie: false
 years: [2009, 2010]
 scores:
   - [1, 3, 0, 3, 1, 0, 0, 0, 2, 10]

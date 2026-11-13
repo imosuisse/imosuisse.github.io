@@ -4,6 +4,7 @@ first-name: Chitsanu
 last-name: Khurewathanakul
 slug: chitsanu-khurewathanakul
 order: Khurewathanakul-Chitsanu
+lie: false
 years: [2006]
 scores:
   - [1, 0, 0, 0, 0, 1, 2, 0, 1, 5]

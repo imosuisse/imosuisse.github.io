@@ -4,6 +4,7 @@ first-name: Titus
 last-name: Cieslewski
 slug: titus-cieslewski
 order: Cieslewski-Titus
+lie: false
 years: [2008, 2009]
 scores:
   - [0, 2, 2, 1, 1, 1, 0, 0, 3, 10]

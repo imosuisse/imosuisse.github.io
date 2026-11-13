@@ -4,6 +4,7 @@ first-name: Oliver
 last-name: Huggenberger
 slug: oliver-huggenberger
 order: Huggenberger-Oliver
+lie: false
 years: [2006]
 scores:
   - [1, 1, 0, 0, 1, 0, 1, 1, 0, 5]

@@ -4,6 +4,7 @@ first-name: Thomas
 last-name: Gobet
 slug: thomas-gobet
 order: Gobet-Thomas
+lie: false
 years: [2005]
 scores:
   - [0, 2, 1, 0, 0, 0, 1, 0, 1, 5]

@@ -4,6 +4,7 @@ first-name: Francesc
 last-name: Oro
 slug: francesc-oro
 order: Oro-Francesc
+lie: false
 years: [2024, 2025]
 scores:
   - [0, 3, 0, 0, 0, 0, 0, 1, 8, 12]

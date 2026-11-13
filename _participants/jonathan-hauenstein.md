@@ -4,6 +4,7 @@ first-name: Jonathan
 last-name: Hauenstein
 slug: jonathan-hauenstein
 order: Hauenstein-Jonathan
+lie: false
 years: [2017]
 scores:
   - [0, 1, 0, 1, 0, 1, 0, 1, 2, 6]

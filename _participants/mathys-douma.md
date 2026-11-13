@@ -4,6 +4,7 @@ first-name: Mathys
 last-name: Douma
 slug: mathys-douma
 order: Douma-Mathys
+lie: false
 years: [2019, 2020, 2021, 2022, 2023]
 scores:
   - [2, 1, 0, 0, 0, 0, 0, 1, 26, 30]

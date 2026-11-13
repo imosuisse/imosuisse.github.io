@@ -4,6 +4,7 @@ first-name: Pascal
 last-name: Wild
 slug: pascal-wild
 order: Wild-Pascal
+lie: false
 years: [2007, 2008]
 scores:
   - [2, 1, 1, 0, 1, 0, 0, 1, 4, 10]

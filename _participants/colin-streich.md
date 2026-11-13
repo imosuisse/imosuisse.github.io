@@ -4,6 +4,7 @@ first-name: Colin
 last-name: Streich
 slug: colin-streich
 order: Streich-Colin
+lie: false
 years: [2005, 2006]
 scores:
   - [0, 0, 2, 0, 1, 0, 1, 1, 5, 10]

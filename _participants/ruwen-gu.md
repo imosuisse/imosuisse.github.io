@@ -4,6 +4,7 @@ first-name: Ruwen
 last-name: Gu
 slug: ruwen-gu
 order: Gu-Ruwen
+lie: false
 years: [2024, 2025, 2026]
 scores:
   - [3, 5, 1, 0, 1, 1, 1, 3, 3, 18]

@@ -4,6 +4,7 @@ first-name: Emily
 last-name: Dikhoff
 slug: emily-dikhoff
 order: Dikhoff-Emily
+lie: false
 years: [2017, 2018, 2019, 2020, 2021, 2022]
 scores:
   - [6, 6, 1, 2, 1, 1, 0, 2, 17, 36]

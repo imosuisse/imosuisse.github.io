@@ -4,6 +4,7 @@ first-name: Irina
 last-name: Tikhonovskaia
 slug: irina-tikhonovskaia
 order: Tikhonovskaia-Irina
+lie: false
 years: [2022, 2023, 2024, 2025]
 scores:
   - [1, 5, 2, 7, 2, 1, 2, 2, 2, 24]

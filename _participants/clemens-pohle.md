@@ -4,6 +4,7 @@ first-name: Clemens
 last-name: Pohle
 slug: clemens-pohle
 order: Pohle-Clemens
+lie: false
 years: [2007, 2008, 2009, 2010]
 scores:
   - [0, 4, 1, 1, 0, 1, 1, 0, 12, 20]

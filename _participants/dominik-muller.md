@@ -4,6 +4,7 @@ first-name: Dominik
 last-name: Müller
 slug: dominik-muller
 order: Muller-Dominik
+lie: false
 years: [2005]
 scores:
   - [0, 1, 2, 1, 1, 0, 0, 0, 0, 5]

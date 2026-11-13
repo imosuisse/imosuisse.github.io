@@ -4,6 +4,7 @@ first-name: Laura
 last-name: Gremion
 slug: laura-gremion
 order: Gremion-Laura
+lie: false
 years: [2009, 2010, 2011, 2012]
 scores:
   - [0, 2, 2, 2, 2, 0, 1, 2, 9, 20]

@@ -4,6 +4,7 @@ first-name: Louis
 last-name: Soares Correia
 slug: louis-soares-correia
 order: Soares Correia-Louis
+lie: false
 years: [2008]
 scores:
   - [0, 0, 1, 1, 0, 0, 0, 1, 2, 5]

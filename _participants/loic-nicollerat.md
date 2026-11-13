@@ -4,6 +4,7 @@ first-name: Loïc
 last-name: Nicollerat
 slug: loic-nicollerat
 order: Nicollerat-Loïc
+lie: false
 years: [2019]
 scores:
   - [0, 0, 0, 0, 0, 1, 1, 0, 4, 6]

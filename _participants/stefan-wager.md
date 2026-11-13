@@ -4,6 +4,7 @@ first-name: Stefan
 last-name: Wager
 slug: stefan-wager
 order: Wager-Stefan
+lie: false
 years: [2007]
 scores:
   - [0, 2, 1, 0, 0, 0, 0, 0, 2, 5]

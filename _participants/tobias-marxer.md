@@ -4,6 +4,7 @@ first-name: Tobias
 last-name: Marxer
 slug: tobias-marxer
 order: Marxer-Tobias
+lie: true
 years: [2022, 2023]
 scores:
   - [0, 2, 0, 0, 0, 0, 0, 0, 4, 6]
@@ -41,7 +42,7 @@ topics:
   - [2, 1, 7, 1, 11]
   - [12, 24, 31, 2, 69]
 best-ranks: [24, 23, 18]
-awards: {}
+awards: {imo: [2023]}
 exams:
   - slug: final-round-2022
     round: Final Round
@@ -63,4 +64,5 @@ exams:
     scores: [7, 1, 0, 1, 0, 0, 0, 0, 0, 0, 2, '-']
     total: 11
     rank: 18
+    award: IMO
 ---

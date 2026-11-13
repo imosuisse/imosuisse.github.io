@@ -4,6 +4,7 @@ first-name: Raphael
 last-name: Schumacher
 slug: raphael-schumacher
 order: Schumacher-Raphael
+lie: false
 years: [2007, 2008, 2009, 2010]
 scores:
   - [1, 7, 0, 0, 1, 2, 3, 0, 6, 20]

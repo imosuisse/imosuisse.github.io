@@ -4,6 +4,7 @@ first-name: Yi
 last-name: Zheng
 slug: yi-zheng
 order: Zheng-Yi
+lie: false
 years: [2015]
 scores:
   - [0, 0, 1, 0, 1, 0, 0, 1, 2, 5]

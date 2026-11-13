@@ -4,6 +4,7 @@ first-name: Eric
 last-name: Lüscher
 slug: eric-luscher
 order: Luscher-Eric
+lie: false
 years: [2021, 2024, 2025, 2026]
 scores:
   - [3, 4, 0, 2, 2, 0, 0, 1, 12, 24]

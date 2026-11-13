@@ -4,6 +4,7 @@ first-name: Louis
 last-name: Renner
 slug: louis-renner
 order: Renner-Louis
+lie: false
 years: [2021, 2022, 2023, 2024]
 scores:
   - [1, 2, 1, 1, 1, 0, 0, 2, 16, 24]

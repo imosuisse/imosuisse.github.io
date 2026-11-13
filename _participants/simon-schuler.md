@@ -4,6 +4,7 @@ first-name: Simon
 last-name: Schuler
 slug: simon-schuler
 order: Schuler-Simon
+lie: false
 years: [2005]
 scores:
   - [0, 1, 0, 1, 0, 0, 0, 1, 2, 5]

@@ -4,6 +4,7 @@ first-name: Mario
 last-name: Huber
 slug: mario-huber
 order: Huber-Mario
+lie: false
 years: [2007]
 scores:
   - [2, 0, 0, 0, 0, 0, 1, 0, 2, 5]

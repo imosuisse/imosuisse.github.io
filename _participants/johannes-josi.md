@@ -4,6 +4,7 @@ first-name: Johannes
 last-name: Josi
 slug: johannes-josi
 order: Josi-Johannes
+lie: false
 years: [2008]
 scores:
   - [0, 0, 0, 1, 0, 0, 0, 1, 3, 5]

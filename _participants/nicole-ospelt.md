@@ -4,6 +4,7 @@ first-name: Nicole
 last-name: Ospelt
 slug: nicole-ospelt
 order: Ospelt-Nicole
+lie: true
 years: [2016, 2017, 2018]
 scores:
   - [2, 5, 2, 0, 1, 1, 1, 0, 5, 17]
@@ -41,7 +42,7 @@ topics:
   - [0, 0, 0, 0, 0]
   - [1, 42, 31, 7, 81]
 best-ranks: [24, 14, null]
-awards: {}
+awards: {egmo: [2017, 2018]}
 exams:
   - slug: second-round-2016
     round: Second Round
@@ -53,6 +54,7 @@ exams:
     scores: [7, 0, 3, 1, 5, '-']
     total: 16
     rank: 34
+    award: EGMO
   - slug: final-round-2017
     round: Final Round
     scores: [7, 0, 0, '-', 0, 7, 0, 0, '-', '-']
@@ -63,6 +65,7 @@ exams:
     scores: [7, 7, 7, 4, 1, '-']
     total: 26
     rank: 24
+    award: EGMO
   - slug: final-round-2018
     round: Final Round
     scores: [7, 1, 1, 0, '-', 7, 0, 0, 2, '-']

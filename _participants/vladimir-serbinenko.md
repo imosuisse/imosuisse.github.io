@@ -4,6 +4,7 @@ first-name: Vladimir
 last-name: Serbinenko
 slug: vladimir-serbinenko
 order: Serbinenko-Vladimir
+lie: false
 years: [2004, 2005, 2006, 2007]
 scores:
   - [0, 2, 1, 0, 0, 1, 0, 0, 11, 15]

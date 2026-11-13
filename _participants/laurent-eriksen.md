@@ -4,6 +4,7 @@ first-name: Laurent
 last-name: Eriksen
 slug: laurent-eriksen
 order: Eriksen-Laurent
+lie: false
 years: [2009, 2010]
 scores:
   - [2, 3, 0, 1, 0, 1, 3, 0, 0, 10]

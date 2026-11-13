@@ -4,6 +4,7 @@ first-name: Tim
 last-name: Stockwell
 slug: tim-stockwell
 order: Stockwell-Tim
+lie: true
 years: [2006]
 scores:
   - [0, 2, 0, 3, 0, 0, 0, 0, 0, 5]
@@ -41,7 +42,7 @@ topics:
   - [0, 0, 1, 0, 1]
   - [0, 2, 3, 2, 7]
 best-ranks: [31, null, 13]
-awards: {}
+awards: {imo: [2006]}
 exams:
   - slug: second-round-2006
     round: Second Round
@@ -53,4 +54,5 @@ exams:
     scores: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     total: 1
     rank: 13
+    award: IMO
 ---

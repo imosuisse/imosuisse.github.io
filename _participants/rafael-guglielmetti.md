@@ -4,6 +4,7 @@ first-name: Rafael
 last-name: Guglielmetti
 slug: rafael-guglielmetti
 order: Guglielmetti-Rafael
+lie: false
 years: [2006, 2007]
 scores:
   - [1, 5, 0, 0, 1, 0, 0, 0, 3, 10]

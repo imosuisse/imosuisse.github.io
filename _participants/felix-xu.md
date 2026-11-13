@@ -4,6 +4,7 @@ first-name: Felix
 last-name: Xu
 slug: felix-xu
 order: Xu-Felix
+lie: false
 years: [2020, 2021, 2022, 2023, 2024]
 scores:
   - [2, 2, 3, 1, 0, 0, 3, 5, 14, 30]

@@ -4,6 +4,7 @@ first-name: Ramon
 last-name: Buchenberger
 slug: ramon-buchenberger
 order: Buchenberger-Ramon
+lie: false
 years: [2016, 2017, 2018, 2019]
 scores:
   - [1, 7, 3, 1, 0, 0, 2, 0, 9, 23]

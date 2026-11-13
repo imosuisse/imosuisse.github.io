@@ -4,6 +4,7 @@ first-name: Pranavendra
 last-name: Tammireddy
 slug: pranavendra-tammireddy
 order: Tammireddy-Pranavendra
+lie: false
 years: [2022, 2024, 2025, 2026]
 scores:
   - [0, 4, 1, 2, 4, 0, 3, 2, 8, 24]

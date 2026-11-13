@@ -4,6 +4,7 @@ first-name: Raphael
 last-name: Angst
 slug: raphael-angst
 order: Angst-Raphael
+lie: false
 years: [2017, 2018, 2019, 2020]
 scores:
   - [0, 3, 0, 1, 0, 1, 3, 3, 13, 24]

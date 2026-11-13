@@ -4,6 +4,7 @@ first-name: Marc
 last-name: Zimmermann
 slug: marc-zimmermann
 order: Zimmermann-Marc
+lie: false
 years: [2006]
 scores:
   - [0, 2, 2, 0, 0, 0, 0, 0, 1, 5]

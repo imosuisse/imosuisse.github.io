@@ -4,6 +4,7 @@ first-name: Kevin
 last-name: Burri
 slug: kevin-burri
 order: Burri-Kevin
+lie: false
 years: [2010, 2011, 2012, 2013]
 scores:
   - [2, 2, 2, 0, 1, 2, 0, 3, 8, 20]

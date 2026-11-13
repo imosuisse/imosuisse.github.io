@@ -4,6 +4,7 @@ first-name: Eric
 last-name: Wermelinger
 slug: eric-wermelinger
 order: Wermelinger-Eric
+lie: false
 years: [2018, 2019, 2020, 2021, 2022, 2023]
 scores:
   - [4, 6, 2, 1, 1, 4, 0, 4, 14, 36]

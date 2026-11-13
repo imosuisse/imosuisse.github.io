@@ -4,6 +4,7 @@ first-name: Yuxi
 last-name: Zheng
 slug: yuxi-zheng
 order: Zheng-Yuxi
+lie: false
 years: [2017]
 scores:
   - [0, 1, 2, 1, 0, 0, 0, 0, 2, 6]

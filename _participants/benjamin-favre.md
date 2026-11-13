@@ -4,6 +4,7 @@ first-name: Benjamin
 last-name: Favre
 slug: benjamin-favre
 order: Favre-Benjamin
+lie: false
 years: [2013]
 scores:
   - [0, 1, 1, 0, 0, 0, 1, 1, 1, 5]

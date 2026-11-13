@@ -4,6 +4,7 @@ first-name: Fabian Masato
 last-name: Keller
 slug: fabian-masato-keller
 order: Keller-Fabian Masato
+lie: false
 years: [2011, 2012, 2013, 2014]
 scores:
   - [3, 2, 3, 1, 2, 2, 1, 0, 6, 20]

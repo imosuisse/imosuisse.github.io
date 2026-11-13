@@ -4,6 +4,7 @@ first-name: Philipp
 last-name: Junghans
 slug: philipp-junghans
 order: Junghans-Philipp
+lie: false
 years: [2019, 2020, 2021]
 scores:
   - [1, 4, 1, 1, 0, 0, 2, 1, 8, 18]

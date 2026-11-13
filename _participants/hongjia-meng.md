@@ -4,6 +4,7 @@ first-name: Hongjia
 last-name: Meng
 slug: hongjia-meng
 order: Meng-Hongjia
+lie: false
 years: [2021, 2022, 2023, 2024, 2025, 2026]
 scores:
   - [3, 6, 1, 5, 0, 0, 2, 2, 17, 36]

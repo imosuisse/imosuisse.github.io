@@ -4,6 +4,7 @@ first-name: Daniel
 last-name: Meister
 slug: daniel-meister
 order: Meister-Daniel
+lie: false
 years: [2004]
 scores:
   - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
