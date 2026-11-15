@@ -37,15 +37,4 @@ description: Statistics and recognition of Swiss Mathematical Olympiad problem a
 </table>
 
 
-<h2>Problems at International Competitions</h2>
-
-{% assign int_problems = site.international-problems %}
-{% for problem in int_problems %}
-    <b>{{ problem.competition }} {{ problem.year}} – Problem {{ problem.number }}</b>
-    <div class="info">
-        Topic: {{ problem.topic }}<br>
-        Author: <a href="/problems/?author={{ problem.author }}">{{ problem.author }}</a>
-    </div>
-    {{ problem.content }}
-{% endfor %}
 

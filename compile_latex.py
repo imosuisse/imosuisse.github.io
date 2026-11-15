@@ -9,22 +9,30 @@ args = parser.parse_args()
 
 source_dir = "_latex"
 output_dir = "_problems"
+
 output_dir2 = "_international-problems"
 pattern = re.compile(r"^(\d+)-(\d+)-(\w+)\.tex$")
+pattern2 = re.compile(r"^(\d+)-(\w+)-(\w+)\.tex$")
 rounds = ["?", "First Round", "Second Round", "Final Round", "Selection"]
 
 for filename in os.listdir(source_dir):
     if filename == ".DS_Store":
         continue
     match = pattern.match(filename)
+    swiss = True
     if not match:
-        print(f"⚠️ Skipping file with unexpected format: {filename}")
-        continue
+        match = pattern2.match(filename)
+        swiss = False
+        if not match:
+            print(f"⚠️ Skipping file with unexpected format: {filename}")
+            continue
 
     x, y, z = match.groups()
     tex_path = os.path.join(source_dir, filename)
     html_filename = filename.replace(".tex", ".html")
     html_path = os.path.join(output_dir, html_filename)
+    if not swiss:
+        html_path = os.path.join(output_dir2, html_filename)
 
     # Check timestamps
     if not args.all:
@@ -57,8 +65,11 @@ for filename in os.listdir(source_dir):
         if existing_frontmatter:
             front_matter = existing_frontmatter
         else:
-            round_name = rounds[int(y)]
-            front_matter = f"---\nyear: {x}\nround: {round_name}\nnumber: '{z}'\n---\n"
+            if swiss:
+                round_name = rounds[int(y)]
+                front_matter = f"---\nyear: {x}\nround: {round_name}\nnumber: '{z}'\n---\n"
+            else:
+                front_matter = f"---\nyear: {x}\ncompetition: {y}\nnumber: '{z}'\n---\n"
         
         final_output = front_matter + html_content
 

@@ -1,0 +1,21 @@
+---
+title: International Problems
+layout: default
+description: Collection of international problems with Swiss authors.
+---
+
+<h2>Problems at International Competitions</h2>
+
+<p>
+This is a (probably incomplete) list of problems with Swiss authors that appeared on international competitions.
+</p>
+
+{% assign int_problems = site.international-problems | sort: year | reverse %}
+{% for problem in int_problems %}
+    <b>{{ problem.competition }} {{ problem.year}} – Problem {{ problem.number }}</b>
+    <div class="info">
+        Topic: {{ problem.topic }}<br>
+        Author: <a href="/problems/?author={{ problem.author }}">{{ problem.author }}</a>
+    </div>
+    {{ problem.content }}
+{% endfor %}
